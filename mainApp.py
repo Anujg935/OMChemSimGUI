@@ -97,25 +97,46 @@ class NodeLine(QtWidgets.QGraphicsPathItem):
         path = QtGui.QPainterPath()
         path.moveTo(self.pointA)
 
-        midptx = 0.5*(self.pointA.x() + self.pointB.x())
-        
-        ctrl1_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
-        ctrl2_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
-        pt1 = QtCore.QPointF(midptx , self.pointA.y())
-        path.cubicTo(ctrl1_1, ctrl2_1, pt1)
-        
-        path.moveTo(pt1)
+        if self.pointB.x()>self.pointA.x():
+            midptx = 0.5*(self.pointA.x() + self.pointB.x())
+            
+            ctrl1_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
+            ctrl2_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
+            pt1 = QtCore.QPointF(midptx , self.pointA.y())
+            path.cubicTo(ctrl1_1, ctrl2_1, pt1)
+            
+            path.moveTo(pt1)
 
-        ctrl1_2 = QtCore.QPointF(midptx, self.pointB.y())
-        ctrl2_2 = QtCore.QPointF(midptx, self.pointB.y())
-        pt2 = QtCore.QPointF(midptx , self.pointB.y())
-        path.cubicTo(ctrl1_2, ctrl2_2, pt2)
-        path.moveTo(pt2)
+            ctrl1_2 = QtCore.QPointF(midptx, self.pointB.y())
+            ctrl2_2 = QtCore.QPointF(midptx, self.pointB.y())
+            pt2 = QtCore.QPointF(midptx , self.pointB.y())
+            path.cubicTo(ctrl1_2, ctrl2_2, pt2)
+            path.moveTo(pt2)
 
-        ctrl1_3 = QtCore.QPointF(midptx, self.pointB.y())
-        ctrl2_3 = QtCore.QPointF(midptx, self.pointB.y())
-        path.cubicTo(ctrl1_3, ctrl2_3, self.pointB)
-        self.setPath(path)
+            ctrl1_3 = QtCore.QPointF(midptx, self.pointB.y())
+            ctrl2_3 = QtCore.QPointF(midptx, self.pointB.y())
+            path.cubicTo(ctrl1_3, ctrl2_3, self.pointB)
+            self.setPath(path)
+        else :
+            midptx = 50 + 0.5*(self.pointA.x() + self.pointB.x())
+            
+            ctrl1_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
+            ctrl2_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
+            pt1 = QtCore.QPointF(midptx , self.pointA.y())
+            path.cubicTo(ctrl1_1, ctrl2_1, pt1)
+            
+            path.moveTo(pt1)
+
+            ctrl1_2 = QtCore.QPointF(midptx, self.pointB.y())
+            ctrl2_2 = QtCore.QPointF(midptx, self.pointB.y())
+            pt2 = QtCore.QPointF(midptx , self.pointB.y())
+            path.cubicTo(ctrl1_2, ctrl2_2, pt2)
+            path.moveTo(pt2)
+
+            ctrl1_3 = QtCore.QPointF(midptx, self.pointB.y())
+            ctrl2_3 = QtCore.QPointF(midptx, self.pointB.y())
+            path.cubicTo(ctrl1_3, ctrl2_3, self.pointB)
+            self.setPath(path)
     def paint(self, painter, option, widget):
         painter.setPen(self.pen)
         painter.drawPath(self.path())
