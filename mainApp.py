@@ -13,6 +13,8 @@ from PyQt5.QtGui import QBrush ,QTransform ,QMouseEvent
 import PyQt5.QtGui as QtGui
 import PyQt5.QtCore as QtCore
 import PyQt5.QtWidgets as QtWidgets
+#from component_selector import componentSelector
+
 ui,_ = loadUiType('main.ui')
 
 global a
@@ -21,6 +23,23 @@ id = 0
 coordinate = [0,0]
 component = {}
 index = 0
+
+ui_dialog = loadUiType('comp_selector.ui')
+
+class componentSelector(QDialog,ui_dialog):
+    def __init__(self):
+        super(componentSelector,self).__init__()
+        self.setupUi(self)
+        self.lines = [line.rstrip('\n') for line in open('compounds.txt')]
+
+        model = QStringListMode()
+        model.setStringList(self.lines)
+
+        completer = QCompleter()
+        completer.setModel(model)
+
+        self.lineEdit.setCompleter(completer)
+
 class MainApp(QMainWindow,ui):
     def __init__(self):
         global scene
@@ -33,7 +52,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton.clicked.connect(self.component)
         self.pushButton_2.clicked.connect(self.zoomin)
         self.pushButton_3.clicked.connect(self.zoomout)
-        #self.pushButton_4.clicked.connect(self.deleteComponent)
+        self.pushButton_4.clicked.connect(self.deleteComponent)
     def zoomout(self):
         self.graphicsView.scale(1.0/1.15,1.0/1.15)
     def zoomin(self):
@@ -41,11 +60,15 @@ class MainApp(QMainWindow,ui):
 
 
     def deleteComponent(self):
+        self.comp =componentSelector()
+        self.comp.show()
+        
+        '''
         for item in self.scene.selectedItems():
             print(item)
             self.scene.removeItem(item)
         
-        '''
+        
         global a
         try:
             
@@ -69,42 +92,72 @@ class MainApp(QMainWindow,ui):
 ============================================================
 '''
 class NodeLine(QtWidgets.QGraphicsPathItem):
-    def __init__(self, pointA, pointB):
+    def __init__(self, pointA, pointB , socket):
         super(NodeLine, self).__init__()
         self._pointA = pointA
         self._pointB = pointB
+        self.socket = socket
         self._source = None
         self._target = None
         self.setZValue(-1)
-        self.setBrush(QtGui.QColor(255,20,20,255))
+        self.setBrush(QtGui.QColor(0,0,255,255))
         self.pen = QtGui.QPen()
         self.pen.setStyle(QtCore.Qt.SolidLine)
-        self.pen.setWidth(2)
-        self.pen.setColor(QtGui.QColor(255,20,20,255))
+        self.pen.setWidth(1)
+        self.pen.setColor(QtGui.QColor(0,0,255,255))
         self.setPen(self.pen)
   
     def updatePath(self):
-        '''
         path = QtGui.QPainterPath()
         path.moveTo(self.pointA)
-        dx = self.pointB.x() - self.pointA.x()
-        dy = self.pointB.y() - self.pointA.y()
-        ctrl1 = QtCore.QPointF(self.pointA.x() + dx * 0.25, self.pointA.y() + dy * 0.1)
-        ctrl2 = QtCore.QPointF(self.pointA.x() + dx * 0.75, self.pointA.y() + dy * 0.9)
-        path.cubicTo(ctrl1, ctrl2, self.pointB)
-        self.setPath(path)
         '''
-        path = QtGui.QPainterPath()
-        path.moveTo(self.pointA)
+        if (self.socket =='out') and (self.pointB.x()>self.pointA.x()):
+            try:
+                midptx = 50 + self.pointA.x() 
+                
+                ctrl1_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
+                ctrl2_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
+                pt1 = QtCore.QPointF(midptx , self.pointA.y())
+                path.cubicTo(ctrl1_1, ctrl2_1, pt1)
+                
+                path.moveTo(pt1)
 
-        #if self.pointB.x()>self.pointA.x():
+                ctrl1_2 = QtCore.QPointF(midptx, self.pointB.y()+75)
+                ctrl2_2 = QtCore.QPointF(midptx, self.pointB.y()+75)
+                pt2 = QtCore.QPointF(midptx , self.pointB.y()+75)
+                path.cubicTo(ctrl1_2, ctrl2_2, pt2)
+                path.moveTo(pt2)
+
+                ctrl1_3 = QtCore.QPointF(midptx, self.pointB.y()+75)
+                ctrl2_3 = QtCore.QPointF(midptx, self.pointB.y()+75)
+                pt3 = QtCore.QPointF(self.pointB.x()-50 , self.pointB.y()+75)
+                path.cubicTo(ctrl1_3, ctrl2_3, pt3)
+                path.moveTo(pt3)
+
+                ctrl1_4 = QtCore.QPointF(self.pointB.x()-50, self.pointB.y())
+                ctrl2_4 = QtCore.QPointF(self.pointB.x()-50, self.pointB.y())
+                pt4 = QtCore.QPointF(self.pointB.x()-50 , self.pointB.y())
+                path.cubicTo(ctrl1_4, ctrl2_4, pt4)
+                path.moveTo(pt4)
+
+                ctrl1_5 = QtCore.QPointF(self.pointB.x()-50, self.pointB.y())
+                ctrl2_5 = QtCore.QPointF(self.pointB.x()-50, self.pointB.y())
+                pt5 = QtCore.QPointF(self.pointB.x(), self.pointB.y())
+                path.cubicTo(ctrl1_5, ctrl2_5, pt5)
+                path.moveTo(pt5)
+                
+                self.setPath(path)
+            except Exception as e:
+                print(e)
+        else :
+        '''
         midptx = 0.5*(self.pointA.x() + self.pointB.x())
-            
+                
         ctrl1_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
         ctrl2_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
         pt1 = QtCore.QPointF(midptx , self.pointA.y())
         path.cubicTo(ctrl1_1, ctrl2_1, pt1)
-            
+                
         path.moveTo(pt1)
 
         ctrl1_2 = QtCore.QPointF(midptx, self.pointB.y())
@@ -117,28 +170,6 @@ class NodeLine(QtWidgets.QGraphicsPathItem):
         ctrl2_3 = QtCore.QPointF(midptx, self.pointB.y())
         path.cubicTo(ctrl1_3, ctrl2_3, self.pointB)
         self.setPath(path)
-        '''
-        else :
-            midptx = 50 + 0.5*(self.pointA.x() + self.pointB.x())
-            
-            ctrl1_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
-            ctrl2_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
-            pt1 = QtCore.QPointF(midptx , self.pointA.y())
-            path.cubicTo(ctrl1_1, ctrl2_1, pt1)
-            
-            path.moveTo(pt1)
-
-            ctrl1_2 = QtCore.QPointF(midptx, self.pointB.y())
-            ctrl2_2 = QtCore.QPointF(midptx, self.pointB.y())
-            pt2 = QtCore.QPointF(midptx , self.pointB.y())
-            path.cubicTo(ctrl1_2, ctrl2_2, pt2)
-            path.moveTo(pt2)
-
-            ctrl1_3 = QtCore.QPointF(midptx, self.pointB.y())
-            ctrl2_3 = QtCore.QPointF(midptx, self.pointB.y())
-            path.cubicTo(ctrl1_3, ctrl2_3, self.pointB)
-            self.setPath(path)
-        '''
     def paint(self, painter, option, widget):
         painter.setPen(self.pen)
         painter.drawPath(self.path())
@@ -232,7 +263,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 pointA = QtCore.QPointF(rect.x() + rect.width()/2, rect.y() + rect.height()/2)
                 pointA = self.mapToScene(pointA)
                 pointB = self.mapToScene(event.pos())
-                self.newLine = NodeLine(pointA, pointB)
+                self.newLine = NodeLine(pointA, pointB ,'out')
                 self.outLines.append(self.newLine)
                 self.scene().addItem(self.newLine)
                 #print('out')
@@ -241,7 +272,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 pointA = self.mapToScene(event.pos())
                 pointB = QtCore.QPointF(rect.x() + rect.width()/2, rect.y() + rect.height()/2)
                 pointB = self.mapToScene(pointB)
-                self.newLine = NodeLine(pointA, pointB)
+                self.newLine = NodeLine(pointA, pointB, 'in')
                 self.inLines.append(self.newLine)
                 self.scene().addItem(self.newLine)
                 #print('in')
@@ -299,7 +330,7 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             super(NodeItem, self).__init__()
             self.name = None
             self.pic=QtGui.QPixmap("Capture.png")
-            self.rect = QtCore.QRect(0,0,100,60)
+            self.rect = QtCore.QRect(0,0,60,60)
             self.setFlag(QtWidgets.QGraphicsPixmapItem.ItemIsMovable)
             self.setFlag(QtWidgets.QGraphicsPixmapItem.ItemIsSelectable)
             self.initUi()
@@ -324,7 +355,7 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
  
     def initUi(self):
         self.Input = NodeSocket(QtCore.QRect(-10,20,20,20), self, 'in')
-        self.Output = NodeSocket(QtCore.QRect(90,20,20,20), self, 'out')
+        self.Output = NodeSocket(QtCore.QRect(50,20,20,20), self, 'out')
  
     def shape(self):
         path = QtGui.QPainterPath()
