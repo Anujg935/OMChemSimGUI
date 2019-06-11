@@ -35,6 +35,7 @@ class MainApp(QMainWindow,ui):
         self.graphicsView.setScene(scene)
         self.graphicsView.setMouseTracking(True)
         self.pushButton.clicked.connect(self.component)
+        self.graphicsView.keyPressEvent=self.delete
         self.pushButton_2.clicked.connect(self.zoomin)
         self.pushButton_3.clicked.connect(self.zoomout)
         self.pushButton_4.clicked.connect(self.deleteComponent)
@@ -66,7 +67,17 @@ class MainApp(QMainWindow,ui):
             scene.addItem(box)
         except Exception as e:
             print(e)
-            
+    def delete(self,event):
+        try:
+            if event.key() == QtCore.Qt.Key_Delete:
+                for item in scene.selectedItems():
+                    print(item)
+                    scene.removeItem(item)
+                    del item
+        
+        except Exception as e:
+            print(e)
+        
 
 
 '''
