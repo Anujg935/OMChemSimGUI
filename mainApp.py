@@ -13,7 +13,7 @@ from PyQt5.QtGui import QBrush ,QTransform ,QMouseEvent
 import PyQt5.QtGui as QtGui
 import PyQt5.QtCore as QtCore
 import PyQt5.QtWidgets as QtWidgets
-#from component_selector import componentSelector
+from component_selector import componentSelector
 
 ui,_ = loadUiType('main.ui')
 
@@ -24,27 +24,12 @@ coordinate = [0,0]
 component = {}
 index = 0
 
-ui_dialog = loadUiType('comp_selector.ui')
-
-class componentSelector(QDialog,ui_dialog):
-    def __init__(self):
-        super(componentSelector,self).__init__()
-        self.setupUi(self)
-        self.lines = [line.rstrip('\n') for line in open('compounds.txt')]
-
-        model = QStringListMode()
-        model.setStringList(self.lines)
-
-        completer = QCompleter()
-        completer.setModel(model)
-
-        self.lineEdit.setCompleter(completer)
-
 class MainApp(QMainWindow,ui):
     def __init__(self):
         global scene
         QMainWindow.__init__(self)
         self.setupUi(self)
+        self.comp =componentSelector(self)
         scene = QGraphicsScene()
         scene.setItemIndexMethod(QGraphicsScene.BspTreeIndex)
         self.graphicsView.setScene(scene)
@@ -58,9 +43,7 @@ class MainApp(QMainWindow,ui):
     def zoomin(self):
         self.graphicsView.scale(1.15,1.15)
 
-
-    def deleteComponent(self):
-        self.comp =componentSelector()
+    def deleteComponent(self):     
         self.comp.show()
         
         '''
