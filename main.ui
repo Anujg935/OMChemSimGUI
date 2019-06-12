@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>655</width>
-    <height>600</height>
+    <width>987</width>
+    <height>669</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,6 +23,13 @@
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="text">
+         <string>Engstm</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QPushButton" name="pushButton_3">
         <property name="text">
@@ -50,7 +57,7 @@
          <bool>true</bool>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>MatStm</string>
         </property>
        </widget>
       </item>
@@ -129,8 +136,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>655</width>
-     <height>21</height>
+     <width>987</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
