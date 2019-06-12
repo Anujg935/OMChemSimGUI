@@ -1,4 +1,4 @@
-
+from functools import partial
 import sys
 import numpy as np
 import pandas as pd
@@ -16,13 +16,11 @@ import PyQt5.QtWidgets as QtWidgets
 from component_selector import componentSelector
 
 ui,_ = loadUiType('main.ui')
-
+conn_csv=pd.DataFrame(columns=['id','comptype','ip1','ip2','ip3','ip4','ip5','op1','op2','op3','op4','op5','T','P','MolFlow','compMolFrac'])
+conn_csv.set_index('id',inplace=True)
+comp_dict={'MatStm':1,'EngStm':1}
 global a
-global scene
-id = 0
-coordinate = [0,0]
 component = {}
-index = 0
 
 class MainApp(QMainWindow,ui):
     def __init__(self):
@@ -30,11 +28,12 @@ class MainApp(QMainWindow,ui):
         QMainWindow.__init__(self)
         self.setupUi(self)
         self.comp =componentSelector(self)
-        scene = QGraphicsScene()
-        scene.setItemIndexMethod(QGraphicsScene.BspTreeIndex)
-        self.graphicsView.setScene(scene)
+        self.scene = QGraphicsScene()
+        self.scene.setItemIndexMethod(QGraphicsScene.BspTreeIndex)
+        self.graphicsView.setScene(self.scene)
         self.graphicsView.setMouseTracking(True)
-        self.pushButton.clicked.connect(self.component)
+        self.pushButton.clicked.connect(partial(self.component,'MatStm'))
+        self.pushButton_5.clicked.connect(partial(self.component,'EngStm'))
         self.graphicsView.keyPressEvent=self.delete
         self.pushButton_2.clicked.connect(self.zoomin)
         self.pushButton_3.clicked.connect(self.zoomout)
@@ -44,8 +43,13 @@ class MainApp(QMainWindow,ui):
     def zoomin(self):
         self.graphicsView.scale(1.15,1.15)
 
-    def deleteComponent(self):     
-        self.comp.show()
+    def deleteComponent(self):
+        try:
+            with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+                print(conn_csv)
+        except Exception as e:
+            print(e)
+        #self.comp.show()
         
         '''
         for item in self.scene.selectedItems():
@@ -61,26 +65,25 @@ class MainApp(QMainWindow,ui):
         except Exception as e:
             print(e)
             '''
-    def component(self):
+    def component(self,conntype):
         try:
-            box = NodeItem()
-            scene.addItem(box)
-            #a.mapToScene()
-            #(scene.width()/2, scene.height()/2)
+            box = NodeItem(conntype)
+            conn_csv.at[box.name,'comptype']=conntype
+            self.scene.addItem(box)
             box.setPos(250-30, 250-30)
         except Exception as e:
             print(e)
+            
     def delete(self,event):
         try:
             if event.key() == QtCore.Qt.Key_Delete:
-                for item in scene.selectedItems():
+                for item in self.scene.selectedItems():
                     print(item)
-                    scene.removeItem(item)
+                    self.scene.removeItem(item)
                     del item
         
         except Exception as e:
             print(e)
-        
 
 
 '''
@@ -225,7 +228,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         super(NodeSocket, self).__init__(parent)
         self.rect = rect
         self.type = socketType
- 
+        self.parent=parent
         # Brush.
         self.brush = QtGui.QBrush()
         self.brush.setStyle(QtCore.Qt.SolidPattern)
@@ -264,6 +267,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 self.newLine = NodeLine(pointA, pointB ,'out')
                 self.outLines.append(self.newLine)
                 self.scene().addItem(self.newLine)
+                
                 #print('out')
             elif self.type == 'in':
                 rect = self.boundingRect()
@@ -284,6 +288,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
             if self.type == 'out':
                 pointB = self.mapToScene(event.pos())
                 self.newLine.pointB = pointB
+                
             elif self.type == 'in':
                 pointA = self.mapToScene(event.pos())
                 self.newLine.pointA = pointA
@@ -299,11 +304,15 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 self.newLine.target = item
                 item.parentItem().Input.inLines.append(self.newLine)
                 self.newLine.pointB = item.getCenter()
+                conn_csv.at[self.newLine.source.parent.name,'op1']=self.newLine.target.parent.name
+                conn_csv.at[self.newLine.target.parent.name,'ip1']=self.newLine.source.parent.name
             elif self.type == 'in' and item.type == 'out':
                 self.newLine.source = item
                 self.newLine.target = self
                 item.parentItem().Output.outLines.append(self.newLine)
                 self.newLine.pointA = item.getCenter()
+                conn_csv.at[self.newLine.source.parent.name,'ip1']=self.newLine.target.parent.name
+                conn_csv.at[self.newLine.target.parent.name,'op1']=self.newLine.source.parent.name
             else:
                 self.scene().removeItem(self.newLine)
                 if(self.newLine in self.inLines):
@@ -323,17 +332,18 @@ class NodeSocket(QtWidgets.QGraphicsItem):
  
  
 class NodeItem(QtWidgets.QGraphicsPixmapItem):
-    def __init__(self):
+    def __init__(self,comptype):
         try:
             super(NodeItem, self).__init__()
-            self.name = None
+            self.name = comptype + str(comp_dict[comptype])
+            comp_dict[comptype]+=1
             self.pic=QtGui.QPixmap("Capture.png")
             self.rect = QtCore.QRect(0,0,60,60)
             self.setFlag(QtWidgets.QGraphicsPixmapItem.ItemIsMovable)
             self.setFlag(QtWidgets.QGraphicsPixmapItem.ItemIsSelectable)
             self.initUi()
      
-            # Brush.
+            # Brush
             self.brush = QtGui.QBrush()
             self.brush.setStyle(QtCore.Qt.SolidPattern)
             self.brush.setColor(QtGui.QColor(80,0,90,255))
