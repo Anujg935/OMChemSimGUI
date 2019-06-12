@@ -14,7 +14,7 @@ import PyQt5.QtGui as QtGui
 import PyQt5.QtCore as QtCore
 import PyQt5.QtWidgets as QtWidgets
 from component_selector import componentSelector
-
+from pythonGenerator import PythonFileGenerator
 ui,_ = loadUiType('main.ui')
 conn_csv=pd.DataFrame(columns=['id','comptype','ip1','ip2','ip3','ip4','ip5','op1','op2','op3','op4','op5','T','P','MolFlow','CompMolFrac'])
 conn_csv.set_index('id',inplace=True)
@@ -38,6 +38,10 @@ class MainApp(QMainWindow,ui):
         self.pushButton_2.clicked.connect(self.zoomin)
         self.pushButton_3.clicked.connect(self.zoomout)
         self.pushButton_4.clicked.connect(self.deleteComponent)
+        self.pushButton_6.clicked.connect(self.generatef)
+
+    def generatef(self):
+            PythonFileGenerator(conn_csv)
     def zoomout(self):
         self.graphicsView.scale(1.0/1.15,1.0/1.15)
     def zoomin(self):
@@ -68,7 +72,13 @@ class MainApp(QMainWindow,ui):
     def component(self,conntype):
         try:
             box = NodeItem(conntype)
+            
             conn_csv.at[box.name,'comptype']=conntype
+            if(conntype=='MatStm'):
+                conn_csv.at[box.name,'T']=300
+                conn_csv.at[box.name,'P']= 101325
+                conn_csv.at[box.name,'MolFlow']= 100
+                conn_csv.at[box.name,'CompMolFrac']= "[0.5,0.4,0.1]"
             self.scene.addItem(box)
             box.setPos(250-30, 250-30)
         except Exception as e:
