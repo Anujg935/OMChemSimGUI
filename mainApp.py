@@ -16,7 +16,7 @@ import PyQt5.QtWidgets as QtWidgets
 from component_selector import componentSelector
 
 ui,_ = loadUiType('main.ui')
-conn_csv=pd.DataFrame(columns=['id','comptype','ip1','ip2','ip3','ip4','ip5','op1','op2','op3','op4','op5','T','P','MolFlow','compMolFrac'])
+conn_csv=pd.DataFrame(columns=['id','comptype','ip1','ip2','ip3','ip4','ip5','op1','op2','op3','op4','op5','T','P','MolFlow','CompMolFrac'])
 conn_csv.set_index('id',inplace=True)
 comp_dict={'MatStm':1,'EngStm':1}
 global a
