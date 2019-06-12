@@ -65,6 +65,9 @@ class MainApp(QMainWindow,ui):
         try:
             box = NodeItem()
             scene.addItem(box)
+            #a.mapToScene()
+            #(scene.width()/2, scene.height()/2)
+            box.setPos(250-30, 250-30)
         except Exception as e:
             print(e)
     def delete(self,event):
@@ -100,6 +103,7 @@ class NodeLine(QtWidgets.QGraphicsPathItem):
         self.pen.setWidth(1)
         self.pen.setColor(QtGui.QColor(0,0,255,255))
         self.setPen(self.pen)
+        self.setFlag(QtWidgets.QGraphicsPathItem.ItemIsSelectable)
   
     def updatePath(self):
         path = QtGui.QPainterPath()
@@ -342,14 +346,14 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
      
             self.selPen = QtGui.QPen()
             self.selPen.setStyle(QtCore.Qt.SolidLine)
-            self.selPen.setWidth(1)
+            self.selPen.setWidth(2)
             self.selPen.setColor(QtGui.QColor(0,255,255,255))
         except Exception as e:
             print(e)
  
     def initUi(self):
-        self.Input = NodeSocket(QtCore.QRect(-10,20,20,20), self, 'in')
-        self.Output = NodeSocket(QtCore.QRect(50,20,20,20), self, 'out')
+        self.Input = NodeSocket(QtCore.QRect(-2.5,27.5,5,5), self, 'in')
+        self.Output = NodeSocket(QtCore.QRect(57.5,27.5,5,5), self, 'out')
  
     def shape(self):
         path = QtGui.QPainterPath()
