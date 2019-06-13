@@ -5,7 +5,7 @@ from PyQt5.uic import loadUiType
 
 ui_dialog,_ = loadUiType('comp_selector.ui')
 
-compond_selected = ['hydrogen','propane','propylene']
+compond_selected = []
 class componentSelector(QDialog,ui_dialog):
     def __init__(self,parent=None):
         #super(componentSelector,self).__init__(parent)

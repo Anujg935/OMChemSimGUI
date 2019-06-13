@@ -26,6 +26,13 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="text">
+           <string>Select Compounds</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButton">
           <property name="acceptDrops">
            <bool>true</bool>

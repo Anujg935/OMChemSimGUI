@@ -16,9 +16,9 @@ import PyQt5.QtWidgets as QtWidgets
 from component_selector import componentSelector
 from pythonGenerator import PythonFileGenerator
 ui,_ = loadUiType('main.ui')
-conn_csv=pd.DataFrame(columns=['id','comptype','ip1','ip2','ip3','ip4','ip5','op1','op2','op3','op4','op5','T','P','MolFlow','CompMolFrac'])
+conn_csv=pd.DataFrame(columns=['id','comptype','in1','in2','in3','in4','in5','op1','op2','op3','op4','op5','T','P','MolFlow','CompMolFrac'])
 conn_csv.set_index('id',inplace=True)
-comp_dict={'MatStm':1,'EngStm':1}
+comp_dict={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,3,1]}
 global a
 component = {}
 
@@ -40,6 +40,10 @@ class MainApp(QMainWindow,ui):
         self.pushButton_4.clicked.connect(self.deleteComponent)
         self.pushButton_6.clicked.connect(self.generatef)
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
+        self.pushButton_8.clicked.connect(self.selectCompounds)
+
+    def selectCompounds(self):
+        self.comp.show()
     def generatef(self):
             PythonFileGenerator(conn_csv)
     def zoomout(self):
@@ -279,7 +283,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 self.scene().addItem(self.newLine)
                 
                 #print('out')
-            elif self.type == 'in':
+            elif self.type == 'in' or 'in1' or 'in2' or 'in3':
                 rect = self.boundingRect()
                 pointA = self.mapToScene(event.pos())
                 pointB = QtCore.QPointF(rect.x() + rect.width()/2, rect.y() + rect.height()/2)
@@ -299,24 +303,37 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 pointB = self.mapToScene(event.pos())
                 self.newLine.pointB = pointB
                 
-            elif self.type == 'in':
+            elif self.type == 'in' or 'in1' or 'in2' or 'in3':
                 pointA = self.mapToScene(event.pos())
                 self.newLine.pointA = pointA
             else:
                 super(NodeSocket, self).mouseMoveEvent(event)
         except Exception as e:
             print(e)
+
+        
     def mouseReleaseEvent(self, event):
         try:
             item = self.scene().itemAt(event.scenePos().toPoint(),QtGui.QTransform())
-            if self.type == 'out' and item.type == 'in':
+            inputlist = ['in','in1','in2','in3']
+            if (self.type == 'out') and (item.type in inputlist):
+                print("forward")
                 self.newLine.source = self
                 self.newLine.target = item
-                item.parentItem().Input.inLines.append(self.newLine)
+                if(item.type == 'in'):
+                    item.parentItem().Input.inLines.append(self.newLine)
+                elif(item.type == 'in1'):
+                    item.parentItem().Input1.inLines.append(self.newLine)
+                elif(item.type == 'in2'):
+                    item.parentItem().Input2.inLines.append(self.newLine)
+                elif(item.type == 'in3'):
+                    item.parentItem().Input3.inLines.append(self.newLine)
+
                 self.newLine.pointB = item.getCenter()
                 conn_csv.at[self.newLine.source.parent.name,'op1']=self.newLine.target.parent.name
-                conn_csv.at[self.newLine.target.parent.name,'ip1']=self.newLine.source.parent.name
-            elif self.type == 'in' and item.type == 'out':
+                conn_csv.at[self.newLine.target.parent.name,item.type]=self.newLine.source.parent.name
+            elif (self.type in inputlist) and (item.type == 'out'):
+                print("back")
                 self.newLine.source = item
                 self.newLine.target = self
                 item.parentItem().Output.outLines.append(self.newLine)
@@ -324,6 +341,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 conn_csv.at[self.newLine.source.parent.name,'ip1']=self.newLine.target.parent.name
                 conn_csv.at[self.newLine.target.parent.name,'op1']=self.newLine.source.parent.name
             else:
+                print("del")
                 self.scene().removeItem(self.newLine)
                 if(self.newLine in self.inLines):
                     self.inLines.remove(self.newLine)
@@ -345,8 +363,9 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
     def __init__(self,comptype):
         try:
             super(NodeItem, self).__init__()
-            self.name = comptype + str(comp_dict[comptype])
-            comp_dict[comptype]+=1
+            self.name = comptype + str(comp_dict[comptype][0])
+            self.type = comptype
+            comp_dict[comptype][0]+=1
             self.pic=QtGui.QPixmap("Capture.png")
             self.rect = QtCore.QRect(0,0,60,60)
             self.setFlag(QtWidgets.QGraphicsPixmapItem.ItemIsMovable)
@@ -372,8 +391,18 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             print(e)
  
     def initUi(self):
-        self.Input = NodeSocket(QtCore.QRect(-2.5,27.5,5,5), self, 'in')
-        self.Output = NodeSocket(QtCore.QRect(57.5,27.5,5,5), self, 'out')
+        if(self.type == "Mixer"):
+            self.Input1 = NodeSocket(QtCore.QRect(-2.5,12.5,5,5), self, 'in1')
+            print(self.Input1)
+            self.Input2 = NodeSocket(QtCore.QRect(-2.5,27.5,5,5), self, 'in2')
+            print(self.Input2)
+            self.Input3 = NodeSocket(QtCore.QRect(-2.5,42.5,5,5), self, 'in3')
+            print(self.Input3)
+            self.Output = NodeSocket(QtCore.QRect(57.5,27.5,5,5), self, 'out')
+        else:
+            self.Input = NodeSocket(QtCore.QRect(-2.5,27.5,5,5), self, 'in')
+            print(self.Input)
+            self.Output = NodeSocket(QtCore.QRect(57.5,27.5,5,5), self, 'out')
  
     def shape(self):
         path = QtGui.QPainterPath()
@@ -398,14 +427,28 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
         try:
             #print('item move')
             super(NodeItem, self).mouseMoveEvent(event)
-            for line in self.Output.outLines:
-                #print(line.source)
-                line.pointA = line.source.getCenter()
-                line.pointB = line.target.getCenter()
-            for line in self.Input.inLines:
-                #print(line.source)
-                line.pointA = line.source.getCenter()
-                line.pointB = line.target.getCenter()
+            if(self.type == "Mixer"):
+                for line in self.Output.outLines:
+                    line.pointA = line.source.getCenter()
+                    line.pointB = line.target.getCenter()
+                for line in self.Input1.inLines:
+                    line.pointA = line.source.getCenter()
+                    line.pointB = line.target.getCenter()
+                for line in self.Input2.inLines:
+                    line.pointA = line.source.getCenter()
+                    line.pointB = line.target.getCenter()
+                for line in self.Input3.inLines:
+                    line.pointA = line.source.getCenter()
+                    line.pointB = line.target.getCenter()
+            else:
+                for line in self.Output.outLines:
+                    #print(line.source)
+                    line.pointA = line.source.getCenter()
+                    line.pointB = line.target.getCenter()
+                for line in self.Input.inLines:
+                    #print(line.source)
+                    line.pointA = line.source.getCenter()
+                    line.pointB = line.target.getCenter()
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print(exc_type,exc_tb.tb_lineno)
