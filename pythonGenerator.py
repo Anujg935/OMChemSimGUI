@@ -1,41 +1,31 @@
 import pandas as pd
 from component_selector import *
 def PythonFileGenerator(data):
-    try:
-        f = open("filepy.py","w+")
+    f = open("filepy.py","w+")
 
-        f.write("from OMChem.Flowsheet import Flowsheet\n")
-        #n = data['comtype'].nunique()
-        for i in list(data['comptype'].unique()):
-            f.write("from OMChem."+i+" import " +i)
+    f.write("from OMChem.Flowsheet import Flowsheet\n")
+    for i in list(data['comptype'].unique()):
+        f.write("from OMChem."+i+" import " +i+"\n")
 
 
-        f.write("comp = " + str(compond_selected ))
+    f.write("comp = " + str(compond_selected )+"\n")
 
 
-        for i in range(len(data.index)):
-            print(len(data.index))
-            if(data.get('comptype')[i] == 'MatStm'):
-                print("1")
-                print(data.get('id')[i],data.get('T')[i],data.get('P')[i])
-                f.write(data.get('id')[i]+" = MatStm(name="+"\"data.get('id')[i]\"" +",T="+data.get('T')[i] + ",P="+data.get('P')[i] +",MolFlow="+data.get('MolFlow')[i] +",CompMolFrac="+data.get('CompMolFrac')[i]+"\n")
-                print("2")
-            elif(data.get('comptype')[i] == 'EngStm'):
-                print("3")
-                f.write(data.get('id')[i]+" = EngStm(name="+"\"data.get('id')[i]\"" +"\n")
-                print("4")
-            else:
-                pass
+    for i in range(len(data.index)):
+        if(data.get('comptype')[i] == 'MatStm'):
+            f.write(str(data.index.values[i])+" = MatStm(name="+repr(str(data.index.values[i])) +",T="+str(data.get('T')[i]) + ",P="+str(data.get('P')[i]) +",MolFlow="+str(data.get('MolFlow')[i])+",CompMolFrac="+str(data.get('CompMolFrac')[i]) +")\n")
+        elif(data.get('comptype')[i] == 'EngStm'):
+            f.write(str(data.index.values[i])+" = EngStm(name="+repr(str(data.index.values[i])) +")\n")
+        else:
+            pass
 
 
 
-        f.write("f = Flowsheet()\n")
-        f.write("f.add_comp_list("+compond_selected+")\n")
-        for i in range(len(data.index)):
-            f.write("f.add_UnitOpn("+data.get('id')[i]+")\n")
+    f.write("f = Flowsheet()\n")
+    f.write("f.add_comp_list("+str(compond_selected)+")\n")
+    for i in range(len(data.index)):
+        f.write("f.add_UnitOpn("+str(data.index.values[i])+")\n")
 
 
-        f.write("f.simulate()")
-    except Exception as e:
-        
-        print(e)
+    f.write("f.simulate()\n")
+    f.close()

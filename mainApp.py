@@ -39,7 +39,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton_3.clicked.connect(self.zoomout)
         self.pushButton_4.clicked.connect(self.deleteComponent)
         self.pushButton_6.clicked.connect(self.generatef)
-
+        self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
     def generatef(self):
             PythonFileGenerator(conn_csv)
     def zoomout(self):
