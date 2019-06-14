@@ -12,16 +12,17 @@ def PythonFileGenerator(data):
 
     for i in range(len(data.index)):
         if(data.get('comptype')[i] == 'MatStm'):
-            f.write(str(data.index.values[i])+" = MatStm(name="+repr(str(data.index.values[i]))+"CompNames=comp" +",T="+str(data.get('T')[i]) + ",P="+str(data.get('P')[i]) +",MolFlow="+str(data.get('MolFlow')[i])+",CompMolFrac="+str(data.get('CompMolFrac')[i]) +")\n")
+            f.write(str(data.index.values[i])+" = MatStm(name="+repr(str(data.index.values[i]))+",CompNames=comp" +",T="+str(data.get('T')[i]) + ",P="+str(data.get('P')[i]) +",MolFlow="+str(data.get('MolFlow')[i])+",CompMolFrac="+str(data.get('CompMolFrac')[i]) +")\n")
         elif(data.get('comptype')[i] == 'EngStm'):
             f.write(str(data.index.values[i])+" = EngStm(name="+repr(str(data.index.values[i])) +")\n")
         elif(data.get('comptype')[i] =='Mixer'):
-            f.write(str(data.index.values[i])+" = Mixer(name="+repr(str(data.index.values[i])) +",NOI="+str(5-data.iloc[0][2:7].isna().sum())+")\n")
+            f.write(str(data.index.values[i])+" = Mixer(name="+repr(str(data.index.values[i])) +",NOI="+str(5-data.iloc[i][2:7].isna().sum())+")\n")
         else:
             pass
 
 
     templist = []
+    outputStmslst = []
     for i in range(len(data.index)):
         if((data.iloc[i][1:6].isna().sum() <5) and (data.iloc[i][6:11].isna().sum() <5)):
             l = pd.notna(data.iloc[i][1:6]).index[pd.notna(data.iloc[i][1:6]) == True].tolist()
@@ -36,18 +37,24 @@ def PythonFileGenerator(data):
             li = pd.notna(data.iloc[i][6:11]).index[pd.notna(data.iloc[i][6:11]) == True].tolist()
             print(li)
             if(len(li)==1):
-                f.write(str(data.iloc[i][li[0]])+")\n")
+                outputStms =  str(data.iloc[i][li[0]])
+                outputStmslst.append(outputStms)
+                f.write(outputStms+")\n")
             else:
-                t = []
                 t.append([data.iloc[i][li[j]] for j in range(len(li))])
+                outputStmslst.append(str(t[0]))
                 f.write(str(t[0])+")\n")
 
 
     f.write("f = Flowsheet()\n")
     f.write("f.add_comp_list(comp)\n")
     for i in range(len(data.index)):
-        f.write("f.add_UnitOpn("+str(data.index.values[i])+")\n")
+        if(str(data.index.values[i]) in outputStmslst):
+            f.write("f.add_UnitOpn("+str(data.index.values[i])+",1"+")\n")
+        else:
+            f.write("f.add_UnitOpn("+str(data.index.values[i])+",0"+")\n")
 
 
     f.write("f.simulateEQN()\n")
     f.close()
+

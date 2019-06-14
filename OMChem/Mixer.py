@@ -12,6 +12,8 @@ class Mixer():
     def OM_Flowsheet_Init(self, addedcomp):
         self.OM_data_init = ''
         comp_count = len(addedcomp)
+        #self.OM_data_init = self.OM_data_init + (
+        #"Simulator.Unit_Operations.Mixer " + self.name + "(NOC = " + str(comp_count))
         self.OM_data_init = self.OM_data_init + (
         "Simulator.Unit_Operations.Mixer " + self.name + "(NOC = " + str(comp_count))
         self.OM_data_init = self.OM_data_init + (",comp = {")

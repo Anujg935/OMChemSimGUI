@@ -30,14 +30,15 @@ class Flowsheet():
 		    print("The OpenModelica compiler is missing in the System path please install it" )
 		    raise
 
-	def add_UnitOpn(self,unitop):
-		self.UnitOpn.append(unitop)
-
+	def add_UnitOpn(self,unitop,flag):
+                f=(unitop,flag)
+                self.UnitOpn.append(f)
 	def remove_UnitOpn(self,unitop):
 		self.UnitOpn.remove(unitop)
 
 	def add_comp_list(self,comp):
 		self.compounds = comp
+	
 
 	def send_for_simulationEqn(self):
 		self.resdata = []
@@ -78,17 +79,17 @@ class Flowsheet():
 
 		
 
-		if self.sim_method == 'SM':
-			for unitop in self.UnitOpn:
-		 		self.resdata = []
-		 		if unitop.type != 'MatStm':
-		 			print('Simulating '+unitop.name+'...')
-		 			csvpath = os.path.join(self.sim_dir_path,unitop.name+'_res.csv')
-		 			with open(csvpath,'r') as resultFile:
-		 				csvreader = csv.reader(resultFile,delimiter=',')
-		 				for row in csvreader:
-		 					self.resdata.append(row)
-		 			self.ExtData()
+		# if self.sim_method == 'SM':
+		# 	for unitop in self.UnitOpn:
+		# 		self.resdata = []
+		# 		if unitop.type != 'MatStm':
+		# 			print 'Simulating '+unitop.name+'...'
+		# 			csvpath = os.path.join(self.sim_dir_path,unitop.name+'_res.csv')
+		# 			with open(csvpath,'r') as resultFile:
+		# 				csvreader = csv.reader(resultFile,delimiter=',')
+		# 				for row in csvreader:
+		# 					self.resdata.append(row)
+		# 			self.ExtData()
 
 
 		
@@ -106,18 +107,19 @@ class Flowsheet():
 
 	def ExtData(self):
 		for unit in self.UnitOpn:
-			if unit.type == 'MatStm':
+			if unit[0].type == 'MatStm':
 #
-				for key, value in unit.Prop.items():
-					propertyname = unit.name + '.' + key
+				for key, value in unit[0].Prop.items():
+
+				
+					propertyname = unit[0].name + '.' + key
 					if propertyname in self.resdata[0]:
 						ind = self.resdata[0].index(propertyname)
 						resultval = str(self.resdata[-1][ind])
-						#resultval = str(omc.sendExpression("val("+unit.name+ "." + value + ", 0.5)"))
+		 				#resultval = str(omc.sendExpression("val("+unit.name+ "." + value + ", 0.5)"))
 						print(resultval)
-						unit.Prop[key] = resultval
-						
-				print(unit.Prop)
+						unit[0].Prop[key] = resultval
+				print(unit[0].Prop)
 			# 		else:
 			# 			for v in value:
 			# 				propertyname = unit.name + '.' + v
@@ -206,31 +208,33 @@ class Flowsheet():
 		self.data = []
 		self.sim_method = 'Eqn'
 		self.data.append("model Flowsheet\n")
+		self.data.append("model ms\n extends Simulator.Streams.Material_Stream;\n extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;\nend ms;\n")
   		
 		for c in self.compounds:
 			ucase = c.title()
 			lcase = c.lower()
-			self.data.append("parameter Simulator.Files.Chemsep_Database." + ucase +' '+ lcase + "; \n")
+			self.data.append("parameter Simulator.Files.Chemsep_Database." + ucase +' '+ ucase + "; \n")
 
 		for unitop in self.UnitOpn:
-			self.data.append(unitop.OM_Flowsheet_Init(self.compounds))
+			self.data.append(unitop[0].OM_Flowsheet_Init(self.compounds))
              
 
 		self.data.append("equation\n")
         
 		for unitop in self.UnitOpn:
-			if unitop.type == 'MatStm':
-				self.data.append(unitop.OM_Flowsheet_Eqn(self.compounds,'Eqn'))
-			else:
-				self.data.append(unitop.OM_Flowsheet_Eqn(self.compounds))
-        
+                        if unitop[1]==0:
+                                
+                                if unitop[0].type == 'MatStm':
+                                        self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds,'Eqn'))
+                                else:
+                                        self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds))
+                        else:
+                                pass
 		with open(self.Flomo_path, 'w') as txtfile:
 			for d in self.data:
 				txtfile.write(d)
 			txtfile.write('end Flowsheet;\n')
-		
-		print("Path:")
-		print(self.omc_path,self.curr_path,self.sim_dir_path,self.Flomo_path,self.eqn_mos_path)
+
 		with open(self.eqn_mos_path, 'w') as mosFile:
 			mosFile.write('loadModel(Modelica);\n')
 			mosFile.write("loadFile(\"Simulator.mo\");\n")
@@ -303,7 +307,7 @@ class Flowsheet():
 					inpstms.GetEquationValues()
 					self.data.append(inpstms.OM_Flowsheet_Eqn(self.compounds,'SM'))
 
-				os.chdir(self.sim_dir_path)
+				# os.chdir(self.sim_dir_path)
 				unitmofile = os.path.join(self.sim_dir_path,unitop.name+'.mo')
 
 				with open(unitmofile,'w') as unitFile:

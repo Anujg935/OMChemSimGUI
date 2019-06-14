@@ -384,7 +384,8 @@ class MatStm():
         comp_count = len(addedcomp)
         self.GetStartValues()
 
-        self.OM_data_init = "Simulator.Streams.Mat_Stm_RL " + self.name +"(NOC = " + str(comp_count)
+        #self.OM_data_init = "Simulator.Streams.Mat_Stm_RL " + self.name +"(NOC = " + str(comp_count)
+        self.OM_data_init = "ms " + self.name +"(NOC = " + str(comp_count)
         self.OM_data_init = self.OM_data_init + ",comp = {"
         comp = str(addedcomp).strip('[').strip(']')
         comp = comp.replace("'","")
