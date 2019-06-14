@@ -35,16 +35,21 @@ class componentSelector(QDialog,ui_dialog):
         comp = self.lineEdit.text()
 
         if comp in self.lines:
-            try:
-                compond_selected.append(comp)
-                self.lineEdit.clear()
-                #self.addCompToList(comp)
-                a = df.loc[df['Name'] == comp]
-                print(a)
-                self.addToTable(a)
-                #print(compond_selected)
+
+            compond_selected.append(comp)
+            self.lineEdit.clear()
+            print(compond_selected)
+            #self.addCompToList(comp)
+            a = df.loc[df['Name'] == comp]
+            print(a)
+            self.addToTable(a)
+            #print(compond_selected)
+            '''
             except Exception as e:
-                print(e)
+                exc_type, exc_obj, exc_tb = sys.exc_info()
+                fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+                print(exc_type, fname, exc_tb.tb_lineno)
+            '''
         else:
             self.Show_Error()
 
@@ -52,12 +57,14 @@ class componentSelector(QDialog,ui_dialog):
         try:
             rowPosition = self.tableWidget.rowCount()
             self.tableWidget.insertRow(rowPosition)
-            self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(a[0])))
-            self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(a[1])))
-            self.tableWidget.setItem(rowPosition , 2, QTableWidgetItem(str(a[2])))
-            self.tableWidget.setItem(rowPosition , 3, QTableWidgetItem(str(a[3])))
+            self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(a.iloc[0][0])))
+            self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(a.iloc[0][1])))
+            self.tableWidget.setItem(rowPosition , 2, QTableWidgetItem(str(a.iloc[0][2])))
+            self.tableWidget.setItem(rowPosition , 3, QTableWidgetItem(str(a.iloc[0][3])))
         except Exception as e:
-            print(e)
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+            print(exc_type, fname, exc_tb.tb_lineno)
     def initial_Table(self):
         self.tableWidget.setColumnCount(self.col_count)
         self.tableWidget.setRowCount(self.row_count)
@@ -67,12 +74,11 @@ class componentSelector(QDialog,ui_dialog):
         self.item.setText(comp)
         self.listWidget.addItem(self.item)
 
-    def removeItems(self): 
-        for item in self.listWidget.selectedItems():
-            txt = item.text()
-            compond_selected.remove(txt)
-            self.listWidget.takeItem(self.listWidget.row(item))
-		
+    def removeItems(self):
+        item = self.tableWidget.item(self.tableWidget.currentRow(),1).text()
+        self.tableWidget.removeRow(self.tableWidget.currentRow())
+        
+        compond_selected.remove(item)	
     def Show_Error(self):
         QMessageBox.about(self, 'Important', "Selected Compound is not Available")
 
