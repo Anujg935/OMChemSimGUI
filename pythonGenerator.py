@@ -12,7 +12,7 @@ def PythonFileGenerator(data):
 
     for i in range(len(data.index)):
         if(data.get('comptype')[i] == 'MatStm'):
-            f.write(str(data.index.values[i])+" = MatStm(name="+repr(str(data.index.values[i])) +",T="+str(data.get('T')[i]) + ",P="+str(data.get('P')[i]) +",MolFlow="+str(data.get('MolFlow')[i])+",CompMolFrac="+str(data.get('CompMolFrac')[i]) +")\n")
+            f.write(str(data.index.values[i])+" = MatStm(name="+repr(str(data.index.values[i]))+"CompNames=comp" +",T="+str(data.get('T')[i]) + ",P="+str(data.get('P')[i]) +",MolFlow="+str(data.get('MolFlow')[i])+",CompMolFrac="+str(data.get('CompMolFrac')[i]) +")\n")
         elif(data.get('comptype')[i] == 'EngStm'):
             f.write(str(data.index.values[i])+" = EngStm(name="+repr(str(data.index.values[i])) +")\n")
         elif(data.get('comptype')[i] =='Mixer'):

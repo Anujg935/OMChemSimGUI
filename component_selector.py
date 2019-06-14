@@ -2,9 +2,11 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.uic import loadUiType
-
+import pandas as pd
 ui_dialog,_ = loadUiType('comp_selector.ui')
 
+
+df = pd.read_csv("compoundsDatabase.csv")
 compond_selected = []
 class componentSelector(QDialog,ui_dialog):
     def __init__(self,parent=None):
@@ -12,8 +14,9 @@ class componentSelector(QDialog,ui_dialog):
         QDialog.__init__(self,parent)
         self.setupUi(self)
         self.lines = [line.rstrip('\n') for line in open('compounds.txt')]
-        if(self.lines):
-            print("ok")
+        #if(self.lines):
+           # print("ok")
+        #print(df.columns)
         model = QStringListModel()
         model.setStringList(self.lines)
 
@@ -32,13 +35,29 @@ class componentSelector(QDialog,ui_dialog):
         comp = self.lineEdit.text()
 
         if comp in self.lines:
-            compond_selected.append(comp)
-            self.lineEdit.clear()
-            self.addCompToList(comp)
-            print(compond_selected)
+            try:
+                compond_selected.append(comp)
+                self.lineEdit.clear()
+                #self.addCompToList(comp)
+                a = df.loc[df['Name'] == comp]
+                print(a)
+                self.addToTable(a)
+                #print(compond_selected)
+            except Exception as e:
+                print(e)
         else:
             self.Show_Error()
 
+    def addToTable(self,a):
+        try:
+            rowPosition = self.tableWidget.rowCount()
+            self.tableWidget.insertRow(rowPosition)
+            self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(a[0])))
+            self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(a[1])))
+            self.tableWidget.setItem(rowPosition , 2, QTableWidgetItem(str(a[2])))
+            self.tableWidget.setItem(rowPosition , 3, QTableWidgetItem(str(a[3])))
+        except Exception as e:
+            print(e)
     def initial_Table(self):
         self.tableWidget.setColumnCount(self.col_count)
         self.tableWidget.setRowCount(self.row_count)

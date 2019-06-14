@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>403</width>
+    <width>461</width>
     <height>289</height>
    </rect>
   </property>
@@ -16,9 +16,9 @@
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>9</x>
+     <x>10</x>
      <y>20</y>
-     <width>381</width>
+     <width>441</width>
      <height>256</height>
     </rect>
    </property>
@@ -52,25 +52,27 @@
      </layout>
     </item>
     <item>
-     <widget class="QListWidget" name="listWidget">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
-      </property>
-      <property name="showDropIndicator" stdset="0">
-       <bool>false</bool>
-      </property>
-      <property name="movement">
-       <enum>QListView::Static</enum>
-      </property>
-      <property name="isWrapping" stdset="0">
-       <bool>false</bool>
-      </property>
-      <property name="selectionRectVisible">
-       <bool>true</bool>
-      </property>
+     <widget class="QTableWidget" name="tableWidget">
+      <column>
+       <property name="text">
+        <string>CAS Number</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Molecular Formula</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Molecular Weight</string>
+       </property>
+      </column>
      </widget>
     </item>
     <item>

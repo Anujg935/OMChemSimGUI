@@ -32,7 +32,7 @@ class Mixer():
         strcount = 1
         for strm in self.InputStms:
             self.OM_data_eqn = self.OM_data_eqn + (
-            'connect(' + strm.name + '.outlet,' + self.name + '.inlet[' + str(strcount) + ']);\n')
+            'connect(' + strm + '.outlet,' + self.name + '.inlet[' + str(strcount) + ']);\n')
             strcount += 1
         self.OM_data_eqn = self.OM_data_eqn + ('connect(' + self.name + '.outlet,' + self.OutputStms.name + '.inlet);\n')
         return self.OM_data_eqn
