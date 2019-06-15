@@ -27,6 +27,10 @@ class MainApp(QMainWindow,ui):
         global scene
         QMainWindow.__init__(self)
         self.setupUi(self)
+        style = open('light.css','r')
+        style = style.read()
+        self.setStyleSheet(style)
+        self.dockWidget_3.hide()
         self.comp =componentSelector(self)
         self.scene = QGraphicsScene()
         self.scene.setItemIndexMethod(QGraphicsScene.BspTreeIndex)
@@ -41,7 +45,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton_6.clicked.connect(self.generatef)
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
         self.pushButton_8.clicked.connect(self.selectCompounds)
-
+        
     def selectCompounds(self):
         self.comp.show()
     def generatef(self):
@@ -86,7 +90,7 @@ class MainApp(QMainWindow,ui):
                 conn_csv.at[box.name,'MolFlow']= 100
                 conn_csv.at[box.name,'CompMolFrac']= "[0.5,0.4,0.1]"
             self.scene.addItem(box)
-            box.setPos(250-30, 250-30)
+            box.setPos(2500-30, 2500-30)
         except Exception as e:
             print(e)
             
@@ -455,12 +459,12 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print(exc_type,exc_tb.tb_lineno)
             print(e)
-
+    ''
     def mouseDoubleClickEvent(self, event):
         try:
             print ("DoubleClick")
-            self.widget=ParameterSet()
-
+            #self.widget=ParameterSet()
+            self.dockWidget_3.show()
         except Exception as e:
             print(e)
     def contextMenuEvent(self, event):
@@ -485,7 +489,7 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
 '''
     end
 '''
-
+'''
 class ParameterSet(QWidget):
     def __init__(self):
         super().__init__()
@@ -495,7 +499,7 @@ class ParameterSet(QWidget):
         self.setGeometry(300, 300, 300, 200)
         self.setWindowTitle('Put Parameters')
         self.show()
-
+'''
 
 class graphicsItem(QGraphicsPixmapItem):
     global a
