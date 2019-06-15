@@ -46,6 +46,8 @@ class MainApp(QMainWindow,ui):
         self.comp.show()
     def generatef(self):
             PythonFileGenerator(conn_csv)
+            from filepy import main
+            main()
     def zoomout(self):
         self.graphicsView.scale(1.0/1.15,1.0/1.15)
     def zoomin(self):
@@ -273,12 +275,12 @@ class NodeSocket(QtWidgets.QGraphicsItem):
 
     def mousePressEvent(self, event):
         try:
-            if self.type == 'out':
+            if self.type == 'op1':
                 rect = self.boundingRect()
                 pointA = QtCore.QPointF(rect.x() + rect.width()/2, rect.y() + rect.height()/2)
                 pointA = self.mapToScene(pointA)
                 pointB = self.mapToScene(event.pos())
-                self.newLine = NodeLine(pointA, pointB ,'out')
+                self.newLine = NodeLine(pointA, pointB ,'op1')
                 self.outLines.append(self.newLine)
                 self.scene().addItem(self.newLine)
                 
@@ -299,7 +301,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
     def mouseMoveEvent(self, event):
 
         try:
-            if self.type == 'out':
+            if self.type == 'op1':
                 pointB = self.mapToScene(event.pos())
                 self.newLine.pointB = pointB
                 
@@ -316,13 +318,12 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         try:
             item = self.scene().itemAt(event.scenePos().toPoint(),QtGui.QTransform())
             inputlist = ['in','in1','in2','in3']
-            if (self.type == 'out') and (item.type in inputlist):
+            if (self.type == 'op1') and (item.type in inputlist):
                 print("forward")
                 self.newLine.source = self
                 self.newLine.target = item
-                if(item.type == 'in'):
-                    item.parentItem().Input.inLines.append(self.newLine)
-                elif(item.type == 'in1'):
+                
+                if(item.type == 'in1'):
                     item.parentItem().Input1.inLines.append(self.newLine)
                 elif(item.type == 'in2'):
                     item.parentItem().Input2.inLines.append(self.newLine)
@@ -330,16 +331,17 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                     item.parentItem().Input3.inLines.append(self.newLine)
 
                 self.newLine.pointB = item.getCenter()
-                conn_csv.at[self.newLine.source.parent.name,'op1']=self.newLine.target.parent.name
+                conn_csv.at[self.newLine.source.parent.name,self.type]=self.newLine.target.parent.name
                 conn_csv.at[self.newLine.target.parent.name,item.type]=self.newLine.source.parent.name
-            elif (self.type in inputlist) and (item.type == 'out'):
+            elif (self.type in inputlist) and (item.type == 'op1'):
                 print("back")
                 self.newLine.source = item
                 self.newLine.target = self
                 item.parentItem().Output.outLines.append(self.newLine)
                 self.newLine.pointA = item.getCenter()
-                conn_csv.at[self.newLine.source.parent.name,'ip1']=self.newLine.target.parent.name
-                conn_csv.at[self.newLine.target.parent.name,'op1']=self.newLine.source.parent.name
+                print(self.type)
+                conn_csv.at[self.newLine.source.parent.name,item.type]=self.newLine.target.parent.name
+                conn_csv.at[self.newLine.target.parent.name,self.type]=self.newLine.source.parent.name
             else:
                 print("del")
                 self.scene().removeItem(self.newLine)
@@ -398,11 +400,11 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             print(self.Input2)
             self.Input3 = NodeSocket(QtCore.QRect(-2.5,42.5,5,5), self, 'in3')
             print(self.Input3)
-            self.Output = NodeSocket(QtCore.QRect(57.5,27.5,5,5), self, 'out')
+            self.Output = NodeSocket(QtCore.QRect(57.5,27.5,5,5), self, 'op1')
         else:
-            self.Input = NodeSocket(QtCore.QRect(-2.5,27.5,5,5), self, 'in')
-            print(self.Input)
-            self.Output = NodeSocket(QtCore.QRect(57.5,27.5,5,5), self, 'out')
+            self.Input1 = NodeSocket(QtCore.QRect(-2.5,27.5,5,5), self, 'in1')
+            print(self.Input1)
+            self.Output = NodeSocket(QtCore.QRect(57.5,27.5,5,5), self, 'op1')
  
     def shape(self):
         path = QtGui.QPainterPath()
@@ -445,7 +447,7 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
                     #print(line.source)
                     line.pointA = line.source.getCenter()
                     line.pointB = line.target.getCenter()
-                for line in self.Input.inLines:
+                for line in self.Input1.inLines:
                     #print(line.source)
                     line.pointA = line.source.getCenter()
                     line.pointB = line.target.getCenter()
@@ -453,7 +455,14 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print(exc_type,exc_tb.tb_lineno)
             print(e)
- 
+
+    def mouseDoubleClickEvent(self, event):
+        try:
+            print ("DoubleClick")
+            self.widget=ParameterSet()
+
+        except Exception as e:
+            print(e)
     def contextMenuEvent(self, event):
         menu = QtWidgets.QMenu()
         make = menu.addAction('make')
@@ -463,7 +472,7 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
  
         if selectedAction == debugConnections:
             print ('Input')
-            for idx,line in enumerate(self.Input.inLines):
+            for idx,line in enumerate(self.Input1.inLines):
                 print ('  Line {0}'.format(idx))
                 print ('    pointA: {0}'.format(line.pointA))
                 print ('    pointB: {0}'.format(line.pointB))
@@ -477,7 +486,15 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
     end
 '''
 
+class ParameterSet(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
 
+    def initUI(self):
+        self.setGeometry(300, 300, 300, 200)
+        self.setWindowTitle('Put Parameters')
+        self.show()
 
 
 class graphicsItem(QGraphicsPixmapItem):

@@ -80,7 +80,7 @@
         <item>
          <widget class="QPushButton" name="pushButton_6">
           <property name="text">
-           <string>generateFile</string>
+           <string>Simulate</string>
           </property>
          </widget>
         </item>

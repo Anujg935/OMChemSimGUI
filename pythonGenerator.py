@@ -1,5 +1,6 @@
 import pandas as pd
 from component_selector import *
+import os
 def PythonFileGenerator(data):
     f = open("filepy.py","w+")
 
@@ -7,16 +8,16 @@ def PythonFileGenerator(data):
     for i in list(data['comptype'].unique()):
         f.write("from OMChem."+i+" import " +i+"\n")
 
-
-    f.write("comp = " + str(compond_selected )+"\n")
+    f.write("def main():\n")
+    f.write("\tcomp = " + str(compond_selected )+"\n")
 
     for i in range(len(data.index)):
         if(data.get('comptype')[i] == 'MatStm'):
-            f.write(str(data.index.values[i])+" = MatStm(name="+repr(str(data.index.values[i]))+",CompNames=comp" +",T="+str(data.get('T')[i]) + ",P="+str(data.get('P')[i]) +",MolFlow="+str(data.get('MolFlow')[i])+",CompMolFrac="+str(data.get('CompMolFrac')[i]) +")\n")
+            f.write('\t'+str(data.index.values[i])+" = MatStm(name="+repr(str(data.index.values[i]))+",CompNames=comp" +",T="+str(data.get('T')[i]) + ",P="+str(data.get('P')[i]) +",MolFlow="+str(data.get('MolFlow')[i])+",CompMolFrac="+str(data.get('CompMolFrac')[i]) +")\n")
         elif(data.get('comptype')[i] == 'EngStm'):
-            f.write(str(data.index.values[i])+" = EngStm(name="+repr(str(data.index.values[i])) +")\n")
+            f.write('\t'+str(data.index.values[i])+" = EngStm(name="+repr(str(data.index.values[i])) +")\n")
         elif(data.get('comptype')[i] =='Mixer'):
-            f.write(str(data.index.values[i])+" = Mixer(name="+repr(str(data.index.values[i])) +",NOI="+str(5-data.iloc[i][2:7].isna().sum())+")\n")
+            f.write('\t'+str(data.index.values[i])+" = Mixer(name="+repr(str(data.index.values[i])) +",NOI="+str(5-data.iloc[i][2:7].isna().sum())+")\n")
         else:
             pass
 
@@ -28,11 +29,11 @@ def PythonFileGenerator(data):
             l = pd.notna(data.iloc[i][1:6]).index[pd.notna(data.iloc[i][1:6]) == True].tolist()
             print(l)
             if(len(l)==1):
-                f.write(str(data.index.values[i])+".connect(InputStms="+str(data.iloc[i][l[0]])+",OutputStms=")
+                f.write('\t'+str(data.index.values[i])+".connect(InputStms="+str(data.iloc[i][l[0]])+",OutputStms=")
             else:
                 t = []
                 t.append([data.iloc[i][l[j]] for j in range(len(l))])
-                f.write(str(data.index.values[i])+".connect(InputStms="+str(t[0])+",OutputStms=")
+                f.write('\t'+str(data.index.values[i])+".connect(InputStms="+str(t[0])+",OutputStms=")
             
             li = pd.notna(data.iloc[i][6:11]).index[pd.notna(data.iloc[i][6:11]) == True].tolist()
             print(li)
@@ -46,15 +47,19 @@ def PythonFileGenerator(data):
                 f.write(str(t[0])+")\n")
 
 
-    f.write("f = Flowsheet()\n")
-    f.write("f.add_comp_list(comp)\n")
+    f.write("\tf = Flowsheet()\n")
+    f.write("\tf.add_comp_list(comp)\n")
     for i in range(len(data.index)):
         if(str(data.index.values[i]) in outputStmslst):
-            f.write("f.add_UnitOpn("+str(data.index.values[i])+",1"+")\n")
+            f.write("\tf.add_UnitOpn("+str(data.index.values[i])+",1"+")\n")
         else:
-            f.write("f.add_UnitOpn("+str(data.index.values[i])+",0"+")\n")
+            f.write("\tf.add_UnitOpn("+str(data.index.values[i])+",0"+")\n")
 
 
-    f.write("f.simulateEQN()\n")
+    f.write("\tf.simulateEQN()\n")
+
+    f.write("if __name__ == '__main__':\n")
+    f.write("\tmain()\n")
     f.close()
+
 

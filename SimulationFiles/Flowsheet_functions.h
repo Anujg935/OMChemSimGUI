@@ -37,9 +37,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Simulator_Files_Thermodynamic__Function
 
 
 DLLExport
-modelica_real omc_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData_t *threadData, real_array _LiqCp, real_array _VapCp, modelica_real _T, modelica_real _Tc);
+modelica_real omc_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData_t *threadData, real_array _LiqCp, modelica_real _T);
 DLLExport
-modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData_t *threadData, modelica_metatype _LiqCp, modelica_metatype _VapCp, modelica_metatype _T, modelica_metatype _Tc);
+modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData_t *threadData, modelica_metatype _LiqCp, modelica_metatype _T);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Simulator_Files_Thermodynamic__Functions_LiqCpId,2,0) {(void*) boxptr_Simulator_Files_Thermodynamic__Functions_LiqCpId,0}};
 #define boxvar_Simulator_Files_Thermodynamic__Functions_LiqCpId MMC_REFSTRUCTLIT(boxvar_lit_Simulator_Files_Thermodynamic__Functions_LiqCpId)
 
@@ -61,9 +61,9 @@ static const MMC_DEFSTRUCTLIT(boxvar_lit_Simulator_Files_Thermodynamic__Function
 
 
 DLLExport
-modelica_real omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData_t *threadData, real_array _VapCp, modelica_real _T, modelica_real _Tc);
+modelica_real omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData_t *threadData, real_array _VapCp, modelica_real _T);
 DLLExport
-modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData_t *threadData, modelica_metatype _VapCp, modelica_metatype _T, modelica_metatype _Tc);
+modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData_t *threadData, modelica_metatype _VapCp, modelica_metatype _T);
 static const MMC_DEFSTRUCTLIT(boxvar_lit_Simulator_Files_Thermodynamic__Functions_VapCpId,2,0) {(void*) boxptr_Simulator_Files_Thermodynamic__Functions_VapCpId,0}};
 #define boxvar_Simulator_Files_Thermodynamic__Functions_VapCpId MMC_REFSTRUCTLIT(boxvar_lit_Simulator_Files_Thermodynamic__Functions_VapCpId)
 #include "Flowsheet_model.h"

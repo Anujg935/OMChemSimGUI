@@ -146,13 +146,8 @@ modelica_real omc_Simulator_Files_Thermodynamic__Functions_HVapId(threadData_t *
   index_spec_t tmp8;
   real_array tmp9;
   modelica_real tmp10;
-  real_array tmp11;
-  real_array tmp12;
-  index_spec_t tmp13;
-  real_array tmp14;
-  modelica_real tmp15;
   _tailrecursive: OMC_LABEL_UNUSED
-  _n = ((modelica_integer) 40);
+  _n = ((modelica_integer) 100);
   alloc_real_array(&_Cp, 1, ((modelica_integer) -1) + (modelica_integer)_n);
   tmp3 = ((modelica_integer) 1); tmp4 = 1; tmp5 = ((modelica_integer) -1) + (modelica_integer)_n;
   if(!(((tmp4 > 0) && (tmp3 > tmp5)) || ((tmp4 < 0) && (tmp3 < tmp5))))
@@ -162,28 +157,16 @@ modelica_real omc_Simulator_Files_Thermodynamic__Functions_HVapId(threadData_t *
     {
       array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
       tmp2 = ((modelica_real)((modelica_integer)_n));
-      (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ (modelica_integer)_i)) = omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp1, 298.15 + (((modelica_real)((modelica_integer)_i))) * ((-298.15 + _T) / tmp2), _Tc);
+      (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ (modelica_integer)_i)) = omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp1, 298.15 + (((modelica_real)((modelica_integer)_i))) * ((-298.15 + _T) / tmp2));
     }
   }
 
-  if((_T > 298.15))
-  {
-    array_alloc_scalar_real_array(&tmp6, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
-    create_index_spec(&tmp8, 1, (1), (int*)0, 'W');
-    index_alloc_real_array(&_Cp, &tmp8, &tmp7);
-    array_alloc_scalar_real_array(&tmp9, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
-    tmp10 = ((modelica_real)((modelica_integer)_n));
-    _Ent = (-298.15 + _T) * (((0.5) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp6, _T, _Tc)) + sum_real_array(tmp7) + (0.5) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp9, 298.15, _Tc))) / tmp10);
-  }
-  else
-  {
-    array_alloc_scalar_real_array(&tmp11, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
-    create_index_spec(&tmp13, 1, (1), (int*)0, 'W');
-    index_alloc_real_array(&_Cp, &tmp13, &tmp12);
-    array_alloc_scalar_real_array(&tmp14, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
-    tmp15 = ((modelica_real)((modelica_integer)_n));
-    _Ent = (298.15 - _T) * (((0.5) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp11, _T, _Tc)) + sum_real_array(tmp12) + (0.5) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp14, 298.15, _Tc))) / tmp15);
-  }
+  array_alloc_scalar_real_array(&tmp6, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
+  create_index_spec(&tmp8, 1, (1), (int*)0, 'W');
+  index_alloc_real_array(&_Cp, &tmp8, &tmp7);
+  array_alloc_scalar_real_array(&tmp9, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
+  tmp10 = ((modelica_real)((modelica_integer)_n));
+  _Ent = (-298.15 + _T) * (((0.5) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp6, _T)) + sum_real_array(tmp7) + (0.5) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp9, 298.15))) / tmp10);
   _return: OMC_LABEL_UNUSED
   return _Ent;
 }
@@ -203,36 +186,25 @@ modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_HVapId(threadD
 }
 
 DLLExport
-modelica_real omc_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData_t *threadData, real_array _LiqCp, real_array _VapCp, modelica_real _T, modelica_real _Tc)
+modelica_real omc_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData_t *threadData, real_array _LiqCp, modelica_real _T)
 {
   modelica_real _Cp;
-  real_array tmp1;
+  modelica_real tmp1;
   modelica_real tmp2;
-  modelica_real tmp3;
   _tailrecursive: OMC_LABEL_UNUSED
-  if((_T > _Tc))
-  {
-    array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
-    _Cp = omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp1, _T, _Tc);
-  }
-  else
-  {
-    tmp2 = _T;
-    tmp3 = _T;
-    _Cp = (0.001) * ((*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 2))) + exp(((*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 3)))) / tmp2 + (*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 4))) + ((*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 5)))) * (_T) + ((*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 6)))) * ((tmp3 * tmp3))));
-  }
+  tmp1 = _T;
+  tmp2 = _T;
+  _Cp = (0.001) * ((*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 2))) + exp(((*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 3)))) / tmp1 + (*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 4))) + ((*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 5)))) * (_T) + ((*real_array_element_addr1(&_LiqCp, 1, /* modelica_integer */ ((modelica_integer) 6)))) * ((tmp2 * tmp2))));
   _return: OMC_LABEL_UNUSED
   return _Cp;
 }
-modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData_t *threadData, modelica_metatype _LiqCp, modelica_metatype _VapCp, modelica_metatype _T, modelica_metatype _Tc)
+modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData_t *threadData, modelica_metatype _LiqCp, modelica_metatype _T)
 {
   modelica_real tmp1;
-  modelica_real tmp2;
   modelica_real _Cp;
   modelica_metatype out_Cp;
   tmp1 = mmc_unbox_real(_T);
-  tmp2 = mmc_unbox_real(_Tc);
-  _Cp = omc_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData, *((base_array_t*)_LiqCp), *((base_array_t*)_VapCp), tmp1, tmp2);
+  _Cp = omc_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData, *((base_array_t*)_LiqCp), tmp1);
   out_Cp = mmc_mk_rcon(_Cp);
   return out_Cp;
 }
@@ -380,7 +352,7 @@ modelica_real omc_Simulator_Files_Thermodynamic__Functions_SId(threadData_t *thr
       tmp2 = ((modelica_real)((modelica_integer)_n));
       tmp3 = ((modelica_real)((modelica_integer)_n));
       tmp4 = 298.15 + (((modelica_real)((modelica_integer)_i))) * ((-298.15 + _T) / tmp3);
-      (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ (modelica_integer)_i)) = (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp1, 298.15 + (((modelica_real)((modelica_integer)_i))) * ((-298.15 + _T) / tmp2), _Tc)) / tmp4;
+      (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ (modelica_integer)_i)) = (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp1, 298.15 + (((modelica_real)((modelica_integer)_i))) * ((-298.15 + _T) / tmp2))) / tmp4;
     }
   }
 
@@ -390,7 +362,7 @@ modelica_real omc_Simulator_Files_Thermodynamic__Functions_SId(threadData_t *thr
     tmp9 = _T;
     array_alloc_scalar_real_array(&tmp10, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
     tmp11 = ((modelica_real)((modelica_integer)_n));
-    _Entr = (-298.15 + _T) * (((0.5) * ((omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp8, _T, _Tc)) / tmp9) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 1))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 2))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 3))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 4))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 5))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 6))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 7))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 8))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 9))) + (0.001677008217340265) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp10, 298.15, _Tc))) / tmp11);
+    _Entr = (-298.15 + _T) * (((0.5) * ((omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp8, _T)) / tmp9) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 1))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 2))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 3))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 4))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 5))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 6))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 7))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 8))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 9))) + (0.001677008217340265) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp10, 298.15))) / tmp11);
   }
   else
   {
@@ -398,7 +370,7 @@ modelica_real omc_Simulator_Files_Thermodynamic__Functions_SId(threadData_t *thr
     tmp13 = _T;
     array_alloc_scalar_real_array(&tmp14, 6, (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 1))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5))), (modelica_real)(*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6))));
     tmp15 = ((modelica_real)((modelica_integer)_n));
-    _Entr = (298.15 - _T) * (((0.5) * ((omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp12, _T, _Tc)) / tmp13) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 1))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 2))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 3))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 4))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 5))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 6))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 7))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 8))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 9))) + (0.001677008217340265) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp14, 298.15, _Tc))) / tmp15);
+    _Entr = (298.15 - _T) * (((0.5) * ((omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp12, _T)) / tmp13) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 1))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 2))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 3))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 4))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 5))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 6))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 7))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 8))) + (*real_array_element_addr1(&_Cp, 1, /* modelica_integer */ ((modelica_integer) 9))) + (0.001677008217340265) * (omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp14, 298.15))) / tmp15);
   }
 
   if(((_x > 0.0) && (_y > 0.0)))
@@ -520,7 +492,7 @@ modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_SId(threadData
 }
 
 DLLExport
-modelica_real omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData_t *threadData, real_array _VapCp, modelica_real _T, modelica_real _Tc)
+modelica_real omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData_t *threadData, real_array _VapCp, modelica_real _T)
 {
   modelica_real _Cp;
   modelica_real tmp1;
@@ -529,23 +501,16 @@ modelica_real omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData_t 
   tmp1 = _T;
   tmp2 = _T;
   _Cp = (0.001) * ((*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 2))) + exp(((*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 3)))) / tmp1 + (*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 4))) + ((*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 5)))) * (_T) + ((*real_array_element_addr1(&_VapCp, 1, /* modelica_integer */ ((modelica_integer) 6)))) * ((tmp2 * tmp2))));
-
-  if((_Cp >= 1e+060))
-  {
-    _Cp = 0.0;
-  }
   _return: OMC_LABEL_UNUSED
   return _Cp;
 }
-modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData_t *threadData, modelica_metatype _VapCp, modelica_metatype _T, modelica_metatype _Tc)
+modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData_t *threadData, modelica_metatype _VapCp, modelica_metatype _T)
 {
   modelica_real tmp1;
-  modelica_real tmp2;
   modelica_real _Cp;
   modelica_metatype out_Cp;
   tmp1 = mmc_unbox_real(_T);
-  tmp2 = mmc_unbox_real(_Tc);
-  _Cp = omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, *((base_array_t*)_VapCp), tmp1, tmp2);
+  _Cp = omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, *((base_array_t*)_VapCp), tmp1);
   out_Cp = mmc_mk_rcon(_Cp);
   return out_Cp;
 }
