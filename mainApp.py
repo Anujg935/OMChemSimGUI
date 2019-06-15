@@ -24,13 +24,15 @@ component = {}
 
 class MainApp(QMainWindow,ui):
     def __init__(self):
-        global scene
+        
         QMainWindow.__init__(self)
         self.setupUi(self)
         style = open('light.css','r')
         style = style.read()
         self.setStyleSheet(style)
+        #self.dockWidget_3=self.dockWidget_3
         self.dockWidget_3.hide()
+        #self.graphitem=graphicsItem()
         self.comp =componentSelector(self)
         self.scene = QGraphicsScene()
         self.scene.setItemIndexMethod(QGraphicsScene.BspTreeIndex)
@@ -56,6 +58,7 @@ class MainApp(QMainWindow,ui):
         self.graphicsView.scale(1.0/1.15,1.0/1.15)
     def zoomin(self):
         self.graphicsView.scale(1.15,1.15)
+        
 
     def deleteComponent(self):
         try:
@@ -371,6 +374,7 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             super(NodeItem, self).__init__()
             self.name = comptype + str(comp_dict[comptype][0])
             self.type = comptype
+            self.mainwindow=findMainWindow()
             comp_dict[comptype][0]+=1
             self.pic=QtGui.QPixmap("Capture.png")
             self.rect = QtCore.QRect(0,0,60,60)
@@ -464,7 +468,7 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
         try:
             print ("DoubleClick")
             #self.widget=ParameterSet()
-            self.dockWidget_3.show()
+            self.mainwindow.dockWidget_3.show()
         except Exception as e:
             print(e)
     def contextMenuEvent(self, event):
@@ -597,6 +601,14 @@ class graphicsScene(QGraphicsScene):
     def __init__ (self):
         super(graphicsScene,self).__init__()
         
+def findMainWindow():
+    # Global function to find the (open) QMainWindow in application
+    app = QApplication.instance()
+    for widget in app.topLevelWidgets():
+        if isinstance(widget, QMainWindow):
+            return widget
+    return None
+
 def main():
     app = QApplication(sys.argv)
     window = MainApp()
