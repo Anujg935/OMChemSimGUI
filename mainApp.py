@@ -58,8 +58,7 @@ class MainApp(QMainWindow,ui):
         self.graphicsView.scale(1.0/1.15,1.0/1.15)
     def zoomin(self):
         self.graphicsView.scale(1.15,1.15)
-        
-
+    
     def deleteComponent(self):
         try:
             with pd.option_context('display.max_rows', None, 'display.max_columns', None):
@@ -87,11 +86,13 @@ class MainApp(QMainWindow,ui):
             box = NodeItem(conntype)
             
             conn_csv.at[box.name,'comptype']=conntype
+            '''
             if(conntype=='MatStm'):
                 conn_csv.at[box.name,'T']=300
                 conn_csv.at[box.name,'P']= 101325
                 conn_csv.at[box.name,'MolFlow']= 100
                 conn_csv.at[box.name,'CompMolFrac']= "[0.5,0.4,0.1]"
+            '''
             self.scene.addItem(box)
             box.setPos(2500-30, 2500-30)
         except Exception as e:
@@ -380,13 +381,13 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             self.rect = QtCore.QRect(0,0,60,60)
             self.setFlag(QtWidgets.QGraphicsPixmapItem.ItemIsMovable)
             self.setFlag(QtWidgets.QGraphicsPixmapItem.ItemIsSelectable)
+            self.mainwindow.pushButton_29.clicked.connect(self.matStmParameters)
             self.initUi()
      
             # Brush
             self.brush = QtGui.QBrush()
             self.brush.setStyle(QtCore.Qt.SolidPattern)
             self.brush.setColor(QtGui.QColor(80,0,90,255))
-     
             # Pen.
             self.pen = QtGui.QPen()
             self.pen.setStyle(QtCore.Qt.SolidLine)
@@ -433,6 +434,17 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             painter.drawPixmap(self.rect,self.pic)
         except Exception as e:
             print(e)
+
+    def matStmParameters(self):
+        if (self.mainwindow.lineEdit.text() and self.mainwindow.lineEdit_2.text() and self.mainwindow.lineEdit_3.text() and self.mainwindow.lineEdit_4.text()):
+            print(self.name)
+            conn_csv.at[self.name,'T']=self.mainwindow.lineEdit_2.text()
+            conn_csv.at[self.name,'P']=self.mainwindow.lineEdit.text()
+            conn_csv.at[self.name,'MolFlow']=self.mainwindow.lineEdit_4.text()
+            conn_csv.at[self.name,'CompMolFrac']=self.mainwindow.lineEdit_3.text()
+            self.mainwindow.dockWidget_3.hide()
+        else:
+            QMessageBox.about(self, 'Important', "Please Provide all the fields data")
     def mouseMoveEvent(self, event):
         try:
             #print('item move')
@@ -467,8 +479,10 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
     def mouseDoubleClickEvent(self, event):
         try:
             print ("DoubleClick")
-            #self.widget=ParameterSet()
-            self.mainwindow.dockWidget_3.show()
+            if(self.type == "MatStm"):
+                print(self.name)
+                self.mainwindow.dockWidget_3.show()
+                self.mainwindow.stackedWidget.setCurrentIndex(1)
         except Exception as e:
             print(e)
     def contextMenuEvent(self, event):
