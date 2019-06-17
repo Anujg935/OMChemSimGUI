@@ -14,12 +14,13 @@ import PyQt5.QtGui as QtGui
 import PyQt5.QtCore as QtCore
 import PyQt5.QtWidgets as QtWidgets
 from component_selector import componentSelector
+from dockWidget import dockWidget
 from pythonGenerator import PythonFileGenerator
 ui,_ = loadUiType('main.ui')
 conn_csv=pd.DataFrame(columns=['id','comptype','in1','in2','in3','in4','in5','op1','op2','op3','op4','op5','T','P','MolFlow','CompMolFrac'])
 conn_csv.set_index('id',inplace=True)
 comp_dict={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,3,1]}
-global a
+a=0
 component = {}
 
 class MainApp(QMainWindow,ui):
@@ -30,8 +31,6 @@ class MainApp(QMainWindow,ui):
         style = open('light.css','r')
         style = style.read()
         self.setStyleSheet(style)
-        #self.dockWidget_3=self.dockWidget_3
-        self.dockWidget_3.hide()
         #self.graphitem=graphicsItem()
         self.comp =componentSelector(self)
         self.scene = QGraphicsScene()
@@ -47,13 +46,38 @@ class MainApp(QMainWindow,ui):
         self.pushButton_6.clicked.connect(self.generatef)
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
         self.pushButton_8.clicked.connect(self.selectCompounds)
-        
+    
+    '''    
+    def param(self,name):
+        try:
+            global a
+            name=name
+            if(a==1):
+                if (self.lineEdit.text() and self.lineEdit_2.text() and self.lineEdit_3.text() and self.lineEdit_4.text()):
+                    print(name)
+                    conn_csv.at[name,'T']=self.lineEdit_2.text()
+                    conn_csv.at[name,'P']=self.lineEdit.text()
+                    conn_csv.at[name,'MolFlow']=self.lineEdit_4.text()
+                    conn_csv.at[name,'CompMolFrac']=self.lineEdit_3.text()
+                    print(a)
+                    a=0
+                    self.dockWidget_3.hide()
+                else:
+                    QMessageBox.about(self, 'Important', "Please Provide all the fields data")
+            else:
+                pass
+        except Exception as e:
+            print(e)
+'''
     def selectCompounds(self):
         self.comp.show()
     def generatef(self):
+        try:
             PythonFileGenerator(conn_csv)
             from filepy import main
             main()
+        except Exception as e:
+            print(e)
     def zoomout(self):
         self.graphicsView.scale(1.0/1.15,1.0/1.15)
     def zoomin(self):
@@ -83,8 +107,9 @@ class MainApp(QMainWindow,ui):
             '''
     def component(self,conntype):
         try:
+            box=None
             box = NodeItem(conntype)
-            
+            print(box)
             conn_csv.at[box.name,'comptype']=conntype
             '''
             if(conntype=='MatStm'):
@@ -126,6 +151,7 @@ class NodeLine(QtWidgets.QGraphicsPathItem):
         self.setZValue(-1)
         self.setBrush(QtGui.QColor(0,0,255,255))
         self.pen = QtGui.QPen()
+
         self.pen.setStyle(QtCore.Qt.SolidLine)
         self.pen.setWidth(1)
         self.pen.setColor(QtGui.QColor(0,0,255,255))
@@ -377,11 +403,12 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             self.type = comptype
             self.mainwindow=findMainWindow()
             comp_dict[comptype][0]+=1
+            
             self.pic=QtGui.QPixmap("Capture.png")
             self.rect = QtCore.QRect(0,0,60,60)
             self.setFlag(QtWidgets.QGraphicsPixmapItem.ItemIsMovable)
             self.setFlag(QtWidgets.QGraphicsPixmapItem.ItemIsSelectable)
-            self.mainwindow.pushButton_29.clicked.connect(self.matStmParameters)
+            #self.mainwindow.pushButton_29.clicked.connect(self.matStmParameters)
             self.initUi()
      
             # Brush
@@ -434,17 +461,6 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             painter.drawPixmap(self.rect,self.pic)
         except Exception as e:
             print(e)
-
-    def matStmParameters(self):
-        if (self.mainwindow.lineEdit.text() and self.mainwindow.lineEdit_2.text() and self.mainwindow.lineEdit_3.text() and self.mainwindow.lineEdit_4.text()):
-            print(self.name)
-            conn_csv.at[self.name,'T']=self.mainwindow.lineEdit_2.text()
-            conn_csv.at[self.name,'P']=self.mainwindow.lineEdit.text()
-            conn_csv.at[self.name,'MolFlow']=self.mainwindow.lineEdit_4.text()
-            conn_csv.at[self.name,'CompMolFrac']=self.mainwindow.lineEdit_3.text()
-            self.mainwindow.dockWidget_3.hide()
-        else:
-            QMessageBox.about(self, 'Important', "Please Provide all the fields data")
     def mouseMoveEvent(self, event):
         try:
             #print('item move')
@@ -475,7 +491,20 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print(exc_type,exc_tb.tb_lineno)
             print(e)
-    ''
+    def mouseDoubleClickEvent(self, event):
+        try:
+            print ("DoubleClick")
+            print(self.name)
+            name=self.name
+            objid=id(self)
+            print(id(self))
+            self.dockWidget=dockWidget(name,conn_csv,self.mainwindow)
+            self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)
+            self.dockWidget.stackedWidget.setCurrentIndex(1)
+        except Exception as e:
+            print(e)
+    
+    '''
     def mouseDoubleClickEvent(self, event):
         try:
             print ("DoubleClick")
@@ -485,6 +514,7 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
                 self.mainwindow.stackedWidget.setCurrentIndex(1)
         except Exception as e:
             print(e)
+    '''
     def contextMenuEvent(self, event):
         menu = QtWidgets.QMenu()
         make = menu.addAction('make')

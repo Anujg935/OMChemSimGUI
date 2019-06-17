@@ -3,7 +3,6 @@ import json
 
 
 class MatStm():
-    
     def __init__(self,name = 'Matstm',CompNames = [],T=None,P=None,VapPhasMolFrac=None,VapPhasMasFrac=None,LiqPhasMolFrac=None,LiqPhasMasFrac=None,CompMolFrac = [], CompMasFrac = [], MolFlow=None, MasFlow=None,**kwargs):
         self.name = name
         self.type = 'MatStm'
