@@ -22,9 +22,9 @@ extern "C" {
 #if defined(__cplusplus)
 extern "C" {
 #endif
-  #define Flowsheet_INDEX_JAC_NLSJac2 2
-  int Flowsheet_functionJacNLSJac2_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
-  int Flowsheet_initialAnalyticJacobianNLSJac2(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
+  #define Flowsheet_INDEX_JAC_NLSJac3 2
+  int Flowsheet_functionJacNLSJac3_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
+  int Flowsheet_initialAnalyticJacobianNLSJac3(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
 #if defined(__cplusplus)
 }
 #endif
@@ -40,25 +40,7 @@ extern "C" {
 #if defined(__cplusplus)
 extern "C" {
 #endif
-  #define Flowsheet_INDEX_JAC_NLSJac5 4
-  int Flowsheet_functionJacNLSJac5_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
-  int Flowsheet_initialAnalyticJacobianNLSJac5(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
-#if defined(__cplusplus)
-}
-#endif
-#if defined(__cplusplus)
-extern "C" {
-#endif
-  #define Flowsheet_INDEX_JAC_NLSJac6 5
-  int Flowsheet_functionJacNLSJac6_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
-  int Flowsheet_initialAnalyticJacobianNLSJac6(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
-#if defined(__cplusplus)
-}
-#endif
-#if defined(__cplusplus)
-extern "C" {
-#endif
-  #define Flowsheet_INDEX_JAC_D 6
+  #define Flowsheet_INDEX_JAC_D 4
   int Flowsheet_functionJacD_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
   int Flowsheet_initialAnalyticJacobianD(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
 #if defined(__cplusplus)
@@ -67,7 +49,7 @@ extern "C" {
 #if defined(__cplusplus)
 extern "C" {
 #endif
-  #define Flowsheet_INDEX_JAC_C 7
+  #define Flowsheet_INDEX_JAC_C 5
   int Flowsheet_functionJacC_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
   int Flowsheet_initialAnalyticJacobianC(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
 #if defined(__cplusplus)
@@ -76,7 +58,7 @@ extern "C" {
 #if defined(__cplusplus)
 extern "C" {
 #endif
-  #define Flowsheet_INDEX_JAC_B 8
+  #define Flowsheet_INDEX_JAC_B 6
   int Flowsheet_functionJacB_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
   int Flowsheet_initialAnalyticJacobianB(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
 #if defined(__cplusplus)
@@ -85,7 +67,7 @@ extern "C" {
 #if defined(__cplusplus)
 extern "C" {
 #endif
-  #define Flowsheet_INDEX_JAC_A 9
+  #define Flowsheet_INDEX_JAC_A 7
   int Flowsheet_functionJacA_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
   int Flowsheet_initialAnalyticJacobianA(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
 #if defined(__cplusplus)

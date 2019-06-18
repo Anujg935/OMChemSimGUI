@@ -1,21 +1,80 @@
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
 stdout            | warning | While solving non-linear system an assertion failed during initialization.
 |                 | |       | | The non-linear solver tries to solve the problem that could take some time.
 |                 | |       | | It could help to provide better start-values for the iteration variables.
 |                 | |       | | For more information simulate with -lv LOG_NLS_V
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.liqPhasMolFrac >= 0.0 and MatStm1.liqPhasMolFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMolFrac <= 1.0, has value: -2.22045e-016
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.vapPhasMolFrac >= 0.0 and MatStm1.vapPhasMolFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm1.vapPhasMolFrac <= 1.0, has value: 1
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.totMolFlo[2] >= 0.0
-assert            | warning | Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[2], has value: -6.66134e-014
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm4.liqPhasMolFrac >= 0.0 and MatStm4.liqPhasMolFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm4.liqPhasMolFrac <= 1.0, has value: -2.00758e-017
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm4.totMolFlo[2] >= 0.0
-assert            | warning | Variable violating min constraint: 0.0 <= MatStm4.totMolFlo[2], has value: -2.00758e-015
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.124)^(6.9231e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.129)^(6.92344e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (141.524)^(7.9539e+006)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (68.3907)^(897713)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (141.714)^(7.98596e+006)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (69.6354)^(947624)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (14.9437)^(9373.12)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (23.4015)^(35981.2)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.9995)^(154015)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0161)^(154218)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.2086)^(144599)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (42.7068)^(218625)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.3918)^(146745)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (62.3015)^(678661)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (14.9437)^(9373.12)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (23.4015)^(35981.2)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.9995)^(154015)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0161)^(154218)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.2086)^(144599)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (42.7068)^(218625)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.3918)^(146745)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (62.3015)^(678661)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (292.834)^(7.04579e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (14.9437)^(9373.12)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (23.4015)^(35981.2)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.9995)^(154015)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0161)^(154218)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.2086)^(144599)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (42.7068)^(218625)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.3918)^(146745)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (62.3015)^(678661)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (289.418)^(6.80207e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (14.9437)^(9373.12)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (23.4015)^(35981.2)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.9995)^(154015)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0161)^(154218)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.2086)^(144599)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (42.7068)^(218625)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.3918)^(146745)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (62.3015)^(678661)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (375.244)^(1.48253e+008)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (14.9437)^(9373.12)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (23.4015)^(35981.2)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.9995)^(154015)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0161)^(154218)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.2086)^(144599)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (42.7068)^(218625)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (37.3918)^(146745)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (62.3015)^(678661)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (291.123)^(6.92302e+007)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (38.0201)^(154265)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (618.558)^(6.64039e+008)
+assert            | debug   | Flowsheet_functions.c:109: Invalid root: (13.3803)^(6729.19)
 LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
 LOG_SUCCESS       | info    | The simulation finished successfully.

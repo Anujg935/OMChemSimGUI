@@ -1,6 +1,8 @@
 # from OMPython import OMCSession
 import os
 import csv
+from subprocess import Popen, PIPE
+#import subprocess
 
 class Flowsheet():
 	def __init__(self):
@@ -48,8 +50,16 @@ class Flowsheet():
 		if self.sim_method == 'Eqn':
 			simpath = self.eqn_mos_path
 			os.chdir(self.sim_dir_path)
-			os.system(self.omc_path + ' -s ' + simpath)
-
+			
+			process = Popen([self.omc_path, '-s',simpath], stdout=PIPE, stderr=PIPE)
+			stdout, stderr = process.communicate()
+			#s = subprocess.check_output([self.omc_path, '-s',simpath])
+			#print(s)
+			#print("############### StdOut ################")
+			#print(stdout)
+			os.chdir(self.curr_path)
+			#os.system(self.omc_path + ' -s ' + simpath)
+		
 		if self.sim_method == 'Eqn':
 			csvpath = os.path.join(self.sim_dir_path,'Flowsheet_res.csv')
 			with open (csvpath,'r') as resultFile:
@@ -58,14 +68,20 @@ class Flowsheet():
 				for row in csvreader:
 					self.resdata.append(row)
 			self.ExtData()
-
+	
 
 	def send_for_simulationSM(self,unitop):
 
 		self.resdata = []
 		self.omc_path = self.get_omc_path()
 		os.chdir(self.sim_dir_path)
-		os.system(self.omc_path + ' -s ' + unitop.name+'.mos')
+		#os.system(self.omc_path + ' -s ' + unitop.name+'.mos')
+		process = Popen([self.omc_path, '-s',unitop.name,'.mos'], stdout=PIPE, stderr=PIPE)
+		stdout, stderr = process.communicate()
+		#s = subprocess.check_output([self.omc_path, '-s',simpath])
+		#print(s)
+		print("############### StdOut ################")
+		print(stdout)
 		self.resdata = []
 		print('Simulating '+unitop.name+'...')
 		csvpath = os.path.join(self.sim_dir_path,unitop.name+'_res.csv')
@@ -253,23 +269,23 @@ class Flowsheet():
 		self.data = []
 		for unitop in self.UnitOpn:
 			self.data = []
-			if unitop.type not in ['MatStm','EngStm']:
-				inpstms = unitop.InputStms
-				outstms = unitop.OutputStms
+			if unitop[0].type not in ['MatStm','EngStm']:
+				inpstms = unitop[0].InputStms
+				outstms = unitop[0].OutputStms
 				
 				try:
 					engstms = unitop.EngStms
 				except:
 					engstms = None
 
-				self.data.append("model "+unitop.name+'\n')
+				self.data.append("model "+unitop[0].name+'\n')
 				
 				for c in self.compounds:
 					ucase = c.title()
 					lcase = c.lower()
-					self.data.append("parameter Simulator.Files.Chemsep_Database." + ucase +' '+ lcase + "; \n")
+					self.data.append("parameter Simulator.Files.Chemsep_Database." + ucase +' '+ ucase + "; \n")
 				
-				self.data.append(unitop.OM_Flowsheet_Init(self.compounds))
+				self.data.append(unitop[0].OM_Flowsheet_Init(self.compounds))
 				
 				if type(outstms) is list:
 					for stm in outstms:
@@ -289,7 +305,7 @@ class Flowsheet():
 				
 				self.data.append('equation\n')
 				
-				self.data.append(unitop.OM_Flowsheet_Eqn(self.compounds))
+				self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds))
 
 				if type(outstms) is list:
 					for stm in outstms:
@@ -308,27 +324,27 @@ class Flowsheet():
 					self.data.append(inpstms.OM_Flowsheet_Eqn(self.compounds,'SM'))
 
 				# os.chdir(self.sim_dir_path)
-				unitmofile = os.path.join(self.sim_dir_path,unitop.name+'.mo')
+				unitmofile = os.path.join(self.sim_dir_path,unitop[0].name+'.mo')
 
 				with open(unitmofile,'w') as unitFile:
 					for d in self.data:
 						unitFile.write(d)
-					unitFile.write('end '+unitop.name+';\n')
+					unitFile.write('end '+unitop[0].name+';\n')
 				
-				unitmosfile = os.path.join(self.sim_dir_path,unitop.name+'.mos')
+				unitmosfile = os.path.join(self.sim_dir_path,unitop[0].name+'.mos')
 				with open(unitmosfile, 'w') as mosFile:
 					mosFile.write('loadModel(Modelica);\n')
 					mosFile.write("loadFile(\"Simulator.mo\");\n")
 				
-					mosFile.write("loadFile(\""+unitop.name+".mo\");\n")
-					mosFile.write("simulate("+unitop.name+", outputFormat=\"csv\", stopTime=1.0, numberOfIntervals=1);\n")
+					mosFile.write("loadFile(\""+unitop[0].name+".mo\");\n")
+					mosFile.write("simulate("+unitop[0].name+", outputFormat=\"csv\", stopTime=1.0, numberOfIntervals=1);\n")
 
 				print("Initiating simulation in Sequential Modular Mode")
 				self.resdata = []
 				self.omc_path = self.get_omc_path()
 				os.chdir(self.sim_dir_path)
-				os.system(self.omc_path + ' -s ' + unitop.name+'.mos')
-				print('Simulating '+unitop.name+'...')
+				os.system(self.omc_path + ' -s ' + unitop[0].name+'.mos')
+				print('Simulating '+unitop[0].name+'...')
 				csvpath = os.path.join(self.sim_dir_path,unitop.name+'_res.csv')
 				
 				with open(csvpath,'r') as resultFile:

@@ -6,32 +6,32 @@ extern "C" {
 
 
 /*
-equation index: 2217
+equation index: 1235
 type: ALGORITHM
 
-  assert(Mixer1.inVapPhasMolFrac[1] >= 0.0 and Mixer1.inVapPhasMolFrac[1] <= 1.0, "Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[1] <= 1.0, has value: " + String(Mixer1.inVapPhasMolFrac[1], "g"));
+  assert(MatStm1.liqPhasMolFrac >= 0.0 and MatStm1.liqPhasMolFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMolFrac <= 1.0, has value: " + String(MatStm1.liqPhasMolFrac, "g"));
 */
-void Flowsheet_eqFunction_2217(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1235(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2217};
+  const int equationIndexes[2] = {1,1235};
   modelica_boolean tmp0;
   modelica_boolean tmp1;
-  static const MMC_DEFSTRINGLIT(tmp2,92,"Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[1] <= 1.0, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp2,88,"Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMolFrac <= 1.0, has value: ");
   modelica_string tmp3;
   static int tmp4 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp4)
   {
-    tmp0 = GreaterEq(data->localData[0]->realVars[480] /* Mixer1.inVapPhasMolFrac[1] variable */,0.0);
-    tmp1 = LessEq(data->localData[0]->realVars[480] /* Mixer1.inVapPhasMolFrac[1] variable */,1.0);
+    tmp0 = GreaterEq(data->localData[0]->realVars[65] /* MatStm1.liqPhasMolFrac variable */,0.0);
+    tmp1 = LessEq(data->localData[0]->realVars[65] /* MatStm1.liqPhasMolFrac variable */,1.0);
     if(!(tmp0 && tmp1))
     {
-      tmp3 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[480] /* Mixer1.inVapPhasMolFrac[1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp3 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[65] /* MatStm1.liqPhasMolFrac variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp2),tmp3);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4319,7,4319,434,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMixer1.inVapPhasMolFrac[1] >= 0.0 and Mixer1.inVapPhasMolFrac[1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.liqPhasMolFrac >= 0.0 and MatStm1.liqPhasMolFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp4 = 1;
@@ -41,32 +41,32 @@ void Flowsheet_eqFunction_2217(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2218
+equation index: 1236
 type: ALGORITHM
 
-  assert(Mixer1.inVapPhasMolFrac[2] >= 0.0 and Mixer1.inVapPhasMolFrac[2] <= 1.0, "Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[2] <= 1.0, has value: " + String(Mixer1.inVapPhasMolFrac[2], "g"));
+  assert(MatStm1.liqPhasMasFrac >= 0.0 and MatStm1.liqPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMasFrac <= 1.0, has value: " + String(MatStm1.liqPhasMasFrac, "g"));
 */
-void Flowsheet_eqFunction_2218(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1236(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2218};
+  const int equationIndexes[2] = {1,1236};
   modelica_boolean tmp5;
   modelica_boolean tmp6;
-  static const MMC_DEFSTRINGLIT(tmp7,92,"Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[2] <= 1.0, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp7,88,"Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMasFrac <= 1.0, has value: ");
   modelica_string tmp8;
   static int tmp9 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp9)
   {
-    tmp5 = GreaterEq(data->localData[0]->realVars[481] /* Mixer1.inVapPhasMolFrac[2] variable */,0.0);
-    tmp6 = LessEq(data->localData[0]->realVars[481] /* Mixer1.inVapPhasMolFrac[2] variable */,1.0);
+    tmp5 = GreaterEq(data->localData[0]->realVars[64] /* MatStm1.liqPhasMasFrac variable */,0.0);
+    tmp6 = LessEq(data->localData[0]->realVars[64] /* MatStm1.liqPhasMasFrac variable */,1.0);
     if(!(tmp5 && tmp6))
     {
-      tmp8 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[481] /* Mixer1.inVapPhasMolFrac[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp8 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[64] /* MatStm1.liqPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp7),tmp8);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4319,7,4319,434,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMixer1.inVapPhasMolFrac[2] >= 0.0 and Mixer1.inVapPhasMolFrac[2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.liqPhasMasFrac >= 0.0 and MatStm1.liqPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp9 = 1;
@@ -76,32 +76,32 @@ void Flowsheet_eqFunction_2218(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2219
+equation index: 1237
 type: ALGORITHM
 
-  assert(Mixer1.inVapPhasMolFrac[3] >= 0.0 and Mixer1.inVapPhasMolFrac[3] <= 1.0, "Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[3] <= 1.0, has value: " + String(Mixer1.inVapPhasMolFrac[3], "g"));
+  assert(MatStm1.vapPhasMasFrac >= 0.0 and MatStm1.vapPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.vapPhasMasFrac <= 1.0, has value: " + String(MatStm1.vapPhasMasFrac, "g"));
 */
-void Flowsheet_eqFunction_2219(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1237(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2219};
+  const int equationIndexes[2] = {1,1237};
   modelica_boolean tmp10;
   modelica_boolean tmp11;
-  static const MMC_DEFSTRINGLIT(tmp12,92,"Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[3] <= 1.0, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp12,88,"Variable violating min/max constraint: 0.0 <= MatStm1.vapPhasMasFrac <= 1.0, has value: ");
   modelica_string tmp13;
   static int tmp14 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp14)
   {
-    tmp10 = GreaterEq(data->localData[0]->realVars[482] /* Mixer1.inVapPhasMolFrac[3] variable */,0.0);
-    tmp11 = LessEq(data->localData[0]->realVars[482] /* Mixer1.inVapPhasMolFrac[3] variable */,1.0);
+    tmp10 = GreaterEq(data->localData[0]->realVars[92] /* MatStm1.vapPhasMasFrac variable */,0.0);
+    tmp11 = LessEq(data->localData[0]->realVars[92] /* MatStm1.vapPhasMasFrac variable */,1.0);
     if(!(tmp10 && tmp11))
     {
-      tmp13 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[482] /* Mixer1.inVapPhasMolFrac[3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp13 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[92] /* MatStm1.vapPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp12),tmp13);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4319,7,4319,434,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMixer1.inVapPhasMolFrac[3] >= 0.0 and Mixer1.inVapPhasMolFrac[3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.vapPhasMasFrac >= 0.0 and MatStm1.vapPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp14 = 1;
@@ -111,30 +111,30 @@ void Flowsheet_eqFunction_2219(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2220
+equation index: 1238
 type: ALGORITHM
 
-  assert(MatStm1.T >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.T, has value: " + String(MatStm1.T, "g"));
+  assert(MatStm1.totMolFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[2], has value: " + String(MatStm1.totMolFlo[2], "g"));
 */
-void Flowsheet_eqFunction_2220(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1238(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2220};
+  const int equationIndexes[2] = {1,1238};
   modelica_boolean tmp15;
-  static const MMC_DEFSTRINGLIT(tmp16,64,"Variable violating min constraint: 0.0 <= MatStm1.T, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp16,75,"Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[2], has value: ");
   modelica_string tmp17;
   static int tmp18 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp18)
   {
-    tmp15 = GreaterEq(data->localData[0]->realVars[19] /* MatStm1.T variable */,0.0);
+    tmp15 = GreaterEq(data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */,0.0);
     if(!tmp15)
     {
-      tmp17 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[19] /* MatStm1.T variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp17 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp16),tmp17);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4168,3,4168,75,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.T >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMolFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp18 = 1;
@@ -144,30 +144,30 @@ void Flowsheet_eqFunction_2220(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2221
+equation index: 1239
 type: ALGORITHM
 
-  assert(MatStm1.Pbubl >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.Pbubl, has value: " + String(MatStm1.Pbubl, "g"));
+  assert(MatStm1.totMolFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[3], has value: " + String(MatStm1.totMolFlo[3], "g"));
 */
-void Flowsheet_eqFunction_2221(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1239(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2221};
+  const int equationIndexes[2] = {1,1239};
   modelica_boolean tmp19;
-  static const MMC_DEFSTRINGLIT(tmp20,68,"Variable violating min constraint: 0.0 <= MatStm1.Pbubl, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp20,75,"Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[3], has value: ");
   modelica_string tmp21;
   static int tmp22 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp22)
   {
-    tmp19 = GreaterEq(data->localData[0]->realVars[14] /* MatStm1.Pbubl variable */,0.0);
+    tmp19 = GreaterEq(data->localData[0]->realVars[91] /* MatStm1.totMolFlo[3] variable */,0.0);
     if(!tmp19)
     {
-      tmp21 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[14] /* MatStm1.Pbubl variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp21 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[91] /* MatStm1.totMolFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp20),tmp21);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4169,3,4169,138,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.Pbubl >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMolFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp22 = 1;
@@ -177,30 +177,30 @@ void Flowsheet_eqFunction_2221(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2222
+equation index: 1240
 type: ALGORITHM
 
-  assert(MatStm1.Pdew >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.Pdew, has value: " + String(MatStm1.Pdew, "g"));
+  assert(MatStm1.totMasFlo[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[1], has value: " + String(MatStm1.totMasFlo[1], "g"));
 */
-void Flowsheet_eqFunction_2222(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1240(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2222};
+  const int equationIndexes[2] = {1,1240};
   modelica_boolean tmp23;
-  static const MMC_DEFSTRINGLIT(tmp24,67,"Variable violating min constraint: 0.0 <= MatStm1.Pdew, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp24,75,"Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[1], has value: ");
   modelica_string tmp25;
   static int tmp26 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp26)
   {
-    tmp23 = GreaterEq(data->localData[0]->realVars[15] /* MatStm1.Pdew variable */,0.0);
+    tmp23 = GreaterEq(data->localData[0]->realVars[86] /* MatStm1.totMasFlo[1] variable */,0.0);
     if(!tmp23)
     {
-      tmp25 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[15] /* MatStm1.Pdew variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp25 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[86] /* MatStm1.totMasFlo[1] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp24),tmp25);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4169,3,4169,138,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.Pdew >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMasFlo[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp26 = 1;
@@ -210,137 +210,162 @@ void Flowsheet_eqFunction_2222(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2223
+equation index: 1241
 type: ALGORITHM
 
-  assert(MatStm1.liqPhasMolFrac >= 0.0 and MatStm1.liqPhasMolFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMolFrac <= 1.0, has value: " + String(MatStm1.liqPhasMolFrac, "g"));
+  assert(MatStm1.totMasFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[2], has value: " + String(MatStm1.totMasFlo[2], "g"));
 */
-void Flowsheet_eqFunction_2223(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1241(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2223};
+  const int equationIndexes[2] = {1,1241};
   modelica_boolean tmp27;
-  modelica_boolean tmp28;
-  static const MMC_DEFSTRINGLIT(tmp29,88,"Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMolFrac <= 1.0, has value: ");
-  modelica_string tmp30;
-  static int tmp31 = 0;
+  static const MMC_DEFSTRINGLIT(tmp28,75,"Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[2], has value: ");
+  modelica_string tmp29;
+  static int tmp30 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp31)
+  if(!tmp30)
   {
-    tmp27 = GreaterEq(data->localData[0]->realVars[93] /* MatStm1.liqPhasMolFrac variable */,0.0);
-    tmp28 = LessEq(data->localData[0]->realVars[93] /* MatStm1.liqPhasMolFrac variable */,1.0);
-    if(!(tmp27 && tmp28))
+    tmp27 = GreaterEq(data->localData[0]->realVars[87] /* MatStm1.totMasFlo[2] variable */,0.0);
+    if(!tmp27)
     {
-      tmp30 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[93] /* MatStm1.liqPhasMolFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp29),tmp30);
+      tmp29 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[87] /* MatStm1.totMasFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp28),tmp29);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.liqPhasMolFrac >= 0.0 and MatStm1.liqPhasMolFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMasFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp31 = 1;
+      tmp30 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2224
+equation index: 1242
 type: ALGORITHM
 
-  assert(MatStm1.vapPhasMolFrac >= 0.0 and MatStm1.vapPhasMolFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.vapPhasMolFrac <= 1.0, has value: " + String(MatStm1.vapPhasMolFrac, "g"));
+  assert(MatStm1.totMasFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[3], has value: " + String(MatStm1.totMasFlo[3], "g"));
 */
-void Flowsheet_eqFunction_2224(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1242(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2224};
-  modelica_boolean tmp32;
-  modelica_boolean tmp33;
-  static const MMC_DEFSTRINGLIT(tmp34,88,"Variable violating min/max constraint: 0.0 <= MatStm1.vapPhasMolFrac <= 1.0, has value: ");
-  modelica_string tmp35;
-  static int tmp36 = 0;
+  const int equationIndexes[2] = {1,1242};
+  modelica_boolean tmp31;
+  static const MMC_DEFSTRINGLIT(tmp32,75,"Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[3], has value: ");
+  modelica_string tmp33;
+  static int tmp34 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp36)
+  if(!tmp34)
   {
-    tmp32 = GreaterEq(data->localData[0]->realVars[122] /* MatStm1.vapPhasMolFrac variable */,0.0);
-    tmp33 = LessEq(data->localData[0]->realVars[122] /* MatStm1.vapPhasMolFrac variable */,1.0);
-    if(!(tmp32 && tmp33))
+    tmp31 = GreaterEq(data->localData[0]->realVars[88] /* MatStm1.totMasFlo[3] variable */,0.0);
+    if(!tmp31)
     {
-      tmp35 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[122] /* MatStm1.vapPhasMolFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp34),tmp35);
+      tmp33 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[88] /* MatStm1.totMasFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp32),tmp33);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.vapPhasMolFrac >= 0.0 and MatStm1.vapPhasMolFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMasFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp36 = 1;
+      tmp34 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2225
+equation index: 1243
 type: ALGORITHM
 
-  assert(MatStm1.liqPhasMasFrac >= 0.0 and MatStm1.liqPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMasFrac <= 1.0, has value: " + String(MatStm1.liqPhasMasFrac, "g"));
+  assert(MatStm1.MW[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.MW[1], has value: " + String(MatStm1.MW[1], "g"));
 */
-void Flowsheet_eqFunction_2225(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1243(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2225};
-  modelica_boolean tmp37;
-  modelica_boolean tmp38;
-  static const MMC_DEFSTRINGLIT(tmp39,88,"Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMasFrac <= 1.0, has value: ");
-  modelica_string tmp40;
-  static int tmp41 = 0;
+  const int equationIndexes[2] = {1,1243};
+  modelica_boolean tmp35;
+  static const MMC_DEFSTRINGLIT(tmp36,68,"Variable violating min constraint: 0.0 <= MatStm1.MW[1], has value: ");
+  modelica_string tmp37;
+  static int tmp38 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp41)
+  if(!tmp38)
   {
-    tmp37 = GreaterEq(data->localData[0]->realVars[92] /* MatStm1.liqPhasMasFrac variable */,0.0);
-    tmp38 = LessEq(data->localData[0]->realVars[92] /* MatStm1.liqPhasMasFrac variable */,1.0);
-    if(!(tmp37 && tmp38))
+    tmp35 = GreaterEq(data->localData[0]->realVars[7] /* MatStm1.MW[1] variable */,0.0);
+    if(!tmp35)
     {
-      tmp40 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[92] /* MatStm1.liqPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp39),tmp40);
+      tmp37 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[7] /* MatStm1.MW[1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp36),tmp37);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.liqPhasMasFrac >= 0.0 and MatStm1.liqPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.MW[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp41 = 1;
+      tmp38 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2226
+equation index: 1244
 type: ALGORITHM
 
-  assert(MatStm1.vapPhasMasFrac >= 0.0 and MatStm1.vapPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.vapPhasMasFrac <= 1.0, has value: " + String(MatStm1.vapPhasMasFrac, "g"));
+  assert(MatStm1.MW[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.MW[2], has value: " + String(MatStm1.MW[2], "g"));
 */
-void Flowsheet_eqFunction_2226(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1244(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2226};
-  modelica_boolean tmp42;
+  const int equationIndexes[2] = {1,1244};
+  modelica_boolean tmp39;
+  static const MMC_DEFSTRINGLIT(tmp40,68,"Variable violating min constraint: 0.0 <= MatStm1.MW[2], has value: ");
+  modelica_string tmp41;
+  static int tmp42 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp42)
+  {
+    tmp39 = GreaterEq(data->localData[0]->realVars[8] /* MatStm1.MW[2] variable */,0.0);
+    if(!tmp39)
+    {
+      tmp41 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[8] /* MatStm1.MW[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp40),tmp41);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.MW[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp42 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1245
+type: ALGORITHM
+
+  assert(MatStm1.MW[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.MW[3], has value: " + String(MatStm1.MW[3], "g"));
+*/
+void Flowsheet_eqFunction_1245(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1245};
   modelica_boolean tmp43;
-  static const MMC_DEFSTRINGLIT(tmp44,88,"Variable violating min/max constraint: 0.0 <= MatStm1.vapPhasMasFrac <= 1.0, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp44,68,"Variable violating min constraint: 0.0 <= MatStm1.MW[3], has value: ");
   modelica_string tmp45;
   static int tmp46 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp46)
   {
-    tmp42 = GreaterEq(data->localData[0]->realVars[121] /* MatStm1.vapPhasMasFrac variable */,0.0);
-    tmp43 = LessEq(data->localData[0]->realVars[121] /* MatStm1.vapPhasMasFrac variable */,1.0);
-    if(!(tmp42 && tmp43))
+    tmp43 = GreaterEq(data->localData[0]->realVars[9] /* MatStm1.MW[3] variable */,0.0);
+    if(!tmp43)
     {
-      tmp45 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[121] /* MatStm1.vapPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp45 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[9] /* MatStm1.MW[3] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp44),tmp45);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.vapPhasMasFrac >= 0.0 and MatStm1.vapPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.MW[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp46 = 1;
@@ -350,162 +375,137 @@ void Flowsheet_eqFunction_2226(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2227
+equation index: 1246
 type: ALGORITHM
 
-  assert(MatStm1.totMolFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[2], has value: " + String(MatStm1.totMolFlo[2], "g"));
+  assert(MatStm1.compMolFrac[2,1] >= 0.0 and MatStm1.compMolFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,1] <= 1.0, has value: " + String(MatStm1.compMolFrac[2,1], "g"));
 */
-void Flowsheet_eqFunction_2227(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1246(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2227};
+  const int equationIndexes[2] = {1,1246};
   modelica_boolean tmp47;
-  static const MMC_DEFSTRINGLIT(tmp48,75,"Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[2], has value: ");
-  modelica_string tmp49;
-  static int tmp50 = 0;
+  modelica_boolean tmp48;
+  static const MMC_DEFSTRINGLIT(tmp49,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,1] <= 1.0, has value: ");
+  modelica_string tmp50;
+  static int tmp51 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp50)
+  if(!tmp51)
   {
-    tmp47 = GreaterEq(data->localData[0]->realVars[119] /* MatStm1.totMolFlo[2] variable */,0.0);
-    if(!tmp47)
+    tmp47 = GreaterEq(data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */,0.0);
+    tmp48 = LessEq(data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */,1.0);
+    if(!(tmp47 && tmp48))
     {
-      tmp49 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[119] /* MatStm1.totMolFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp48),tmp49);
+      tmp50 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp49),tmp50);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMolFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[2,1] >= 0.0 and MatStm1.compMolFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp50 = 1;
+      tmp51 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2228
+equation index: 1247
 type: ALGORITHM
 
-  assert(MatStm1.totMolFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[3], has value: " + String(MatStm1.totMolFlo[3], "g"));
+  assert(MatStm1.compMolFrac[2,2] >= 0.0 and MatStm1.compMolFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,2] <= 1.0, has value: " + String(MatStm1.compMolFrac[2,2], "g"));
 */
-void Flowsheet_eqFunction_2228(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1247(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2228};
-  modelica_boolean tmp51;
-  static const MMC_DEFSTRINGLIT(tmp52,75,"Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[3], has value: ");
-  modelica_string tmp53;
-  static int tmp54 = 0;
+  const int equationIndexes[2] = {1,1247};
+  modelica_boolean tmp52;
+  modelica_boolean tmp53;
+  static const MMC_DEFSTRINGLIT(tmp54,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,2] <= 1.0, has value: ");
+  modelica_string tmp55;
+  static int tmp56 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp54)
+  if(!tmp56)
   {
-    tmp51 = GreaterEq(data->localData[0]->realVars[120] /* MatStm1.totMolFlo[3] variable */,0.0);
-    if(!tmp51)
+    tmp52 = GreaterEq(data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */,0.0);
+    tmp53 = LessEq(data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */,1.0);
+    if(!(tmp52 && tmp53))
     {
-      tmp53 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[120] /* MatStm1.totMolFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp52),tmp53);
+      tmp55 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp54),tmp55);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMolFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[2,2] >= 0.0 and MatStm1.compMolFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp54 = 1;
+      tmp56 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2229
+equation index: 1248
 type: ALGORITHM
 
-  assert(MatStm1.totMasFlo[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[1], has value: " + String(MatStm1.totMasFlo[1], "g"));
+  assert(MatStm1.compMolFrac[3,1] >= 0.0 and MatStm1.compMolFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,1] <= 1.0, has value: " + String(MatStm1.compMolFrac[3,1], "g"));
 */
-void Flowsheet_eqFunction_2229(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1248(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2229};
-  modelica_boolean tmp55;
-  static const MMC_DEFSTRINGLIT(tmp56,75,"Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[1], has value: ");
-  modelica_string tmp57;
-  static int tmp58 = 0;
+  const int equationIndexes[2] = {1,1248};
+  modelica_boolean tmp57;
+  modelica_boolean tmp58;
+  static const MMC_DEFSTRINGLIT(tmp59,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,1] <= 1.0, has value: ");
+  modelica_string tmp60;
+  static int tmp61 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp58)
+  if(!tmp61)
   {
-    tmp55 = GreaterEq(data->localData[0]->realVars[115] /* MatStm1.totMasFlo[1] variable */,0.0);
-    if(!tmp55)
+    tmp57 = GreaterEq(data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */,0.0);
+    tmp58 = LessEq(data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */,1.0);
+    if(!(tmp57 && tmp58))
     {
-      tmp57 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[115] /* MatStm1.totMasFlo[1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp56),tmp57);
+      tmp60 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp59),tmp60);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMasFlo[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[3,1] >= 0.0 and MatStm1.compMolFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp58 = 1;
+      tmp61 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2230
+equation index: 1249
 type: ALGORITHM
 
-  assert(MatStm1.totMasFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[2], has value: " + String(MatStm1.totMasFlo[2], "g"));
+  assert(MatStm1.compMolFrac[3,2] >= 0.0 and MatStm1.compMolFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,2] <= 1.0, has value: " + String(MatStm1.compMolFrac[3,2], "g"));
 */
-void Flowsheet_eqFunction_2230(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1249(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2230};
-  modelica_boolean tmp59;
-  static const MMC_DEFSTRINGLIT(tmp60,75,"Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[2], has value: ");
-  modelica_string tmp61;
-  static int tmp62 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp62)
-  {
-    tmp59 = GreaterEq(data->localData[0]->realVars[116] /* MatStm1.totMasFlo[2] variable */,0.0);
-    if(!tmp59)
-    {
-      tmp61 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[116] /* MatStm1.totMasFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp60),tmp61);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMasFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp62 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2231
-type: ALGORITHM
-
-  assert(MatStm1.totMasFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[3], has value: " + String(MatStm1.totMasFlo[3], "g"));
-*/
-void Flowsheet_eqFunction_2231(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2231};
+  const int equationIndexes[2] = {1,1249};
+  modelica_boolean tmp62;
   modelica_boolean tmp63;
-  static const MMC_DEFSTRINGLIT(tmp64,75,"Variable violating min constraint: 0.0 <= MatStm1.totMasFlo[3], has value: ");
+  static const MMC_DEFSTRINGLIT(tmp64,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,2] <= 1.0, has value: ");
   modelica_string tmp65;
   static int tmp66 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp66)
   {
-    tmp63 = GreaterEq(data->localData[0]->realVars[117] /* MatStm1.totMasFlo[3] variable */,0.0);
-    if(!tmp63)
+    tmp62 = GreaterEq(data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */,0.0);
+    tmp63 = LessEq(data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */,1.0);
+    if(!(tmp62 && tmp63))
     {
-      tmp65 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[117] /* MatStm1.totMasFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp65 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp64),tmp65);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.totMasFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[3,2] >= 0.0 and MatStm1.compMolFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp66 = 1;
@@ -515,306 +515,306 @@ void Flowsheet_eqFunction_2231(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2232
+equation index: 1250
 type: ALGORITHM
 
-  assert(MatStm1.MW[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.MW[1], has value: " + String(MatStm1.MW[1], "g"));
+  assert(MatStm1.compMasFrac[1,1] >= 0.0 and MatStm1.compMasFrac[1,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,1] <= 1.0, has value: " + String(MatStm1.compMasFrac[1,1], "g"));
 */
-void Flowsheet_eqFunction_2232(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1250(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2232};
+  const int equationIndexes[2] = {1,1250};
   modelica_boolean tmp67;
-  static const MMC_DEFSTRINGLIT(tmp68,68,"Variable violating min constraint: 0.0 <= MatStm1.MW[1], has value: ");
-  modelica_string tmp69;
-  static int tmp70 = 0;
+  modelica_boolean tmp68;
+  static const MMC_DEFSTRINGLIT(tmp69,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,1] <= 1.0, has value: ");
+  modelica_string tmp70;
+  static int tmp71 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp70)
+  if(!tmp71)
   {
-    tmp67 = GreaterEq(data->localData[0]->realVars[10] /* MatStm1.MW[1] variable */,0.0);
-    if(!tmp67)
+    tmp67 = GreaterEq(data->localData[0]->realVars[22] /* MatStm1.compMasFrac[1,1] variable */,0.0);
+    tmp68 = LessEq(data->localData[0]->realVars[22] /* MatStm1.compMasFrac[1,1] variable */,1.0);
+    if(!(tmp67 && tmp68))
     {
-      tmp69 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[10] /* MatStm1.MW[1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp68),tmp69);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.MW[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp70 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2233
-type: ALGORITHM
-
-  assert(MatStm1.MW[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.MW[2], has value: " + String(MatStm1.MW[2], "g"));
-*/
-void Flowsheet_eqFunction_2233(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2233};
-  modelica_boolean tmp71;
-  static const MMC_DEFSTRINGLIT(tmp72,68,"Variable violating min constraint: 0.0 <= MatStm1.MW[2], has value: ");
-  modelica_string tmp73;
-  static int tmp74 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp74)
-  {
-    tmp71 = GreaterEq(data->localData[0]->realVars[11] /* MatStm1.MW[2] variable */,0.0);
-    if(!tmp71)
-    {
-      tmp73 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[11] /* MatStm1.MW[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp72),tmp73);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.MW[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp74 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2234
-type: ALGORITHM
-
-  assert(MatStm1.MW[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.MW[3], has value: " + String(MatStm1.MW[3], "g"));
-*/
-void Flowsheet_eqFunction_2234(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2234};
-  modelica_boolean tmp75;
-  static const MMC_DEFSTRINGLIT(tmp76,68,"Variable violating min constraint: 0.0 <= MatStm1.MW[3], has value: ");
-  modelica_string tmp77;
-  static int tmp78 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp78)
-  {
-    tmp75 = GreaterEq(data->localData[0]->realVars[12] /* MatStm1.MW[3] variable */,0.0);
-    if(!tmp75)
-    {
-      tmp77 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[12] /* MatStm1.MW[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp76),tmp77);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.MW[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp78 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2235
-type: ALGORITHM
-
-  assert(MatStm1.compMolFrac[2,1] >= 0.0 and MatStm1.compMolFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,1] <= 1.0, has value: " + String(MatStm1.compMolFrac[2,1], "g"));
-*/
-void Flowsheet_eqFunction_2235(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2235};
-  modelica_boolean tmp79;
-  modelica_boolean tmp80;
-  static const MMC_DEFSTRINGLIT(tmp81,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,1] <= 1.0, has value: ");
-  modelica_string tmp82;
-  static int tmp83 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp83)
-  {
-    tmp79 = GreaterEq(data->localData[0]->realVars[68] /* MatStm1.compMolFrac[2,1] variable */,0.0);
-    tmp80 = LessEq(data->localData[0]->realVars[68] /* MatStm1.compMolFrac[2,1] variable */,1.0);
-    if(!(tmp79 && tmp80))
-    {
-      tmp82 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[68] /* MatStm1.compMolFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp81),tmp82);
+      tmp70 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[22] /* MatStm1.compMasFrac[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp69),tmp70);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[2,1] >= 0.0 and MatStm1.compMolFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[1,1] >= 0.0 and MatStm1.compMasFrac[1,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp83 = 1;
+      tmp71 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2236
+equation index: 1251
 type: ALGORITHM
 
-  assert(MatStm1.compMolFrac[2,2] >= 0.0 and MatStm1.compMolFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,2] <= 1.0, has value: " + String(MatStm1.compMolFrac[2,2], "g"));
+  assert(MatStm1.compMasFrac[1,2] >= 0.0 and MatStm1.compMasFrac[1,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,2] <= 1.0, has value: " + String(MatStm1.compMasFrac[1,2], "g"));
 */
-void Flowsheet_eqFunction_2236(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1251(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2236};
-  modelica_boolean tmp84;
-  modelica_boolean tmp85;
-  static const MMC_DEFSTRINGLIT(tmp86,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,2] <= 1.0, has value: ");
-  modelica_string tmp87;
-  static int tmp88 = 0;
+  const int equationIndexes[2] = {1,1251};
+  modelica_boolean tmp72;
+  modelica_boolean tmp73;
+  static const MMC_DEFSTRINGLIT(tmp74,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,2] <= 1.0, has value: ");
+  modelica_string tmp75;
+  static int tmp76 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp88)
+  if(!tmp76)
   {
-    tmp84 = GreaterEq(data->localData[0]->realVars[69] /* MatStm1.compMolFrac[2,2] variable */,0.0);
-    tmp85 = LessEq(data->localData[0]->realVars[69] /* MatStm1.compMolFrac[2,2] variable */,1.0);
-    if(!(tmp84 && tmp85))
+    tmp72 = GreaterEq(data->localData[0]->realVars[23] /* MatStm1.compMasFrac[1,2] variable */,0.0);
+    tmp73 = LessEq(data->localData[0]->realVars[23] /* MatStm1.compMasFrac[1,2] variable */,1.0);
+    if(!(tmp72 && tmp73))
     {
-      tmp87 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[69] /* MatStm1.compMolFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp86),tmp87);
+      tmp75 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[23] /* MatStm1.compMasFrac[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp74),tmp75);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[2,2] >= 0.0 and MatStm1.compMolFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[1,2] >= 0.0 and MatStm1.compMasFrac[1,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp88 = 1;
+      tmp76 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2237
+equation index: 1252
 type: ALGORITHM
 
-  assert(MatStm1.compMolFrac[2,3] >= 0.0 and MatStm1.compMolFrac[2,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,3] <= 1.0, has value: " + String(MatStm1.compMolFrac[2,3], "g"));
+  assert(MatStm1.compMasFrac[2,1] >= 0.0 and MatStm1.compMasFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,1] <= 1.0, has value: " + String(MatStm1.compMasFrac[2,1], "g"));
 */
-void Flowsheet_eqFunction_2237(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1252(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2237};
-  modelica_boolean tmp89;
-  modelica_boolean tmp90;
-  static const MMC_DEFSTRINGLIT(tmp91,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[2,3] <= 1.0, has value: ");
-  modelica_string tmp92;
-  static int tmp93 = 0;
+  const int equationIndexes[2] = {1,1252};
+  modelica_boolean tmp77;
+  modelica_boolean tmp78;
+  static const MMC_DEFSTRINGLIT(tmp79,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,1] <= 1.0, has value: ");
+  modelica_string tmp80;
+  static int tmp81 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp93)
+  if(!tmp81)
   {
-    tmp89 = GreaterEq(data->localData[0]->realVars[70] /* MatStm1.compMolFrac[2,3] variable */,0.0);
-    tmp90 = LessEq(data->localData[0]->realVars[70] /* MatStm1.compMolFrac[2,3] variable */,1.0);
-    if(!(tmp89 && tmp90))
+    tmp77 = GreaterEq(data->localData[0]->realVars[24] /* MatStm1.compMasFrac[2,1] variable */,0.0);
+    tmp78 = LessEq(data->localData[0]->realVars[24] /* MatStm1.compMasFrac[2,1] variable */,1.0);
+    if(!(tmp77 && tmp78))
     {
-      tmp92 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[70] /* MatStm1.compMolFrac[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp91),tmp92);
+      tmp80 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[24] /* MatStm1.compMasFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp79),tmp80);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[2,3] >= 0.0 and MatStm1.compMolFrac[2,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[2,1] >= 0.0 and MatStm1.compMasFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp93 = 1;
+      tmp81 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2238
+equation index: 1253
 type: ALGORITHM
 
-  assert(MatStm1.compMolFrac[3,1] >= 0.0 and MatStm1.compMolFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,1] <= 1.0, has value: " + String(MatStm1.compMolFrac[3,1], "g"));
+  assert(MatStm1.compMasFrac[2,2] >= 0.0 and MatStm1.compMasFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,2] <= 1.0, has value: " + String(MatStm1.compMasFrac[2,2], "g"));
 */
-void Flowsheet_eqFunction_2238(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1253(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2238};
-  modelica_boolean tmp94;
-  modelica_boolean tmp95;
-  static const MMC_DEFSTRINGLIT(tmp96,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,1] <= 1.0, has value: ");
-  modelica_string tmp97;
-  static int tmp98 = 0;
+  const int equationIndexes[2] = {1,1253};
+  modelica_boolean tmp82;
+  modelica_boolean tmp83;
+  static const MMC_DEFSTRINGLIT(tmp84,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,2] <= 1.0, has value: ");
+  modelica_string tmp85;
+  static int tmp86 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp98)
+  if(!tmp86)
   {
-    tmp94 = GreaterEq(data->localData[0]->realVars[71] /* MatStm1.compMolFrac[3,1] variable */,0.0);
-    tmp95 = LessEq(data->localData[0]->realVars[71] /* MatStm1.compMolFrac[3,1] variable */,1.0);
-    if(!(tmp94 && tmp95))
+    tmp82 = GreaterEq(data->localData[0]->realVars[25] /* MatStm1.compMasFrac[2,2] variable */,0.0);
+    tmp83 = LessEq(data->localData[0]->realVars[25] /* MatStm1.compMasFrac[2,2] variable */,1.0);
+    if(!(tmp82 && tmp83))
     {
-      tmp97 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[71] /* MatStm1.compMolFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp96),tmp97);
+      tmp85 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[25] /* MatStm1.compMasFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp84),tmp85);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[3,1] >= 0.0 and MatStm1.compMolFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[2,2] >= 0.0 and MatStm1.compMasFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp98 = 1;
+      tmp86 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2239
+equation index: 1254
 type: ALGORITHM
 
-  assert(MatStm1.compMolFrac[3,2] >= 0.0 and MatStm1.compMolFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,2] <= 1.0, has value: " + String(MatStm1.compMolFrac[3,2], "g"));
+  assert(MatStm1.compMasFrac[3,1] >= 0.0 and MatStm1.compMasFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,1] <= 1.0, has value: " + String(MatStm1.compMasFrac[3,1], "g"));
 */
-void Flowsheet_eqFunction_2239(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1254(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2239};
-  modelica_boolean tmp99;
-  modelica_boolean tmp100;
-  static const MMC_DEFSTRINGLIT(tmp101,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,2] <= 1.0, has value: ");
-  modelica_string tmp102;
-  static int tmp103 = 0;
+  const int equationIndexes[2] = {1,1254};
+  modelica_boolean tmp87;
+  modelica_boolean tmp88;
+  static const MMC_DEFSTRINGLIT(tmp89,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,1] <= 1.0, has value: ");
+  modelica_string tmp90;
+  static int tmp91 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp103)
+  if(!tmp91)
   {
-    tmp99 = GreaterEq(data->localData[0]->realVars[72] /* MatStm1.compMolFrac[3,2] variable */,0.0);
-    tmp100 = LessEq(data->localData[0]->realVars[72] /* MatStm1.compMolFrac[3,2] variable */,1.0);
-    if(!(tmp99 && tmp100))
+    tmp87 = GreaterEq(data->localData[0]->realVars[26] /* MatStm1.compMasFrac[3,1] variable */,0.0);
+    tmp88 = LessEq(data->localData[0]->realVars[26] /* MatStm1.compMasFrac[3,1] variable */,1.0);
+    if(!(tmp87 && tmp88))
     {
-      tmp102 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[72] /* MatStm1.compMolFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp101),tmp102);
+      tmp90 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[26] /* MatStm1.compMasFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp89),tmp90);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[3,2] >= 0.0 and MatStm1.compMolFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[3,1] >= 0.0 and MatStm1.compMasFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp103 = 1;
+      tmp91 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2240
+equation index: 1255
 type: ALGORITHM
 
-  assert(MatStm1.compMolFrac[3,3] >= 0.0 and MatStm1.compMolFrac[3,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,3] <= 1.0, has value: " + String(MatStm1.compMolFrac[3,3], "g"));
+  assert(MatStm1.compMasFrac[3,2] >= 0.0 and MatStm1.compMasFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,2] <= 1.0, has value: " + String(MatStm1.compMasFrac[3,2], "g"));
 */
-void Flowsheet_eqFunction_2240(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1255(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2240};
-  modelica_boolean tmp104;
+  const int equationIndexes[2] = {1,1255};
+  modelica_boolean tmp92;
+  modelica_boolean tmp93;
+  static const MMC_DEFSTRINGLIT(tmp94,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,2] <= 1.0, has value: ");
+  modelica_string tmp95;
+  static int tmp96 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp96)
+  {
+    tmp92 = GreaterEq(data->localData[0]->realVars[27] /* MatStm1.compMasFrac[3,2] variable */,0.0);
+    tmp93 = LessEq(data->localData[0]->realVars[27] /* MatStm1.compMasFrac[3,2] variable */,1.0);
+    if(!(tmp92 && tmp93))
+    {
+      tmp95 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[27] /* MatStm1.compMasFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp94),tmp95);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[3,2] >= 0.0 and MatStm1.compMasFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp96 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1256
+type: ALGORITHM
+
+  assert(MatStm1.compMolFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,1], has value: " + String(MatStm1.compMolFlo[2,1], "g"));
+*/
+void Flowsheet_eqFunction_1256(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1256};
+  modelica_boolean tmp97;
+  static const MMC_DEFSTRINGLIT(tmp98,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,1], has value: ");
+  modelica_string tmp99;
+  static int tmp100 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp100)
+  {
+    tmp97 = GreaterEq(data->localData[0]->realVars[42] /* MatStm1.compMolFlo[2,1] variable */,0.0);
+    if(!tmp97)
+    {
+      tmp99 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[42] /* MatStm1.compMolFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp98),tmp99);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp100 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1257
+type: ALGORITHM
+
+  assert(MatStm1.compMolFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,2], has value: " + String(MatStm1.compMolFlo[2,2], "g"));
+*/
+void Flowsheet_eqFunction_1257(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1257};
+  modelica_boolean tmp101;
+  static const MMC_DEFSTRINGLIT(tmp102,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,2], has value: ");
+  modelica_string tmp103;
+  static int tmp104 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp104)
+  {
+    tmp101 = GreaterEq(data->localData[0]->realVars[43] /* MatStm1.compMolFlo[2,2] variable */,0.0);
+    if(!tmp101)
+    {
+      tmp103 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[43] /* MatStm1.compMolFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp102),tmp103);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp104 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1258
+type: ALGORITHM
+
+  assert(MatStm1.compMolFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,1], has value: " + String(MatStm1.compMolFlo[3,1], "g"));
+*/
+void Flowsheet_eqFunction_1258(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1258};
   modelica_boolean tmp105;
-  static const MMC_DEFSTRINGLIT(tmp106,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMolFrac[3,3] <= 1.0, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp106,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,1], has value: ");
   modelica_string tmp107;
   static int tmp108 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp108)
   {
-    tmp104 = GreaterEq(data->localData[0]->realVars[73] /* MatStm1.compMolFrac[3,3] variable */,0.0);
-    tmp105 = LessEq(data->localData[0]->realVars[73] /* MatStm1.compMolFrac[3,3] variable */,1.0);
-    if(!(tmp104 && tmp105))
+    tmp105 = GreaterEq(data->localData[0]->realVars[44] /* MatStm1.compMolFlo[3,1] variable */,0.0);
+    if(!tmp105)
     {
-      tmp107 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[73] /* MatStm1.compMolFrac[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp107 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[44] /* MatStm1.compMolFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp106),tmp107);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFrac[3,3] >= 0.0 and MatStm1.compMolFrac[3,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp108 = 1;
@@ -824,137 +824,162 @@ void Flowsheet_eqFunction_2240(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2241
+equation index: 1259
 type: ALGORITHM
 
-  assert(MatStm1.compMasFrac[1,1] >= 0.0 and MatStm1.compMasFrac[1,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,1] <= 1.0, has value: " + String(MatStm1.compMasFrac[1,1], "g"));
+  assert(MatStm1.compMolFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,2], has value: " + String(MatStm1.compMolFlo[3,2], "g"));
 */
-void Flowsheet_eqFunction_2241(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1259(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2241};
+  const int equationIndexes[2] = {1,1259};
   modelica_boolean tmp109;
-  modelica_boolean tmp110;
-  static const MMC_DEFSTRINGLIT(tmp111,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,1] <= 1.0, has value: ");
-  modelica_string tmp112;
-  static int tmp113 = 0;
+  static const MMC_DEFSTRINGLIT(tmp110,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,2], has value: ");
+  modelica_string tmp111;
+  static int tmp112 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp113)
+  if(!tmp112)
   {
-    tmp109 = GreaterEq(data->localData[0]->realVars[29] /* MatStm1.compMasFrac[1,1] variable */,0.0);
-    tmp110 = LessEq(data->localData[0]->realVars[29] /* MatStm1.compMasFrac[1,1] variable */,1.0);
-    if(!(tmp109 && tmp110))
+    tmp109 = GreaterEq(data->localData[0]->realVars[45] /* MatStm1.compMolFlo[3,2] variable */,0.0);
+    if(!tmp109)
     {
-      tmp112 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[29] /* MatStm1.compMasFrac[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp111),tmp112);
+      tmp111 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[45] /* MatStm1.compMolFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp110),tmp111);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[1,1] >= 0.0 and MatStm1.compMasFrac[1,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp113 = 1;
+      tmp112 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2242
+equation index: 1260
 type: ALGORITHM
 
-  assert(MatStm1.compMasFrac[1,2] >= 0.0 and MatStm1.compMasFrac[1,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,2] <= 1.0, has value: " + String(MatStm1.compMasFrac[1,2], "g"));
+  assert(MatStm1.compMasFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,1], has value: " + String(MatStm1.compMasFlo[2,1], "g"));
 */
-void Flowsheet_eqFunction_2242(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1260(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2242};
-  modelica_boolean tmp114;
-  modelica_boolean tmp115;
-  static const MMC_DEFSTRINGLIT(tmp116,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,2] <= 1.0, has value: ");
-  modelica_string tmp117;
-  static int tmp118 = 0;
+  const int equationIndexes[2] = {1,1260};
+  modelica_boolean tmp113;
+  static const MMC_DEFSTRINGLIT(tmp114,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,1], has value: ");
+  modelica_string tmp115;
+  static int tmp116 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp118)
+  if(!tmp116)
   {
-    tmp114 = GreaterEq(data->localData[0]->realVars[30] /* MatStm1.compMasFrac[1,2] variable */,0.0);
-    tmp115 = LessEq(data->localData[0]->realVars[30] /* MatStm1.compMasFrac[1,2] variable */,1.0);
-    if(!(tmp114 && tmp115))
+    tmp113 = GreaterEq(data->localData[0]->realVars[18] /* MatStm1.compMasFlo[2,1] variable */,0.0);
+    if(!tmp113)
     {
-      tmp117 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[30] /* MatStm1.compMasFrac[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp116),tmp117);
+      tmp115 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[18] /* MatStm1.compMasFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp114),tmp115);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[1,2] >= 0.0 and MatStm1.compMasFrac[1,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp118 = 1;
+      tmp116 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2243
+equation index: 1261
 type: ALGORITHM
 
-  assert(MatStm1.compMasFrac[1,3] >= 0.0 and MatStm1.compMasFrac[1,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,3] <= 1.0, has value: " + String(MatStm1.compMasFrac[1,3], "g"));
+  assert(MatStm1.compMasFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,2], has value: " + String(MatStm1.compMasFlo[2,2], "g"));
 */
-void Flowsheet_eqFunction_2243(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1261(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2243};
-  modelica_boolean tmp119;
-  modelica_boolean tmp120;
-  static const MMC_DEFSTRINGLIT(tmp121,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[1,3] <= 1.0, has value: ");
-  modelica_string tmp122;
-  static int tmp123 = 0;
+  const int equationIndexes[2] = {1,1261};
+  modelica_boolean tmp117;
+  static const MMC_DEFSTRINGLIT(tmp118,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,2], has value: ");
+  modelica_string tmp119;
+  static int tmp120 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp123)
+  if(!tmp120)
   {
-    tmp119 = GreaterEq(data->localData[0]->realVars[31] /* MatStm1.compMasFrac[1,3] variable */,0.0);
-    tmp120 = LessEq(data->localData[0]->realVars[31] /* MatStm1.compMasFrac[1,3] variable */,1.0);
-    if(!(tmp119 && tmp120))
+    tmp117 = GreaterEq(data->localData[0]->realVars[19] /* MatStm1.compMasFlo[2,2] variable */,0.0);
+    if(!tmp117)
     {
-      tmp122 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[31] /* MatStm1.compMasFrac[1,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp121),tmp122);
+      tmp119 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[19] /* MatStm1.compMasFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp118),tmp119);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[1,3] >= 0.0 and MatStm1.compMasFrac[1,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp123 = 1;
+      tmp120 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2244
+equation index: 1262
 type: ALGORITHM
 
-  assert(MatStm1.compMasFrac[2,1] >= 0.0 and MatStm1.compMasFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,1] <= 1.0, has value: " + String(MatStm1.compMasFrac[2,1], "g"));
+  assert(MatStm1.compMasFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,1], has value: " + String(MatStm1.compMasFlo[3,1], "g"));
 */
-void Flowsheet_eqFunction_2244(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1262(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2244};
-  modelica_boolean tmp124;
+  const int equationIndexes[2] = {1,1262};
+  modelica_boolean tmp121;
+  static const MMC_DEFSTRINGLIT(tmp122,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,1], has value: ");
+  modelica_string tmp123;
+  static int tmp124 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp124)
+  {
+    tmp121 = GreaterEq(data->localData[0]->realVars[20] /* MatStm1.compMasFlo[3,1] variable */,0.0);
+    if(!tmp121)
+    {
+      tmp123 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[20] /* MatStm1.compMasFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp122),tmp123);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp124 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1263
+type: ALGORITHM
+
+  assert(MatStm1.compMasFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,2], has value: " + String(MatStm1.compMasFlo[3,2], "g"));
+*/
+void Flowsheet_eqFunction_1263(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1263};
   modelica_boolean tmp125;
-  static const MMC_DEFSTRINGLIT(tmp126,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,1] <= 1.0, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp126,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,2], has value: ");
   modelica_string tmp127;
   static int tmp128 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp128)
   {
-    tmp124 = GreaterEq(data->localData[0]->realVars[32] /* MatStm1.compMasFrac[2,1] variable */,0.0);
-    tmp125 = LessEq(data->localData[0]->realVars[32] /* MatStm1.compMasFrac[2,1] variable */,1.0);
-    if(!(tmp124 && tmp125))
+    tmp125 = GreaterEq(data->localData[0]->realVars[21] /* MatStm1.compMasFlo[3,2] variable */,0.0);
+    if(!tmp125)
     {
-      tmp127 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[32] /* MatStm1.compMasFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp127 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[21] /* MatStm1.compMasFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp126),tmp127);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[2,1] >= 0.0 and MatStm1.compMasFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp128 = 1;
@@ -964,535 +989,535 @@ void Flowsheet_eqFunction_2244(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2245
+equation index: 1264
 type: ALGORITHM
 
-  assert(MatStm1.compMasFrac[2,2] >= 0.0 and MatStm1.compMasFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,2] <= 1.0, has value: " + String(MatStm1.compMasFrac[2,2], "g"));
+  assert(MatStm2.T >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.T, has value: " + String(MatStm2.T, "g"));
 */
-void Flowsheet_eqFunction_2245(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1264(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2245};
+  const int equationIndexes[2] = {1,1264};
   modelica_boolean tmp129;
-  modelica_boolean tmp130;
-  static const MMC_DEFSTRINGLIT(tmp131,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,2] <= 1.0, has value: ");
-  modelica_string tmp132;
-  static int tmp133 = 0;
+  static const MMC_DEFSTRINGLIT(tmp130,64,"Variable violating min constraint: 0.0 <= MatStm2.T, has value: ");
+  modelica_string tmp131;
+  static int tmp132 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp133)
+  if(!tmp132)
   {
-    tmp129 = GreaterEq(data->localData[0]->realVars[33] /* MatStm1.compMasFrac[2,2] variable */,0.0);
-    tmp130 = LessEq(data->localData[0]->realVars[33] /* MatStm1.compMasFrac[2,2] variable */,1.0);
-    if(!(tmp129 && tmp130))
+    tmp129 = GreaterEq(data->localData[0]->realVars[105] /* MatStm2.T variable */,0.0);
+    if(!tmp129)
     {
-      tmp132 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[33] /* MatStm1.compMasFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp131),tmp132);
+      tmp131 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[105] /* MatStm2.T variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp130),tmp131);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[2,2] >= 0.0 and MatStm1.compMasFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4168,3,4168,75,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.T >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp133 = 1;
+      tmp132 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2246
+equation index: 1265
 type: ALGORITHM
 
-  assert(MatStm1.compMasFrac[2,3] >= 0.0 and MatStm1.compMasFrac[2,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,3] <= 1.0, has value: " + String(MatStm1.compMasFrac[2,3], "g"));
+  assert(MatStm2.Pbubl >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.Pbubl, has value: " + String(MatStm2.Pbubl, "g"));
 */
-void Flowsheet_eqFunction_2246(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1265(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2246};
-  modelica_boolean tmp134;
-  modelica_boolean tmp135;
-  static const MMC_DEFSTRINGLIT(tmp136,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[2,3] <= 1.0, has value: ");
-  modelica_string tmp137;
-  static int tmp138 = 0;
+  const int equationIndexes[2] = {1,1265};
+  modelica_boolean tmp133;
+  static const MMC_DEFSTRINGLIT(tmp134,68,"Variable violating min constraint: 0.0 <= MatStm2.Pbubl, has value: ");
+  modelica_string tmp135;
+  static int tmp136 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp138)
+  if(!tmp136)
   {
-    tmp134 = GreaterEq(data->localData[0]->realVars[34] /* MatStm1.compMasFrac[2,3] variable */,0.0);
-    tmp135 = LessEq(data->localData[0]->realVars[34] /* MatStm1.compMasFrac[2,3] variable */,1.0);
-    if(!(tmp134 && tmp135))
+    tmp133 = GreaterEq(data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */,0.0);
+    if(!tmp133)
     {
-      tmp137 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[34] /* MatStm1.compMasFrac[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp136),tmp137);
+      tmp135 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp134),tmp135);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[2,3] >= 0.0 and MatStm1.compMasFrac[2,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4169,3,4169,138,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.Pbubl >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp138 = 1;
+      tmp136 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2247
+equation index: 1266
 type: ALGORITHM
 
-  assert(MatStm1.compMasFrac[3,1] >= 0.0 and MatStm1.compMasFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,1] <= 1.0, has value: " + String(MatStm1.compMasFrac[3,1], "g"));
+  assert(MatStm2.Pdew >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.Pdew, has value: " + String(MatStm2.Pdew, "g"));
 */
-void Flowsheet_eqFunction_2247(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1266(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2247};
-  modelica_boolean tmp139;
-  modelica_boolean tmp140;
-  static const MMC_DEFSTRINGLIT(tmp141,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,1] <= 1.0, has value: ");
-  modelica_string tmp142;
-  static int tmp143 = 0;
+  const int equationIndexes[2] = {1,1266};
+  modelica_boolean tmp137;
+  static const MMC_DEFSTRINGLIT(tmp138,67,"Variable violating min constraint: 0.0 <= MatStm2.Pdew, has value: ");
+  modelica_string tmp139;
+  static int tmp140 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp143)
+  if(!tmp140)
   {
-    tmp139 = GreaterEq(data->localData[0]->realVars[35] /* MatStm1.compMasFrac[3,1] variable */,0.0);
-    tmp140 = LessEq(data->localData[0]->realVars[35] /* MatStm1.compMasFrac[3,1] variable */,1.0);
-    if(!(tmp139 && tmp140))
+    tmp137 = GreaterEq(data->localData[0]->realVars[102] /* MatStm2.Pdew variable */,0.0);
+    if(!tmp137)
     {
-      tmp142 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[35] /* MatStm1.compMasFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp141),tmp142);
+      tmp139 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[102] /* MatStm2.Pdew variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp138),tmp139);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[3,1] >= 0.0 and MatStm1.compMasFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4169,3,4169,138,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.Pdew >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp143 = 1;
+      tmp140 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2248
+equation index: 1267
 type: ALGORITHM
 
-  assert(MatStm1.compMasFrac[3,2] >= 0.0 and MatStm1.compMasFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,2] <= 1.0, has value: " + String(MatStm1.compMasFrac[3,2], "g"));
+  assert(MatStm2.liqPhasMolFrac >= 0.0 and MatStm2.liqPhasMolFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMolFrac <= 1.0, has value: " + String(MatStm2.liqPhasMolFrac, "g"));
 */
-void Flowsheet_eqFunction_2248(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1267(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2248};
-  modelica_boolean tmp144;
-  modelica_boolean tmp145;
-  static const MMC_DEFSTRINGLIT(tmp146,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,2] <= 1.0, has value: ");
-  modelica_string tmp147;
-  static int tmp148 = 0;
+  const int equationIndexes[2] = {1,1267};
+  modelica_boolean tmp141;
+  modelica_boolean tmp142;
+  static const MMC_DEFSTRINGLIT(tmp143,88,"Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMolFrac <= 1.0, has value: ");
+  modelica_string tmp144;
+  static int tmp145 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp148)
+  if(!tmp145)
   {
-    tmp144 = GreaterEq(data->localData[0]->realVars[36] /* MatStm1.compMasFrac[3,2] variable */,0.0);
-    tmp145 = LessEq(data->localData[0]->realVars[36] /* MatStm1.compMasFrac[3,2] variable */,1.0);
-    if(!(tmp144 && tmp145))
+    tmp141 = GreaterEq(data->localData[0]->realVars[155] /* MatStm2.liqPhasMolFrac variable */,0.0);
+    tmp142 = LessEq(data->localData[0]->realVars[155] /* MatStm2.liqPhasMolFrac variable */,1.0);
+    if(!(tmp141 && tmp142))
     {
-      tmp147 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[36] /* MatStm1.compMasFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp146),tmp147);
+      tmp144 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[155] /* MatStm2.liqPhasMolFrac variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp143),tmp144);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[3,2] >= 0.0 and MatStm1.compMasFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.liqPhasMolFrac >= 0.0 and MatStm2.liqPhasMolFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp148 = 1;
+      tmp145 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2249
+equation index: 1268
 type: ALGORITHM
 
-  assert(MatStm1.compMasFrac[3,3] >= 0.0 and MatStm1.compMasFrac[3,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,3] <= 1.0, has value: " + String(MatStm1.compMasFrac[3,3], "g"));
+  assert(MatStm2.vapPhasMolFrac >= 0.0 and MatStm2.vapPhasMolFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.vapPhasMolFrac <= 1.0, has value: " + String(MatStm2.vapPhasMolFrac, "g"));
 */
-void Flowsheet_eqFunction_2249(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1268(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2249};
-  modelica_boolean tmp149;
-  modelica_boolean tmp150;
-  static const MMC_DEFSTRINGLIT(tmp151,90,"Variable violating min/max constraint: 0.0 <= MatStm1.compMasFrac[3,3] <= 1.0, has value: ");
-  modelica_string tmp152;
-  static int tmp153 = 0;
+  const int equationIndexes[2] = {1,1268};
+  modelica_boolean tmp146;
+  modelica_boolean tmp147;
+  static const MMC_DEFSTRINGLIT(tmp148,88,"Variable violating min/max constraint: 0.0 <= MatStm2.vapPhasMolFrac <= 1.0, has value: ");
+  modelica_string tmp149;
+  static int tmp150 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp153)
+  if(!tmp150)
   {
-    tmp149 = GreaterEq(data->localData[0]->realVars[37] /* MatStm1.compMasFrac[3,3] variable */,0.0);
-    tmp150 = LessEq(data->localData[0]->realVars[37] /* MatStm1.compMasFrac[3,3] variable */,1.0);
-    if(!(tmp149 && tmp150))
+    tmp146 = GreaterEq(data->localData[0]->realVars[183] /* MatStm2.vapPhasMolFrac variable */,0.0);
+    tmp147 = LessEq(data->localData[0]->realVars[183] /* MatStm2.vapPhasMolFrac variable */,1.0);
+    if(!(tmp146 && tmp147))
     {
-      tmp152 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[37] /* MatStm1.compMasFrac[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp151),tmp152);
+      tmp149 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[183] /* MatStm2.vapPhasMolFrac variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp148),tmp149);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFrac[3,3] >= 0.0 and MatStm1.compMasFrac[3,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.vapPhasMolFrac >= 0.0 and MatStm2.vapPhasMolFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp153 = 1;
+      tmp150 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2250
+equation index: 1269
 type: ALGORITHM
 
-  assert(MatStm1.compMolFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,1], has value: " + String(MatStm1.compMolFlo[2,1], "g"));
+  assert(MatStm2.liqPhasMasFrac >= 0.0 and MatStm2.liqPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMasFrac <= 1.0, has value: " + String(MatStm2.liqPhasMasFrac, "g"));
 */
-void Flowsheet_eqFunction_2250(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1269(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2250};
-  modelica_boolean tmp154;
-  static const MMC_DEFSTRINGLIT(tmp155,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,1], has value: ");
-  modelica_string tmp156;
-  static int tmp157 = 0;
+  const int equationIndexes[2] = {1,1269};
+  modelica_boolean tmp151;
+  modelica_boolean tmp152;
+  static const MMC_DEFSTRINGLIT(tmp153,88,"Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMasFrac <= 1.0, has value: ");
+  modelica_string tmp154;
+  static int tmp155 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp157)
+  if(!tmp155)
   {
-    tmp154 = GreaterEq(data->localData[0]->realVars[59] /* MatStm1.compMolFlo[2,1] variable */,0.0);
-    if(!tmp154)
+    tmp151 = GreaterEq(data->localData[0]->realVars[154] /* MatStm2.liqPhasMasFrac variable */,0.0);
+    tmp152 = LessEq(data->localData[0]->realVars[154] /* MatStm2.liqPhasMasFrac variable */,1.0);
+    if(!(tmp151 && tmp152))
     {
-      tmp156 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[59] /* MatStm1.compMolFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp155),tmp156);
+      tmp154 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[154] /* MatStm2.liqPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp153),tmp154);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.liqPhasMasFrac >= 0.0 and MatStm2.liqPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp157 = 1;
+      tmp155 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2251
+equation index: 1270
 type: ALGORITHM
 
-  assert(MatStm1.compMolFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,2], has value: " + String(MatStm1.compMolFlo[2,2], "g"));
+  assert(MatStm2.vapPhasMasFrac >= 0.0 and MatStm2.vapPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.vapPhasMasFrac <= 1.0, has value: " + String(MatStm2.vapPhasMasFrac, "g"));
 */
-void Flowsheet_eqFunction_2251(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1270(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2251};
-  modelica_boolean tmp158;
-  static const MMC_DEFSTRINGLIT(tmp159,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,2], has value: ");
-  modelica_string tmp160;
-  static int tmp161 = 0;
+  const int equationIndexes[2] = {1,1270};
+  modelica_boolean tmp156;
+  modelica_boolean tmp157;
+  static const MMC_DEFSTRINGLIT(tmp158,88,"Variable violating min/max constraint: 0.0 <= MatStm2.vapPhasMasFrac <= 1.0, has value: ");
+  modelica_string tmp159;
+  static int tmp160 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp161)
+  if(!tmp160)
   {
-    tmp158 = GreaterEq(data->localData[0]->realVars[60] /* MatStm1.compMolFlo[2,2] variable */,0.0);
-    if(!tmp158)
+    tmp156 = GreaterEq(data->localData[0]->realVars[182] /* MatStm2.vapPhasMasFrac variable */,0.0);
+    tmp157 = LessEq(data->localData[0]->realVars[182] /* MatStm2.vapPhasMasFrac variable */,1.0);
+    if(!(tmp156 && tmp157))
     {
-      tmp160 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[60] /* MatStm1.compMolFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp159),tmp160);
+      tmp159 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[182] /* MatStm2.vapPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp158),tmp159);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.vapPhasMasFrac >= 0.0 and MatStm2.vapPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp161 = 1;
+      tmp160 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2252
+equation index: 1271
 type: ALGORITHM
 
-  assert(MatStm1.compMolFlo[2,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,3], has value: " + String(MatStm1.compMolFlo[2,3], "g"));
+  assert(MatStm2.totMolFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[2], has value: " + String(MatStm2.totMolFlo[2], "g"));
 */
-void Flowsheet_eqFunction_2252(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1271(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2252};
-  modelica_boolean tmp162;
-  static const MMC_DEFSTRINGLIT(tmp163,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[2,3], has value: ");
-  modelica_string tmp164;
-  static int tmp165 = 0;
+  const int equationIndexes[2] = {1,1271};
+  modelica_boolean tmp161;
+  static const MMC_DEFSTRINGLIT(tmp162,75,"Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[2], has value: ");
+  modelica_string tmp163;
+  static int tmp164 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp165)
+  if(!tmp164)
   {
-    tmp162 = GreaterEq(data->localData[0]->realVars[61] /* MatStm1.compMolFlo[2,3] variable */,0.0);
-    if(!tmp162)
+    tmp161 = GreaterEq(data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */,0.0);
+    if(!tmp161)
     {
-      tmp164 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[61] /* MatStm1.compMolFlo[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp163),tmp164);
+      tmp163 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp162),tmp163);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[2,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMolFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp165 = 1;
+      tmp164 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2253
+equation index: 1272
 type: ALGORITHM
 
-  assert(MatStm1.compMolFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,1], has value: " + String(MatStm1.compMolFlo[3,1], "g"));
+  assert(MatStm2.totMolFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[3], has value: " + String(MatStm2.totMolFlo[3], "g"));
 */
-void Flowsheet_eqFunction_2253(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1272(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2253};
-  modelica_boolean tmp166;
-  static const MMC_DEFSTRINGLIT(tmp167,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,1], has value: ");
-  modelica_string tmp168;
-  static int tmp169 = 0;
+  const int equationIndexes[2] = {1,1272};
+  modelica_boolean tmp165;
+  static const MMC_DEFSTRINGLIT(tmp166,75,"Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[3], has value: ");
+  modelica_string tmp167;
+  static int tmp168 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp169)
+  if(!tmp168)
   {
-    tmp166 = GreaterEq(data->localData[0]->realVars[62] /* MatStm1.compMolFlo[3,1] variable */,0.0);
-    if(!tmp166)
+    tmp165 = GreaterEq(data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */,0.0);
+    if(!tmp165)
     {
-      tmp168 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[62] /* MatStm1.compMolFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp167),tmp168);
+      tmp167 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp166),tmp167);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMolFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp169 = 1;
+      tmp168 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2254
+equation index: 1273
 type: ALGORITHM
 
-  assert(MatStm1.compMolFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,2], has value: " + String(MatStm1.compMolFlo[3,2], "g"));
+  assert(MatStm2.totMasFlo[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[1], has value: " + String(MatStm2.totMasFlo[1], "g"));
 */
-void Flowsheet_eqFunction_2254(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1273(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2254};
-  modelica_boolean tmp170;
-  static const MMC_DEFSTRINGLIT(tmp171,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,2], has value: ");
-  modelica_string tmp172;
-  static int tmp173 = 0;
+  const int equationIndexes[2] = {1,1273};
+  modelica_boolean tmp169;
+  static const MMC_DEFSTRINGLIT(tmp170,75,"Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[1], has value: ");
+  modelica_string tmp171;
+  static int tmp172 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp173)
+  if(!tmp172)
   {
-    tmp170 = GreaterEq(data->localData[0]->realVars[63] /* MatStm1.compMolFlo[3,2] variable */,0.0);
-    if(!tmp170)
+    tmp169 = GreaterEq(data->localData[0]->realVars[176] /* MatStm2.totMasFlo[1] variable */,0.0);
+    if(!tmp169)
     {
-      tmp172 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[63] /* MatStm1.compMolFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp171),tmp172);
+      tmp171 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[176] /* MatStm2.totMasFlo[1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp170),tmp171);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMasFlo[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp173 = 1;
+      tmp172 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2255
+equation index: 1274
 type: ALGORITHM
 
-  assert(MatStm1.compMolFlo[3,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,3], has value: " + String(MatStm1.compMolFlo[3,3], "g"));
+  assert(MatStm2.totMasFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[2], has value: " + String(MatStm2.totMasFlo[2], "g"));
 */
-void Flowsheet_eqFunction_2255(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1274(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2255};
-  modelica_boolean tmp174;
-  static const MMC_DEFSTRINGLIT(tmp175,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[3,3], has value: ");
-  modelica_string tmp176;
-  static int tmp177 = 0;
+  const int equationIndexes[2] = {1,1274};
+  modelica_boolean tmp173;
+  static const MMC_DEFSTRINGLIT(tmp174,75,"Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[2], has value: ");
+  modelica_string tmp175;
+  static int tmp176 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp177)
+  if(!tmp176)
   {
-    tmp174 = GreaterEq(data->localData[0]->realVars[64] /* MatStm1.compMolFlo[3,3] variable */,0.0);
-    if(!tmp174)
+    tmp173 = GreaterEq(data->localData[0]->realVars[177] /* MatStm2.totMasFlo[2] variable */,0.0);
+    if(!tmp173)
     {
-      tmp176 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[64] /* MatStm1.compMolFlo[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp175),tmp176);
+      tmp175 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[177] /* MatStm2.totMasFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp174),tmp175);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[3,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMasFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp177 = 1;
+      tmp176 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2256
+equation index: 1275
 type: ALGORITHM
 
-  assert(MatStm1.compMasFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,1], has value: " + String(MatStm1.compMasFlo[2,1], "g"));
+  assert(MatStm2.totMasFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[3], has value: " + String(MatStm2.totMasFlo[3], "g"));
 */
-void Flowsheet_eqFunction_2256(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1275(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2256};
-  modelica_boolean tmp178;
-  static const MMC_DEFSTRINGLIT(tmp179,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,1], has value: ");
-  modelica_string tmp180;
-  static int tmp181 = 0;
+  const int equationIndexes[2] = {1,1275};
+  modelica_boolean tmp177;
+  static const MMC_DEFSTRINGLIT(tmp178,75,"Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[3], has value: ");
+  modelica_string tmp179;
+  static int tmp180 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp181)
+  if(!tmp180)
   {
-    tmp178 = GreaterEq(data->localData[0]->realVars[23] /* MatStm1.compMasFlo[2,1] variable */,0.0);
-    if(!tmp178)
+    tmp177 = GreaterEq(data->localData[0]->realVars[178] /* MatStm2.totMasFlo[3] variable */,0.0);
+    if(!tmp177)
     {
-      tmp180 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[23] /* MatStm1.compMasFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp179),tmp180);
+      tmp179 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[178] /* MatStm2.totMasFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp178),tmp179);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMasFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp181 = 1;
+      tmp180 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2257
+equation index: 1276
 type: ALGORITHM
 
-  assert(MatStm1.compMasFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,2], has value: " + String(MatStm1.compMasFlo[2,2], "g"));
+  assert(MatStm2.MW[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.MW[1], has value: " + String(MatStm2.MW[1], "g"));
 */
-void Flowsheet_eqFunction_2257(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1276(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2257};
-  modelica_boolean tmp182;
-  static const MMC_DEFSTRINGLIT(tmp183,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,2], has value: ");
-  modelica_string tmp184;
-  static int tmp185 = 0;
+  const int equationIndexes[2] = {1,1276};
+  modelica_boolean tmp181;
+  static const MMC_DEFSTRINGLIT(tmp182,68,"Variable violating min constraint: 0.0 <= MatStm2.MW[1], has value: ");
+  modelica_string tmp183;
+  static int tmp184 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp185)
+  if(!tmp184)
   {
-    tmp182 = GreaterEq(data->localData[0]->realVars[24] /* MatStm1.compMasFlo[2,2] variable */,0.0);
-    if(!tmp182)
+    tmp181 = GreaterEq(data->localData[0]->realVars[97] /* MatStm2.MW[1] variable */,0.0);
+    if(!tmp181)
     {
-      tmp184 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[24] /* MatStm1.compMasFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp183),tmp184);
+      tmp183 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[97] /* MatStm2.MW[1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp182),tmp183);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.MW[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp185 = 1;
+      tmp184 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2258
+equation index: 1277
 type: ALGORITHM
 
-  assert(MatStm1.compMasFlo[2,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,3], has value: " + String(MatStm1.compMasFlo[2,3], "g"));
+  assert(MatStm2.MW[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.MW[2], has value: " + String(MatStm2.MW[2], "g"));
 */
-void Flowsheet_eqFunction_2258(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1277(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2258};
-  modelica_boolean tmp186;
-  static const MMC_DEFSTRINGLIT(tmp187,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[2,3], has value: ");
-  modelica_string tmp188;
-  static int tmp189 = 0;
+  const int equationIndexes[2] = {1,1277};
+  modelica_boolean tmp185;
+  static const MMC_DEFSTRINGLIT(tmp186,68,"Variable violating min constraint: 0.0 <= MatStm2.MW[2], has value: ");
+  modelica_string tmp187;
+  static int tmp188 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp189)
+  if(!tmp188)
   {
-    tmp186 = GreaterEq(data->localData[0]->realVars[25] /* MatStm1.compMasFlo[2,3] variable */,0.0);
-    if(!tmp186)
+    tmp185 = GreaterEq(data->localData[0]->realVars[98] /* MatStm2.MW[2] variable */,0.0);
+    if(!tmp185)
     {
-      tmp188 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[25] /* MatStm1.compMasFlo[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp187),tmp188);
+      tmp187 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[98] /* MatStm2.MW[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp186),tmp187);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[2,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.MW[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp189 = 1;
+      tmp188 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2259
+equation index: 1278
 type: ALGORITHM
 
-  assert(MatStm1.compMasFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,1], has value: " + String(MatStm1.compMasFlo[3,1], "g"));
+  assert(MatStm2.MW[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.MW[3], has value: " + String(MatStm2.MW[3], "g"));
 */
-void Flowsheet_eqFunction_2259(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1278(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2259};
-  modelica_boolean tmp190;
-  static const MMC_DEFSTRINGLIT(tmp191,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,1], has value: ");
-  modelica_string tmp192;
-  static int tmp193 = 0;
+  const int equationIndexes[2] = {1,1278};
+  modelica_boolean tmp189;
+  static const MMC_DEFSTRINGLIT(tmp190,68,"Variable violating min constraint: 0.0 <= MatStm2.MW[3], has value: ");
+  modelica_string tmp191;
+  static int tmp192 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp193)
+  if(!tmp192)
   {
-    tmp190 = GreaterEq(data->localData[0]->realVars[26] /* MatStm1.compMasFlo[3,1] variable */,0.0);
-    if(!tmp190)
+    tmp189 = GreaterEq(data->localData[0]->realVars[99] /* MatStm2.MW[3] variable */,0.0);
+    if(!tmp189)
     {
-      tmp192 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[26] /* MatStm1.compMasFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp191),tmp192);
+      tmp191 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[99] /* MatStm2.MW[3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp190),tmp191);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.MW[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp193 = 1;
+      tmp192 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2260
+equation index: 1279
 type: ALGORITHM
 
-  assert(MatStm1.compMasFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,2], has value: " + String(MatStm1.compMasFlo[3,2], "g"));
+  assert(MatStm2.compMolFrac[2,1] >= 0.0 and MatStm2.compMolFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,1] <= 1.0, has value: " + String(MatStm2.compMolFrac[2,1], "g"));
 */
-void Flowsheet_eqFunction_2260(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1279(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2260};
+  const int equationIndexes[2] = {1,1279};
+  modelica_boolean tmp193;
   modelica_boolean tmp194;
-  static const MMC_DEFSTRINGLIT(tmp195,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,2], has value: ");
+  static const MMC_DEFSTRINGLIT(tmp195,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,1] <= 1.0, has value: ");
   modelica_string tmp196;
   static int tmp197 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp197)
   {
-    tmp194 = GreaterEq(data->localData[0]->realVars[27] /* MatStm1.compMasFlo[3,2] variable */,0.0);
-    if(!tmp194)
+    tmp193 = GreaterEq(data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */,0.0);
+    tmp194 = LessEq(data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */,1.0);
+    if(!(tmp193 && tmp194))
     {
-      tmp196 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[27] /* MatStm1.compMasFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp196 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp195),tmp196);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[2,1] >= 0.0 and MatStm2.compMolFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp197 = 1;
@@ -1502,267 +1527,242 @@ void Flowsheet_eqFunction_2260(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2261
+equation index: 1280
 type: ALGORITHM
 
-  assert(MatStm1.compMasFlo[3,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,3], has value: " + String(MatStm1.compMasFlo[3,3], "g"));
+  assert(MatStm2.compMolFrac[2,2] >= 0.0 and MatStm2.compMolFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,2] <= 1.0, has value: " + String(MatStm2.compMolFrac[2,2], "g"));
 */
-void Flowsheet_eqFunction_2261(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1280(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2261};
+  const int equationIndexes[2] = {1,1280};
   modelica_boolean tmp198;
-  static const MMC_DEFSTRINGLIT(tmp199,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[3,3], has value: ");
-  modelica_string tmp200;
-  static int tmp201 = 0;
+  modelica_boolean tmp199;
+  static const MMC_DEFSTRINGLIT(tmp200,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,2] <= 1.0, has value: ");
+  modelica_string tmp201;
+  static int tmp202 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp201)
+  if(!tmp202)
   {
-    tmp198 = GreaterEq(data->localData[0]->realVars[28] /* MatStm1.compMasFlo[3,3] variable */,0.0);
-    if(!tmp198)
+    tmp198 = GreaterEq(data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */,0.0);
+    tmp199 = LessEq(data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */,1.0);
+    if(!(tmp198 && tmp199))
     {
-      tmp200 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[28] /* MatStm1.compMasFlo[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp199),tmp200);
+      tmp201 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp200),tmp201);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[3,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[2,2] >= 0.0 and MatStm2.compMolFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp201 = 1;
+      tmp202 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2262
+equation index: 1281
 type: ALGORITHM
 
-  assert(MatStm1.K[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.K[1], has value: " + String(MatStm1.K[1], "g"));
+  assert(MatStm2.compMolFrac[3,1] >= 0.0 and MatStm2.compMolFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,1] <= 1.0, has value: " + String(MatStm2.compMolFrac[3,1], "g"));
 */
-void Flowsheet_eqFunction_2262(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1281(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2262};
-  modelica_boolean tmp202;
-  static const MMC_DEFSTRINGLIT(tmp203,67,"Variable violating min constraint: 0.0 <= MatStm1.K[1], has value: ");
-  modelica_string tmp204;
-  static int tmp205 = 0;
+  const int equationIndexes[2] = {1,1281};
+  modelica_boolean tmp203;
+  modelica_boolean tmp204;
+  static const MMC_DEFSTRINGLIT(tmp205,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,1] <= 1.0, has value: ");
+  modelica_string tmp206;
+  static int tmp207 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp205)
+  if(!tmp207)
   {
-    tmp202 = GreaterEq(data->localData[0]->realVars[7] /* MatStm1.K[1] variable */,0.0);
-    if(!tmp202)
+    tmp203 = GreaterEq(data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */,0.0);
+    tmp204 = LessEq(data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */,1.0);
+    if(!(tmp203 && tmp204))
     {
-      tmp204 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[7] /* MatStm1.K[1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp203),tmp204);
+      tmp206 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp205),tmp206);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",2213,2,2213,74,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.K[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[3,1] >= 0.0 and MatStm2.compMolFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp205 = 1;
+      tmp207 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2263
+equation index: 1282
 type: ALGORITHM
 
-  assert(MatStm1.K[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.K[2], has value: " + String(MatStm1.K[2], "g"));
+  assert(MatStm2.compMolFrac[3,2] >= 0.0 and MatStm2.compMolFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,2] <= 1.0, has value: " + String(MatStm2.compMolFrac[3,2], "g"));
 */
-void Flowsheet_eqFunction_2263(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1282(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2263};
-  modelica_boolean tmp206;
-  static const MMC_DEFSTRINGLIT(tmp207,67,"Variable violating min constraint: 0.0 <= MatStm1.K[2], has value: ");
-  modelica_string tmp208;
-  static int tmp209 = 0;
+  const int equationIndexes[2] = {1,1282};
+  modelica_boolean tmp208;
+  modelica_boolean tmp209;
+  static const MMC_DEFSTRINGLIT(tmp210,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,2] <= 1.0, has value: ");
+  modelica_string tmp211;
+  static int tmp212 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp209)
+  if(!tmp212)
   {
-    tmp206 = GreaterEq(data->localData[0]->realVars[8] /* MatStm1.K[2] variable */,0.0);
-    if(!tmp206)
+    tmp208 = GreaterEq(data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */,0.0);
+    tmp209 = LessEq(data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */,1.0);
+    if(!(tmp208 && tmp209))
     {
-      tmp208 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[8] /* MatStm1.K[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp207),tmp208);
+      tmp211 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp210),tmp211);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",2213,2,2213,74,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.K[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[3,2] >= 0.0 and MatStm2.compMolFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp209 = 1;
+      tmp212 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2264
+equation index: 1283
 type: ALGORITHM
 
-  assert(MatStm1.K[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.K[3], has value: " + String(MatStm1.K[3], "g"));
+  assert(MatStm2.compMasFrac[1,1] >= 0.0 and MatStm2.compMasFrac[1,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,1] <= 1.0, has value: " + String(MatStm2.compMasFrac[1,1], "g"));
 */
-void Flowsheet_eqFunction_2264(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1283(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2264};
-  modelica_boolean tmp210;
-  static const MMC_DEFSTRINGLIT(tmp211,67,"Variable violating min constraint: 0.0 <= MatStm1.K[3], has value: ");
-  modelica_string tmp212;
-  static int tmp213 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp213)
-  {
-    tmp210 = GreaterEq(data->localData[0]->realVars[9] /* MatStm1.K[3] variable */,0.0);
-    if(!tmp210)
-    {
-      tmp212 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[9] /* MatStm1.K[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp211),tmp212);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",2213,2,2213,74,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.K[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp213 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2265
-type: ALGORITHM
-
-  assert(MatStm2.liqPhasMolFrac >= 0.0 and MatStm2.liqPhasMolFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMolFrac <= 1.0, has value: " + String(MatStm2.liqPhasMolFrac, "g"));
-*/
-void Flowsheet_eqFunction_2265(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2265};
+  const int equationIndexes[2] = {1,1283};
+  modelica_boolean tmp213;
   modelica_boolean tmp214;
-  modelica_boolean tmp215;
-  static const MMC_DEFSTRINGLIT(tmp216,88,"Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMolFrac <= 1.0, has value: ");
-  modelica_string tmp217;
-  static int tmp218 = 0;
+  static const MMC_DEFSTRINGLIT(tmp215,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,1] <= 1.0, has value: ");
+  modelica_string tmp216;
+  static int tmp217 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp218)
+  if(!tmp217)
   {
-    tmp214 = GreaterEq(data->localData[0]->realVars[212] /* MatStm2.liqPhasMolFrac variable */,0.0);
-    tmp215 = LessEq(data->localData[0]->realVars[212] /* MatStm2.liqPhasMolFrac variable */,1.0);
-    if(!(tmp214 && tmp215))
+    tmp213 = GreaterEq(data->localData[0]->realVars[112] /* MatStm2.compMasFrac[1,1] variable */,0.0);
+    tmp214 = LessEq(data->localData[0]->realVars[112] /* MatStm2.compMasFrac[1,1] variable */,1.0);
+    if(!(tmp213 && tmp214))
     {
-      tmp217 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[212] /* MatStm2.liqPhasMolFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp216),tmp217);
+      tmp216 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[112] /* MatStm2.compMasFrac[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp215),tmp216);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.liqPhasMolFrac >= 0.0 and MatStm2.liqPhasMolFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[1,1] >= 0.0 and MatStm2.compMasFrac[1,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp218 = 1;
+      tmp217 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2266
+equation index: 1284
 type: ALGORITHM
 
-  assert(MatStm2.liqPhasMasFrac >= 0.0 and MatStm2.liqPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMasFrac <= 1.0, has value: " + String(MatStm2.liqPhasMasFrac, "g"));
+  assert(MatStm2.compMasFrac[1,2] >= 0.0 and MatStm2.compMasFrac[1,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,2] <= 1.0, has value: " + String(MatStm2.compMasFrac[1,2], "g"));
 */
-void Flowsheet_eqFunction_2266(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1284(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2266};
+  const int equationIndexes[2] = {1,1284};
+  modelica_boolean tmp218;
   modelica_boolean tmp219;
-  modelica_boolean tmp220;
-  static const MMC_DEFSTRINGLIT(tmp221,88,"Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMasFrac <= 1.0, has value: ");
-  modelica_string tmp222;
-  static int tmp223 = 0;
+  static const MMC_DEFSTRINGLIT(tmp220,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,2] <= 1.0, has value: ");
+  modelica_string tmp221;
+  static int tmp222 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp223)
+  if(!tmp222)
   {
-    tmp219 = GreaterEq(data->localData[0]->realVars[211] /* MatStm2.liqPhasMasFrac variable */,0.0);
-    tmp220 = LessEq(data->localData[0]->realVars[211] /* MatStm2.liqPhasMasFrac variable */,1.0);
-    if(!(tmp219 && tmp220))
+    tmp218 = GreaterEq(data->localData[0]->realVars[113] /* MatStm2.compMasFrac[1,2] variable */,0.0);
+    tmp219 = LessEq(data->localData[0]->realVars[113] /* MatStm2.compMasFrac[1,2] variable */,1.0);
+    if(!(tmp218 && tmp219))
     {
-      tmp222 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[211] /* MatStm2.liqPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp221),tmp222);
+      tmp221 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[113] /* MatStm2.compMasFrac[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp220),tmp221);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.liqPhasMasFrac >= 0.0 and MatStm2.liqPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[1,2] >= 0.0 and MatStm2.compMasFrac[1,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp223 = 1;
+      tmp222 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2267
+equation index: 1285
 type: ALGORITHM
 
-  assert(MatStm2.vapPhasMasFrac >= 0.0 and MatStm2.vapPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.vapPhasMasFrac <= 1.0, has value: " + String(MatStm2.vapPhasMasFrac, "g"));
+  assert(MatStm2.compMasFrac[2,1] >= 0.0 and MatStm2.compMasFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,1] <= 1.0, has value: " + String(MatStm2.compMasFrac[2,1], "g"));
 */
-void Flowsheet_eqFunction_2267(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1285(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2267};
+  const int equationIndexes[2] = {1,1285};
+  modelica_boolean tmp223;
   modelica_boolean tmp224;
-  modelica_boolean tmp225;
-  static const MMC_DEFSTRINGLIT(tmp226,88,"Variable violating min/max constraint: 0.0 <= MatStm2.vapPhasMasFrac <= 1.0, has value: ");
-  modelica_string tmp227;
-  static int tmp228 = 0;
+  static const MMC_DEFSTRINGLIT(tmp225,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,1] <= 1.0, has value: ");
+  modelica_string tmp226;
+  static int tmp227 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp228)
+  if(!tmp227)
   {
-    tmp224 = GreaterEq(data->localData[0]->realVars[240] /* MatStm2.vapPhasMasFrac variable */,0.0);
-    tmp225 = LessEq(data->localData[0]->realVars[240] /* MatStm2.vapPhasMasFrac variable */,1.0);
-    if(!(tmp224 && tmp225))
+    tmp223 = GreaterEq(data->localData[0]->realVars[114] /* MatStm2.compMasFrac[2,1] variable */,0.0);
+    tmp224 = LessEq(data->localData[0]->realVars[114] /* MatStm2.compMasFrac[2,1] variable */,1.0);
+    if(!(tmp223 && tmp224))
     {
-      tmp227 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[240] /* MatStm2.vapPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp226),tmp227);
+      tmp226 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[114] /* MatStm2.compMasFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp225),tmp226);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.vapPhasMasFrac >= 0.0 and MatStm2.vapPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[2,1] >= 0.0 and MatStm2.compMasFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp228 = 1;
+      tmp227 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2268
+equation index: 1286
 type: ALGORITHM
 
-  assert(MatStm2.totMolFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[2], has value: " + String(MatStm2.totMolFlo[2], "g"));
+  assert(MatStm2.compMasFrac[2,2] >= 0.0 and MatStm2.compMasFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,2] <= 1.0, has value: " + String(MatStm2.compMasFrac[2,2], "g"));
 */
-void Flowsheet_eqFunction_2268(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1286(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2268};
+  const int equationIndexes[2] = {1,1286};
+  modelica_boolean tmp228;
   modelica_boolean tmp229;
-  static const MMC_DEFSTRINGLIT(tmp230,75,"Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[2], has value: ");
+  static const MMC_DEFSTRINGLIT(tmp230,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,2] <= 1.0, has value: ");
   modelica_string tmp231;
   static int tmp232 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp232)
   {
-    tmp229 = GreaterEq(data->localData[0]->realVars[238] /* MatStm2.totMolFlo[2] variable */,0.0);
-    if(!tmp229)
+    tmp228 = GreaterEq(data->localData[0]->realVars[115] /* MatStm2.compMasFrac[2,2] variable */,0.0);
+    tmp229 = LessEq(data->localData[0]->realVars[115] /* MatStm2.compMasFrac[2,2] variable */,1.0);
+    if(!(tmp228 && tmp229))
     {
-      tmp231 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[238] /* MatStm2.totMolFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp231 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[115] /* MatStm2.compMasFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp230),tmp231);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMolFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[2,2] >= 0.0 and MatStm2.compMasFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp232 = 1;
@@ -1772,298 +1772,298 @@ void Flowsheet_eqFunction_2268(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2269
+equation index: 1287
 type: ALGORITHM
 
-  assert(MatStm2.totMolFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[3], has value: " + String(MatStm2.totMolFlo[3], "g"));
+  assert(MatStm2.compMasFrac[3,1] >= 0.0 and MatStm2.compMasFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,1] <= 1.0, has value: " + String(MatStm2.compMasFrac[3,1], "g"));
 */
-void Flowsheet_eqFunction_2269(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1287(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2269};
+  const int equationIndexes[2] = {1,1287};
   modelica_boolean tmp233;
-  static const MMC_DEFSTRINGLIT(tmp234,75,"Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[3], has value: ");
-  modelica_string tmp235;
-  static int tmp236 = 0;
+  modelica_boolean tmp234;
+  static const MMC_DEFSTRINGLIT(tmp235,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,1] <= 1.0, has value: ");
+  modelica_string tmp236;
+  static int tmp237 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp236)
+  if(!tmp237)
   {
-    tmp233 = GreaterEq(data->localData[0]->realVars[239] /* MatStm2.totMolFlo[3] variable */,0.0);
-    if(!tmp233)
+    tmp233 = GreaterEq(data->localData[0]->realVars[116] /* MatStm2.compMasFrac[3,1] variable */,0.0);
+    tmp234 = LessEq(data->localData[0]->realVars[116] /* MatStm2.compMasFrac[3,1] variable */,1.0);
+    if(!(tmp233 && tmp234))
     {
-      tmp235 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[239] /* MatStm2.totMolFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp234),tmp235);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMolFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp236 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2270
-type: ALGORITHM
-
-  assert(MatStm2.totMasFlo[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[1], has value: " + String(MatStm2.totMasFlo[1], "g"));
-*/
-void Flowsheet_eqFunction_2270(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2270};
-  modelica_boolean tmp237;
-  static const MMC_DEFSTRINGLIT(tmp238,75,"Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[1], has value: ");
-  modelica_string tmp239;
-  static int tmp240 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp240)
-  {
-    tmp237 = GreaterEq(data->localData[0]->realVars[234] /* MatStm2.totMasFlo[1] variable */,0.0);
-    if(!tmp237)
-    {
-      tmp239 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[234] /* MatStm2.totMasFlo[1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp238),tmp239);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMasFlo[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp240 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2271
-type: ALGORITHM
-
-  assert(MatStm2.totMasFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[2], has value: " + String(MatStm2.totMasFlo[2], "g"));
-*/
-void Flowsheet_eqFunction_2271(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2271};
-  modelica_boolean tmp241;
-  static const MMC_DEFSTRINGLIT(tmp242,75,"Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[2], has value: ");
-  modelica_string tmp243;
-  static int tmp244 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp244)
-  {
-    tmp241 = GreaterEq(data->localData[0]->realVars[235] /* MatStm2.totMasFlo[2] variable */,0.0);
-    if(!tmp241)
-    {
-      tmp243 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[235] /* MatStm2.totMasFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp242),tmp243);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMasFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp244 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2272
-type: ALGORITHM
-
-  assert(MatStm2.totMasFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[3], has value: " + String(MatStm2.totMasFlo[3], "g"));
-*/
-void Flowsheet_eqFunction_2272(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2272};
-  modelica_boolean tmp245;
-  static const MMC_DEFSTRINGLIT(tmp246,75,"Variable violating min constraint: 0.0 <= MatStm2.totMasFlo[3], has value: ");
-  modelica_string tmp247;
-  static int tmp248 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp248)
-  {
-    tmp245 = GreaterEq(data->localData[0]->realVars[236] /* MatStm2.totMasFlo[3] variable */,0.0);
-    if(!tmp245)
-    {
-      tmp247 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[236] /* MatStm2.totMasFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp246),tmp247);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.totMasFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp248 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2273
-type: ALGORITHM
-
-  assert(MatStm2.MW[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.MW[1], has value: " + String(MatStm2.MW[1], "g"));
-*/
-void Flowsheet_eqFunction_2273(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2273};
-  modelica_boolean tmp249;
-  static const MMC_DEFSTRINGLIT(tmp250,68,"Variable violating min constraint: 0.0 <= MatStm2.MW[1], has value: ");
-  modelica_string tmp251;
-  static int tmp252 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp252)
-  {
-    tmp249 = GreaterEq(data->localData[0]->realVars[129] /* MatStm2.MW[1] variable */,0.0);
-    if(!tmp249)
-    {
-      tmp251 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[129] /* MatStm2.MW[1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp250),tmp251);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.MW[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp252 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2274
-type: ALGORITHM
-
-  assert(MatStm2.MW[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.MW[2], has value: " + String(MatStm2.MW[2], "g"));
-*/
-void Flowsheet_eqFunction_2274(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2274};
-  modelica_boolean tmp253;
-  static const MMC_DEFSTRINGLIT(tmp254,68,"Variable violating min constraint: 0.0 <= MatStm2.MW[2], has value: ");
-  modelica_string tmp255;
-  static int tmp256 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp256)
-  {
-    tmp253 = GreaterEq(data->localData[0]->realVars[130] /* MatStm2.MW[2] variable */,0.0);
-    if(!tmp253)
-    {
-      tmp255 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[130] /* MatStm2.MW[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp254),tmp255);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.MW[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp256 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2275
-type: ALGORITHM
-
-  assert(MatStm2.MW[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.MW[3], has value: " + String(MatStm2.MW[3], "g"));
-*/
-void Flowsheet_eqFunction_2275(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2275};
-  modelica_boolean tmp257;
-  static const MMC_DEFSTRINGLIT(tmp258,68,"Variable violating min constraint: 0.0 <= MatStm2.MW[3], has value: ");
-  modelica_string tmp259;
-  static int tmp260 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp260)
-  {
-    tmp257 = GreaterEq(data->localData[0]->realVars[131] /* MatStm2.MW[3] variable */,0.0);
-    if(!tmp257)
-    {
-      tmp259 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[131] /* MatStm2.MW[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp258),tmp259);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.MW[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp260 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2276
-type: ALGORITHM
-
-  assert(MatStm2.compMolFrac[2,1] >= 0.0 and MatStm2.compMolFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,1] <= 1.0, has value: " + String(MatStm2.compMolFrac[2,1], "g"));
-*/
-void Flowsheet_eqFunction_2276(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2276};
-  modelica_boolean tmp261;
-  modelica_boolean tmp262;
-  static const MMC_DEFSTRINGLIT(tmp263,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,1] <= 1.0, has value: ");
-  modelica_string tmp264;
-  static int tmp265 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp265)
-  {
-    tmp261 = GreaterEq(data->localData[0]->realVars[187] /* MatStm2.compMolFrac[2,1] variable */,0.0);
-    tmp262 = LessEq(data->localData[0]->realVars[187] /* MatStm2.compMolFrac[2,1] variable */,1.0);
-    if(!(tmp261 && tmp262))
-    {
-      tmp264 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[187] /* MatStm2.compMolFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp263),tmp264);
+      tmp236 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[116] /* MatStm2.compMasFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp235),tmp236);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[2,1] >= 0.0 and MatStm2.compMolFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[3,1] >= 0.0 and MatStm2.compMasFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp265 = 1;
+      tmp237 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2277
+equation index: 1288
 type: ALGORITHM
 
-  assert(MatStm2.compMolFrac[2,2] >= 0.0 and MatStm2.compMolFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,2] <= 1.0, has value: " + String(MatStm2.compMolFrac[2,2], "g"));
+  assert(MatStm2.compMasFrac[3,2] >= 0.0 and MatStm2.compMasFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,2] <= 1.0, has value: " + String(MatStm2.compMasFrac[3,2], "g"));
 */
-void Flowsheet_eqFunction_2277(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1288(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2277};
-  modelica_boolean tmp266;
+  const int equationIndexes[2] = {1,1288};
+  modelica_boolean tmp238;
+  modelica_boolean tmp239;
+  static const MMC_DEFSTRINGLIT(tmp240,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,2] <= 1.0, has value: ");
+  modelica_string tmp241;
+  static int tmp242 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp242)
+  {
+    tmp238 = GreaterEq(data->localData[0]->realVars[117] /* MatStm2.compMasFrac[3,2] variable */,0.0);
+    tmp239 = LessEq(data->localData[0]->realVars[117] /* MatStm2.compMasFrac[3,2] variable */,1.0);
+    if(!(tmp238 && tmp239))
+    {
+      tmp241 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[117] /* MatStm2.compMasFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp240),tmp241);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[3,2] >= 0.0 and MatStm2.compMasFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp242 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1289
+type: ALGORITHM
+
+  assert(MatStm2.compMolFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,1], has value: " + String(MatStm2.compMolFlo[2,1], "g"));
+*/
+void Flowsheet_eqFunction_1289(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1289};
+  modelica_boolean tmp243;
+  static const MMC_DEFSTRINGLIT(tmp244,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,1], has value: ");
+  modelica_string tmp245;
+  static int tmp246 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp246)
+  {
+    tmp243 = GreaterEq(data->localData[0]->realVars[132] /* MatStm2.compMolFlo[2,1] variable */,0.0);
+    if(!tmp243)
+    {
+      tmp245 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[132] /* MatStm2.compMolFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp244),tmp245);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp246 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1290
+type: ALGORITHM
+
+  assert(MatStm2.compMolFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,2], has value: " + String(MatStm2.compMolFlo[2,2], "g"));
+*/
+void Flowsheet_eqFunction_1290(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1290};
+  modelica_boolean tmp247;
+  static const MMC_DEFSTRINGLIT(tmp248,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,2], has value: ");
+  modelica_string tmp249;
+  static int tmp250 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp250)
+  {
+    tmp247 = GreaterEq(data->localData[0]->realVars[133] /* MatStm2.compMolFlo[2,2] variable */,0.0);
+    if(!tmp247)
+    {
+      tmp249 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[133] /* MatStm2.compMolFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp248),tmp249);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp250 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1291
+type: ALGORITHM
+
+  assert(MatStm2.compMolFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,1], has value: " + String(MatStm2.compMolFlo[3,1], "g"));
+*/
+void Flowsheet_eqFunction_1291(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1291};
+  modelica_boolean tmp251;
+  static const MMC_DEFSTRINGLIT(tmp252,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,1], has value: ");
+  modelica_string tmp253;
+  static int tmp254 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp254)
+  {
+    tmp251 = GreaterEq(data->localData[0]->realVars[134] /* MatStm2.compMolFlo[3,1] variable */,0.0);
+    if(!tmp251)
+    {
+      tmp253 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[134] /* MatStm2.compMolFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp252),tmp253);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp254 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1292
+type: ALGORITHM
+
+  assert(MatStm2.compMolFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,2], has value: " + String(MatStm2.compMolFlo[3,2], "g"));
+*/
+void Flowsheet_eqFunction_1292(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1292};
+  modelica_boolean tmp255;
+  static const MMC_DEFSTRINGLIT(tmp256,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,2], has value: ");
+  modelica_string tmp257;
+  static int tmp258 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp258)
+  {
+    tmp255 = GreaterEq(data->localData[0]->realVars[135] /* MatStm2.compMolFlo[3,2] variable */,0.0);
+    if(!tmp255)
+    {
+      tmp257 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[135] /* MatStm2.compMolFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp256),tmp257);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp258 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1293
+type: ALGORITHM
+
+  assert(MatStm2.compMasFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,1], has value: " + String(MatStm2.compMasFlo[2,1], "g"));
+*/
+void Flowsheet_eqFunction_1293(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1293};
+  modelica_boolean tmp259;
+  static const MMC_DEFSTRINGLIT(tmp260,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,1], has value: ");
+  modelica_string tmp261;
+  static int tmp262 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp262)
+  {
+    tmp259 = GreaterEq(data->localData[0]->realVars[108] /* MatStm2.compMasFlo[2,1] variable */,0.0);
+    if(!tmp259)
+    {
+      tmp261 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[108] /* MatStm2.compMasFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp260),tmp261);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp262 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1294
+type: ALGORITHM
+
+  assert(MatStm2.compMasFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,2], has value: " + String(MatStm2.compMasFlo[2,2], "g"));
+*/
+void Flowsheet_eqFunction_1294(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1294};
+  modelica_boolean tmp263;
+  static const MMC_DEFSTRINGLIT(tmp264,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,2], has value: ");
+  modelica_string tmp265;
+  static int tmp266 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp266)
+  {
+    tmp263 = GreaterEq(data->localData[0]->realVars[109] /* MatStm2.compMasFlo[2,2] variable */,0.0);
+    if(!tmp263)
+    {
+      tmp265 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[109] /* MatStm2.compMasFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp264),tmp265);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp266 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1295
+type: ALGORITHM
+
+  assert(MatStm2.compMasFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,1], has value: " + String(MatStm2.compMasFlo[3,1], "g"));
+*/
+void Flowsheet_eqFunction_1295(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1295};
   modelica_boolean tmp267;
-  static const MMC_DEFSTRINGLIT(tmp268,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,2] <= 1.0, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp268,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,1], has value: ");
   modelica_string tmp269;
   static int tmp270 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp270)
   {
-    tmp266 = GreaterEq(data->localData[0]->realVars[188] /* MatStm2.compMolFrac[2,2] variable */,0.0);
-    tmp267 = LessEq(data->localData[0]->realVars[188] /* MatStm2.compMolFrac[2,2] variable */,1.0);
-    if(!(tmp266 && tmp267))
+    tmp267 = GreaterEq(data->localData[0]->realVars[110] /* MatStm2.compMasFlo[3,1] variable */,0.0);
+    if(!tmp267)
     {
-      tmp269 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[188] /* MatStm2.compMolFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp269 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[110] /* MatStm2.compMasFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp268),tmp269);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[2,2] >= 0.0 and MatStm2.compMolFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp270 = 1;
@@ -2073,242 +2073,267 @@ void Flowsheet_eqFunction_2277(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2278
+equation index: 1296
 type: ALGORITHM
 
-  assert(MatStm2.compMolFrac[2,3] >= 0.0 and MatStm2.compMolFrac[2,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,3] <= 1.0, has value: " + String(MatStm2.compMolFrac[2,3], "g"));
+  assert(MatStm2.compMasFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,2], has value: " + String(MatStm2.compMasFlo[3,2], "g"));
 */
-void Flowsheet_eqFunction_2278(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1296(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2278};
+  const int equationIndexes[2] = {1,1296};
   modelica_boolean tmp271;
-  modelica_boolean tmp272;
-  static const MMC_DEFSTRINGLIT(tmp273,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[2,3] <= 1.0, has value: ");
-  modelica_string tmp274;
-  static int tmp275 = 0;
+  static const MMC_DEFSTRINGLIT(tmp272,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,2], has value: ");
+  modelica_string tmp273;
+  static int tmp274 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp275)
+  if(!tmp274)
   {
-    tmp271 = GreaterEq(data->localData[0]->realVars[189] /* MatStm2.compMolFrac[2,3] variable */,0.0);
-    tmp272 = LessEq(data->localData[0]->realVars[189] /* MatStm2.compMolFrac[2,3] variable */,1.0);
-    if(!(tmp271 && tmp272))
+    tmp271 = GreaterEq(data->localData[0]->realVars[111] /* MatStm2.compMasFlo[3,2] variable */,0.0);
+    if(!tmp271)
     {
-      tmp274 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[189] /* MatStm2.compMolFrac[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp273),tmp274);
+      tmp273 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[111] /* MatStm2.compMasFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp272),tmp273);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[2,3] >= 0.0 and MatStm2.compMolFrac[2,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp275 = 1;
+      tmp274 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2279
+equation index: 1297
 type: ALGORITHM
 
-  assert(MatStm2.compMolFrac[3,1] >= 0.0 and MatStm2.compMolFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,1] <= 1.0, has value: " + String(MatStm2.compMolFrac[3,1], "g"));
+  assert(MatStm2.K[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.K[1], has value: " + String(MatStm2.K[1], "g"));
 */
-void Flowsheet_eqFunction_2279(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1297(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2279};
-  modelica_boolean tmp276;
-  modelica_boolean tmp277;
-  static const MMC_DEFSTRINGLIT(tmp278,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,1] <= 1.0, has value: ");
-  modelica_string tmp279;
-  static int tmp280 = 0;
+  const int equationIndexes[2] = {1,1297};
+  modelica_boolean tmp275;
+  static const MMC_DEFSTRINGLIT(tmp276,67,"Variable violating min constraint: 0.0 <= MatStm2.K[1], has value: ");
+  modelica_string tmp277;
+  static int tmp278 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp280)
+  if(!tmp278)
   {
-    tmp276 = GreaterEq(data->localData[0]->realVars[190] /* MatStm2.compMolFrac[3,1] variable */,0.0);
-    tmp277 = LessEq(data->localData[0]->realVars[190] /* MatStm2.compMolFrac[3,1] variable */,1.0);
-    if(!(tmp276 && tmp277))
+    tmp275 = GreaterEq(data->localData[0]->realVars[95] /* MatStm2.K[1] variable */,0.0);
+    if(!tmp275)
     {
-      tmp279 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[190] /* MatStm2.compMolFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp278),tmp279);
+      tmp277 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[95] /* MatStm2.K[1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp276),tmp277);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[3,1] >= 0.0 and MatStm2.compMolFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",2213,2,2213,74,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.K[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp280 = 1;
+      tmp278 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2280
+equation index: 1298
 type: ALGORITHM
 
-  assert(MatStm2.compMolFrac[3,2] >= 0.0 and MatStm2.compMolFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,2] <= 1.0, has value: " + String(MatStm2.compMolFrac[3,2], "g"));
+  assert(MatStm2.K[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.K[2], has value: " + String(MatStm2.K[2], "g"));
 */
-void Flowsheet_eqFunction_2280(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1298(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2280};
-  modelica_boolean tmp281;
-  modelica_boolean tmp282;
-  static const MMC_DEFSTRINGLIT(tmp283,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,2] <= 1.0, has value: ");
-  modelica_string tmp284;
-  static int tmp285 = 0;
+  const int equationIndexes[2] = {1,1298};
+  modelica_boolean tmp279;
+  static const MMC_DEFSTRINGLIT(tmp280,67,"Variable violating min constraint: 0.0 <= MatStm2.K[2], has value: ");
+  modelica_string tmp281;
+  static int tmp282 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp285)
+  if(!tmp282)
   {
-    tmp281 = GreaterEq(data->localData[0]->realVars[191] /* MatStm2.compMolFrac[3,2] variable */,0.0);
-    tmp282 = LessEq(data->localData[0]->realVars[191] /* MatStm2.compMolFrac[3,2] variable */,1.0);
-    if(!(tmp281 && tmp282))
+    tmp279 = GreaterEq(data->localData[0]->realVars[96] /* MatStm2.K[2] variable */,0.0);
+    if(!tmp279)
     {
-      tmp284 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[191] /* MatStm2.compMolFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp283),tmp284);
+      tmp281 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[96] /* MatStm2.K[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp280),tmp281);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[3,2] >= 0.0 and MatStm2.compMolFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",2213,2,2213,74,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.K[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp285 = 1;
+      tmp282 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2281
+equation index: 1299
 type: ALGORITHM
 
-  assert(MatStm2.compMolFrac[3,3] >= 0.0 and MatStm2.compMolFrac[3,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,3] <= 1.0, has value: " + String(MatStm2.compMolFrac[3,3], "g"));
+  assert(MatStm3.liqPhasMolFrac >= 0.0 and MatStm3.liqPhasMolFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.liqPhasMolFrac <= 1.0, has value: " + String(MatStm3.liqPhasMolFrac, "g"));
 */
-void Flowsheet_eqFunction_2281(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1299(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2281};
-  modelica_boolean tmp286;
-  modelica_boolean tmp287;
-  static const MMC_DEFSTRINGLIT(tmp288,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMolFrac[3,3] <= 1.0, has value: ");
-  modelica_string tmp289;
-  static int tmp290 = 0;
+  const int equationIndexes[2] = {1,1299};
+  modelica_boolean tmp283;
+  modelica_boolean tmp284;
+  static const MMC_DEFSTRINGLIT(tmp285,88,"Variable violating min/max constraint: 0.0 <= MatStm3.liqPhasMolFrac <= 1.0, has value: ");
+  modelica_string tmp286;
+  static int tmp287 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp290)
+  if(!tmp287)
   {
-    tmp286 = GreaterEq(data->localData[0]->realVars[192] /* MatStm2.compMolFrac[3,3] variable */,0.0);
-    tmp287 = LessEq(data->localData[0]->realVars[192] /* MatStm2.compMolFrac[3,3] variable */,1.0);
-    if(!(tmp286 && tmp287))
+    tmp283 = GreaterEq(data->localData[0]->realVars[246] /* MatStm3.liqPhasMolFrac variable */,0.0);
+    tmp284 = LessEq(data->localData[0]->realVars[246] /* MatStm3.liqPhasMolFrac variable */,1.0);
+    if(!(tmp283 && tmp284))
     {
-      tmp289 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[192] /* MatStm2.compMolFrac[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp288),tmp289);
+      tmp286 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[246] /* MatStm3.liqPhasMolFrac variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp285),tmp286);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFrac[3,3] >= 0.0 and MatStm2.compMolFrac[3,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.liqPhasMolFrac >= 0.0 and MatStm3.liqPhasMolFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp290 = 1;
+      tmp287 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2282
+equation index: 1300
 type: ALGORITHM
 
-  assert(MatStm2.compMasFrac[1,1] >= 0.0 and MatStm2.compMasFrac[1,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,1] <= 1.0, has value: " + String(MatStm2.compMasFrac[1,1], "g"));
+  assert(MatStm3.liqPhasMasFrac >= 0.0 and MatStm3.liqPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.liqPhasMasFrac <= 1.0, has value: " + String(MatStm3.liqPhasMasFrac, "g"));
 */
-void Flowsheet_eqFunction_2282(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1300(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2282};
-  modelica_boolean tmp291;
-  modelica_boolean tmp292;
-  static const MMC_DEFSTRINGLIT(tmp293,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,1] <= 1.0, has value: ");
-  modelica_string tmp294;
-  static int tmp295 = 0;
+  const int equationIndexes[2] = {1,1300};
+  modelica_boolean tmp288;
+  modelica_boolean tmp289;
+  static const MMC_DEFSTRINGLIT(tmp290,88,"Variable violating min/max constraint: 0.0 <= MatStm3.liqPhasMasFrac <= 1.0, has value: ");
+  modelica_string tmp291;
+  static int tmp292 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp295)
+  if(!tmp292)
   {
-    tmp291 = GreaterEq(data->localData[0]->realVars[148] /* MatStm2.compMasFrac[1,1] variable */,0.0);
-    tmp292 = LessEq(data->localData[0]->realVars[148] /* MatStm2.compMasFrac[1,1] variable */,1.0);
-    if(!(tmp291 && tmp292))
+    tmp288 = GreaterEq(data->localData[0]->realVars[245] /* MatStm3.liqPhasMasFrac variable */,0.0);
+    tmp289 = LessEq(data->localData[0]->realVars[245] /* MatStm3.liqPhasMasFrac variable */,1.0);
+    if(!(tmp288 && tmp289))
     {
-      tmp294 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[148] /* MatStm2.compMasFrac[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp293),tmp294);
+      tmp291 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[245] /* MatStm3.liqPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp290),tmp291);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[1,1] >= 0.0 and MatStm2.compMasFrac[1,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.liqPhasMasFrac >= 0.0 and MatStm3.liqPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp295 = 1;
+      tmp292 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2283
+equation index: 1301
 type: ALGORITHM
 
-  assert(MatStm2.compMasFrac[1,2] >= 0.0 and MatStm2.compMasFrac[1,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,2] <= 1.0, has value: " + String(MatStm2.compMasFrac[1,2], "g"));
+  assert(MatStm3.vapPhasMasFrac >= 0.0 and MatStm3.vapPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.vapPhasMasFrac <= 1.0, has value: " + String(MatStm3.vapPhasMasFrac, "g"));
 */
-void Flowsheet_eqFunction_2283(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1301(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2283};
-  modelica_boolean tmp296;
-  modelica_boolean tmp297;
-  static const MMC_DEFSTRINGLIT(tmp298,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,2] <= 1.0, has value: ");
-  modelica_string tmp299;
-  static int tmp300 = 0;
+  const int equationIndexes[2] = {1,1301};
+  modelica_boolean tmp293;
+  modelica_boolean tmp294;
+  static const MMC_DEFSTRINGLIT(tmp295,88,"Variable violating min/max constraint: 0.0 <= MatStm3.vapPhasMasFrac <= 1.0, has value: ");
+  modelica_string tmp296;
+  static int tmp297 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp300)
+  if(!tmp297)
   {
-    tmp296 = GreaterEq(data->localData[0]->realVars[149] /* MatStm2.compMasFrac[1,2] variable */,0.0);
-    tmp297 = LessEq(data->localData[0]->realVars[149] /* MatStm2.compMasFrac[1,2] variable */,1.0);
-    if(!(tmp296 && tmp297))
+    tmp293 = GreaterEq(data->localData[0]->realVars[273] /* MatStm3.vapPhasMasFrac variable */,0.0);
+    tmp294 = LessEq(data->localData[0]->realVars[273] /* MatStm3.vapPhasMasFrac variable */,1.0);
+    if(!(tmp293 && tmp294))
     {
-      tmp299 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[149] /* MatStm2.compMasFrac[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp298),tmp299);
+      tmp296 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[273] /* MatStm3.vapPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp295),tmp296);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[1,2] >= 0.0 and MatStm2.compMasFrac[1,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.vapPhasMasFrac >= 0.0 and MatStm3.vapPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp300 = 1;
+      tmp297 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2284
+equation index: 1302
 type: ALGORITHM
 
-  assert(MatStm2.compMasFrac[1,3] >= 0.0 and MatStm2.compMasFrac[1,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,3] <= 1.0, has value: " + String(MatStm2.compMasFrac[1,3], "g"));
+  assert(MatStm3.totMolFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMolFlo[2], has value: " + String(MatStm3.totMolFlo[2], "g"));
 */
-void Flowsheet_eqFunction_2284(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1302(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2284};
-  modelica_boolean tmp301;
+  const int equationIndexes[2] = {1,1302};
+  modelica_boolean tmp298;
+  static const MMC_DEFSTRINGLIT(tmp299,75,"Variable violating min constraint: 0.0 <= MatStm3.totMolFlo[2], has value: ");
+  modelica_string tmp300;
+  static int tmp301 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp301)
+  {
+    tmp298 = GreaterEq(data->localData[0]->realVars[271] /* MatStm3.totMolFlo[2] variable */,0.0);
+    if(!tmp298)
+    {
+      tmp300 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[271] /* MatStm3.totMolFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp299),tmp300);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMolFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp301 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1303
+type: ALGORITHM
+
+  assert(MatStm3.totMolFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMolFlo[3], has value: " + String(MatStm3.totMolFlo[3], "g"));
+*/
+void Flowsheet_eqFunction_1303(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1303};
   modelica_boolean tmp302;
-  static const MMC_DEFSTRINGLIT(tmp303,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[1,3] <= 1.0, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp303,75,"Variable violating min constraint: 0.0 <= MatStm3.totMolFlo[3], has value: ");
   modelica_string tmp304;
   static int tmp305 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp305)
   {
-    tmp301 = GreaterEq(data->localData[0]->realVars[150] /* MatStm2.compMasFrac[1,3] variable */,0.0);
-    tmp302 = LessEq(data->localData[0]->realVars[150] /* MatStm2.compMasFrac[1,3] variable */,1.0);
-    if(!(tmp301 && tmp302))
+    tmp302 = GreaterEq(data->localData[0]->realVars[272] /* MatStm3.totMolFlo[3] variable */,0.0);
+    if(!tmp302)
     {
-      tmp304 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[150] /* MatStm2.compMasFrac[1,3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp304 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[272] /* MatStm3.totMolFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp303),tmp304);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[1,3] >= 0.0 and MatStm2.compMasFrac[1,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMolFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp305 = 1;
@@ -2318,137 +2343,162 @@ void Flowsheet_eqFunction_2284(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2285
+equation index: 1304
 type: ALGORITHM
 
-  assert(MatStm2.compMasFrac[2,1] >= 0.0 and MatStm2.compMasFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,1] <= 1.0, has value: " + String(MatStm2.compMasFrac[2,1], "g"));
+  assert(MatStm3.totMasFlo[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[1], has value: " + String(MatStm3.totMasFlo[1], "g"));
 */
-void Flowsheet_eqFunction_2285(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1304(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2285};
+  const int equationIndexes[2] = {1,1304};
   modelica_boolean tmp306;
-  modelica_boolean tmp307;
-  static const MMC_DEFSTRINGLIT(tmp308,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,1] <= 1.0, has value: ");
-  modelica_string tmp309;
-  static int tmp310 = 0;
+  static const MMC_DEFSTRINGLIT(tmp307,75,"Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[1], has value: ");
+  modelica_string tmp308;
+  static int tmp309 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp310)
+  if(!tmp309)
   {
-    tmp306 = GreaterEq(data->localData[0]->realVars[151] /* MatStm2.compMasFrac[2,1] variable */,0.0);
-    tmp307 = LessEq(data->localData[0]->realVars[151] /* MatStm2.compMasFrac[2,1] variable */,1.0);
-    if(!(tmp306 && tmp307))
+    tmp306 = GreaterEq(data->localData[0]->realVars[267] /* MatStm3.totMasFlo[1] variable */,0.0);
+    if(!tmp306)
     {
-      tmp309 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[151] /* MatStm2.compMasFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp308),tmp309);
+      tmp308 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[267] /* MatStm3.totMasFlo[1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp307),tmp308);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[2,1] >= 0.0 and MatStm2.compMasFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMasFlo[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp310 = 1;
+      tmp309 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2286
+equation index: 1305
 type: ALGORITHM
 
-  assert(MatStm2.compMasFrac[2,2] >= 0.0 and MatStm2.compMasFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,2] <= 1.0, has value: " + String(MatStm2.compMasFrac[2,2], "g"));
+  assert(MatStm3.totMasFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[2], has value: " + String(MatStm3.totMasFlo[2], "g"));
 */
-void Flowsheet_eqFunction_2286(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1305(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2286};
-  modelica_boolean tmp311;
-  modelica_boolean tmp312;
-  static const MMC_DEFSTRINGLIT(tmp313,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,2] <= 1.0, has value: ");
-  modelica_string tmp314;
-  static int tmp315 = 0;
+  const int equationIndexes[2] = {1,1305};
+  modelica_boolean tmp310;
+  static const MMC_DEFSTRINGLIT(tmp311,75,"Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[2], has value: ");
+  modelica_string tmp312;
+  static int tmp313 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp315)
+  if(!tmp313)
   {
-    tmp311 = GreaterEq(data->localData[0]->realVars[152] /* MatStm2.compMasFrac[2,2] variable */,0.0);
-    tmp312 = LessEq(data->localData[0]->realVars[152] /* MatStm2.compMasFrac[2,2] variable */,1.0);
-    if(!(tmp311 && tmp312))
+    tmp310 = GreaterEq(data->localData[0]->realVars[268] /* MatStm3.totMasFlo[2] variable */,0.0);
+    if(!tmp310)
     {
-      tmp314 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[152] /* MatStm2.compMasFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp313),tmp314);
+      tmp312 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[268] /* MatStm3.totMasFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp311),tmp312);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[2,2] >= 0.0 and MatStm2.compMasFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMasFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp315 = 1;
+      tmp313 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2287
+equation index: 1306
 type: ALGORITHM
 
-  assert(MatStm2.compMasFrac[2,3] >= 0.0 and MatStm2.compMasFrac[2,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,3] <= 1.0, has value: " + String(MatStm2.compMasFrac[2,3], "g"));
+  assert(MatStm3.totMasFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[3], has value: " + String(MatStm3.totMasFlo[3], "g"));
 */
-void Flowsheet_eqFunction_2287(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1306(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2287};
-  modelica_boolean tmp316;
-  modelica_boolean tmp317;
-  static const MMC_DEFSTRINGLIT(tmp318,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[2,3] <= 1.0, has value: ");
-  modelica_string tmp319;
-  static int tmp320 = 0;
+  const int equationIndexes[2] = {1,1306};
+  modelica_boolean tmp314;
+  static const MMC_DEFSTRINGLIT(tmp315,75,"Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[3], has value: ");
+  modelica_string tmp316;
+  static int tmp317 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp320)
+  if(!tmp317)
   {
-    tmp316 = GreaterEq(data->localData[0]->realVars[153] /* MatStm2.compMasFrac[2,3] variable */,0.0);
-    tmp317 = LessEq(data->localData[0]->realVars[153] /* MatStm2.compMasFrac[2,3] variable */,1.0);
-    if(!(tmp316 && tmp317))
+    tmp314 = GreaterEq(data->localData[0]->realVars[269] /* MatStm3.totMasFlo[3] variable */,0.0);
+    if(!tmp314)
     {
-      tmp319 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[153] /* MatStm2.compMasFrac[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp318),tmp319);
+      tmp316 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[269] /* MatStm3.totMasFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp315),tmp316);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[2,3] >= 0.0 and MatStm2.compMasFrac[2,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMasFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp320 = 1;
+      tmp317 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2288
+equation index: 1307
 type: ALGORITHM
 
-  assert(MatStm2.compMasFrac[3,1] >= 0.0 and MatStm2.compMasFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,1] <= 1.0, has value: " + String(MatStm2.compMasFrac[3,1], "g"));
+  assert(MatStm3.MW[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.MW[1], has value: " + String(MatStm3.MW[1], "g"));
 */
-void Flowsheet_eqFunction_2288(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1307(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2288};
-  modelica_boolean tmp321;
+  const int equationIndexes[2] = {1,1307};
+  modelica_boolean tmp318;
+  static const MMC_DEFSTRINGLIT(tmp319,68,"Variable violating min constraint: 0.0 <= MatStm3.MW[1], has value: ");
+  modelica_string tmp320;
+  static int tmp321 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp321)
+  {
+    tmp318 = GreaterEq(data->localData[0]->realVars[188] /* MatStm3.MW[1] variable */,0.0);
+    if(!tmp318)
+    {
+      tmp320 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[188] /* MatStm3.MW[1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp319),tmp320);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.MW[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp321 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1308
+type: ALGORITHM
+
+  assert(MatStm3.MW[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.MW[2], has value: " + String(MatStm3.MW[2], "g"));
+*/
+void Flowsheet_eqFunction_1308(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1308};
   modelica_boolean tmp322;
-  static const MMC_DEFSTRINGLIT(tmp323,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,1] <= 1.0, has value: ");
+  static const MMC_DEFSTRINGLIT(tmp323,68,"Variable violating min constraint: 0.0 <= MatStm3.MW[2], has value: ");
   modelica_string tmp324;
   static int tmp325 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp325)
   {
-    tmp321 = GreaterEq(data->localData[0]->realVars[154] /* MatStm2.compMasFrac[3,1] variable */,0.0);
-    tmp322 = LessEq(data->localData[0]->realVars[154] /* MatStm2.compMasFrac[3,1] variable */,1.0);
-    if(!(tmp321 && tmp322))
+    tmp322 = GreaterEq(data->localData[0]->realVars[189] /* MatStm3.MW[2] variable */,0.0);
+    if(!tmp322)
     {
-      tmp324 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[154] /* MatStm2.compMasFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp324 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[189] /* MatStm3.MW[2] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp323),tmp324);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[3,1] >= 0.0 and MatStm2.compMasFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.MW[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp325 = 1;
@@ -2458,100 +2508,100 @@ void Flowsheet_eqFunction_2288(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2289
+equation index: 1309
 type: ALGORITHM
 
-  assert(MatStm2.compMasFrac[3,2] >= 0.0 and MatStm2.compMasFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,2] <= 1.0, has value: " + String(MatStm2.compMasFrac[3,2], "g"));
+  assert(MatStm3.MW[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.MW[3], has value: " + String(MatStm3.MW[3], "g"));
 */
-void Flowsheet_eqFunction_2289(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1309(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2289};
+  const int equationIndexes[2] = {1,1309};
   modelica_boolean tmp326;
-  modelica_boolean tmp327;
-  static const MMC_DEFSTRINGLIT(tmp328,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,2] <= 1.0, has value: ");
-  modelica_string tmp329;
-  static int tmp330 = 0;
+  static const MMC_DEFSTRINGLIT(tmp327,68,"Variable violating min constraint: 0.0 <= MatStm3.MW[3], has value: ");
+  modelica_string tmp328;
+  static int tmp329 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp330)
+  if(!tmp329)
   {
-    tmp326 = GreaterEq(data->localData[0]->realVars[155] /* MatStm2.compMasFrac[3,2] variable */,0.0);
-    tmp327 = LessEq(data->localData[0]->realVars[155] /* MatStm2.compMasFrac[3,2] variable */,1.0);
-    if(!(tmp326 && tmp327))
+    tmp326 = GreaterEq(data->localData[0]->realVars[190] /* MatStm3.MW[3] variable */,0.0);
+    if(!tmp326)
     {
-      tmp329 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[155] /* MatStm2.compMasFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp328),tmp329);
+      tmp328 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[190] /* MatStm3.MW[3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp327),tmp328);
       {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[3,2] >= 0.0 and MatStm2.compMasFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.MW[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp330 = 1;
+      tmp329 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2290
+equation index: 1310
 type: ALGORITHM
 
-  assert(MatStm2.compMasFrac[3,3] >= 0.0 and MatStm2.compMasFrac[3,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,3] <= 1.0, has value: " + String(MatStm2.compMasFrac[3,3], "g"));
+  assert(MatStm3.compMolFrac[2,1] >= 0.0 and MatStm3.compMolFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,1] <= 1.0, has value: " + String(MatStm3.compMolFrac[2,1], "g"));
 */
-void Flowsheet_eqFunction_2290(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1310(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2290};
+  const int equationIndexes[2] = {1,1310};
+  modelica_boolean tmp330;
   modelica_boolean tmp331;
-  modelica_boolean tmp332;
-  static const MMC_DEFSTRINGLIT(tmp333,90,"Variable violating min/max constraint: 0.0 <= MatStm2.compMasFrac[3,3] <= 1.0, has value: ");
-  modelica_string tmp334;
-  static int tmp335 = 0;
+  static const MMC_DEFSTRINGLIT(tmp332,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,1] <= 1.0, has value: ");
+  modelica_string tmp333;
+  static int tmp334 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp335)
+  if(!tmp334)
   {
-    tmp331 = GreaterEq(data->localData[0]->realVars[156] /* MatStm2.compMasFrac[3,3] variable */,0.0);
-    tmp332 = LessEq(data->localData[0]->realVars[156] /* MatStm2.compMasFrac[3,3] variable */,1.0);
-    if(!(tmp331 && tmp332))
+    tmp330 = GreaterEq(data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,1] variable */,0.0);
+    tmp331 = LessEq(data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,1] variable */,1.0);
+    if(!(tmp330 && tmp331))
     {
-      tmp334 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[156] /* MatStm2.compMasFrac[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp333),tmp334);
+      tmp333 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp332),tmp333);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFrac[3,3] >= 0.0 and MatStm2.compMasFrac[3,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[2,1] >= 0.0 and MatStm3.compMolFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp335 = 1;
+      tmp334 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2291
+equation index: 1311
 type: ALGORITHM
 
-  assert(MatStm2.compMolFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,1], has value: " + String(MatStm2.compMolFlo[2,1], "g"));
+  assert(MatStm3.compMolFrac[2,2] >= 0.0 and MatStm3.compMolFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,2] <= 1.0, has value: " + String(MatStm3.compMolFrac[2,2], "g"));
 */
-void Flowsheet_eqFunction_2291(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1311(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2291};
+  const int equationIndexes[2] = {1,1311};
+  modelica_boolean tmp335;
   modelica_boolean tmp336;
-  static const MMC_DEFSTRINGLIT(tmp337,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,1], has value: ");
+  static const MMC_DEFSTRINGLIT(tmp337,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,2] <= 1.0, has value: ");
   modelica_string tmp338;
   static int tmp339 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp339)
   {
-    tmp336 = GreaterEq(data->localData[0]->realVars[178] /* MatStm2.compMolFlo[2,1] variable */,0.0);
-    if(!tmp336)
+    tmp335 = GreaterEq(data->localData[0]->realVars[230] /* MatStm3.compMolFrac[2,2] variable */,0.0);
+    tmp336 = LessEq(data->localData[0]->realVars[230] /* MatStm3.compMolFrac[2,2] variable */,1.0);
+    if(!(tmp335 && tmp336))
     {
-      tmp338 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[178] /* MatStm2.compMolFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp338 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[230] /* MatStm3.compMolFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp337),tmp338);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[2,2] >= 0.0 and MatStm3.compMolFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp339 = 1;
@@ -2561,162 +2611,137 @@ void Flowsheet_eqFunction_2291(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2292
+equation index: 1312
 type: ALGORITHM
 
-  assert(MatStm2.compMolFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,2], has value: " + String(MatStm2.compMolFlo[2,2], "g"));
+  assert(MatStm3.compMolFrac[3,1] >= 0.0 and MatStm3.compMolFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,1] <= 1.0, has value: " + String(MatStm3.compMolFrac[3,1], "g"));
 */
-void Flowsheet_eqFunction_2292(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1312(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2292};
+  const int equationIndexes[2] = {1,1312};
   modelica_boolean tmp340;
-  static const MMC_DEFSTRINGLIT(tmp341,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,2], has value: ");
-  modelica_string tmp342;
-  static int tmp343 = 0;
+  modelica_boolean tmp341;
+  static const MMC_DEFSTRINGLIT(tmp342,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,1] <= 1.0, has value: ");
+  modelica_string tmp343;
+  static int tmp344 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp343)
+  if(!tmp344)
   {
-    tmp340 = GreaterEq(data->localData[0]->realVars[179] /* MatStm2.compMolFlo[2,2] variable */,0.0);
-    if(!tmp340)
+    tmp340 = GreaterEq(data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,1] variable */,0.0);
+    tmp341 = LessEq(data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,1] variable */,1.0);
+    if(!(tmp340 && tmp341))
     {
-      tmp342 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[179] /* MatStm2.compMolFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp341),tmp342);
+      tmp343 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp342),tmp343);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[3,1] >= 0.0 and MatStm3.compMolFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp343 = 1;
+      tmp344 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2293
+equation index: 1313
 type: ALGORITHM
 
-  assert(MatStm2.compMolFlo[2,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,3], has value: " + String(MatStm2.compMolFlo[2,3], "g"));
+  assert(MatStm3.compMolFrac[3,2] >= 0.0 and MatStm3.compMolFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,2] <= 1.0, has value: " + String(MatStm3.compMolFrac[3,2], "g"));
 */
-void Flowsheet_eqFunction_2293(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1313(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2293};
-  modelica_boolean tmp344;
-  static const MMC_DEFSTRINGLIT(tmp345,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[2,3], has value: ");
-  modelica_string tmp346;
-  static int tmp347 = 0;
+  const int equationIndexes[2] = {1,1313};
+  modelica_boolean tmp345;
+  modelica_boolean tmp346;
+  static const MMC_DEFSTRINGLIT(tmp347,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,2] <= 1.0, has value: ");
+  modelica_string tmp348;
+  static int tmp349 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp347)
+  if(!tmp349)
   {
-    tmp344 = GreaterEq(data->localData[0]->realVars[180] /* MatStm2.compMolFlo[2,3] variable */,0.0);
-    if(!tmp344)
+    tmp345 = GreaterEq(data->localData[0]->realVars[232] /* MatStm3.compMolFrac[3,2] variable */,0.0);
+    tmp346 = LessEq(data->localData[0]->realVars[232] /* MatStm3.compMolFrac[3,2] variable */,1.0);
+    if(!(tmp345 && tmp346))
     {
-      tmp346 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[180] /* MatStm2.compMolFlo[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp345),tmp346);
+      tmp348 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[232] /* MatStm3.compMolFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp347),tmp348);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[2,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[3,2] >= 0.0 and MatStm3.compMolFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp347 = 1;
+      tmp349 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2294
+equation index: 1314
 type: ALGORITHM
 
-  assert(MatStm2.compMolFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,1], has value: " + String(MatStm2.compMolFlo[3,1], "g"));
+  assert(MatStm3.compMasFrac[1,1] >= 0.0 and MatStm3.compMasFrac[1,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,1] <= 1.0, has value: " + String(MatStm3.compMasFrac[1,1], "g"));
 */
-void Flowsheet_eqFunction_2294(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1314(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2294};
-  modelica_boolean tmp348;
-  static const MMC_DEFSTRINGLIT(tmp349,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,1], has value: ");
-  modelica_string tmp350;
-  static int tmp351 = 0;
+  const int equationIndexes[2] = {1,1314};
+  modelica_boolean tmp350;
+  modelica_boolean tmp351;
+  static const MMC_DEFSTRINGLIT(tmp352,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,1] <= 1.0, has value: ");
+  modelica_string tmp353;
+  static int tmp354 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp351)
+  if(!tmp354)
   {
-    tmp348 = GreaterEq(data->localData[0]->realVars[181] /* MatStm2.compMolFlo[3,1] variable */,0.0);
-    if(!tmp348)
+    tmp350 = GreaterEq(data->localData[0]->realVars[203] /* MatStm3.compMasFrac[1,1] variable */,0.0);
+    tmp351 = LessEq(data->localData[0]->realVars[203] /* MatStm3.compMasFrac[1,1] variable */,1.0);
+    if(!(tmp350 && tmp351))
     {
-      tmp350 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[181] /* MatStm2.compMolFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp349),tmp350);
+      tmp353 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[203] /* MatStm3.compMasFrac[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp352),tmp353);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[1,1] >= 0.0 and MatStm3.compMasFrac[1,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp351 = 1;
+      tmp354 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2295
+equation index: 1315
 type: ALGORITHM
 
-  assert(MatStm2.compMolFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,2], has value: " + String(MatStm2.compMolFlo[3,2], "g"));
+  assert(MatStm3.compMasFrac[1,2] >= 0.0 and MatStm3.compMasFrac[1,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,2] <= 1.0, has value: " + String(MatStm3.compMasFrac[1,2], "g"));
 */
-void Flowsheet_eqFunction_2295(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1315(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2295};
-  modelica_boolean tmp352;
-  static const MMC_DEFSTRINGLIT(tmp353,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,2], has value: ");
-  modelica_string tmp354;
-  static int tmp355 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp355)
-  {
-    tmp352 = GreaterEq(data->localData[0]->realVars[182] /* MatStm2.compMolFlo[3,2] variable */,0.0);
-    if(!tmp352)
-    {
-      tmp354 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[182] /* MatStm2.compMolFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp353),tmp354);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp355 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2296
-type: ALGORITHM
-
-  assert(MatStm2.compMolFlo[3,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,3], has value: " + String(MatStm2.compMolFlo[3,3], "g"));
-*/
-void Flowsheet_eqFunction_2296(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2296};
+  const int equationIndexes[2] = {1,1315};
+  modelica_boolean tmp355;
   modelica_boolean tmp356;
-  static const MMC_DEFSTRINGLIT(tmp357,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[3,3], has value: ");
+  static const MMC_DEFSTRINGLIT(tmp357,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,2] <= 1.0, has value: ");
   modelica_string tmp358;
   static int tmp359 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp359)
   {
-    tmp356 = GreaterEq(data->localData[0]->realVars[183] /* MatStm2.compMolFlo[3,3] variable */,0.0);
-    if(!tmp356)
+    tmp355 = GreaterEq(data->localData[0]->realVars[204] /* MatStm3.compMasFrac[1,2] variable */,0.0);
+    tmp356 = LessEq(data->localData[0]->realVars[204] /* MatStm3.compMasFrac[1,2] variable */,1.0);
+    if(!(tmp355 && tmp356))
     {
-      tmp358 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[183] /* MatStm2.compMolFlo[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp358 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[204] /* MatStm3.compMasFrac[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp357),tmp358);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[3,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[1,2] >= 0.0 and MatStm3.compMasFrac[1,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp359 = 1;
@@ -2726,162 +2751,137 @@ void Flowsheet_eqFunction_2296(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2297
+equation index: 1316
 type: ALGORITHM
 
-  assert(MatStm2.compMasFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,1], has value: " + String(MatStm2.compMasFlo[2,1], "g"));
+  assert(MatStm3.compMasFrac[2,1] >= 0.0 and MatStm3.compMasFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,1] <= 1.0, has value: " + String(MatStm3.compMasFrac[2,1], "g"));
 */
-void Flowsheet_eqFunction_2297(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1316(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2297};
+  const int equationIndexes[2] = {1,1316};
   modelica_boolean tmp360;
-  static const MMC_DEFSTRINGLIT(tmp361,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,1], has value: ");
-  modelica_string tmp362;
-  static int tmp363 = 0;
+  modelica_boolean tmp361;
+  static const MMC_DEFSTRINGLIT(tmp362,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,1] <= 1.0, has value: ");
+  modelica_string tmp363;
+  static int tmp364 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp363)
+  if(!tmp364)
   {
-    tmp360 = GreaterEq(data->localData[0]->realVars[142] /* MatStm2.compMasFlo[2,1] variable */,0.0);
-    if(!tmp360)
+    tmp360 = GreaterEq(data->localData[0]->realVars[205] /* MatStm3.compMasFrac[2,1] variable */,0.0);
+    tmp361 = LessEq(data->localData[0]->realVars[205] /* MatStm3.compMasFrac[2,1] variable */,1.0);
+    if(!(tmp360 && tmp361))
     {
-      tmp362 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[142] /* MatStm2.compMasFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp361),tmp362);
+      tmp363 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[205] /* MatStm3.compMasFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp362),tmp363);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[2,1] >= 0.0 and MatStm3.compMasFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp363 = 1;
+      tmp364 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2298
+equation index: 1317
 type: ALGORITHM
 
-  assert(MatStm2.compMasFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,2], has value: " + String(MatStm2.compMasFlo[2,2], "g"));
+  assert(MatStm3.compMasFrac[2,2] >= 0.0 and MatStm3.compMasFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,2] <= 1.0, has value: " + String(MatStm3.compMasFrac[2,2], "g"));
 */
-void Flowsheet_eqFunction_2298(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1317(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2298};
-  modelica_boolean tmp364;
-  static const MMC_DEFSTRINGLIT(tmp365,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,2], has value: ");
-  modelica_string tmp366;
-  static int tmp367 = 0;
+  const int equationIndexes[2] = {1,1317};
+  modelica_boolean tmp365;
+  modelica_boolean tmp366;
+  static const MMC_DEFSTRINGLIT(tmp367,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,2] <= 1.0, has value: ");
+  modelica_string tmp368;
+  static int tmp369 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp367)
+  if(!tmp369)
   {
-    tmp364 = GreaterEq(data->localData[0]->realVars[143] /* MatStm2.compMasFlo[2,2] variable */,0.0);
-    if(!tmp364)
+    tmp365 = GreaterEq(data->localData[0]->realVars[206] /* MatStm3.compMasFrac[2,2] variable */,0.0);
+    tmp366 = LessEq(data->localData[0]->realVars[206] /* MatStm3.compMasFrac[2,2] variable */,1.0);
+    if(!(tmp365 && tmp366))
     {
-      tmp366 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[143] /* MatStm2.compMasFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp365),tmp366);
+      tmp368 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[206] /* MatStm3.compMasFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp367),tmp368);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[2,2] >= 0.0 and MatStm3.compMasFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp367 = 1;
+      tmp369 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2299
+equation index: 1318
 type: ALGORITHM
 
-  assert(MatStm2.compMasFlo[2,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,3], has value: " + String(MatStm2.compMasFlo[2,3], "g"));
+  assert(MatStm3.compMasFrac[3,1] >= 0.0 and MatStm3.compMasFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,1] <= 1.0, has value: " + String(MatStm3.compMasFrac[3,1], "g"));
 */
-void Flowsheet_eqFunction_2299(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1318(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2299};
-  modelica_boolean tmp368;
-  static const MMC_DEFSTRINGLIT(tmp369,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[2,3], has value: ");
-  modelica_string tmp370;
-  static int tmp371 = 0;
+  const int equationIndexes[2] = {1,1318};
+  modelica_boolean tmp370;
+  modelica_boolean tmp371;
+  static const MMC_DEFSTRINGLIT(tmp372,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,1] <= 1.0, has value: ");
+  modelica_string tmp373;
+  static int tmp374 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp371)
+  if(!tmp374)
   {
-    tmp368 = GreaterEq(data->localData[0]->realVars[144] /* MatStm2.compMasFlo[2,3] variable */,0.0);
-    if(!tmp368)
+    tmp370 = GreaterEq(data->localData[0]->realVars[207] /* MatStm3.compMasFrac[3,1] variable */,0.0);
+    tmp371 = LessEq(data->localData[0]->realVars[207] /* MatStm3.compMasFrac[3,1] variable */,1.0);
+    if(!(tmp370 && tmp371))
     {
-      tmp370 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[144] /* MatStm2.compMasFlo[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp369),tmp370);
+      tmp373 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[207] /* MatStm3.compMasFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp372),tmp373);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[2,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[3,1] >= 0.0 and MatStm3.compMasFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp371 = 1;
+      tmp374 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2300
+equation index: 1319
 type: ALGORITHM
 
-  assert(MatStm2.compMasFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,1], has value: " + String(MatStm2.compMasFlo[3,1], "g"));
+  assert(MatStm3.compMasFrac[3,2] >= 0.0 and MatStm3.compMasFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,2] <= 1.0, has value: " + String(MatStm3.compMasFrac[3,2], "g"));
 */
-void Flowsheet_eqFunction_2300(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1319(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2300};
-  modelica_boolean tmp372;
-  static const MMC_DEFSTRINGLIT(tmp373,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,1], has value: ");
-  modelica_string tmp374;
-  static int tmp375 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp375)
-  {
-    tmp372 = GreaterEq(data->localData[0]->realVars[145] /* MatStm2.compMasFlo[3,1] variable */,0.0);
-    if(!tmp372)
-    {
-      tmp374 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[145] /* MatStm2.compMasFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp373),tmp374);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp375 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2301
-type: ALGORITHM
-
-  assert(MatStm2.compMasFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,2], has value: " + String(MatStm2.compMasFlo[3,2], "g"));
-*/
-void Flowsheet_eqFunction_2301(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2301};
+  const int equationIndexes[2] = {1,1319};
+  modelica_boolean tmp375;
   modelica_boolean tmp376;
-  static const MMC_DEFSTRINGLIT(tmp377,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,2], has value: ");
+  static const MMC_DEFSTRINGLIT(tmp377,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,2] <= 1.0, has value: ");
   modelica_string tmp378;
   static int tmp379 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp379)
   {
-    tmp376 = GreaterEq(data->localData[0]->realVars[146] /* MatStm2.compMasFlo[3,2] variable */,0.0);
-    if(!tmp376)
+    tmp375 = GreaterEq(data->localData[0]->realVars[208] /* MatStm3.compMasFrac[3,2] variable */,0.0);
+    tmp376 = LessEq(data->localData[0]->realVars[208] /* MatStm3.compMasFrac[3,2] variable */,1.0);
+    if(!(tmp375 && tmp376))
     {
-      tmp378 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[146] /* MatStm2.compMasFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp378 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[208] /* MatStm3.compMasFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp377),tmp378);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[3,2] >= 0.0 and MatStm3.compMasFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp379 = 1;
@@ -2891,30 +2891,30 @@ void Flowsheet_eqFunction_2301(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2302
+equation index: 1320
 type: ALGORITHM
 
-  assert(MatStm2.compMasFlo[3,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,3], has value: " + String(MatStm2.compMasFlo[3,3], "g"));
+  assert(MatStm3.compMolFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[2,1], has value: " + String(MatStm3.compMolFlo[2,1], "g"));
 */
-void Flowsheet_eqFunction_2302(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1320(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2302};
+  const int equationIndexes[2] = {1,1320};
   modelica_boolean tmp380;
-  static const MMC_DEFSTRINGLIT(tmp381,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[3,3], has value: ");
+  static const MMC_DEFSTRINGLIT(tmp381,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[2,1], has value: ");
   modelica_string tmp382;
   static int tmp383 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
   if(!tmp383)
   {
-    tmp380 = GreaterEq(data->localData[0]->realVars[147] /* MatStm2.compMasFlo[3,3] variable */,0.0);
+    tmp380 = GreaterEq(data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,1] variable */,0.0);
     if(!tmp380)
     {
-      tmp382 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[147] /* MatStm2.compMasFlo[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmp382 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
       tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp381),tmp382);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[3,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
       tmp383 = 1;
@@ -2924,2778 +2924,433 @@ void Flowsheet_eqFunction_2302(DATA *data, threadData_t *threadData)
 }
 
 /*
-equation index: 2303
-type: ALGORITHM
-
-  assert(MatStm3.liqPhasMolFrac >= 0.0 and MatStm3.liqPhasMolFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.liqPhasMolFrac <= 1.0, has value: " + String(MatStm3.liqPhasMolFrac, "g"));
-*/
-void Flowsheet_eqFunction_2303(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2303};
-  modelica_boolean tmp384;
-  modelica_boolean tmp385;
-  static const MMC_DEFSTRINGLIT(tmp386,88,"Variable violating min/max constraint: 0.0 <= MatStm3.liqPhasMolFrac <= 1.0, has value: ");
-  modelica_string tmp387;
-  static int tmp388 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp388)
-  {
-    tmp384 = GreaterEq(data->localData[0]->realVars[330] /* MatStm3.liqPhasMolFrac variable */,0.0);
-    tmp385 = LessEq(data->localData[0]->realVars[330] /* MatStm3.liqPhasMolFrac variable */,1.0);
-    if(!(tmp384 && tmp385))
-    {
-      tmp387 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[330] /* MatStm3.liqPhasMolFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp386),tmp387);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.liqPhasMolFrac >= 0.0 and MatStm3.liqPhasMolFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp388 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2304
-type: ALGORITHM
-
-  assert(MatStm3.liqPhasMasFrac >= 0.0 and MatStm3.liqPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.liqPhasMasFrac <= 1.0, has value: " + String(MatStm3.liqPhasMasFrac, "g"));
-*/
-void Flowsheet_eqFunction_2304(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2304};
-  modelica_boolean tmp389;
-  modelica_boolean tmp390;
-  static const MMC_DEFSTRINGLIT(tmp391,88,"Variable violating min/max constraint: 0.0 <= MatStm3.liqPhasMasFrac <= 1.0, has value: ");
-  modelica_string tmp392;
-  static int tmp393 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp393)
-  {
-    tmp389 = GreaterEq(data->localData[0]->realVars[329] /* MatStm3.liqPhasMasFrac variable */,0.0);
-    tmp390 = LessEq(data->localData[0]->realVars[329] /* MatStm3.liqPhasMasFrac variable */,1.0);
-    if(!(tmp389 && tmp390))
-    {
-      tmp392 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[329] /* MatStm3.liqPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp391),tmp392);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.liqPhasMasFrac >= 0.0 and MatStm3.liqPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp393 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2305
-type: ALGORITHM
-
-  assert(MatStm3.vapPhasMasFrac >= 0.0 and MatStm3.vapPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.vapPhasMasFrac <= 1.0, has value: " + String(MatStm3.vapPhasMasFrac, "g"));
-*/
-void Flowsheet_eqFunction_2305(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2305};
-  modelica_boolean tmp394;
-  modelica_boolean tmp395;
-  static const MMC_DEFSTRINGLIT(tmp396,88,"Variable violating min/max constraint: 0.0 <= MatStm3.vapPhasMasFrac <= 1.0, has value: ");
-  modelica_string tmp397;
-  static int tmp398 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp398)
-  {
-    tmp394 = GreaterEq(data->localData[0]->realVars[358] /* MatStm3.vapPhasMasFrac variable */,0.0);
-    tmp395 = LessEq(data->localData[0]->realVars[358] /* MatStm3.vapPhasMasFrac variable */,1.0);
-    if(!(tmp394 && tmp395))
-    {
-      tmp397 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[358] /* MatStm3.vapPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp396),tmp397);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.vapPhasMasFrac >= 0.0 and MatStm3.vapPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp398 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2306
-type: ALGORITHM
-
-  assert(MatStm3.totMolFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMolFlo[2], has value: " + String(MatStm3.totMolFlo[2], "g"));
-*/
-void Flowsheet_eqFunction_2306(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2306};
-  modelica_boolean tmp399;
-  static const MMC_DEFSTRINGLIT(tmp400,75,"Variable violating min constraint: 0.0 <= MatStm3.totMolFlo[2], has value: ");
-  modelica_string tmp401;
-  static int tmp402 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp402)
-  {
-    tmp399 = GreaterEq(data->localData[0]->realVars[356] /* MatStm3.totMolFlo[2] variable */,0.0);
-    if(!tmp399)
-    {
-      tmp401 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[356] /* MatStm3.totMolFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp400),tmp401);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMolFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp402 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2307
-type: ALGORITHM
-
-  assert(MatStm3.totMolFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMolFlo[3], has value: " + String(MatStm3.totMolFlo[3], "g"));
-*/
-void Flowsheet_eqFunction_2307(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2307};
-  modelica_boolean tmp403;
-  static const MMC_DEFSTRINGLIT(tmp404,75,"Variable violating min constraint: 0.0 <= MatStm3.totMolFlo[3], has value: ");
-  modelica_string tmp405;
-  static int tmp406 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp406)
-  {
-    tmp403 = GreaterEq(data->localData[0]->realVars[357] /* MatStm3.totMolFlo[3] variable */,0.0);
-    if(!tmp403)
-    {
-      tmp405 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[357] /* MatStm3.totMolFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp404),tmp405);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMolFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp406 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2308
-type: ALGORITHM
-
-  assert(MatStm3.totMasFlo[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[1], has value: " + String(MatStm3.totMasFlo[1], "g"));
-*/
-void Flowsheet_eqFunction_2308(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2308};
-  modelica_boolean tmp407;
-  static const MMC_DEFSTRINGLIT(tmp408,75,"Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[1], has value: ");
-  modelica_string tmp409;
-  static int tmp410 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp410)
-  {
-    tmp407 = GreaterEq(data->localData[0]->realVars[352] /* MatStm3.totMasFlo[1] variable */,0.0);
-    if(!tmp407)
-    {
-      tmp409 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[352] /* MatStm3.totMasFlo[1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp408),tmp409);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMasFlo[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp410 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2309
-type: ALGORITHM
-
-  assert(MatStm3.totMasFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[2], has value: " + String(MatStm3.totMasFlo[2], "g"));
-*/
-void Flowsheet_eqFunction_2309(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2309};
-  modelica_boolean tmp411;
-  static const MMC_DEFSTRINGLIT(tmp412,75,"Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[2], has value: ");
-  modelica_string tmp413;
-  static int tmp414 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp414)
-  {
-    tmp411 = GreaterEq(data->localData[0]->realVars[353] /* MatStm3.totMasFlo[2] variable */,0.0);
-    if(!tmp411)
-    {
-      tmp413 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[353] /* MatStm3.totMasFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp412),tmp413);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMasFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp414 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2310
-type: ALGORITHM
-
-  assert(MatStm3.totMasFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[3], has value: " + String(MatStm3.totMasFlo[3], "g"));
-*/
-void Flowsheet_eqFunction_2310(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2310};
-  modelica_boolean tmp415;
-  static const MMC_DEFSTRINGLIT(tmp416,75,"Variable violating min constraint: 0.0 <= MatStm3.totMasFlo[3], has value: ");
-  modelica_string tmp417;
-  static int tmp418 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp418)
-  {
-    tmp415 = GreaterEq(data->localData[0]->realVars[354] /* MatStm3.totMasFlo[3] variable */,0.0);
-    if(!tmp415)
-    {
-      tmp417 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[354] /* MatStm3.totMasFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp416),tmp417);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.totMasFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp418 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2311
-type: ALGORITHM
-
-  assert(MatStm3.MW[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.MW[1], has value: " + String(MatStm3.MW[1], "g"));
-*/
-void Flowsheet_eqFunction_2311(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2311};
-  modelica_boolean tmp419;
-  static const MMC_DEFSTRINGLIT(tmp420,68,"Variable violating min constraint: 0.0 <= MatStm3.MW[1], has value: ");
-  modelica_string tmp421;
-  static int tmp422 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp422)
-  {
-    tmp419 = GreaterEq(data->localData[0]->realVars[247] /* MatStm3.MW[1] variable */,0.0);
-    if(!tmp419)
-    {
-      tmp421 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[247] /* MatStm3.MW[1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp420),tmp421);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.MW[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp422 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2312
-type: ALGORITHM
-
-  assert(MatStm3.MW[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.MW[2], has value: " + String(MatStm3.MW[2], "g"));
-*/
-void Flowsheet_eqFunction_2312(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2312};
-  modelica_boolean tmp423;
-  static const MMC_DEFSTRINGLIT(tmp424,68,"Variable violating min constraint: 0.0 <= MatStm3.MW[2], has value: ");
-  modelica_string tmp425;
-  static int tmp426 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp426)
-  {
-    tmp423 = GreaterEq(data->localData[0]->realVars[248] /* MatStm3.MW[2] variable */,0.0);
-    if(!tmp423)
-    {
-      tmp425 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[248] /* MatStm3.MW[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp424),tmp425);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.MW[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp426 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2313
-type: ALGORITHM
-
-  assert(MatStm3.MW[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.MW[3], has value: " + String(MatStm3.MW[3], "g"));
-*/
-void Flowsheet_eqFunction_2313(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2313};
-  modelica_boolean tmp427;
-  static const MMC_DEFSTRINGLIT(tmp428,68,"Variable violating min constraint: 0.0 <= MatStm3.MW[3], has value: ");
-  modelica_string tmp429;
-  static int tmp430 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp430)
-  {
-    tmp427 = GreaterEq(data->localData[0]->realVars[249] /* MatStm3.MW[3] variable */,0.0);
-    if(!tmp427)
-    {
-      tmp429 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[249] /* MatStm3.MW[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp428),tmp429);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.MW[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp430 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2314
-type: ALGORITHM
-
-  assert(MatStm3.compMolFrac[2,1] >= 0.0 and MatStm3.compMolFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,1] <= 1.0, has value: " + String(MatStm3.compMolFrac[2,1], "g"));
-*/
-void Flowsheet_eqFunction_2314(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2314};
-  modelica_boolean tmp431;
-  modelica_boolean tmp432;
-  static const MMC_DEFSTRINGLIT(tmp433,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,1] <= 1.0, has value: ");
-  modelica_string tmp434;
-  static int tmp435 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp435)
-  {
-    tmp431 = GreaterEq(data->localData[0]->realVars[305] /* MatStm3.compMolFrac[2,1] variable */,0.0);
-    tmp432 = LessEq(data->localData[0]->realVars[305] /* MatStm3.compMolFrac[2,1] variable */,1.0);
-    if(!(tmp431 && tmp432))
-    {
-      tmp434 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[305] /* MatStm3.compMolFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp433),tmp434);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[2,1] >= 0.0 and MatStm3.compMolFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp435 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2315
-type: ALGORITHM
-
-  assert(MatStm3.compMolFrac[2,2] >= 0.0 and MatStm3.compMolFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,2] <= 1.0, has value: " + String(MatStm3.compMolFrac[2,2], "g"));
-*/
-void Flowsheet_eqFunction_2315(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2315};
-  modelica_boolean tmp436;
-  modelica_boolean tmp437;
-  static const MMC_DEFSTRINGLIT(tmp438,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,2] <= 1.0, has value: ");
-  modelica_string tmp439;
-  static int tmp440 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp440)
-  {
-    tmp436 = GreaterEq(data->localData[0]->realVars[306] /* MatStm3.compMolFrac[2,2] variable */,0.0);
-    tmp437 = LessEq(data->localData[0]->realVars[306] /* MatStm3.compMolFrac[2,2] variable */,1.0);
-    if(!(tmp436 && tmp437))
-    {
-      tmp439 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[306] /* MatStm3.compMolFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp438),tmp439);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[2,2] >= 0.0 and MatStm3.compMolFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp440 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2316
-type: ALGORITHM
-
-  assert(MatStm3.compMolFrac[2,3] >= 0.0 and MatStm3.compMolFrac[2,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,3] <= 1.0, has value: " + String(MatStm3.compMolFrac[2,3], "g"));
-*/
-void Flowsheet_eqFunction_2316(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2316};
-  modelica_boolean tmp441;
-  modelica_boolean tmp442;
-  static const MMC_DEFSTRINGLIT(tmp443,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[2,3] <= 1.0, has value: ");
-  modelica_string tmp444;
-  static int tmp445 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp445)
-  {
-    tmp441 = GreaterEq(data->localData[0]->realVars[307] /* MatStm3.compMolFrac[2,3] variable */,0.0);
-    tmp442 = LessEq(data->localData[0]->realVars[307] /* MatStm3.compMolFrac[2,3] variable */,1.0);
-    if(!(tmp441 && tmp442))
-    {
-      tmp444 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[307] /* MatStm3.compMolFrac[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp443),tmp444);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[2,3] >= 0.0 and MatStm3.compMolFrac[2,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp445 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2317
-type: ALGORITHM
-
-  assert(MatStm3.compMolFrac[3,1] >= 0.0 and MatStm3.compMolFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,1] <= 1.0, has value: " + String(MatStm3.compMolFrac[3,1], "g"));
-*/
-void Flowsheet_eqFunction_2317(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2317};
-  modelica_boolean tmp446;
-  modelica_boolean tmp447;
-  static const MMC_DEFSTRINGLIT(tmp448,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,1] <= 1.0, has value: ");
-  modelica_string tmp449;
-  static int tmp450 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp450)
-  {
-    tmp446 = GreaterEq(data->localData[0]->realVars[308] /* MatStm3.compMolFrac[3,1] variable */,0.0);
-    tmp447 = LessEq(data->localData[0]->realVars[308] /* MatStm3.compMolFrac[3,1] variable */,1.0);
-    if(!(tmp446 && tmp447))
-    {
-      tmp449 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[308] /* MatStm3.compMolFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp448),tmp449);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[3,1] >= 0.0 and MatStm3.compMolFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp450 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2318
-type: ALGORITHM
-
-  assert(MatStm3.compMolFrac[3,2] >= 0.0 and MatStm3.compMolFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,2] <= 1.0, has value: " + String(MatStm3.compMolFrac[3,2], "g"));
-*/
-void Flowsheet_eqFunction_2318(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2318};
-  modelica_boolean tmp451;
-  modelica_boolean tmp452;
-  static const MMC_DEFSTRINGLIT(tmp453,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,2] <= 1.0, has value: ");
-  modelica_string tmp454;
-  static int tmp455 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp455)
-  {
-    tmp451 = GreaterEq(data->localData[0]->realVars[309] /* MatStm3.compMolFrac[3,2] variable */,0.0);
-    tmp452 = LessEq(data->localData[0]->realVars[309] /* MatStm3.compMolFrac[3,2] variable */,1.0);
-    if(!(tmp451 && tmp452))
-    {
-      tmp454 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[309] /* MatStm3.compMolFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp453),tmp454);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[3,2] >= 0.0 and MatStm3.compMolFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp455 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2319
-type: ALGORITHM
-
-  assert(MatStm3.compMolFrac[3,3] >= 0.0 and MatStm3.compMolFrac[3,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,3] <= 1.0, has value: " + String(MatStm3.compMolFrac[3,3], "g"));
-*/
-void Flowsheet_eqFunction_2319(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2319};
-  modelica_boolean tmp456;
-  modelica_boolean tmp457;
-  static const MMC_DEFSTRINGLIT(tmp458,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMolFrac[3,3] <= 1.0, has value: ");
-  modelica_string tmp459;
-  static int tmp460 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp460)
-  {
-    tmp456 = GreaterEq(data->localData[0]->realVars[310] /* MatStm3.compMolFrac[3,3] variable */,0.0);
-    tmp457 = LessEq(data->localData[0]->realVars[310] /* MatStm3.compMolFrac[3,3] variable */,1.0);
-    if(!(tmp456 && tmp457))
-    {
-      tmp459 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[310] /* MatStm3.compMolFrac[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp458),tmp459);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFrac[3,3] >= 0.0 and MatStm3.compMolFrac[3,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp460 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2320
-type: ALGORITHM
-
-  assert(MatStm3.compMasFrac[1,1] >= 0.0 and MatStm3.compMasFrac[1,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,1] <= 1.0, has value: " + String(MatStm3.compMasFrac[1,1], "g"));
-*/
-void Flowsheet_eqFunction_2320(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2320};
-  modelica_boolean tmp461;
-  modelica_boolean tmp462;
-  static const MMC_DEFSTRINGLIT(tmp463,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,1] <= 1.0, has value: ");
-  modelica_string tmp464;
-  static int tmp465 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp465)
-  {
-    tmp461 = GreaterEq(data->localData[0]->realVars[266] /* MatStm3.compMasFrac[1,1] variable */,0.0);
-    tmp462 = LessEq(data->localData[0]->realVars[266] /* MatStm3.compMasFrac[1,1] variable */,1.0);
-    if(!(tmp461 && tmp462))
-    {
-      tmp464 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[266] /* MatStm3.compMasFrac[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp463),tmp464);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[1,1] >= 0.0 and MatStm3.compMasFrac[1,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp465 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2321
-type: ALGORITHM
-
-  assert(MatStm3.compMasFrac[1,2] >= 0.0 and MatStm3.compMasFrac[1,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,2] <= 1.0, has value: " + String(MatStm3.compMasFrac[1,2], "g"));
-*/
-void Flowsheet_eqFunction_2321(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2321};
-  modelica_boolean tmp466;
-  modelica_boolean tmp467;
-  static const MMC_DEFSTRINGLIT(tmp468,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,2] <= 1.0, has value: ");
-  modelica_string tmp469;
-  static int tmp470 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp470)
-  {
-    tmp466 = GreaterEq(data->localData[0]->realVars[267] /* MatStm3.compMasFrac[1,2] variable */,0.0);
-    tmp467 = LessEq(data->localData[0]->realVars[267] /* MatStm3.compMasFrac[1,2] variable */,1.0);
-    if(!(tmp466 && tmp467))
-    {
-      tmp469 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[267] /* MatStm3.compMasFrac[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp468),tmp469);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[1,2] >= 0.0 and MatStm3.compMasFrac[1,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp470 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2322
-type: ALGORITHM
-
-  assert(MatStm3.compMasFrac[1,3] >= 0.0 and MatStm3.compMasFrac[1,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,3] <= 1.0, has value: " + String(MatStm3.compMasFrac[1,3], "g"));
-*/
-void Flowsheet_eqFunction_2322(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2322};
-  modelica_boolean tmp471;
-  modelica_boolean tmp472;
-  static const MMC_DEFSTRINGLIT(tmp473,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[1,3] <= 1.0, has value: ");
-  modelica_string tmp474;
-  static int tmp475 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp475)
-  {
-    tmp471 = GreaterEq(data->localData[0]->realVars[268] /* MatStm3.compMasFrac[1,3] variable */,0.0);
-    tmp472 = LessEq(data->localData[0]->realVars[268] /* MatStm3.compMasFrac[1,3] variable */,1.0);
-    if(!(tmp471 && tmp472))
-    {
-      tmp474 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[268] /* MatStm3.compMasFrac[1,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp473),tmp474);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[1,3] >= 0.0 and MatStm3.compMasFrac[1,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp475 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2323
-type: ALGORITHM
-
-  assert(MatStm3.compMasFrac[2,1] >= 0.0 and MatStm3.compMasFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,1] <= 1.0, has value: " + String(MatStm3.compMasFrac[2,1], "g"));
-*/
-void Flowsheet_eqFunction_2323(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2323};
-  modelica_boolean tmp476;
-  modelica_boolean tmp477;
-  static const MMC_DEFSTRINGLIT(tmp478,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,1] <= 1.0, has value: ");
-  modelica_string tmp479;
-  static int tmp480 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp480)
-  {
-    tmp476 = GreaterEq(data->localData[0]->realVars[269] /* MatStm3.compMasFrac[2,1] variable */,0.0);
-    tmp477 = LessEq(data->localData[0]->realVars[269] /* MatStm3.compMasFrac[2,1] variable */,1.0);
-    if(!(tmp476 && tmp477))
-    {
-      tmp479 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[269] /* MatStm3.compMasFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp478),tmp479);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[2,1] >= 0.0 and MatStm3.compMasFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp480 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2324
-type: ALGORITHM
-
-  assert(MatStm3.compMasFrac[2,2] >= 0.0 and MatStm3.compMasFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,2] <= 1.0, has value: " + String(MatStm3.compMasFrac[2,2], "g"));
-*/
-void Flowsheet_eqFunction_2324(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2324};
-  modelica_boolean tmp481;
-  modelica_boolean tmp482;
-  static const MMC_DEFSTRINGLIT(tmp483,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,2] <= 1.0, has value: ");
-  modelica_string tmp484;
-  static int tmp485 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp485)
-  {
-    tmp481 = GreaterEq(data->localData[0]->realVars[270] /* MatStm3.compMasFrac[2,2] variable */,0.0);
-    tmp482 = LessEq(data->localData[0]->realVars[270] /* MatStm3.compMasFrac[2,2] variable */,1.0);
-    if(!(tmp481 && tmp482))
-    {
-      tmp484 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[270] /* MatStm3.compMasFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp483),tmp484);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[2,2] >= 0.0 and MatStm3.compMasFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp485 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2325
-type: ALGORITHM
-
-  assert(MatStm3.compMasFrac[2,3] >= 0.0 and MatStm3.compMasFrac[2,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,3] <= 1.0, has value: " + String(MatStm3.compMasFrac[2,3], "g"));
-*/
-void Flowsheet_eqFunction_2325(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2325};
-  modelica_boolean tmp486;
-  modelica_boolean tmp487;
-  static const MMC_DEFSTRINGLIT(tmp488,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[2,3] <= 1.0, has value: ");
-  modelica_string tmp489;
-  static int tmp490 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp490)
-  {
-    tmp486 = GreaterEq(data->localData[0]->realVars[271] /* MatStm3.compMasFrac[2,3] variable */,0.0);
-    tmp487 = LessEq(data->localData[0]->realVars[271] /* MatStm3.compMasFrac[2,3] variable */,1.0);
-    if(!(tmp486 && tmp487))
-    {
-      tmp489 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[271] /* MatStm3.compMasFrac[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp488),tmp489);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[2,3] >= 0.0 and MatStm3.compMasFrac[2,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp490 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2326
-type: ALGORITHM
-
-  assert(MatStm3.compMasFrac[3,1] >= 0.0 and MatStm3.compMasFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,1] <= 1.0, has value: " + String(MatStm3.compMasFrac[3,1], "g"));
-*/
-void Flowsheet_eqFunction_2326(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2326};
-  modelica_boolean tmp491;
-  modelica_boolean tmp492;
-  static const MMC_DEFSTRINGLIT(tmp493,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,1] <= 1.0, has value: ");
-  modelica_string tmp494;
-  static int tmp495 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp495)
-  {
-    tmp491 = GreaterEq(data->localData[0]->realVars[272] /* MatStm3.compMasFrac[3,1] variable */,0.0);
-    tmp492 = LessEq(data->localData[0]->realVars[272] /* MatStm3.compMasFrac[3,1] variable */,1.0);
-    if(!(tmp491 && tmp492))
-    {
-      tmp494 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[272] /* MatStm3.compMasFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp493),tmp494);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[3,1] >= 0.0 and MatStm3.compMasFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp495 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2327
-type: ALGORITHM
-
-  assert(MatStm3.compMasFrac[3,2] >= 0.0 and MatStm3.compMasFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,2] <= 1.0, has value: " + String(MatStm3.compMasFrac[3,2], "g"));
-*/
-void Flowsheet_eqFunction_2327(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2327};
-  modelica_boolean tmp496;
-  modelica_boolean tmp497;
-  static const MMC_DEFSTRINGLIT(tmp498,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,2] <= 1.0, has value: ");
-  modelica_string tmp499;
-  static int tmp500 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp500)
-  {
-    tmp496 = GreaterEq(data->localData[0]->realVars[273] /* MatStm3.compMasFrac[3,2] variable */,0.0);
-    tmp497 = LessEq(data->localData[0]->realVars[273] /* MatStm3.compMasFrac[3,2] variable */,1.0);
-    if(!(tmp496 && tmp497))
-    {
-      tmp499 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[273] /* MatStm3.compMasFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp498),tmp499);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[3,2] >= 0.0 and MatStm3.compMasFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp500 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2328
-type: ALGORITHM
-
-  assert(MatStm3.compMasFrac[3,3] >= 0.0 and MatStm3.compMasFrac[3,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,3] <= 1.0, has value: " + String(MatStm3.compMasFrac[3,3], "g"));
-*/
-void Flowsheet_eqFunction_2328(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2328};
-  modelica_boolean tmp501;
-  modelica_boolean tmp502;
-  static const MMC_DEFSTRINGLIT(tmp503,90,"Variable violating min/max constraint: 0.0 <= MatStm3.compMasFrac[3,3] <= 1.0, has value: ");
-  modelica_string tmp504;
-  static int tmp505 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp505)
-  {
-    tmp501 = GreaterEq(data->localData[0]->realVars[274] /* MatStm3.compMasFrac[3,3] variable */,0.0);
-    tmp502 = LessEq(data->localData[0]->realVars[274] /* MatStm3.compMasFrac[3,3] variable */,1.0);
-    if(!(tmp501 && tmp502))
-    {
-      tmp504 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[274] /* MatStm3.compMasFrac[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp503),tmp504);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFrac[3,3] >= 0.0 and MatStm3.compMasFrac[3,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp505 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2329
-type: ALGORITHM
-
-  assert(MatStm3.compMolFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[2,1], has value: " + String(MatStm3.compMolFlo[2,1], "g"));
-*/
-void Flowsheet_eqFunction_2329(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2329};
-  modelica_boolean tmp506;
-  static const MMC_DEFSTRINGLIT(tmp507,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[2,1], has value: ");
-  modelica_string tmp508;
-  static int tmp509 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp509)
-  {
-    tmp506 = GreaterEq(data->localData[0]->realVars[296] /* MatStm3.compMolFlo[2,1] variable */,0.0);
-    if(!tmp506)
-    {
-      tmp508 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[296] /* MatStm3.compMolFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp507),tmp508);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp509 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2330
+equation index: 1321
 type: ALGORITHM
 
   assert(MatStm3.compMolFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[2,2], has value: " + String(MatStm3.compMolFlo[2,2], "g"));
 */
-void Flowsheet_eqFunction_2330(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1321(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2330};
-  modelica_boolean tmp510;
-  static const MMC_DEFSTRINGLIT(tmp511,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[2,2], has value: ");
-  modelica_string tmp512;
-  static int tmp513 = 0;
+  const int equationIndexes[2] = {1,1321};
+  modelica_boolean tmp384;
+  static const MMC_DEFSTRINGLIT(tmp385,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[2,2], has value: ");
+  modelica_string tmp386;
+  static int tmp387 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp513)
+  if(!tmp387)
   {
-    tmp510 = GreaterEq(data->localData[0]->realVars[297] /* MatStm3.compMolFlo[2,2] variable */,0.0);
-    if(!tmp510)
+    tmp384 = GreaterEq(data->localData[0]->realVars[224] /* MatStm3.compMolFlo[2,2] variable */,0.0);
+    if(!tmp384)
     {
-      tmp512 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[297] /* MatStm3.compMolFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp511),tmp512);
+      tmp386 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[224] /* MatStm3.compMolFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp385),tmp386);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
         omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp513 = 1;
+      tmp387 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2331
-type: ALGORITHM
-
-  assert(MatStm3.compMolFlo[2,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[2,3], has value: " + String(MatStm3.compMolFlo[2,3], "g"));
-*/
-void Flowsheet_eqFunction_2331(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2331};
-  modelica_boolean tmp514;
-  static const MMC_DEFSTRINGLIT(tmp515,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[2,3], has value: ");
-  modelica_string tmp516;
-  static int tmp517 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp517)
-  {
-    tmp514 = GreaterEq(data->localData[0]->realVars[298] /* MatStm3.compMolFlo[2,3] variable */,0.0);
-    if(!tmp514)
-    {
-      tmp516 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[298] /* MatStm3.compMolFlo[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp515),tmp516);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFlo[2,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp517 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2332
+equation index: 1322
 type: ALGORITHM
 
   assert(MatStm3.compMolFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[3,1], has value: " + String(MatStm3.compMolFlo[3,1], "g"));
 */
-void Flowsheet_eqFunction_2332(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1322(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2332};
-  modelica_boolean tmp518;
-  static const MMC_DEFSTRINGLIT(tmp519,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[3,1], has value: ");
-  modelica_string tmp520;
-  static int tmp521 = 0;
+  const int equationIndexes[2] = {1,1322};
+  modelica_boolean tmp388;
+  static const MMC_DEFSTRINGLIT(tmp389,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[3,1], has value: ");
+  modelica_string tmp390;
+  static int tmp391 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp521)
+  if(!tmp391)
   {
-    tmp518 = GreaterEq(data->localData[0]->realVars[299] /* MatStm3.compMolFlo[3,1] variable */,0.0);
-    if(!tmp518)
+    tmp388 = GreaterEq(data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,1] variable */,0.0);
+    if(!tmp388)
     {
-      tmp520 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[299] /* MatStm3.compMolFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp519),tmp520);
+      tmp390 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp389),tmp390);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
         omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp521 = 1;
+      tmp391 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2333
+equation index: 1323
 type: ALGORITHM
 
   assert(MatStm3.compMolFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[3,2], has value: " + String(MatStm3.compMolFlo[3,2], "g"));
 */
-void Flowsheet_eqFunction_2333(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1323(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2333};
-  modelica_boolean tmp522;
-  static const MMC_DEFSTRINGLIT(tmp523,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[3,2], has value: ");
-  modelica_string tmp524;
-  static int tmp525 = 0;
+  const int equationIndexes[2] = {1,1323};
+  modelica_boolean tmp392;
+  static const MMC_DEFSTRINGLIT(tmp393,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[3,2], has value: ");
+  modelica_string tmp394;
+  static int tmp395 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp525)
+  if(!tmp395)
   {
-    tmp522 = GreaterEq(data->localData[0]->realVars[300] /* MatStm3.compMolFlo[3,2] variable */,0.0);
-    if(!tmp522)
+    tmp392 = GreaterEq(data->localData[0]->realVars[226] /* MatStm3.compMolFlo[3,2] variable */,0.0);
+    if(!tmp392)
     {
-      tmp524 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[300] /* MatStm3.compMolFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp523),tmp524);
+      tmp394 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[226] /* MatStm3.compMolFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp393),tmp394);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
         omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp525 = 1;
+      tmp395 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2334
-type: ALGORITHM
-
-  assert(MatStm3.compMolFlo[3,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[3,3], has value: " + String(MatStm3.compMolFlo[3,3], "g"));
-*/
-void Flowsheet_eqFunction_2334(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2334};
-  modelica_boolean tmp526;
-  static const MMC_DEFSTRINGLIT(tmp527,78,"Variable violating min constraint: 0.0 <= MatStm3.compMolFlo[3,3], has value: ");
-  modelica_string tmp528;
-  static int tmp529 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp529)
-  {
-    tmp526 = GreaterEq(data->localData[0]->realVars[301] /* MatStm3.compMolFlo[3,3] variable */,0.0);
-    if(!tmp526)
-    {
-      tmp528 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[301] /* MatStm3.compMolFlo[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp527),tmp528);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMolFlo[3,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp529 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2335
+equation index: 1324
 type: ALGORITHM
 
   assert(MatStm3.compMasFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[2,1], has value: " + String(MatStm3.compMasFlo[2,1], "g"));
 */
-void Flowsheet_eqFunction_2335(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1324(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2335};
-  modelica_boolean tmp530;
-  static const MMC_DEFSTRINGLIT(tmp531,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[2,1], has value: ");
-  modelica_string tmp532;
-  static int tmp533 = 0;
+  const int equationIndexes[2] = {1,1324};
+  modelica_boolean tmp396;
+  static const MMC_DEFSTRINGLIT(tmp397,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[2,1], has value: ");
+  modelica_string tmp398;
+  static int tmp399 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp533)
+  if(!tmp399)
   {
-    tmp530 = GreaterEq(data->localData[0]->realVars[260] /* MatStm3.compMasFlo[2,1] variable */,0.0);
-    if(!tmp530)
+    tmp396 = GreaterEq(data->localData[0]->realVars[199] /* MatStm3.compMasFlo[2,1] variable */,0.0);
+    if(!tmp396)
     {
-      tmp532 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[260] /* MatStm3.compMasFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp531),tmp532);
+      tmp398 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[199] /* MatStm3.compMasFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp397),tmp398);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
         omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp533 = 1;
+      tmp399 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2336
+equation index: 1325
 type: ALGORITHM
 
   assert(MatStm3.compMasFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[2,2], has value: " + String(MatStm3.compMasFlo[2,2], "g"));
 */
-void Flowsheet_eqFunction_2336(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1325(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2336};
-  modelica_boolean tmp534;
-  static const MMC_DEFSTRINGLIT(tmp535,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[2,2], has value: ");
-  modelica_string tmp536;
-  static int tmp537 = 0;
+  const int equationIndexes[2] = {1,1325};
+  modelica_boolean tmp400;
+  static const MMC_DEFSTRINGLIT(tmp401,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[2,2], has value: ");
+  modelica_string tmp402;
+  static int tmp403 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp537)
+  if(!tmp403)
   {
-    tmp534 = GreaterEq(data->localData[0]->realVars[261] /* MatStm3.compMasFlo[2,2] variable */,0.0);
-    if(!tmp534)
+    tmp400 = GreaterEq(data->localData[0]->realVars[200] /* MatStm3.compMasFlo[2,2] variable */,0.0);
+    if(!tmp400)
     {
-      tmp536 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[261] /* MatStm3.compMasFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp535),tmp536);
+      tmp402 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[200] /* MatStm3.compMasFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp401),tmp402);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
         omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp537 = 1;
+      tmp403 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2337
-type: ALGORITHM
-
-  assert(MatStm3.compMasFlo[2,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[2,3], has value: " + String(MatStm3.compMasFlo[2,3], "g"));
-*/
-void Flowsheet_eqFunction_2337(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2337};
-  modelica_boolean tmp538;
-  static const MMC_DEFSTRINGLIT(tmp539,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[2,3], has value: ");
-  modelica_string tmp540;
-  static int tmp541 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp541)
-  {
-    tmp538 = GreaterEq(data->localData[0]->realVars[262] /* MatStm3.compMasFlo[2,3] variable */,0.0);
-    if(!tmp538)
-    {
-      tmp540 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[262] /* MatStm3.compMasFlo[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp539),tmp540);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFlo[2,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp541 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2338
+equation index: 1326
 type: ALGORITHM
 
   assert(MatStm3.compMasFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[3,1], has value: " + String(MatStm3.compMasFlo[3,1], "g"));
 */
-void Flowsheet_eqFunction_2338(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1326(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2338};
-  modelica_boolean tmp542;
-  static const MMC_DEFSTRINGLIT(tmp543,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[3,1], has value: ");
-  modelica_string tmp544;
-  static int tmp545 = 0;
+  const int equationIndexes[2] = {1,1326};
+  modelica_boolean tmp404;
+  static const MMC_DEFSTRINGLIT(tmp405,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[3,1], has value: ");
+  modelica_string tmp406;
+  static int tmp407 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp545)
+  if(!tmp407)
   {
-    tmp542 = GreaterEq(data->localData[0]->realVars[263] /* MatStm3.compMasFlo[3,1] variable */,0.0);
-    if(!tmp542)
+    tmp404 = GreaterEq(data->localData[0]->realVars[201] /* MatStm3.compMasFlo[3,1] variable */,0.0);
+    if(!tmp404)
     {
-      tmp544 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[263] /* MatStm3.compMasFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp543),tmp544);
+      tmp406 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[201] /* MatStm3.compMasFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp405),tmp406);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
         omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp545 = 1;
+      tmp407 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2339
+equation index: 1327
 type: ALGORITHM
 
   assert(MatStm3.compMasFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[3,2], has value: " + String(MatStm3.compMasFlo[3,2], "g"));
 */
-void Flowsheet_eqFunction_2339(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1327(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2339};
-  modelica_boolean tmp546;
-  static const MMC_DEFSTRINGLIT(tmp547,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[3,2], has value: ");
-  modelica_string tmp548;
-  static int tmp549 = 0;
+  const int equationIndexes[2] = {1,1327};
+  modelica_boolean tmp408;
+  static const MMC_DEFSTRINGLIT(tmp409,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[3,2], has value: ");
+  modelica_string tmp410;
+  static int tmp411 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp549)
+  if(!tmp411)
   {
-    tmp546 = GreaterEq(data->localData[0]->realVars[264] /* MatStm3.compMasFlo[3,2] variable */,0.0);
-    if(!tmp546)
+    tmp408 = GreaterEq(data->localData[0]->realVars[202] /* MatStm3.compMasFlo[3,2] variable */,0.0);
+    if(!tmp408)
     {
-      tmp548 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[264] /* MatStm3.compMasFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp547),tmp548);
+      tmp410 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[202] /* MatStm3.compMasFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp409),tmp410);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
         omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp549 = 1;
+      tmp411 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2340
+equation index: 1328
 type: ALGORITHM
 
-  assert(MatStm3.compMasFlo[3,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[3,3], has value: " + String(MatStm3.compMasFlo[3,3], "g"));
+  assert(Mixer1.inVapPhasMolFrac[1] >= 0.0 and Mixer1.inVapPhasMolFrac[1] <= 1.0, "Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[1] <= 1.0, has value: " + String(Mixer1.inVapPhasMolFrac[1], "g"));
 */
-void Flowsheet_eqFunction_2340(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1328(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2340};
-  modelica_boolean tmp550;
-  static const MMC_DEFSTRINGLIT(tmp551,78,"Variable violating min constraint: 0.0 <= MatStm3.compMasFlo[3,3], has value: ");
-  modelica_string tmp552;
-  static int tmp553 = 0;
+  const int equationIndexes[2] = {1,1328};
+  modelica_boolean tmp412;
+  modelica_boolean tmp413;
+  static const MMC_DEFSTRINGLIT(tmp414,92,"Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[1] <= 1.0, has value: ");
+  modelica_string tmp415;
+  static int tmp416 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp553)
+  if(!tmp416)
   {
-    tmp550 = GreaterEq(data->localData[0]->realVars[265] /* MatStm3.compMasFlo[3,3] variable */,0.0);
-    if(!tmp550)
+    tmp412 = GreaterEq(data->localData[0]->realVars[276] /* Mixer1.inVapPhasMolFrac[1] variable */,0.0);
+    tmp413 = LessEq(data->localData[0]->realVars[276] /* Mixer1.inVapPhasMolFrac[1] variable */,1.0);
+    if(!(tmp412 && tmp413))
     {
-      tmp552 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[265] /* MatStm3.compMasFlo[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp551),tmp552);
+      tmp415 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[276] /* Mixer1.inVapPhasMolFrac[1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp414),tmp415);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4319,7,4319,434,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMixer1.inVapPhasMolFrac[1] >= 0.0 and Mixer1.inVapPhasMolFrac[1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp416 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1329
+type: ALGORITHM
+
+  assert(Mixer1.inVapPhasMolFrac[2] >= 0.0 and Mixer1.inVapPhasMolFrac[2] <= 1.0, "Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[2] <= 1.0, has value: " + String(Mixer1.inVapPhasMolFrac[2], "g"));
+*/
+void Flowsheet_eqFunction_1329(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1329};
+  modelica_boolean tmp417;
+  modelica_boolean tmp418;
+  static const MMC_DEFSTRINGLIT(tmp419,92,"Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[2] <= 1.0, has value: ");
+  modelica_string tmp420;
+  static int tmp421 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp421)
+  {
+    tmp417 = GreaterEq(data->localData[0]->realVars[277] /* Mixer1.inVapPhasMolFrac[2] variable */,0.0);
+    tmp418 = LessEq(data->localData[0]->realVars[277] /* Mixer1.inVapPhasMolFrac[2] variable */,1.0);
+    if(!(tmp417 && tmp418))
+    {
+      tmp420 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[277] /* Mixer1.inVapPhasMolFrac[2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp419),tmp420);
+      {
+        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4319,7,4319,434,0};
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMixer1.inVapPhasMolFrac[2] >= 0.0 and Mixer1.inVapPhasMolFrac[2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
+      }
+      tmp421 = 1;
+    }
+  }
+  TRACE_POP
+}
+
+/*
+equation index: 1234
+type: ALGORITHM
+
+  assert(MatStm2.compMasFlo[1,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[1,1], has value: " + String(MatStm2.compMasFlo[1,1], "g"));
+*/
+void Flowsheet_eqFunction_1234(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,1234};
+  modelica_boolean tmp422;
+  static const MMC_DEFSTRINGLIT(tmp423,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[1,1], has value: ");
+  modelica_string tmp424;
+  static int tmp425 = 0;
+  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
+  if(!tmp425)
+  {
+    tmp422 = GreaterEq(data->localData[0]->realVars[106] /* MatStm2.compMasFlo[1,1] variable */,0.0);
+    if(!tmp422)
+    {
+      tmp424 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[106] /* MatStm2.compMasFlo[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp423),tmp424);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm3.compMasFlo[3,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[1,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp553 = 1;
+      tmp425 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2341
+equation index: 1233
 type: ALGORITHM
 
-  assert(MatStm4.liqPhasMolFrac >= 0.0 and MatStm4.liqPhasMolFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.liqPhasMolFrac <= 1.0, has value: " + String(MatStm4.liqPhasMolFrac, "g"));
+  assert(MatStm2.compMolFlo[1,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[1,1], has value: " + String(MatStm2.compMolFlo[1,1], "g"));
 */
-void Flowsheet_eqFunction_2341(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1233(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2341};
-  modelica_boolean tmp554;
-  modelica_boolean tmp555;
-  static const MMC_DEFSTRINGLIT(tmp556,88,"Variable violating min/max constraint: 0.0 <= MatStm4.liqPhasMolFrac <= 1.0, has value: ");
-  modelica_string tmp557;
-  static int tmp558 = 0;
+  const int equationIndexes[2] = {1,1233};
+  modelica_boolean tmp426;
+  static const MMC_DEFSTRINGLIT(tmp427,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[1,1], has value: ");
+  modelica_string tmp428;
+  static int tmp429 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp558)
+  if(!tmp429)
   {
-    tmp554 = GreaterEq(data->localData[0]->realVars[448] /* MatStm4.liqPhasMolFrac variable */,0.0);
-    tmp555 = LessEq(data->localData[0]->realVars[448] /* MatStm4.liqPhasMolFrac variable */,1.0);
-    if(!(tmp554 && tmp555))
+    tmp426 = GreaterEq(data->localData[0]->realVars[130] /* MatStm2.compMolFlo[1,1] variable */,0.0);
+    if(!tmp426)
     {
-      tmp557 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[448] /* MatStm4.liqPhasMolFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp556),tmp557);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.liqPhasMolFrac >= 0.0 and MatStm4.liqPhasMolFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp558 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2342
-type: ALGORITHM
-
-  assert(MatStm4.liqPhasMasFrac >= 0.0 and MatStm4.liqPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.liqPhasMasFrac <= 1.0, has value: " + String(MatStm4.liqPhasMasFrac, "g"));
-*/
-void Flowsheet_eqFunction_2342(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2342};
-  modelica_boolean tmp559;
-  modelica_boolean tmp560;
-  static const MMC_DEFSTRINGLIT(tmp561,88,"Variable violating min/max constraint: 0.0 <= MatStm4.liqPhasMasFrac <= 1.0, has value: ");
-  modelica_string tmp562;
-  static int tmp563 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp563)
-  {
-    tmp559 = GreaterEq(data->localData[0]->realVars[447] /* MatStm4.liqPhasMasFrac variable */,0.0);
-    tmp560 = LessEq(data->localData[0]->realVars[447] /* MatStm4.liqPhasMasFrac variable */,1.0);
-    if(!(tmp559 && tmp560))
-    {
-      tmp562 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[447] /* MatStm4.liqPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp561),tmp562);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.liqPhasMasFrac >= 0.0 and MatStm4.liqPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp563 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2343
-type: ALGORITHM
-
-  assert(MatStm4.vapPhasMasFrac >= 0.0 and MatStm4.vapPhasMasFrac <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.vapPhasMasFrac <= 1.0, has value: " + String(MatStm4.vapPhasMasFrac, "g"));
-*/
-void Flowsheet_eqFunction_2343(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2343};
-  modelica_boolean tmp564;
-  modelica_boolean tmp565;
-  static const MMC_DEFSTRINGLIT(tmp566,88,"Variable violating min/max constraint: 0.0 <= MatStm4.vapPhasMasFrac <= 1.0, has value: ");
-  modelica_string tmp567;
-  static int tmp568 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp568)
-  {
-    tmp564 = GreaterEq(data->localData[0]->realVars[476] /* MatStm4.vapPhasMasFrac variable */,0.0);
-    tmp565 = LessEq(data->localData[0]->realVars[476] /* MatStm4.vapPhasMasFrac variable */,1.0);
-    if(!(tmp564 && tmp565))
-    {
-      tmp567 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[476] /* MatStm4.vapPhasMasFrac variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp566),tmp567);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4170,3,4170,308,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.vapPhasMasFrac >= 0.0 and MatStm4.vapPhasMasFrac <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp568 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2344
-type: ALGORITHM
-
-  assert(MatStm4.totMolFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.totMolFlo[2], has value: " + String(MatStm4.totMolFlo[2], "g"));
-*/
-void Flowsheet_eqFunction_2344(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2344};
-  modelica_boolean tmp569;
-  static const MMC_DEFSTRINGLIT(tmp570,75,"Variable violating min constraint: 0.0 <= MatStm4.totMolFlo[2], has value: ");
-  modelica_string tmp571;
-  static int tmp572 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp572)
-  {
-    tmp569 = GreaterEq(data->localData[0]->realVars[474] /* MatStm4.totMolFlo[2] variable */,0.0);
-    if(!tmp569)
-    {
-      tmp571 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[474] /* MatStm4.totMolFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp570),tmp571);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.totMolFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp572 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2345
-type: ALGORITHM
-
-  assert(MatStm4.totMolFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.totMolFlo[3], has value: " + String(MatStm4.totMolFlo[3], "g"));
-*/
-void Flowsheet_eqFunction_2345(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2345};
-  modelica_boolean tmp573;
-  static const MMC_DEFSTRINGLIT(tmp574,75,"Variable violating min constraint: 0.0 <= MatStm4.totMolFlo[3], has value: ");
-  modelica_string tmp575;
-  static int tmp576 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp576)
-  {
-    tmp573 = GreaterEq(data->localData[0]->realVars[475] /* MatStm4.totMolFlo[3] variable */,0.0);
-    if(!tmp573)
-    {
-      tmp575 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[475] /* MatStm4.totMolFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp574),tmp575);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.totMolFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp576 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2346
-type: ALGORITHM
-
-  assert(MatStm4.totMasFlo[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.totMasFlo[1], has value: " + String(MatStm4.totMasFlo[1], "g"));
-*/
-void Flowsheet_eqFunction_2346(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2346};
-  modelica_boolean tmp577;
-  static const MMC_DEFSTRINGLIT(tmp578,75,"Variable violating min constraint: 0.0 <= MatStm4.totMasFlo[1], has value: ");
-  modelica_string tmp579;
-  static int tmp580 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp580)
-  {
-    tmp577 = GreaterEq(data->localData[0]->realVars[470] /* MatStm4.totMasFlo[1] variable */,0.0);
-    if(!tmp577)
-    {
-      tmp579 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[470] /* MatStm4.totMasFlo[1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp578),tmp579);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.totMasFlo[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp580 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2347
-type: ALGORITHM
-
-  assert(MatStm4.totMasFlo[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.totMasFlo[2], has value: " + String(MatStm4.totMasFlo[2], "g"));
-*/
-void Flowsheet_eqFunction_2347(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2347};
-  modelica_boolean tmp581;
-  static const MMC_DEFSTRINGLIT(tmp582,75,"Variable violating min constraint: 0.0 <= MatStm4.totMasFlo[2], has value: ");
-  modelica_string tmp583;
-  static int tmp584 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp584)
-  {
-    tmp581 = GreaterEq(data->localData[0]->realVars[471] /* MatStm4.totMasFlo[2] variable */,0.0);
-    if(!tmp581)
-    {
-      tmp583 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[471] /* MatStm4.totMasFlo[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp582),tmp583);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.totMasFlo[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp584 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2348
-type: ALGORITHM
-
-  assert(MatStm4.totMasFlo[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.totMasFlo[3], has value: " + String(MatStm4.totMasFlo[3], "g"));
-*/
-void Flowsheet_eqFunction_2348(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2348};
-  modelica_boolean tmp585;
-  static const MMC_DEFSTRINGLIT(tmp586,75,"Variable violating min constraint: 0.0 <= MatStm4.totMasFlo[3], has value: ");
-  modelica_string tmp587;
-  static int tmp588 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp588)
-  {
-    tmp585 = GreaterEq(data->localData[0]->realVars[472] /* MatStm4.totMasFlo[3] variable */,0.0);
-    if(!tmp585)
-    {
-      tmp587 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[472] /* MatStm4.totMasFlo[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp586),tmp587);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.totMasFlo[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp588 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2349
-type: ALGORITHM
-
-  assert(MatStm4.MW[1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.MW[1], has value: " + String(MatStm4.MW[1], "g"));
-*/
-void Flowsheet_eqFunction_2349(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2349};
-  modelica_boolean tmp589;
-  static const MMC_DEFSTRINGLIT(tmp590,68,"Variable violating min constraint: 0.0 <= MatStm4.MW[1], has value: ");
-  modelica_string tmp591;
-  static int tmp592 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp592)
-  {
-    tmp589 = GreaterEq(data->localData[0]->realVars[365] /* MatStm4.MW[1] variable */,0.0);
-    if(!tmp589)
-    {
-      tmp591 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[365] /* MatStm4.MW[1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp590),tmp591);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.MW[1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp592 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2350
-type: ALGORITHM
-
-  assert(MatStm4.MW[2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.MW[2], has value: " + String(MatStm4.MW[2], "g"));
-*/
-void Flowsheet_eqFunction_2350(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2350};
-  modelica_boolean tmp593;
-  static const MMC_DEFSTRINGLIT(tmp594,68,"Variable violating min constraint: 0.0 <= MatStm4.MW[2], has value: ");
-  modelica_string tmp595;
-  static int tmp596 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp596)
-  {
-    tmp593 = GreaterEq(data->localData[0]->realVars[366] /* MatStm4.MW[2] variable */,0.0);
-    if(!tmp593)
-    {
-      tmp595 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[366] /* MatStm4.MW[2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp594),tmp595);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.MW[2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp596 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2351
-type: ALGORITHM
-
-  assert(MatStm4.MW[3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.MW[3], has value: " + String(MatStm4.MW[3], "g"));
-*/
-void Flowsheet_eqFunction_2351(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2351};
-  modelica_boolean tmp597;
-  static const MMC_DEFSTRINGLIT(tmp598,68,"Variable violating min constraint: 0.0 <= MatStm4.MW[3], has value: ");
-  modelica_string tmp599;
-  static int tmp600 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp600)
-  {
-    tmp597 = GreaterEq(data->localData[0]->realVars[367] /* MatStm4.MW[3] variable */,0.0);
-    if(!tmp597)
-    {
-      tmp599 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[367] /* MatStm4.MW[3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp598),tmp599);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4171,3,4171,209,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.MW[3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp600 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2352
-type: ALGORITHM
-
-  assert(MatStm4.compMolFrac[2,1] >= 0.0 and MatStm4.compMolFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[2,1] <= 1.0, has value: " + String(MatStm4.compMolFrac[2,1], "g"));
-*/
-void Flowsheet_eqFunction_2352(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2352};
-  modelica_boolean tmp601;
-  modelica_boolean tmp602;
-  static const MMC_DEFSTRINGLIT(tmp603,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[2,1] <= 1.0, has value: ");
-  modelica_string tmp604;
-  static int tmp605 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp605)
-  {
-    tmp601 = GreaterEq(data->localData[0]->realVars[423] /* MatStm4.compMolFrac[2,1] variable */,0.0);
-    tmp602 = LessEq(data->localData[0]->realVars[423] /* MatStm4.compMolFrac[2,1] variable */,1.0);
-    if(!(tmp601 && tmp602))
-    {
-      tmp604 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[423] /* MatStm4.compMolFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp603),tmp604);
+      tmp428 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[130] /* MatStm2.compMolFlo[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp427),tmp428);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFrac[2,1] >= 0.0 and MatStm4.compMolFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[1,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp605 = 1;
+      tmp429 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2353
+equation index: 1232
 type: ALGORITHM
 
-  assert(MatStm4.compMolFrac[2,2] >= 0.0 and MatStm4.compMolFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[2,2] <= 1.0, has value: " + String(MatStm4.compMolFrac[2,2], "g"));
+  assert(MatStm2.compMasFlo[1,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[1,2], has value: " + String(MatStm2.compMasFlo[1,2], "g"));
 */
-void Flowsheet_eqFunction_2353(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1232(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2353};
-  modelica_boolean tmp606;
-  modelica_boolean tmp607;
-  static const MMC_DEFSTRINGLIT(tmp608,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[2,2] <= 1.0, has value: ");
-  modelica_string tmp609;
-  static int tmp610 = 0;
+  const int equationIndexes[2] = {1,1232};
+  modelica_boolean tmp430;
+  static const MMC_DEFSTRINGLIT(tmp431,78,"Variable violating min constraint: 0.0 <= MatStm2.compMasFlo[1,2], has value: ");
+  modelica_string tmp432;
+  static int tmp433 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp610)
+  if(!tmp433)
   {
-    tmp606 = GreaterEq(data->localData[0]->realVars[424] /* MatStm4.compMolFrac[2,2] variable */,0.0);
-    tmp607 = LessEq(data->localData[0]->realVars[424] /* MatStm4.compMolFrac[2,2] variable */,1.0);
-    if(!(tmp606 && tmp607))
+    tmp430 = GreaterEq(data->localData[0]->realVars[107] /* MatStm2.compMasFlo[1,2] variable */,0.0);
+    if(!tmp430)
     {
-      tmp609 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[424] /* MatStm4.compMolFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp608),tmp609);
+      tmp432 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[107] /* MatStm2.compMasFlo[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp431),tmp432);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFrac[2,2] >= 0.0 and MatStm4.compMolFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMasFlo[1,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp610 = 1;
+      tmp433 = 1;
     }
   }
   TRACE_POP
 }
 
 /*
-equation index: 2354
+equation index: 1231
 type: ALGORITHM
 
-  assert(MatStm4.compMolFrac[2,3] >= 0.0 and MatStm4.compMolFrac[2,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[2,3] <= 1.0, has value: " + String(MatStm4.compMolFrac[2,3], "g"));
+  assert(MatStm2.compMolFlo[1,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[1,2], has value: " + String(MatStm2.compMolFlo[1,2], "g"));
 */
-void Flowsheet_eqFunction_2354(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_1231(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,2354};
-  modelica_boolean tmp611;
-  modelica_boolean tmp612;
-  static const MMC_DEFSTRINGLIT(tmp613,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[2,3] <= 1.0, has value: ");
-  modelica_string tmp614;
-  static int tmp615 = 0;
+  const int equationIndexes[2] = {1,1231};
+  modelica_boolean tmp434;
+  static const MMC_DEFSTRINGLIT(tmp435,78,"Variable violating min constraint: 0.0 <= MatStm2.compMolFlo[1,2], has value: ");
+  modelica_string tmp436;
+  static int tmp437 = 0;
   modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp615)
+  if(!tmp437)
   {
-    tmp611 = GreaterEq(data->localData[0]->realVars[425] /* MatStm4.compMolFrac[2,3] variable */,0.0);
-    tmp612 = LessEq(data->localData[0]->realVars[425] /* MatStm4.compMolFrac[2,3] variable */,1.0);
-    if(!(tmp611 && tmp612))
+    tmp434 = GreaterEq(data->localData[0]->realVars[131] /* MatStm2.compMolFlo[1,2] variable */,0.0);
+    if(!tmp434)
     {
-      tmp614 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[425] /* MatStm4.compMolFrac[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp613),tmp614);
+      tmp436 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[131] /* MatStm2.compMolFlo[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
+      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp435),tmp436);
       {
         FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFrac[2,3] >= 0.0 and MatStm4.compMolFrac[2,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
+        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm2.compMolFlo[1,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
         omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
       }
-      tmp615 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2355
-type: ALGORITHM
-
-  assert(MatStm4.compMolFrac[3,1] >= 0.0 and MatStm4.compMolFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[3,1] <= 1.0, has value: " + String(MatStm4.compMolFrac[3,1], "g"));
-*/
-void Flowsheet_eqFunction_2355(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2355};
-  modelica_boolean tmp616;
-  modelica_boolean tmp617;
-  static const MMC_DEFSTRINGLIT(tmp618,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[3,1] <= 1.0, has value: ");
-  modelica_string tmp619;
-  static int tmp620 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp620)
-  {
-    tmp616 = GreaterEq(data->localData[0]->realVars[426] /* MatStm4.compMolFrac[3,1] variable */,0.0);
-    tmp617 = LessEq(data->localData[0]->realVars[426] /* MatStm4.compMolFrac[3,1] variable */,1.0);
-    if(!(tmp616 && tmp617))
-    {
-      tmp619 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[426] /* MatStm4.compMolFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp618),tmp619);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFrac[3,1] >= 0.0 and MatStm4.compMolFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp620 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2356
-type: ALGORITHM
-
-  assert(MatStm4.compMolFrac[3,2] >= 0.0 and MatStm4.compMolFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[3,2] <= 1.0, has value: " + String(MatStm4.compMolFrac[3,2], "g"));
-*/
-void Flowsheet_eqFunction_2356(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2356};
-  modelica_boolean tmp621;
-  modelica_boolean tmp622;
-  static const MMC_DEFSTRINGLIT(tmp623,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[3,2] <= 1.0, has value: ");
-  modelica_string tmp624;
-  static int tmp625 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp625)
-  {
-    tmp621 = GreaterEq(data->localData[0]->realVars[427] /* MatStm4.compMolFrac[3,2] variable */,0.0);
-    tmp622 = LessEq(data->localData[0]->realVars[427] /* MatStm4.compMolFrac[3,2] variable */,1.0);
-    if(!(tmp621 && tmp622))
-    {
-      tmp624 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[427] /* MatStm4.compMolFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp623),tmp624);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFrac[3,2] >= 0.0 and MatStm4.compMolFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp625 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2357
-type: ALGORITHM
-
-  assert(MatStm4.compMolFrac[3,3] >= 0.0 and MatStm4.compMolFrac[3,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[3,3] <= 1.0, has value: " + String(MatStm4.compMolFrac[3,3], "g"));
-*/
-void Flowsheet_eqFunction_2357(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2357};
-  modelica_boolean tmp626;
-  modelica_boolean tmp627;
-  static const MMC_DEFSTRINGLIT(tmp628,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMolFrac[3,3] <= 1.0, has value: ");
-  modelica_string tmp629;
-  static int tmp630 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp630)
-  {
-    tmp626 = GreaterEq(data->localData[0]->realVars[428] /* MatStm4.compMolFrac[3,3] variable */,0.0);
-    tmp627 = LessEq(data->localData[0]->realVars[428] /* MatStm4.compMolFrac[3,3] variable */,1.0);
-    if(!(tmp626 && tmp627))
-    {
-      tmp629 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[428] /* MatStm4.compMolFrac[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp628),tmp629);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFrac[3,3] >= 0.0 and MatStm4.compMolFrac[3,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp630 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2358
-type: ALGORITHM
-
-  assert(MatStm4.compMasFrac[1,1] >= 0.0 and MatStm4.compMasFrac[1,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[1,1] <= 1.0, has value: " + String(MatStm4.compMasFrac[1,1], "g"));
-*/
-void Flowsheet_eqFunction_2358(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2358};
-  modelica_boolean tmp631;
-  modelica_boolean tmp632;
-  static const MMC_DEFSTRINGLIT(tmp633,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[1,1] <= 1.0, has value: ");
-  modelica_string tmp634;
-  static int tmp635 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp635)
-  {
-    tmp631 = GreaterEq(data->localData[0]->realVars[384] /* MatStm4.compMasFrac[1,1] variable */,0.0);
-    tmp632 = LessEq(data->localData[0]->realVars[384] /* MatStm4.compMasFrac[1,1] variable */,1.0);
-    if(!(tmp631 && tmp632))
-    {
-      tmp634 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[384] /* MatStm4.compMasFrac[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp633),tmp634);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFrac[1,1] >= 0.0 and MatStm4.compMasFrac[1,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp635 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2359
-type: ALGORITHM
-
-  assert(MatStm4.compMasFrac[1,2] >= 0.0 and MatStm4.compMasFrac[1,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[1,2] <= 1.0, has value: " + String(MatStm4.compMasFrac[1,2], "g"));
-*/
-void Flowsheet_eqFunction_2359(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2359};
-  modelica_boolean tmp636;
-  modelica_boolean tmp637;
-  static const MMC_DEFSTRINGLIT(tmp638,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[1,2] <= 1.0, has value: ");
-  modelica_string tmp639;
-  static int tmp640 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp640)
-  {
-    tmp636 = GreaterEq(data->localData[0]->realVars[385] /* MatStm4.compMasFrac[1,2] variable */,0.0);
-    tmp637 = LessEq(data->localData[0]->realVars[385] /* MatStm4.compMasFrac[1,2] variable */,1.0);
-    if(!(tmp636 && tmp637))
-    {
-      tmp639 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[385] /* MatStm4.compMasFrac[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp638),tmp639);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFrac[1,2] >= 0.0 and MatStm4.compMasFrac[1,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp640 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2360
-type: ALGORITHM
-
-  assert(MatStm4.compMasFrac[1,3] >= 0.0 and MatStm4.compMasFrac[1,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[1,3] <= 1.0, has value: " + String(MatStm4.compMasFrac[1,3], "g"));
-*/
-void Flowsheet_eqFunction_2360(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2360};
-  modelica_boolean tmp641;
-  modelica_boolean tmp642;
-  static const MMC_DEFSTRINGLIT(tmp643,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[1,3] <= 1.0, has value: ");
-  modelica_string tmp644;
-  static int tmp645 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp645)
-  {
-    tmp641 = GreaterEq(data->localData[0]->realVars[386] /* MatStm4.compMasFrac[1,3] variable */,0.0);
-    tmp642 = LessEq(data->localData[0]->realVars[386] /* MatStm4.compMasFrac[1,3] variable */,1.0);
-    if(!(tmp641 && tmp642))
-    {
-      tmp644 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[386] /* MatStm4.compMasFrac[1,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp643),tmp644);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFrac[1,3] >= 0.0 and MatStm4.compMasFrac[1,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp645 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2361
-type: ALGORITHM
-
-  assert(MatStm4.compMasFrac[2,1] >= 0.0 and MatStm4.compMasFrac[2,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[2,1] <= 1.0, has value: " + String(MatStm4.compMasFrac[2,1], "g"));
-*/
-void Flowsheet_eqFunction_2361(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2361};
-  modelica_boolean tmp646;
-  modelica_boolean tmp647;
-  static const MMC_DEFSTRINGLIT(tmp648,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[2,1] <= 1.0, has value: ");
-  modelica_string tmp649;
-  static int tmp650 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp650)
-  {
-    tmp646 = GreaterEq(data->localData[0]->realVars[387] /* MatStm4.compMasFrac[2,1] variable */,0.0);
-    tmp647 = LessEq(data->localData[0]->realVars[387] /* MatStm4.compMasFrac[2,1] variable */,1.0);
-    if(!(tmp646 && tmp647))
-    {
-      tmp649 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[387] /* MatStm4.compMasFrac[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp648),tmp649);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFrac[2,1] >= 0.0 and MatStm4.compMasFrac[2,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp650 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2362
-type: ALGORITHM
-
-  assert(MatStm4.compMasFrac[2,2] >= 0.0 and MatStm4.compMasFrac[2,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[2,2] <= 1.0, has value: " + String(MatStm4.compMasFrac[2,2], "g"));
-*/
-void Flowsheet_eqFunction_2362(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2362};
-  modelica_boolean tmp651;
-  modelica_boolean tmp652;
-  static const MMC_DEFSTRINGLIT(tmp653,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[2,2] <= 1.0, has value: ");
-  modelica_string tmp654;
-  static int tmp655 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp655)
-  {
-    tmp651 = GreaterEq(data->localData[0]->realVars[388] /* MatStm4.compMasFrac[2,2] variable */,0.0);
-    tmp652 = LessEq(data->localData[0]->realVars[388] /* MatStm4.compMasFrac[2,2] variable */,1.0);
-    if(!(tmp651 && tmp652))
-    {
-      tmp654 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[388] /* MatStm4.compMasFrac[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp653),tmp654);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFrac[2,2] >= 0.0 and MatStm4.compMasFrac[2,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp655 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2363
-type: ALGORITHM
-
-  assert(MatStm4.compMasFrac[2,3] >= 0.0 and MatStm4.compMasFrac[2,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[2,3] <= 1.0, has value: " + String(MatStm4.compMasFrac[2,3], "g"));
-*/
-void Flowsheet_eqFunction_2363(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2363};
-  modelica_boolean tmp656;
-  modelica_boolean tmp657;
-  static const MMC_DEFSTRINGLIT(tmp658,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[2,3] <= 1.0, has value: ");
-  modelica_string tmp659;
-  static int tmp660 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp660)
-  {
-    tmp656 = GreaterEq(data->localData[0]->realVars[389] /* MatStm4.compMasFrac[2,3] variable */,0.0);
-    tmp657 = LessEq(data->localData[0]->realVars[389] /* MatStm4.compMasFrac[2,3] variable */,1.0);
-    if(!(tmp656 && tmp657))
-    {
-      tmp659 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[389] /* MatStm4.compMasFrac[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp658),tmp659);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFrac[2,3] >= 0.0 and MatStm4.compMasFrac[2,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp660 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2364
-type: ALGORITHM
-
-  assert(MatStm4.compMasFrac[3,1] >= 0.0 and MatStm4.compMasFrac[3,1] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[3,1] <= 1.0, has value: " + String(MatStm4.compMasFrac[3,1], "g"));
-*/
-void Flowsheet_eqFunction_2364(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2364};
-  modelica_boolean tmp661;
-  modelica_boolean tmp662;
-  static const MMC_DEFSTRINGLIT(tmp663,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[3,1] <= 1.0, has value: ");
-  modelica_string tmp664;
-  static int tmp665 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp665)
-  {
-    tmp661 = GreaterEq(data->localData[0]->realVars[390] /* MatStm4.compMasFrac[3,1] variable */,0.0);
-    tmp662 = LessEq(data->localData[0]->realVars[390] /* MatStm4.compMasFrac[3,1] variable */,1.0);
-    if(!(tmp661 && tmp662))
-    {
-      tmp664 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[390] /* MatStm4.compMasFrac[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp663),tmp664);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFrac[3,1] >= 0.0 and MatStm4.compMasFrac[3,1] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp665 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2365
-type: ALGORITHM
-
-  assert(MatStm4.compMasFrac[3,2] >= 0.0 and MatStm4.compMasFrac[3,2] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[3,2] <= 1.0, has value: " + String(MatStm4.compMasFrac[3,2], "g"));
-*/
-void Flowsheet_eqFunction_2365(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2365};
-  modelica_boolean tmp666;
-  modelica_boolean tmp667;
-  static const MMC_DEFSTRINGLIT(tmp668,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[3,2] <= 1.0, has value: ");
-  modelica_string tmp669;
-  static int tmp670 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp670)
-  {
-    tmp666 = GreaterEq(data->localData[0]->realVars[391] /* MatStm4.compMasFrac[3,2] variable */,0.0);
-    tmp667 = LessEq(data->localData[0]->realVars[391] /* MatStm4.compMasFrac[3,2] variable */,1.0);
-    if(!(tmp666 && tmp667))
-    {
-      tmp669 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[391] /* MatStm4.compMasFrac[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp668),tmp669);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFrac[3,2] >= 0.0 and MatStm4.compMasFrac[3,2] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp670 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2366
-type: ALGORITHM
-
-  assert(MatStm4.compMasFrac[3,3] >= 0.0 and MatStm4.compMasFrac[3,3] <= 1.0, "Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[3,3] <= 1.0, has value: " + String(MatStm4.compMasFrac[3,3], "g"));
-*/
-void Flowsheet_eqFunction_2366(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2366};
-  modelica_boolean tmp671;
-  modelica_boolean tmp672;
-  static const MMC_DEFSTRINGLIT(tmp673,90,"Variable violating min/max constraint: 0.0 <= MatStm4.compMasFrac[3,3] <= 1.0, has value: ");
-  modelica_string tmp674;
-  static int tmp675 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp675)
-  {
-    tmp671 = GreaterEq(data->localData[0]->realVars[392] /* MatStm4.compMasFrac[3,3] variable */,0.0);
-    tmp672 = LessEq(data->localData[0]->realVars[392] /* MatStm4.compMasFrac[3,3] variable */,1.0);
-    if(!(tmp671 && tmp672))
-    {
-      tmp674 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[392] /* MatStm4.compMasFrac[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp673),tmp674);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFrac[3,3] >= 0.0 and MatStm4.compMasFrac[3,3] <= 1.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp675 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2367
-type: ALGORITHM
-
-  assert(MatStm4.compMolFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[2,1], has value: " + String(MatStm4.compMolFlo[2,1], "g"));
-*/
-void Flowsheet_eqFunction_2367(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2367};
-  modelica_boolean tmp676;
-  static const MMC_DEFSTRINGLIT(tmp677,78,"Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[2,1], has value: ");
-  modelica_string tmp678;
-  static int tmp679 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp679)
-  {
-    tmp676 = GreaterEq(data->localData[0]->realVars[414] /* MatStm4.compMolFlo[2,1] variable */,0.0);
-    if(!tmp676)
-    {
-      tmp678 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[414] /* MatStm4.compMolFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp677),tmp678);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp679 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2368
-type: ALGORITHM
-
-  assert(MatStm4.compMolFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[2,2], has value: " + String(MatStm4.compMolFlo[2,2], "g"));
-*/
-void Flowsheet_eqFunction_2368(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2368};
-  modelica_boolean tmp680;
-  static const MMC_DEFSTRINGLIT(tmp681,78,"Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[2,2], has value: ");
-  modelica_string tmp682;
-  static int tmp683 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp683)
-  {
-    tmp680 = GreaterEq(data->localData[0]->realVars[415] /* MatStm4.compMolFlo[2,2] variable */,0.0);
-    if(!tmp680)
-    {
-      tmp682 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[415] /* MatStm4.compMolFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp681),tmp682);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp683 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2369
-type: ALGORITHM
-
-  assert(MatStm4.compMolFlo[2,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[2,3], has value: " + String(MatStm4.compMolFlo[2,3], "g"));
-*/
-void Flowsheet_eqFunction_2369(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2369};
-  modelica_boolean tmp684;
-  static const MMC_DEFSTRINGLIT(tmp685,78,"Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[2,3], has value: ");
-  modelica_string tmp686;
-  static int tmp687 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp687)
-  {
-    tmp684 = GreaterEq(data->localData[0]->realVars[416] /* MatStm4.compMolFlo[2,3] variable */,0.0);
-    if(!tmp684)
-    {
-      tmp686 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[416] /* MatStm4.compMolFlo[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp685),tmp686);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFlo[2,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp687 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2370
-type: ALGORITHM
-
-  assert(MatStm4.compMolFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[3,1], has value: " + String(MatStm4.compMolFlo[3,1], "g"));
-*/
-void Flowsheet_eqFunction_2370(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2370};
-  modelica_boolean tmp688;
-  static const MMC_DEFSTRINGLIT(tmp689,78,"Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[3,1], has value: ");
-  modelica_string tmp690;
-  static int tmp691 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp691)
-  {
-    tmp688 = GreaterEq(data->localData[0]->realVars[417] /* MatStm4.compMolFlo[3,1] variable */,0.0);
-    if(!tmp688)
-    {
-      tmp690 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[417] /* MatStm4.compMolFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp689),tmp690);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp691 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2371
-type: ALGORITHM
-
-  assert(MatStm4.compMolFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[3,2], has value: " + String(MatStm4.compMolFlo[3,2], "g"));
-*/
-void Flowsheet_eqFunction_2371(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2371};
-  modelica_boolean tmp692;
-  static const MMC_DEFSTRINGLIT(tmp693,78,"Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[3,2], has value: ");
-  modelica_string tmp694;
-  static int tmp695 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp695)
-  {
-    tmp692 = GreaterEq(data->localData[0]->realVars[418] /* MatStm4.compMolFlo[3,2] variable */,0.0);
-    if(!tmp692)
-    {
-      tmp694 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[418] /* MatStm4.compMolFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp693),tmp694);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp695 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2372
-type: ALGORITHM
-
-  assert(MatStm4.compMolFlo[3,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[3,3], has value: " + String(MatStm4.compMolFlo[3,3], "g"));
-*/
-void Flowsheet_eqFunction_2372(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2372};
-  modelica_boolean tmp696;
-  static const MMC_DEFSTRINGLIT(tmp697,78,"Variable violating min constraint: 0.0 <= MatStm4.compMolFlo[3,3], has value: ");
-  modelica_string tmp698;
-  static int tmp699 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp699)
-  {
-    tmp696 = GreaterEq(data->localData[0]->realVars[419] /* MatStm4.compMolFlo[3,3] variable */,0.0);
-    if(!tmp696)
-    {
-      tmp698 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[419] /* MatStm4.compMolFlo[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp697),tmp698);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMolFlo[3,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp699 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2373
-type: ALGORITHM
-
-  assert(MatStm4.compMasFlo[2,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[2,1], has value: " + String(MatStm4.compMasFlo[2,1], "g"));
-*/
-void Flowsheet_eqFunction_2373(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2373};
-  modelica_boolean tmp700;
-  static const MMC_DEFSTRINGLIT(tmp701,78,"Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[2,1], has value: ");
-  modelica_string tmp702;
-  static int tmp703 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp703)
-  {
-    tmp700 = GreaterEq(data->localData[0]->realVars[378] /* MatStm4.compMasFlo[2,1] variable */,0.0);
-    if(!tmp700)
-    {
-      tmp702 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[378] /* MatStm4.compMasFlo[2,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp701),tmp702);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFlo[2,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp703 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2374
-type: ALGORITHM
-
-  assert(MatStm4.compMasFlo[2,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[2,2], has value: " + String(MatStm4.compMasFlo[2,2], "g"));
-*/
-void Flowsheet_eqFunction_2374(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2374};
-  modelica_boolean tmp704;
-  static const MMC_DEFSTRINGLIT(tmp705,78,"Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[2,2], has value: ");
-  modelica_string tmp706;
-  static int tmp707 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp707)
-  {
-    tmp704 = GreaterEq(data->localData[0]->realVars[379] /* MatStm4.compMasFlo[2,2] variable */,0.0);
-    if(!tmp704)
-    {
-      tmp706 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[379] /* MatStm4.compMasFlo[2,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp705),tmp706);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFlo[2,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp707 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2375
-type: ALGORITHM
-
-  assert(MatStm4.compMasFlo[2,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[2,3], has value: " + String(MatStm4.compMasFlo[2,3], "g"));
-*/
-void Flowsheet_eqFunction_2375(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2375};
-  modelica_boolean tmp708;
-  static const MMC_DEFSTRINGLIT(tmp709,78,"Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[2,3], has value: ");
-  modelica_string tmp710;
-  static int tmp711 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp711)
-  {
-    tmp708 = GreaterEq(data->localData[0]->realVars[380] /* MatStm4.compMasFlo[2,3] variable */,0.0);
-    if(!tmp708)
-    {
-      tmp710 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[380] /* MatStm4.compMasFlo[2,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp709),tmp710);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFlo[2,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp711 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2376
-type: ALGORITHM
-
-  assert(MatStm4.compMasFlo[3,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[3,1], has value: " + String(MatStm4.compMasFlo[3,1], "g"));
-*/
-void Flowsheet_eqFunction_2376(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2376};
-  modelica_boolean tmp712;
-  static const MMC_DEFSTRINGLIT(tmp713,78,"Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[3,1], has value: ");
-  modelica_string tmp714;
-  static int tmp715 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp715)
-  {
-    tmp712 = GreaterEq(data->localData[0]->realVars[381] /* MatStm4.compMasFlo[3,1] variable */,0.0);
-    if(!tmp712)
-    {
-      tmp714 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[381] /* MatStm4.compMasFlo[3,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp713),tmp714);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFlo[3,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp715 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2377
-type: ALGORITHM
-
-  assert(MatStm4.compMasFlo[3,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[3,2], has value: " + String(MatStm4.compMasFlo[3,2], "g"));
-*/
-void Flowsheet_eqFunction_2377(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2377};
-  modelica_boolean tmp716;
-  static const MMC_DEFSTRINGLIT(tmp717,78,"Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[3,2], has value: ");
-  modelica_string tmp718;
-  static int tmp719 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp719)
-  {
-    tmp716 = GreaterEq(data->localData[0]->realVars[382] /* MatStm4.compMasFlo[3,2] variable */,0.0);
-    if(!tmp716)
-    {
-      tmp718 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[382] /* MatStm4.compMasFlo[3,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp717),tmp718);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFlo[3,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp719 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2378
-type: ALGORITHM
-
-  assert(MatStm4.compMasFlo[3,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[3,3], has value: " + String(MatStm4.compMasFlo[3,3], "g"));
-*/
-void Flowsheet_eqFunction_2378(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2378};
-  modelica_boolean tmp720;
-  static const MMC_DEFSTRINGLIT(tmp721,78,"Variable violating min constraint: 0.0 <= MatStm4.compMasFlo[3,3], has value: ");
-  modelica_string tmp722;
-  static int tmp723 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp723)
-  {
-    tmp720 = GreaterEq(data->localData[0]->realVars[383] /* MatStm4.compMasFlo[3,3] variable */,0.0);
-    if(!tmp720)
-    {
-      tmp722 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[383] /* MatStm4.compMasFlo[3,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp721),tmp722);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm4.compMasFlo[3,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp723 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2216
-type: ALGORITHM
-
-  assert(MatStm1.compMasFlo[1,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[1,1], has value: " + String(MatStm1.compMasFlo[1,1], "g"));
-*/
-void Flowsheet_eqFunction_2216(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2216};
-  modelica_boolean tmp724;
-  static const MMC_DEFSTRINGLIT(tmp725,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[1,1], has value: ");
-  modelica_string tmp726;
-  static int tmp727 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp727)
-  {
-    tmp724 = GreaterEq(data->localData[0]->realVars[20] /* MatStm1.compMasFlo[1,1] variable */,0.0);
-    if(!tmp724)
-    {
-      tmp726 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[20] /* MatStm1.compMasFlo[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp725),tmp726);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[1,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp727 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2215
-type: ALGORITHM
-
-  assert(MatStm1.compMolFlo[1,1] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[1,1], has value: " + String(MatStm1.compMolFlo[1,1], "g"));
-*/
-void Flowsheet_eqFunction_2215(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2215};
-  modelica_boolean tmp728;
-  static const MMC_DEFSTRINGLIT(tmp729,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[1,1], has value: ");
-  modelica_string tmp730;
-  static int tmp731 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp731)
-  {
-    tmp728 = GreaterEq(data->localData[0]->realVars[56] /* MatStm1.compMolFlo[1,1] variable */,0.0);
-    if(!tmp728)
-    {
-      tmp730 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[56] /* MatStm1.compMolFlo[1,1] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp729),tmp730);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[1,1] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp731 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2214
-type: ALGORITHM
-
-  assert(MatStm1.compMasFlo[1,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[1,2], has value: " + String(MatStm1.compMasFlo[1,2], "g"));
-*/
-void Flowsheet_eqFunction_2214(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2214};
-  modelica_boolean tmp732;
-  static const MMC_DEFSTRINGLIT(tmp733,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[1,2], has value: ");
-  modelica_string tmp734;
-  static int tmp735 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp735)
-  {
-    tmp732 = GreaterEq(data->localData[0]->realVars[21] /* MatStm1.compMasFlo[1,2] variable */,0.0);
-    if(!tmp732)
-    {
-      tmp734 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[21] /* MatStm1.compMasFlo[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp733),tmp734);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[1,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp735 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2213
-type: ALGORITHM
-
-  assert(MatStm1.compMolFlo[1,2] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[1,2], has value: " + String(MatStm1.compMolFlo[1,2], "g"));
-*/
-void Flowsheet_eqFunction_2213(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2213};
-  modelica_boolean tmp736;
-  static const MMC_DEFSTRINGLIT(tmp737,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[1,2], has value: ");
-  modelica_string tmp738;
-  static int tmp739 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp739)
-  {
-    tmp736 = GreaterEq(data->localData[0]->realVars[57] /* MatStm1.compMolFlo[1,2] variable */,0.0);
-    if(!tmp736)
-    {
-      tmp738 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[57] /* MatStm1.compMolFlo[1,2] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp737),tmp738);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[1,2] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp739 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2212
-type: ALGORITHM
-
-  assert(MatStm1.compMasFlo[1,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[1,3], has value: " + String(MatStm1.compMasFlo[1,3], "g"));
-*/
-void Flowsheet_eqFunction_2212(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2212};
-  modelica_boolean tmp740;
-  static const MMC_DEFSTRINGLIT(tmp741,78,"Variable violating min constraint: 0.0 <= MatStm1.compMasFlo[1,3], has value: ");
-  modelica_string tmp742;
-  static int tmp743 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp743)
-  {
-    tmp740 = GreaterEq(data->localData[0]->realVars[22] /* MatStm1.compMasFlo[1,3] variable */,0.0);
-    if(!tmp740)
-    {
-      tmp742 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[22] /* MatStm1.compMasFlo[1,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp741),tmp742);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMasFlo[1,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp743 = 1;
-    }
-  }
-  TRACE_POP
-}
-
-/*
-equation index: 2211
-type: ALGORITHM
-
-  assert(MatStm1.compMolFlo[1,3] >= 0.0, "Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[1,3], has value: " + String(MatStm1.compMolFlo[1,3], "g"));
-*/
-void Flowsheet_eqFunction_2211(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,2211};
-  modelica_boolean tmp744;
-  static const MMC_DEFSTRINGLIT(tmp745,78,"Variable violating min constraint: 0.0 <= MatStm1.compMolFlo[1,3], has value: ");
-  modelica_string tmp746;
-  static int tmp747 = 0;
-  modelica_metatype tmpMeta[1] __attribute__((unused)) = {0};
-  if(!tmp747)
-  {
-    tmp744 = GreaterEq(data->localData[0]->realVars[58] /* MatStm1.compMolFlo[1,3] variable */,0.0);
-    if(!tmp744)
-    {
-      tmp746 = modelica_real_to_modelica_string_format(data->localData[0]->realVars[58] /* MatStm1.compMolFlo[1,3] variable */, (modelica_string) mmc_strings_len1[103]);
-      tmpMeta[0] = stringAppend(MMC_REFSTRINGLIT(tmp745),tmp746);
-      {
-        FILE_INFO info = {"C:/OMChemSimGUI/SimulationFiles/Simulator.mo",4172,3,4172,361,0};
-        omc_assert_warning(info, "The following assertion has been violated %sat time %f\nMatStm1.compMolFlo[1,3] >= 0.0", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-        omc_assert_warning_withEquationIndexes(info, equationIndexes, MMC_STRINGDATA(tmpMeta[0]));
-      }
-      tmp747 = 1;
+      tmp437 = 1;
     }
   }
   TRACE_POP
@@ -5706,341 +3361,203 @@ int Flowsheet_checkForAsserts(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
 
-  Flowsheet_eqFunction_2217(data, threadData);
+  Flowsheet_eqFunction_1235(data, threadData);
 
-  Flowsheet_eqFunction_2218(data, threadData);
+  Flowsheet_eqFunction_1236(data, threadData);
 
-  Flowsheet_eqFunction_2219(data, threadData);
+  Flowsheet_eqFunction_1237(data, threadData);
 
-  Flowsheet_eqFunction_2220(data, threadData);
+  Flowsheet_eqFunction_1238(data, threadData);
 
-  Flowsheet_eqFunction_2221(data, threadData);
+  Flowsheet_eqFunction_1239(data, threadData);
 
-  Flowsheet_eqFunction_2222(data, threadData);
+  Flowsheet_eqFunction_1240(data, threadData);
 
-  Flowsheet_eqFunction_2223(data, threadData);
+  Flowsheet_eqFunction_1241(data, threadData);
 
-  Flowsheet_eqFunction_2224(data, threadData);
+  Flowsheet_eqFunction_1242(data, threadData);
 
-  Flowsheet_eqFunction_2225(data, threadData);
+  Flowsheet_eqFunction_1243(data, threadData);
 
-  Flowsheet_eqFunction_2226(data, threadData);
+  Flowsheet_eqFunction_1244(data, threadData);
 
-  Flowsheet_eqFunction_2227(data, threadData);
+  Flowsheet_eqFunction_1245(data, threadData);
 
-  Flowsheet_eqFunction_2228(data, threadData);
+  Flowsheet_eqFunction_1246(data, threadData);
 
-  Flowsheet_eqFunction_2229(data, threadData);
+  Flowsheet_eqFunction_1247(data, threadData);
 
-  Flowsheet_eqFunction_2230(data, threadData);
+  Flowsheet_eqFunction_1248(data, threadData);
 
-  Flowsheet_eqFunction_2231(data, threadData);
+  Flowsheet_eqFunction_1249(data, threadData);
 
-  Flowsheet_eqFunction_2232(data, threadData);
+  Flowsheet_eqFunction_1250(data, threadData);
 
-  Flowsheet_eqFunction_2233(data, threadData);
+  Flowsheet_eqFunction_1251(data, threadData);
 
-  Flowsheet_eqFunction_2234(data, threadData);
+  Flowsheet_eqFunction_1252(data, threadData);
 
-  Flowsheet_eqFunction_2235(data, threadData);
+  Flowsheet_eqFunction_1253(data, threadData);
 
-  Flowsheet_eqFunction_2236(data, threadData);
+  Flowsheet_eqFunction_1254(data, threadData);
 
-  Flowsheet_eqFunction_2237(data, threadData);
+  Flowsheet_eqFunction_1255(data, threadData);
 
-  Flowsheet_eqFunction_2238(data, threadData);
+  Flowsheet_eqFunction_1256(data, threadData);
 
-  Flowsheet_eqFunction_2239(data, threadData);
+  Flowsheet_eqFunction_1257(data, threadData);
 
-  Flowsheet_eqFunction_2240(data, threadData);
+  Flowsheet_eqFunction_1258(data, threadData);
 
-  Flowsheet_eqFunction_2241(data, threadData);
+  Flowsheet_eqFunction_1259(data, threadData);
 
-  Flowsheet_eqFunction_2242(data, threadData);
+  Flowsheet_eqFunction_1260(data, threadData);
 
-  Flowsheet_eqFunction_2243(data, threadData);
+  Flowsheet_eqFunction_1261(data, threadData);
 
-  Flowsheet_eqFunction_2244(data, threadData);
+  Flowsheet_eqFunction_1262(data, threadData);
 
-  Flowsheet_eqFunction_2245(data, threadData);
+  Flowsheet_eqFunction_1263(data, threadData);
 
-  Flowsheet_eqFunction_2246(data, threadData);
+  Flowsheet_eqFunction_1264(data, threadData);
 
-  Flowsheet_eqFunction_2247(data, threadData);
+  Flowsheet_eqFunction_1265(data, threadData);
 
-  Flowsheet_eqFunction_2248(data, threadData);
+  Flowsheet_eqFunction_1266(data, threadData);
 
-  Flowsheet_eqFunction_2249(data, threadData);
+  Flowsheet_eqFunction_1267(data, threadData);
 
-  Flowsheet_eqFunction_2250(data, threadData);
+  Flowsheet_eqFunction_1268(data, threadData);
 
-  Flowsheet_eqFunction_2251(data, threadData);
+  Flowsheet_eqFunction_1269(data, threadData);
 
-  Flowsheet_eqFunction_2252(data, threadData);
+  Flowsheet_eqFunction_1270(data, threadData);
 
-  Flowsheet_eqFunction_2253(data, threadData);
+  Flowsheet_eqFunction_1271(data, threadData);
 
-  Flowsheet_eqFunction_2254(data, threadData);
+  Flowsheet_eqFunction_1272(data, threadData);
 
-  Flowsheet_eqFunction_2255(data, threadData);
+  Flowsheet_eqFunction_1273(data, threadData);
 
-  Flowsheet_eqFunction_2256(data, threadData);
+  Flowsheet_eqFunction_1274(data, threadData);
 
-  Flowsheet_eqFunction_2257(data, threadData);
+  Flowsheet_eqFunction_1275(data, threadData);
 
-  Flowsheet_eqFunction_2258(data, threadData);
+  Flowsheet_eqFunction_1276(data, threadData);
 
-  Flowsheet_eqFunction_2259(data, threadData);
+  Flowsheet_eqFunction_1277(data, threadData);
 
-  Flowsheet_eqFunction_2260(data, threadData);
+  Flowsheet_eqFunction_1278(data, threadData);
 
-  Flowsheet_eqFunction_2261(data, threadData);
+  Flowsheet_eqFunction_1279(data, threadData);
 
-  Flowsheet_eqFunction_2262(data, threadData);
+  Flowsheet_eqFunction_1280(data, threadData);
 
-  Flowsheet_eqFunction_2263(data, threadData);
+  Flowsheet_eqFunction_1281(data, threadData);
 
-  Flowsheet_eqFunction_2264(data, threadData);
+  Flowsheet_eqFunction_1282(data, threadData);
 
-  Flowsheet_eqFunction_2265(data, threadData);
+  Flowsheet_eqFunction_1283(data, threadData);
 
-  Flowsheet_eqFunction_2266(data, threadData);
+  Flowsheet_eqFunction_1284(data, threadData);
 
-  Flowsheet_eqFunction_2267(data, threadData);
+  Flowsheet_eqFunction_1285(data, threadData);
 
-  Flowsheet_eqFunction_2268(data, threadData);
+  Flowsheet_eqFunction_1286(data, threadData);
 
-  Flowsheet_eqFunction_2269(data, threadData);
+  Flowsheet_eqFunction_1287(data, threadData);
 
-  Flowsheet_eqFunction_2270(data, threadData);
+  Flowsheet_eqFunction_1288(data, threadData);
 
-  Flowsheet_eqFunction_2271(data, threadData);
+  Flowsheet_eqFunction_1289(data, threadData);
 
-  Flowsheet_eqFunction_2272(data, threadData);
+  Flowsheet_eqFunction_1290(data, threadData);
 
-  Flowsheet_eqFunction_2273(data, threadData);
+  Flowsheet_eqFunction_1291(data, threadData);
 
-  Flowsheet_eqFunction_2274(data, threadData);
+  Flowsheet_eqFunction_1292(data, threadData);
 
-  Flowsheet_eqFunction_2275(data, threadData);
+  Flowsheet_eqFunction_1293(data, threadData);
 
-  Flowsheet_eqFunction_2276(data, threadData);
+  Flowsheet_eqFunction_1294(data, threadData);
 
-  Flowsheet_eqFunction_2277(data, threadData);
+  Flowsheet_eqFunction_1295(data, threadData);
 
-  Flowsheet_eqFunction_2278(data, threadData);
+  Flowsheet_eqFunction_1296(data, threadData);
 
-  Flowsheet_eqFunction_2279(data, threadData);
+  Flowsheet_eqFunction_1297(data, threadData);
 
-  Flowsheet_eqFunction_2280(data, threadData);
+  Flowsheet_eqFunction_1298(data, threadData);
 
-  Flowsheet_eqFunction_2281(data, threadData);
+  Flowsheet_eqFunction_1299(data, threadData);
 
-  Flowsheet_eqFunction_2282(data, threadData);
+  Flowsheet_eqFunction_1300(data, threadData);
 
-  Flowsheet_eqFunction_2283(data, threadData);
+  Flowsheet_eqFunction_1301(data, threadData);
 
-  Flowsheet_eqFunction_2284(data, threadData);
+  Flowsheet_eqFunction_1302(data, threadData);
 
-  Flowsheet_eqFunction_2285(data, threadData);
+  Flowsheet_eqFunction_1303(data, threadData);
 
-  Flowsheet_eqFunction_2286(data, threadData);
+  Flowsheet_eqFunction_1304(data, threadData);
 
-  Flowsheet_eqFunction_2287(data, threadData);
+  Flowsheet_eqFunction_1305(data, threadData);
 
-  Flowsheet_eqFunction_2288(data, threadData);
+  Flowsheet_eqFunction_1306(data, threadData);
 
-  Flowsheet_eqFunction_2289(data, threadData);
+  Flowsheet_eqFunction_1307(data, threadData);
 
-  Flowsheet_eqFunction_2290(data, threadData);
+  Flowsheet_eqFunction_1308(data, threadData);
 
-  Flowsheet_eqFunction_2291(data, threadData);
+  Flowsheet_eqFunction_1309(data, threadData);
 
-  Flowsheet_eqFunction_2292(data, threadData);
+  Flowsheet_eqFunction_1310(data, threadData);
 
-  Flowsheet_eqFunction_2293(data, threadData);
+  Flowsheet_eqFunction_1311(data, threadData);
 
-  Flowsheet_eqFunction_2294(data, threadData);
+  Flowsheet_eqFunction_1312(data, threadData);
 
-  Flowsheet_eqFunction_2295(data, threadData);
+  Flowsheet_eqFunction_1313(data, threadData);
 
-  Flowsheet_eqFunction_2296(data, threadData);
+  Flowsheet_eqFunction_1314(data, threadData);
 
-  Flowsheet_eqFunction_2297(data, threadData);
+  Flowsheet_eqFunction_1315(data, threadData);
 
-  Flowsheet_eqFunction_2298(data, threadData);
+  Flowsheet_eqFunction_1316(data, threadData);
 
-  Flowsheet_eqFunction_2299(data, threadData);
+  Flowsheet_eqFunction_1317(data, threadData);
 
-  Flowsheet_eqFunction_2300(data, threadData);
+  Flowsheet_eqFunction_1318(data, threadData);
 
-  Flowsheet_eqFunction_2301(data, threadData);
+  Flowsheet_eqFunction_1319(data, threadData);
 
-  Flowsheet_eqFunction_2302(data, threadData);
+  Flowsheet_eqFunction_1320(data, threadData);
 
-  Flowsheet_eqFunction_2303(data, threadData);
+  Flowsheet_eqFunction_1321(data, threadData);
 
-  Flowsheet_eqFunction_2304(data, threadData);
+  Flowsheet_eqFunction_1322(data, threadData);
 
-  Flowsheet_eqFunction_2305(data, threadData);
+  Flowsheet_eqFunction_1323(data, threadData);
 
-  Flowsheet_eqFunction_2306(data, threadData);
+  Flowsheet_eqFunction_1324(data, threadData);
 
-  Flowsheet_eqFunction_2307(data, threadData);
+  Flowsheet_eqFunction_1325(data, threadData);
 
-  Flowsheet_eqFunction_2308(data, threadData);
+  Flowsheet_eqFunction_1326(data, threadData);
 
-  Flowsheet_eqFunction_2309(data, threadData);
+  Flowsheet_eqFunction_1327(data, threadData);
 
-  Flowsheet_eqFunction_2310(data, threadData);
+  Flowsheet_eqFunction_1328(data, threadData);
 
-  Flowsheet_eqFunction_2311(data, threadData);
+  Flowsheet_eqFunction_1329(data, threadData);
 
-  Flowsheet_eqFunction_2312(data, threadData);
+  Flowsheet_eqFunction_1234(data, threadData);
 
-  Flowsheet_eqFunction_2313(data, threadData);
+  Flowsheet_eqFunction_1233(data, threadData);
 
-  Flowsheet_eqFunction_2314(data, threadData);
+  Flowsheet_eqFunction_1232(data, threadData);
 
-  Flowsheet_eqFunction_2315(data, threadData);
-
-  Flowsheet_eqFunction_2316(data, threadData);
-
-  Flowsheet_eqFunction_2317(data, threadData);
-
-  Flowsheet_eqFunction_2318(data, threadData);
-
-  Flowsheet_eqFunction_2319(data, threadData);
-
-  Flowsheet_eqFunction_2320(data, threadData);
-
-  Flowsheet_eqFunction_2321(data, threadData);
-
-  Flowsheet_eqFunction_2322(data, threadData);
-
-  Flowsheet_eqFunction_2323(data, threadData);
-
-  Flowsheet_eqFunction_2324(data, threadData);
-
-  Flowsheet_eqFunction_2325(data, threadData);
-
-  Flowsheet_eqFunction_2326(data, threadData);
-
-  Flowsheet_eqFunction_2327(data, threadData);
-
-  Flowsheet_eqFunction_2328(data, threadData);
-
-  Flowsheet_eqFunction_2329(data, threadData);
-
-  Flowsheet_eqFunction_2330(data, threadData);
-
-  Flowsheet_eqFunction_2331(data, threadData);
-
-  Flowsheet_eqFunction_2332(data, threadData);
-
-  Flowsheet_eqFunction_2333(data, threadData);
-
-  Flowsheet_eqFunction_2334(data, threadData);
-
-  Flowsheet_eqFunction_2335(data, threadData);
-
-  Flowsheet_eqFunction_2336(data, threadData);
-
-  Flowsheet_eqFunction_2337(data, threadData);
-
-  Flowsheet_eqFunction_2338(data, threadData);
-
-  Flowsheet_eqFunction_2339(data, threadData);
-
-  Flowsheet_eqFunction_2340(data, threadData);
-
-  Flowsheet_eqFunction_2341(data, threadData);
-
-  Flowsheet_eqFunction_2342(data, threadData);
-
-  Flowsheet_eqFunction_2343(data, threadData);
-
-  Flowsheet_eqFunction_2344(data, threadData);
-
-  Flowsheet_eqFunction_2345(data, threadData);
-
-  Flowsheet_eqFunction_2346(data, threadData);
-
-  Flowsheet_eqFunction_2347(data, threadData);
-
-  Flowsheet_eqFunction_2348(data, threadData);
-
-  Flowsheet_eqFunction_2349(data, threadData);
-
-  Flowsheet_eqFunction_2350(data, threadData);
-
-  Flowsheet_eqFunction_2351(data, threadData);
-
-  Flowsheet_eqFunction_2352(data, threadData);
-
-  Flowsheet_eqFunction_2353(data, threadData);
-
-  Flowsheet_eqFunction_2354(data, threadData);
-
-  Flowsheet_eqFunction_2355(data, threadData);
-
-  Flowsheet_eqFunction_2356(data, threadData);
-
-  Flowsheet_eqFunction_2357(data, threadData);
-
-  Flowsheet_eqFunction_2358(data, threadData);
-
-  Flowsheet_eqFunction_2359(data, threadData);
-
-  Flowsheet_eqFunction_2360(data, threadData);
-
-  Flowsheet_eqFunction_2361(data, threadData);
-
-  Flowsheet_eqFunction_2362(data, threadData);
-
-  Flowsheet_eqFunction_2363(data, threadData);
-
-  Flowsheet_eqFunction_2364(data, threadData);
-
-  Flowsheet_eqFunction_2365(data, threadData);
-
-  Flowsheet_eqFunction_2366(data, threadData);
-
-  Flowsheet_eqFunction_2367(data, threadData);
-
-  Flowsheet_eqFunction_2368(data, threadData);
-
-  Flowsheet_eqFunction_2369(data, threadData);
-
-  Flowsheet_eqFunction_2370(data, threadData);
-
-  Flowsheet_eqFunction_2371(data, threadData);
-
-  Flowsheet_eqFunction_2372(data, threadData);
-
-  Flowsheet_eqFunction_2373(data, threadData);
-
-  Flowsheet_eqFunction_2374(data, threadData);
-
-  Flowsheet_eqFunction_2375(data, threadData);
-
-  Flowsheet_eqFunction_2376(data, threadData);
-
-  Flowsheet_eqFunction_2377(data, threadData);
-
-  Flowsheet_eqFunction_2378(data, threadData);
-
-  Flowsheet_eqFunction_2216(data, threadData);
-
-  Flowsheet_eqFunction_2215(data, threadData);
-
-  Flowsheet_eqFunction_2214(data, threadData);
-
-  Flowsheet_eqFunction_2213(data, threadData);
-
-  Flowsheet_eqFunction_2212(data, threadData);
-
-  Flowsheet_eqFunction_2211(data, threadData);
+  Flowsheet_eqFunction_1231(data, threadData);
   
   TRACE_POP
   return 0;
