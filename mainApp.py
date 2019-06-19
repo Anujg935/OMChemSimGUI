@@ -19,10 +19,7 @@ from pythonGenerator import PythonFileGenerator
 ui,_ = loadUiType('main.ui')
 conn_csv=pd.DataFrame(columns=['id','comptype','in1','in2','in3','in4','in5','op1','op2','op3','op4','op5','T','P','MolFlow','CompMolFrac'])
 conn_csv.set_index('id',inplace=True)
-comp_dict={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,3,1]}
-a=0
-component = {}
-
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,3,1]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -395,7 +392,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         return center
  
  
-class NodeItem(QtWidgets.QGraphicsPixmapItem):
+class NodeItem(QtWidgets.QGraphicsItem):
     def __init__(self,comptype):
         try:
             super(NodeItem, self).__init__()
@@ -498,7 +495,7 @@ class NodeItem(QtWidgets.QGraphicsPixmapItem):
             name=self.name
             objid=id(self)
             print(id(self))
-            self.dockWidget=dockWidget(name,conn_csv,self.mainwindow)
+            self.dockWidget=dockWidget(name,conn_csv)
             self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)
             self.dockWidget.stackedWidget.setCurrentIndex(1)
         except Exception as e:
@@ -549,7 +546,7 @@ class ParameterSet(QWidget):
         self.show()
 '''
 
-class graphicsItem(QGraphicsPixmapItem):
+class graphicsItem(QGraphicsItem):
     global a
     global scene
     def __init__ (self):

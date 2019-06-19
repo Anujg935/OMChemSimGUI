@@ -7,16 +7,15 @@ ui_dialog,_ = loadUiType('comp_selector.ui')
 
 
 df = pd.read_csv("compoundsDatabase.csv")
+thermo_package = []
 compond_selected = []
 class componentSelector(QDialog,ui_dialog):
     def __init__(self,parent=None):
         #super(componentSelector,self).__init__(parent)
         QDialog.__init__(self,parent)
         self.setupUi(self)
+        
         self.lines = [line.rstrip('\n') for line in open('compounds.txt')]
-        #if(self.lines):
-           # print("ok")
-        #print(df.columns)
         model = QStringListModel()
         model.setStringList(self.lines)
 
@@ -33,7 +32,8 @@ class componentSelector(QDialog,ui_dialog):
         self.pushButton_3.clicked.connect(self.removeItems)
     def compoundSelection(self):
         comp = self.lineEdit.text()
-
+        thermo_package.append(str(self.comboBox.currentText()))
+        print(thermo_package)
         if comp in self.lines:
 
             compond_selected.append(comp)

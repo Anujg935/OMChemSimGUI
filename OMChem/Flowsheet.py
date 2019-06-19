@@ -12,6 +12,7 @@ class Flowsheet():
 		self.data = []
 		self.compounds = []
 		self.interface = ''
+		self.thermo_package = ''
 		self.omc_path = None
 		self.curr_path = os.getcwd()
 		self.sim_dir_path = os.path.join(self.curr_path, self.sim_name)
@@ -19,7 +20,10 @@ class Flowsheet():
 		self.eqn_mos_path = os.path.join(self.sim_dir_path,'simulateEQN.mos')
 		self.sm_mos_path = os.path.join(self.sim_dir_path,'simulateSM.mos')
 		self.resdata = []
-
+	
+	
+	def Selected_thermo_package(self,thermopackage):
+		self.thermo_package = thermopackage
 	def get_omc_path(self):
 		try:
 		    self.omhome = os.environ.get('OPENMODELICAHOME')
@@ -222,9 +226,15 @@ class Flowsheet():
 
 	def simulateEQN(self):
 		self.data = []
+		print("##################################################")
+		print(self.thermo_package)
+		print("##################################################")
 		self.sim_method = 'Eqn'
 		self.data.append("model Flowsheet\n")
-		self.data.append("model ms\n extends Simulator.Streams.Material_Stream;\n extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;\nend ms;\n")
+		self.data.append("model ms\n") 
+		self.data.append("extends Simulator.Streams.Material_Stream;\n ")
+		self.data.append("extends Simulator.Files.Thermodynamic_Packages."+self.thermo_package+";\n")
+		self.data.append("end ms;\n")
   		
 		for c in self.compounds:
 			ucase = c.title()

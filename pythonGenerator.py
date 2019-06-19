@@ -3,14 +3,14 @@ from component_selector import *
 import os
 def PythonFileGenerator(data):
     f = open("filepy.py","w+")
-
+    print(str(thermo_package[0]))
     f.write("from OMChem.Flowsheet import Flowsheet\n")
     for i in list(data['comptype'].unique()):
         f.write("from OMChem."+i+" import " +i+"\n")
 
     f.write("def main():\n")
     f.write("\tcomp = " + str(compond_selected )+"\n")
-
+    f.write("\tthermo = "+repr(str(thermo_package[0]))+"\n")
     for i in range(len(data.index)):
         if(data.get('comptype')[i] == 'MatStm'):
             f.write('\t'+str(data.index.values[i])+" = MatStm(name="+repr(str(data.index.values[i]))+",CompNames=comp" +",T="+str(data.get('T')[i]) + ",P="+str(data.get('P')[i]) +",MolFlow="+str(data.get('MolFlow')[i])+",CompMolFrac="+str(data.get('CompMolFrac')[i]) +")\n")
@@ -48,6 +48,7 @@ def PythonFileGenerator(data):
 
 
     f.write("\tf = Flowsheet()\n")
+    f.write("\tf.Selected_thermo_package(thermo)\n")
     f.write("\tf.add_comp_list(comp)\n")
     for i in range(len(data.index)):
         if(str(data.index.values[i]) in outputStmslst):
