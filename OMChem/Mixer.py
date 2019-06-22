@@ -1,5 +1,5 @@
 class Mixer():
-    def __init__(self,name='mixer',NOI=2,Pcal = 'Inlet_Average'):
+    def __init__(self,name='mixer',NOI=5,Pcal = 'Inlet_Average'):
         self.NOI = NOI
         self.Pcal = Pcal
         self.name = name
@@ -9,6 +9,11 @@ class Mixer():
         self.OutputStms = None
         self.type = 'Mixer'
 
+    def paramgetter(self):
+        dict = {"NOI":None}
+        return dict
+    def paramsetter(self,dict):
+        self.NOI = dict["NOI"]
     def OM_Flowsheet_Init(self, addedcomp):
         self.OM_data_init = ''
         comp_count = len(addedcomp)
