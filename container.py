@@ -3,15 +3,16 @@ from OMChem.MatStm import MatStm
 from OMChem.Mixer import Mixer
 from component_selector import *
 from collections import defaultdict
+import itertools
 class Container():
     def __init__(self):
         self.unitOp = []
         self.thermoPackage = None
         self.compounds = None
         self.conn = defaultdict(list)
-        self.op={}
-        self.ip={}
-        self.opl=[]
+        self.op=[]
+        self.ip=defaultdict(list)
+        self.opl=None
 
     def addUnitOp(self,obj):
         if(obj in self.unitOp):
@@ -29,22 +30,29 @@ class Container():
         try:
             opLst=[]
             stm = ['MatStm','EngStm']
-            ipLst=[]
+            #ipLst=[]
             for i in self.conn:
                 if i.type not in stm:
                     opLst=self.conn[i]
-                    self.op[i]=opLst
+                    self.op[i]= opLst #.append(self.conn[i])
 
                 for j in range(len(self.conn[i])):
                     if self.conn[i][j].type not in stm:
-                        ipLst.append(i)
-                        self.ip[self.conn[i][j]]=ipLst
+                        #ipLst.append(i)
+                        self.ip[self.conn[i][j]].append(i)
                     
             print("###### output #####\n",self.op)
             print("###### input #####\n",self.ip)
             for i in self.op:
                 i.connect(InputStms=self.ip[i],OutputStms=self.op[i])
-                self.opl=[n for n in self.op[i]]
+                #self.opl=[n for n in self.op[i]]
+            
+            o = list(self.op.values())
+            flat=itertools.chain.from_iterable(o)
+            flat1=itertools.chain.from_iterable(flat)
+            self.opl = list(flat1)
+            print("#################values",o)
+            print("#################flat",self.opl)
         except Exception as e:
             print(e)
             
