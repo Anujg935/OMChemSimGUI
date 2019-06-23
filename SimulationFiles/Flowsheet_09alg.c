@@ -65,8 +65,8 @@ extern void Flowsheet_eqFunction_578(DATA* data, threadData_t *threadData);
 extern void Flowsheet_eqFunction_579(DATA* data, threadData_t *threadData);
 extern void Flowsheet_eqFunction_580(DATA* data, threadData_t *threadData);
 extern void Flowsheet_eqFunction_581(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_612(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_613(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_582(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_583(DATA* data, threadData_t *threadData);
 extern void Flowsheet_eqFunction_614(DATA* data, threadData_t *threadData);
 extern void Flowsheet_eqFunction_615(DATA* data, threadData_t *threadData);
 extern void Flowsheet_eqFunction_616(DATA* data, threadData_t *threadData);
@@ -335,9 +335,9 @@ static void functionAlg_system0(DATA *data, threadData_t *threadData)
 
     Flowsheet_eqFunction_581(data, threadData);
 
-    Flowsheet_eqFunction_612(data, threadData);
+    Flowsheet_eqFunction_582(data, threadData);
 
-    Flowsheet_eqFunction_613(data, threadData);
+    Flowsheet_eqFunction_583(data, threadData);
 
     Flowsheet_eqFunction_614(data, threadData);
 

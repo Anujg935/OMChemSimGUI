@@ -317,9 +317,14 @@ class NodeItem(QtWidgets.QGraphicsItem):
             self.obj = helperFunc(self.type,self.name)
             self.container=container
             self.container.addUnitOp(self.obj)
-            self.mainwindow=findMainWindow()
-            self.dockWidget=dockWidget(self.name,self.type,self.obj)
-            self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)
+            if(self.type != 'Mixer'):
+                self.mainwindow=findMainWindow()
+                self.dockWidget=dockWidget(self.name,self.type,self.obj)
+                self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)
+                self.dockWidget.hide()
+            #self.mainwindow=findMainWindow()
+            #self.dockWidget=dockWidget(self.name,self.type,self.obj)
+            #self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)
             #self.dockWidget.hide()
             comp_dict[comptype][0]+=1
             
