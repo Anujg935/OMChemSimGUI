@@ -20,15 +20,14 @@ class dockWidget(QDockWidget,ui_dialog):
         self.inputparamslist()
         self.pushButton.clicked.connect(self.param)
         self.dict = {}
-        
-
+        self.f = True
     def inputparamslist(self):
         c=0
         for i in self.inputdict:
             l = QLineEdit()
             self.formLayout.addRow(QLabel(i+":"),l )
             self.inputdict[i] = l
-            
+
     def param(self):
         try:
             if all(self.inputdict.values()):
@@ -36,16 +35,13 @@ class dockWidget(QDockWidget,ui_dialog):
                     self.dict[i] = self.inputdict[i].text()
 
                 self.obj.paramsetter(self.dict)
+                self.f = False
                 self.hide()
             else:
                 QMessageBox.about(self, 'Important', "Please Provide all the fields data")
         except Exception as e:
             print(e)
 
-    def flag(self):
-        return True
-
-    def getter(self):
-        return (self.dict,self.flag())
+  
     
         

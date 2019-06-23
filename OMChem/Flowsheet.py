@@ -244,7 +244,7 @@ class Flowsheet():
 		for unitop in self.UnitOpn:
 			self.data.append(unitop[0].OM_Flowsheet_Init(self.compounds))
              
-
+		
 		self.data.append("equation\n")
         
 		for unitop in self.UnitOpn:

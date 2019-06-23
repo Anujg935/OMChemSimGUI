@@ -1,9 +1,11 @@
 from functools import partial
+from collections import defaultdict
 import sys
 import numpy as np
 from OMChem.Flowsheet import Flowsheet
 from OMChem.MatStm import MatStm
 from OMChem.Mixer import Mixer
+from OMChem.Splitter import Splitter
 import pandas as pd
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -23,7 +25,7 @@ from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,4,1]}
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,2,1],'Splitter':[1,1,2]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -47,7 +49,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton_6.clicked.connect(self.generatef)
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
         self.pushButton_8.clicked.connect(self.selectCompounds)
-
+        self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
     def selectCompounds(self):
         self.comp.show()
     def generatef(self):
@@ -261,6 +263,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         
     def mouseReleaseEvent(self, event):
         try:
+            b = {}
             item = self.scene().itemAt(event.scenePos().toPoint(),QtGui.QTransform())
             if (self.type == 'op') and (item.type == 'in'):
                 print("forward")
@@ -270,15 +273,20 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 item.inLines.append(self.newLine)
 
                 self.newLine.pointB = item.getCenter()
-                self.container.conn[self.newLine.source.parent.obj]=self.newLine.target.parent.obj
-            
+                self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
+                #b[self.newLine.target.parent.obj].append(self.newLine.source.parent.obj)
+                print(self.container.conn)
+                print(b)
             elif (self.type =='in') and (item.type == 'op'):
                 print("back")
                 self.newLine.source = item
                 self.newLine.target = self
                 item.outLines.append(self.newLine)
                 self.newLine.pointA = item.getCenter()
-                self.container.conn[self.newLine.source.parent.obj]=self.newLine.target.parent.obj
+                self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
+                #b[self.newLine.target.parent.obj].append(self.newLine.source.parent.obj)
+                print(self.container.conn)
+                print(b)
             else:
                 print("del")
                 self.scene().removeItem(self.newLine)
@@ -301,6 +309,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
 class NodeItem(QtWidgets.QGraphicsItem):
     def __init__(self,comptype,container):
         try:
+            l = ['Mixer','Splitter']
             super(NodeItem, self).__init__()
             self.name = comptype + str(comp_dict[comptype][0])
             self.type = comptype
@@ -309,11 +318,11 @@ class NodeItem(QtWidgets.QGraphicsItem):
             self.obj = helperFunc(self.type,self.name)
             self.container=container
             self.container.addUnitOp(self.obj)
-            if(self.type != 'Mixer'):
-                self.mainwindow=findMainWindow()
-                self.dockWidget=dockWidget(self.name,self.type,self.obj)
-                self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)
-                self.dockWidget.hide()
+            #if(self.type not in l):
+            self.mainwindow=findMainWindow()
+            self.dockWidget=dockWidget(self.name,self.type,self.obj)
+            self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)
+            #self.dockWidget.hide()
             comp_dict[comptype][0]+=1
             
             self.pic=QtGui.QPixmap("Capture.png")
@@ -382,7 +391,6 @@ class NodeItem(QtWidgets.QGraphicsItem):
         try:
             print ("DoubleClick")
             self.dockWidget.show()
-            dicta,flag = self.dockWidget.getter()
             '''
             self.dockWidget=dockWidget(name,self.type,conn_csv)
             self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)

@@ -8,556 +8,84 @@ extern "C" {
 /* inner equations */
 
 /*
-equation index: 387
-type: SIMPLE_ASSIGN
-MatStm3._compMolEnth[3,2] = Simulator.Files.Thermodynamic_Functions.HVapId(MatStm3.comp[2].SH, {MatStm3.comp[2].VapCp[1], MatStm3.comp[2].VapCp[2], MatStm3.comp[2].VapCp[3], MatStm3.comp[2].VapCp[4], MatStm3.comp[2].VapCp[5], MatStm3.comp[2].VapCp[6]}, {MatStm3.comp[2].HOV[1], MatStm3.comp[2].HOV[2], MatStm3.comp[2].HOV[3], MatStm3.comp[2].HOV[4], MatStm3.comp[2].HOV[5], MatStm3.comp[2].HOV[6]}, MatStm3.comp[2].Tc, MatStm3.T)
-*/
-void Flowsheet_eqFunction_387(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,387};
-  real_array tmp0;
-  real_array tmp1;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[600], (modelica_real)data->simulationInfo->realParameter[601], (modelica_real)data->simulationInfo->realParameter[602], (modelica_real)data->simulationInfo->realParameter[603], (modelica_real)data->simulationInfo->realParameter[604], (modelica_real)data->simulationInfo->realParameter[605]);
-  array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[500], (modelica_real)data->simulationInfo->realParameter[501], (modelica_real)data->simulationInfo->realParameter[502], (modelica_real)data->simulationInfo->realParameter[503], (modelica_real)data->simulationInfo->realParameter[504], (modelica_real)data->simulationInfo->realParameter[505]);
-  data->localData[0]->realVars[213] /* MatStm3.compMolEnth[3,2] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HVapId(threadData, data->simulationInfo->realParameter[565], tmp0, tmp1, data->simulationInfo->realParameter[575], data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 388
-type: SIMPLE_ASSIGN
-MatStm3._Psat[2] = Simulator.Files.Thermodynamic_Functions.Psat({MatStm3.comp[2].VP[1], MatStm3.comp[2].VP[2], MatStm3.comp[2].VP[3], MatStm3.comp[2].VP[4], MatStm3.comp[2].VP[5], MatStm3.comp[2].VP[6]}, MatStm3.T)
-*/
-void Flowsheet_eqFunction_388(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,388};
-  real_array tmp0;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[588], (modelica_real)data->simulationInfo->realParameter[589], (modelica_real)data->simulationInfo->realParameter[590], (modelica_real)data->simulationInfo->realParameter[591], (modelica_real)data->simulationInfo->realParameter[592], (modelica_real)data->simulationInfo->realParameter[593]);
-  data->localData[0]->realVars[194] /* MatStm3.Psat[2] variable */ = omc_Simulator_Files_Thermodynamic__Functions_Psat(threadData, tmp0, data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 389
-type: SIMPLE_ASSIGN
-MatStm3._compMolEnth[2,2] = Simulator.Files.Thermodynamic_Functions.HLiqId(MatStm3.comp[2].SH, {MatStm3.comp[2].VapCp[1], MatStm3.comp[2].VapCp[2], MatStm3.comp[2].VapCp[3], MatStm3.comp[2].VapCp[4], MatStm3.comp[2].VapCp[5], MatStm3.comp[2].VapCp[6]}, {MatStm3.comp[2].HOV[1], MatStm3.comp[2].HOV[2], MatStm3.comp[2].HOV[3], MatStm3.comp[2].HOV[4], MatStm3.comp[2].HOV[5], MatStm3.comp[2].HOV[6]}, MatStm3.comp[2].Tc, MatStm3.T)
-*/
-void Flowsheet_eqFunction_389(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,389};
-  real_array tmp0;
-  real_array tmp1;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[600], (modelica_real)data->simulationInfo->realParameter[601], (modelica_real)data->simulationInfo->realParameter[602], (modelica_real)data->simulationInfo->realParameter[603], (modelica_real)data->simulationInfo->realParameter[604], (modelica_real)data->simulationInfo->realParameter[605]);
-  array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[500], (modelica_real)data->simulationInfo->realParameter[501], (modelica_real)data->simulationInfo->realParameter[502], (modelica_real)data->simulationInfo->realParameter[503], (modelica_real)data->simulationInfo->realParameter[504], (modelica_real)data->simulationInfo->realParameter[505]);
-  data->localData[0]->realVars[211] /* MatStm3.compMolEnth[2,2] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HLiqId(threadData, data->simulationInfo->realParameter[565], tmp0, tmp1, data->simulationInfo->realParameter[575], data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 390
-type: SIMPLE_ASSIGN
-MatStm3._compMolEnth[3,1] = Simulator.Files.Thermodynamic_Functions.HVapId(MatStm3.comp[1].SH, {MatStm3.comp[1].VapCp[1], MatStm3.comp[1].VapCp[2], MatStm3.comp[1].VapCp[3], MatStm3.comp[1].VapCp[4], MatStm3.comp[1].VapCp[5], MatStm3.comp[1].VapCp[6]}, {MatStm3.comp[1].HOV[1], MatStm3.comp[1].HOV[2], MatStm3.comp[1].HOV[3], MatStm3.comp[1].HOV[4], MatStm3.comp[1].HOV[5], MatStm3.comp[1].HOV[6]}, MatStm3.comp[1].Tc, MatStm3.T)
-*/
-void Flowsheet_eqFunction_390(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,390};
-  real_array tmp0;
-  real_array tmp1;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[594], (modelica_real)data->simulationInfo->realParameter[595], (modelica_real)data->simulationInfo->realParameter[596], (modelica_real)data->simulationInfo->realParameter[597], (modelica_real)data->simulationInfo->realParameter[598], (modelica_real)data->simulationInfo->realParameter[599]);
-  array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[494], (modelica_real)data->simulationInfo->realParameter[495], (modelica_real)data->simulationInfo->realParameter[496], (modelica_real)data->simulationInfo->realParameter[497], (modelica_real)data->simulationInfo->realParameter[498], (modelica_real)data->simulationInfo->realParameter[499]);
-  data->localData[0]->realVars[212] /* MatStm3.compMolEnth[3,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HVapId(threadData, data->simulationInfo->realParameter[564], tmp0, tmp1, data->simulationInfo->realParameter[574], data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 391
-type: SIMPLE_ASSIGN
-MatStm3._compMolEnth[2,1] = Simulator.Files.Thermodynamic_Functions.HLiqId(MatStm3.comp[1].SH, {MatStm3.comp[1].VapCp[1], MatStm3.comp[1].VapCp[2], MatStm3.comp[1].VapCp[3], MatStm3.comp[1].VapCp[4], MatStm3.comp[1].VapCp[5], MatStm3.comp[1].VapCp[6]}, {MatStm3.comp[1].HOV[1], MatStm3.comp[1].HOV[2], MatStm3.comp[1].HOV[3], MatStm3.comp[1].HOV[4], MatStm3.comp[1].HOV[5], MatStm3.comp[1].HOV[6]}, MatStm3.comp[1].Tc, MatStm3.T)
-*/
-void Flowsheet_eqFunction_391(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,391};
-  real_array tmp0;
-  real_array tmp1;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[594], (modelica_real)data->simulationInfo->realParameter[595], (modelica_real)data->simulationInfo->realParameter[596], (modelica_real)data->simulationInfo->realParameter[597], (modelica_real)data->simulationInfo->realParameter[598], (modelica_real)data->simulationInfo->realParameter[599]);
-  array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[494], (modelica_real)data->simulationInfo->realParameter[495], (modelica_real)data->simulationInfo->realParameter[496], (modelica_real)data->simulationInfo->realParameter[497], (modelica_real)data->simulationInfo->realParameter[498], (modelica_real)data->simulationInfo->realParameter[499]);
-  data->localData[0]->realVars[210] /* MatStm3.compMolEnth[2,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HLiqId(threadData, data->simulationInfo->realParameter[564], tmp0, tmp1, data->simulationInfo->realParameter[574], data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 392
-type: SIMPLE_ASSIGN
-MatStm3._Psat[1] = Simulator.Files.Thermodynamic_Functions.Psat({MatStm3.comp[1].VP[1], MatStm3.comp[1].VP[2], MatStm3.comp[1].VP[3], MatStm3.comp[1].VP[4], MatStm3.comp[1].VP[5], MatStm3.comp[1].VP[6]}, MatStm3.T)
-*/
-void Flowsheet_eqFunction_392(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,392};
-  real_array tmp0;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[582], (modelica_real)data->simulationInfo->realParameter[583], (modelica_real)data->simulationInfo->realParameter[584], (modelica_real)data->simulationInfo->realParameter[585], (modelica_real)data->simulationInfo->realParameter[586], (modelica_real)data->simulationInfo->realParameter[587]);
-  data->localData[0]->realVars[193] /* MatStm3.Psat[1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_Psat(threadData, tmp0, data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 393
-type: SIMPLE_ASSIGN
-MatStm3._phasMolEnth[3] = MatStm3.compMolFrac[3,1] * MatStm3.compMolEnth[3,1] + MatStm3.compMolFrac[3,2] * MatStm3.compMolEnth[3,2]
-*/
-void Flowsheet_eqFunction_393(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,393};
-  data->localData[0]->realVars[250] /* MatStm3.phasMolEnth[3] variable */ = (data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[212] /* MatStm3.compMolEnth[3,1] variable */) + (data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[213] /* MatStm3.compMolEnth[3,2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 394
-type: SIMPLE_ASSIGN
-MatStm3._phasMolEnth[2] = MatStm3.compMolFrac[2,1] * MatStm3.compMolEnth[2,1] + MatStm3.compMolFrac[2,2] * MatStm3.compMolEnth[2,2]
-*/
-void Flowsheet_eqFunction_394(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,394};
-  data->localData[0]->realVars[249] /* MatStm3.phasMolEnth[2] variable */ = (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[210] /* MatStm3.compMolEnth[2,1] variable */) + (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[211] /* MatStm3.compMolEnth[2,2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 395
-type: SIMPLE_ASSIGN
-MatStm3._K[2] = 9.869232667160129e-006 * MatStm3.Psat[2]
-*/
-void Flowsheet_eqFunction_395(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,395};
-  data->localData[0]->realVars[186] /* MatStm3.K[2] variable */ = (9.869232667160129e-006) * (data->localData[0]->realVars[194] /* MatStm3.Psat[2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 396
-type: SIMPLE_ASSIGN
-MatStm3._K[1] = 9.869232667160129e-006 * MatStm3.Psat[1]
-*/
-void Flowsheet_eqFunction_396(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,396};
-  data->localData[0]->realVars[185] /* MatStm3.K[1] variable */ = (9.869232667160129e-006) * (data->localData[0]->realVars[193] /* MatStm3.Psat[1] variable */);
-  TRACE_POP
-}
-/*
-equation index: 397
-type: SIMPLE_ASSIGN
-$cse2 = log(MatStm3.T)
-*/
-void Flowsheet_eqFunction_397(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,397};
-  modelica_real tmp0;
-  tmp0 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  if(!(tmp0 > 0.0))
-  {
-    FILE_INFO info = {"",0,0,0,0,0};
-    omc_assert_warning(info, "The following assertion has been violated %sat time %f", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-    throwStreamPrintWithEquationIndexes(threadData, equationIndexes, "Model error: Argument of log(MatStm3.T) was %g should be > 0", tmp0);
-  }
-  data->localData[0]->realVars[1] /* $cse2 variable */ = log(tmp0);
-  TRACE_POP
-}
-/*
-equation index: 398
-type: SIMPLE_ASSIGN
-$cse5 = exp((-MatStm3.comp[2].VP[2]) - MatStm3.comp[2].VP[3] / MatStm3.T - MatStm3.comp[2].VP[4] * $cse2 - MatStm3.comp[2].VP[5] * MatStm3.T ^ MatStm3.comp[2].VP[6])
-*/
-void Flowsheet_eqFunction_398(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,398};
-  modelica_real tmp0;
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real tmp4;
-  modelica_real tmp5;
-  modelica_real tmp6;
-  tmp0 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  tmp1 = data->simulationInfo->realParameter[593];
-  if(tmp0 < 0.0 && tmp1 != 0.0)
-  {
-    tmp3 = modf(tmp1, &tmp4);
-    
-    if(tmp3 > 0.5)
-    {
-      tmp3 -= 1.0;
-      tmp4 += 1.0;
-    }
-    else if(tmp3 < -0.5)
-    {
-      tmp3 += 1.0;
-      tmp4 -= 1.0;
-    }
-    
-    if(fabs(tmp3) < 1e-10)
-      tmp2 = pow(tmp0, tmp4);
-    else
-    {
-      tmp6 = modf(1.0/tmp1, &tmp5);
-      if(tmp6 > 0.5)
-      {
-        tmp6 -= 1.0;
-        tmp5 += 1.0;
-      }
-      else if(tmp6 < -0.5)
-      {
-        tmp6 += 1.0;
-        tmp5 -= 1.0;
-      }
-      if(fabs(tmp6) < 1e-10 && ((unsigned long)tmp5 & 1))
-      {
-        tmp2 = -pow(-tmp0, tmp3)*pow(tmp0, tmp4);
-      }
-      else
-      {
-        throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp0, tmp1);
-      }
-    }
-  }
-  else
-  {
-    tmp2 = pow(tmp0, tmp1);
-  }
-  if(isnan(tmp2) || isinf(tmp2))
-  {
-    throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp0, tmp1);
-  }
-  data->localData[0]->realVars[4] /* $cse5 variable */ = exp((-data->simulationInfo->realParameter[589]) - (DIVISION_SIM(data->simulationInfo->realParameter[590],data->localData[0]->realVars[195] /* MatStm3.T variable */,"MatStm3.T",equationIndexes)) - ((data->simulationInfo->realParameter[591]) * (data->localData[0]->realVars[1] /* $cse2 variable */)) - ((data->simulationInfo->realParameter[592]) * (tmp2)));
-  TRACE_POP
-}
-/*
-equation index: 399
-type: SIMPLE_ASSIGN
-$cse4 = exp((-MatStm3.comp[1].VP[2]) - MatStm3.comp[1].VP[3] / MatStm3.T - MatStm3.comp[1].VP[4] * $cse2 - MatStm3.comp[1].VP[5] * MatStm3.T ^ MatStm3.comp[1].VP[6])
-*/
-void Flowsheet_eqFunction_399(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,399};
-  modelica_real tmp0;
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real tmp4;
-  modelica_real tmp5;
-  modelica_real tmp6;
-  tmp0 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  tmp1 = data->simulationInfo->realParameter[587];
-  if(tmp0 < 0.0 && tmp1 != 0.0)
-  {
-    tmp3 = modf(tmp1, &tmp4);
-    
-    if(tmp3 > 0.5)
-    {
-      tmp3 -= 1.0;
-      tmp4 += 1.0;
-    }
-    else if(tmp3 < -0.5)
-    {
-      tmp3 += 1.0;
-      tmp4 -= 1.0;
-    }
-    
-    if(fabs(tmp3) < 1e-10)
-      tmp2 = pow(tmp0, tmp4);
-    else
-    {
-      tmp6 = modf(1.0/tmp1, &tmp5);
-      if(tmp6 > 0.5)
-      {
-        tmp6 -= 1.0;
-        tmp5 += 1.0;
-      }
-      else if(tmp6 < -0.5)
-      {
-        tmp6 += 1.0;
-        tmp5 -= 1.0;
-      }
-      if(fabs(tmp6) < 1e-10 && ((unsigned long)tmp5 & 1))
-      {
-        tmp2 = -pow(-tmp0, tmp3)*pow(tmp0, tmp4);
-      }
-      else
-      {
-        throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp0, tmp1);
-      }
-    }
-  }
-  else
-  {
-    tmp2 = pow(tmp0, tmp1);
-  }
-  if(isnan(tmp2) || isinf(tmp2))
-  {
-    throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp0, tmp1);
-  }
-  data->localData[0]->realVars[3] /* $cse4 variable */ = exp((-data->simulationInfo->realParameter[583]) - (DIVISION_SIM(data->simulationInfo->realParameter[584],data->localData[0]->realVars[195] /* MatStm3.T variable */,"MatStm3.T",equationIndexes)) - ((data->simulationInfo->realParameter[585]) * (data->localData[0]->realVars[1] /* $cse2 variable */)) - ((data->simulationInfo->realParameter[586]) * (tmp2)));
-  TRACE_POP
-}
-/*
-equation index: 400
-type: SIMPLE_ASSIGN
-MatStm3._Pdew = 1.0 / (MatStm3.compMolFrac[1,1] * $cse4 + MatStm3.compMolFrac[1,2] * $cse5)
-*/
-void Flowsheet_eqFunction_400(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,400};
-  data->localData[0]->realVars[192] /* MatStm3.Pdew variable */ = DIVISION_SIM(1.0,(data->localData[0]->realVars[226] /* MatStm3.compMolFrac[1,1] variable */) * (data->localData[0]->realVars[3] /* $cse4 variable */) + (data->localData[0]->realVars[227] /* MatStm3.compMolFrac[1,2] variable */) * (data->localData[0]->realVars[4] /* $cse5 variable */),"MatStm3.compMolFrac[1,1] * $cse4 + MatStm3.compMolFrac[1,2] * $cse5",equationIndexes);
-  TRACE_POP
-}
-/*
-equation index: 401
-type: SIMPLE_ASSIGN
-$cse3 = exp(MatStm3.comp[2].VP[2] + MatStm3.comp[2].VP[3] / MatStm3.T + MatStm3.comp[2].VP[4] * $cse2 + MatStm3.comp[2].VP[5] * MatStm3.T ^ MatStm3.comp[2].VP[6])
-*/
-void Flowsheet_eqFunction_401(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,401};
-  modelica_real tmp0;
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real tmp4;
-  modelica_real tmp5;
-  modelica_real tmp6;
-  tmp0 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  tmp1 = data->simulationInfo->realParameter[593];
-  if(tmp0 < 0.0 && tmp1 != 0.0)
-  {
-    tmp3 = modf(tmp1, &tmp4);
-    
-    if(tmp3 > 0.5)
-    {
-      tmp3 -= 1.0;
-      tmp4 += 1.0;
-    }
-    else if(tmp3 < -0.5)
-    {
-      tmp3 += 1.0;
-      tmp4 -= 1.0;
-    }
-    
-    if(fabs(tmp3) < 1e-10)
-      tmp2 = pow(tmp0, tmp4);
-    else
-    {
-      tmp6 = modf(1.0/tmp1, &tmp5);
-      if(tmp6 > 0.5)
-      {
-        tmp6 -= 1.0;
-        tmp5 += 1.0;
-      }
-      else if(tmp6 < -0.5)
-      {
-        tmp6 += 1.0;
-        tmp5 -= 1.0;
-      }
-      if(fabs(tmp6) < 1e-10 && ((unsigned long)tmp5 & 1))
-      {
-        tmp2 = -pow(-tmp0, tmp3)*pow(tmp0, tmp4);
-      }
-      else
-      {
-        throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp0, tmp1);
-      }
-    }
-  }
-  else
-  {
-    tmp2 = pow(tmp0, tmp1);
-  }
-  if(isnan(tmp2) || isinf(tmp2))
-  {
-    throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp0, tmp1);
-  }
-  data->localData[0]->realVars[2] /* $cse3 variable */ = exp(data->simulationInfo->realParameter[589] + DIVISION_SIM(data->simulationInfo->realParameter[590],data->localData[0]->realVars[195] /* MatStm3.T variable */,"MatStm3.T",equationIndexes) + (data->simulationInfo->realParameter[591]) * (data->localData[0]->realVars[1] /* $cse2 variable */) + (data->simulationInfo->realParameter[592]) * (tmp2));
-  TRACE_POP
-}
-/*
-equation index: 402
-type: SIMPLE_ASSIGN
-$cse1 = exp(MatStm3.comp[1].VP[2] + MatStm3.comp[1].VP[3] / MatStm3.T + MatStm3.comp[1].VP[4] * $cse2 + MatStm3.comp[1].VP[5] * MatStm3.T ^ MatStm3.comp[1].VP[6])
-*/
-void Flowsheet_eqFunction_402(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,402};
-  modelica_real tmp0;
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real tmp4;
-  modelica_real tmp5;
-  modelica_real tmp6;
-  tmp0 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  tmp1 = data->simulationInfo->realParameter[587];
-  if(tmp0 < 0.0 && tmp1 != 0.0)
-  {
-    tmp3 = modf(tmp1, &tmp4);
-    
-    if(tmp3 > 0.5)
-    {
-      tmp3 -= 1.0;
-      tmp4 += 1.0;
-    }
-    else if(tmp3 < -0.5)
-    {
-      tmp3 += 1.0;
-      tmp4 -= 1.0;
-    }
-    
-    if(fabs(tmp3) < 1e-10)
-      tmp2 = pow(tmp0, tmp4);
-    else
-    {
-      tmp6 = modf(1.0/tmp1, &tmp5);
-      if(tmp6 > 0.5)
-      {
-        tmp6 -= 1.0;
-        tmp5 += 1.0;
-      }
-      else if(tmp6 < -0.5)
-      {
-        tmp6 += 1.0;
-        tmp5 -= 1.0;
-      }
-      if(fabs(tmp6) < 1e-10 && ((unsigned long)tmp5 & 1))
-      {
-        tmp2 = -pow(-tmp0, tmp3)*pow(tmp0, tmp4);
-      }
-      else
-      {
-        throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp0, tmp1);
-      }
-    }
-  }
-  else
-  {
-    tmp2 = pow(tmp0, tmp1);
-  }
-  if(isnan(tmp2) || isinf(tmp2))
-  {
-    throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp0, tmp1);
-  }
-  data->localData[0]->realVars[0] /* $cse1 variable */ = exp(data->simulationInfo->realParameter[583] + DIVISION_SIM(data->simulationInfo->realParameter[584],data->localData[0]->realVars[195] /* MatStm3.T variable */,"MatStm3.T",equationIndexes) + (data->simulationInfo->realParameter[585]) * (data->localData[0]->realVars[1] /* $cse2 variable */) + (data->simulationInfo->realParameter[586]) * (tmp2));
-  TRACE_POP
-}
-/*
-equation index: 403
-type: SIMPLE_ASSIGN
-MatStm3._Pbubl = MatStm3.compMolFrac[1,1] * $cse1 + MatStm3.compMolFrac[1,2] * $cse3
-*/
-void Flowsheet_eqFunction_403(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,403};
-  data->localData[0]->realVars[191] /* MatStm3.Pbubl variable */ = (data->localData[0]->realVars[226] /* MatStm3.compMolFrac[1,1] variable */) * (data->localData[0]->realVars[0] /* $cse1 variable */) + (data->localData[0]->realVars[227] /* MatStm3.compMolFrac[1,2] variable */) * (data->localData[0]->realVars[2] /* $cse3 variable */);
-  TRACE_POP
-}
-/*
-equation index: 404
-type: SIMPLE_ASSIGN
-MatStm3._compMolFlo[2,1] = MatStm3.compMolFrac[2,1] * MatStm3.totMolFlo[2]
-*/
-void Flowsheet_eqFunction_404(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,404};
-  data->localData[0]->realVars[222] /* MatStm3.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 405
-type: SIMPLE_ASSIGN
-MatStm3._compMolFlo[2,2] = MatStm3.compMolFrac[2,2] * MatStm3.totMolFlo[2]
-*/
-void Flowsheet_eqFunction_405(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,405};
-  data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 406
-type: SIMPLE_ASSIGN
-MatStm3._liqPhasMolFrac = 0.006666666666666667 * MatStm3.totMolFlo[2]
-*/
-void Flowsheet_eqFunction_406(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,406};
-  data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */ = (0.006666666666666667) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 407
-type: SIMPLE_ASSIGN
-MatStm3._vapPhasMolFrac = 1.0 - MatStm3.liqPhasMolFrac
-*/
-void Flowsheet_eqFunction_407(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,407};
-  data->localData[0]->realVars[273] /* MatStm3.vapPhasMolFrac variable */ = 1.0 - data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */;
-  TRACE_POP
-}
-/*
-equation index: 408
-type: SIMPLE_ASSIGN
-MatStm3._totMolFlo[3] = 150.0 * MatStm3.vapPhasMolFrac
-*/
-void Flowsheet_eqFunction_408(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,408};
-  data->localData[0]->realVars[271] /* MatStm3.totMolFlo[3] variable */ = (150.0) * (data->localData[0]->realVars[273] /* MatStm3.vapPhasMolFrac variable */);
-  TRACE_POP
-}
-/*
-equation index: 409
-type: SIMPLE_ASSIGN
-MatStm3._compMolFlo[3,2] = MatStm3.compMolFrac[3,2] * MatStm3.totMolFlo[3]
-*/
-void Flowsheet_eqFunction_409(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,409};
-  data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[271] /* MatStm3.totMolFlo[3] variable */);
-  TRACE_POP
-}
-/*
-equation index: 410
+equation index: 424
 type: SIMPLE_ASSIGN
 MatStm3._compMolFlo[3,1] = MatStm3.compMolFrac[3,1] * MatStm3.totMolFlo[3]
 */
-void Flowsheet_eqFunction_410(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_424(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,410};
-  data->localData[0]->realVars[224] /* MatStm3.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[271] /* MatStm3.totMolFlo[3] variable */);
+  const int equationIndexes[2] = {1,424};
+  data->localData[0]->realVars[224] /* MatStm3.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[3] variable */);
+  TRACE_POP
+}
+/*
+equation index: 425
+type: SIMPLE_ASSIGN
+MatStm3._compMolFlo[3,2] = MatStm3.compMolFrac[3,2] * MatStm3.totMolFlo[3]
+*/
+void Flowsheet_eqFunction_425(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,425};
+  data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[3] variable */);
+  TRACE_POP
+}
+/*
+equation index: 426
+type: SIMPLE_ASSIGN
+MatStm3._liqPhasMolFrac = 1.0 - 0.02 * MatStm3.totMolFlo[3]
+*/
+void Flowsheet_eqFunction_426(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,426};
+  data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */ = 1.0 - ((0.02) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[3] variable */));
+  TRACE_POP
+}
+/*
+equation index: 427
+type: SIMPLE_ASSIGN
+MatStm3._totMolFlo[2] = 50.0 * MatStm3.liqPhasMolFrac
+*/
+void Flowsheet_eqFunction_427(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,427};
+  data->localData[0]->realVars[269] /* MatStm3.totMolFlo[2] variable */ = (50.0) * (data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */);
+  TRACE_POP
+}
+/*
+equation index: 428
+type: SIMPLE_ASSIGN
+MatStm3._compMolFlo[2,1] = MatStm3.compMolFrac[2,1] * MatStm3.totMolFlo[2]
+*/
+void Flowsheet_eqFunction_428(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,428};
+  data->localData[0]->realVars[222] /* MatStm3.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[269] /* MatStm3.totMolFlo[2] variable */);
+  TRACE_POP
+}
+/*
+equation index: 429
+type: SIMPLE_ASSIGN
+MatStm3._compMolFlo[2,2] = MatStm3.compMolFrac[2,2] * MatStm3.totMolFlo[2]
+*/
+void Flowsheet_eqFunction_429(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,429};
+  data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[269] /* MatStm3.totMolFlo[2] variable */);
   TRACE_POP
 }
 
-void residualFunc417(void** dataIn, const double* xloc, double* res, const int* iflag)
+void residualFunc446(void** dataIn, const double* xloc, double* res, const int* iflag)
 {
   TRACE_PUSH
   DATA *data = (DATA*) ((void**)dataIn[0]);
   threadData_t *threadData = (threadData_t*) ((void**)dataIn[1]);
-  const int equationIndexes[2] = {1,417};
+  const int equationIndexes[2] = {1,446};
   int i;
   modelica_boolean tmp0;
   modelica_boolean tmp1;
@@ -569,178 +97,116 @@ void residualFunc417(void** dataIn, const double* xloc, double* res, const int* 
   modelica_boolean tmp7;
   modelica_real tmp8;
   /* iteration variables */
-  for (i=0; i<6; i++) {
+  for (i=0; i<5; i++) {
     if (isinf(xloc[i]) || isnan(xloc[i])) {
-      for (i=0; i<6; i++) {
+      for (i=0; i<5; i++) {
         res[i] = NAN;
       }
       return;
     }
   }
-  data->localData[0]->realVars[270] /* MatStm3.totMolFlo[2] variable */ = xloc[0];
-  data->localData[0]->realVars[195] /* MatStm3.T variable */ = xloc[1];
-  data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */ = xloc[2];
-  data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */ = xloc[3];
-  data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ = xloc[4];
-  data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ = xloc[5];
+  data->localData[0]->realVars[270] /* MatStm3.totMolFlo[3] variable */ = xloc[0];
+  data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ = xloc[1];
+  data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */ = xloc[2];
+  data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ = xloc[3];
+  data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */ = xloc[4];
   /* backup outputs */
   /* pre body */
   /* local constraints */
-  Flowsheet_eqFunction_387(data, threadData);
+  Flowsheet_eqFunction_424(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_388(data, threadData);
+  Flowsheet_eqFunction_425(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_389(data, threadData);
+  Flowsheet_eqFunction_426(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_390(data, threadData);
+  Flowsheet_eqFunction_427(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_391(data, threadData);
+  Flowsheet_eqFunction_428(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_392(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_393(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_394(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_395(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_396(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_397(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_398(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_399(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_400(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_401(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_402(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_403(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_404(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_405(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_406(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_407(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_408(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_409(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_410(data, threadData);
+  Flowsheet_eqFunction_429(data, threadData);
   /* body */
-  RELATIONHYSTERESIS(tmp0, 101325.0, data->localData[0]->realVars[191] /* MatStm3.Pbubl variable */, 0, GreaterEq);
+  RELATIONHYSTERESIS(tmp0, 101325.0, data->localData[0]->realVars[192] /* MatStm3.Pbubl variable */, 2, GreaterEq);
   tmp2 = (modelica_boolean)tmp0;
   if(tmp2)
   {
-    tmp3 = data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */;
+    tmp3 = data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */;
   }
   else
   {
-    RELATIONHYSTERESIS(tmp1, 101325.0, data->localData[0]->realVars[192] /* MatStm3.Pdew variable */, 1, GreaterEq);
-    tmp3 = (tmp1?data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[185] /* MatStm3.K[1] variable */) * (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */)):data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */);
+    RELATIONHYSTERESIS(tmp1, 101325.0, data->localData[0]->realVars[193] /* MatStm3.Pdew variable */, 3, GreaterEq);
+    tmp3 = (tmp1?data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[188] /* MatStm3.K[2] variable */) * (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */)):data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */);
   }
   res[0] = tmp3;
 
-  res[1] = data->localData[0]->realVars[224] /* MatStm3.compMolFlo[3,1] variable */ + data->localData[0]->realVars[222] /* MatStm3.compMolFlo[2,1] variable */ - data->localData[0]->realVars[220] /* MatStm3.compMolFlo[1,1] variable */;
+  res[1] = data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,2] variable */ + data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,2] variable */ - data->localData[0]->realVars[221] /* MatStm3.compMolFlo[1,2] variable */;
 
-  res[2] = data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,2] variable */ + data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,2] variable */ - data->localData[0]->realVars[221] /* MatStm3.compMolFlo[1,2] variable */;
+  res[2] = data->localData[0]->realVars[224] /* MatStm3.compMolFlo[3,1] variable */ + data->localData[0]->realVars[222] /* MatStm3.compMolFlo[2,1] variable */ - data->localData[0]->realVars[220] /* MatStm3.compMolFlo[1,1] variable */;
 
-  RELATIONHYSTERESIS(tmp4, 101325.0, data->localData[0]->realVars[191] /* MatStm3.Pbubl variable */, 0, GreaterEq);
+  RELATIONHYSTERESIS(tmp4, 101325.0, data->localData[0]->realVars[192] /* MatStm3.Pbubl variable */, 2, GreaterEq);
   res[3] = (tmp4?data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */ + data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ + data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ - 1.0);
 
-  RELATIONHYSTERESIS(tmp5, 101325.0, data->localData[0]->realVars[191] /* MatStm3.Pbubl variable */, 0, GreaterEq);
+  RELATIONHYSTERESIS(tmp5, 101325.0, data->localData[0]->realVars[192] /* MatStm3.Pbubl variable */, 2, GreaterEq);
   tmp7 = (modelica_boolean)tmp5;
   if(tmp7)
   {
-    tmp8 = data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */;
+    tmp8 = data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */;
   }
   else
   {
-    RELATIONHYSTERESIS(tmp6, 101325.0, data->localData[0]->realVars[192] /* MatStm3.Pdew variable */, 1, GreaterEq);
-    tmp8 = (tmp6?data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[186] /* MatStm3.K[2] variable */) * (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */)):data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */);
+    RELATIONHYSTERESIS(tmp6, 101325.0, data->localData[0]->realVars[193] /* MatStm3.Pdew variable */, 3, GreaterEq);
+    tmp8 = (tmp6?data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[187] /* MatStm3.K[1] variable */) * (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */)):data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */);
   }
   res[4] = tmp8;
-
-  res[5] = (data->localData[0]->realVars[273] /* MatStm3.vapPhasMolFrac variable */) * (data->localData[0]->realVars[250] /* MatStm3.phasMolEnth[3] variable */) + (data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */) * (data->localData[0]->realVars[249] /* MatStm3.phasMolEnth[2] variable */) - data->localData[0]->realVars[248] /* MatStm3.phasMolEnth[1] variable */;
   /* restore known outputs */
   TRACE_POP
 }
-void initializeSparsePatternNLS417(NONLINEAR_SYSTEM_DATA* inSysData)
+void initializeSparsePatternNLS446(NONLINEAR_SYSTEM_DATA* inSysData)
 {
   int i=0;
-  const int colPtrIndex[1+6] = {0,3,4,4,4,4,4};
-  const int rowIndex[23] = {1,2,5,0,3,4,5,2,3,4,5,0,1,3,5,2,3,4,5,0,1,3,5};
+  const int colPtrIndex[1+5] = {0,2,3,3,3,3};
+  const int rowIndex[14] = {1,2,2,3,4,2,3,4,0,1,3,0,1,3};
   /* sparsity pattern available */
   inSysData->isPatternAvailable = 'T';
-  inSysData->sparsePattern.leadindex = (unsigned int*) malloc((6+1)*sizeof(int));
-  inSysData->sparsePattern.index = (unsigned int*) malloc(23*sizeof(int));
-  inSysData->sparsePattern.numberOfNoneZeros = 23;
-  inSysData->sparsePattern.colorCols = (unsigned int*) malloc(6*sizeof(int));
-  inSysData->sparsePattern.maxColors = 6;
+  inSysData->sparsePattern.leadindex = (unsigned int*) malloc((5+1)*sizeof(int));
+  inSysData->sparsePattern.index = (unsigned int*) malloc(14*sizeof(int));
+  inSysData->sparsePattern.numberOfNoneZeros = 14;
+  inSysData->sparsePattern.colorCols = (unsigned int*) malloc(5*sizeof(int));
+  inSysData->sparsePattern.maxColors = 5;
   
   /* write lead index of compressed sparse column */
-  memcpy(inSysData->sparsePattern.leadindex, colPtrIndex, (6+1)*sizeof(int));
+  memcpy(inSysData->sparsePattern.leadindex, colPtrIndex, (5+1)*sizeof(int));
   
-  for(i=2;i<6+1;++i)
+  for(i=2;i<5+1;++i)
     inSysData->sparsePattern.leadindex[i] += inSysData->sparsePattern.leadindex[i-1];
   
   /* call sparse index */
-  memcpy(inSysData->sparsePattern.index, rowIndex, 23*sizeof(int));
+  memcpy(inSysData->sparsePattern.index, rowIndex, 14*sizeof(int));
   
   /* write color array */
-  inSysData->sparsePattern.colorCols[5] = 1;
-  inSysData->sparsePattern.colorCols[4] = 2;
-  inSysData->sparsePattern.colorCols[3] = 3;
-  inSysData->sparsePattern.colorCols[2] = 4;
-  inSysData->sparsePattern.colorCols[1] = 5;
-  inSysData->sparsePattern.colorCols[0] = 6;
+  inSysData->sparsePattern.colorCols[4] = 1;
+  inSysData->sparsePattern.colorCols[3] = 2;
+  inSysData->sparsePattern.colorCols[2] = 3;
+  inSysData->sparsePattern.colorCols[1] = 4;
+  inSysData->sparsePattern.colorCols[0] = 5;
 }
-void initializeStaticDataNLS417(void *inData, threadData_t *threadData, void *inSystemData)
+void initializeStaticDataNLS446(void *inData, threadData_t *threadData, void *inSystemData)
 {
   DATA* data = (DATA*) inData;
   NONLINEAR_SYSTEM_DATA* sysData = (NONLINEAR_SYSTEM_DATA*) inSystemData;
   int i=0;
-  /* static nls data for MatStm3.totMolFlo[2] */
-  sysData->nominal[i] = data->modelData->realVarsData[270].attribute /* MatStm3.totMolFlo[2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[270].attribute /* MatStm3.totMolFlo[2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[270].attribute /* MatStm3.totMolFlo[2] */.max;
-  /* static nls data for MatStm3.T */
-  sysData->nominal[i] = data->modelData->realVarsData[195].attribute /* MatStm3.T */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[195].attribute /* MatStm3.T */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[195].attribute /* MatStm3.T */.max;
-  /* static nls data for MatStm3.compMolFrac[2,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.max;
+  /* static nls data for MatStm3.totMolFlo[3] */
+  sysData->nominal[i] = data->modelData->realVarsData[270].attribute /* MatStm3.totMolFlo[3] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[270].attribute /* MatStm3.totMolFlo[3] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[270].attribute /* MatStm3.totMolFlo[3] */.max;
+  /* static nls data for MatStm3.compMolFrac[3,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.max;
   /* static nls data for MatStm3.compMolFrac[2,1] */
   sysData->nominal[i] = data->modelData->realVarsData[228].attribute /* MatStm3.compMolFrac[2,1] */.nominal;
   sysData->min[i]     = data->modelData->realVarsData[228].attribute /* MatStm3.compMolFrac[2,1] */.min;
@@ -749,119 +215,106 @@ void initializeStaticDataNLS417(void *inData, threadData_t *threadData, void *in
   sysData->nominal[i] = data->modelData->realVarsData[231].attribute /* MatStm3.compMolFrac[3,2] */.nominal;
   sysData->min[i]     = data->modelData->realVarsData[231].attribute /* MatStm3.compMolFrac[3,2] */.min;
   sysData->max[i++]   = data->modelData->realVarsData[231].attribute /* MatStm3.compMolFrac[3,2] */.max;
-  /* static nls data for MatStm3.compMolFrac[3,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.max;
+  /* static nls data for MatStm3.compMolFrac[2,2] */
+  sysData->nominal[i] = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.max;
   /* initial sparse pattern */
-  initializeSparsePatternNLS417(sysData);
+  initializeSparsePatternNLS446(sysData);
 }
 
-void getIterationVarsNLS417(struct DATA *inData, double *array)
+void getIterationVarsNLS446(struct DATA *inData, double *array)
 {
   DATA* data = (DATA*) inData;
-  array[0] = data->localData[0]->realVars[270] /* MatStm3.totMolFlo[2] variable */;
-  array[1] = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  array[2] = data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */;
-  array[3] = data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */;
-  array[4] = data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */;
-  array[5] = data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */;
+  array[0] = data->localData[0]->realVars[270] /* MatStm3.totMolFlo[3] variable */;
+  array[1] = data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */;
+  array[2] = data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */;
+  array[3] = data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */;
+  array[4] = data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */;
 }
 
 
 /* inner equations */
 
 /*
-equation index: 335
-type: SIMPLE_ASSIGN
-MatStm2._compMolFlo[2,1] = MatStm2.compMolFrac[2,1] * MatStm2.totMolFlo[2]
-*/
-void Flowsheet_eqFunction_335(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,335};
-  data->localData[0]->realVars[132] /* MatStm2.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 336
+equation index: 366
 type: SIMPLE_ASSIGN
 MatStm2._compMolFlo[2,2] = MatStm2.compMolFrac[2,2] * MatStm2.totMolFlo[2]
 */
-void Flowsheet_eqFunction_336(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_366(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,336};
-  data->localData[0]->realVars[133] /* MatStm2.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */);
+  const int equationIndexes[2] = {1,366};
+  data->localData[0]->realVars[135] /* MatStm2.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
-equation index: 337
+equation index: 367
 type: SIMPLE_ASSIGN
-MatStm2._liqPhasMolFrac = 0.01428571428571429 * MatStm2.totMolFlo[2]
+MatStm2._compMolFlo[2,1] = MatStm2.compMolFrac[2,1] * MatStm2.totMolFlo[2]
 */
-void Flowsheet_eqFunction_337(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_367(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,337};
-  data->localData[0]->realVars[155] /* MatStm2.liqPhasMolFrac variable */ = (0.01428571428571429) * (data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */);
+  const int equationIndexes[2] = {1,367};
+  data->localData[0]->realVars[134] /* MatStm2.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
-equation index: 338
+equation index: 368
 type: SIMPLE_ASSIGN
-Mixer1._inVapPhasMolFrac[2] = 1.0 - MatStm2.liqPhasMolFrac
+MatStm2._liqPhasMolFrac = 0.02 * MatStm2.totMolFlo[2]
 */
-void Flowsheet_eqFunction_338(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_368(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,338};
-  data->localData[0]->realVars[277] /* Mixer1.inVapPhasMolFrac[2] variable */ = 1.0 - data->localData[0]->realVars[155] /* MatStm2.liqPhasMolFrac variable */;
+  const int equationIndexes[2] = {1,368};
+  data->localData[0]->realVars[157] /* MatStm2.liqPhasMolFrac variable */ = (0.02) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
-equation index: 339
+equation index: 369
 type: SIMPLE_ASSIGN
-MatStm2._totMolFlo[3] = 70.0 * Mixer1.inVapPhasMolFrac[2]
+MatStm2._totMolFlo[3] = 50.0 - 50.0 * MatStm2.liqPhasMolFrac
 */
-void Flowsheet_eqFunction_339(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_369(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,339};
-  data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */ = (70.0) * (data->localData[0]->realVars[277] /* Mixer1.inVapPhasMolFrac[2] variable */);
+  const int equationIndexes[2] = {1,369};
+  data->localData[0]->realVars[182] /* MatStm2.totMolFlo[3] variable */ = 50.0 - ((50.0) * (data->localData[0]->realVars[157] /* MatStm2.liqPhasMolFrac variable */));
   TRACE_POP
 }
 /*
-equation index: 340
-type: SIMPLE_ASSIGN
-MatStm2._compMolFlo[3,1] = MatStm2.compMolFrac[3,1] * MatStm2.totMolFlo[3]
-*/
-void Flowsheet_eqFunction_340(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,340};
-  data->localData[0]->realVars[134] /* MatStm2.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */);
-  TRACE_POP
-}
-/*
-equation index: 341
+equation index: 370
 type: SIMPLE_ASSIGN
 MatStm2._compMolFlo[3,2] = MatStm2.compMolFrac[3,2] * MatStm2.totMolFlo[3]
 */
-void Flowsheet_eqFunction_341(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_370(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,341};
-  data->localData[0]->realVars[135] /* MatStm2.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */);
+  const int equationIndexes[2] = {1,370};
+  data->localData[0]->realVars[137] /* MatStm2.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[182] /* MatStm2.totMolFlo[3] variable */);
+  TRACE_POP
+}
+/*
+equation index: 371
+type: SIMPLE_ASSIGN
+MatStm2._compMolFlo[3,1] = MatStm2.compMolFrac[3,1] * MatStm2.totMolFlo[3]
+*/
+void Flowsheet_eqFunction_371(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,371};
+  data->localData[0]->realVars[136] /* MatStm2.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[182] /* MatStm2.totMolFlo[3] variable */);
   TRACE_POP
 }
 
-void residualFunc359(void** dataIn, const double* xloc, double* res, const int* iflag)
+void residualFunc388(void** dataIn, const double* xloc, double* res, const int* iflag)
 {
   TRACE_PUSH
   DATA *data = (DATA*) ((void**)dataIn[0]);
   threadData_t *threadData = (threadData_t*) ((void**)dataIn[1]);
-  const int equationIndexes[2] = {1,359};
+  const int equationIndexes[2] = {1,388};
   int i;
   modelica_boolean tmp0;
   modelica_boolean tmp1;
@@ -870,8 +323,8 @@ void residualFunc359(void** dataIn, const double* xloc, double* res, const int* 
   modelica_boolean tmp4;
   modelica_boolean tmp5;
   modelica_boolean tmp6;
-  modelica_real tmp7;
-  modelica_boolean tmp8;
+  modelica_boolean tmp7;
+  modelica_real tmp8;
   /* iteration variables */
   for (i=0; i<5; i++) {
     if (isinf(xloc[i]) || isnan(xloc[i])) {
@@ -881,74 +334,71 @@ void residualFunc359(void** dataIn, const double* xloc, double* res, const int* 
       return;
     }
   }
-  data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */ = xloc[0];
-  data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */ = xloc[1];
-  data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */ = xloc[2];
-  data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */ = xloc[3];
-  data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */ = xloc[4];
+  data->localData[0]->realVars[181] /* MatStm2.totMolFlo[2] variable */ = xloc[0];
+  data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */ = xloc[1];
+  data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */ = xloc[2];
+  data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */ = xloc[3];
+  data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */ = xloc[4];
   /* backup outputs */
   /* pre body */
   /* local constraints */
-  Flowsheet_eqFunction_335(data, threadData);
+  Flowsheet_eqFunction_366(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_336(data, threadData);
+  Flowsheet_eqFunction_367(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_337(data, threadData);
+  Flowsheet_eqFunction_368(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_338(data, threadData);
+  Flowsheet_eqFunction_369(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_339(data, threadData);
+  Flowsheet_eqFunction_370(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_340(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_341(data, threadData);
+  Flowsheet_eqFunction_371(data, threadData);
   /* body */
-  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */);
+  RELATIONHYSTERESIS(tmp0, 101325.0, data->localData[0]->realVars[104] /* MatStm2.Pbubl variable */, 0, GreaterEq);
   tmp2 = (modelica_boolean)tmp0;
   if(tmp2)
   {
-    tmp3 = data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */;
+    tmp3 = data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */;
   }
   else
   {
-    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[102] /* MatStm2.Pdew variable */);
-    tmp3 = (tmp1?data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[96] /* MatStm2.K[2] variable */) * (data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */)):data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */);
+    RELATIONHYSTERESIS(tmp1, 101325.0, data->localData[0]->realVars[105] /* MatStm2.Pdew variable */, 1, GreaterEq);
+    tmp3 = (tmp1?data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[100] /* MatStm2.K[2] variable */) * (data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */)):data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */);
   }
   res[0] = tmp3;
 
-  tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */);
-  tmp6 = (modelica_boolean)tmp4;
-  if(tmp6)
+  res[1] = data->localData[0]->realVars[136] /* MatStm2.compMolFlo[3,1] variable */ + data->localData[0]->realVars[134] /* MatStm2.compMolFlo[2,1] variable */ - data->localData[0]->realVars[132] /* MatStm2.compMolFlo[1,1] variable */;
+
+  res[2] = data->localData[0]->realVars[137] /* MatStm2.compMolFlo[3,2] variable */ + data->localData[0]->realVars[135] /* MatStm2.compMolFlo[2,2] variable */ - data->localData[0]->realVars[133] /* MatStm2.compMolFlo[1,2] variable */;
+
+  RELATIONHYSTERESIS(tmp4, 101325.0, data->localData[0]->realVars[104] /* MatStm2.Pbubl variable */, 0, GreaterEq);
+  res[3] = (tmp4?data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */ + data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */ + data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */ - 1.0);
+
+  RELATIONHYSTERESIS(tmp5, 101325.0, data->localData[0]->realVars[104] /* MatStm2.Pbubl variable */, 0, GreaterEq);
+  tmp7 = (modelica_boolean)tmp5;
+  if(tmp7)
   {
-    tmp7 = data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */;
+    tmp8 = data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */;
   }
   else
   {
-    tmp5 = GreaterEq(101325.0,data->localData[0]->realVars[102] /* MatStm2.Pdew variable */);
-    tmp7 = (tmp5?data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[95] /* MatStm2.K[1] variable */) * (data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */)):data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */);
+    RELATIONHYSTERESIS(tmp6, 101325.0, data->localData[0]->realVars[105] /* MatStm2.Pdew variable */, 1, GreaterEq);
+    tmp8 = (tmp6?data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[99] /* MatStm2.K[1] variable */) * (data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */)):data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */);
   }
-  res[1] = tmp7;
-
-  tmp8 = GreaterEq(101325.0,data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */);
-  res[2] = (tmp8?data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */ + data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */ + data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */ - 1.0);
-
-  res[3] = data->localData[0]->realVars[135] /* MatStm2.compMolFlo[3,2] variable */ + data->localData[0]->realVars[133] /* MatStm2.compMolFlo[2,2] variable */ - data->localData[0]->realVars[131] /* MatStm2.compMolFlo[1,2] variable */;
-
-  res[4] = data->localData[0]->realVars[134] /* MatStm2.compMolFlo[3,1] variable */ + data->localData[0]->realVars[132] /* MatStm2.compMolFlo[2,1] variable */ - data->localData[0]->realVars[130] /* MatStm2.compMolFlo[1,1] variable */;
+  res[4] = tmp8;
   /* restore known outputs */
   TRACE_POP
 }
-void initializeSparsePatternNLS359(NONLINEAR_SYSTEM_DATA* inSysData)
+void initializeSparsePatternNLS388(NONLINEAR_SYSTEM_DATA* inSysData)
 {
   int i=0;
   const int colPtrIndex[1+5] = {0,2,3,3,3,3};
-  const int rowIndex[14] = {3,4,0,2,3,1,2,4,1,2,4,0,2,3};
+  const int rowIndex[14] = {1,2,1,3,4,0,2,3,1,3,4,0,2,3};
   /* sparsity pattern available */
   inSysData->isPatternAvailable = 'T';
   inSysData->sparsePattern.leadindex = (unsigned int*) malloc((5+1)*sizeof(int));
@@ -973,139 +423,127 @@ void initializeSparsePatternNLS359(NONLINEAR_SYSTEM_DATA* inSysData)
   inSysData->sparsePattern.colorCols[1] = 4;
   inSysData->sparsePattern.colorCols[0] = 5;
 }
-void initializeStaticDataNLS359(void *inData, threadData_t *threadData, void *inSystemData)
+void initializeStaticDataNLS388(void *inData, threadData_t *threadData, void *inSystemData)
 {
   DATA* data = (DATA*) inData;
   NONLINEAR_SYSTEM_DATA* sysData = (NONLINEAR_SYSTEM_DATA*) inSystemData;
   int i=0;
   /* static nls data for MatStm2.totMolFlo[2] */
-  sysData->nominal[i] = data->modelData->realVarsData[180].attribute /* MatStm2.totMolFlo[2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[180].attribute /* MatStm2.totMolFlo[2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[180].attribute /* MatStm2.totMolFlo[2] */.max;
-  /* static nls data for MatStm2.compMolFrac[2,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[139].attribute /* MatStm2.compMolFrac[2,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[139].attribute /* MatStm2.compMolFrac[2,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[139].attribute /* MatStm2.compMolFrac[2,2] */.max;
-  /* static nls data for MatStm2.compMolFrac[3,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[3,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[3,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[3,1] */.max;
+  sysData->nominal[i] = data->modelData->realVarsData[181].attribute /* MatStm2.totMolFlo[2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[181].attribute /* MatStm2.totMolFlo[2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[181].attribute /* MatStm2.totMolFlo[2] */.max;
   /* static nls data for MatStm2.compMolFrac[2,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[138].attribute /* MatStm2.compMolFrac[2,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[138].attribute /* MatStm2.compMolFrac[2,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[138].attribute /* MatStm2.compMolFrac[2,1] */.max;
+  sysData->nominal[i] = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[2,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[2,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[2,1] */.max;
   /* static nls data for MatStm2.compMolFrac[3,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[3,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[3,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[3,2] */.max;
+  sysData->nominal[i] = data->modelData->realVarsData[143].attribute /* MatStm2.compMolFrac[3,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[143].attribute /* MatStm2.compMolFrac[3,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[143].attribute /* MatStm2.compMolFrac[3,2] */.max;
+  /* static nls data for MatStm2.compMolFrac[3,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[142].attribute /* MatStm2.compMolFrac[3,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[142].attribute /* MatStm2.compMolFrac[3,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[142].attribute /* MatStm2.compMolFrac[3,1] */.max;
+  /* static nls data for MatStm2.compMolFrac[2,2] */
+  sysData->nominal[i] = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[2,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[2,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[2,2] */.max;
   /* initial sparse pattern */
-  initializeSparsePatternNLS359(sysData);
+  initializeSparsePatternNLS388(sysData);
 }
 
-void getIterationVarsNLS359(struct DATA *inData, double *array)
+void getIterationVarsNLS388(struct DATA *inData, double *array)
 {
   DATA* data = (DATA*) inData;
-  array[0] = data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */;
-  array[1] = data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */;
-  array[2] = data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */;
-  array[3] = data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */;
-  array[4] = data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */;
+  array[0] = data->localData[0]->realVars[181] /* MatStm2.totMolFlo[2] variable */;
+  array[1] = data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */;
+  array[2] = data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */;
+  array[3] = data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */;
+  array[4] = data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */;
 }
 
 
 /* inner equations */
 
 /*
-equation index: 281
-type: SIMPLE_ASSIGN
-MatStm1._compMolFlo[2,2] = MatStm1.compMolFrac[2,2] * MatStm1.totMolFlo[2]
-*/
-void Flowsheet_eqFunction_281(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,281};
-  data->localData[0]->realVars[43] /* MatStm1.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 282
+equation index: 297
 type: SIMPLE_ASSIGN
 MatStm1._compMolFlo[2,1] = MatStm1.compMolFrac[2,1] * MatStm1.totMolFlo[2]
 */
-void Flowsheet_eqFunction_282(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_297(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,282};
-  data->localData[0]->realVars[42] /* MatStm1.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */);
+  const int equationIndexes[2] = {1,297};
+  data->localData[0]->realVars[45] /* MatStm1.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
-equation index: 283
+equation index: 298
 type: SIMPLE_ASSIGN
-MatStm1._liqPhasMolFrac = 0.0125 * MatStm1.totMolFlo[2]
+MatStm1._compMolFlo[2,2] = MatStm1.compMolFrac[2,2] * MatStm1.totMolFlo[2]
 */
-void Flowsheet_eqFunction_283(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_298(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,283};
-  data->localData[0]->realVars[65] /* MatStm1.liqPhasMolFrac variable */ = (0.0125) * (data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */);
+  const int equationIndexes[2] = {1,298};
+  data->localData[0]->realVars[46] /* MatStm1.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
-equation index: 284
+equation index: 299
 type: SIMPLE_ASSIGN
-Mixer1._inVapPhasMolFrac[1] = 1.0 - MatStm1.liqPhasMolFrac
+MatStm1._liqPhasMolFrac = 0.01 * MatStm1.totMolFlo[2]
 */
-void Flowsheet_eqFunction_284(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_299(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,284};
-  data->localData[0]->realVars[276] /* Mixer1.inVapPhasMolFrac[1] variable */ = 1.0 - data->localData[0]->realVars[65] /* MatStm1.liqPhasMolFrac variable */;
+  const int equationIndexes[2] = {1,299};
+  data->localData[0]->realVars[68] /* MatStm1.liqPhasMolFrac variable */ = (0.01) * (data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
-equation index: 285
+equation index: 300
 type: SIMPLE_ASSIGN
-MatStm1._totMolFlo[3] = 80.0 * Mixer1.inVapPhasMolFrac[1]
+MatStm1._totMolFlo[3] = 100.0 - 100.0 * MatStm1.liqPhasMolFrac
 */
-void Flowsheet_eqFunction_285(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_300(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,285};
-  data->localData[0]->realVars[91] /* MatStm1.totMolFlo[3] variable */ = (80.0) * (data->localData[0]->realVars[276] /* Mixer1.inVapPhasMolFrac[1] variable */);
+  const int equationIndexes[2] = {1,300};
+  data->localData[0]->realVars[94] /* MatStm1.totMolFlo[3] variable */ = 100.0 - ((100.0) * (data->localData[0]->realVars[68] /* MatStm1.liqPhasMolFrac variable */));
   TRACE_POP
 }
 /*
-equation index: 286
-type: SIMPLE_ASSIGN
-MatStm1._compMolFlo[3,2] = MatStm1.compMolFrac[3,2] * MatStm1.totMolFlo[3]
-*/
-void Flowsheet_eqFunction_286(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,286};
-  data->localData[0]->realVars[45] /* MatStm1.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[91] /* MatStm1.totMolFlo[3] variable */);
-  TRACE_POP
-}
-/*
-equation index: 287
+equation index: 301
 type: SIMPLE_ASSIGN
 MatStm1._compMolFlo[3,1] = MatStm1.compMolFrac[3,1] * MatStm1.totMolFlo[3]
 */
-void Flowsheet_eqFunction_287(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_301(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,287};
-  data->localData[0]->realVars[44] /* MatStm1.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[91] /* MatStm1.totMolFlo[3] variable */);
+  const int equationIndexes[2] = {1,301};
+  data->localData[0]->realVars[47] /* MatStm1.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[94] /* MatStm1.totMolFlo[3] variable */);
+  TRACE_POP
+}
+/*
+equation index: 302
+type: SIMPLE_ASSIGN
+MatStm1._compMolFlo[3,2] = MatStm1.compMolFrac[3,2] * MatStm1.totMolFlo[3]
+*/
+void Flowsheet_eqFunction_302(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,302};
+  data->localData[0]->realVars[48] /* MatStm1.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[94] /* MatStm1.totMolFlo[3] variable */);
   TRACE_POP
 }
 
-void residualFunc305(void** dataIn, const double* xloc, double* res, const int* iflag)
+void residualFunc319(void** dataIn, const double* xloc, double* res, const int* iflag)
 {
   TRACE_PUSH
   DATA *data = (DATA*) ((void**)dataIn[0]);
   threadData_t *threadData = (threadData_t*) ((void**)dataIn[1]);
-  const int equationIndexes[2] = {1,305};
+  const int equationIndexes[2] = {1,319};
   int i;
   modelica_boolean tmp0;
   modelica_boolean tmp1;
@@ -1125,74 +563,71 @@ void residualFunc305(void** dataIn, const double* xloc, double* res, const int* 
       return;
     }
   }
-  data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */ = xloc[0];
-  data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */ = xloc[1];
-  data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */ = xloc[2];
-  data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */ = xloc[3];
-  data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */ = xloc[4];
+  data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */ = xloc[0];
+  data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */ = xloc[1];
+  data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */ = xloc[2];
+  data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */ = xloc[3];
+  data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */ = xloc[4];
   /* backup outputs */
   /* pre body */
   /* local constraints */
-  Flowsheet_eqFunction_281(data, threadData);
+  Flowsheet_eqFunction_297(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_282(data, threadData);
+  Flowsheet_eqFunction_298(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_283(data, threadData);
+  Flowsheet_eqFunction_299(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_284(data, threadData);
+  Flowsheet_eqFunction_300(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_285(data, threadData);
+  Flowsheet_eqFunction_301(data, threadData);
 
   /* local constraints */
-  Flowsheet_eqFunction_286(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_287(data, threadData);
+  Flowsheet_eqFunction_302(data, threadData);
   /* body */
-  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */);
+  res[0] = data->localData[0]->realVars[48] /* MatStm1.compMolFlo[3,2] variable */ + data->localData[0]->realVars[46] /* MatStm1.compMolFlo[2,2] variable */ - data->localData[0]->realVars[44] /* MatStm1.compMolFlo[1,2] variable */;
+
+  res[1] = data->localData[0]->realVars[47] /* MatStm1.compMolFlo[3,1] variable */ + data->localData[0]->realVars[45] /* MatStm1.compMolFlo[2,1] variable */ - data->localData[0]->realVars[43] /* MatStm1.compMolFlo[1,1] variable */;
+
+  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[14] /* MatStm1.Pbubl variable */);
   tmp2 = (modelica_boolean)tmp0;
   if(tmp2)
   {
-    tmp3 = data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */;
+    tmp3 = data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */;
   }
   else
   {
-    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[12] /* MatStm1.Pdew variable */);
-    tmp3 = (tmp1?data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[6] /* MatStm1.K[2] variable */) * (data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */)):data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */);
+    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[15] /* MatStm1.Pdew variable */);
+    tmp3 = (tmp1?data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[8] /* MatStm1.K[1] variable */) * (data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */)):data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */);
   }
-  res[0] = tmp3;
+  res[2] = tmp3;
 
-  tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */);
-  res[1] = (tmp4?data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */ + data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */ + data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */ - 1.0);
+  tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[14] /* MatStm1.Pbubl variable */);
+  res[3] = (tmp4?data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */ + data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */ + data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */ - 1.0);
 
-  res[2] = data->localData[0]->realVars[44] /* MatStm1.compMolFlo[3,1] variable */ + data->localData[0]->realVars[42] /* MatStm1.compMolFlo[2,1] variable */ - data->localData[0]->realVars[40] /* MatStm1.compMolFlo[1,1] variable */;
-
-  tmp5 = GreaterEq(101325.0,data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */);
+  tmp5 = GreaterEq(101325.0,data->localData[0]->realVars[14] /* MatStm1.Pbubl variable */);
   tmp7 = (modelica_boolean)tmp5;
   if(tmp7)
   {
-    tmp8 = data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */;
+    tmp8 = data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */;
   }
   else
   {
-    tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[12] /* MatStm1.Pdew variable */);
-    tmp8 = (tmp6?data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[5] /* MatStm1.K[1] variable */) * (data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */)):data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */);
+    tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[15] /* MatStm1.Pdew variable */);
+    tmp8 = (tmp6?data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[9] /* MatStm1.K[2] variable */) * (data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */)):data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */);
   }
-  res[3] = tmp8;
-
-  res[4] = data->localData[0]->realVars[45] /* MatStm1.compMolFlo[3,2] variable */ + data->localData[0]->realVars[43] /* MatStm1.compMolFlo[2,2] variable */ - data->localData[0]->realVars[41] /* MatStm1.compMolFlo[1,2] variable */;
+  res[4] = tmp8;
   /* restore known outputs */
   TRACE_POP
 }
-void initializeSparsePatternNLS305(NONLINEAR_SYSTEM_DATA* inSysData)
+void initializeSparsePatternNLS319(NONLINEAR_SYSTEM_DATA* inSysData)
 {
   int i=0;
   const int colPtrIndex[1+5] = {0,2,3,3,3,3};
-  const int rowIndex[14] = {2,4,1,2,3,1,2,3,0,1,4,0,1,4};
+  const int rowIndex[14] = {0,1,0,3,4,1,2,3,1,2,3,0,3,4};
   /* sparsity pattern available */
   inSysData->isPatternAvailable = 'T';
   inSysData->sparsePattern.leadindex = (unsigned int*) malloc((5+1)*sizeof(int));
@@ -1217,557 +652,127 @@ void initializeSparsePatternNLS305(NONLINEAR_SYSTEM_DATA* inSysData)
   inSysData->sparsePattern.colorCols[1] = 4;
   inSysData->sparsePattern.colorCols[0] = 5;
 }
-void initializeStaticDataNLS305(void *inData, threadData_t *threadData, void *inSystemData)
+void initializeStaticDataNLS319(void *inData, threadData_t *threadData, void *inSystemData)
 {
   DATA* data = (DATA*) inData;
   NONLINEAR_SYSTEM_DATA* sysData = (NONLINEAR_SYSTEM_DATA*) inSystemData;
   int i=0;
   /* static nls data for MatStm1.totMolFlo[2] */
-  sysData->nominal[i] = data->modelData->realVarsData[90].attribute /* MatStm1.totMolFlo[2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[90].attribute /* MatStm1.totMolFlo[2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[90].attribute /* MatStm1.totMolFlo[2] */.max;
-  /* static nls data for MatStm1.compMolFrac[3,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[50].attribute /* MatStm1.compMolFrac[3,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[50].attribute /* MatStm1.compMolFrac[3,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[50].attribute /* MatStm1.compMolFrac[3,1] */.max;
-  /* static nls data for MatStm1.compMolFrac[2,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[48].attribute /* MatStm1.compMolFrac[2,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[48].attribute /* MatStm1.compMolFrac[2,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[48].attribute /* MatStm1.compMolFrac[2,1] */.max;
-  /* static nls data for MatStm1.compMolFrac[3,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[3,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[3,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[3,2] */.max;
+  sysData->nominal[i] = data->modelData->realVarsData[93].attribute /* MatStm1.totMolFlo[2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[93].attribute /* MatStm1.totMolFlo[2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[93].attribute /* MatStm1.totMolFlo[2] */.max;
   /* static nls data for MatStm1.compMolFrac[2,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[49].attribute /* MatStm1.compMolFrac[2,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[49].attribute /* MatStm1.compMolFrac[2,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[49].attribute /* MatStm1.compMolFrac[2,2] */.max;
+  sysData->nominal[i] = data->modelData->realVarsData[52].attribute /* MatStm1.compMolFrac[2,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[52].attribute /* MatStm1.compMolFrac[2,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[52].attribute /* MatStm1.compMolFrac[2,2] */.max;
+  /* static nls data for MatStm1.compMolFrac[2,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[2,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[2,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[2,1] */.max;
+  /* static nls data for MatStm1.compMolFrac[3,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[53].attribute /* MatStm1.compMolFrac[3,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[53].attribute /* MatStm1.compMolFrac[3,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[53].attribute /* MatStm1.compMolFrac[3,1] */.max;
+  /* static nls data for MatStm1.compMolFrac[3,2] */
+  sysData->nominal[i] = data->modelData->realVarsData[54].attribute /* MatStm1.compMolFrac[3,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[54].attribute /* MatStm1.compMolFrac[3,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[54].attribute /* MatStm1.compMolFrac[3,2] */.max;
   /* initial sparse pattern */
-  initializeSparsePatternNLS305(sysData);
+  initializeSparsePatternNLS319(sysData);
 }
 
-void getIterationVarsNLS305(struct DATA *inData, double *array)
+void getIterationVarsNLS319(struct DATA *inData, double *array)
 {
   DATA* data = (DATA*) inData;
-  array[0] = data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */;
-  array[1] = data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */;
-  array[2] = data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */;
-  array[3] = data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */;
-  array[4] = data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */;
+  array[0] = data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */;
+  array[1] = data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */;
+  array[2] = data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */;
+  array[3] = data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */;
+  array[4] = data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */;
 }
 
 
 /* inner equations */
 
 /*
-equation index: 173
-type: SIMPLE_ASSIGN
-MatStm3._Psat[1] = Simulator.Files.Thermodynamic_Functions.Psat({MatStm3.comp[1].VP[1], MatStm3.comp[1].VP[2], MatStm3.comp[1].VP[3], MatStm3.comp[1].VP[4], MatStm3.comp[1].VP[5], MatStm3.comp[1].VP[6]}, MatStm3.T)
-*/
-void Flowsheet_eqFunction_173(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,173};
-  real_array tmp0;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[582], (modelica_real)data->simulationInfo->realParameter[583], (modelica_real)data->simulationInfo->realParameter[584], (modelica_real)data->simulationInfo->realParameter[585], (modelica_real)data->simulationInfo->realParameter[586], (modelica_real)data->simulationInfo->realParameter[587]);
-  data->localData[0]->realVars[193] /* MatStm3.Psat[1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_Psat(threadData, tmp0, data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 174
-type: SIMPLE_ASSIGN
-MatStm3._compMolEnth[2,1] = Simulator.Files.Thermodynamic_Functions.HLiqId(MatStm3.comp[1].SH, {MatStm3.comp[1].VapCp[1], MatStm3.comp[1].VapCp[2], MatStm3.comp[1].VapCp[3], MatStm3.comp[1].VapCp[4], MatStm3.comp[1].VapCp[5], MatStm3.comp[1].VapCp[6]}, {MatStm3.comp[1].HOV[1], MatStm3.comp[1].HOV[2], MatStm3.comp[1].HOV[3], MatStm3.comp[1].HOV[4], MatStm3.comp[1].HOV[5], MatStm3.comp[1].HOV[6]}, MatStm3.comp[1].Tc, MatStm3.T)
-*/
-void Flowsheet_eqFunction_174(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,174};
-  real_array tmp0;
-  real_array tmp1;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[594], (modelica_real)data->simulationInfo->realParameter[595], (modelica_real)data->simulationInfo->realParameter[596], (modelica_real)data->simulationInfo->realParameter[597], (modelica_real)data->simulationInfo->realParameter[598], (modelica_real)data->simulationInfo->realParameter[599]);
-  array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[494], (modelica_real)data->simulationInfo->realParameter[495], (modelica_real)data->simulationInfo->realParameter[496], (modelica_real)data->simulationInfo->realParameter[497], (modelica_real)data->simulationInfo->realParameter[498], (modelica_real)data->simulationInfo->realParameter[499]);
-  data->localData[0]->realVars[210] /* MatStm3.compMolEnth[2,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HLiqId(threadData, data->simulationInfo->realParameter[564], tmp0, tmp1, data->simulationInfo->realParameter[574], data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 175
-type: SIMPLE_ASSIGN
-MatStm3._compMolEnth[3,1] = Simulator.Files.Thermodynamic_Functions.HVapId(MatStm3.comp[1].SH, {MatStm3.comp[1].VapCp[1], MatStm3.comp[1].VapCp[2], MatStm3.comp[1].VapCp[3], MatStm3.comp[1].VapCp[4], MatStm3.comp[1].VapCp[5], MatStm3.comp[1].VapCp[6]}, {MatStm3.comp[1].HOV[1], MatStm3.comp[1].HOV[2], MatStm3.comp[1].HOV[3], MatStm3.comp[1].HOV[4], MatStm3.comp[1].HOV[5], MatStm3.comp[1].HOV[6]}, MatStm3.comp[1].Tc, MatStm3.T)
-*/
-void Flowsheet_eqFunction_175(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,175};
-  real_array tmp0;
-  real_array tmp1;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[594], (modelica_real)data->simulationInfo->realParameter[595], (modelica_real)data->simulationInfo->realParameter[596], (modelica_real)data->simulationInfo->realParameter[597], (modelica_real)data->simulationInfo->realParameter[598], (modelica_real)data->simulationInfo->realParameter[599]);
-  array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[494], (modelica_real)data->simulationInfo->realParameter[495], (modelica_real)data->simulationInfo->realParameter[496], (modelica_real)data->simulationInfo->realParameter[497], (modelica_real)data->simulationInfo->realParameter[498], (modelica_real)data->simulationInfo->realParameter[499]);
-  data->localData[0]->realVars[212] /* MatStm3.compMolEnth[3,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HVapId(threadData, data->simulationInfo->realParameter[564], tmp0, tmp1, data->simulationInfo->realParameter[574], data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 176
-type: SIMPLE_ASSIGN
-MatStm3._compMolEnth[2,2] = Simulator.Files.Thermodynamic_Functions.HLiqId(MatStm3.comp[2].SH, {MatStm3.comp[2].VapCp[1], MatStm3.comp[2].VapCp[2], MatStm3.comp[2].VapCp[3], MatStm3.comp[2].VapCp[4], MatStm3.comp[2].VapCp[5], MatStm3.comp[2].VapCp[6]}, {MatStm3.comp[2].HOV[1], MatStm3.comp[2].HOV[2], MatStm3.comp[2].HOV[3], MatStm3.comp[2].HOV[4], MatStm3.comp[2].HOV[5], MatStm3.comp[2].HOV[6]}, MatStm3.comp[2].Tc, MatStm3.T)
-*/
-void Flowsheet_eqFunction_176(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,176};
-  real_array tmp0;
-  real_array tmp1;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[600], (modelica_real)data->simulationInfo->realParameter[601], (modelica_real)data->simulationInfo->realParameter[602], (modelica_real)data->simulationInfo->realParameter[603], (modelica_real)data->simulationInfo->realParameter[604], (modelica_real)data->simulationInfo->realParameter[605]);
-  array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[500], (modelica_real)data->simulationInfo->realParameter[501], (modelica_real)data->simulationInfo->realParameter[502], (modelica_real)data->simulationInfo->realParameter[503], (modelica_real)data->simulationInfo->realParameter[504], (modelica_real)data->simulationInfo->realParameter[505]);
-  data->localData[0]->realVars[211] /* MatStm3.compMolEnth[2,2] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HLiqId(threadData, data->simulationInfo->realParameter[565], tmp0, tmp1, data->simulationInfo->realParameter[575], data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 177
-type: SIMPLE_ASSIGN
-MatStm3._compMolEnth[3,2] = Simulator.Files.Thermodynamic_Functions.HVapId(MatStm3.comp[2].SH, {MatStm3.comp[2].VapCp[1], MatStm3.comp[2].VapCp[2], MatStm3.comp[2].VapCp[3], MatStm3.comp[2].VapCp[4], MatStm3.comp[2].VapCp[5], MatStm3.comp[2].VapCp[6]}, {MatStm3.comp[2].HOV[1], MatStm3.comp[2].HOV[2], MatStm3.comp[2].HOV[3], MatStm3.comp[2].HOV[4], MatStm3.comp[2].HOV[5], MatStm3.comp[2].HOV[6]}, MatStm3.comp[2].Tc, MatStm3.T)
-*/
-void Flowsheet_eqFunction_177(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,177};
-  real_array tmp0;
-  real_array tmp1;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[600], (modelica_real)data->simulationInfo->realParameter[601], (modelica_real)data->simulationInfo->realParameter[602], (modelica_real)data->simulationInfo->realParameter[603], (modelica_real)data->simulationInfo->realParameter[604], (modelica_real)data->simulationInfo->realParameter[605]);
-  array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[500], (modelica_real)data->simulationInfo->realParameter[501], (modelica_real)data->simulationInfo->realParameter[502], (modelica_real)data->simulationInfo->realParameter[503], (modelica_real)data->simulationInfo->realParameter[504], (modelica_real)data->simulationInfo->realParameter[505]);
-  data->localData[0]->realVars[213] /* MatStm3.compMolEnth[3,2] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HVapId(threadData, data->simulationInfo->realParameter[565], tmp0, tmp1, data->simulationInfo->realParameter[575], data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 178
-type: SIMPLE_ASSIGN
-MatStm3._Psat[2] = Simulator.Files.Thermodynamic_Functions.Psat({MatStm3.comp[2].VP[1], MatStm3.comp[2].VP[2], MatStm3.comp[2].VP[3], MatStm3.comp[2].VP[4], MatStm3.comp[2].VP[5], MatStm3.comp[2].VP[6]}, MatStm3.T)
-*/
-void Flowsheet_eqFunction_178(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,178};
-  real_array tmp0;
-  array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[588], (modelica_real)data->simulationInfo->realParameter[589], (modelica_real)data->simulationInfo->realParameter[590], (modelica_real)data->simulationInfo->realParameter[591], (modelica_real)data->simulationInfo->realParameter[592], (modelica_real)data->simulationInfo->realParameter[593]);
-  data->localData[0]->realVars[194] /* MatStm3.Psat[2] variable */ = omc_Simulator_Files_Thermodynamic__Functions_Psat(threadData, tmp0, data->localData[0]->realVars[195] /* MatStm3.T variable */);
-  TRACE_POP
-}
-/*
-equation index: 179
-type: SIMPLE_ASSIGN
-MatStm3._phasMolEnth[3] = MatStm3.compMolFrac[3,1] * MatStm3.compMolEnth[3,1] + MatStm3.compMolFrac[3,2] * MatStm3.compMolEnth[3,2]
-*/
-void Flowsheet_eqFunction_179(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,179};
-  data->localData[0]->realVars[250] /* MatStm3.phasMolEnth[3] variable */ = (data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[212] /* MatStm3.compMolEnth[3,1] variable */) + (data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[213] /* MatStm3.compMolEnth[3,2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 180
-type: SIMPLE_ASSIGN
-MatStm3._phasMolEnth[2] = MatStm3.compMolFrac[2,1] * MatStm3.compMolEnth[2,1] + MatStm3.compMolFrac[2,2] * MatStm3.compMolEnth[2,2]
-*/
-void Flowsheet_eqFunction_180(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,180};
-  data->localData[0]->realVars[249] /* MatStm3.phasMolEnth[2] variable */ = (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[210] /* MatStm3.compMolEnth[2,1] variable */) + (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[211] /* MatStm3.compMolEnth[2,2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 181
-type: SIMPLE_ASSIGN
-MatStm3._Pbubl = MatStm3.compMolFrac[1,1] * exp(MatStm3.comp[1].VP[2] + MatStm3.comp[1].VP[3] / MatStm3.T + MatStm3.comp[1].VP[4] * log(MatStm3.T) + MatStm3.comp[1].VP[5] * MatStm3.T ^ MatStm3.comp[1].VP[6]) + MatStm3.compMolFrac[1,2] * exp(MatStm3.comp[2].VP[2] + MatStm3.comp[2].VP[3] / MatStm3.T + MatStm3.comp[2].VP[4] * log(MatStm3.T) + MatStm3.comp[2].VP[5] * MatStm3.T ^ MatStm3.comp[2].VP[6])
-*/
-void Flowsheet_eqFunction_181(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,181};
-  modelica_real tmp0;
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real tmp4;
-  modelica_real tmp5;
-  modelica_real tmp6;
-  modelica_real tmp7;
-  modelica_real tmp8;
-  modelica_real tmp9;
-  modelica_real tmp10;
-  modelica_real tmp11;
-  modelica_real tmp12;
-  modelica_real tmp13;
-  modelica_real tmp14;
-  modelica_real tmp15;
-  tmp0 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  if(!(tmp0 > 0.0))
-  {
-    FILE_INFO info = {"",0,0,0,0,0};
-    omc_assert_warning(info, "The following assertion has been violated %sat time %f", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-    throwStreamPrintWithEquationIndexes(threadData, equationIndexes, "Model error: Argument of log(MatStm3.T) was %g should be > 0", tmp0);
-  }tmp1 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  tmp2 = data->simulationInfo->realParameter[587];
-  if(tmp1 < 0.0 && tmp2 != 0.0)
-  {
-    tmp4 = modf(tmp2, &tmp5);
-    
-    if(tmp4 > 0.5)
-    {
-      tmp4 -= 1.0;
-      tmp5 += 1.0;
-    }
-    else if(tmp4 < -0.5)
-    {
-      tmp4 += 1.0;
-      tmp5 -= 1.0;
-    }
-    
-    if(fabs(tmp4) < 1e-10)
-      tmp3 = pow(tmp1, tmp5);
-    else
-    {
-      tmp7 = modf(1.0/tmp2, &tmp6);
-      if(tmp7 > 0.5)
-      {
-        tmp7 -= 1.0;
-        tmp6 += 1.0;
-      }
-      else if(tmp7 < -0.5)
-      {
-        tmp7 += 1.0;
-        tmp6 -= 1.0;
-      }
-      if(fabs(tmp7) < 1e-10 && ((unsigned long)tmp6 & 1))
-      {
-        tmp3 = -pow(-tmp1, tmp4)*pow(tmp1, tmp5);
-      }
-      else
-      {
-        throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp1, tmp2);
-      }
-    }
-  }
-  else
-  {
-    tmp3 = pow(tmp1, tmp2);
-  }
-  if(isnan(tmp3) || isinf(tmp3))
-  {
-    throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp1, tmp2);
-  }tmp8 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  if(!(tmp8 > 0.0))
-  {
-    FILE_INFO info = {"",0,0,0,0,0};
-    omc_assert_warning(info, "The following assertion has been violated %sat time %f", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-    throwStreamPrintWithEquationIndexes(threadData, equationIndexes, "Model error: Argument of log(MatStm3.T) was %g should be > 0", tmp8);
-  }tmp9 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  tmp10 = data->simulationInfo->realParameter[593];
-  if(tmp9 < 0.0 && tmp10 != 0.0)
-  {
-    tmp12 = modf(tmp10, &tmp13);
-    
-    if(tmp12 > 0.5)
-    {
-      tmp12 -= 1.0;
-      tmp13 += 1.0;
-    }
-    else if(tmp12 < -0.5)
-    {
-      tmp12 += 1.0;
-      tmp13 -= 1.0;
-    }
-    
-    if(fabs(tmp12) < 1e-10)
-      tmp11 = pow(tmp9, tmp13);
-    else
-    {
-      tmp15 = modf(1.0/tmp10, &tmp14);
-      if(tmp15 > 0.5)
-      {
-        tmp15 -= 1.0;
-        tmp14 += 1.0;
-      }
-      else if(tmp15 < -0.5)
-      {
-        tmp15 += 1.0;
-        tmp14 -= 1.0;
-      }
-      if(fabs(tmp15) < 1e-10 && ((unsigned long)tmp14 & 1))
-      {
-        tmp11 = -pow(-tmp9, tmp12)*pow(tmp9, tmp13);
-      }
-      else
-      {
-        throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp9, tmp10);
-      }
-    }
-  }
-  else
-  {
-    tmp11 = pow(tmp9, tmp10);
-  }
-  if(isnan(tmp11) || isinf(tmp11))
-  {
-    throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp9, tmp10);
-  }
-  data->localData[0]->realVars[191] /* MatStm3.Pbubl variable */ = (data->localData[0]->realVars[226] /* MatStm3.compMolFrac[1,1] variable */) * (exp(data->simulationInfo->realParameter[583] + DIVISION_SIM(data->simulationInfo->realParameter[584],data->localData[0]->realVars[195] /* MatStm3.T variable */,"MatStm3.T",equationIndexes) + (data->simulationInfo->realParameter[585]) * (log(tmp0)) + (data->simulationInfo->realParameter[586]) * (tmp3))) + (data->localData[0]->realVars[227] /* MatStm3.compMolFrac[1,2] variable */) * (exp(data->simulationInfo->realParameter[589] + DIVISION_SIM(data->simulationInfo->realParameter[590],data->localData[0]->realVars[195] /* MatStm3.T variable */,"MatStm3.T",equationIndexes) + (data->simulationInfo->realParameter[591]) * (log(tmp8)) + (data->simulationInfo->realParameter[592]) * (tmp11)));
-  TRACE_POP
-}
-/*
-equation index: 182
-type: SIMPLE_ASSIGN
-MatStm3._Pdew = 1.0 / (MatStm3.compMolFrac[1,1] * exp((-MatStm3.comp[1].VP[2]) - MatStm3.comp[1].VP[3] / MatStm3.T - MatStm3.comp[1].VP[4] * log(MatStm3.T) - MatStm3.comp[1].VP[5] * MatStm3.T ^ MatStm3.comp[1].VP[6]) + MatStm3.compMolFrac[1,2] * exp((-MatStm3.comp[2].VP[2]) - MatStm3.comp[2].VP[3] / MatStm3.T - MatStm3.comp[2].VP[4] * log(MatStm3.T) - MatStm3.comp[2].VP[5] * MatStm3.T ^ MatStm3.comp[2].VP[6]))
-*/
-void Flowsheet_eqFunction_182(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,182};
-  modelica_real tmp0;
-  modelica_real tmp1;
-  modelica_real tmp2;
-  modelica_real tmp3;
-  modelica_real tmp4;
-  modelica_real tmp5;
-  modelica_real tmp6;
-  modelica_real tmp7;
-  modelica_real tmp8;
-  modelica_real tmp9;
-  modelica_real tmp10;
-  modelica_real tmp11;
-  modelica_real tmp12;
-  modelica_real tmp13;
-  modelica_real tmp14;
-  modelica_real tmp15;
-  tmp0 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  if(!(tmp0 > 0.0))
-  {
-    FILE_INFO info = {"",0,0,0,0,0};
-    omc_assert_warning(info, "The following assertion has been violated %sat time %f", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-    throwStreamPrintWithEquationIndexes(threadData, equationIndexes, "Model error: Argument of log(MatStm3.T) was %g should be > 0", tmp0);
-  }tmp1 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  tmp2 = data->simulationInfo->realParameter[587];
-  if(tmp1 < 0.0 && tmp2 != 0.0)
-  {
-    tmp4 = modf(tmp2, &tmp5);
-    
-    if(tmp4 > 0.5)
-    {
-      tmp4 -= 1.0;
-      tmp5 += 1.0;
-    }
-    else if(tmp4 < -0.5)
-    {
-      tmp4 += 1.0;
-      tmp5 -= 1.0;
-    }
-    
-    if(fabs(tmp4) < 1e-10)
-      tmp3 = pow(tmp1, tmp5);
-    else
-    {
-      tmp7 = modf(1.0/tmp2, &tmp6);
-      if(tmp7 > 0.5)
-      {
-        tmp7 -= 1.0;
-        tmp6 += 1.0;
-      }
-      else if(tmp7 < -0.5)
-      {
-        tmp7 += 1.0;
-        tmp6 -= 1.0;
-      }
-      if(fabs(tmp7) < 1e-10 && ((unsigned long)tmp6 & 1))
-      {
-        tmp3 = -pow(-tmp1, tmp4)*pow(tmp1, tmp5);
-      }
-      else
-      {
-        throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp1, tmp2);
-      }
-    }
-  }
-  else
-  {
-    tmp3 = pow(tmp1, tmp2);
-  }
-  if(isnan(tmp3) || isinf(tmp3))
-  {
-    throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp1, tmp2);
-  }tmp8 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  if(!(tmp8 > 0.0))
-  {
-    FILE_INFO info = {"",0,0,0,0,0};
-    omc_assert_warning(info, "The following assertion has been violated %sat time %f", initial() ? "during initialization " : "", data->localData[0]->timeValue);
-    throwStreamPrintWithEquationIndexes(threadData, equationIndexes, "Model error: Argument of log(MatStm3.T) was %g should be > 0", tmp8);
-  }tmp9 = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-  tmp10 = data->simulationInfo->realParameter[593];
-  if(tmp9 < 0.0 && tmp10 != 0.0)
-  {
-    tmp12 = modf(tmp10, &tmp13);
-    
-    if(tmp12 > 0.5)
-    {
-      tmp12 -= 1.0;
-      tmp13 += 1.0;
-    }
-    else if(tmp12 < -0.5)
-    {
-      tmp12 += 1.0;
-      tmp13 -= 1.0;
-    }
-    
-    if(fabs(tmp12) < 1e-10)
-      tmp11 = pow(tmp9, tmp13);
-    else
-    {
-      tmp15 = modf(1.0/tmp10, &tmp14);
-      if(tmp15 > 0.5)
-      {
-        tmp15 -= 1.0;
-        tmp14 += 1.0;
-      }
-      else if(tmp15 < -0.5)
-      {
-        tmp15 += 1.0;
-        tmp14 -= 1.0;
-      }
-      if(fabs(tmp15) < 1e-10 && ((unsigned long)tmp14 & 1))
-      {
-        tmp11 = -pow(-tmp9, tmp12)*pow(tmp9, tmp13);
-      }
-      else
-      {
-        throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp9, tmp10);
-      }
-    }
-  }
-  else
-  {
-    tmp11 = pow(tmp9, tmp10);
-  }
-  if(isnan(tmp11) || isinf(tmp11))
-  {
-    throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp9, tmp10);
-  }
-  data->localData[0]->realVars[192] /* MatStm3.Pdew variable */ = DIVISION_SIM(1.0,(data->localData[0]->realVars[226] /* MatStm3.compMolFrac[1,1] variable */) * (exp((-data->simulationInfo->realParameter[583]) - (DIVISION_SIM(data->simulationInfo->realParameter[584],data->localData[0]->realVars[195] /* MatStm3.T variable */,"MatStm3.T",equationIndexes)) - ((data->simulationInfo->realParameter[585]) * (log(tmp0))) - ((data->simulationInfo->realParameter[586]) * (tmp3)))) + (data->localData[0]->realVars[227] /* MatStm3.compMolFrac[1,2] variable */) * (exp((-data->simulationInfo->realParameter[589]) - (DIVISION_SIM(data->simulationInfo->realParameter[590],data->localData[0]->realVars[195] /* MatStm3.T variable */,"MatStm3.T",equationIndexes)) - ((data->simulationInfo->realParameter[591]) * (log(tmp8))) - ((data->simulationInfo->realParameter[592]) * (tmp11)))),"MatStm3.compMolFrac[1,1] * exp((-MatStm3.comp[1].VP[2]) - MatStm3.comp[1].VP[3] / MatStm3.T - MatStm3.comp[1].VP[4] * log(MatStm3.T) - MatStm3.comp[1].VP[5] * MatStm3.T ^ MatStm3.comp[1].VP[6]) + MatStm3.compMolFrac[1,2] * exp((-MatStm3.comp[2].VP[2]) - MatStm3.comp[2].VP[3] / MatStm3.T - MatStm3.comp[2].VP[4] * log(MatStm3.T) - MatStm3.comp[2].VP[5] * MatStm3.T ^ MatStm3.comp[2].VP[6])",equationIndexes);
-  TRACE_POP
-}
-/*
-equation index: 183
-type: SIMPLE_ASSIGN
-MatStm3._K[2] = 9.869232667160129e-006 * MatStm3.Psat[2]
-*/
-void Flowsheet_eqFunction_183(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,183};
-  data->localData[0]->realVars[186] /* MatStm3.K[2] variable */ = (9.869232667160129e-006) * (data->localData[0]->realVars[194] /* MatStm3.Psat[2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 184
-type: SIMPLE_ASSIGN
-MatStm3._K[1] = 9.869232667160129e-006 * MatStm3.Psat[1]
-*/
-void Flowsheet_eqFunction_184(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,184};
-  data->localData[0]->realVars[185] /* MatStm3.K[1] variable */ = (9.869232667160129e-006) * (data->localData[0]->realVars[193] /* MatStm3.Psat[1] variable */);
-  TRACE_POP
-}
-/*
-equation index: 185
-type: SIMPLE_ASSIGN
-MatStm3._compMolFlo[3,2] = MatStm3.compMolFrac[3,2] * MatStm3.totMolFlo[3]
-*/
-void Flowsheet_eqFunction_185(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,185};
-  data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[271] /* MatStm3.totMolFlo[3] variable */);
-  TRACE_POP
-}
-/*
-equation index: 186
-type: SIMPLE_ASSIGN
-MatStm3._compMolFlo[3,1] = MatStm3.compMolFrac[3,1] * MatStm3.totMolFlo[3]
-*/
-void Flowsheet_eqFunction_186(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,186};
-  data->localData[0]->realVars[224] /* MatStm3.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[271] /* MatStm3.totMolFlo[3] variable */);
-  TRACE_POP
-}
-/*
 equation index: 187
 type: SIMPLE_ASSIGN
-MatStm3._vapPhasMolFrac = 0.006666666666666667 * MatStm3.totMolFlo[3]
+MatStm3._compMolFlo[2,1] = MatStm3.compMolFrac[2,1] * MatStm3.totMolFlo[2]
 */
 void Flowsheet_eqFunction_187(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,187};
-  data->localData[0]->realVars[273] /* MatStm3.vapPhasMolFrac variable */ = (0.006666666666666667) * (data->localData[0]->realVars[271] /* MatStm3.totMolFlo[3] variable */);
+  data->localData[0]->realVars[222] /* MatStm3.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[269] /* MatStm3.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
 equation index: 188
 type: SIMPLE_ASSIGN
-MatStm3._liqPhasMolFrac = 1.0 - MatStm3.vapPhasMolFrac
+MatStm3._compMolFlo[2,2] = MatStm3.compMolFrac[2,2] * MatStm3.totMolFlo[2]
 */
 void Flowsheet_eqFunction_188(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,188};
-  data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */ = 1.0 - data->localData[0]->realVars[273] /* MatStm3.vapPhasMolFrac variable */;
+  data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[269] /* MatStm3.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
 equation index: 189
 type: SIMPLE_ASSIGN
-MatStm3._totMolFlo[2] = 150.0 * MatStm3.liqPhasMolFrac
+MatStm3._liqPhasMolFrac = 0.02 * MatStm3.totMolFlo[2]
 */
 void Flowsheet_eqFunction_189(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,189};
-  data->localData[0]->realVars[270] /* MatStm3.totMolFlo[2] variable */ = (150.0) * (data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */);
+  data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */ = (0.02) * (data->localData[0]->realVars[269] /* MatStm3.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
 equation index: 190
 type: SIMPLE_ASSIGN
-MatStm3._compMolFlo[2,2] = MatStm3.compMolFrac[2,2] * MatStm3.totMolFlo[2]
+MatStm3._totMolFlo[3] = 50.0 - 50.0 * MatStm3.liqPhasMolFrac
 */
 void Flowsheet_eqFunction_190(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,190};
-  data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[2] variable */);
+  data->localData[0]->realVars[270] /* MatStm3.totMolFlo[3] variable */ = 50.0 - ((50.0) * (data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */));
   TRACE_POP
 }
 /*
 equation index: 191
 type: SIMPLE_ASSIGN
-MatStm3._compMolFlo[2,1] = MatStm3.compMolFrac[2,1] * MatStm3.totMolFlo[2]
+MatStm3._compMolFlo[3,2] = MatStm3.compMolFrac[3,2] * MatStm3.totMolFlo[3]
 */
 void Flowsheet_eqFunction_191(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,191};
-  data->localData[0]->realVars[222] /* MatStm3.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[2] variable */);
+  data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[3] variable */);
+  TRACE_POP
+}
+/*
+equation index: 192
+type: SIMPLE_ASSIGN
+MatStm3._compMolFlo[3,1] = MatStm3.compMolFrac[3,1] * MatStm3.totMolFlo[3]
+*/
+void Flowsheet_eqFunction_192(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,192};
+  data->localData[0]->realVars[224] /* MatStm3.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[270] /* MatStm3.totMolFlo[3] variable */);
   TRACE_POP
 }
 
-void residualFunc198(void** dataIn, const double* xloc, double* res, const int* iflag)
+void residualFunc209(void** dataIn, const double* xloc, double* res, const int* iflag)
 {
   TRACE_PUSH
   DATA *data = (DATA*) ((void**)dataIn[0]);
   threadData_t *threadData = (threadData_t*) ((void**)dataIn[1]);
-  const int equationIndexes[2] = {1,198};
+  const int equationIndexes[2] = {1,209};
   int i;
   modelica_boolean tmp0;
   modelica_boolean tmp1;
@@ -1779,64 +784,21 @@ void residualFunc198(void** dataIn, const double* xloc, double* res, const int* 
   modelica_boolean tmp7;
   modelica_real tmp8;
   /* iteration variables */
-  for (i=0; i<6; i++) {
+  for (i=0; i<5; i++) {
     if (isinf(xloc[i]) || isnan(xloc[i])) {
-      for (i=0; i<6; i++) {
+      for (i=0; i<5; i++) {
         res[i] = NAN;
       }
       return;
     }
   }
-  data->localData[0]->realVars[271] /* MatStm3.totMolFlo[3] variable */ = xloc[0];
-  data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */ = xloc[1];
-  data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ = xloc[2];
-  data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */ = xloc[3];
-  data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ = xloc[4];
-  data->localData[0]->realVars[195] /* MatStm3.T variable */ = xloc[5];
+  data->localData[0]->realVars[269] /* MatStm3.totMolFlo[2] variable */ = xloc[0];
+  data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ = xloc[1];
+  data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */ = xloc[2];
+  data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ = xloc[3];
+  data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */ = xloc[4];
   /* backup outputs */
   /* pre body */
-  /* local constraints */
-  Flowsheet_eqFunction_173(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_174(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_175(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_176(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_177(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_178(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_179(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_180(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_181(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_182(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_183(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_184(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_185(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_186(data, threadData);
-
   /* local constraints */
   Flowsheet_eqFunction_187(data, threadData);
 
@@ -1851,299 +813,50 @@ void residualFunc198(void** dataIn, const double* xloc, double* res, const int* 
 
   /* local constraints */
   Flowsheet_eqFunction_191(data, threadData);
+
+  /* local constraints */
+  Flowsheet_eqFunction_192(data, threadData);
   /* body */
-  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[191] /* MatStm3.Pbubl variable */);
+  res[0] = data->localData[0]->realVars[224] /* MatStm3.compMolFlo[3,1] variable */ + data->localData[0]->realVars[222] /* MatStm3.compMolFlo[2,1] variable */ - data->localData[0]->realVars[220] /* MatStm3.compMolFlo[1,1] variable */;
+
+  res[1] = data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,2] variable */ + data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,2] variable */ - data->localData[0]->realVars[221] /* MatStm3.compMolFlo[1,2] variable */;
+
+  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[192] /* MatStm3.Pbubl variable */);
   tmp2 = (modelica_boolean)tmp0;
   if(tmp2)
   {
-    tmp3 = data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */;
+    tmp3 = data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */;
   }
   else
   {
-    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[192] /* MatStm3.Pdew variable */);
-    tmp3 = (tmp1?data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[185] /* MatStm3.K[1] variable */) * (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */)):data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */);
+    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[193] /* MatStm3.Pdew variable */);
+    tmp3 = (tmp1?data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[188] /* MatStm3.K[2] variable */) * (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */)):data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */);
   }
-  res[0] = tmp3;
+  res[2] = tmp3;
 
-  tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[191] /* MatStm3.Pbubl variable */);
-  res[1] = (tmp4?data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */ + data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ + data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ - 1.0);
+  tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[192] /* MatStm3.Pbubl variable */);
+  res[3] = (tmp4?data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */ + data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ + data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ - 1.0);
 
-  res[2] = data->localData[0]->realVars[224] /* MatStm3.compMolFlo[3,1] variable */ + data->localData[0]->realVars[222] /* MatStm3.compMolFlo[2,1] variable */ - data->localData[0]->realVars[220] /* MatStm3.compMolFlo[1,1] variable */;
-
-  res[3] = (data->localData[0]->realVars[273] /* MatStm3.vapPhasMolFrac variable */) * (data->localData[0]->realVars[250] /* MatStm3.phasMolEnth[3] variable */) + (data->localData[0]->realVars[245] /* MatStm3.liqPhasMolFrac variable */) * (data->localData[0]->realVars[249] /* MatStm3.phasMolEnth[2] variable */) - data->localData[0]->realVars[248] /* MatStm3.phasMolEnth[1] variable */;
-
-  res[4] = data->localData[0]->realVars[225] /* MatStm3.compMolFlo[3,2] variable */ + data->localData[0]->realVars[223] /* MatStm3.compMolFlo[2,2] variable */ - data->localData[0]->realVars[221] /* MatStm3.compMolFlo[1,2] variable */;
-
-  tmp5 = GreaterEq(101325.0,data->localData[0]->realVars[191] /* MatStm3.Pbubl variable */);
+  tmp5 = GreaterEq(101325.0,data->localData[0]->realVars[192] /* MatStm3.Pbubl variable */);
   tmp7 = (modelica_boolean)tmp5;
   if(tmp7)
   {
-    tmp8 = data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */;
+    tmp8 = data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */;
   }
   else
   {
-    tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[192] /* MatStm3.Pdew variable */);
-    tmp8 = (tmp6?data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[186] /* MatStm3.K[2] variable */) * (data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */)):data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */);
-  }
-  res[5] = tmp8;
-  /* restore known outputs */
-  TRACE_POP
-}
-void initializeSparsePatternNLS198(NONLINEAR_SYSTEM_DATA* inSysData)
-{
-  int i=0;
-  const int colPtrIndex[1+6] = {0,3,4,4,4,4,4};
-  const int rowIndex[23] = {2,3,4,1,3,4,5,1,3,4,5,0,1,2,3,0,1,2,3,0,1,3,5};
-  /* sparsity pattern available */
-  inSysData->isPatternAvailable = 'T';
-  inSysData->sparsePattern.leadindex = (unsigned int*) malloc((6+1)*sizeof(int));
-  inSysData->sparsePattern.index = (unsigned int*) malloc(23*sizeof(int));
-  inSysData->sparsePattern.numberOfNoneZeros = 23;
-  inSysData->sparsePattern.colorCols = (unsigned int*) malloc(6*sizeof(int));
-  inSysData->sparsePattern.maxColors = 6;
-  
-  /* write lead index of compressed sparse column */
-  memcpy(inSysData->sparsePattern.leadindex, colPtrIndex, (6+1)*sizeof(int));
-  
-  for(i=2;i<6+1;++i)
-    inSysData->sparsePattern.leadindex[i] += inSysData->sparsePattern.leadindex[i-1];
-  
-  /* call sparse index */
-  memcpy(inSysData->sparsePattern.index, rowIndex, 23*sizeof(int));
-  
-  /* write color array */
-  inSysData->sparsePattern.colorCols[5] = 1;
-  inSysData->sparsePattern.colorCols[4] = 2;
-  inSysData->sparsePattern.colorCols[3] = 3;
-  inSysData->sparsePattern.colorCols[2] = 4;
-  inSysData->sparsePattern.colorCols[1] = 5;
-  inSysData->sparsePattern.colorCols[0] = 6;
-}
-void initializeStaticDataNLS198(void *inData, threadData_t *threadData, void *inSystemData)
-{
-  DATA* data = (DATA*) inData;
-  NONLINEAR_SYSTEM_DATA* sysData = (NONLINEAR_SYSTEM_DATA*) inSystemData;
-  int i=0;
-  /* static nls data for MatStm3.totMolFlo[3] */
-  sysData->nominal[i] = data->modelData->realVarsData[271].attribute /* MatStm3.totMolFlo[3] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[271].attribute /* MatStm3.totMolFlo[3] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[271].attribute /* MatStm3.totMolFlo[3] */.max;
-  /* static nls data for MatStm3.compMolFrac[2,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.max;
-  /* static nls data for MatStm3.compMolFrac[3,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[231].attribute /* MatStm3.compMolFrac[3,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[231].attribute /* MatStm3.compMolFrac[3,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[231].attribute /* MatStm3.compMolFrac[3,2] */.max;
-  /* static nls data for MatStm3.compMolFrac[2,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[228].attribute /* MatStm3.compMolFrac[2,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[228].attribute /* MatStm3.compMolFrac[2,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[228].attribute /* MatStm3.compMolFrac[2,1] */.max;
-  /* static nls data for MatStm3.compMolFrac[3,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.max;
-  /* static nls data for MatStm3.T */
-  sysData->nominal[i] = data->modelData->realVarsData[195].attribute /* MatStm3.T */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[195].attribute /* MatStm3.T */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[195].attribute /* MatStm3.T */.max;
-  /* initial sparse pattern */
-  initializeSparsePatternNLS198(sysData);
-}
-
-void getIterationVarsNLS198(struct DATA *inData, double *array)
-{
-  DATA* data = (DATA*) inData;
-  array[0] = data->localData[0]->realVars[271] /* MatStm3.totMolFlo[3] variable */;
-  array[1] = data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */;
-  array[2] = data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */;
-  array[3] = data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */;
-  array[4] = data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */;
-  array[5] = data->localData[0]->realVars[195] /* MatStm3.T variable */;
-}
-
-
-/* inner equations */
-
-/*
-equation index: 112
-type: SIMPLE_ASSIGN
-MatStm2._compMolFlo[3,1] = MatStm2.compMolFrac[3,1] * MatStm2.totMolFlo[3]
-*/
-void Flowsheet_eqFunction_112(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,112};
-  data->localData[0]->realVars[134] /* MatStm2.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */);
-  TRACE_POP
-}
-/*
-equation index: 113
-type: SIMPLE_ASSIGN
-MatStm2._compMolFlo[3,2] = MatStm2.compMolFrac[3,2] * MatStm2.totMolFlo[3]
-*/
-void Flowsheet_eqFunction_113(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,113};
-  data->localData[0]->realVars[135] /* MatStm2.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */);
-  TRACE_POP
-}
-/*
-equation index: 114
-type: SIMPLE_ASSIGN
-Mixer1._inVapPhasMolFrac[2] = 0.01428571428571429 * MatStm2.totMolFlo[3]
-*/
-void Flowsheet_eqFunction_114(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,114};
-  data->localData[0]->realVars[277] /* Mixer1.inVapPhasMolFrac[2] variable */ = (0.01428571428571429) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */);
-  TRACE_POP
-}
-/*
-equation index: 115
-type: SIMPLE_ASSIGN
-MatStm2._liqPhasMolFrac = 1.0 - Mixer1.inVapPhasMolFrac[2]
-*/
-void Flowsheet_eqFunction_115(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,115};
-  data->localData[0]->realVars[155] /* MatStm2.liqPhasMolFrac variable */ = 1.0 - data->localData[0]->realVars[277] /* Mixer1.inVapPhasMolFrac[2] variable */;
-  TRACE_POP
-}
-/*
-equation index: 116
-type: SIMPLE_ASSIGN
-MatStm2._totMolFlo[2] = 70.0 * MatStm2.liqPhasMolFrac
-*/
-void Flowsheet_eqFunction_116(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,116};
-  data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */ = (70.0) * (data->localData[0]->realVars[155] /* MatStm2.liqPhasMolFrac variable */);
-  TRACE_POP
-}
-/*
-equation index: 117
-type: SIMPLE_ASSIGN
-MatStm2._compMolFlo[2,1] = MatStm2.compMolFrac[2,1] * MatStm2.totMolFlo[2]
-*/
-void Flowsheet_eqFunction_117(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,117};
-  data->localData[0]->realVars[132] /* MatStm2.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */);
-  TRACE_POP
-}
-/*
-equation index: 118
-type: SIMPLE_ASSIGN
-MatStm2._compMolFlo[2,2] = MatStm2.compMolFrac[2,2] * MatStm2.totMolFlo[2]
-*/
-void Flowsheet_eqFunction_118(DATA *data, threadData_t *threadData)
-{
-  TRACE_PUSH
-  const int equationIndexes[2] = {1,118};
-  data->localData[0]->realVars[133] /* MatStm2.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[180] /* MatStm2.totMolFlo[2] variable */);
-  TRACE_POP
-}
-
-void residualFunc136(void** dataIn, const double* xloc, double* res, const int* iflag)
-{
-  TRACE_PUSH
-  DATA *data = (DATA*) ((void**)dataIn[0]);
-  threadData_t *threadData = (threadData_t*) ((void**)dataIn[1]);
-  const int equationIndexes[2] = {1,136};
-  int i;
-  modelica_boolean tmp0;
-  modelica_boolean tmp1;
-  modelica_boolean tmp2;
-  modelica_real tmp3;
-  modelica_boolean tmp4;
-  modelica_boolean tmp5;
-  modelica_boolean tmp6;
-  modelica_boolean tmp7;
-  modelica_real tmp8;
-  /* iteration variables */
-  for (i=0; i<5; i++) {
-    if (isinf(xloc[i]) || isnan(xloc[i])) {
-      for (i=0; i<5; i++) {
-        res[i] = NAN;
-      }
-      return;
-    }
-  }
-  data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */ = xloc[0];
-  data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */ = xloc[1];
-  data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */ = xloc[2];
-  data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */ = xloc[3];
-  data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */ = xloc[4];
-  /* backup outputs */
-  /* pre body */
-  /* local constraints */
-  Flowsheet_eqFunction_112(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_113(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_114(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_115(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_116(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_117(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_118(data, threadData);
-  /* body */
-  res[0] = data->localData[0]->realVars[135] /* MatStm2.compMolFlo[3,2] variable */ + data->localData[0]->realVars[133] /* MatStm2.compMolFlo[2,2] variable */ - data->localData[0]->realVars[131] /* MatStm2.compMolFlo[1,2] variable */;
-
-  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */);
-  tmp2 = (modelica_boolean)tmp0;
-  if(tmp2)
-  {
-    tmp3 = data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */;
-  }
-  else
-  {
-    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[102] /* MatStm2.Pdew variable */);
-    tmp3 = (tmp1?data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[96] /* MatStm2.K[2] variable */) * (data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */)):data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */);
-  }
-  res[1] = tmp3;
-
-  res[2] = data->localData[0]->realVars[134] /* MatStm2.compMolFlo[3,1] variable */ + data->localData[0]->realVars[132] /* MatStm2.compMolFlo[2,1] variable */ - data->localData[0]->realVars[130] /* MatStm2.compMolFlo[1,1] variable */;
-
-  tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */);
-  res[3] = (tmp4?data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */ + data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */ + data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */ - 1.0);
-
-  tmp5 = GreaterEq(101325.0,data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */);
-  tmp7 = (modelica_boolean)tmp5;
-  if(tmp7)
-  {
-    tmp8 = data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */;
-  }
-  else
-  {
-    tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[102] /* MatStm2.Pdew variable */);
-    tmp8 = (tmp6?data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[95] /* MatStm2.K[1] variable */) * (data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */)):data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */);
+    tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[193] /* MatStm3.Pdew variable */);
+    tmp8 = (tmp6?data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[187] /* MatStm3.K[1] variable */) * (data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */)):data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */);
   }
   res[4] = tmp8;
   /* restore known outputs */
   TRACE_POP
 }
-void initializeSparsePatternNLS136(NONLINEAR_SYSTEM_DATA* inSysData)
+void initializeSparsePatternNLS209(NONLINEAR_SYSTEM_DATA* inSysData)
 {
   int i=0;
   const int colPtrIndex[1+5] = {0,2,3,3,3,3};
-  const int rowIndex[14] = {0,2,2,3,4,0,1,3,2,3,4,0,1,3};
+  const int rowIndex[14] = {0,1,0,3,4,0,3,4,1,2,3,1,2,3};
   /* sparsity pattern available */
   inSysData->isPatternAvailable = 'T';
   inSysData->sparsePattern.leadindex = (unsigned int*) malloc((5+1)*sizeof(int));
@@ -2168,118 +881,323 @@ void initializeSparsePatternNLS136(NONLINEAR_SYSTEM_DATA* inSysData)
   inSysData->sparsePattern.colorCols[1] = 4;
   inSysData->sparsePattern.colorCols[0] = 5;
 }
-void initializeStaticDataNLS136(void *inData, threadData_t *threadData, void *inSystemData)
+void initializeStaticDataNLS209(void *inData, threadData_t *threadData, void *inSystemData)
 {
   DATA* data = (DATA*) inData;
   NONLINEAR_SYSTEM_DATA* sysData = (NONLINEAR_SYSTEM_DATA*) inSystemData;
   int i=0;
-  /* static nls data for MatStm2.totMolFlo[3] */
-  sysData->nominal[i] = data->modelData->realVarsData[181].attribute /* MatStm2.totMolFlo[3] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[181].attribute /* MatStm2.totMolFlo[3] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[181].attribute /* MatStm2.totMolFlo[3] */.max;
-  /* static nls data for MatStm2.compMolFrac[3,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[3,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[3,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[3,1] */.max;
-  /* static nls data for MatStm2.compMolFrac[3,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[3,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[3,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[3,2] */.max;
-  /* static nls data for MatStm2.compMolFrac[2,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[138].attribute /* MatStm2.compMolFrac[2,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[138].attribute /* MatStm2.compMolFrac[2,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[138].attribute /* MatStm2.compMolFrac[2,1] */.max;
-  /* static nls data for MatStm2.compMolFrac[2,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[139].attribute /* MatStm2.compMolFrac[2,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[139].attribute /* MatStm2.compMolFrac[2,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[139].attribute /* MatStm2.compMolFrac[2,2] */.max;
+  /* static nls data for MatStm3.totMolFlo[2] */
+  sysData->nominal[i] = data->modelData->realVarsData[269].attribute /* MatStm3.totMolFlo[2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[269].attribute /* MatStm3.totMolFlo[2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[269].attribute /* MatStm3.totMolFlo[2] */.max;
+  /* static nls data for MatStm3.compMolFrac[3,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[230].attribute /* MatStm3.compMolFrac[3,1] */.max;
+  /* static nls data for MatStm3.compMolFrac[2,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[228].attribute /* MatStm3.compMolFrac[2,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[228].attribute /* MatStm3.compMolFrac[2,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[228].attribute /* MatStm3.compMolFrac[2,1] */.max;
+  /* static nls data for MatStm3.compMolFrac[3,2] */
+  sysData->nominal[i] = data->modelData->realVarsData[231].attribute /* MatStm3.compMolFrac[3,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[231].attribute /* MatStm3.compMolFrac[3,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[231].attribute /* MatStm3.compMolFrac[3,2] */.max;
+  /* static nls data for MatStm3.compMolFrac[2,2] */
+  sysData->nominal[i] = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[229].attribute /* MatStm3.compMolFrac[2,2] */.max;
   /* initial sparse pattern */
-  initializeSparsePatternNLS136(sysData);
+  initializeSparsePatternNLS209(sysData);
 }
 
-void getIterationVarsNLS136(struct DATA *inData, double *array)
+void getIterationVarsNLS209(struct DATA *inData, double *array)
 {
   DATA* data = (DATA*) inData;
-  array[0] = data->localData[0]->realVars[181] /* MatStm2.totMolFlo[3] variable */;
-  array[1] = data->localData[0]->realVars[140] /* MatStm2.compMolFrac[3,1] variable */;
-  array[2] = data->localData[0]->realVars[141] /* MatStm2.compMolFrac[3,2] variable */;
-  array[3] = data->localData[0]->realVars[138] /* MatStm2.compMolFrac[2,1] variable */;
-  array[4] = data->localData[0]->realVars[139] /* MatStm2.compMolFrac[2,2] variable */;
+  array[0] = data->localData[0]->realVars[269] /* MatStm3.totMolFlo[2] variable */;
+  array[1] = data->localData[0]->realVars[230] /* MatStm3.compMolFrac[3,1] variable */;
+  array[2] = data->localData[0]->realVars[228] /* MatStm3.compMolFrac[2,1] variable */;
+  array[3] = data->localData[0]->realVars[231] /* MatStm3.compMolFrac[3,2] variable */;
+  array[4] = data->localData[0]->realVars[229] /* MatStm3.compMolFrac[2,2] variable */;
 }
 
 
 /* inner equations */
 
 /*
-equation index: 58
+equation index: 129
 type: SIMPLE_ASSIGN
-MatStm1._compMolFlo[2,1] = MatStm1.compMolFrac[2,1] * MatStm1.totMolFlo[2]
+MatStm2._compMolFlo[3,1] = MatStm2.compMolFrac[3,1] * MatStm2.totMolFlo[3]
 */
-void Flowsheet_eqFunction_58(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_129(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,58};
-  data->localData[0]->realVars[42] /* MatStm1.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */);
+  const int equationIndexes[2] = {1,129};
+  data->localData[0]->realVars[136] /* MatStm2.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[182] /* MatStm2.totMolFlo[3] variable */);
   TRACE_POP
 }
 /*
-equation index: 59
+equation index: 130
 type: SIMPLE_ASSIGN
-MatStm1._compMolFlo[2,2] = MatStm1.compMolFrac[2,2] * MatStm1.totMolFlo[2]
+MatStm2._compMolFlo[3,2] = MatStm2.compMolFrac[3,2] * MatStm2.totMolFlo[3]
 */
-void Flowsheet_eqFunction_59(DATA *data, threadData_t *threadData)
+void Flowsheet_eqFunction_130(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
-  const int equationIndexes[2] = {1,59};
-  data->localData[0]->realVars[43] /* MatStm1.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */);
+  const int equationIndexes[2] = {1,130};
+  data->localData[0]->realVars[137] /* MatStm2.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[182] /* MatStm2.totMolFlo[3] variable */);
   TRACE_POP
 }
+/*
+equation index: 131
+type: SIMPLE_ASSIGN
+MatStm2._liqPhasMolFrac = 1.0 - 0.02 * MatStm2.totMolFlo[3]
+*/
+void Flowsheet_eqFunction_131(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,131};
+  data->localData[0]->realVars[157] /* MatStm2.liqPhasMolFrac variable */ = 1.0 - ((0.02) * (data->localData[0]->realVars[182] /* MatStm2.totMolFlo[3] variable */));
+  TRACE_POP
+}
+/*
+equation index: 132
+type: SIMPLE_ASSIGN
+MatStm2._totMolFlo[2] = 50.0 * MatStm2.liqPhasMolFrac
+*/
+void Flowsheet_eqFunction_132(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,132};
+  data->localData[0]->realVars[181] /* MatStm2.totMolFlo[2] variable */ = (50.0) * (data->localData[0]->realVars[157] /* MatStm2.liqPhasMolFrac variable */);
+  TRACE_POP
+}
+/*
+equation index: 133
+type: SIMPLE_ASSIGN
+MatStm2._compMolFlo[2,1] = MatStm2.compMolFrac[2,1] * MatStm2.totMolFlo[2]
+*/
+void Flowsheet_eqFunction_133(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,133};
+  data->localData[0]->realVars[134] /* MatStm2.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[2] variable */);
+  TRACE_POP
+}
+/*
+equation index: 134
+type: SIMPLE_ASSIGN
+MatStm2._compMolFlo[2,2] = MatStm2.compMolFrac[2,2] * MatStm2.totMolFlo[2]
+*/
+void Flowsheet_eqFunction_134(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,134};
+  data->localData[0]->realVars[135] /* MatStm2.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[181] /* MatStm2.totMolFlo[2] variable */);
+  TRACE_POP
+}
+
+void residualFunc151(void** dataIn, const double* xloc, double* res, const int* iflag)
+{
+  TRACE_PUSH
+  DATA *data = (DATA*) ((void**)dataIn[0]);
+  threadData_t *threadData = (threadData_t*) ((void**)dataIn[1]);
+  const int equationIndexes[2] = {1,151};
+  int i;
+  modelica_boolean tmp0;
+  modelica_boolean tmp1;
+  modelica_boolean tmp2;
+  modelica_real tmp3;
+  modelica_boolean tmp4;
+  modelica_boolean tmp5;
+  modelica_boolean tmp6;
+  modelica_boolean tmp7;
+  modelica_real tmp8;
+  /* iteration variables */
+  for (i=0; i<5; i++) {
+    if (isinf(xloc[i]) || isnan(xloc[i])) {
+      for (i=0; i<5; i++) {
+        res[i] = NAN;
+      }
+      return;
+    }
+  }
+  data->localData[0]->realVars[182] /* MatStm2.totMolFlo[3] variable */ = xloc[0];
+  data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */ = xloc[1];
+  data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */ = xloc[2];
+  data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */ = xloc[3];
+  data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */ = xloc[4];
+  /* backup outputs */
+  /* pre body */
+  /* local constraints */
+  Flowsheet_eqFunction_129(data, threadData);
+
+  /* local constraints */
+  Flowsheet_eqFunction_130(data, threadData);
+
+  /* local constraints */
+  Flowsheet_eqFunction_131(data, threadData);
+
+  /* local constraints */
+  Flowsheet_eqFunction_132(data, threadData);
+
+  /* local constraints */
+  Flowsheet_eqFunction_133(data, threadData);
+
+  /* local constraints */
+  Flowsheet_eqFunction_134(data, threadData);
+  /* body */
+  res[0] = data->localData[0]->realVars[137] /* MatStm2.compMolFlo[3,2] variable */ + data->localData[0]->realVars[135] /* MatStm2.compMolFlo[2,2] variable */ - data->localData[0]->realVars[133] /* MatStm2.compMolFlo[1,2] variable */;
+
+  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[104] /* MatStm2.Pbubl variable */);
+  tmp2 = (modelica_boolean)tmp0;
+  if(tmp2)
+  {
+    tmp3 = data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */;
+  }
+  else
+  {
+    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[105] /* MatStm2.Pdew variable */);
+    tmp3 = (tmp1?data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[100] /* MatStm2.K[2] variable */) * (data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */)):data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */);
+  }
+  res[1] = tmp3;
+
+  res[2] = data->localData[0]->realVars[136] /* MatStm2.compMolFlo[3,1] variable */ + data->localData[0]->realVars[134] /* MatStm2.compMolFlo[2,1] variable */ - data->localData[0]->realVars[132] /* MatStm2.compMolFlo[1,1] variable */;
+
+  tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[104] /* MatStm2.Pbubl variable */);
+  res[3] = (tmp4?data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */ + data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */ + data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */ - 1.0);
+
+  tmp5 = GreaterEq(101325.0,data->localData[0]->realVars[104] /* MatStm2.Pbubl variable */);
+  tmp7 = (modelica_boolean)tmp5;
+  if(tmp7)
+  {
+    tmp8 = data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */;
+  }
+  else
+  {
+    tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[105] /* MatStm2.Pdew variable */);
+    tmp8 = (tmp6?data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[99] /* MatStm2.K[1] variable */) * (data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */)):data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */);
+  }
+  res[4] = tmp8;
+  /* restore known outputs */
+  TRACE_POP
+}
+void initializeSparsePatternNLS151(NONLINEAR_SYSTEM_DATA* inSysData)
+{
+  int i=0;
+  const int colPtrIndex[1+5] = {0,2,3,3,3,3};
+  const int rowIndex[14] = {0,2,2,3,4,2,3,4,0,1,3,0,1,3};
+  /* sparsity pattern available */
+  inSysData->isPatternAvailable = 'T';
+  inSysData->sparsePattern.leadindex = (unsigned int*) malloc((5+1)*sizeof(int));
+  inSysData->sparsePattern.index = (unsigned int*) malloc(14*sizeof(int));
+  inSysData->sparsePattern.numberOfNoneZeros = 14;
+  inSysData->sparsePattern.colorCols = (unsigned int*) malloc(5*sizeof(int));
+  inSysData->sparsePattern.maxColors = 5;
+  
+  /* write lead index of compressed sparse column */
+  memcpy(inSysData->sparsePattern.leadindex, colPtrIndex, (5+1)*sizeof(int));
+  
+  for(i=2;i<5+1;++i)
+    inSysData->sparsePattern.leadindex[i] += inSysData->sparsePattern.leadindex[i-1];
+  
+  /* call sparse index */
+  memcpy(inSysData->sparsePattern.index, rowIndex, 14*sizeof(int));
+  
+  /* write color array */
+  inSysData->sparsePattern.colorCols[4] = 1;
+  inSysData->sparsePattern.colorCols[3] = 2;
+  inSysData->sparsePattern.colorCols[2] = 3;
+  inSysData->sparsePattern.colorCols[1] = 4;
+  inSysData->sparsePattern.colorCols[0] = 5;
+}
+void initializeStaticDataNLS151(void *inData, threadData_t *threadData, void *inSystemData)
+{
+  DATA* data = (DATA*) inData;
+  NONLINEAR_SYSTEM_DATA* sysData = (NONLINEAR_SYSTEM_DATA*) inSystemData;
+  int i=0;
+  /* static nls data for MatStm2.totMolFlo[3] */
+  sysData->nominal[i] = data->modelData->realVarsData[182].attribute /* MatStm2.totMolFlo[3] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[182].attribute /* MatStm2.totMolFlo[3] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[182].attribute /* MatStm2.totMolFlo[3] */.max;
+  /* static nls data for MatStm2.compMolFrac[3,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[142].attribute /* MatStm2.compMolFrac[3,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[142].attribute /* MatStm2.compMolFrac[3,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[142].attribute /* MatStm2.compMolFrac[3,1] */.max;
+  /* static nls data for MatStm2.compMolFrac[2,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[2,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[2,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[140].attribute /* MatStm2.compMolFrac[2,1] */.max;
+  /* static nls data for MatStm2.compMolFrac[3,2] */
+  sysData->nominal[i] = data->modelData->realVarsData[143].attribute /* MatStm2.compMolFrac[3,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[143].attribute /* MatStm2.compMolFrac[3,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[143].attribute /* MatStm2.compMolFrac[3,2] */.max;
+  /* static nls data for MatStm2.compMolFrac[2,2] */
+  sysData->nominal[i] = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[2,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[2,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[141].attribute /* MatStm2.compMolFrac[2,2] */.max;
+  /* initial sparse pattern */
+  initializeSparsePatternNLS151(sysData);
+}
+
+void getIterationVarsNLS151(struct DATA *inData, double *array)
+{
+  DATA* data = (DATA*) inData;
+  array[0] = data->localData[0]->realVars[182] /* MatStm2.totMolFlo[3] variable */;
+  array[1] = data->localData[0]->realVars[142] /* MatStm2.compMolFrac[3,1] variable */;
+  array[2] = data->localData[0]->realVars[140] /* MatStm2.compMolFrac[2,1] variable */;
+  array[3] = data->localData[0]->realVars[143] /* MatStm2.compMolFrac[3,2] variable */;
+  array[4] = data->localData[0]->realVars[141] /* MatStm2.compMolFrac[2,2] variable */;
+}
+
+
+/* inner equations */
+
 /*
 equation index: 60
 type: SIMPLE_ASSIGN
-MatStm1._liqPhasMolFrac = 0.0125 * MatStm1.totMolFlo[2]
+MatStm1._compMolFlo[2,2] = MatStm1.compMolFrac[2,2] * MatStm1.totMolFlo[2]
 */
 void Flowsheet_eqFunction_60(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,60};
-  data->localData[0]->realVars[65] /* MatStm1.liqPhasMolFrac variable */ = (0.0125) * (data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */);
+  data->localData[0]->realVars[46] /* MatStm1.compMolFlo[2,2] variable */ = (data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */) * (data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
 equation index: 61
 type: SIMPLE_ASSIGN
-Mixer1._inVapPhasMolFrac[1] = 1.0 - MatStm1.liqPhasMolFrac
+MatStm1._compMolFlo[2,1] = MatStm1.compMolFrac[2,1] * MatStm1.totMolFlo[2]
 */
 void Flowsheet_eqFunction_61(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,61};
-  data->localData[0]->realVars[276] /* Mixer1.inVapPhasMolFrac[1] variable */ = 1.0 - data->localData[0]->realVars[65] /* MatStm1.liqPhasMolFrac variable */;
+  data->localData[0]->realVars[45] /* MatStm1.compMolFlo[2,1] variable */ = (data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */) * (data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
 equation index: 62
 type: SIMPLE_ASSIGN
-MatStm1._totMolFlo[3] = 80.0 * Mixer1.inVapPhasMolFrac[1]
+MatStm1._liqPhasMolFrac = 0.01 * MatStm1.totMolFlo[2]
 */
 void Flowsheet_eqFunction_62(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,62};
-  data->localData[0]->realVars[91] /* MatStm1.totMolFlo[3] variable */ = (80.0) * (data->localData[0]->realVars[276] /* Mixer1.inVapPhasMolFrac[1] variable */);
+  data->localData[0]->realVars[68] /* MatStm1.liqPhasMolFrac variable */ = (0.01) * (data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */);
   TRACE_POP
 }
 /*
 equation index: 63
 type: SIMPLE_ASSIGN
-MatStm1._compMolFlo[3,1] = MatStm1.compMolFrac[3,1] * MatStm1.totMolFlo[3]
+MatStm1._totMolFlo[3] = 100.0 - 100.0 * MatStm1.liqPhasMolFrac
 */
 void Flowsheet_eqFunction_63(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,63};
-  data->localData[0]->realVars[44] /* MatStm1.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[91] /* MatStm1.totMolFlo[3] variable */);
+  data->localData[0]->realVars[94] /* MatStm1.totMolFlo[3] variable */ = 100.0 - ((100.0) * (data->localData[0]->realVars[68] /* MatStm1.liqPhasMolFrac variable */));
   TRACE_POP
 }
 /*
@@ -2291,7 +1209,19 @@ void Flowsheet_eqFunction_64(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,64};
-  data->localData[0]->realVars[45] /* MatStm1.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[91] /* MatStm1.totMolFlo[3] variable */);
+  data->localData[0]->realVars[48] /* MatStm1.compMolFlo[3,2] variable */ = (data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */) * (data->localData[0]->realVars[94] /* MatStm1.totMolFlo[3] variable */);
+  TRACE_POP
+}
+/*
+equation index: 65
+type: SIMPLE_ASSIGN
+MatStm1._compMolFlo[3,1] = MatStm1.compMolFrac[3,1] * MatStm1.totMolFlo[3]
+*/
+void Flowsheet_eqFunction_65(DATA *data, threadData_t *threadData)
+{
+  TRACE_PUSH
+  const int equationIndexes[2] = {1,65};
+  data->localData[0]->realVars[47] /* MatStm1.compMolFlo[3,1] variable */ = (data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */) * (data->localData[0]->realVars[94] /* MatStm1.totMolFlo[3] variable */);
   TRACE_POP
 }
 
@@ -2320,19 +1250,13 @@ void residualFunc82(void** dataIn, const double* xloc, double* res, const int* i
       return;
     }
   }
-  data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */ = xloc[0];
-  data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */ = xloc[1];
-  data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */ = xloc[2];
-  data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */ = xloc[3];
-  data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */ = xloc[4];
+  data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */ = xloc[0];
+  data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */ = xloc[1];
+  data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */ = xloc[2];
+  data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */ = xloc[3];
+  data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */ = xloc[4];
   /* backup outputs */
   /* pre body */
-  /* local constraints */
-  Flowsheet_eqFunction_58(data, threadData);
-
-  /* local constraints */
-  Flowsheet_eqFunction_59(data, threadData);
-
   /* local constraints */
   Flowsheet_eqFunction_60(data, threadData);
 
@@ -2347,39 +1271,42 @@ void residualFunc82(void** dataIn, const double* xloc, double* res, const int* i
 
   /* local constraints */
   Flowsheet_eqFunction_64(data, threadData);
-  /* body */
-  res[0] = data->localData[0]->realVars[45] /* MatStm1.compMolFlo[3,2] variable */ + data->localData[0]->realVars[43] /* MatStm1.compMolFlo[2,2] variable */ - data->localData[0]->realVars[41] /* MatStm1.compMolFlo[1,2] variable */;
 
-  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */);
+  /* local constraints */
+  Flowsheet_eqFunction_65(data, threadData);
+  /* body */
+  res[0] = data->localData[0]->realVars[47] /* MatStm1.compMolFlo[3,1] variable */ + data->localData[0]->realVars[45] /* MatStm1.compMolFlo[2,1] variable */ - data->localData[0]->realVars[43] /* MatStm1.compMolFlo[1,1] variable */;
+
+  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[14] /* MatStm1.Pbubl variable */);
   tmp2 = (modelica_boolean)tmp0;
   if(tmp2)
   {
-    tmp3 = data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */;
+    tmp3 = data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */;
   }
   else
   {
-    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[12] /* MatStm1.Pdew variable */);
-    tmp3 = (tmp1?data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[6] /* MatStm1.K[2] variable */) * (data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */)):data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */);
+    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[15] /* MatStm1.Pdew variable */);
+    tmp3 = (tmp1?data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[8] /* MatStm1.K[1] variable */) * (data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */)):data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */);
   }
   res[1] = tmp3;
 
-  res[2] = data->localData[0]->realVars[44] /* MatStm1.compMolFlo[3,1] variable */ + data->localData[0]->realVars[42] /* MatStm1.compMolFlo[2,1] variable */ - data->localData[0]->realVars[40] /* MatStm1.compMolFlo[1,1] variable */;
+  tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[14] /* MatStm1.Pbubl variable */);
+  res[2] = (tmp4?data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */ + data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */ + data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */ - 1.0);
 
-  tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */);
-  res[3] = (tmp4?data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */ + data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */ - 1.0:data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */ + data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */ - 1.0);
-
-  tmp5 = GreaterEq(101325.0,data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */);
+  tmp5 = GreaterEq(101325.0,data->localData[0]->realVars[14] /* MatStm1.Pbubl variable */);
   tmp7 = (modelica_boolean)tmp5;
   if(tmp7)
   {
-    tmp8 = data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */;
+    tmp8 = data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */;
   }
   else
   {
-    tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[12] /* MatStm1.Pdew variable */);
-    tmp8 = (tmp6?data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */ - ((data->localData[0]->realVars[5] /* MatStm1.K[1] variable */) * (data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */)):data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */);
+    tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[15] /* MatStm1.Pdew variable */);
+    tmp8 = (tmp6?data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */ - ((data->localData[0]->realVars[9] /* MatStm1.K[2] variable */) * (data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */)):data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */);
   }
-  res[4] = tmp8;
+  res[3] = tmp8;
+
+  res[4] = data->localData[0]->realVars[48] /* MatStm1.compMolFlo[3,2] variable */ + data->localData[0]->realVars[46] /* MatStm1.compMolFlo[2,2] variable */ - data->localData[0]->realVars[44] /* MatStm1.compMolFlo[1,2] variable */;
   /* restore known outputs */
   TRACE_POP
 }
@@ -2387,7 +1314,7 @@ void initializeSparsePatternNLS82(NONLINEAR_SYSTEM_DATA* inSysData)
 {
   int i=0;
   const int colPtrIndex[1+5] = {0,2,3,3,3,3};
-  const int rowIndex[14] = {0,2,2,3,4,0,1,3,2,3,4,0,1,3};
+  const int rowIndex[14] = {0,4,2,3,4,2,3,4,0,1,2,0,1,2};
   /* sparsity pattern available */
   inSysData->isPatternAvailable = 'T';
   inSysData->sparsePattern.leadindex = (unsigned int*) malloc((5+1)*sizeof(int));
@@ -2418,25 +1345,25 @@ void initializeStaticDataNLS82(void *inData, threadData_t *threadData, void *inS
   NONLINEAR_SYSTEM_DATA* sysData = (NONLINEAR_SYSTEM_DATA*) inSystemData;
   int i=0;
   /* static nls data for MatStm1.totMolFlo[2] */
-  sysData->nominal[i] = data->modelData->realVarsData[90].attribute /* MatStm1.totMolFlo[2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[90].attribute /* MatStm1.totMolFlo[2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[90].attribute /* MatStm1.totMolFlo[2] */.max;
-  /* static nls data for MatStm1.compMolFrac[2,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[48].attribute /* MatStm1.compMolFrac[2,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[48].attribute /* MatStm1.compMolFrac[2,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[48].attribute /* MatStm1.compMolFrac[2,1] */.max;
-  /* static nls data for MatStm1.compMolFrac[2,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[49].attribute /* MatStm1.compMolFrac[2,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[49].attribute /* MatStm1.compMolFrac[2,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[49].attribute /* MatStm1.compMolFrac[2,2] */.max;
-  /* static nls data for MatStm1.compMolFrac[3,1] */
-  sysData->nominal[i] = data->modelData->realVarsData[50].attribute /* MatStm1.compMolFrac[3,1] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[50].attribute /* MatStm1.compMolFrac[3,1] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[50].attribute /* MatStm1.compMolFrac[3,1] */.max;
+  sysData->nominal[i] = data->modelData->realVarsData[93].attribute /* MatStm1.totMolFlo[2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[93].attribute /* MatStm1.totMolFlo[2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[93].attribute /* MatStm1.totMolFlo[2] */.max;
   /* static nls data for MatStm1.compMolFrac[3,2] */
-  sysData->nominal[i] = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[3,2] */.nominal;
-  sysData->min[i]     = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[3,2] */.min;
-  sysData->max[i++]   = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[3,2] */.max;
+  sysData->nominal[i] = data->modelData->realVarsData[54].attribute /* MatStm1.compMolFrac[3,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[54].attribute /* MatStm1.compMolFrac[3,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[54].attribute /* MatStm1.compMolFrac[3,2] */.max;
+  /* static nls data for MatStm1.compMolFrac[2,2] */
+  sysData->nominal[i] = data->modelData->realVarsData[52].attribute /* MatStm1.compMolFrac[2,2] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[52].attribute /* MatStm1.compMolFrac[2,2] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[52].attribute /* MatStm1.compMolFrac[2,2] */.max;
+  /* static nls data for MatStm1.compMolFrac[2,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[2,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[2,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[51].attribute /* MatStm1.compMolFrac[2,1] */.max;
+  /* static nls data for MatStm1.compMolFrac[3,1] */
+  sysData->nominal[i] = data->modelData->realVarsData[53].attribute /* MatStm1.compMolFrac[3,1] */.nominal;
+  sysData->min[i]     = data->modelData->realVarsData[53].attribute /* MatStm1.compMolFrac[3,1] */.min;
+  sysData->max[i++]   = data->modelData->realVarsData[53].attribute /* MatStm1.compMolFrac[3,1] */.max;
   /* initial sparse pattern */
   initializeSparsePatternNLS82(sysData);
 }
@@ -2444,11 +1371,11 @@ void initializeStaticDataNLS82(void *inData, threadData_t *threadData, void *inS
 void getIterationVarsNLS82(struct DATA *inData, double *array)
 {
   DATA* data = (DATA*) inData;
-  array[0] = data->localData[0]->realVars[90] /* MatStm1.totMolFlo[2] variable */;
-  array[1] = data->localData[0]->realVars[48] /* MatStm1.compMolFrac[2,1] variable */;
-  array[2] = data->localData[0]->realVars[49] /* MatStm1.compMolFrac[2,2] variable */;
-  array[3] = data->localData[0]->realVars[50] /* MatStm1.compMolFrac[3,1] variable */;
-  array[4] = data->localData[0]->realVars[51] /* MatStm1.compMolFrac[3,2] variable */;
+  array[0] = data->localData[0]->realVars[93] /* MatStm1.totMolFlo[2] variable */;
+  array[1] = data->localData[0]->realVars[54] /* MatStm1.compMolFrac[3,2] variable */;
+  array[2] = data->localData[0]->realVars[52] /* MatStm1.compMolFrac[2,2] variable */;
+  array[3] = data->localData[0]->realVars[51] /* MatStm1.compMolFrac[2,1] variable */;
+  array[4] = data->localData[0]->realVars[53] /* MatStm1.compMolFrac[3,1] variable */;
 }
 
 /* Prototypes for the strict sets (Dynamic Tearing) */
@@ -2458,73 +1385,73 @@ void getIterationVarsNLS82(struct DATA *inData, double *array)
 void Flowsheet_initialNonLinearSystem(int nNonLinearSystems, NONLINEAR_SYSTEM_DATA* nonLinearSystemData)
 {
   
-  nonLinearSystemData[5].equationIndex = 417;
-  nonLinearSystemData[5].size = 6;
+  nonLinearSystemData[5].equationIndex = 446;
+  nonLinearSystemData[5].size = 5;
   nonLinearSystemData[5].homotopySupport = 0;
-  nonLinearSystemData[5].mixedSystem = 1;
-  nonLinearSystemData[5].residualFunc = residualFunc417;
+  nonLinearSystemData[5].mixedSystem = 0;
+  nonLinearSystemData[5].residualFunc = residualFunc446;
   nonLinearSystemData[5].strictTearingFunctionCall = NULL;
-  nonLinearSystemData[5].analyticalJacobianColumn = NULL;
-  nonLinearSystemData[5].initialAnalyticalJacobian = NULL;
-  nonLinearSystemData[5].jacobianIndex = -1;
-  nonLinearSystemData[5].initializeStaticNLSData = initializeStaticDataNLS417;
-  nonLinearSystemData[5].getIterationVars = getIterationVarsNLS417;
+  nonLinearSystemData[5].analyticalJacobianColumn = Flowsheet_functionJacNLSJac5_column;
+  nonLinearSystemData[5].initialAnalyticalJacobian = Flowsheet_initialAnalyticJacobianNLSJac5;
+  nonLinearSystemData[5].jacobianIndex = 5 /*jacInx*/;
+  nonLinearSystemData[5].initializeStaticNLSData = initializeStaticDataNLS446;
+  nonLinearSystemData[5].getIterationVars = getIterationVarsNLS446;
   nonLinearSystemData[5].checkConstraints = NULL;
   
   
-  nonLinearSystemData[4].equationIndex = 359;
+  nonLinearSystemData[4].equationIndex = 388;
   nonLinearSystemData[4].size = 5;
   nonLinearSystemData[4].homotopySupport = 0;
   nonLinearSystemData[4].mixedSystem = 0;
-  nonLinearSystemData[4].residualFunc = residualFunc359;
+  nonLinearSystemData[4].residualFunc = residualFunc388;
   nonLinearSystemData[4].strictTearingFunctionCall = NULL;
   nonLinearSystemData[4].analyticalJacobianColumn = Flowsheet_functionJacNLSJac4_column;
   nonLinearSystemData[4].initialAnalyticalJacobian = Flowsheet_initialAnalyticJacobianNLSJac4;
-  nonLinearSystemData[4].jacobianIndex = 3 /*jacInx*/;
-  nonLinearSystemData[4].initializeStaticNLSData = initializeStaticDataNLS359;
-  nonLinearSystemData[4].getIterationVars = getIterationVarsNLS359;
+  nonLinearSystemData[4].jacobianIndex = 4 /*jacInx*/;
+  nonLinearSystemData[4].initializeStaticNLSData = initializeStaticDataNLS388;
+  nonLinearSystemData[4].getIterationVars = getIterationVarsNLS388;
   nonLinearSystemData[4].checkConstraints = NULL;
   
   
-  nonLinearSystemData[3].equationIndex = 305;
+  nonLinearSystemData[3].equationIndex = 319;
   nonLinearSystemData[3].size = 5;
   nonLinearSystemData[3].homotopySupport = 0;
   nonLinearSystemData[3].mixedSystem = 0;
-  nonLinearSystemData[3].residualFunc = residualFunc305;
+  nonLinearSystemData[3].residualFunc = residualFunc319;
   nonLinearSystemData[3].strictTearingFunctionCall = NULL;
   nonLinearSystemData[3].analyticalJacobianColumn = Flowsheet_functionJacNLSJac3_column;
   nonLinearSystemData[3].initialAnalyticalJacobian = Flowsheet_initialAnalyticJacobianNLSJac3;
-  nonLinearSystemData[3].jacobianIndex = 2 /*jacInx*/;
-  nonLinearSystemData[3].initializeStaticNLSData = initializeStaticDataNLS305;
-  nonLinearSystemData[3].getIterationVars = getIterationVarsNLS305;
+  nonLinearSystemData[3].jacobianIndex = 3 /*jacInx*/;
+  nonLinearSystemData[3].initializeStaticNLSData = initializeStaticDataNLS319;
+  nonLinearSystemData[3].getIterationVars = getIterationVarsNLS319;
   nonLinearSystemData[3].checkConstraints = NULL;
   
   
-  nonLinearSystemData[2].equationIndex = 198;
-  nonLinearSystemData[2].size = 6;
+  nonLinearSystemData[2].equationIndex = 209;
+  nonLinearSystemData[2].size = 5;
   nonLinearSystemData[2].homotopySupport = 0;
-  nonLinearSystemData[2].mixedSystem = 1;
-  nonLinearSystemData[2].residualFunc = residualFunc198;
+  nonLinearSystemData[2].mixedSystem = 0;
+  nonLinearSystemData[2].residualFunc = residualFunc209;
   nonLinearSystemData[2].strictTearingFunctionCall = NULL;
-  nonLinearSystemData[2].analyticalJacobianColumn = NULL;
-  nonLinearSystemData[2].initialAnalyticalJacobian = NULL;
-  nonLinearSystemData[2].jacobianIndex = -1;
-  nonLinearSystemData[2].initializeStaticNLSData = initializeStaticDataNLS198;
-  nonLinearSystemData[2].getIterationVars = getIterationVarsNLS198;
+  nonLinearSystemData[2].analyticalJacobianColumn = Flowsheet_functionJacNLSJac2_column;
+  nonLinearSystemData[2].initialAnalyticalJacobian = Flowsheet_initialAnalyticJacobianNLSJac2;
+  nonLinearSystemData[2].jacobianIndex = 2 /*jacInx*/;
+  nonLinearSystemData[2].initializeStaticNLSData = initializeStaticDataNLS209;
+  nonLinearSystemData[2].getIterationVars = getIterationVarsNLS209;
   nonLinearSystemData[2].checkConstraints = NULL;
   
   
-  nonLinearSystemData[1].equationIndex = 136;
+  nonLinearSystemData[1].equationIndex = 151;
   nonLinearSystemData[1].size = 5;
   nonLinearSystemData[1].homotopySupport = 0;
   nonLinearSystemData[1].mixedSystem = 0;
-  nonLinearSystemData[1].residualFunc = residualFunc136;
+  nonLinearSystemData[1].residualFunc = residualFunc151;
   nonLinearSystemData[1].strictTearingFunctionCall = NULL;
   nonLinearSystemData[1].analyticalJacobianColumn = Flowsheet_functionJacNLSJac1_column;
   nonLinearSystemData[1].initialAnalyticalJacobian = Flowsheet_initialAnalyticJacobianNLSJac1;
   nonLinearSystemData[1].jacobianIndex = 1 /*jacInx*/;
-  nonLinearSystemData[1].initializeStaticNLSData = initializeStaticDataNLS136;
-  nonLinearSystemData[1].getIterationVars = getIterationVarsNLS136;
+  nonLinearSystemData[1].initializeStaticNLSData = initializeStaticDataNLS151;
+  nonLinearSystemData[1].getIterationVars = getIterationVarsNLS151;
   nonLinearSystemData[1].checkConstraints = NULL;
   
   
