@@ -1,20 +1,18 @@
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.liqPhasMolFrac >= 0.0 and MatStm1.liqPhasMolFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMolFrac <= 1.0, has value: -9.283e-017
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.vapPhasMasFrac >= 0.0 and MatStm1.vapPhasMasFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm1.vapPhasMasFrac <= 1.0, has value: 1
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.totMolFlo[2] >= 0.0
-assert            | warning | Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[2], has value: -9.283e-015
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm2.liqPhasMolFrac >= 0.0 and MatStm2.liqPhasMolFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMolFrac <= 1.0, has value: -7.10543e-017
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm2.vapPhasMasFrac >= 0.0 and MatStm2.vapPhasMasFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm2.vapPhasMasFrac <= 1.0, has value: 1
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm2.totMolFlo[2] >= 0.0
-assert            | warning | Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[2], has value: -3.55271e-015
-LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
-LOG_SUCCESS       | info    | The simulation finished successfully.
+gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Flowsheet -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=10 -DOMC_NUM_NONLINEAR_SYSTEMS=10 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Flowsheet.o Flowsheet.c
+gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Flowsheet -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=10 -DOMC_NUM_NONLINEAR_SYSTEMS=10 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Flowsheet_functions.o Flowsheet_functions.c
+gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Flowsheet -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=10 -DOMC_NUM_NONLINEAR_SYSTEMS=10 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Flowsheet_records.o Flowsheet_records.c
+gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Flowsheet -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=10 -DOMC_NUM_NONLINEAR_SYSTEMS=10 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Flowsheet_01exo.o Flowsheet_01exo.c
+/usr/bin/sh: gcc: command not found
+/usr/bin/sh: gcc: command not found
+/usr/bin/sh: gcc: command not found
+/usr/bin/sh: gcc: command not found
+<builtin>: recipe for target 'Flowsheet_functions.o' failed
+mingw32-make: *** [Flowsheet_functions.o] Error 127
+mingw32-make: *** Waiting for unfinished jobs....
+<builtin>: recipe for target 'Flowsheet_01exo.o' failed
+mingw32-make: *** [Flowsheet_01exo.o] Error 127
+<builtin>: recipe for target 'Flowsheet.o' failed
+mingw32-make: *** [Flowsheet.o] Error 127
+<builtin>: recipe for target 'Flowsheet_records.o' failed
+mingw32-make: *** [Flowsheet_records.o] Error 127
+RESULT: 2 

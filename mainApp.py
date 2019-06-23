@@ -276,7 +276,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
                 #b[self.newLine.target.parent.obj].append(self.newLine.source.parent.obj)
                 print(self.container.conn)
-                print(b)
+            #    print(b)
             elif (self.type =='in') and (item.type == 'op'):
                 print("back")
                 self.newLine.source = item
@@ -286,7 +286,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
                 #b[self.newLine.target.parent.obj].append(self.newLine.source.parent.obj)
                 print(self.container.conn)
-                print(b)
+             #   print(b)
             else:
                 print("del")
                 self.scene().removeItem(self.newLine)
