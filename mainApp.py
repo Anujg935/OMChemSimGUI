@@ -25,7 +25,7 @@ from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,2,1],'Splitter':[1,1,2]}
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -309,7 +309,6 @@ class NodeSocket(QtWidgets.QGraphicsItem):
 class NodeItem(QtWidgets.QGraphicsItem):
     def __init__(self,comptype,container):
         try:
-            l = ['Mixer','Splitter']
             super(NodeItem, self).__init__()
             self.name = comptype + str(comp_dict[comptype][0])
             self.type = comptype
@@ -318,7 +317,6 @@ class NodeItem(QtWidgets.QGraphicsItem):
             self.obj = helperFunc(self.type,self.name)
             self.container=container
             self.container.addUnitOp(self.obj)
-            #if(self.type not in l):
             self.mainwindow=findMainWindow()
             self.dockWidget=dockWidget(self.name,self.type,self.obj)
             self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)
@@ -346,6 +344,8 @@ class NodeItem(QtWidgets.QGraphicsItem):
             self.selPen.setWidth(2)
             self.selPen.setColor(QtGui.QColor(0,255,255,255))
         except Exception as e:
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            print(exc_type,exc_tb.tb_lineno)
             print(e)
  
     def initUi(self):
@@ -389,17 +389,7 @@ class NodeItem(QtWidgets.QGraphicsItem):
             print(e)
     def mouseDoubleClickEvent(self, event):
         try:
-            print ("DoubleClick")
             self.dockWidget.show()
-            '''
-            self.dockWidget=dockWidget(name,self.type,conn_csv)
-            self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)
-            self.dockWidget.stackedWidget.setCurrentIndex(1)
-            dicta,flag = self.dockWidget.getter()
-            obj = helperFunc(self.type)
-            print("##########"+str(type(obj))+"##########")
-            obj.paramsetter(dicta)
-            '''         
         except Exception as e:
             print(e)
         

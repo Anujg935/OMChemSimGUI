@@ -1,7 +1,7 @@
 
 import json
 class Splitter():
-    def __init__(self,name='splitter',NOO=2,calcType = 'Molar_Flow',specval = [50,50]):
+    def __init__(self,name='splitter',NOO=5,calcType = 'Molar_Flow',specval = [50,50]):
         self.NOO = NOO
         self.calcType = calcType
         self.name = name
@@ -31,6 +31,7 @@ class Splitter():
         return self.OM_data_init
 
     def connect(self,InputStms = None,OutputStms = []):
+        self.NOO=len(OutputStms)
         self.InputStms = InputStms
         self.OutputStms = OutputStms
 

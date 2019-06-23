@@ -50,6 +50,7 @@ class Container():
     def simulate(self):
         self.compounds = compond_selected
         self.thermoPackage = str(thermo_package[0])
+        
         self.connection()
         
         #print(self.opl)

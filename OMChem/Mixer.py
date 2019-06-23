@@ -29,6 +29,7 @@ class Mixer():
         return self.OM_data_init
 
     def connect(self,InputStms = [],OutputStms = None):
+        self.NOI=len(InputStms)
         self.InputStms = InputStms
         self.OutputStms = OutputStms
 
