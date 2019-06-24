@@ -1,15 +1,17 @@
 class ShortcutColumn():
-    def __init__(self,name='ShortcutColumn',condP = None, rebP = None, LKey = None, HKey = None):
+    def __init__(self,name=None,condP = None, rebP = None, LKey = None, HKey = None):
         self.condP = condP
         self.rebP = rebP
         self.LKey = LKey
         self.HKey = HKey
-        self.name = name
+        self.name = name[0]
         self.OM_data_eqn = ''
         self.OM_data_init = ''
         self.InputStms = None
         self.OutputStms = None
         self.EngStms = None
+        self.count = name[1]
+        self.thermoPackage =None
         self.type = 'ShortcutColumn'
 
 
@@ -22,9 +24,13 @@ class ShortcutColumn():
 
     def OM_Flowsheet_Init(self, addedcomp):
         self.OM_data_init = ''
+        self.OM_data_init = self.OM_data_init + ("model sc"+str(self.count)+"\n")
+        self.OM_data_init = self.OM_data_init + ("extends Simulator.Unit_Operations.Shortcut_Column;;\n" )
+        self.OM_data_init = self.OM_data_init + ("extends Simulator.Files.Thermodynamic_Packages."+self.thermoPackage+";\n")
+        self.OM_data_init = self.OM_data_init + ("end fls"+str(self.count)+";\n")
         comp_count = len(addedcomp)
-        self.OM_data_init = self.OM_data_init + (
-        "Simulator.Unit_Operations.shortcutrev1 " + self.name + "(NOC = " + str(comp_count))
+        self.OM_data_init = self.OM_data_init + 
+        str(self.count)+ " " + self.name + "(NOC = " + str(comp_count)
         self.OM_data_init = self.OM_data_init + (",comp = {")
         comp = str(addedcomp).strip('[').strip(']')
         comp = comp.replace("'", "")

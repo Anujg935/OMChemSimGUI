@@ -1,18 +1,11 @@
-gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Flowsheet -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=4 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Flowsheet.o Flowsheet.c
-gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Flowsheet -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=4 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Flowsheet_functions.o Flowsheet_functions.c
-gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Flowsheet -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=4 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Flowsheet_records.o Flowsheet_records.c
-gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Flowsheet -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=4 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Flowsheet_01exo.o Flowsheet_01exo.c
-/usr/bin/sh: gcc: command not found
-/usr/bin/sh: gcc: command not found
-<builtin>: recipe for target 'Flowsheet_records.o' failed
-mingw32-make: *** [Flowsheet_records.o] Error 127
-mingw32-make: *** Waiting for unfinished jobs....
-/usr/bin/sh: gcc: command not found
-<builtin>: recipe for target 'Flowsheet_functions.o' failed
-mingw32-make: *** [Flowsheet_functions.o] Error 127
-<builtin>: recipe for target 'Flowsheet_01exo.o' failed
-mingw32-make: *** [Flowsheet_01exo.o] Error 127
-/usr/bin/sh: gcc: command not found
-<builtin>: recipe for target 'Flowsheet.o' failed
-mingw32-make: *** [Flowsheet.o] Error 127
-RESULT: 2 
+stdout            | warning | While solving non-linear system an assertion failed during initialization.
+|                 | |       | | The non-linear solver tries to solve the problem that could take some time.
+|                 | |       | | It could help to provide better start-values for the iteration variables.
+|                 | |       | | For more information simulate with -lv LOG_NLS_V
+stdout            | warning | While solving non-linear system an assertion failed during initialization.
+|                 | |       | | The non-linear solver tries to solve the problem that could take some time.
+|                 | |       | | It could help to provide better start-values for the iteration variables.
+|                 | |       | | For more information simulate with -lv LOG_NLS_V
+assert            | debug   | Solving non-linear system 119 failed at time=0.
+|                 | |       | For more information please use -lv LOG_NLS.
+assert            | info    | simulation terminated by an assertion at initialization

@@ -213,7 +213,7 @@
      <x>0</x>
      <y>0</y>
      <width>1349</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -267,8 +267,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>227</width>
-          <height>703</height>
+          <width>231</width>
+          <height>676</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -358,7 +358,7 @@
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Valve</string>
            </property>
           </widget>
          </item>

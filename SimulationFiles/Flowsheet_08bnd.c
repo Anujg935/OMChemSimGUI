@@ -8,32 +8,32 @@ extern "C" {
 /*
 equation index: 307
 type: SIMPLE_ASSIGN
-$START._MatStm1._Pdew = 0.5 * (MatStm1.comp[1].Pc + MatStm1.comp[2].Pc)
+$START._MatStm2._Pdew = 0.5 * (MatStm2.comp[1].Pc + MatStm2.comp[2].Pc)
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_307(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,307};
-  data->modelData->realVarsData[17].attribute /* MatStm1.Pdew variable */.start = (0.5) * (data->simulationInfo->realParameter[325] + data->simulationInfo->realParameter[326]);
-    data->localData[0]->realVars[17] /* MatStm1.Pdew variable */ = data->modelData->realVarsData[17].attribute /* MatStm1.Pdew variable */.start;
-    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[17].info /* MatStm1.Pdew */.name, (modelica_real) data->localData[0]->realVars[17] /* MatStm1.Pdew variable */);
+  data->modelData->realVarsData[107].attribute /* MatStm2.Pdew variable */.start = (0.5) * (data->simulationInfo->realParameter[483] + data->simulationInfo->realParameter[484]);
+    data->localData[0]->realVars[107] /* MatStm2.Pdew variable */ = data->modelData->realVarsData[107].attribute /* MatStm2.Pdew variable */.start;
+    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[107].info /* MatStm2.Pdew */.name, (modelica_real) data->localData[0]->realVars[107] /* MatStm2.Pdew variable */);
   TRACE_POP
 }
 
 /*
 equation index: 308
 type: SIMPLE_ASSIGN
-$START._MatStm1._Pbubl = 0.5 * (MatStm1.comp[1].Pc + MatStm1.comp[2].Pc)
+$START._MatStm2._Pbubl = 0.5 * (MatStm2.comp[1].Pc + MatStm2.comp[2].Pc)
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_308(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,308};
-  data->modelData->realVarsData[16].attribute /* MatStm1.Pbubl variable */.start = (0.5) * (data->simulationInfo->realParameter[325] + data->simulationInfo->realParameter[326]);
-    data->localData[0]->realVars[16] /* MatStm1.Pbubl variable */ = data->modelData->realVarsData[16].attribute /* MatStm1.Pbubl variable */.start;
-    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[16].info /* MatStm1.Pbubl */.name, (modelica_real) data->localData[0]->realVars[16] /* MatStm1.Pbubl variable */);
+  data->modelData->realVarsData[106].attribute /* MatStm2.Pbubl variable */.start = (0.5) * (data->simulationInfo->realParameter[483] + data->simulationInfo->realParameter[484]);
+    data->localData[0]->realVars[106] /* MatStm2.Pbubl variable */ = data->modelData->realVarsData[106].attribute /* MatStm2.Pbubl variable */.start;
+    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[106].info /* MatStm2.Pbubl */.name, (modelica_real) data->localData[0]->realVars[106] /* MatStm2.Pbubl variable */);
   TRACE_POP
 }
 OMC_DISABLE_OPT
