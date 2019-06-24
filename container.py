@@ -1,6 +1,7 @@
 from OMChem.Flowsheet import Flowsheet
 from OMChem.MatStm import MatStm
 from OMChem.Mixer import Mixer
+from OMChem.Heater import Heater
 from component_selector import *
 from collections import defaultdict
 import itertools

@@ -213,7 +213,7 @@
      <x>0</x>
      <y>0</y>
      <width>1349</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -267,8 +267,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>231</width>
-          <height>676</height>
+          <width>227</width>
+          <height>703</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -332,7 +332,7 @@
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Heater</string>
            </property>
           </widget>
          </item>
@@ -345,7 +345,7 @@
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Cooler</string>
            </property>
           </widget>
          </item>

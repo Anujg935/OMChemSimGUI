@@ -5,6 +5,7 @@ import numpy as np
 from OMChem.Flowsheet import Flowsheet
 from OMChem.MatStm import MatStm
 from OMChem.Mixer import Mixer
+from OMChem.Heater import Heater
 from OMChem.Splitter import Splitter
 import pandas as pd
 from PyQt5.QtCore import *
@@ -25,7 +26,7 @@ from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2]}
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -48,6 +49,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton_4.clicked.connect(self.deleteComponent)
         self.pushButton_6.clicked.connect(self.generatef)
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
+        self.pushButton_11.clicked.connect(partial(self.component,'Heater'))
         self.pushButton_8.clicked.connect(self.selectCompounds)
         self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
         self.pushButton_9.clicked.connect(partial(self.component,'Flash'))
@@ -314,10 +316,10 @@ class NodeItem(QtWidgets.QGraphicsItem):
             super(NodeItem, self).__init__()
             self.name = comptype + str(comp_dict[comptype][0])
             self.type = comptype
+            self.setToolTip(self.name)
             self.nin = comp_dict[comptype][1]
             self.nop = comp_dict[comptype][2]
             self.obj = helperFunc(self.type,self.name,comp_dict[comptype][0])
-            print("hello")
             self.container=container
             self.container.addUnitOp(self.obj)
             if(self.type not in l):

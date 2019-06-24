@@ -1,8 +1,10 @@
 from OMChem.Flowsheet import Flowsheet
 from OMChem.MatStm import MatStm
 from OMChem.Mixer import Mixer
-from OMChem.Splitter import Splitter
+from OMChem.EngStm import EngStm
+from OMChem.Heater import Heater
 from OMChem.Flash import Flash
+from OMChem.Splitter import Splitter
 from component_selector import *
 
 
@@ -15,3 +17,5 @@ def helperFunc(type,name1,count):
         return Splitter(name=name1)
     elif(type=="Flash"):
         return Flash(name=(name1,count))
+    elif(type=="Heater"):
+        return Heater(name=name1)
