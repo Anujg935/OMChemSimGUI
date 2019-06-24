@@ -151,6 +151,9 @@
         <property name="autoFillBackground">
          <bool>true</bool>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: radial-gradient(circle, #dab3c9, #d1b6ce, #c9b9d0, #c1bbd1, #bcbdcf, #b3b9c8, #abb5c1, #a4b0b9, #97a5ab, #8b9a9e, #7f8e90, #758382);</string>
+        </property>
         <property name="verticalScrollBarPolicy">
          <enum>Qt::ScrollBarAsNeeded</enum>
         </property>

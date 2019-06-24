@@ -13,6 +13,7 @@ class dockWidget(QDockWidget,ui_dialog):
     def __init__(self,name,comptype,obj,parent=None):
         QDockWidget.__init__(self,parent)
         self.setupUi(self)
+        self.setWindowTitle(obj.name)
         self.name=name
         self.obj=obj
         self.type = comptype
