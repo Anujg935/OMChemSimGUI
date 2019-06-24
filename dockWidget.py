@@ -18,23 +18,41 @@ class dockWidget(QDockWidget,ui_dialog):
         self.obj=obj
         self.type = comptype
         self.inputdict = self.obj.paramgetter()
+        print("input_dict",self.inputdict)
         self.inputparamslist()
+        print(self.inputdict)
         self.pushButton.clicked.connect(self.param)
         self.dict = {}
         self.f = True
     def inputparamslist(self):
         c=0
         for i in self.inputdict:
-            l = QLineEdit()
-            self.formLayout.addRow(QLabel(i+":"),l )
-            self.inputdict[i] = l
+            if(i=="thermoPackage"):
+                print("thermo1")
+                combo = QComboBox()
+                self.lines = [line.rstrip('\n') for line in open('thermopackage.txt')]
+                print("thermo2")
+                for j in self.lines:
+                    combo.addItem(str(j))
+                self.formLayout.addRow(QLabel(i+":"),combo )
+                self.inputdict[i] = combo
+                print("thermo")
+            else:
+                print("elseloopo")
+                l = QLineEdit()                                                      
+                self.formLayout.addRow(QLabel(i+":"),l )
+                self.inputdict[i] = l
 
     def param(self):
         try:
             if all(self.inputdict.values()):
                 for i in self.inputdict:
-                    self.dict[i] = self.inputdict[i].text()
-
+                    if(i=="thermoPackage"):
+                        print("paramthermo")
+                        self.dict[i] = self.inputdict[i].currentText()
+                    else:
+                        print("paramelse")
+                        self.dict[i] = self.inputdict[i].text()
                 self.obj.paramsetter(self.dict)
                 self.f = False
                 self.hide()

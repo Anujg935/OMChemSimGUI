@@ -231,10 +231,6 @@ class Flowsheet():
 		print("##################################################")
 		self.sim_method = 'Eqn'
 		self.data.append("model Flowsheet\n")
-		self.data.append("model ms\n") 
-		self.data.append("extends Simulator.Streams.Material_Stream;\n ")
-		self.data.append("extends Simulator.Files.Thermodynamic_Packages."+self.thermo_package+";\n")
-		self.data.append("end ms;\n")
   		
 		for c in self.compounds:
 			ucase = c.title()

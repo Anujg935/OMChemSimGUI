@@ -25,7 +25,7 @@ from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5]}
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -50,6 +50,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
         self.pushButton_8.clicked.connect(self.selectCompounds)
         self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
+        self.pushButton_9.clicked.connect(partial(self.component,'Flash'))
     def selectCompounds(self):
         self.comp.show()
     def generatef(self):
@@ -309,15 +310,17 @@ class NodeSocket(QtWidgets.QGraphicsItem):
 class NodeItem(QtWidgets.QGraphicsItem):
     def __init__(self,comptype,container):
         try:
+            l = ['Mixer','Splitter','Flash']
             super(NodeItem, self).__init__()
             self.name = comptype + str(comp_dict[comptype][0])
             self.type = comptype
             self.nin = comp_dict[comptype][1]
             self.nop = comp_dict[comptype][2]
-            self.obj = helperFunc(self.type,self.name)
+            self.obj = helperFunc(self.type,self.name,comp_dict[comptype][0])
+            print("hello")
             self.container=container
             self.container.addUnitOp(self.obj)
-            if(self.type != 'Mixer'):
+            if(self.type not in l):
                 self.mainwindow=findMainWindow()
                 self.dockWidget=dockWidget(self.name,self.type,self.obj)
                 self.mainwindow.addDockWidget(Qt.LeftDockWidgetArea, self.dockWidget)

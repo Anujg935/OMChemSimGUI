@@ -4,8 +4,8 @@ import sys
 
 
 class MatStm():
-    def __init__(self,name = 'Matstm',CompNames = [],Temperature=None,Pressure=None,VapPhasMolFrac=None,VapPhasMasFrac=None,LiqPhasMolFrac=None,LiqPhasMasFrac=None,CompMolFrac = [], CompMasFrac = [], MolFlow=None, MasFlow=None,**kwargs):
-        self.name = name
+    def __init__(self,name =None,CompNames = [],Temperature=None,Pressure=None,VapPhasMolFrac=None,VapPhasMasFrac=None,LiqPhasMolFrac=None,LiqPhasMasFrac=None,CompMolFrac = [], CompMasFrac = [], MolFlow=None, MasFlow=None,**kwargs):
+        self.name = name[0]
         self.type = 'MatStm'
         self.T = Temperature
         self.P = Pressure
@@ -20,6 +20,8 @@ class MatStm():
         self.MasFlow = MasFlow
         self.OM_data_init = ''
         self.OM_data_eqn = ''
+        self.count = name[1]
+        self.thermoPackage =None
         # self.ValEntList =  {"T":T," P":P," VapPhasMolFrac":vapPhasMolFrac," CompNames":CompNames," CompMolFrac[1]":CompMolFrac," CompMasFrac":CompMasFrac," MolFlow[1]":MolFlow," MasFlow[1]":MasFlow}
 
 
@@ -103,13 +105,15 @@ class MatStm():
         }
         
     def paramgetter(self):
-        dict = {"Temperature":None,"Pressure":None,"CompMolFrac":None,"MolFlow":None}
+        dict = {"Temperature":None,"Pressure":None,"CompMolFrac":None,"MolFlow":None,"thermoPackage":None}
         return dict
     def paramsetter(self,dict):
         self.T = dict['Temperature']
         self.P = dict['Pressure']
         self.MolFlow = dict['MolFlow']
         self.CompMolFrac = dict['CompMolFrac']
+        self.thermoPackage = dict['thermoPackage']
+
         for i in range(0,len(self.CompNames)):
             print('####### compmolfrac #########\n',self.CompMolFrac[i])
             if self.CompMolFrac:
@@ -385,11 +389,15 @@ class MatStm():
 
     def OM_Flowsheet_Init(self,addedcomp):
         self.OM_data_init = ''
+        self.OM_data_init = self.OM_data_init + ("model ms"+str(self.count)+"\n")
+        self.OM_data_init = self.OM_data_init + ("extends Simulator.Streams.Material_Stream;\n" )
+        self.OM_data_init = self.OM_data_init + ("extends Simulator.Files.Thermodynamic_Packages."+self.thermoPackage+";\n")
+        self.OM_data_init = self.OM_data_init + ("end ms"+str(self.count)+";\n")
         comp_count = len(addedcomp)
         self.GetStartValues()
 
         #self.OM_data_init = "Simulator.Streams.Mat_Stm_RL " + self.name +"(NOC = " + str(comp_count)
-        self.OM_data_init = "ms " + self.name +"(NOC = " + str(comp_count)
+        self.OM_data_init = self.OM_data_init + "ms"+str(self.count) +" " + self.name +"(NOC = " + str(comp_count)
         self.OM_data_init = self.OM_data_init + ",comp = {"
         comp = str(addedcomp).strip('[').strip(']')
         comp = comp.replace("'","")

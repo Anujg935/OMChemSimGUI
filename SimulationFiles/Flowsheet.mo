@@ -1,31 +1,32 @@
 model Flowsheet
-model ms
+parameter Simulator.Files.Chemsep_Database.Water Water; 
+parameter Simulator.Files.Chemsep_Database.Ethanol Ethanol; 
+model ms1
 extends Simulator.Streams.Material_Stream;
- extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
-end ms;
-parameter Simulator.Files.Chemsep_Database.Hydrogen Hydrogen; 
-parameter Simulator.Files.Chemsep_Database.Phosgene Phosgene; 
-ms MatStm1(NOC = 2,comp = {Hydrogen, Phosgene});
-ms MatStm2(NOC = 2,comp = {Hydrogen, Phosgene});
-ms MatStm3(NOC = 2,comp = {Hydrogen, Phosgene});
-ms MatStm4(NOC = 2,comp = {Hydrogen, Phosgene});
-ms MatStm5(NOC = 2,comp = {Hydrogen, Phosgene});
-Simulator.Unit_Operations.Mixer Mixer1(NOC = 2,comp = {Hydrogen, Phosgene},outPress = "Inlet_Average",NI=2);
-Simulator.Unit_Operations.Splitter Splitter1(NOC = 2,comp = {Hydrogen, Phosgene},calcType = "Molar_Flow",NO=2);
+extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
+end ms1;
+ms1 MatStm1(NOC = 2,comp = {Water, Ethanol});
+model ms2
+extends Simulator.Streams.Material_Stream;
+extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
+end ms2;
+ms2 MatStm2(NOC = 2,comp = {Water, Ethanol});
+model ms3
+extends Simulator.Streams.Material_Stream;
+extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
+end ms3;
+ms3 MatStm3(NOC = 2,comp = {Water, Ethanol});
+Simulator.Unit_Operations.Mixer Mixer1(NOC = 2,comp = {Water, Ethanol},outPress = "Inlet_Average",NI=2);
 equation
-MatStm4.P = 101325;
-MatStm4.T = 350;
-MatStm4.compMolFrac[1,:] = {0.9,0.1};
-MatStm4.totMolFlo[1] = 65;
-MatStm5.P = 101325;
-MatStm5.T = 310;
-MatStm5.compMolFrac[1,:] = {0.3,0.7};
-MatStm5.totMolFlo[1] = 85;
-connect(MatStm4.outlet,Mixer1.inlet[1]);
-connect(MatStm5.outlet,Mixer1.inlet[2]);
-connect(Mixer1.outlet,MatStm1.inlet);
-connect(MatStm3.inlet,Splitter1.outlet[1]);
-connect(MatStm2.inlet,Splitter1.outlet[2]);
-connect(Splitter1.inlet,MatStm1.outlet);
-Splitter1.specVal ={50, 50};
+MatStm1.P = 101325;
+MatStm1.T = 330;
+MatStm1.compMolFrac[1,:] = {0.5,0.5};
+MatStm1.totMolFlo[1] = 100;
+MatStm2.P = 101325;
+MatStm2.T = 310;
+MatStm2.compMolFrac[1,:] = {0.3,0.7};
+MatStm2.totMolFlo[1] = 95;
+connect(MatStm1.outlet,Mixer1.inlet[1]);
+connect(MatStm2.outlet,Mixer1.inlet[2]);
+connect(Mixer1.outlet,MatStm3.inlet);
 end Flowsheet;
