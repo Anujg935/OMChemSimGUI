@@ -26,7 +26,7 @@ from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1]}
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -54,6 +54,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
         self.pushButton_9.clicked.connect(partial(self.component,'Flash'))
         self.pushButton_25.clicked.connect(partial(self.component,'Valve'))
+        self.pushButton_12.clicked.connect(partial(self.component,'Cooler'))
     def selectCompounds(self):
         self.comp.show()
     def generatef(self):
@@ -352,7 +353,7 @@ class NodeItem(QtWidgets.QGraphicsItem):
      
             self.selPen = QtGui.QPen()
             self.selPen.setStyle(QtCore.Qt.SolidLine)
-            self.selPen.setWidth(5)
+            self.selPen.setWidth(2)
             self.selPen.setColor(QtGui.QColor(0,255,255,255))
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
