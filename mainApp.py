@@ -313,7 +313,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
 class NodeItem(QtWidgets.QGraphicsItem):
     def __init__(self,comptype,container):
         try:
-            l = ['Mixer','Splitter','Flash']
+            l = ['Mixer','Splitter']
             super(NodeItem, self).__init__()
             self.name = comptype + str(comp_dict[comptype][0])
             self.type = comptype

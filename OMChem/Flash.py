@@ -16,12 +16,12 @@ class Flash():
         dict = {"thermoPackage":None}
         return dict
     def paramsetter(self,dict):
-        self.thermoPackage = dict["thermoPackage"]
+        self.thermoPackage = dict['thermoPackage']
 
     def OM_Flowsheet_Init(self, addedcomp):
         self.OM_data_init = ''
         self.OM_data_init = self.OM_data_init + ("model fls"+str(self.count)+"\n")
-        self.OM_data_init = self.OM_data_init + ("extends Simulator.Streams.Flash;\n" )
+        self.OM_data_init = self.OM_data_init + ("extends Simulator.Unit_Operations.Flash;\n" )
         self.OM_data_init = self.OM_data_init + ("extends Simulator.Files.Thermodynamic_Packages."+self.thermoPackage+";\n")
         self.OM_data_init = self.OM_data_init + ("end fls"+str(self.count)+";\n")
         comp_count = len(addedcomp)

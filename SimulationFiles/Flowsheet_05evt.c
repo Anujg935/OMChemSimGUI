@@ -13,8 +13,8 @@ void Flowsheet_function_initSample(DATA *data, threadData_t *threadData)
 
 const char *Flowsheet_zeroCrossingDescription(int i, int **out_EquationIndexes)
 {
-  static const char *res[] = {"Heater1.outP >= MatStm2.Pbubl",
-  "Heater1.outP >= MatStm2.Pdew"};
+  static const char *res[] = {"0.0 >= MatStm2.Pbubl",
+  "0.0 >= MatStm2.Pdew"};
   static const int occurEqs0[] = {1,-1};
   static const int occurEqs1[] = {1,-1};
   static const int *occurEqs[] = {occurEqs0,occurEqs1};
@@ -23,17 +23,15 @@ const char *Flowsheet_zeroCrossingDescription(int i, int **out_EquationIndexes)
 }
 
 /* forwarded equations */
-extern void Flowsheet_eqFunction_207(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_205(DATA* data, threadData_t *threadData);
 extern void Flowsheet_eqFunction_210(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_213(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_216(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_217(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_220(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_212(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_229(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_235(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_236(DATA* data, threadData_t *threadData);
 extern void Flowsheet_eqFunction_239(DATA* data, threadData_t *threadData);
 extern void Flowsheet_eqFunction_240(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_243(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_244(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_277(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_272(DATA* data, threadData_t *threadData);
 
 int Flowsheet_function_ZeroCrossingsEquations(DATA *data, threadData_t *threadData)
 {
@@ -41,27 +39,23 @@ int Flowsheet_function_ZeroCrossingsEquations(DATA *data, threadData_t *threadDa
 
   data->simulationInfo->callStatistics.functionZeroCrossingsEquations++;
 
-  Flowsheet_eqFunction_207(data, threadData);
+  Flowsheet_eqFunction_205(data, threadData);
 
   Flowsheet_eqFunction_210(data, threadData);
 
-  Flowsheet_eqFunction_213(data, threadData);
+  Flowsheet_eqFunction_212(data, threadData);
 
-  Flowsheet_eqFunction_216(data, threadData);
+  Flowsheet_eqFunction_229(data, threadData);
 
-  Flowsheet_eqFunction_217(data, threadData);
+  Flowsheet_eqFunction_235(data, threadData);
 
-  Flowsheet_eqFunction_220(data, threadData);
+  Flowsheet_eqFunction_236(data, threadData);
 
   Flowsheet_eqFunction_239(data, threadData);
 
   Flowsheet_eqFunction_240(data, threadData);
 
-  Flowsheet_eqFunction_243(data, threadData);
-
-  Flowsheet_eqFunction_244(data, threadData);
-
-  Flowsheet_eqFunction_277(data, threadData);
+  Flowsheet_eqFunction_272(data, threadData);
   
   TRACE_POP
   return 0;
@@ -70,15 +64,15 @@ int Flowsheet_function_ZeroCrossingsEquations(DATA *data, threadData_t *threadDa
 int Flowsheet_function_ZeroCrossings(DATA *data, threadData_t *threadData, double *gout)
 {
   TRACE_PUSH
-  modelica_boolean tmp0;
-  modelica_boolean tmp1;
+  modelica_boolean tmp314;
+  modelica_boolean tmp315;
   
   data->simulationInfo->callStatistics.functionZeroCrossings++;
   
-  tmp0 = GreaterEqZC(data->localData[0]->realVars[7] /* Heater1.outP variable */, data->localData[0]->realVars[106] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
-  gout[0] = (tmp0) ? 1 : -1;
-  tmp1 = GreaterEqZC(data->localData[0]->realVars[7] /* Heater1.outP variable */, data->localData[0]->realVars[107] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
-  gout[1] = (tmp1) ? 1 : -1;
+  tmp314 = GreaterEqZC(0.0, data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
+  gout[0] = (tmp314) ? 1 : -1;
+  tmp315 = GreaterEqZC(0.0, data->localData[0]->realVars[102] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
+  gout[1] = (tmp315) ? 1 : -1;
   
   TRACE_POP
   return 0;
@@ -86,25 +80,25 @@ int Flowsheet_function_ZeroCrossings(DATA *data, threadData_t *threadData, doubl
 
 const char *Flowsheet_relationDescription(int i)
 {
-  const char *res[] = {"Heater1.outP >= MatStm2.Pbubl",
-  "Heater1.outP >= MatStm2.Pdew"};
+  const char *res[] = {"0.0 >= MatStm2.Pbubl",
+  "0.0 >= MatStm2.Pdew"};
   return res[i];
 }
 
 int Flowsheet_function_updateRelations(DATA *data, threadData_t *threadData, int evalforZeroCross)
 {
   TRACE_PUSH
-  modelica_boolean tmp2;
-  modelica_boolean tmp3;
+  modelica_boolean tmp316;
+  modelica_boolean tmp317;
   
   if(evalforZeroCross) {
-    tmp2 = GreaterEqZC(data->localData[0]->realVars[7] /* Heater1.outP variable */, data->localData[0]->realVars[106] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
-    data->simulationInfo->relations[0] = tmp2;
-    tmp3 = GreaterEqZC(data->localData[0]->realVars[7] /* Heater1.outP variable */, data->localData[0]->realVars[107] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
-    data->simulationInfo->relations[1] = tmp3;
+    tmp316 = GreaterEqZC(0.0, data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
+    data->simulationInfo->relations[0] = tmp316;
+    tmp317 = GreaterEqZC(0.0, data->localData[0]->realVars[102] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
+    data->simulationInfo->relations[1] = tmp317;
   } else {
-    data->simulationInfo->relations[0] = (data->localData[0]->realVars[7] /* Heater1.outP variable */ >= data->localData[0]->realVars[106] /* MatStm2.Pbubl variable */);
-    data->simulationInfo->relations[1] = (data->localData[0]->realVars[7] /* Heater1.outP variable */ >= data->localData[0]->realVars[107] /* MatStm2.Pdew variable */);
+    data->simulationInfo->relations[0] = (0.0 >= data->localData[0]->realVars[101] /* MatStm2.Pbubl variable */);
+    data->simulationInfo->relations[1] = (0.0 >= data->localData[0]->realVars[102] /* MatStm2.Pdew variable */);
   }
   
   TRACE_POP
