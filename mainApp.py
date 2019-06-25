@@ -352,7 +352,7 @@ class NodeItem(QtWidgets.QGraphicsItem):
      
             self.selPen = QtGui.QPen()
             self.selPen.setStyle(QtCore.Qt.SolidLine)
-            self.selPen.setWidth(2)
+            self.selPen.setWidth(5)
             self.selPen.setColor(QtGui.QColor(0,255,255,255))
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -375,6 +375,7 @@ class NodeItem(QtWidgets.QGraphicsItem):
         painter.setBrush(self.brush)
         if self.isSelected():
             painter.setPen(self.selPen)
+            painter.drawRect(QtCore.QRectF(self.rect))
         else:
             painter.setPen(self.pen)
         #painter.drawRect(self.rect)
@@ -382,6 +383,11 @@ class NodeItem(QtWidgets.QGraphicsItem):
             painter.drawPixmap(self.rect,self.pic)
         except Exception as e:
             print(e)
+    '''
+    def mousePressEvent(self,event,painter):
+        painter.setPen(self.selPen)
+        painter.drawRect(self.boundingRect)
+    '''
     def mouseMoveEvent(self, event):
         try:
             #print('item move')
