@@ -12,7 +12,10 @@ class Flash():
         self.InputStms = InputStms
         self.OutputStms = OutputStms
 
-    def paramgetter(self):
+    def modesList(self):
+        return []   
+
+    def paramgetter(self,mode=None):
         dict = {"thermoPackage":None}
         return dict
     def paramsetter(self,dict):

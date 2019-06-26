@@ -17,13 +17,33 @@ class dockWidget(QDockWidget,ui_dialog):
         self.name=name
         self.obj=obj
         self.type = comptype
-        self.inputdict = self.obj.paramgetter()
+        self.inputdict = None 
         print("input_dict",self.inputdict)
-        self.inputparamslist()
+        self.modes()
+        self.pushButton_2.clicked.connect(self.modeSelection)
+        #self.inputparamslist()
         print(self.inputdict)
         self.pushButton.clicked.connect(self.param)
         self.dict = {}
         self.f = True
+
+    def modes(self):
+        modesList = self.obj.modesList()
+        if(modesList):
+            self.stackedWidget.setCurrentIndex(1)
+            for j in modesList:
+                    self.comboBox.addItem(str(j))
+            
+        else:
+            self.stackedWidget.setCurrentIndex(0)
+            self.inputdict = self.obj.paramgetter()
+            self.inputparamslist()
+
+    def modeSelection(self):
+        self.inputdict = self.obj.paramgetter(self.comboBox.currentText())
+        self.stackedWidget.setCurrentIndex(0)
+        self.inputparamslist()
+
     def inputparamslist(self):
         c=0
         for i in self.inputdict:

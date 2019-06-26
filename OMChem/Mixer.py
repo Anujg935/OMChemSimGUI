@@ -9,7 +9,10 @@ class Mixer():
         self.OutputStms = None
         self.type = 'Mixer'
 
-    def paramgetter(self):
+    def modesList(self):
+        return []   
+
+    def paramgetter(self,mode=None):
         dict = {"NOI":None}
         return dict
     def paramsetter(self,dict):

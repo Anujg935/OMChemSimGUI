@@ -12,7 +12,9 @@ class Splitter():
         self.type = 'Splitter'
         self.specval = json.dumps(specval).replace('[','{').replace(']','}')
 
-    def paramgetter(self):
+    def modesList(self):
+        return []   
+    def paramgetter(self),mode=None):
         dict = {"NOO":None}
         return dict
     def paramsetter(self,dict):
