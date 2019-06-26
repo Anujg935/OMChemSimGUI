@@ -6,6 +6,8 @@ from OMChem.Heater import Heater
 from OMChem.Flash import Flash
 from OMChem.Splitter import Splitter
 from OMChem.Valve import Valve
+from OMChem.Cooler import Cooler
+from OMChem.CompSep import CompSep
 from component_selector import *
 
 
@@ -22,3 +24,7 @@ def helperFunc(type,name1,count):
         return Heater(name=name1)
     elif(type=="Valve"):
         return Valve(name=name1)
+    elif(type=="Cooler"):
+        return Cooler(name=name1)
+    elif(type=="CompSep"):
+        return CompSep(name=name1)

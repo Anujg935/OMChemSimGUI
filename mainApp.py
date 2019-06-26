@@ -26,7 +26,7 @@ from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1]}
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -54,6 +54,8 @@ class MainApp(QMainWindow,ui):
         self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
         self.pushButton_9.clicked.connect(partial(self.component,'Flash'))
         self.pushButton_25.clicked.connect(partial(self.component,'Valve'))
+        self.pushButton_12.clicked.connect(partial(self.component,'Cooler'))
+        self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
     def selectCompounds(self):
         self.comp.show()
     def generatef(self):
@@ -89,18 +91,41 @@ class MainApp(QMainWindow,ui):
                     print(item)
                     self.scene.removeItem(item)
                     self.Container.unitOp.remove(item.obj)
-                    '''
                     for x in item.Input:
-                        del x.newLine
+                        if x.newLine:
+                            
+                            self.scene.removeItem(x.newLine)
+                            del x.newLine
+                            
+                        if x.otherLine:
+                            
+                            self.scene.removeItem(x.otherLine)
+                            del x.otherLine
+                            
                     for x in item.Output:
-                        del x.newLine
-                        '''
+                        if x.newLine:
+                            
+                            self.scene.removeItem(x.newLine)
+                            del x.newLine
+                            
+                        if x.otherLine:
+                        
+                            self.scene.removeItem(x.otherLine)
+                            del x.otherLine
+                        
+                    for k in list(self.Container.conn):
+                        if item.obj==k:
+                            del self.Container.conn[k]
+                            print("Check",self.Container.conn)
+                        elif item.obj in self.Container.conn[k]:
+                            self.Container.conn[k].remove(item.obj)
+                    print(self.Container.conn)
+                    print(self.Container.unitOp)
                     del item.obj
                     del item
         
         except Exception as e:
             print(e)
-
 
 '''
 ============================================================
@@ -123,13 +148,13 @@ class NodeLine(QtWidgets.QGraphicsPathItem):
         self.pen.setWidth(1)
         self.pen.setColor(QtGui.QColor(0,0,255,255))
         self.setPen(self.pen)
-        self.setFlag(QtWidgets.QGraphicsPathItem.ItemIsSelectable)
   
     def updatePath(self):
         path = QtGui.QPainterPath()
         path.moveTo(self.pointA)
         midptx = 0.5*(self.pointA.x() + self.pointB.x())
                 
+ 
         ctrl1_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
         ctrl2_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
         pt1 = QtCore.QPointF(midptx , self.pointA.y())
@@ -206,6 +231,8 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         self.type = socketType
         self.parent=parent
         self.container=container
+        self.newLine=None
+        self.otherLine=None
         # Brush.
         self.brush = QtGui.QBrush()
         self.brush.setStyle(QtCore.Qt.SolidPattern)
@@ -265,10 +292,14 @@ class NodeSocket(QtWidgets.QGraphicsItem):
             if self.type == 'op':
                 pointB = self.mapToScene(event.pos())
                 self.newLine.pointB = pointB
+                if self.otherLine:
+                    self.otherLine.pointB=pointB
                 
             elif self.type == 'in':
                 pointA = self.mapToScene(event.pos())
                 self.newLine.pointA = pointA
+                if self.otherLine:
+                    self.otherLine.pointA=pointA
             else:
                 super(NodeSocket, self).mouseMoveEvent(event)
         except Exception as e:
@@ -277,20 +308,17 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         
     def mouseReleaseEvent(self, event):
         try:
-            b = {}
             item = self.scene().itemAt(event.scenePos().toPoint(),QtGui.QTransform())
+            item.otherLine=self.newLine
             if (self.type == 'op') and (item.type == 'in'):
                 print("forward")
                 self.newLine.source = self
                 self.newLine.target = item
-
                 item.inLines.append(self.newLine)
-
                 self.newLine.pointB = item.getCenter()
                 self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
-                #b[self.newLine.target.parent.obj].append(self.newLine.source.parent.obj)
                 print(self.container.conn)
-            #    print(b)
+        
             elif (self.type =='in') and (item.type == 'op'):
                 print("back")
                 self.newLine.source = item
@@ -385,6 +413,7 @@ class NodeItem(QtWidgets.QGraphicsItem):
         painter.setBrush(self.brush)
         if self.isSelected():
             painter.setPen(self.selPen)
+            painter.drawRect(QtCore.QRectF(self.rect))
         else:
             painter.setPen(self.pen)
         #painter.drawRect(self.rect)
@@ -392,6 +421,11 @@ class NodeItem(QtWidgets.QGraphicsItem):
             painter.drawPixmap(self.rect,self.pic)
         except Exception as e:
             print(e)
+    '''
+    def mousePressEvent(self,event,painter):
+        painter.setPen(self.selPen)
+        painter.drawRect(self.boundingRect)
+    '''
     def mouseMoveEvent(self, event):
         try:
             #print('item move')

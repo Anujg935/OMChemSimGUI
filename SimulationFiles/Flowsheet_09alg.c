@@ -7,173 +7,92 @@ extern "C" {
 
 
 /* forwarded equations */
-extern void Flowsheet_eqFunction_133(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_134(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_135(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_136(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_137(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_148(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_149(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_150(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_151(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_152(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_153(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_154(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_155(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_156(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_157(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_158(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_159(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_160(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_161(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_162(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_163(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_164(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_165(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_166(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_167(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_187(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_188(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_189(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_190(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_191(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_192(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_193(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_194(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_195(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_196(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_197(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_198(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_199(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_200(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_201(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_202(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_203(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_204(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_205(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_206(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_207(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_208(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_132(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_131(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_130(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_129(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_128(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_127(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_126(DATA* data, threadData_t *threadData);
-extern void Flowsheet_eqFunction_125(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_73(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_74(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_75(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_76(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_77(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_88(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_89(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_90(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_91(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_92(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_93(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_94(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_95(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_96(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_97(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_98(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_99(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_100(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_101(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_102(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_72(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_71(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_70(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_69(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_68(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_67(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_66(DATA* data, threadData_t *threadData);
+extern void Flowsheet_eqFunction_65(DATA* data, threadData_t *threadData);
 
 static void functionAlg_system0(DATA *data, threadData_t *threadData)
 {
-    Flowsheet_eqFunction_133(data, threadData);
+    Flowsheet_eqFunction_73(data, threadData);
 
-    Flowsheet_eqFunction_134(data, threadData);
+    Flowsheet_eqFunction_74(data, threadData);
 
-    Flowsheet_eqFunction_135(data, threadData);
+    Flowsheet_eqFunction_75(data, threadData);
 
-    Flowsheet_eqFunction_136(data, threadData);
+    Flowsheet_eqFunction_76(data, threadData);
 
-    Flowsheet_eqFunction_137(data, threadData);
+    Flowsheet_eqFunction_77(data, threadData);
 
-    Flowsheet_eqFunction_148(data, threadData);
+    Flowsheet_eqFunction_88(data, threadData);
 
-    Flowsheet_eqFunction_149(data, threadData);
+    Flowsheet_eqFunction_89(data, threadData);
 
-    Flowsheet_eqFunction_150(data, threadData);
+    Flowsheet_eqFunction_90(data, threadData);
 
-    Flowsheet_eqFunction_151(data, threadData);
+    Flowsheet_eqFunction_91(data, threadData);
 
-    Flowsheet_eqFunction_152(data, threadData);
+    Flowsheet_eqFunction_92(data, threadData);
 
-    Flowsheet_eqFunction_153(data, threadData);
+    Flowsheet_eqFunction_93(data, threadData);
 
-    Flowsheet_eqFunction_154(data, threadData);
+    Flowsheet_eqFunction_94(data, threadData);
 
-    Flowsheet_eqFunction_155(data, threadData);
+    Flowsheet_eqFunction_95(data, threadData);
 
-    Flowsheet_eqFunction_156(data, threadData);
+    Flowsheet_eqFunction_96(data, threadData);
 
-    Flowsheet_eqFunction_157(data, threadData);
+    Flowsheet_eqFunction_97(data, threadData);
 
-    Flowsheet_eqFunction_158(data, threadData);
+    Flowsheet_eqFunction_98(data, threadData);
 
-    Flowsheet_eqFunction_159(data, threadData);
+    Flowsheet_eqFunction_99(data, threadData);
 
-    Flowsheet_eqFunction_160(data, threadData);
+    Flowsheet_eqFunction_100(data, threadData);
 
-    Flowsheet_eqFunction_161(data, threadData);
+    Flowsheet_eqFunction_101(data, threadData);
 
-    Flowsheet_eqFunction_162(data, threadData);
+    Flowsheet_eqFunction_102(data, threadData);
 
-    Flowsheet_eqFunction_163(data, threadData);
+    Flowsheet_eqFunction_72(data, threadData);
 
-    Flowsheet_eqFunction_164(data, threadData);
+    Flowsheet_eqFunction_71(data, threadData);
 
-    Flowsheet_eqFunction_165(data, threadData);
+    Flowsheet_eqFunction_70(data, threadData);
 
-    Flowsheet_eqFunction_166(data, threadData);
+    Flowsheet_eqFunction_69(data, threadData);
 
-    Flowsheet_eqFunction_167(data, threadData);
+    Flowsheet_eqFunction_68(data, threadData);
 
-    Flowsheet_eqFunction_187(data, threadData);
+    Flowsheet_eqFunction_67(data, threadData);
 
-    Flowsheet_eqFunction_188(data, threadData);
+    Flowsheet_eqFunction_66(data, threadData);
 
-    Flowsheet_eqFunction_189(data, threadData);
-
-    Flowsheet_eqFunction_190(data, threadData);
-
-    Flowsheet_eqFunction_191(data, threadData);
-
-    Flowsheet_eqFunction_192(data, threadData);
-
-    Flowsheet_eqFunction_193(data, threadData);
-
-    Flowsheet_eqFunction_194(data, threadData);
-
-    Flowsheet_eqFunction_195(data, threadData);
-
-    Flowsheet_eqFunction_196(data, threadData);
-
-    Flowsheet_eqFunction_197(data, threadData);
-
-    Flowsheet_eqFunction_198(data, threadData);
-
-    Flowsheet_eqFunction_199(data, threadData);
-
-    Flowsheet_eqFunction_200(data, threadData);
-
-    Flowsheet_eqFunction_201(data, threadData);
-
-    Flowsheet_eqFunction_202(data, threadData);
-
-    Flowsheet_eqFunction_203(data, threadData);
-
-    Flowsheet_eqFunction_204(data, threadData);
-
-    Flowsheet_eqFunction_205(data, threadData);
-
-    Flowsheet_eqFunction_206(data, threadData);
-
-    Flowsheet_eqFunction_207(data, threadData);
-
-    Flowsheet_eqFunction_208(data, threadData);
-
-    Flowsheet_eqFunction_132(data, threadData);
-
-    Flowsheet_eqFunction_131(data, threadData);
-
-    Flowsheet_eqFunction_130(data, threadData);
-
-    Flowsheet_eqFunction_129(data, threadData);
-
-    Flowsheet_eqFunction_128(data, threadData);
-
-    Flowsheet_eqFunction_127(data, threadData);
-
-    Flowsheet_eqFunction_126(data, threadData);
-
-    Flowsheet_eqFunction_125(data, threadData);
+    Flowsheet_eqFunction_65(data, threadData);
 }
 /* for continuous time variables */
 int Flowsheet_functionAlgebraics(DATA *data, threadData_t *threadData)

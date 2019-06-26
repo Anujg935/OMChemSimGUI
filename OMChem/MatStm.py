@@ -4,7 +4,7 @@ import sys
 
 
 class MatStm():
-    def __init__(self,name =None,CompNames = [],Temperature=None,Pressure=None,VapPhasMolFrac=None,VapPhasMasFrac=None,LiqPhasMolFrac=None,LiqPhasMasFrac=None,CompMolFrac = [], CompMasFrac = [], MolFlow=None, MasFlow=None,**kwargs):
+    def __init__(self,name =None,CompNames = [],Temperature=300,Pressure=101325,VapPhasMolFrac=None,VapPhasMasFrac=None,LiqPhasMolFrac=None,LiqPhasMasFrac=None,CompMolFrac = [1.0], CompMasFrac = [], MolFlow=100, MasFlow=None,**kwargs):
         self.name = name[0]
         self.type = 'MatStm'
         self.T = Temperature
@@ -21,7 +21,7 @@ class MatStm():
         self.OM_data_init = ''
         self.OM_data_eqn = ''
         self.count = name[1]
-        self.thermoPackage =None
+        self.thermoPackage ="Raoults_Law"
         # self.ValEntList =  {"T":T," P":P," VapPhasMolFrac":vapPhasMolFrac," CompNames":CompNames," CompMolFrac[1]":CompMolFrac," CompMasFrac":CompMasFrac," MolFlow[1]":MolFlow," MasFlow[1]":MasFlow}
 
 

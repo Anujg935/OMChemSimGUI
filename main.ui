@@ -418,7 +418,7 @@
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string> Component Seperator</string>
            </property>
           </widget>
          </item>
