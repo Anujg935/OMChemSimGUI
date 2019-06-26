@@ -4,18 +4,18 @@ static const REAL_ATTRIBUTE dummyREAL_ATTRIBUTE = omc_dummyRealAttribute;
 #if defined(__cplusplus)
 extern "C" {
 #endif
-  #define Flowsheet_INDEX_JAC_NLSJac0 0
-  int Flowsheet_functionJacNLSJac0_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
-  int Flowsheet_initialAnalyticJacobianNLSJac0(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
+  #define Flowsheet_INDEX_JAC_LSJac0 0
+  int Flowsheet_functionJacLSJac0_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
+  int Flowsheet_initialAnalyticJacobianLSJac0(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
 #if defined(__cplusplus)
 }
 #endif
 #if defined(__cplusplus)
 extern "C" {
 #endif
-  #define Flowsheet_INDEX_JAC_NLSJac2 1
-  int Flowsheet_functionJacNLSJac2_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
-  int Flowsheet_initialAnalyticJacobianNLSJac2(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
+  #define Flowsheet_INDEX_JAC_LSJac1 1
+  int Flowsheet_functionJacLSJac1_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
+  int Flowsheet_initialAnalyticJacobianLSJac1(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
 #if defined(__cplusplus)
 }
 #endif

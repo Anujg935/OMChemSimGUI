@@ -97,14 +97,47 @@ class MainApp(QMainWindow,ui):
     def delete(self,event):
         try:
             if event.key() == QtCore.Qt.Key_Delete:
-                for item in self.scene.selectedItems():
+                l=self.scene.selectedItems()
+                print(l)
+                for item in l:
                     print(item)
                     self.scene.removeItem(item)
+                    self.Container.unitOp.remove(item.obj)
+                    for x in item.Input:
+                        if x.newLine:
+                            
+                            self.scene.removeItem(x.newLine)
+                            del x.newLine
+                            
+                        if x.otherLine:
+                            
+                            self.scene.removeItem(x.otherLine)
+                            del x.otherLine
+                            
+                    for x in item.Output:
+                        if x.newLine:
+                            
+                            self.scene.removeItem(x.newLine)
+                            del x.newLine
+                            
+                        if x.otherLine:
+                        
+                            self.scene.removeItem(x.otherLine)
+                            del x.otherLine
+                        
+                    for k in list(self.Container.conn):
+                        if item.obj==k:
+                            del self.Container.conn[k]
+                            print("Check",self.Container.conn)
+                        elif item.obj in self.Container.conn[k]:
+                            self.Container.conn[k].remove(item.obj)
+                    print(self.Container.conn)
+                    print(self.Container.unitOp)
+                    del item.obj
                     del item
         
         except Exception as e:
             print(e)
-
 
 '''
 ============================================================
@@ -127,13 +160,13 @@ class NodeLine(QtWidgets.QGraphicsPathItem):
         self.pen.setWidth(1)
         self.pen.setColor(QtGui.QColor(0,0,255,255))
         self.setPen(self.pen)
-        self.setFlag(QtWidgets.QGraphicsPathItem.ItemIsSelectable)
   
     def updatePath(self):
         path = QtGui.QPainterPath()
         path.moveTo(self.pointA)
         midptx = 0.5*(self.pointA.x() + self.pointB.x())
                 
+ 
         ctrl1_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
         ctrl2_1 = QtCore.QPointF(self.pointA.x(), self.pointA.y())
         pt1 = QtCore.QPointF(midptx , self.pointA.y())
@@ -210,6 +243,8 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         self.type = socketType
         self.parent=parent
         self.container=container
+        self.newLine=None
+        self.otherLine=None
         # Brush.
         self.brush = QtGui.QBrush()
         self.brush.setStyle(QtCore.Qt.SolidPattern)
@@ -269,10 +304,14 @@ class NodeSocket(QtWidgets.QGraphicsItem):
             if self.type == 'op':
                 pointB = self.mapToScene(event.pos())
                 self.newLine.pointB = pointB
+                if self.otherLine:
+                    self.otherLine.pointB=pointB
                 
             elif self.type == 'in':
                 pointA = self.mapToScene(event.pos())
                 self.newLine.pointA = pointA
+                if self.otherLine:
+                    self.otherLine.pointA=pointA
             else:
                 super(NodeSocket, self).mouseMoveEvent(event)
         except Exception as e:
@@ -281,20 +320,17 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         
     def mouseReleaseEvent(self, event):
         try:
-            b = {}
             item = self.scene().itemAt(event.scenePos().toPoint(),QtGui.QTransform())
+            item.otherLine=self.newLine
             if (self.type == 'op') and (item.type == 'in'):
                 print("forward")
                 self.newLine.source = self
                 self.newLine.target = item
-
                 item.inLines.append(self.newLine)
-
                 self.newLine.pointB = item.getCenter()
                 self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
-                #b[self.newLine.target.parent.obj].append(self.newLine.source.parent.obj)
                 print(self.container.conn)
-            #    print(b)
+        
             elif (self.type =='in') and (item.type == 'op'):
                 print("back")
                 self.newLine.source = item

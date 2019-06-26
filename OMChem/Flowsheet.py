@@ -213,14 +213,7 @@ class Flowsheet():
 		# 				for v in value:
 		# 					resultval = str(omc.sendExpression("val("+unit.name+ "." + v + ", 0.5)"))
 		# 					unit.LiqProp[key][i] = resultval
-		# 					i = i + 1
-
-
-
-
-
-
-        	
+		# 					i = i + 1       	
 
 
 

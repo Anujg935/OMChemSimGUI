@@ -1,31 +1,24 @@
 model Flowsheet
-parameter Simulator.Files.Chemsep_Database.Ethanol Ethanol; 
-parameter Simulator.Files.Chemsep_Database.Water Water; 
-Simulator.Streams.Energy_Stream EngStm;
-Simulator.Unit_Operations.Compound_Separator CompSep1(NOC = 2,comp = {Ethanol, Water},sepFact = {"Molar_Flow", "Mass_Flow"},sepStrm = 3, sepFactVal = [20,1500]);
+parameter Simulator.Files.Chemsep_Database.Glycerol Glycerol; 
 model ms1
 extends Simulator.Streams.Material_Stream;
 extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
 end ms1;
-ms1 MatStm1(NOC = 2,comp = {Ethanol, Water});
+ms1 MatStm1(NOC = 1,comp = {Glycerol});
+Simulator.Streams.Energy_Stream EngStm;
+Simulator.Unit_Operations.Heater Heater1(NOC = 1,comp = {Glycerol},pressDrop = 100324,eff = 1);
 model ms2
 extends Simulator.Streams.Material_Stream;
 extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
 end ms2;
-ms2 MatStm2(NOC = 2,comp = {Ethanol, Water});
-model ms3
-extends Simulator.Streams.Material_Stream;
-extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
-end ms3;
-ms3 MatStm3(NOC = 2,comp = {Ethanol, Water});
+ms2 MatStm2(NOC = 1,comp = {Glycerol});
 equation
-connect(MatStm1.outlet,CompSep1.inlet);
-connect(MatStm3.inlet,CompSep1.outlet1);
-connect(MatStm2.inlet,CompSep1.outlet2);
-connect(EngStm.outlet,CompSep1.energy);
-CompSep1.sepFactVal= {20,1500};
-MatStm1.P = 101325;
-MatStm1.T = 310;
-MatStm1.compMolFrac[1,:] = {0.5,0.5};
+MatStm1.P = 101324;
+MatStm1.T = 300;
+MatStm1.compMolFrac[1,:] = {1.0};
 MatStm1.totMolFlo[1] = 100;
+connect(MatStm1.outlet,Heater1.inlet);
+connect(Heater1.outlet,MatStm2.inlet);
+connect(EngStm.outlet,Heater1.energy);
+Heater1.heatAdd=200000;
 end Flowsheet;
