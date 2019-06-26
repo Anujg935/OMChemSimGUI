@@ -83,9 +83,19 @@ class MainApp(QMainWindow,ui):
     def delete(self,event):
         try:
             if event.key() == QtCore.Qt.Key_Delete:
-                for item in self.scene.selectedItems():
+                l=self.scene.selectedItems()
+                print(l)
+                for item in l:
                     print(item)
                     self.scene.removeItem(item)
+                    self.Container.unitOp.remove(item.obj)
+                    '''
+                    for x in item.Input:
+                        del x.newLine
+                    for x in item.Output:
+                        del x.newLine
+                        '''
+                    del item.obj
                     del item
         
         except Exception as e:

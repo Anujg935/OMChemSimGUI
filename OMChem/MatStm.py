@@ -402,8 +402,8 @@ class MatStm():
         comp = str(addedcomp).strip('[').strip(']')
         comp = comp.replace("'","")
         self.OM_data_init = self.OM_data_init + comp + "},"
-        for key, value in self.startDict.items():
-            self.OM_data_init = self.OM_data_init + key + '(start = ' + str(value) + '),'
+        #for key, value in self.startDict.items():
+        #    self.OM_data_init = self.OM_data_init + key + '(start = ' + str(value) + '),'
         self.OM_data_init = self.OM_data_init[:-1]
         self.OM_data_init = self.OM_data_init + ');\n'        
         return self.OM_data_init
