@@ -34,6 +34,7 @@ class MainApp(QMainWindow,ui):
         self.setupUi(self)
         style = open('light.css','r')
         style = style.read()
+        self.zoomcount = 0
         self.Container = Container()
         self.setStyleSheet(style)
         self.comp =componentSelector(self)
@@ -42,11 +43,10 @@ class MainApp(QMainWindow,ui):
         self.graphicsView.setScene(self.scene)
         self.graphicsView.setMouseTracking(True)
         self.pushButton.clicked.connect(partial(self.component,'MatStm'))
-        self.pushButton_5.clicked.connect(partial(self.component,'EngStm'))
         self.graphicsView.keyPressEvent=self.delete
-        self.pushButton_2.clicked.connect(self.zoomin)
-        self.pushButton_3.clicked.connect(self.zoomout)
-        self.pushButton_4.clicked.connect(self.deleteComponent)
+        self.actionZoomIn.triggered.connect(self.zoomin)
+        self.actionZoomOut.triggered.connect(self.zoomout)
+        self.actionResetZoom.triggered.connect(self.zoomReset)
         self.pushButton_6.clicked.connect(self.generatef)
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
         self.pushButton_11.clicked.connect(partial(self.component,'Heater'))
@@ -63,10 +63,22 @@ class MainApp(QMainWindow,ui):
             self.Container.simulate()
         except Exception as e:
             print(e)
+    def zoomReset(self):
+        if(self.zoomcount>0):
+            for i in range(self.zoomcount):
+                self.zoomout()
+        elif(self.zoomcount<0):
+            for i in range(self.zoomcount):
+                self.zoomin()
+        else:
+            pass
+        self.graphicsView.scale(1.0,1.0)
     def zoomout(self):
         self.graphicsView.scale(1.0/1.15,1.0/1.15)
+        self.zoomcount -=1
     def zoomin(self):
         self.graphicsView.scale(1.15,1.15)
+        self.zoomcount +=1
     
     def deleteComponent(self):
         pass    
