@@ -1,6 +1,8 @@
 class Valve():
-    def __init__(self,name='valve',PressureDrop = None):
-        self.PressDrop = PressureDrop
+    def __init__(self,name='valve'):
+        #self.PressDrop = PressureDrop
+        self.mode = None
+        self.modeVal = None
         self.name = name
         self.OM_data_eqn = ''
         self.OM_data_init = ''
@@ -8,12 +10,17 @@ class Valve():
         self.OutputStms = None
         self.type = 'Valve'
 
-    def paramgetter(self):
-        dict = {"PressureDrop":None}
+    def modesList(self):
+        return ["pressDrop","outP"]
+
+    def paramgetter(self,mode):
+        self.mode = mode
+        dict = {self.mode:None}
         return dict
+
     def paramsetter(self,dict):
-        self.PressDrop = dict['PressureDrop']
-       
+
+        self.modeVal = dict[self.mode]      
 
     def connect(self,InputStms = None,OutputStms = None):
         self.InputStms = InputStms
@@ -34,7 +41,8 @@ class Valve():
 
     def OM_Flowsheet_Eqn(self, addedcomp):
         self.OM_data_eqn = ''
-        self.OM_data_eqn = self.name + '.pressDrop = ' + str(self.PressDrop) + ';\n'
+        
         self.OM_data_eqn = self.OM_data_eqn + ('connect(' + self.InputStms[0].name + '.outlet,' +  self.name + '.inlet' + ');\n')
         self.OM_data_eqn = self.OM_data_eqn + ('connect(' + self.name + '.outlet,' + self.OutputStms[0].name + '.inlet);\n')
+        self.OM_data_eqn = self.OM_data_eqn + (self.name+'.'+self.mode+'='+ self.modeVal + ';\n')
         return self.OM_data_eqn

@@ -103,8 +103,10 @@ class MatStm():
             'totMasFlo[3]':None
 
         }
-        
-    def paramgetter(self):
+
+    def modesList(self):
+        return []   
+    def paramgetter(self,mode=None):
         dict = {"Temperature":None,"Pressure":None,"CompMolFrac":None,"MolFlow":None,"thermoPackage":None}
         return dict
     def paramsetter(self,dict):
@@ -418,7 +420,7 @@ class MatStm():
         if method == 'SM':
             self.eqnDict = {}
             self.GetMinEqnValues()
-            self.GetEquationValues()
+            #self.GetEquationValues()
         #self.GetEquationValues()
 
         for key,value in self.eqnDict.items():

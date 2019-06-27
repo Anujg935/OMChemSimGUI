@@ -32,6 +32,7 @@ extern "C" {
 
 extern void Flowsheet_callExternalObjectDestructors(DATA *_data, threadData_t *threadData);
 #if !defined(OMC_NUM_NONLINEAR_SYSTEMS) || OMC_NUM_NONLINEAR_SYSTEMS>0
+extern void Flowsheet_initialNonLinearSystem(int nNonLinearSystems, NONLINEAR_SYSTEM_DATA *data);
 #endif
 #if !defined(OMC_NUM_LINEAR_SYSTEMS) || OMC_NUM_LINEAR_SYSTEMS>0
 extern void Flowsheet_initialLinearSystem(int nLinearSystems, LINEAR_SYSTEM_DATA *data);

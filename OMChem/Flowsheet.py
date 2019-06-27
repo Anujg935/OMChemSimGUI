@@ -305,21 +305,21 @@ class Flowsheet():
 				self.data.append('equation\n')
 				
 				self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds))
-
+				'''
 				if type(outstms) is list:
 					for stm in outstms:
-						stm.GetEquationValues()
+						#stm.GetEquationValues()
 						self.data.append(stm.OM_Flowsheet_Eqn(self.compounds,'SM'))
 				else:
-					outstms.GetEquationValues()
+					#outstms.GetEquationValues()
 					self.data.append(outstms.OM_Flowsheet_Eqn(self.compounds,'SM'))
-				
+'''
 				if type(inpstms) is list:
 					for stm in inpstms:
-						stm.GetEquationValues()
+					#	stm.GetEquationValues()
 						self.data.append(stm.OM_Flowsheet_Eqn(self.compounds,'SM'))
 				else:
-					inpstms.GetEquationValues()
+					#inpstms.GetEquationValues()
 					self.data.append(inpstms.OM_Flowsheet_Eqn(self.compounds,'SM'))
 
 				# os.chdir(self.sim_dir_path)
@@ -349,6 +349,8 @@ class Flowsheet():
 				#print(s)
 				print("############### StdOut ################")
 				print(stdout)
+				print("############### StdErr ################")
+				print(stderr)
 				print('Simulating '+unitop[0].name+'...')
 				csvpath = os.path.join(self.sim_dir_path,unitop[0].name+'_res.csv')
 				
