@@ -13,13 +13,16 @@ class CompSep():
         self.type = 'CompSep'
         self.EngStms = EngStm(name='EngStm')
 
-    def paramgetter(self):
-        dict = {"SepStrm":None,"SepFactValue":None}
+    def modesList(self):
+        return []   
+    def paramgetter(self,mode=None):
+        dict = {"SepStrm":None,"SepFactValue":None,"SepFact":None}
         return dict
 
     def paramsetter(self,dict):
         self.SepStrm = dict['SepStrm']
         self.SepFactValue = dict['SepFactValue']
+        self.SepFact = dict['SepFact']
 
     def OM_Flowsheet_Init(self, addedcomp):
         self.OM_data_init = ''

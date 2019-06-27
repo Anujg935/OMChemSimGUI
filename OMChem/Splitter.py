@@ -14,7 +14,7 @@ class Splitter():
 
     def modesList(self):
         return []   
-    def paramgetter(self),mode=None):
+    def paramgetter(self,mode=None):
         dict = {"NOO":None}
         return dict
     def paramsetter(self,dict):

@@ -60,6 +60,7 @@ class MainApp(QMainWindow,ui):
         self.comp.show()
     def generatef(self):
         try:
+            self.tabWidget.setCurrentIndex(1)
             self.Container.simulate()
         except Exception as e:
             print(e)

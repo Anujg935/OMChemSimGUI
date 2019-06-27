@@ -20,6 +20,8 @@ class Flowsheet():
 		self.eqn_mos_path = os.path.join(self.sim_dir_path,'simulateEQN.mos')
 		self.sm_mos_path = os.path.join(self.sim_dir_path,'simulateSM.mos')
 		self.resdata = []
+		self.stdout=None
+		self.stderr=None
 	
 	
 	def Selected_thermo_package(self,thermopackage):
@@ -56,11 +58,11 @@ class Flowsheet():
 			os.chdir(self.sim_dir_path)
 			
 			process = Popen([self.omc_path, '-s',simpath], stdout=PIPE, stderr=PIPE)
-			stdout, stderr = process.communicate()
+			self.stdout, self.stderr = process.communicate()
 			#s = subprocess.check_output([self.omc_path, '-s',simpath])
 			#print(s)
-			print("############### StdOut ################")
-			print(stdout)
+			#print("############### StdOut ################")
+			#print(stdout)
 			os.chdir(self.curr_path)
 			#os.system(self.omc_path + ' -s ' + simpath)
 		
@@ -284,6 +286,7 @@ class Flowsheet():
 					lcase = c.lower()
 					self.data.append("parameter Simulator.Files.Chemsep_Database." + ucase +' '+ ucase + "; \n")
 				
+				print("##############compounds added")
 				self.data.append(unitop[0].OM_Flowsheet_Init(self.compounds))
 				
 				if type(outstms) is list:
@@ -303,7 +306,7 @@ class Flowsheet():
 					self.data.append(inpstms.OM_Flowsheet_Init(self.compounds))
 				
 				self.data.append('equation\n')
-				
+				print("##################equation")
 				self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds))
 
 				if type(outstms) is list:
@@ -342,9 +345,11 @@ class Flowsheet():
 				self.resdata = []
 				self.omc_path = self.get_omc_path()
 				os.chdir(self.sim_dir_path)
-				os.system(self.omc_path + ' -s ' + unitop[0].name+'.mos')
+				#os.system(self.omc_path + ' -s ' + unitop[0].name+'.mos')
+				process = Popen([self.omc_path, '-s', unitop[0].name,'.mos'], stdout=PIPE, stderr=PIPE)
+				self.stdout, self.stderr = process.communicate()
 				print('Simulating '+unitop[0].name+'...')
-				csvpath = os.path.join(self.sim_dir_path,unitop.name+'_res.csv')
+				csvpath = os.path.join(self.sim_dir_path,unitop[0].name+'_res.csv')
 				
 				with open(csvpath,'r') as resultFile:
 					csvreader = csv.reader(resultFile,delimiter=',')

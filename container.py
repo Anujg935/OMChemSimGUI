@@ -68,8 +68,10 @@ class Container():
             else:
                 f.add_UnitOpn(i,0)
         f.simulateEQN()
+        print("############$Stdout$############",f.stdout)
+        print("###########$ResData$############",f.resdata)
+   
 
-        
 def flatlist(lst):
     flat_list=[]
     for sublist in lst:

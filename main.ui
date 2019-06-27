@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1082</width>
-    <height>589</height>
+    <height>621</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -55,6 +55,10 @@
               </property>
               <property name="text">
                <string>Simulate</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../ChemsimGui/icons/simulate.svg</normaloff>../ChemsimGui/icons/simulate.svg</iconset>
               </property>
              </widget>
             </item>
@@ -228,7 +232,7 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-135</y>
+          <y>0</y>
           <width>231</width>
           <height>764</height>
          </rect>
