@@ -269,6 +269,7 @@ class Flowsheet():
 		self.sim_method = 'SM'
 		self.data = []
 		for unitop in self.UnitOpn:
+			os.chdir(self.curr_path)
 			self.data = []
 			if unitop[0].type not in ['MatStm','EngStm']:
 				inpstms = unitop[0].InputStms
@@ -319,7 +320,7 @@ class Flowsheet():
 '''
 				if type(inpstms) is list:
 					for stm in inpstms:
-					#	stm.GetEquationValues()
+						#stm.GetEquationValues()
 						self.data.append(stm.OM_Flowsheet_Eqn(self.compounds,'SM'))
 				else:
 					#inpstms.GetEquationValues()
@@ -346,19 +347,16 @@ class Flowsheet():
 				self.omc_path = self.get_omc_path()
 				os.chdir(self.sim_dir_path)
 				#os.system(self.omc_path + ' -s ' + unitop[0].name+'.mos')
-<<<<<<< HEAD
-				process = Popen([self.omc_path, '-s', unitop[0].name,'.mos'], stdout=PIPE, stderr=PIPE)
+				print("SIM directory Path 1 ###",self.sim_dir_path)
+				process = Popen([self.omc_path, '-s',unitop[0].name+'.mos'], stdout=PIPE, stderr=PIPE)
 				self.stdout, self.stderr = process.communicate()
-=======
-				process = Popen([self.omc_path, '-s',unitop[0].name,'.mos'], stdout=PIPE, stderr=PIPE)
-				stdout, stderr = process.communicate()
+				os.chdir(self.curr_path)
 				#s = subprocess.check_output([self.omc_path, '-s',simpath])
 				#print(s)
 				print("############### StdOut ################")
-				print(stdout)
+				print(self.stdout)
 				print("############### StdErr ################")
-				print(stderr)
->>>>>>> 59c85481d93186a69b42236ee9a9fc7a72ee58af
+				print(self.stderr)
 				print('Simulating '+unitop[0].name+'...')
 				csvpath = os.path.join(self.sim_dir_path,unitop[0].name+'_res.csv')
 				
@@ -367,7 +365,7 @@ class Flowsheet():
 					for row in csvreader:
 						self.resdata.append(row)
 				
-				
+				os.chdir(self.curr_path)
 				if type(inpstms) is list:
 					for stm in inpstms:
 						for key, value in stm.Prop.items():
@@ -376,6 +374,8 @@ class Flowsheet():
 								ind = self.resdata[0].index(propertyname)
 								resultval = str(self.resdata[-1][ind])
 								stm.Prop[key] = resultval
+
+								#print("input",stm.Prop[key])
 						
 
 				else:
@@ -385,7 +385,7 @@ class Flowsheet():
 								ind = self.resdata[0].index(propertyname)
 								resultval = str(self.resdata[-1][ind])
 								inpstms.Prop[key] = resultval
-
+								#print("input",inpstms.Prop[key])
 
 				if type(outstms) is list:
 					for stm in outstms:
@@ -395,7 +395,7 @@ class Flowsheet():
 								ind = self.resdata[0].index(propertyname)
 								resultval = str(self.resdata[-1][ind])
 								stm.Prop[key] = resultval
-
+								print("output key:",key,"value:",stm.Prop[key])
 				else:
 					for key, value in outstms.Prop.items():
 							propertyname = outstms.name + '.' + key
@@ -403,6 +403,7 @@ class Flowsheet():
 								ind = self.resdata[0].index(propertyname)
 								resultval = str(self.resdata[-1][ind])
 								outstms.Prop[key] = resultval
+								print("output key:",key,"value:",outstms.Prop[key])
 
 					
 				

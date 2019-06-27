@@ -61,12 +61,11 @@ class MainApp(QMainWindow,ui):
         self.comp.show()
     def generatef(self,mode):
         try:
-<<<<<<< HEAD
+
             self.tabWidget.setCurrentIndex(1)
-            self.Container.simulate()
-=======
+            #self.Container.simulate()
+
             self.Container.simulate(mode)
->>>>>>> 59c85481d93186a69b42236ee9a9fc7a72ee58af
         except Exception as e:
             print(e)
     def zoomReset(self):

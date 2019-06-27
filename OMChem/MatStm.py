@@ -113,9 +113,11 @@ class MatStm():
         self.T = dict['Temperature']
         self.P = dict['Pressure']
         self.MolFlow = dict['MolFlow']
-        self.CompMolFrac = dict['CompMolFrac']
+        self.CompMolFrac = dict['CompMolFrac'].split(",")
         self.thermoPackage = dict['thermoPackage']
-
+        self.Prop['totMolFlo[1]'] = self.MolFlow
+        self.Prop['T'] = self.T
+        self.Prop['P'] = self.P
         for i in range(0,len(self.CompNames)):
             print('####### compmolfrac #########\n',self.CompMolFrac[i])
             if self.CompMolFrac:
@@ -129,7 +131,6 @@ class MatStm():
                 self.Prop['compMasFrac[1,'+str(i+1)+']'] = None
             self.Prop['compMolFlo[1,'+str(i+1)+']'] = None
             self.Prop['compMasFlo[1,'+str(i+1)+']'] = None
-
         for i in range(0,len(self.CompNames)):
             self.Prop['compMolFrac[2,'+str(i+1)+']'] = None
             self.Prop['compMasFrac[2,'+str(i+1)+']'] = None
@@ -141,18 +142,38 @@ class MatStm():
             self.Prop['compMasFlo[3,'+str(i+1)+']'] = None
             
     def GetMinEqnValues(self):
+        compmolfraclist = []
+        for i in range(0,len(self.CompNames)):
+            print(self.Prop['compMolFrac[1,'+str(i+1)+']'])
+            compmolfraclist.append(self.Prop['compMolFrac[1,'+str(i+1)+']'])
+        print(compmolfraclist)
+        #compmolfraclist = list(self.Prop(compMolFrac[1,1)])
+        compmolfrac = json.dumps(compmolfraclist)
+        print(compmolfrac)
+        compmolfrac = compmolfrac.replace('[','{')
+        compmolfrac = compmolfrac.replace(']','}')
+        compmolfrac = compmolfrac.replace('"','')
+        '''
         compmolfracstr = json.dumps(self.CompMolFrac)
         compmolfracstr = compmolfracstr.replace('[','{')
         compmolfracstr = compmolfracstr.replace(']','}')
         compmolfracstr = compmolfracstr.replace('"','')
+        '''
         if self.P:
-            self.eqnDict['P'] = self.P
+            self.eqnDict['P'] = self.Prop['P']#self.P
         if self.T:
-            self.eqnDict['T'] = self.T
+            self.eqnDict['T'] = self.Prop['T']#self.T
         if self.CompMolFrac:
-            self.eqnDict['compMolFrac[1,:]'] = compmolfracstr
+            self.eqnDict['compMolFrac[1,:]'] = compmolfrac
         if self.MolFlow:
-            self.eqnDict['totMolFlo[1]'] = self.MolFlow
+            self.eqnDict['totMolFlo[1]'] = self.Prop['totMolFlo[1]']#self.MolFlow
+
+        print("##############$GetMinVEqnValuesStart$##################")
+        print("P:",self.Prop['P'])
+        print("T:",self.Prop['T'])
+        print("CompMolFrac",compmolfrac)
+        print("totMolFlo",self.Prop['totMolFlo[1]'])
+        print("##############$GetMinVEqnValuesEnd$##################")
 
     def GetEquationValues(self):
         if self.Prop['P']:
