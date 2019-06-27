@@ -48,7 +48,8 @@ class Container():
         except Exception as e:
             print(e)
             
-    def simulate(self):
+    def simulate(self,mode):
+        print(mode)
         self.compounds = compond_selected
         self.thermoPackage = str(thermo_package[0])
         
@@ -67,7 +68,10 @@ class Container():
                 f.add_UnitOpn(i,1)
             else:
                 f.add_UnitOpn(i,0)
-        f.simulateEQN()
+        if mode=='SM':
+            f.simulateSM()
+        elif mode=='EQN':
+            f.simulateEQN()
 
         
 def flatlist(lst):

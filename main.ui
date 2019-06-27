@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1082</width>
-    <height>589</height>
+    <width>1083</width>
+    <height>650</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,6 +46,13 @@
              </widget>
             </item>
             <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="text">
+               <string>Simulate SEQ</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QPushButton" name="pushButton_6">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -54,7 +61,7 @@
                </sizepolicy>
               </property>
               <property name="text">
-               <string>Simulate</string>
+               <string>Simulate EQN</string>
               </property>
              </widget>
             </item>
@@ -147,8 +154,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1082</width>
-     <height>21</height>
+     <width>1083</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -228,9 +235,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-135</y>
-          <width>231</width>
-          <height>764</height>
+          <y>0</y>
+          <width>227</width>
+          <height>794</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">

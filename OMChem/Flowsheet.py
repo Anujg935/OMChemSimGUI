@@ -342,9 +342,15 @@ class Flowsheet():
 				self.resdata = []
 				self.omc_path = self.get_omc_path()
 				os.chdir(self.sim_dir_path)
-				os.system(self.omc_path + ' -s ' + unitop[0].name+'.mos')
+				#os.system(self.omc_path + ' -s ' + unitop[0].name+'.mos')
+				process = Popen([self.omc_path, '-s',unitop[0].name,'.mos'], stdout=PIPE, stderr=PIPE)
+				stdout, stderr = process.communicate()
+				#s = subprocess.check_output([self.omc_path, '-s',simpath])
+				#print(s)
+				print("############### StdOut ################")
+				print(stdout)
 				print('Simulating '+unitop[0].name+'...')
-				csvpath = os.path.join(self.sim_dir_path,unitop.name+'_res.csv')
+				csvpath = os.path.join(self.sim_dir_path,unitop[0].name+'_res.csv')
 				
 				with open(csvpath,'r') as resultFile:
 					csvreader = csv.reader(resultFile,delimiter=',')
