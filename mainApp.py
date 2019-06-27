@@ -47,7 +47,8 @@ class MainApp(QMainWindow,ui):
         self.actionZoomIn.triggered.connect(self.zoomin)
         self.actionZoomOut.triggered.connect(self.zoomout)
         self.actionResetZoom.triggered.connect(self.zoomReset)
-        self.pushButton_6.clicked.connect(self.generatef)
+        self.pushButton_2.clicked.connect(partial(self.generatef,'SM'))
+        self.pushButton_6.clicked.connect(partial(self.generatef,'EQN'))
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
         self.pushButton_11.clicked.connect(partial(self.component,'Heater'))
         self.pushButton_8.clicked.connect(self.selectCompounds)
@@ -58,10 +59,14 @@ class MainApp(QMainWindow,ui):
         self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
     def selectCompounds(self):
         self.comp.show()
-    def generatef(self):
+    def generatef(self,mode):
         try:
+<<<<<<< HEAD
             self.tabWidget.setCurrentIndex(1)
             self.Container.simulate()
+=======
+            self.Container.simulate(mode)
+>>>>>>> 59c85481d93186a69b42236ee9a9fc7a72ee58af
         except Exception as e:
             print(e)
     def zoomReset(self):

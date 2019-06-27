@@ -308,21 +308,21 @@ class Flowsheet():
 				self.data.append('equation\n')
 				print("##################equation")
 				self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds))
-
+				'''
 				if type(outstms) is list:
 					for stm in outstms:
-						stm.GetEquationValues()
+						#stm.GetEquationValues()
 						self.data.append(stm.OM_Flowsheet_Eqn(self.compounds,'SM'))
 				else:
-					outstms.GetEquationValues()
+					#outstms.GetEquationValues()
 					self.data.append(outstms.OM_Flowsheet_Eqn(self.compounds,'SM'))
-				
+'''
 				if type(inpstms) is list:
 					for stm in inpstms:
-						stm.GetEquationValues()
+					#	stm.GetEquationValues()
 						self.data.append(stm.OM_Flowsheet_Eqn(self.compounds,'SM'))
 				else:
-					inpstms.GetEquationValues()
+					#inpstms.GetEquationValues()
 					self.data.append(inpstms.OM_Flowsheet_Eqn(self.compounds,'SM'))
 
 				# os.chdir(self.sim_dir_path)
@@ -346,8 +346,19 @@ class Flowsheet():
 				self.omc_path = self.get_omc_path()
 				os.chdir(self.sim_dir_path)
 				#os.system(self.omc_path + ' -s ' + unitop[0].name+'.mos')
+<<<<<<< HEAD
 				process = Popen([self.omc_path, '-s', unitop[0].name,'.mos'], stdout=PIPE, stderr=PIPE)
 				self.stdout, self.stderr = process.communicate()
+=======
+				process = Popen([self.omc_path, '-s',unitop[0].name,'.mos'], stdout=PIPE, stderr=PIPE)
+				stdout, stderr = process.communicate()
+				#s = subprocess.check_output([self.omc_path, '-s',simpath])
+				#print(s)
+				print("############### StdOut ################")
+				print(stdout)
+				print("############### StdErr ################")
+				print(stderr)
+>>>>>>> 59c85481d93186a69b42236ee9a9fc7a72ee58af
 				print('Simulating '+unitop[0].name+'...')
 				csvpath = os.path.join(self.sim_dir_path,unitop[0].name+'_res.csv')
 				

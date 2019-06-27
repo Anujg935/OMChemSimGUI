@@ -420,7 +420,7 @@ class MatStm():
         if method == 'SM':
             self.eqnDict = {}
             self.GetMinEqnValues()
-            self.GetEquationValues()
+            #self.GetEquationValues()
         #self.GetEquationValues()
 
         for key,value in self.eqnDict.items():

@@ -6,8 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>1082</width>
     <height>621</height>
+=======
+    <width>1083</width>
+    <height>650</height>
+>>>>>>> 59c85481d93186a69b42236ee9a9fc7a72ee58af
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,6 +51,13 @@
              </widget>
             </item>
             <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="text">
+               <string>Simulate SEQ</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QPushButton" name="pushButton_6">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -54,7 +66,7 @@
                </sizepolicy>
               </property>
               <property name="text">
-               <string>Simulate</string>
+               <string>Simulate EQN</string>
               </property>
               <property name="icon">
                <iconset>
@@ -151,8 +163,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1082</width>
-     <height>21</height>
+     <width>1083</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -233,8 +245,13 @@
          <rect>
           <x>0</x>
           <y>0</y>
+<<<<<<< HEAD
           <width>231</width>
           <height>764</height>
+=======
+          <width>227</width>
+          <height>794</height>
+>>>>>>> 59c85481d93186a69b42236ee9a9fc7a72ee58af
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
