@@ -280,7 +280,7 @@ class Flowsheet():
 				except:
 					engstms = None
 
-				self.data.append("model "+unitop[0].name+'\n')
+				self.data.append("model "+unitop[0].name+"SEQ"+'\n')
 				
 				for c in self.compounds:
 					ucase = c.title()
@@ -332,7 +332,7 @@ class Flowsheet():
 				with open(unitmofile,'w') as unitFile:
 					for d in self.data:
 						unitFile.write(d)
-					unitFile.write('end '+unitop[0].name+';\n')
+					unitFile.write('end '+unitop[0].name+"SEQ"+';\n')
 				
 				unitmosfile = os.path.join(self.sim_dir_path,unitop[0].name+'.mos')
 				with open(unitmosfile, 'w') as mosFile:
