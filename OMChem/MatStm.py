@@ -472,6 +472,3 @@ class MatStm():
         #     self.OM_data_eqn = self.OM_data_eqn + (self.name + ".totMasFlo[1] = " + str(self.MasFlow) + ";\n")
 
         # return self.OM_data_eqn
-        
-
-		
