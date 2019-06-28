@@ -55,7 +55,6 @@ class MainApp(QMainWindow,ui):
         self.pushButton_8.clicked.connect(self.selectCompounds)
         self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
         self.pushButton_9.clicked.connect(partial(self.component,'Flash'))
-        self.pushButton_14.clicked.connect(self.deleteComponent)
         self.pushButton_25.clicked.connect(partial(self.component,'Valve'))
         self.pushButton_12.clicked.connect(partial(self.component,'Cooler'))
         self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
@@ -98,7 +97,7 @@ class MainApp(QMainWindow,ui):
             self.tabWidget.setCurrentIndex(1)
             self.Container.simulate(mode)
             pix = QPixmap(self.graphicsView.grab())
-            self.label_8.setPixmap(pix.scaled(self.label_8.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
+            self.label_8.setPixmap(pix.scaled(self.label_8.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)) 
             self.results()
         except Exception as e:
             print(e)
@@ -118,10 +117,8 @@ class MainApp(QMainWindow,ui):
     def zoomin(self):
         self.graphicsView.scale(1.15,1.15)
         self.zoomcount +=1
-    
-    def deleteComponent(self):
-        pix =QPixmap(self.graphicsView.grab()) 
-        crop.save("imgghasds.png")
+  
+        
     def component(self,conntype):
         try:
             box=None
