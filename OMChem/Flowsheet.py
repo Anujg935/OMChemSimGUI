@@ -280,7 +280,7 @@ class Flowsheet():
 				except:
 					engstms = None
 
-				self.data.append("model "+unitop[0].name+'\n')
+				self.data.append("model "+unitop[0].name+"SEQ"+'\n')
 				
 				for c in self.compounds:
 					ucase = c.title()
@@ -327,28 +327,28 @@ class Flowsheet():
 					self.data.append(inpstms.OM_Flowsheet_Eqn(self.compounds,'SM'))
 
 				# os.chdir(self.sim_dir_path)
-				unitmofile = os.path.join(self.sim_dir_path,unitop[0].name+'.mo')
+				unitmofile = os.path.join(self.sim_dir_path,unitop[0].name+"SEQ"+'.mo')
 
 				with open(unitmofile,'w') as unitFile:
 					for d in self.data:
 						unitFile.write(d)
-					unitFile.write('end '+unitop[0].name+';\n')
+					unitFile.write('end '+unitop[0].name+"SEQ"+';\n')
 				
-				unitmosfile = os.path.join(self.sim_dir_path,unitop[0].name+'.mos')
+				unitmosfile = os.path.join(self.sim_dir_path,unitop[0].name+"SEQ"+'.mos')
 				with open(unitmosfile, 'w') as mosFile:
 					mosFile.write('loadModel(Modelica);\n')
 					mosFile.write("loadFile(\"Simulator.mo\");\n")
 				
-					mosFile.write("loadFile(\""+unitop[0].name+".mo\");\n")
+					mosFile.write("loadFile(\""+unitop[0].name+"SEQ"+".mo\");\n")
 					mosFile.write("simulate("+unitop[0].name+", outputFormat=\"csv\", stopTime=1.0, numberOfIntervals=1);\n")
 
 				print("Initiating simulation in Sequential Modular Mode")
 				self.resdata = []
 				self.omc_path = self.get_omc_path()
 				os.chdir(self.sim_dir_path)
-				#os.system(self.omc_path + ' -s ' + unitop[0].name+'.mos')
+				#os.system(self.omc_path + ' -s ' + unitop[0].name+"SEQ"+'.mos')
 				print("SIM directory Path 1 ###",self.sim_dir_path)
-				sim = os.path.join(self.sim_dir_path,unitop[0].name+'.mos')
+				sim = os.path.join(self.sim_dir_path,unitop[0].name+"SEQ"+'.mos')
 				process = Popen([self.omc_path, '-s',sim], stdout=PIPE, stderr=PIPE)
 				self.stdout, self.stderr = process.communicate()
 				os.chdir(self.curr_path)
@@ -359,7 +359,7 @@ class Flowsheet():
 				print("############### StdErr ################")
 				print(self.stderr)
 				print('Simulating '+unitop[0].name+'...')
-				csvpath = os.path.join(self.sim_dir_path,unitop[0].name+'_res.csv')
+				csvpath = os.path.join(self.sim_dir_path,unitop[0].name+"SEQ"+'_res.csv')
 				
 				with open(csvpath,'r') as resultFile:
 					csvreader = csv.reader(resultFile,delimiter=',')
