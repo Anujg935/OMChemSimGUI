@@ -1,39 +1,18 @@
-stdout            | warning | While solving non-linear system an assertion failed during initialization.
-|                 | |       | | The non-linear solver tries to solve the problem that could take some time.
-|                 | |       | | It could help to provide better start-values for the iteration variables.
-|                 | |       | | For more information simulate with -lv LOG_NLS_V
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | Mixer1.inVapPhasMolFrac[1] >= 0.0 and Mixer1.inVapPhasMolFrac[1] <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[1] <= 1.0, has value: -1.831e-018
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | Mixer1.inVapPhasMolFrac[2] >= 0.0 and Mixer1.inVapPhasMolFrac[2] <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= Mixer1.inVapPhasMolFrac[2] <= 1.0, has value: -2.22045e-016
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.liqPhasMolFrac >= 0.0 and MatStm1.liqPhasMolFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMolFrac <= 1.0, has value: 1
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.vapPhasMolFrac >= 0.0 and MatStm1.vapPhasMolFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm1.vapPhasMolFrac <= 1.0, has value: -2.22045e-016
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.liqPhasMasFrac >= 0.0 and MatStm1.liqPhasMasFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm1.liqPhasMasFrac <= 1.0, has value: 1
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm1.totMolFlo[3] >= 0.0
-assert            | warning | Variable violating min constraint: 0.0 <= MatStm1.totMolFlo[3], has value: -4.44089e-014
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm3.liqPhasMasFrac >= 0.0 and MatStm3.liqPhasMasFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm3.liqPhasMasFrac <= 1.0, has value: 1
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm3.totMolFlo[3] >= 0.0
-assert            | warning | Variable violating min constraint: 0.0 <= MatStm3.totMolFlo[3], has value: -1.831e-016
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm2.liqPhasMolFrac >= 0.0 and MatStm2.liqPhasMolFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMolFrac <= 1.0, has value: 1
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm2.liqPhasMasFrac >= 0.0 and MatStm2.liqPhasMasFrac <= 1.0
-assert            | warning | Variable violating min/max constraint: 0.0 <= MatStm2.liqPhasMasFrac <= 1.0, has value: 1
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm2.totMolFlo[3] >= 0.0
-assert            | warning | Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[3], has value: -2.22045e-014
-LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
-LOG_SUCCESS       | info    | The simulation finished successfully.
+gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Mixer1 -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=6 -DOMC_NUM_NONLINEAR_SYSTEMS=6 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Mixer1.o Mixer1.c
+gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Mixer1 -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=6 -DOMC_NUM_NONLINEAR_SYSTEMS=6 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Mixer1_functions.o Mixer1_functions.c
+gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Mixer1 -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=6 -DOMC_NUM_NONLINEAR_SYSTEMS=6 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Mixer1_records.o Mixer1_records.c
+gcc  -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/OpenModelica1.13.264bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=Mixer1 -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=6 -DOMC_NUM_NONLINEAR_SYSTEMS=6 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o Mixer1_01exo.o Mixer1_01exo.c
+/usr/bin/sh: gcc: command not found
+/usr/bin/sh: gcc: command not found
+/usr/bin/sh: gcc: command not found
+/usr/bin/sh: gcc: command not found
+<builtin>: recipe for target 'Mixer1_01exo.o' failed
+mingw32-make: *** [Mixer1_01exo.o] Error 127
+mingw32-make: *** Waiting for unfinished jobs....
+<builtin>: recipe for target 'Mixer1_functions.o' failed
+mingw32-make: *** [Mixer1_functions.o] Error 127
+<builtin>: recipe for target 'Mixer1.o' failed
+mingw32-make: *** [Mixer1.o] Error 127
+<builtin>: recipe for target 'Mixer1_records.o' failed
+mingw32-make: *** [Mixer1_records.o] Error 127
+RESULT: 2 

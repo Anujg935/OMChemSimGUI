@@ -23,6 +23,9 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
         <string>Tab 1</string>
@@ -241,7 +244,7 @@
           <x>0</x>
           <y>0</y>
           <width>227</width>
-          <height>794</height>
+          <height>824</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -490,12 +493,12 @@
           <widget class="QPushButton" name="pushButton_14">
            <property name="minimumSize">
             <size>
-             <width>0</width>
-             <height>20</height>
+             <width>30</width>
+             <height>50</height>
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>nameListDummy</string>
            </property>
           </widget>
          </item>

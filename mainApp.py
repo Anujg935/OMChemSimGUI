@@ -54,6 +54,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton_8.clicked.connect(self.selectCompounds)
         self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
         self.pushButton_9.clicked.connect(partial(self.component,'Flash'))
+        self.pushButton_14.clicked.connect(self.deleteComponent)
         self.pushButton_25.clicked.connect(partial(self.component,'Valve'))
         self.pushButton_12.clicked.connect(partial(self.component,'Cooler'))
         self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
@@ -61,10 +62,7 @@ class MainApp(QMainWindow,ui):
         self.comp.show()
     def generatef(self,mode):
         try:
-
             self.tabWidget.setCurrentIndex(1)
-            #self.Container.simulate()
-
             self.Container.simulate(mode)
         except Exception as e:
             print(e)
@@ -86,7 +84,10 @@ class MainApp(QMainWindow,ui):
         self.zoomcount +=1
     
     def deleteComponent(self):
-        pass    
+        nameslist=[]
+        for i in self.Container.unitOp:
+            nameslist.append(i.name)
+        print("UnitOp name: ",nameslist)
     def component(self,conntype):
         try:
             box=None

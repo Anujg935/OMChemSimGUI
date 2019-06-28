@@ -1,32 +1,32 @@
 model Mixer1
-parameter Simulator.Files.Chemsep_Database.Water Water; 
 parameter Simulator.Files.Chemsep_Database.Ethanol Ethanol; 
-Simulator.Unit_Operations.Mixer Mixer1(NOC = 2,comp = {Water, Ethanol},outPress = "Inlet_Average",NI=2);
+parameter Simulator.Files.Chemsep_Database.Water Water; 
+Simulator.Unit_Operations.Mixer Mixer1(NOC = 2,comp = {Ethanol, Water},outPress = "Inlet_Average",NI=2);
 model ms1
 extends Simulator.Streams.Material_Stream;
 extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
 end ms1;
-ms1 MatStm1(NOC = 2,comp = {Water, Ethanol});
+ms1 MatStm1(NOC = 2,comp = {Ethanol, Water});
 model ms3
 extends Simulator.Streams.Material_Stream;
 extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
 end ms3;
-ms3 MatStm3(NOC = 2,comp = {Water, Ethanol});
+ms3 MatStm3(NOC = 2,comp = {Ethanol, Water});
 model ms2
 extends Simulator.Streams.Material_Stream;
 extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
 end ms2;
-ms2 MatStm2(NOC = 2,comp = {Water, Ethanol});
+ms2 MatStm2(NOC = 2,comp = {Ethanol, Water});
 equation
 connect(MatStm3.outlet,Mixer1.inlet[1]);
 connect(MatStm2.outlet,Mixer1.inlet[2]);
 connect(Mixer1.outlet,MatStm1.inlet);
-MatStm3.P = 101325;
+MatStm3.P = 101324;
 MatStm3.T = 300;
-MatStm3.compMolFrac[1,:] = {0.6, 0.4};
+MatStm3.compMolFrac[1,:] = {0.9, 0.1};
 MatStm3.totMolFlo[1] = 100;
-MatStm2.P = 101325;
-MatStm2.T = 330;
-MatStm2.compMolFrac[1,:] = {0.4, 0.6};
+MatStm2.P = 101324;
+MatStm2.T = 320;
+MatStm2.compMolFrac[1,:] = {0.9, 0.1};
 MatStm2.totMolFlo[1] = 100;
 end Mixer1;
