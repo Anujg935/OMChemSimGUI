@@ -141,7 +141,7 @@ class Flowsheet():
 		 				#resultval = str(omc.sendExpression("val("+unit.name+ "." + value + ", 0.5)"))
 						print(resultval)
 						unit[0].Prop[key] = resultval
-				print(unit[0].Prop)
+				#print(unit[0].Prop)
 			# 		else:
 			# 			for v in value:
 			# 				propertyname = unit.name + '.' + v

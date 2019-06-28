@@ -34,6 +34,7 @@ class MainApp(QMainWindow,ui):
         self.setupUi(self)
         style = open('light.css','r')
         style = style.read()
+        self.nameType = None
         self.zoomcount = 0
         self.Container = Container()
         self.setStyleSheet(style)
@@ -58,12 +59,47 @@ class MainApp(QMainWindow,ui):
         self.pushButton_25.clicked.connect(partial(self.component,'Valve'))
         self.pushButton_12.clicked.connect(partial(self.component,'Cooler'))
         self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
+        self.pushButton_3.clicked.connect(self.resultTree)
     def selectCompounds(self):
         self.comp.show()
+
+    def resultsCategory(self,name):
+        try:
+            result=self.Container.result
+            obj = self.Container.fetchObject(name)
+            self.tableWidget.setRowCount(0);
+            for key, value in obj.Prop.items():
+                propertyname = name + '.' + key
+                if propertyname in result[0]:
+                    ind = result[0].index(propertyname)
+                    resultval = str(result[-1][ind])
+                    #stm.Prop[key] = resultval
+                    print("######Resultsfetch####",key,resultval)
+                    rowPosition = self.tableWidget.rowCount()
+                    self.tableWidget.insertRow(rowPosition)
+                    self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(key)))
+                    self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(resultval)))
+        except Exception as e:
+            print(e)
+
+
+    def resultTree(self):
+        type = self.nameType[str(self.comboBox.currentText())]
+        self.resultsCategory(self.comboBox.currentText())
+    def results(self):
+        self.nameType={}
+        for i in self.Container.unitOp:
+            #nameslist.append(i.name)
+            self.nameType[i.name] = i.type
+            self.comboBox.addItem(str(i.name))
+
     def generatef(self,mode):
         try:
             self.tabWidget.setCurrentIndex(1)
             self.Container.simulate(mode)
+            pix = QPixmap(self.graphicsView.grab())
+            self.label_8.setPixmap(pix.scaled(self.label_8.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
+            self.results()
         except Exception as e:
             print(e)
     def zoomReset(self):
@@ -84,10 +120,8 @@ class MainApp(QMainWindow,ui):
         self.zoomcount +=1
     
     def deleteComponent(self):
-        nameslist=[]
-        for i in self.Container.unitOp:
-            nameslist.append(i.name)
-        print("UnitOp name: ",nameslist)
+        pix =QPixmap(self.graphicsView.grab()) 
+        crop.save("imgghasds.png")
     def component(self,conntype):
         try:
             box=None

@@ -14,6 +14,7 @@ class Container():
         self.op=defaultdict(list)
         self.ip=defaultdict(list)
         self.opl=[]
+        self.result=[]
 
     def addUnitOp(self,obj):
         if(obj in self.unitOp):
@@ -21,6 +22,10 @@ class Container():
         else:
             self.unitOp.append(obj)
 
+    def fetchObject(self,name):
+        for i in self.unitOp:
+            if(i.name==name):
+                return i
     def addCompounds(self,comp):
         self.compounds = comp
 
@@ -70,11 +75,12 @@ class Container():
                 f.add_UnitOpn(i,0)
         print("############$Stdout$############",f.stdout)
         print("###########$ResData$############",f.resdata)
-   
+
         if mode=='SM':
             f.simulateSM()
         elif mode=='EQN':
             f.simulateEQN()
+            self.result=f.resdata
 
 def flatlist(lst):
     flat_list=[]
