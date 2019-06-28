@@ -327,14 +327,14 @@ class Flowsheet():
 					self.data.append(inpstms.OM_Flowsheet_Eqn(self.compounds,'SM'))
 
 				# os.chdir(self.sim_dir_path)
-				unitmofile = os.path.join(self.sim_dir_path,unitop[0].name+'.mo')
+				unitmofile = os.path.join(self.sim_dir_path,unitop[0].name+"SEQ"+'.mo')
 
 				with open(unitmofile,'w') as unitFile:
 					for d in self.data:
 						unitFile.write(d)
 					unitFile.write('end '+unitop[0].name+"SEQ"+';\n')
 				
-				unitmosfile = os.path.join(self.sim_dir_path,unitop[0].name+'.mos')
+				unitmosfile = os.path.join(self.sim_dir_path,unitop[0].name+"SEQ"+'.mos')
 				with open(unitmosfile, 'w') as mosFile:
 					mosFile.write('loadModel(Modelica);\n')
 					mosFile.write("loadFile(\"Simulator.mo\");\n")
