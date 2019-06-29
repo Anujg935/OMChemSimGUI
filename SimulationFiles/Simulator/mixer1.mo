@@ -1,32 +1,52 @@
 model mixer1
-parameter Simulator.Files.Chemsep_Database.Water Water; 
 parameter Simulator.Files.Chemsep_Database.Ethanol Ethanol; 
-Simulator.Unit_Operations.Mixer Mixer1(NOC = 2,comp = {Water, Ethanol},outPress = "Inlet_Average",NI=2);
+parameter Simulator.Files.Chemsep_Database.Water Water; 
+Simulator.Unit_Operations.Mixer Mixer1(NOC = 2,comp = {Ethanol, Water},outPress = "Inlet_Average",NI=4);
+model ms1
+extends Simulator.Streams.Material_Stream;
+extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
+end ms1;
+ms1 MatStm1(NOC = 2,comp = {Ethanol, Water});
 model ms2
 extends Simulator.Streams.Material_Stream;
 extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
 end ms2;
-ms2 MatStm2(NOC = 2,comp = {Water, Ethanol});
+ms2 MatStm2(NOC = 2,comp = {Ethanol, Water});
 model ms3
 extends Simulator.Streams.Material_Stream;
 extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
 end ms3;
-ms3 MatStm3(NOC = 2,comp = {Water, Ethanol});
-model ms4
+ms3 MatStm3(NOC = 2,comp = {Ethanol, Water});
+model ms2
 extends Simulator.Streams.Material_Stream;
 extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
-end ms4;
-ms4 MatStm4(NOC = 2,comp = {Water, Ethanol});
+end ms2;
+ms2 MatStm2(NOC = 2,comp = {Ethanol, Water});
+model ms3
+extends Simulator.Streams.Material_Stream;
+extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
+end ms3;
+ms3 MatStm3(NOC = 2,comp = {Ethanol, Water});
 equation
-connect(MatStm3.outlet,Mixer1.inlet[1]);
-connect(MatStm4.outlet,Mixer1.inlet[2]);
-connect(Mixer1.outlet,MatStm2.inlet);
-MatStm3.P = 101312;
-MatStm3.T = 321;
-MatStm3.compMolFrac[1,:] = {0.9, 0.1};
+connect(MatStm2.outlet,Mixer1.inlet[1]);
+connect(MatStm3.outlet,Mixer1.inlet[2]);
+connect(MatStm2.outlet,Mixer1.inlet[3]);
+connect(MatStm3.outlet,Mixer1.inlet[4]);
+connect(Mixer1.outlet,MatStm1.inlet);
+MatStm2.P = 101325;
+MatStm2.T = 310;
+MatStm2.compMolFrac[1,:] = {0.2, 0.8};
+MatStm2.totMolFlo[1] = 100;
+MatStm3.P = 101325;
+MatStm3.T = 300;
+MatStm3.compMolFrac[1,:] = {0.6, 0.4};
 MatStm3.totMolFlo[1] = 100;
-MatStm4.P = 101321;
-MatStm4.T = 340;
-MatStm4.compMolFrac[1,:] = {0.9, 0.1};
-MatStm4.totMolFlo[1] = 100;
+MatStm2.P = 101325;
+MatStm2.T = 310;
+MatStm2.compMolFrac[1,:] = {0.2, 0.8};
+MatStm2.totMolFlo[1] = 100;
+MatStm3.P = 101325;
+MatStm3.T = 300;
+MatStm3.compMolFrac[1,:] = {0.6, 0.4};
+MatStm3.totMolFlo[1] = 100;
 end mixer1;

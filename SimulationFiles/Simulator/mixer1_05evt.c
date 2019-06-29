@@ -13,8 +13,8 @@ void mixer1_function_initSample(DATA *data, threadData_t *threadData)
 
 const char *mixer1_zeroCrossingDescription(int i, int **out_EquationIndexes)
 {
-  static const char *res[] = {"101316.5 >= MatStm2.Pbubl",
-  "101316.5 >= MatStm2.Pdew"};
+  static const char *res[] = {"101325.0 >= MatStm1.Pbubl",
+  "101325.0 >= MatStm1.Pdew"};
   static const int occurEqs0[] = {1,-1};
   static const int occurEqs1[] = {1,-1};
   static const int *occurEqs[] = {occurEqs0,occurEqs1};
@@ -67,15 +67,15 @@ int mixer1_function_ZeroCrossingsEquations(DATA *data, threadData_t *threadData)
 int mixer1_function_ZeroCrossings(DATA *data, threadData_t *threadData, double *gout)
 {
   TRACE_PUSH
-  modelica_boolean tmp36;
-  modelica_boolean tmp37;
+  modelica_boolean tmp0;
+  modelica_boolean tmp1;
   
   data->simulationInfo->callStatistics.functionZeroCrossings++;
   
-  tmp36 = GreaterEqZC(101316.5, data->localData[0]->realVars[11] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
-  gout[0] = (tmp36) ? 1 : -1;
-  tmp37 = GreaterEqZC(101316.5, data->localData[0]->realVars[12] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
-  gout[1] = (tmp37) ? 1 : -1;
+  tmp0 = GreaterEqZC(101325.0, data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */, data->simulationInfo->storedRelations[0]);
+  gout[0] = (tmp0) ? 1 : -1;
+  tmp1 = GreaterEqZC(101325.0, data->localData[0]->realVars[12] /* MatStm1.Pdew variable */, data->simulationInfo->storedRelations[1]);
+  gout[1] = (tmp1) ? 1 : -1;
   
   TRACE_POP
   return 0;
@@ -83,25 +83,25 @@ int mixer1_function_ZeroCrossings(DATA *data, threadData_t *threadData, double *
 
 const char *mixer1_relationDescription(int i)
 {
-  const char *res[] = {"101316.5 >= MatStm2.Pbubl",
-  "101316.5 >= MatStm2.Pdew"};
+  const char *res[] = {"101325.0 >= MatStm1.Pbubl",
+  "101325.0 >= MatStm1.Pdew"};
   return res[i];
 }
 
 int mixer1_function_updateRelations(DATA *data, threadData_t *threadData, int evalforZeroCross)
 {
   TRACE_PUSH
-  modelica_boolean tmp38;
-  modelica_boolean tmp39;
+  modelica_boolean tmp2;
+  modelica_boolean tmp3;
   
   if(evalforZeroCross) {
-    tmp38 = GreaterEqZC(101316.5, data->localData[0]->realVars[11] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
-    data->simulationInfo->relations[0] = tmp38;
-    tmp39 = GreaterEqZC(101316.5, data->localData[0]->realVars[12] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
-    data->simulationInfo->relations[1] = tmp39;
+    tmp2 = GreaterEqZC(101325.0, data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */, data->simulationInfo->storedRelations[0]);
+    data->simulationInfo->relations[0] = tmp2;
+    tmp3 = GreaterEqZC(101325.0, data->localData[0]->realVars[12] /* MatStm1.Pdew variable */, data->simulationInfo->storedRelations[1]);
+    data->simulationInfo->relations[1] = tmp3;
   } else {
-    data->simulationInfo->relations[0] = (101316.5 >= data->localData[0]->realVars[11] /* MatStm2.Pbubl variable */);
-    data->simulationInfo->relations[1] = (101316.5 >= data->localData[0]->realVars[12] /* MatStm2.Pdew variable */);
+    data->simulationInfo->relations[0] = (101325.0 >= data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */);
+    data->simulationInfo->relations[1] = (101325.0 >= data->localData[0]->realVars[12] /* MatStm1.Pdew variable */);
   }
   
   TRACE_POP

@@ -62,22 +62,43 @@ class MainApp(QMainWindow,ui):
     def selectCompounds(self):
         self.comp.show()
 
+    def abriveation(self,key):
+        d ={"P":"Pressure","T":"Temperature",
+        "liqPhasMolFrac":"Liquid Phase Mol Fraction","liqPhasMasFrac":"Liquid Pase Mass Fraction",
+        "vapPhasMolFrac":"Vapour Phase Mol Fracrion","vapPhasMasFrac":"Vapour Phase Mass Fracrion",
+        "totMolFlo[1]":"Molar Flow","totMasFlo[1]":"Mass Flow","MW[1]":"Mixer Phase Molecular Weight",
+        "MW[2]":"Liquid Phase Molecular Weight","MW[3]":"Vapour Phase Molecular Weight",
+        "phasMolSpHeat[1]":"Mixer Phase molar Heat Capacity","phasMolSpHeat[2]":"Liquid Phase molar Heat Capacity",
+        "phasMolSpHeat[3]":"Vapour Phase molar Heat Capacity","phasMolEnth[1]":"Mixer Phase Molar Enthalpy",
+        "phasMolEnth[2]":"Liquid Phase Molar Enthalpy","phasMolEnth[3]":"Vapour Phase Molar Enthalpy",
+        "phasMolEntr[1]":"Mixer Phase Molar Entropy","phasMolEntr[2]":"Liquid Phase Molar Entropy",
+        "phasMolEntr[3]":"Vapour Phase Molar Entropy","totMolFlo[2]":"Liquid Phase Molar Flow Rate",
+        "totMolFlo[3]":"Vapour Phase Molar Flow Rate","totMasFlo[2]":"Liquid Phase Mass Flow Rate",
+        "totMolFlo[3]":"Liquid Phase Mass Flow Rate"
+        } 
+
+        if key in d.keys():
+            return d[key]
+        else:
+            return key
+
     def resultsCategory(self,name):
         try:
             result=self.Container.result
             obj = self.Container.fetchObject(name)
-            self.tableWidget.setRowCount(0);
-            for key, value in obj.Prop.items():
-                propertyname = name + '.' + key
-                if propertyname in result[0]:
-                    ind = result[0].index(propertyname)
-                    resultval = str(result[-1][ind])
-                    #stm.Prop[key] = resultval
-                    print("######Resultsfetch####",key,resultval)
-                    rowPosition = self.tableWidget.rowCount()
-                    self.tableWidget.insertRow(rowPosition)
-                    self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(key)))
-                    self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(resultval)))
+            if obj.type =="MatStm":
+                self.tableWidget.setRowCount(0);
+                for key, value in obj.Prop.items():
+                    propertyname = name + '.' + key
+                    if propertyname in result[0]:
+                        ind = result[0].index(propertyname)
+                        resultval = str(result[-1][ind])
+                        #stm.Prop[key] = resultval
+                        print("######Resultsfetch####",key,resultval)
+                        rowPosition = self.tableWidget.rowCount()
+                        self.tableWidget.insertRow(rowPosition)
+                        self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(self.abriveation(key))))
+                        self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(resultval)))
         except Exception as e:
             print(e)
 

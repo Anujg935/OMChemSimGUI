@@ -4,7 +4,8 @@ from PyQt5.QtGui import *
 from PyQt5.uic import loadUiType
 import pandas as pd
 from functools import partial
-
+from component_selector import *
+from collections import defaultdict
 ui_dialog,_ = loadUiType('dockWidget.ui')
 
 
@@ -19,6 +20,7 @@ class dockWidget(QDockWidget,ui_dialog):
         self.type = comptype
         self.inputdict = None 
         print("input_dict",self.inputdict)
+        self.compmolfraclist = []
         self.modes()
         self.pushButton_2.clicked.connect(self.modeSelection)
         #self.inputparamslist()
@@ -46,23 +48,34 @@ class dockWidget(QDockWidget,ui_dialog):
 
     def inputparamslist(self):
         c=0
-        for i in self.inputdict:
-            if(i=="thermoPackage"):
-                print("thermo1")
-                combo = QComboBox()
-                self.lines = [line.rstrip('\n') for line in open('thermopackage.txt')]
-                print("thermo2")
-                for j in self.lines:
-                    combo.addItem(str(j))
-                self.formLayout.addRow(QLabel(i+":"),combo )
-                self.inputdict[i] = combo
-                print("thermo")
-            else:
-                print("elseloopo")
-                l = QLineEdit()                                                      
-                self.formLayout.addRow(QLabel(i+":"),l )
-                self.inputdict[i] = l
-
+        try:
+            for i in self.inputdict:
+                if(i=="thermoPackage"):
+                    print("thermo1")
+                    combo = QComboBox()
+                    self.lines = [line.rstrip('\n') for line in open('thermopackage.txt')]
+                    print("thermo2")
+                    for j in self.lines:
+                        combo.addItem(str(j))
+                    self.formLayout.addRow(QLabel(i+":"),combo )
+                    self.inputdict[i] = combo
+                    print("thermo")
+                elif(i=="CompMolFrac"):
+                    print("cmfnjkmnjkmnjkm")
+                    noc = len(compond_selected)
+                    print(noc)
+                    for j in range(noc):
+                        l = QLineEdit()    
+                        self.inputdict[i] = "compmolfrac"                                                  
+                        self.formLayout.addRow(QLabel(str(compond_selected[j])+" Fraction"+":"),l )
+                        self.compmolfraclist.append(l)
+                else:
+                    print("elseloopo")
+                    l = QLineEdit()                                                      
+                    self.formLayout.addRow(QLabel(i+":"),l )
+                    self.inputdict[i] = l
+        except Exception as e:
+            print(e)
     def param(self):
         try:
             if all(self.inputdict.values()):
@@ -70,6 +83,12 @@ class dockWidget(QDockWidget,ui_dialog):
                     if(i=="thermoPackage"):
                         print("paramthermo")
                         self.dict[i] = self.inputdict[i].currentText()
+                    elif(i =="CompMolFrac"):
+                        l=[]
+                        for mol_frac in self.compmolfraclist:
+                            l.append(mol_frac.text())
+                        
+                        self.dict[i] = ",".join(l)
                     else:
                         print("paramelse")
                         self.dict[i] = self.inputdict[i].text()

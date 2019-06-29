@@ -1,7 +1,7 @@
 from OMPython import OMCSession
 import json
 import sys
-
+from collections import defaultdict
 
 class MatStm():
     def __init__(self,name =None,CompNames = [],Temperature=300,Pressure=101325,VapPhasMolFrac=None,VapPhasMasFrac=None,LiqPhasMolFrac=None,LiqPhasMasFrac=None,CompMolFrac = [1.0], CompMasFrac = [], MolFlow=100, MasFlow=None,**kwargs):
