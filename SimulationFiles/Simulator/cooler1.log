@@ -2,8 +2,5 @@ stdout            | warning | While solving non-linear system an assertion faile
 |                 | |       | | The non-linear solver tries to solve the problem that could take some time.
 |                 | |       | | It could help to provide better start-values for the iteration variables.
 |                 | |       | | For more information simulate with -lv LOG_NLS_V
-assert            | warning | The following assertion has been violated at time 0.000000
-|                 | |       | MatStm2.totMolFlo[3] >= 0.0
-assert            | warning | Variable violating min constraint: 0.0 <= MatStm2.totMolFlo[3], has value: -9.94428e-015
 LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
 LOG_SUCCESS       | info    | The simulation finished successfully.

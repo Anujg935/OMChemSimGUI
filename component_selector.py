@@ -30,6 +30,7 @@ class componentSelector(QDialog,ui_dialog):
         self.pushButton.clicked.connect(self.accept)
         self.pushButton_2.clicked.connect(self.reject)
         self.pushButton_3.clicked.connect(self.removeItems)
+
     def compoundSelection(self):
         comp = self.lineEdit.text()
         thermo_package.append(str(self.comboBox.currentText()))

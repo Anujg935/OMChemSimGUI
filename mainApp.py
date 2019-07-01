@@ -519,6 +519,8 @@ class NodeItem(QtWidgets.QGraphicsItem):
             print(e)
     def mouseDoubleClickEvent(self, event):
         try:
+            
+            self.setPos(event.scenePos().x()-250,event.scenePos().y())
             self.dockWidget.show()
         except Exception as e:
             print(e)

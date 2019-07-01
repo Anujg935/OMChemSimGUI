@@ -75,9 +75,9 @@ int cooler1_function_ZeroCrossings(DATA *data, threadData_t *threadData, double 
   
   data->simulationInfo->callStatistics.functionZeroCrossings++;
   
-  tmp0 = GreaterEqZC(data->localData[0]->realVars[7] /* Cooler1.outP variable */, data->localData[0]->realVars[106] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
+  tmp0 = GreaterEqZC(data->localData[0]->realVars[7] /* Cooler1.outP variable */, data->localData[0]->realVars[16] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
   gout[0] = (tmp0) ? 1 : -1;
-  tmp1 = GreaterEqZC(data->localData[0]->realVars[7] /* Cooler1.outP variable */, data->localData[0]->realVars[107] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
+  tmp1 = GreaterEqZC(data->localData[0]->realVars[7] /* Cooler1.outP variable */, data->localData[0]->realVars[17] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
   gout[1] = (tmp1) ? 1 : -1;
   
   TRACE_POP
@@ -98,13 +98,13 @@ int cooler1_function_updateRelations(DATA *data, threadData_t *threadData, int e
   modelica_boolean tmp3;
   
   if(evalforZeroCross) {
-    tmp2 = GreaterEqZC(data->localData[0]->realVars[7] /* Cooler1.outP variable */, data->localData[0]->realVars[106] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
+    tmp2 = GreaterEqZC(data->localData[0]->realVars[7] /* Cooler1.outP variable */, data->localData[0]->realVars[16] /* MatStm2.Pbubl variable */, data->simulationInfo->storedRelations[0]);
     data->simulationInfo->relations[0] = tmp2;
-    tmp3 = GreaterEqZC(data->localData[0]->realVars[7] /* Cooler1.outP variable */, data->localData[0]->realVars[107] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
+    tmp3 = GreaterEqZC(data->localData[0]->realVars[7] /* Cooler1.outP variable */, data->localData[0]->realVars[17] /* MatStm2.Pdew variable */, data->simulationInfo->storedRelations[1]);
     data->simulationInfo->relations[1] = tmp3;
   } else {
-    data->simulationInfo->relations[0] = (data->localData[0]->realVars[7] /* Cooler1.outP variable */ >= data->localData[0]->realVars[106] /* MatStm2.Pbubl variable */);
-    data->simulationInfo->relations[1] = (data->localData[0]->realVars[7] /* Cooler1.outP variable */ >= data->localData[0]->realVars[107] /* MatStm2.Pdew variable */);
+    data->simulationInfo->relations[0] = (data->localData[0]->realVars[7] /* Cooler1.outP variable */ >= data->localData[0]->realVars[16] /* MatStm2.Pbubl variable */);
+    data->simulationInfo->relations[1] = (data->localData[0]->realVars[7] /* Cooler1.outP variable */ >= data->localData[0]->realVars[17] /* MatStm2.Pdew variable */);
   }
   
   TRACE_POP

@@ -78,6 +78,7 @@ class Container():
 
         if mode=='SM':
             f.simulateSM(self.ip,self.op)
+            self.result=f.resdata
         elif mode=='EQN':
             f.simulateEQN()
             self.result=f.resdata

@@ -3,6 +3,7 @@ import os
 import csv
 from subprocess import Popen, PIPE
 #import subprocess
+import pandas as pd
 
 class Flowsheet():
 	def __init__(self):
@@ -269,6 +270,7 @@ class Flowsheet():
 		self.data = []
 		self.resdata = []
 		self.unit = []
+		self.csvlist = []
 		print("op list",op)
 		print("ip list",ip)
 		for i in ip:
@@ -389,6 +391,8 @@ class Flowsheet():
 				print('Simulating '+unitop.name.lower()+'...')
 				csvpath = os.path.join(self.sim_dir_path,unitop.name.lower()+'_res.csv')
 				
+				self.csvlist.append(csvpath)
+				
 				with open(csvpath,'r') as resultFile:
 					csvreader = csv.reader(resultFile,delimiter=',')
 					for row in csvreader:
@@ -433,6 +437,26 @@ class Flowsheet():
 								resultval = str(self.resdata[-1][ind])
 								outstms.Prop[key] = resultval
 								print("output key:",key,"value:",outstms.Prop[key])
+
+		
+		self.dataframes = [pd.read_csv(i) for i in self.csvlist]
+		os.chdir(self.sim_dir_path)
+		dffinal = pd.concat(self.dataframes,axis=1)
+		dffinal.to_csv('asdfdsasd.csv',index=False)
+		print("dffinal shape :",dffinal.shape)
+		print("dffinal",dffinal)
+		self.resdata.clear()
+		with open(os.path.join(self.sim_dir_path+'/asdfdsasd.csv'),'r') as resultFile:
+					csvreader = csv.reader(resultFile,delimiter=',')
+					for row in csvreader:
+						self.resdata.append(row)
+		
+		print("***************************######################################************************")
+		print(self.resdata)
+		print("***************************######################################************************")
+
+
+				
 
 					
 				

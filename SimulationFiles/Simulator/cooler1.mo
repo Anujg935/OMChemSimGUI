@@ -9,18 +9,18 @@ extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
 end ms2;
 ms2 MatStm2(NOC = 2,comp = {Water, Ethanol});
 Simulator.Streams.Energy_Stream EngStm;
-model ms1
+model ms3
 extends Simulator.Streams.Material_Stream;
 extends Simulator.Files.Thermodynamic_Packages.Raoults_Law;
-end ms1;
-ms1 MatStm1(NOC = 2,comp = {Water, Ethanol});
+end ms3;
+ms3 MatStm3(NOC = 2,comp = {Water, Ethanol});
 equation
-connect(MatStm1.outlet,Cooler1.inlet);
+connect(MatStm3.outlet,Cooler1.inlet);
 connect(Cooler1.outlet,MatStm2.inlet);
 connect(EngStm.outlet,Cooler1.energy);
 Cooler1.heatRem=20000;
-MatStm1.P = 101325;
-MatStm1.T = 310;
-MatStm1.compMolFrac[1,:] = {0.6, 0.4};
-MatStm1.totMolFlo[1] = 100;
+MatStm3.P = 101325;
+MatStm3.T = 315;
+MatStm3.compMolFrac[1,:] = {0.9, 0.1};
+MatStm3.totMolFlo[1] = 100;
 end cooler1;
