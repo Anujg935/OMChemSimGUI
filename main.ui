@@ -22,305 +22,72 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QTabWidget" name="tabWidget">
-      <property name="currentIndex">
-       <number>0</number>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
-      <widget class="QWidget" name="tab">
-       <attribute name="title">
-        <string>Flowsheet Designing</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QPushButton" name="pushButton_8">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>Select Compounds</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_2">
-              <property name="text">
-               <string>Simulate SEQ</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_6">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>Simulate EQN</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>../ChemsimGui/icons/simulate.svg</normaloff>../ChemsimGui/icons/simulate.svg</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QGraphicsView" name="graphicsView">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="mouseTracking">
-             <bool>true</bool>
-            </property>
-            <property name="acceptDrops">
-             <bool>true</bool>
-            </property>
-            <property name="autoFillBackground">
-             <bool>true</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-image: radial-gradient(circle, #dab3c9, #d1b6ce, #c9b9d0, #c1bbd1, #bcbdcf, #b3b9c8, #abb5c1, #a4b0b9, #97a5ab, #8b9a9e, #7f8e90, #758382);</string>
-            </property>
-            <property name="verticalScrollBarPolicy">
-             <enum>Qt::ScrollBarAsNeeded</enum>
-            </property>
-            <property name="horizontalScrollBarPolicy">
-             <enum>Qt::ScrollBarAsNeeded</enum>
-            </property>
-            <property name="backgroundBrush">
-             <brush brushstyle="Dense7Pattern">
-              <color alpha="255">
-               <red>170</red>
-               <green>170</green>
-               <blue>127</blue>
-              </color>
-             </brush>
-            </property>
-            <property name="foregroundBrush">
-             <brush brushstyle="Dense7Pattern">
-              <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </property>
-            <property name="sceneRect">
-             <rectf>
-              <x>0.000000000000000</x>
-              <y>0.000000000000000</y>
-              <width>5000.000000000000000</width>
-              <height>5000.000000000000000</height>
-             </rectf>
-            </property>
-            <property name="dragMode">
-             <enum>QGraphicsView::RubberBandDrag</enum>
-            </property>
-            <property name="transformationAnchor">
-             <enum>QGraphicsView::AnchorUnderMouse</enum>
-            </property>
-            <property name="resizeAnchor">
-             <enum>QGraphicsView::AnchorUnderMouse</enum>
-            </property>
-            <property name="viewportUpdateMode">
-             <enum>QGraphicsView::FullViewportUpdate</enum>
-            </property>
-            <property name="optimizationFlags">
-             <set>QGraphicsView::DontClipPainter</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_2">
-       <attribute name="title">
-        <string>Simulation Results</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_6">
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item>
-           <widget class="QLabel" name="label_7">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>30</pointsize>
-              <weight>75</weight>
-              <italic>false</italic>
-              <bold>true</bold>
-              <underline>false</underline>
-             </font>
-            </property>
-            <property name="text">
-             <string>Output Results</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <widget class="QLabel" name="label_6">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Select Component :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QComboBox" name="comboBox">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>100</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>100</width>
-                <height>16777215</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_3">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Submit</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <widget class="QTableWidget" name="tableWidget">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>300</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="autoFillBackground">
-               <bool>true</bool>
-              </property>
-              <property name="columnCount">
-               <number>2</number>
-              </property>
-              <column>
-               <property name="text">
-                <string>Property</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Value</string>
-               </property>
-              </column>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_8">
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-              <property name="scaledContents">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: radial-gradient(circle, #dab3c9, #d1b6ce, #c9b9d0, #c1bbd1, #bcbdcf, #b3b9c8, #abb5c1, #a4b0b9, #97a5ab, #8b9a9e, #7f8e90, #758382);</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="backgroundBrush">
+       <brush brushstyle="Dense7Pattern">
+        <color alpha="255">
+         <red>170</red>
+         <green>170</green>
+         <blue>127</blue>
+        </color>
+       </brush>
+      </property>
+      <property name="foregroundBrush">
+       <brush brushstyle="Dense7Pattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </property>
+      <property name="sceneRect">
+       <rectf>
+        <x>0.000000000000000</x>
+        <y>0.000000000000000</y>
+        <width>5000.000000000000000</width>
+        <height>5000.000000000000000</height>
+       </rectf>
+      </property>
+      <property name="dragMode">
+       <enum>QGraphicsView::RubberBandDrag</enum>
+      </property>
+      <property name="transformationAnchor">
+       <enum>QGraphicsView::AnchorUnderMouse</enum>
+      </property>
+      <property name="resizeAnchor">
+       <enum>QGraphicsView::AnchorUnderMouse</enum>
+      </property>
+      <property name="viewportUpdateMode">
+       <enum>QGraphicsView::FullViewportUpdate</enum>
+      </property>
+      <property name="optimizationFlags">
+       <set>QGraphicsView::DontClipPainter</set>
+      </property>
      </widget>
     </item>
    </layout>
@@ -352,9 +119,24 @@
     <addaction name="actionZoomOut"/>
     <addaction name="actionResetZoom"/>
    </widget>
+   <widget class="QMenu" name="menuSimulation">
+    <property name="title">
+     <string>Simulation</string>
+    </property>
+    <addaction name="actionEquation_oriented"/>
+    <addaction name="actionSequential_mode"/>
+   </widget>
+   <widget class="QMenu" name="menuComponds">
+    <property name="title">
+     <string>Compounds</string>
+    </property>
+    <addaction name="actionSelect_compouns"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuView"/>
+   <addaction name="menuSimulation"/>
+   <addaction name="menuComponds"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QDockWidget" name="dockWidget">
@@ -861,6 +643,10 @@
    <addaction name="actionZoomOut"/>
    <addaction name="actionResetZoom"/>
    <addaction name="separator"/>
+   <addaction name="actionEquation_oriented"/>
+   <addaction name="actionSequential_mode"/>
+   <addaction name="separator"/>
+   <addaction name="actionSelect_compouns"/>
   </widget>
   <action name="actionZoomIn">
    <property name="icon">
@@ -887,6 +673,33 @@
    </property>
    <property name="text">
     <string>ResetZoom</string>
+   </property>
+  </action>
+  <action name="actionEquation_oriented">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/simulate.svg</normaloff>icons/simulate.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Equation oriented</string>
+   </property>
+  </action>
+  <action name="actionSequential_mode">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/simulate-equation.svg</normaloff>icons/simulate-equation.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Sequential mode</string>
+   </property>
+  </action>
+  <action name="actionSelect_compouns">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/compoundSelector.png</normaloff>icons/compoundSelector.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select Compounds</string>
    </property>
   </action>
  </widget>

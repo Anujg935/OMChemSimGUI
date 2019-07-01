@@ -77,7 +77,7 @@ class Container():
         print("###########$ResData$############",f.resdata)
 
         if mode=='SM':
-            f.simulateSM()
+            f.simulateSM(self.ip,self.op)
         elif mode=='EQN':
             f.simulateEQN()
             self.result=f.resdata

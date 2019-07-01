@@ -234,19 +234,18 @@ class Flowsheet():
 
 		for unitop in self.UnitOpn:
 			self.data.append(unitop[0].OM_Flowsheet_Init(self.compounds))
-             
 		
 		self.data.append("equation\n")
         
 		for unitop in self.UnitOpn:
-                        if unitop[1]==0:
-                                
-                                if unitop[0].type == 'MatStm':
-                                        self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds,'Eqn'))
-                                else:
-                                        self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds))
-                        else:
-                                pass
+			if unitop[1]==0:
+					
+				if unitop[0].type == 'MatStm':
+					self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds,'Eqn'))
+				else:
+					self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds))
+			else:
+				pass
 		with open(self.Flomo_path, 'w') as txtfile:
 			for d in self.data:
 				txtfile.write(d)
@@ -265,22 +264,51 @@ class Flowsheet():
 	
 
 
-	def simulateSM(self):
+	def simulateSM(self,ip,op):
 		self.sim_method = 'SM'
 		self.data = []
-		for unitop in self.UnitOpn:
+		self.resdata = []
+		self.unit = []
+		print("op list",op)
+		print("ip list",ip)
+		for i in ip:
+			common = ip[i]
+			print("common #############3",common)
+			print("*********** i *********",i)
+			for k,v in op.items():
+				print("Print K",k)
+				if(set(v) & set(common)):
+					print("*****************common matstm***************")
+					if((i in self.unit) and (k in self.unit)):
+						print("both exist")
+						pass
+					elif(i in self.unit):
+						print("output exist")
+						self.unit.insert(self.unit.index(i),k)
+					elif(k in self.unit):
+						print("input exists")
+						self.unit.append(i)
+					else:
+						print("nothing exists")
+						self.unit.append(k)
+						self.unit.append(i)
+			print("##############################33")
+			print(self.unit)
+			print("################################11")	
+				
+		for unitop in self.unit:
 			os.chdir(self.curr_path)
 			self.data = []
-			if unitop[0].type not in ['MatStm','EngStm']:
-				inpstms = unitop[0].InputStms
-				outstms = unitop[0].OutputStms
+			if unitop.type not in ['MatStm','EngStm']:
+				inpstms = unitop.InputStms
+				outstms = unitop.OutputStms
 				
 				try:
 					engstms = unitop.EngStms
 				except:
 					engstms = None
 
-				self.data.append("model "+unitop[0].name.lower()+'\n')
+				self.data.append("model "+unitop.name.lower()+'\n')
 				
 				for c in self.compounds:
 					ucase = c.title()
@@ -288,7 +316,7 @@ class Flowsheet():
 					self.data.append("parameter Simulator.Files.Chemsep_Database." + ucase +' '+ ucase + "; \n")
 				
 				print("##############compounds added")
-				self.data.append(unitop[0].OM_Flowsheet_Init(self.compounds))
+				self.data.append(unitop.OM_Flowsheet_Init(self.compounds))
 				
 				if type(outstms) is list:
 					for stm in outstms:
@@ -308,7 +336,7 @@ class Flowsheet():
 				
 				self.data.append('equation\n')
 				print("##################equation")
-				self.data.append(unitop[0].OM_Flowsheet_Eqn(self.compounds))
+				self.data.append(unitop.OM_Flowsheet_Eqn(self.compounds))
 				'''
 				if type(outstms) is list:
 					for stm in outstms:
@@ -327,28 +355,28 @@ class Flowsheet():
 					self.data.append(inpstms.OM_Flowsheet_Eqn(self.compounds,'SM'))
 
 				# os.chdir(self.sim_dir_path)
-				unitmofile = os.path.join(self.sim_dir_path,unitop[0].name.lower()+'.mo')
+				unitmofile = os.path.join(self.sim_dir_path,unitop.name.lower()+'.mo')
 
 				with open(unitmofile,'w') as unitFile:
 					for d in self.data:
 						unitFile.write(d)
-					unitFile.write('end '+unitop[0].name.lower()+';\n')
+					unitFile.write('end '+unitop.name.lower()+';\n')
 				
-				unitmosfile = os.path.join(self.sim_dir_path,unitop[0].name.lower()+'.mos')
+				unitmosfile = os.path.join(self.sim_dir_path,unitop.name.lower()+'.mos')
 				with open(unitmosfile, 'w') as mosFile:
 					mosFile.write('loadModel(Modelica);\n')
 					mosFile.write("loadFile(\"package.mo\");\n")
 				
-					mosFile.write("loadFile(\""+unitop[0].name.lower()+".mo\");\n")
-					mosFile.write("simulate("+unitop[0].name.lower()+", outputFormat=\"csv\", stopTime=1.0, numberOfIntervals=1);\n")
+					mosFile.write("loadFile(\""+unitop.name.lower()+".mo\");\n")
+					mosFile.write("simulate("+unitop.name.lower()+", outputFormat=\"csv\", stopTime=1.0, numberOfIntervals=1);\n")
 
 				print("Initiating simulation in Sequential Modular Mode")
-				self.resdata = []
+				#self.resdata = []
 				self.omc_path = self.get_omc_path()
 				os.chdir(self.sim_dir_path)
 				#os.system(self.omc_path + ' -s ' + unitop[0].name.lower()+"SEQ"+'.mos')
 				print("SIM directory Path 1 ###",self.sim_dir_path)
-				sim = os.path.join(self.sim_dir_path,unitop[0].name.lower()+'.mos')
+				sim = os.path.join(self.sim_dir_path,unitop.name.lower()+'.mos')
 				process = Popen([self.omc_path, '-s',sim], stdout=PIPE, stderr=PIPE)
 				self.stdout, self.stderr = process.communicate()
 				os.chdir(self.curr_path)
@@ -358,8 +386,8 @@ class Flowsheet():
 				print(self.stdout)
 				print("############### StdErr ################")
 				print(self.stderr)
-				print('Simulating '+unitop[0].name.lower()+'...')
-				csvpath = os.path.join(self.sim_dir_path,unitop[0].name.lower()+'_res.csv')
+				print('Simulating '+unitop.name.lower()+'...')
+				csvpath = os.path.join(self.sim_dir_path,unitop.name.lower()+'_res.csv')
 				
 				with open(csvpath,'r') as resultFile:
 					csvreader = csv.reader(resultFile,delimiter=',')

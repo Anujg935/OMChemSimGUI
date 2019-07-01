@@ -8,7 +8,7 @@ end ms1;
 ms1 MatStm1(NOC = 2,comp = {Water, Ethanol});
 equation
 MatStm1.P = 101325;
-MatStm1.T = 325;
-MatStm1.compMolFrac[1,:] = {0.5, 0.5};
+MatStm1.T = 300;
+MatStm1.compMolFrac[1,:] = {0.6, 0.4};
 MatStm1.totMolFlo[1] = 100;
 end Flowsheet;

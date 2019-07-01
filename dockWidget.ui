@@ -71,6 +71,12 @@
      <property name="text">
       <string>Submit</string>
      </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="page_2">
@@ -146,8 +152,6 @@
       </item>
      </layout>
     </widget>
-    <zorder>horizontalLayoutWidget</zorder>
-    <zorder>label</zorder>
    </widget>
   </widget>
  </widget>

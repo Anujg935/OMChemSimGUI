@@ -27,7 +27,6 @@ class Valve():
         self.OutputStms = OutputStms
 
     def OM_Flowsheet_Init(self, addedcomp):
-        print("######################PressureDrop",self.PressDrop)
         self.OM_data_init = ''
         comp_count = len(addedcomp)
         self.OM_data_init = self.OM_data_init + (
@@ -36,7 +35,6 @@ class Valve():
         comp = str(addedcomp).strip('[').strip(']')
         comp = comp.replace("'", "")
         self.OM_data_init = self.OM_data_init + comp + ("});\n")
-        #self.OM_data_init = self.OM_data_init + '.pressDrop = ' + str(self.PressDrop) + ');\n'
         return self.OM_data_init
 
     def OM_Flowsheet_Eqn(self, addedcomp):
@@ -44,5 +42,6 @@ class Valve():
         
         self.OM_data_eqn = self.OM_data_eqn + ('connect(' + self.InputStms[0].name + '.outlet,' +  self.name + '.inlet' + ');\n')
         self.OM_data_eqn = self.OM_data_eqn + ('connect(' + self.name + '.outlet,' + self.OutputStms[0].name + '.inlet);\n')
+        print("asdfvfdasdsqdfdedfdfv12345678987654321234567898765")
         self.OM_data_eqn = self.OM_data_eqn + (self.name+'.'+self.mode+'='+ self.modeVal + ';\n')
         return self.OM_data_eqn

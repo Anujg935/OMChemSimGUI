@@ -22,6 +22,7 @@ import PyQt5.QtWidgets as QtWidgets
 from component_selector import componentSelector
 from dockWidget import dockWidget
 from pythonGenerator import PythonFileGenerator
+from resDockWidget import resdockWidget
 from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
@@ -32,9 +33,9 @@ class MainApp(QMainWindow,ui):
         
         QMainWindow.__init__(self)
         self.setupUi(self)
-        style = open('light.css','r')
+        style = open('new.css','r')
         style = style.read()
-        self.nameType = None
+        
         self.zoomcount = 0
         self.Container = Container()
         self.setStyleSheet(style)
@@ -48,17 +49,17 @@ class MainApp(QMainWindow,ui):
         self.actionZoomIn.triggered.connect(self.zoomin)
         self.actionZoomOut.triggered.connect(self.zoomout)
         self.actionResetZoom.triggered.connect(self.zoomReset)
-        self.pushButton_2.clicked.connect(partial(self.generatef,'SM'))
-        self.pushButton_6.clicked.connect(partial(self.generatef,'EQN'))
+        self.actionSequential_mode.triggered.connect(partial(self.generatef,'SM'))
+        self.actionEquation_oriented.triggered.connect(partial(self.generatef,'EQN'))
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
         self.pushButton_11.clicked.connect(partial(self.component,'Heater'))
-        self.pushButton_8.clicked.connect(self.selectCompounds)
+        self.actionSelect_compouns.triggered.connect(self.selectCompounds)
         self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
         self.pushButton_9.clicked.connect(partial(self.component,'Flash'))
         self.pushButton_25.clicked.connect(partial(self.component,'Valve'))
         self.pushButton_12.clicked.connect(partial(self.component,'Cooler'))
         self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
-        self.pushButton_3.clicked.connect(self.resultTree)
+        
     def selectCompounds(self):
         self.comp.show()
 
@@ -115,11 +116,15 @@ class MainApp(QMainWindow,ui):
 
     def generatef(self,mode):
         try:
-            self.tabWidget.setCurrentIndex(1)
+            #self.tabWidget.setCurrentIndex(1)
             self.Container.simulate(mode)
-            pix = QPixmap(self.graphicsView.grab())
-            self.label_8.setPixmap(pix.scaled(self.label_8.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)) 
-            self.results()
+            #pix = QPixmap(self.graphicsView.grab())
+            #self.label_8.setPixmap(pix.scaled(self.label_8.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)) 
+            #self.results()
+            self.res = resdockWidget(self.Container)
+            self.addDockWidget(Qt.LeftDockWidgetArea, self.res)
+            self.res.show()
+
         except Exception as e:
             print(e)
     def zoomReset(self):
