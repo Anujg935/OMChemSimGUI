@@ -20,6 +20,7 @@ import PyQt5.QtGui as QtGui
 import PyQt5.QtCore as QtCore
 import PyQt5.QtWidgets as QtWidgets
 from component_selector import componentSelector
+from component_selector import *
 from dockWidget import dockWidget
 from pythonGenerator import PythonFileGenerator
 from resDockWidget import resdockWidget
@@ -48,8 +49,9 @@ class MainApp(QMainWindow,ui):
         self.comp.show()
         #self.showMsgBrowser()
         self.pushButton.clicked.connect(partial(self.component,'MatStm'))
-        self.graphicsView.keyPressEvent=self.delete
+        self.graphicsView.keyPressEvent=self.deleteCall
         self.actionZoomIn.triggered.connect(self.zoomin)
+        self.actionNew_Flowsheet.triggered.connect(self.new)
         self.actionZoomOut.triggered.connect(self.zoomout)
         self.actionResetZoom.triggered.connect(self.zoomReset)
         self.actionSequential_mode.triggered.connect(partial(self.generatef,'SM'))
@@ -62,12 +64,6 @@ class MainApp(QMainWindow,ui):
         self.pushButton_25.clicked.connect(partial(self.component,'Valve'))
         self.pushButton_12.clicked.connect(partial(self.component,'Cooler'))
         self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
-        self.pushButton_14.clicked.connect(self.new)
-    
-    def new(self):
-        qDeleteAll(self.scene.items())
-        for i in  elf.Container.unitOp:
-            del i
         
     def selectCompounds(self):
         self.comp.show()
@@ -118,6 +114,7 @@ class MainApp(QMainWindow,ui):
         self.resultsCategory(self.comboBox.currentText())
     def results(self):
         self.nameType={}
+        self.comboBox.clear()
         for i in self.Container.unitOp:
             #nameslist.append(i.name)
             self.nameType[i.name] = i.type
@@ -170,50 +167,58 @@ class MainApp(QMainWindow,ui):
             print(exc_type,exc_tb.tb_lineno)
             print(e)
             
-    def delete(self,event):
+    def new(self):
+        l=self.scene.items()
+        print(type(l))
+        compond_selected.clear()
+        self.comp.tableWidget.setRowCount(0)
+        self.delete(l)
+    
+    def deleteCall(self,event):
         try:
             if event.key() == QtCore.Qt.Key_Delete:
                 l=self.scene.selectedItems()
-                print(l)
-                for item in l:
-                    print(item)
-                    self.scene.removeItem(item)
-                    self.Container.unitOp.remove(item.obj)
-                    for x in item.Input:
-                        if x.newLine:
-                            
-                            self.scene.removeItem(x.newLine)
-                            del x.newLine
-                            
-                        if x.otherLine:
-                            
-                            self.scene.removeItem(x.otherLine)
-                            del x.otherLine
-                            
-                    for x in item.Output:
-                        if x.newLine:
-                            
-                            self.scene.removeItem(x.newLine)
-                            del x.newLine
-                            
-                        if x.otherLine:
-                        
-                            self.scene.removeItem(x.otherLine)
-                            del x.otherLine
-                        
-                    for k in list(self.Container.conn):
-                        if item.obj==k:
-                            del self.Container.conn[k]
-                            print("Check",self.Container.conn)
-                        elif item.obj in self.Container.conn[k]:
-                            self.Container.conn[k].remove(item.obj)
-                    print(self.Container.conn)
-                    print(self.Container.unitOp)
-                    del item.obj
-                    del item
-        
+                self.delete(l)
         except Exception as e:
             print(e)
+    def delete(self,l):
+
+        for item in l:
+            self.scene.removeItem(item)
+            if hasattr(item,'Input'):
+                for x in item.Input:
+                    if x.newLine:
+                        
+                        self.scene.removeItem(x.newLine)
+                        del x.newLine
+                        
+                    if x.otherLine:
+                        
+                        self.scene.removeItem(x.otherLine)
+                        del x.otherLine
+            if hasattr(item,'Output'):
+                for x in item.Output:
+                    if x.newLine:
+                                           
+                        self.scene.removeItem(x.newLine)
+                        del x.newLine
+                        
+                    if x.otherLine:
+                    
+                        self.scene.removeItem(x.otherLine)
+                        del x.otherLine
+            if hasattr(item,'obj'):
+                self.Container.unitOp.remove(item.obj)
+                for k in list(self.Container.conn):
+                    if item.obj==k:
+                        del self.Container.conn[k]
+
+                    elif item.obj in self.Container.conn[k]:
+                        self.Container.conn[k].remove(item.obj)
+                
+                del item.obj
+            del item
+        
 
 '''
 ============================================================

@@ -97,14 +97,15 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1068</width>
-     <height>21</height>
+     <width>1083</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionNew_Flowsheet"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -194,8 +195,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>231</width>
-          <height>794</height>
+          <width>227</width>
+          <height>824</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -718,6 +719,11 @@
    </property>
    <property name="text">
     <string>Select Compounds</string>
+   </property>
+  </action>
+  <action name="actionNew_Flowsheet">
+   <property name="text">
+    <string>New</string>
    </property>
   </action>
  </widget>
