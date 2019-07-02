@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1083</width>
-    <height>650</height>
+    <width>1068</width>
+    <height>747</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -648,6 +648,24 @@
    <addaction name="actionSequential_mode"/>
    <addaction name="separator"/>
    <addaction name="actionSelect_compouns"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_2">
+   <property name="minimumSize">
+    <size>
+     <width>89</width>
+     <height>120</height>
+    </size>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QTextBrowser" name="textBrowser"/>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <action name="actionZoomIn">
    <property name="icon">

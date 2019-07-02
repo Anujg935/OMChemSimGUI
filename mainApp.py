@@ -24,6 +24,7 @@ from component_selector import *
 from dockWidget import dockWidget
 from pythonGenerator import PythonFileGenerator
 from resDockWidget import resdockWidget
+from messageBox import msgDockWidget
 from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
@@ -45,6 +46,8 @@ class MainApp(QMainWindow,ui):
         self.scene.setItemIndexMethod(QGraphicsScene.BspTreeIndex)
         self.graphicsView.setScene(self.scene)
         self.graphicsView.setMouseTracking(True)
+        self.comp.show()
+        #self.showMsgBrowser()
         self.pushButton.clicked.connect(partial(self.component,'MatStm'))
         self.graphicsView.keyPressEvent=self.deleteCall
         self.actionZoomIn.triggered.connect(self.zoomin)
@@ -62,7 +65,6 @@ class MainApp(QMainWindow,ui):
         self.pushButton_25.clicked.connect(partial(self.component,'Valve'))
         self.pushButton_12.clicked.connect(partial(self.component,'Cooler'))
         self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
-
         
     def selectCompounds(self):
         self.comp.show()
@@ -132,6 +134,7 @@ class MainApp(QMainWindow,ui):
 
         except Exception as e:
             print(e)
+    
     def zoomReset(self):
         if(self.zoomcount>0):
             for i in range(self.zoomcount):
@@ -152,11 +155,14 @@ class MainApp(QMainWindow,ui):
         
     def component(self,conntype):
         try:
-            box=None
-            box = NodeItem(conntype,self.Container)
-            print(box)
-            self.scene.addItem(box)
-            box.setPos(2500-30, 2500-30)
+            if(self.comp.isCompSelected()):
+                box=None
+                box = NodeItem(conntype,self.Container)
+                print(box)
+                self.scene.addItem(box)
+                box.setPos(2500-30, 2500-30)
+            else:
+                QMessageBox.about(self, 'Important', "Please Select Compounds first")
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print(exc_type,exc_tb.tb_lineno)
