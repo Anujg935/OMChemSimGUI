@@ -196,7 +196,7 @@
           <x>0</x>
           <y>0</y>
           <width>227</width>
-          <height>824</height>
+          <height>794</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -445,12 +445,12 @@
           <widget class="QPushButton" name="pushButton_14">
            <property name="minimumSize">
             <size>
-             <width>30</width>
-             <height>50</height>
+             <width>0</width>
+             <height>20</height>
             </size>
            </property>
            <property name="text">
-            <string>nameListDummy</string>
+            <string>Centrifugal Pump</string>
            </property>
           </widget>
          </item>

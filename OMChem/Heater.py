@@ -10,7 +10,7 @@ class Heater():
         #self.heatAdd=heatAdd
         #self.outT = outT
         self.OutputStms = None
-        self.EngStms = EngStm(name='EngStm')
+        self.EngStms = EngStm(name='EngStm'+name)
         self.type = 'Heater'
         self.mode = None
         self.modeVal = None
