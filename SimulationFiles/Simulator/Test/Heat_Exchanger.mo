@@ -20,24 +20,24 @@ package Heat_Exchanger
     parameter Integer NOC = 2;
     parameter data.General_Properties comp[NOC] = {sty, tol};
     Simulator.Unit_Operations.Rigorous_HX HX(NOC = NOC, comp = comp, deltap_hot = 0, deltap_cold = 0, Heat_Loss = 0, Calculation_Method = "Outlet_Temparatures") annotation(
-      Placement(visible = true, transformation(origin = {-34, 8}, extent = {{-16, -16}, {16, 16}}, rotation = 0)));
-    Simulator.Test.Heat_Exchanger.MS Hot_In(NOC = NOC, comp = comp) annotation(
-      Placement(visible = true, transformation(origin = {-80, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Simulator.Test.Heat_Exchanger.MS Hot_Out(NOC = NOC, comp = comp) annotation(
-      Placement(visible = true, transformation(origin = {48, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Simulator.Test.Heat_Exchanger.MS Cold_In(NOC = NOC, comp = comp) annotation(
-      Placement(visible = true, transformation(origin = {-78, 68}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Simulator.Test.Heat_Exchanger.MS Cold_Out(NOC = NOC, comp = comp) annotation(
-      Placement(visible = true, transformation(origin = {54, -58}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Placement(visible = true, transformation(origin = {-2, 16}, extent = {{-22, -22}, {22, 22}}, rotation = 0)));
+    Heat_Exchanger.MS Hot_In(NOC = NOC, comp = comp) annotation(
+      Placement(visible = true, transformation(origin = {-58, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Heat_Exchanger.MS Hot_Out(NOC = NOC, comp = comp) annotation(
+      Placement(visible = true, transformation(origin = {66, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Heat_Exchanger.MS Cold_In(NOC = NOC, comp = comp) annotation(
+      Placement(visible = true, transformation(origin = {-76, -16}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Heat_Exchanger.MS Cold_Out(NOC = NOC, comp = comp) annotation(
+      Placement(visible = true, transformation(origin = {50, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
-  connect(Cold_In.outlet, HX.Cold_In) annotation(
-      Line(points = {{-68, 68}, {-34, 68}, {-34, 24}}));
-  connect(Hot_In.outlet, HX.Hot_In) annotation(
-      Line(points = {{-70, 6}, {-56, 6}, {-56, 8}, {-50, 8}}));
-  connect(HX.Cold_Out, Cold_Out.inlet) annotation(
-      Line(points = {{-33, -8}, {-33, -58}, {44, -58}}));
-  connect(HX.Hot_Out, Hot_Out.inlet) annotation(
-      Line(points = {{-18, 8}, {-18, 45}, {38, 45}, {38, 70}}));
+    connect(Cold_In.outlet, HX.Cold_In) annotation(
+      Line(points = {{-68, -16}, {-38, -16}, {-38, 10}, {-18, 10}}));
+    connect(HX.Hot_Out, Hot_Out.inlet) annotation(
+      Line(points = {{16, 24}, {58, 24}, {58, 56}}));
+    connect(HX.Cold_Out, Cold_Out.inlet) annotation(
+      Line(points = {{14, 10}, {15, 10}, {15, -32}, {42, -32}}));
+    connect(Hot_In.outlet, HX.Hot_In) annotation(
+      Line(points = {{-50, 70}, {-18, 70}, {-18, 24}}));
     Hot_In.compMolFrac[1, :] = {1, 0};
     Cold_In.compMolFrac[1, :] = {0, 1};
     Hot_In.totMolFlo[1] = 181.46776;

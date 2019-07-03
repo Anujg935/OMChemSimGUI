@@ -24,12 +24,11 @@ from component_selector import *
 from dockWidget import dockWidget
 from pythonGenerator import PythonFileGenerator
 from resDockWidget import resdockWidget
-from messageBox import msgDockWidget
 from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2]}
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2],'AdiabaticComp':[1,1,1],'AdiabaticExp':[1,1,1]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -39,7 +38,7 @@ class MainApp(QMainWindow,ui):
         style = style.read()
         
         self.zoomcount = 0
-        self.Container = Container()
+        self.Container = Container(self.textBrowser)
         self.setStyleSheet(style)
         self.comp =componentSelector(self)
         self.scene = QGraphicsScene()
@@ -64,6 +63,8 @@ class MainApp(QMainWindow,ui):
         self.pushButton_25.clicked.connect(partial(self.component,'Valve'))
         self.pushButton_12.clicked.connect(partial(self.component,'Cooler'))
         self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
+        self.pushButton_15.clicked.connect(partial(self.component,'AdiabaticComp'))
+        self.pushButton_16.clicked.connect(partial(self.component,'AdiabaticExp'))
         
     def selectCompounds(self):
         self.comp.show()
@@ -80,7 +81,7 @@ class MainApp(QMainWindow,ui):
         "phasMolEntr[1]":"Mixer Phase Molar Entropy","phasMolEntr[2]":"Liquid Phase Molar Entropy",
         "phasMolEntr[3]":"Vapour Phase Molar Entropy","totMolFlo[2]":"Liquid Phase Molar Flow Rate",
         "totMolFlo[3]":"Vapour Phase Molar Flow Rate","totMasFlo[2]":"Liquid Phase Mass Flow Rate",
-        "totMolFlo[3]":"Liquid Phase Mass Flow Rate"
+        "totMolFlo[2]":"Liquid Phase Mass Flow Rate"
         } 
 
         if key in d.keys():
@@ -554,7 +555,8 @@ def findMainWindow():
 def main():
     app = QApplication(sys.argv)
     window = MainApp()
-    window.show()
+    window.showMaximized();
+    #window.show()
     app.exec()
 
 

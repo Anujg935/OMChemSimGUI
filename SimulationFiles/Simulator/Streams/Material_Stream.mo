@@ -2,8 +2,7 @@ within Simulator.Streams;
 
 model Material_Stream
   //1 -  Mixture, 2 - Liquid phase, 3 - Gas Phase
-//  extends Modelica.Icons.SourcesPackage;
-  extends Simulator.Files.Icons.stm;
+  extends Modelica.Icons.SourcesPackage;
   import Simulator.Files.*;
   parameter Integer NOC;
   parameter Simulator.Files.Chemsep_Database.General_Properties comp[NOC];
@@ -95,21 +94,18 @@ equation
   if P >= Pbubl then
 //below bubble point region
     compMolFrac[3, :] = zeros(NOC);
-//    sum(compMolFrac[2, :]) = 1;
-    totMolFlo[3] = 0;
+    sum(compMolFrac[2, :]) = 1;
   elseif P >= Pdew then
 //VLE region
     for i in 1:NOC loop
-//      compMolFrac[3, i] = K[i] * compMolFrac[2, i];
-      compMolFrac[2, i] = compMolFrac[1, i] ./ (1 + vapPhasMolFrac * (K[i] - 1));
+      compMolFrac[3, i] = K[i] * compMolFrac[2, i];
     end for;
     sum(compMolFrac[3, :]) = 1;
 //sum y = 1
   else
 //above dew point region
     compMolFrac[2, :] = zeros(NOC);
-//    sum(compMolFrac[3, :]) = 1;
-    totMolFlo[2] = 0;
+    sum(compMolFrac[3, :]) = 1;
   end if;
 algorithm
   for i in 1:NOC loop

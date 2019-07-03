@@ -66,15 +66,19 @@ class Flowsheet():
 			#print(stdout)
 			os.chdir(self.curr_path)
 			#os.system(self.omc_path + ' -s ' + simpath)
-		
+			print("Hello")
 		if self.sim_method == 'Eqn':
+			print("hhhh")
 			csvpath = os.path.join(self.sim_dir_path,'Flowsheet_res.csv')
+			print("csvPath",csvpath)
 			with open (csvpath,'r') as resultFile:
 				self.resdata = []
+				print("opened")
 				csvreader = csv.reader(resultFile,delimiter=',')
 				for row in csvreader:
+					print("124125")
 					self.resdata.append(row)
-			self.ExtData()
+			#self.ExtData()
 	
 
 	def send_for_simulationSM(self,unitop):

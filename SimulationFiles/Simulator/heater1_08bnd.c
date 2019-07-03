@@ -8,32 +8,32 @@ extern "C" {
 /*
 equation index: 307
 type: SIMPLE_ASSIGN
-$START._MatStm3._Pdew = 0.5 * (MatStm3.comp[1].Pc + MatStm3.comp[2].Pc)
+$START._MatStm4._Pdew = 0.5 * (MatStm4.comp[1].Pc + MatStm4.comp[2].Pc)
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_307(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,307};
-  data->modelData->realVarsData[107].attribute /* MatStm3.Pdew variable */.start = (0.5) * (data->simulationInfo->realParameter[483] + data->simulationInfo->realParameter[484]);
-    data->localData[0]->realVars[107] /* MatStm3.Pdew variable */ = data->modelData->realVarsData[107].attribute /* MatStm3.Pdew variable */.start;
-    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[107].info /* MatStm3.Pdew */.name, (modelica_real) data->localData[0]->realVars[107] /* MatStm3.Pdew variable */);
+  data->modelData->realVarsData[107].attribute /* MatStm4.Pdew variable */.start = (0.5) * (data->simulationInfo->realParameter[483] + data->simulationInfo->realParameter[484]);
+    data->localData[0]->realVars[107] /* MatStm4.Pdew variable */ = data->modelData->realVarsData[107].attribute /* MatStm4.Pdew variable */.start;
+    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[107].info /* MatStm4.Pdew */.name, (modelica_real) data->localData[0]->realVars[107] /* MatStm4.Pdew variable */);
   TRACE_POP
 }
 
 /*
 equation index: 308
 type: SIMPLE_ASSIGN
-$START._MatStm3._Pbubl = 0.5 * (MatStm3.comp[1].Pc + MatStm3.comp[2].Pc)
+$START._MatStm4._Pbubl = 0.5 * (MatStm4.comp[1].Pc + MatStm4.comp[2].Pc)
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_308(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,308};
-  data->modelData->realVarsData[106].attribute /* MatStm3.Pbubl variable */.start = (0.5) * (data->simulationInfo->realParameter[483] + data->simulationInfo->realParameter[484]);
-    data->localData[0]->realVars[106] /* MatStm3.Pbubl variable */ = data->modelData->realVarsData[106].attribute /* MatStm3.Pbubl variable */.start;
-    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[106].info /* MatStm3.Pbubl */.name, (modelica_real) data->localData[0]->realVars[106] /* MatStm3.Pbubl variable */);
+  data->modelData->realVarsData[106].attribute /* MatStm4.Pbubl variable */.start = (0.5) * (data->simulationInfo->realParameter[483] + data->simulationInfo->realParameter[484]);
+    data->localData[0]->realVars[106] /* MatStm4.Pbubl variable */ = data->modelData->realVarsData[106].attribute /* MatStm4.Pbubl variable */.start;
+    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[106].info /* MatStm4.Pbubl */.name, (modelica_real) data->localData[0]->realVars[106] /* MatStm4.Pbubl variable */);
   TRACE_POP
 }
 OMC_DISABLE_OPT
@@ -71,7 +71,7 @@ void heater1_updateBoundParameters_0(DATA *data, threadData_t *threadData);
 /*
 equation index: 311
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
+MatStm3._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_311(DATA *data, threadData_t *threadData)
@@ -85,7 +85,7 @@ static void heater1_eqFunction_311(DATA *data, threadData_t *threadData)
 /*
 equation index: 312
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
+MatStm3._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_312(DATA *data, threadData_t *threadData)
@@ -99,7 +99,7 @@ static void heater1_eqFunction_312(DATA *data, threadData_t *threadData)
 /*
 equation index: 313
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
+MatStm3._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_313(DATA *data, threadData_t *threadData)
@@ -113,7 +113,7 @@ static void heater1_eqFunction_313(DATA *data, threadData_t *threadData)
 /*
 equation index: 314
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._Racketparam = Ethanol.Racketparam
+MatStm3._comp[2]._Racketparam = Ethanol.Racketparam
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_314(DATA *data, threadData_t *threadData)
@@ -127,7 +127,7 @@ static void heater1_eqFunction_314(DATA *data, threadData_t *threadData)
 /*
 equation index: 315
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapK[6] = Ethanol.VapK[6]
+MatStm3._comp[2]._VapK[6] = Ethanol.VapK[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_315(DATA *data, threadData_t *threadData)
@@ -141,7 +141,7 @@ static void heater1_eqFunction_315(DATA *data, threadData_t *threadData)
 /*
 equation index: 316
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapK[5] = Ethanol.VapK[5]
+MatStm3._comp[2]._VapK[5] = Ethanol.VapK[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_316(DATA *data, threadData_t *threadData)
@@ -155,7 +155,7 @@ static void heater1_eqFunction_316(DATA *data, threadData_t *threadData)
 /*
 equation index: 317
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapK[4] = Ethanol.VapK[4]
+MatStm3._comp[2]._VapK[4] = Ethanol.VapK[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_317(DATA *data, threadData_t *threadData)
@@ -169,7 +169,7 @@ static void heater1_eqFunction_317(DATA *data, threadData_t *threadData)
 /*
 equation index: 318
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapK[3] = Ethanol.VapK[3]
+MatStm3._comp[2]._VapK[3] = Ethanol.VapK[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_318(DATA *data, threadData_t *threadData)
@@ -183,7 +183,7 @@ static void heater1_eqFunction_318(DATA *data, threadData_t *threadData)
 /*
 equation index: 319
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapK[2] = Ethanol.VapK[2]
+MatStm3._comp[2]._VapK[2] = Ethanol.VapK[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_319(DATA *data, threadData_t *threadData)
@@ -197,7 +197,7 @@ static void heater1_eqFunction_319(DATA *data, threadData_t *threadData)
 /*
 equation index: 320
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapK[1] = Ethanol.VapK[1]
+MatStm3._comp[2]._VapK[1] = Ethanol.VapK[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_320(DATA *data, threadData_t *threadData)
@@ -211,7 +211,7 @@ static void heater1_eqFunction_320(DATA *data, threadData_t *threadData)
 /*
 equation index: 321
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqK[6] = Ethanol.LiqK[6]
+MatStm3._comp[2]._LiqK[6] = Ethanol.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_321(DATA *data, threadData_t *threadData)
@@ -225,7 +225,7 @@ static void heater1_eqFunction_321(DATA *data, threadData_t *threadData)
 /*
 equation index: 322
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqK[5] = Ethanol.LiqK[5]
+MatStm3._comp[2]._LiqK[5] = Ethanol.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_322(DATA *data, threadData_t *threadData)
@@ -239,7 +239,7 @@ static void heater1_eqFunction_322(DATA *data, threadData_t *threadData)
 /*
 equation index: 323
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqK[4] = Ethanol.LiqK[4]
+MatStm3._comp[2]._LiqK[4] = Ethanol.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_323(DATA *data, threadData_t *threadData)
@@ -253,7 +253,7 @@ static void heater1_eqFunction_323(DATA *data, threadData_t *threadData)
 /*
 equation index: 324
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqK[3] = Ethanol.LiqK[3]
+MatStm3._comp[2]._LiqK[3] = Ethanol.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_324(DATA *data, threadData_t *threadData)
@@ -267,7 +267,7 @@ static void heater1_eqFunction_324(DATA *data, threadData_t *threadData)
 /*
 equation index: 325
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqK[2] = Ethanol.LiqK[2]
+MatStm3._comp[2]._LiqK[2] = Ethanol.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_325(DATA *data, threadData_t *threadData)
@@ -281,7 +281,7 @@ static void heater1_eqFunction_325(DATA *data, threadData_t *threadData)
 /*
 equation index: 326
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqK[1] = Ethanol.LiqK[1]
+MatStm3._comp[2]._LiqK[1] = Ethanol.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_326(DATA *data, threadData_t *threadData)
@@ -295,7 +295,7 @@ static void heater1_eqFunction_326(DATA *data, threadData_t *threadData)
 /*
 equation index: 327
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapVis[6] = Ethanol.VapVis[6]
+MatStm3._comp[2]._VapVis[6] = Ethanol.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_327(DATA *data, threadData_t *threadData)
@@ -309,7 +309,7 @@ static void heater1_eqFunction_327(DATA *data, threadData_t *threadData)
 /*
 equation index: 328
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapVis[5] = Ethanol.VapVis[5]
+MatStm3._comp[2]._VapVis[5] = Ethanol.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_328(DATA *data, threadData_t *threadData)
@@ -323,7 +323,7 @@ static void heater1_eqFunction_328(DATA *data, threadData_t *threadData)
 /*
 equation index: 329
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapVis[4] = Ethanol.VapVis[4]
+MatStm3._comp[2]._VapVis[4] = Ethanol.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_329(DATA *data, threadData_t *threadData)
@@ -337,7 +337,7 @@ static void heater1_eqFunction_329(DATA *data, threadData_t *threadData)
 /*
 equation index: 330
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapVis[3] = Ethanol.VapVis[3]
+MatStm3._comp[2]._VapVis[3] = Ethanol.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_330(DATA *data, threadData_t *threadData)
@@ -351,7 +351,7 @@ static void heater1_eqFunction_330(DATA *data, threadData_t *threadData)
 /*
 equation index: 331
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapVis[2] = Ethanol.VapVis[2]
+MatStm3._comp[2]._VapVis[2] = Ethanol.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_331(DATA *data, threadData_t *threadData)
@@ -365,7 +365,7 @@ static void heater1_eqFunction_331(DATA *data, threadData_t *threadData)
 /*
 equation index: 332
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapVis[1] = Ethanol.VapVis[1]
+MatStm3._comp[2]._VapVis[1] = Ethanol.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_332(DATA *data, threadData_t *threadData)
@@ -379,7 +379,7 @@ static void heater1_eqFunction_332(DATA *data, threadData_t *threadData)
 /*
 equation index: 333
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
+MatStm3._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_333(DATA *data, threadData_t *threadData)
@@ -393,7 +393,7 @@ static void heater1_eqFunction_333(DATA *data, threadData_t *threadData)
 /*
 equation index: 334
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
+MatStm3._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_334(DATA *data, threadData_t *threadData)
@@ -407,7 +407,7 @@ static void heater1_eqFunction_334(DATA *data, threadData_t *threadData)
 /*
 equation index: 335
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
+MatStm3._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_335(DATA *data, threadData_t *threadData)
@@ -421,7 +421,7 @@ static void heater1_eqFunction_335(DATA *data, threadData_t *threadData)
 /*
 equation index: 336
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
+MatStm3._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_336(DATA *data, threadData_t *threadData)
@@ -435,7 +435,7 @@ static void heater1_eqFunction_336(DATA *data, threadData_t *threadData)
 /*
 equation index: 337
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
+MatStm3._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_337(DATA *data, threadData_t *threadData)
@@ -449,7 +449,7 @@ static void heater1_eqFunction_337(DATA *data, threadData_t *threadData)
 /*
 equation index: 338
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
+MatStm3._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_338(DATA *data, threadData_t *threadData)
@@ -463,7 +463,7 @@ static void heater1_eqFunction_338(DATA *data, threadData_t *threadData)
 /*
 equation index: 339
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapCp[6] = Ethanol.VapCp[6]
+MatStm3._comp[2]._VapCp[6] = Ethanol.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_339(DATA *data, threadData_t *threadData)
@@ -477,7 +477,7 @@ static void heater1_eqFunction_339(DATA *data, threadData_t *threadData)
 /*
 equation index: 340
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapCp[5] = Ethanol.VapCp[5]
+MatStm3._comp[2]._VapCp[5] = Ethanol.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_340(DATA *data, threadData_t *threadData)
@@ -491,7 +491,7 @@ static void heater1_eqFunction_340(DATA *data, threadData_t *threadData)
 /*
 equation index: 341
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapCp[4] = Ethanol.VapCp[4]
+MatStm3._comp[2]._VapCp[4] = Ethanol.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_341(DATA *data, threadData_t *threadData)
@@ -505,7 +505,7 @@ static void heater1_eqFunction_341(DATA *data, threadData_t *threadData)
 /*
 equation index: 342
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapCp[3] = Ethanol.VapCp[3]
+MatStm3._comp[2]._VapCp[3] = Ethanol.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_342(DATA *data, threadData_t *threadData)
@@ -519,7 +519,7 @@ static void heater1_eqFunction_342(DATA *data, threadData_t *threadData)
 /*
 equation index: 343
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapCp[2] = Ethanol.VapCp[2]
+MatStm3._comp[2]._VapCp[2] = Ethanol.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_343(DATA *data, threadData_t *threadData)
@@ -533,7 +533,7 @@ static void heater1_eqFunction_343(DATA *data, threadData_t *threadData)
 /*
 equation index: 344
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VapCp[1] = Ethanol.VapCp[1]
+MatStm3._comp[2]._VapCp[1] = Ethanol.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_344(DATA *data, threadData_t *threadData)
@@ -547,7 +547,7 @@ static void heater1_eqFunction_344(DATA *data, threadData_t *threadData)
 /*
 equation index: 345
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._HOV[6] = Ethanol.HOV[6]
+MatStm3._comp[2]._HOV[6] = Ethanol.HOV[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_345(DATA *data, threadData_t *threadData)
@@ -561,7 +561,7 @@ static void heater1_eqFunction_345(DATA *data, threadData_t *threadData)
 /*
 equation index: 346
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._HOV[5] = Ethanol.HOV[5]
+MatStm3._comp[2]._HOV[5] = Ethanol.HOV[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_346(DATA *data, threadData_t *threadData)
@@ -575,7 +575,7 @@ static void heater1_eqFunction_346(DATA *data, threadData_t *threadData)
 /*
 equation index: 347
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._HOV[4] = Ethanol.HOV[4]
+MatStm3._comp[2]._HOV[4] = Ethanol.HOV[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_347(DATA *data, threadData_t *threadData)
@@ -589,7 +589,7 @@ static void heater1_eqFunction_347(DATA *data, threadData_t *threadData)
 /*
 equation index: 348
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._HOV[3] = Ethanol.HOV[3]
+MatStm3._comp[2]._HOV[3] = Ethanol.HOV[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_348(DATA *data, threadData_t *threadData)
@@ -603,7 +603,7 @@ static void heater1_eqFunction_348(DATA *data, threadData_t *threadData)
 /*
 equation index: 349
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._HOV[2] = Ethanol.HOV[2]
+MatStm3._comp[2]._HOV[2] = Ethanol.HOV[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_349(DATA *data, threadData_t *threadData)
@@ -617,7 +617,7 @@ static void heater1_eqFunction_349(DATA *data, threadData_t *threadData)
 /*
 equation index: 350
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._HOV[1] = Ethanol.HOV[1]
+MatStm3._comp[2]._HOV[1] = Ethanol.HOV[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_350(DATA *data, threadData_t *threadData)
@@ -631,7 +631,7 @@ static void heater1_eqFunction_350(DATA *data, threadData_t *threadData)
 /*
 equation index: 351
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
+MatStm3._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_351(DATA *data, threadData_t *threadData)
@@ -645,7 +645,7 @@ static void heater1_eqFunction_351(DATA *data, threadData_t *threadData)
 /*
 equation index: 352
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
+MatStm3._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_352(DATA *data, threadData_t *threadData)
@@ -659,7 +659,7 @@ static void heater1_eqFunction_352(DATA *data, threadData_t *threadData)
 /*
 equation index: 353
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
+MatStm3._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_353(DATA *data, threadData_t *threadData)
@@ -673,7 +673,7 @@ static void heater1_eqFunction_353(DATA *data, threadData_t *threadData)
 /*
 equation index: 354
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
+MatStm3._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_354(DATA *data, threadData_t *threadData)
@@ -687,7 +687,7 @@ static void heater1_eqFunction_354(DATA *data, threadData_t *threadData)
 /*
 equation index: 355
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
+MatStm3._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_355(DATA *data, threadData_t *threadData)
@@ -701,7 +701,7 @@ static void heater1_eqFunction_355(DATA *data, threadData_t *threadData)
 /*
 equation index: 356
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
+MatStm3._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_356(DATA *data, threadData_t *threadData)
@@ -715,7 +715,7 @@ static void heater1_eqFunction_356(DATA *data, threadData_t *threadData)
 /*
 equation index: 357
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VP[6] = Ethanol.VP[6]
+MatStm3._comp[2]._VP[6] = Ethanol.VP[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_357(DATA *data, threadData_t *threadData)
@@ -729,7 +729,7 @@ static void heater1_eqFunction_357(DATA *data, threadData_t *threadData)
 /*
 equation index: 358
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VP[5] = Ethanol.VP[5]
+MatStm3._comp[2]._VP[5] = Ethanol.VP[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_358(DATA *data, threadData_t *threadData)
@@ -743,7 +743,7 @@ static void heater1_eqFunction_358(DATA *data, threadData_t *threadData)
 /*
 equation index: 359
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VP[4] = Ethanol.VP[4]
+MatStm3._comp[2]._VP[4] = Ethanol.VP[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_359(DATA *data, threadData_t *threadData)
@@ -757,7 +757,7 @@ static void heater1_eqFunction_359(DATA *data, threadData_t *threadData)
 /*
 equation index: 360
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VP[3] = Ethanol.VP[3]
+MatStm3._comp[2]._VP[3] = Ethanol.VP[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_360(DATA *data, threadData_t *threadData)
@@ -771,7 +771,7 @@ static void heater1_eqFunction_360(DATA *data, threadData_t *threadData)
 /*
 equation index: 361
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VP[2] = Ethanol.VP[2]
+MatStm3._comp[2]._VP[2] = Ethanol.VP[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_361(DATA *data, threadData_t *threadData)
@@ -785,7 +785,7 @@ static void heater1_eqFunction_361(DATA *data, threadData_t *threadData)
 /*
 equation index: 362
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._VP[1] = Ethanol.VP[1]
+MatStm3._comp[2]._VP[1] = Ethanol.VP[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_362(DATA *data, threadData_t *threadData)
@@ -799,7 +799,7 @@ static void heater1_eqFunction_362(DATA *data, threadData_t *threadData)
 /*
 equation index: 363
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
+MatStm3._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_363(DATA *data, threadData_t *threadData)
@@ -813,7 +813,7 @@ static void heater1_eqFunction_363(DATA *data, threadData_t *threadData)
 /*
 equation index: 364
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
+MatStm3._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_364(DATA *data, threadData_t *threadData)
@@ -827,7 +827,7 @@ static void heater1_eqFunction_364(DATA *data, threadData_t *threadData)
 /*
 equation index: 365
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
+MatStm3._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_365(DATA *data, threadData_t *threadData)
@@ -841,7 +841,7 @@ static void heater1_eqFunction_365(DATA *data, threadData_t *threadData)
 /*
 equation index: 366
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
+MatStm3._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_366(DATA *data, threadData_t *threadData)
@@ -855,7 +855,7 @@ static void heater1_eqFunction_366(DATA *data, threadData_t *threadData)
 /*
 equation index: 367
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
+MatStm3._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_367(DATA *data, threadData_t *threadData)
@@ -869,7 +869,7 @@ static void heater1_eqFunction_367(DATA *data, threadData_t *threadData)
 /*
 equation index: 368
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
+MatStm3._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_368(DATA *data, threadData_t *threadData)
@@ -883,7 +883,7 @@ static void heater1_eqFunction_368(DATA *data, threadData_t *threadData)
 /*
 equation index: 369
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._UniquacQ = Ethanol.UniquacQ
+MatStm3._comp[2]._UniquacQ = Ethanol.UniquacQ
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_369(DATA *data, threadData_t *threadData)
@@ -897,7 +897,7 @@ static void heater1_eqFunction_369(DATA *data, threadData_t *threadData)
 /*
 equation index: 370
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._UniquacR = Ethanol.UniquacR
+MatStm3._comp[2]._UniquacR = Ethanol.UniquacR
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_370(DATA *data, threadData_t *threadData)
@@ -911,7 +911,7 @@ static void heater1_eqFunction_370(DATA *data, threadData_t *threadData)
 /*
 equation index: 371
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._HOC = Ethanol.HOC
+MatStm3._comp[2]._HOC = Ethanol.HOC
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_371(DATA *data, threadData_t *threadData)
@@ -925,7 +925,7 @@ static void heater1_eqFunction_371(DATA *data, threadData_t *threadData)
 /*
 equation index: 372
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._HFMP = Ethanol.HFMP
+MatStm3._comp[2]._HFMP = Ethanol.HFMP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_372(DATA *data, threadData_t *threadData)
@@ -939,7 +939,7 @@ static void heater1_eqFunction_372(DATA *data, threadData_t *threadData)
 /*
 equation index: 373
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._AS = Ethanol.AS
+MatStm3._comp[2]._AS = Ethanol.AS
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_373(DATA *data, threadData_t *threadData)
@@ -953,7 +953,7 @@ static void heater1_eqFunction_373(DATA *data, threadData_t *threadData)
 /*
 equation index: 374
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._GEF = Ethanol.GEF
+MatStm3._comp[2]._GEF = Ethanol.GEF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_374(DATA *data, threadData_t *threadData)
@@ -967,7 +967,7 @@ static void heater1_eqFunction_374(DATA *data, threadData_t *threadData)
 /*
 equation index: 375
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._IGHF = Ethanol.IGHF
+MatStm3._comp[2]._IGHF = Ethanol.IGHF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_375(DATA *data, threadData_t *threadData)
@@ -981,7 +981,7 @@ static void heater1_eqFunction_375(DATA *data, threadData_t *threadData)
 /*
 equation index: 376
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._SH = Ethanol.SH
+MatStm3._comp[2]._SH = Ethanol.SH
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_376(DATA *data, threadData_t *threadData)
@@ -995,7 +995,7 @@ static void heater1_eqFunction_376(DATA *data, threadData_t *threadData)
 /*
 equation index: 377
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._DM = Ethanol.DM
+MatStm3._comp[2]._DM = Ethanol.DM
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_377(DATA *data, threadData_t *threadData)
@@ -1009,7 +1009,7 @@ static void heater1_eqFunction_377(DATA *data, threadData_t *threadData)
 /*
 equation index: 378
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._SP = Ethanol.SP
+MatStm3._comp[2]._SP = Ethanol.SP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_378(DATA *data, threadData_t *threadData)
@@ -1023,7 +1023,7 @@ static void heater1_eqFunction_378(DATA *data, threadData_t *threadData)
 /*
 equation index: 379
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._AF = Ethanol.AF
+MatStm3._comp[2]._AF = Ethanol.AF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_379(DATA *data, threadData_t *threadData)
@@ -1037,7 +1037,7 @@ static void heater1_eqFunction_379(DATA *data, threadData_t *threadData)
 /*
 equation index: 380
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._LVB = Ethanol.LVB
+MatStm3._comp[2]._LVB = Ethanol.LVB
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_380(DATA *data, threadData_t *threadData)
@@ -1051,7 +1051,7 @@ static void heater1_eqFunction_380(DATA *data, threadData_t *threadData)
 /*
 equation index: 381
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._MW = Ethanol.MW
+MatStm3._comp[2]._MW = Ethanol.MW
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_381(DATA *data, threadData_t *threadData)
@@ -1065,7 +1065,7 @@ static void heater1_eqFunction_381(DATA *data, threadData_t *threadData)
 /*
 equation index: 382
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._TP = Ethanol.TP
+MatStm3._comp[2]._TP = Ethanol.TP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_382(DATA *data, threadData_t *threadData)
@@ -1079,7 +1079,7 @@ static void heater1_eqFunction_382(DATA *data, threadData_t *threadData)
 /*
 equation index: 383
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._TT = Ethanol.TT
+MatStm3._comp[2]._TT = Ethanol.TT
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_383(DATA *data, threadData_t *threadData)
@@ -1093,7 +1093,7 @@ static void heater1_eqFunction_383(DATA *data, threadData_t *threadData)
 /*
 equation index: 384
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._Tm = Ethanol.Tm
+MatStm3._comp[2]._Tm = Ethanol.Tm
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_384(DATA *data, threadData_t *threadData)
@@ -1107,7 +1107,7 @@ static void heater1_eqFunction_384(DATA *data, threadData_t *threadData)
 /*
 equation index: 385
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._Tb = Ethanol.Tb
+MatStm3._comp[2]._Tb = Ethanol.Tb
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_385(DATA *data, threadData_t *threadData)
@@ -1121,7 +1121,7 @@ static void heater1_eqFunction_385(DATA *data, threadData_t *threadData)
 /*
 equation index: 386
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._Cc = Ethanol.Cc
+MatStm3._comp[2]._Cc = Ethanol.Cc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_386(DATA *data, threadData_t *threadData)
@@ -1135,7 +1135,7 @@ static void heater1_eqFunction_386(DATA *data, threadData_t *threadData)
 /*
 equation index: 387
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._Vc = Ethanol.Vc
+MatStm3._comp[2]._Vc = Ethanol.Vc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_387(DATA *data, threadData_t *threadData)
@@ -1149,7 +1149,7 @@ static void heater1_eqFunction_387(DATA *data, threadData_t *threadData)
 /*
 equation index: 388
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._Pc = Ethanol.Pc
+MatStm3._comp[2]._Pc = Ethanol.Pc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_388(DATA *data, threadData_t *threadData)
@@ -1163,7 +1163,7 @@ static void heater1_eqFunction_388(DATA *data, threadData_t *threadData)
 /*
 equation index: 389
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._Tc = Ethanol.Tc
+MatStm3._comp[2]._Tc = Ethanol.Tc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_389(DATA *data, threadData_t *threadData)
@@ -1177,7 +1177,7 @@ static void heater1_eqFunction_389(DATA *data, threadData_t *threadData)
 /*
 equation index: 390
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._CAS = Ethanol.CAS
+MatStm3._comp[2]._CAS = Ethanol.CAS
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_390(DATA *data, threadData_t *threadData)
@@ -1191,7 +1191,7 @@ static void heater1_eqFunction_390(DATA *data, threadData_t *threadData)
 /*
 equation index: 391
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._name = Ethanol.name
+MatStm3._comp[2]._name = Ethanol.name
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_391(DATA *data, threadData_t *threadData)
@@ -1205,7 +1205,7 @@ static void heater1_eqFunction_391(DATA *data, threadData_t *threadData)
 /*
 equation index: 392
 type: SIMPLE_ASSIGN
-MatStm1._comp[2]._SN = Ethanol.SN
+MatStm3._comp[2]._SN = Ethanol.SN
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_392(DATA *data, threadData_t *threadData)
@@ -1219,7 +1219,7 @@ static void heater1_eqFunction_392(DATA *data, threadData_t *threadData)
 /*
 equation index: 393
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
+MatStm3._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_393(DATA *data, threadData_t *threadData)
@@ -1233,7 +1233,7 @@ static void heater1_eqFunction_393(DATA *data, threadData_t *threadData)
 /*
 equation index: 394
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
+MatStm3._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_394(DATA *data, threadData_t *threadData)
@@ -1247,7 +1247,7 @@ static void heater1_eqFunction_394(DATA *data, threadData_t *threadData)
 /*
 equation index: 395
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
+MatStm3._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_395(DATA *data, threadData_t *threadData)
@@ -1261,7 +1261,7 @@ static void heater1_eqFunction_395(DATA *data, threadData_t *threadData)
 /*
 equation index: 396
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._Racketparam = Water.Racketparam
+MatStm3._comp[1]._Racketparam = Water.Racketparam
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_396(DATA *data, threadData_t *threadData)
@@ -1275,7 +1275,7 @@ static void heater1_eqFunction_396(DATA *data, threadData_t *threadData)
 /*
 equation index: 397
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapK[6] = Water.VapK[6]
+MatStm3._comp[1]._VapK[6] = Water.VapK[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_397(DATA *data, threadData_t *threadData)
@@ -1289,7 +1289,7 @@ static void heater1_eqFunction_397(DATA *data, threadData_t *threadData)
 /*
 equation index: 398
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapK[5] = Water.VapK[5]
+MatStm3._comp[1]._VapK[5] = Water.VapK[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_398(DATA *data, threadData_t *threadData)
@@ -1303,7 +1303,7 @@ static void heater1_eqFunction_398(DATA *data, threadData_t *threadData)
 /*
 equation index: 399
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapK[4] = Water.VapK[4]
+MatStm3._comp[1]._VapK[4] = Water.VapK[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_399(DATA *data, threadData_t *threadData)
@@ -1317,7 +1317,7 @@ static void heater1_eqFunction_399(DATA *data, threadData_t *threadData)
 /*
 equation index: 400
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapK[3] = Water.VapK[3]
+MatStm3._comp[1]._VapK[3] = Water.VapK[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_400(DATA *data, threadData_t *threadData)
@@ -1331,7 +1331,7 @@ static void heater1_eqFunction_400(DATA *data, threadData_t *threadData)
 /*
 equation index: 401
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapK[2] = Water.VapK[2]
+MatStm3._comp[1]._VapK[2] = Water.VapK[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_401(DATA *data, threadData_t *threadData)
@@ -1345,7 +1345,7 @@ static void heater1_eqFunction_401(DATA *data, threadData_t *threadData)
 /*
 equation index: 402
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapK[1] = Water.VapK[1]
+MatStm3._comp[1]._VapK[1] = Water.VapK[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_402(DATA *data, threadData_t *threadData)
@@ -1359,7 +1359,7 @@ static void heater1_eqFunction_402(DATA *data, threadData_t *threadData)
 /*
 equation index: 403
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqK[6] = Water.LiqK[6]
+MatStm3._comp[1]._LiqK[6] = Water.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_403(DATA *data, threadData_t *threadData)
@@ -1373,7 +1373,7 @@ static void heater1_eqFunction_403(DATA *data, threadData_t *threadData)
 /*
 equation index: 404
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqK[5] = Water.LiqK[5]
+MatStm3._comp[1]._LiqK[5] = Water.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_404(DATA *data, threadData_t *threadData)
@@ -1387,7 +1387,7 @@ static void heater1_eqFunction_404(DATA *data, threadData_t *threadData)
 /*
 equation index: 405
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqK[4] = Water.LiqK[4]
+MatStm3._comp[1]._LiqK[4] = Water.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_405(DATA *data, threadData_t *threadData)
@@ -1401,7 +1401,7 @@ static void heater1_eqFunction_405(DATA *data, threadData_t *threadData)
 /*
 equation index: 406
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqK[3] = Water.LiqK[3]
+MatStm3._comp[1]._LiqK[3] = Water.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_406(DATA *data, threadData_t *threadData)
@@ -1415,7 +1415,7 @@ static void heater1_eqFunction_406(DATA *data, threadData_t *threadData)
 /*
 equation index: 407
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqK[2] = Water.LiqK[2]
+MatStm3._comp[1]._LiqK[2] = Water.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_407(DATA *data, threadData_t *threadData)
@@ -1429,7 +1429,7 @@ static void heater1_eqFunction_407(DATA *data, threadData_t *threadData)
 /*
 equation index: 408
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqK[1] = Water.LiqK[1]
+MatStm3._comp[1]._LiqK[1] = Water.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_408(DATA *data, threadData_t *threadData)
@@ -1443,7 +1443,7 @@ static void heater1_eqFunction_408(DATA *data, threadData_t *threadData)
 /*
 equation index: 409
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapVis[6] = Water.VapVis[6]
+MatStm3._comp[1]._VapVis[6] = Water.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_409(DATA *data, threadData_t *threadData)
@@ -1457,7 +1457,7 @@ static void heater1_eqFunction_409(DATA *data, threadData_t *threadData)
 /*
 equation index: 410
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapVis[5] = Water.VapVis[5]
+MatStm3._comp[1]._VapVis[5] = Water.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_410(DATA *data, threadData_t *threadData)
@@ -1471,7 +1471,7 @@ static void heater1_eqFunction_410(DATA *data, threadData_t *threadData)
 /*
 equation index: 411
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapVis[4] = Water.VapVis[4]
+MatStm3._comp[1]._VapVis[4] = Water.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_411(DATA *data, threadData_t *threadData)
@@ -1485,7 +1485,7 @@ static void heater1_eqFunction_411(DATA *data, threadData_t *threadData)
 /*
 equation index: 412
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapVis[3] = Water.VapVis[3]
+MatStm3._comp[1]._VapVis[3] = Water.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_412(DATA *data, threadData_t *threadData)
@@ -1499,7 +1499,7 @@ static void heater1_eqFunction_412(DATA *data, threadData_t *threadData)
 /*
 equation index: 413
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapVis[2] = Water.VapVis[2]
+MatStm3._comp[1]._VapVis[2] = Water.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_413(DATA *data, threadData_t *threadData)
@@ -1513,7 +1513,7 @@ static void heater1_eqFunction_413(DATA *data, threadData_t *threadData)
 /*
 equation index: 414
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapVis[1] = Water.VapVis[1]
+MatStm3._comp[1]._VapVis[1] = Water.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_414(DATA *data, threadData_t *threadData)
@@ -1527,7 +1527,7 @@ static void heater1_eqFunction_414(DATA *data, threadData_t *threadData)
 /*
 equation index: 415
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqVis[6] = Water.LiqVis[6]
+MatStm3._comp[1]._LiqVis[6] = Water.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_415(DATA *data, threadData_t *threadData)
@@ -1541,7 +1541,7 @@ static void heater1_eqFunction_415(DATA *data, threadData_t *threadData)
 /*
 equation index: 416
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqVis[5] = Water.LiqVis[5]
+MatStm3._comp[1]._LiqVis[5] = Water.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_416(DATA *data, threadData_t *threadData)
@@ -1555,7 +1555,7 @@ static void heater1_eqFunction_416(DATA *data, threadData_t *threadData)
 /*
 equation index: 417
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqVis[4] = Water.LiqVis[4]
+MatStm3._comp[1]._LiqVis[4] = Water.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_417(DATA *data, threadData_t *threadData)
@@ -1569,7 +1569,7 @@ static void heater1_eqFunction_417(DATA *data, threadData_t *threadData)
 /*
 equation index: 418
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqVis[3] = Water.LiqVis[3]
+MatStm3._comp[1]._LiqVis[3] = Water.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_418(DATA *data, threadData_t *threadData)
@@ -1583,7 +1583,7 @@ static void heater1_eqFunction_418(DATA *data, threadData_t *threadData)
 /*
 equation index: 419
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqVis[2] = Water.LiqVis[2]
+MatStm3._comp[1]._LiqVis[2] = Water.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_419(DATA *data, threadData_t *threadData)
@@ -1597,7 +1597,7 @@ static void heater1_eqFunction_419(DATA *data, threadData_t *threadData)
 /*
 equation index: 420
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqVis[1] = Water.LiqVis[1]
+MatStm3._comp[1]._LiqVis[1] = Water.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_420(DATA *data, threadData_t *threadData)
@@ -1611,7 +1611,7 @@ static void heater1_eqFunction_420(DATA *data, threadData_t *threadData)
 /*
 equation index: 421
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapCp[6] = Water.VapCp[6]
+MatStm3._comp[1]._VapCp[6] = Water.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_421(DATA *data, threadData_t *threadData)
@@ -1625,7 +1625,7 @@ static void heater1_eqFunction_421(DATA *data, threadData_t *threadData)
 /*
 equation index: 422
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapCp[5] = Water.VapCp[5]
+MatStm3._comp[1]._VapCp[5] = Water.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_422(DATA *data, threadData_t *threadData)
@@ -1639,7 +1639,7 @@ static void heater1_eqFunction_422(DATA *data, threadData_t *threadData)
 /*
 equation index: 423
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapCp[4] = Water.VapCp[4]
+MatStm3._comp[1]._VapCp[4] = Water.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_423(DATA *data, threadData_t *threadData)
@@ -1653,7 +1653,7 @@ static void heater1_eqFunction_423(DATA *data, threadData_t *threadData)
 /*
 equation index: 424
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapCp[3] = Water.VapCp[3]
+MatStm3._comp[1]._VapCp[3] = Water.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_424(DATA *data, threadData_t *threadData)
@@ -1667,7 +1667,7 @@ static void heater1_eqFunction_424(DATA *data, threadData_t *threadData)
 /*
 equation index: 425
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapCp[2] = Water.VapCp[2]
+MatStm3._comp[1]._VapCp[2] = Water.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_425(DATA *data, threadData_t *threadData)
@@ -1681,7 +1681,7 @@ static void heater1_eqFunction_425(DATA *data, threadData_t *threadData)
 /*
 equation index: 426
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VapCp[1] = Water.VapCp[1]
+MatStm3._comp[1]._VapCp[1] = Water.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_426(DATA *data, threadData_t *threadData)
@@ -1695,7 +1695,7 @@ static void heater1_eqFunction_426(DATA *data, threadData_t *threadData)
 /*
 equation index: 427
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._HOV[6] = Water.HOV[6]
+MatStm3._comp[1]._HOV[6] = Water.HOV[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_427(DATA *data, threadData_t *threadData)
@@ -1709,7 +1709,7 @@ static void heater1_eqFunction_427(DATA *data, threadData_t *threadData)
 /*
 equation index: 428
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._HOV[5] = Water.HOV[5]
+MatStm3._comp[1]._HOV[5] = Water.HOV[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_428(DATA *data, threadData_t *threadData)
@@ -1723,7 +1723,7 @@ static void heater1_eqFunction_428(DATA *data, threadData_t *threadData)
 /*
 equation index: 429
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._HOV[4] = Water.HOV[4]
+MatStm3._comp[1]._HOV[4] = Water.HOV[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_429(DATA *data, threadData_t *threadData)
@@ -1737,7 +1737,7 @@ static void heater1_eqFunction_429(DATA *data, threadData_t *threadData)
 /*
 equation index: 430
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._HOV[3] = Water.HOV[3]
+MatStm3._comp[1]._HOV[3] = Water.HOV[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_430(DATA *data, threadData_t *threadData)
@@ -1751,7 +1751,7 @@ static void heater1_eqFunction_430(DATA *data, threadData_t *threadData)
 /*
 equation index: 431
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._HOV[2] = Water.HOV[2]
+MatStm3._comp[1]._HOV[2] = Water.HOV[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_431(DATA *data, threadData_t *threadData)
@@ -1765,7 +1765,7 @@ static void heater1_eqFunction_431(DATA *data, threadData_t *threadData)
 /*
 equation index: 432
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._HOV[1] = Water.HOV[1]
+MatStm3._comp[1]._HOV[1] = Water.HOV[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_432(DATA *data, threadData_t *threadData)
@@ -1779,7 +1779,7 @@ static void heater1_eqFunction_432(DATA *data, threadData_t *threadData)
 /*
 equation index: 433
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqCp[6] = Water.LiqCp[6]
+MatStm3._comp[1]._LiqCp[6] = Water.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_433(DATA *data, threadData_t *threadData)
@@ -1793,7 +1793,7 @@ static void heater1_eqFunction_433(DATA *data, threadData_t *threadData)
 /*
 equation index: 434
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqCp[5] = Water.LiqCp[5]
+MatStm3._comp[1]._LiqCp[5] = Water.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_434(DATA *data, threadData_t *threadData)
@@ -1807,7 +1807,7 @@ static void heater1_eqFunction_434(DATA *data, threadData_t *threadData)
 /*
 equation index: 435
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqCp[4] = Water.LiqCp[4]
+MatStm3._comp[1]._LiqCp[4] = Water.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_435(DATA *data, threadData_t *threadData)
@@ -1821,7 +1821,7 @@ static void heater1_eqFunction_435(DATA *data, threadData_t *threadData)
 /*
 equation index: 436
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqCp[3] = Water.LiqCp[3]
+MatStm3._comp[1]._LiqCp[3] = Water.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_436(DATA *data, threadData_t *threadData)
@@ -1835,7 +1835,7 @@ static void heater1_eqFunction_436(DATA *data, threadData_t *threadData)
 /*
 equation index: 437
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqCp[2] = Water.LiqCp[2]
+MatStm3._comp[1]._LiqCp[2] = Water.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_437(DATA *data, threadData_t *threadData)
@@ -1849,7 +1849,7 @@ static void heater1_eqFunction_437(DATA *data, threadData_t *threadData)
 /*
 equation index: 438
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqCp[1] = Water.LiqCp[1]
+MatStm3._comp[1]._LiqCp[1] = Water.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_438(DATA *data, threadData_t *threadData)
@@ -1863,7 +1863,7 @@ static void heater1_eqFunction_438(DATA *data, threadData_t *threadData)
 /*
 equation index: 439
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VP[6] = Water.VP[6]
+MatStm3._comp[1]._VP[6] = Water.VP[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_439(DATA *data, threadData_t *threadData)
@@ -1877,7 +1877,7 @@ static void heater1_eqFunction_439(DATA *data, threadData_t *threadData)
 /*
 equation index: 440
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VP[5] = Water.VP[5]
+MatStm3._comp[1]._VP[5] = Water.VP[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_440(DATA *data, threadData_t *threadData)
@@ -1891,7 +1891,7 @@ static void heater1_eqFunction_440(DATA *data, threadData_t *threadData)
 /*
 equation index: 441
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VP[4] = Water.VP[4]
+MatStm3._comp[1]._VP[4] = Water.VP[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_441(DATA *data, threadData_t *threadData)
@@ -1905,7 +1905,7 @@ static void heater1_eqFunction_441(DATA *data, threadData_t *threadData)
 /*
 equation index: 442
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VP[3] = Water.VP[3]
+MatStm3._comp[1]._VP[3] = Water.VP[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_442(DATA *data, threadData_t *threadData)
@@ -1919,7 +1919,7 @@ static void heater1_eqFunction_442(DATA *data, threadData_t *threadData)
 /*
 equation index: 443
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VP[2] = Water.VP[2]
+MatStm3._comp[1]._VP[2] = Water.VP[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_443(DATA *data, threadData_t *threadData)
@@ -1933,7 +1933,7 @@ static void heater1_eqFunction_443(DATA *data, threadData_t *threadData)
 /*
 equation index: 444
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._VP[1] = Water.VP[1]
+MatStm3._comp[1]._VP[1] = Water.VP[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_444(DATA *data, threadData_t *threadData)
@@ -1947,7 +1947,7 @@ static void heater1_eqFunction_444(DATA *data, threadData_t *threadData)
 /*
 equation index: 445
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqDen[6] = Water.LiqDen[6]
+MatStm3._comp[1]._LiqDen[6] = Water.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_445(DATA *data, threadData_t *threadData)
@@ -1961,7 +1961,7 @@ static void heater1_eqFunction_445(DATA *data, threadData_t *threadData)
 /*
 equation index: 446
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqDen[5] = Water.LiqDen[5]
+MatStm3._comp[1]._LiqDen[5] = Water.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_446(DATA *data, threadData_t *threadData)
@@ -1975,7 +1975,7 @@ static void heater1_eqFunction_446(DATA *data, threadData_t *threadData)
 /*
 equation index: 447
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqDen[4] = Water.LiqDen[4]
+MatStm3._comp[1]._LiqDen[4] = Water.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_447(DATA *data, threadData_t *threadData)
@@ -1989,7 +1989,7 @@ static void heater1_eqFunction_447(DATA *data, threadData_t *threadData)
 /*
 equation index: 448
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqDen[3] = Water.LiqDen[3]
+MatStm3._comp[1]._LiqDen[3] = Water.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_448(DATA *data, threadData_t *threadData)
@@ -2003,7 +2003,7 @@ static void heater1_eqFunction_448(DATA *data, threadData_t *threadData)
 /*
 equation index: 449
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqDen[2] = Water.LiqDen[2]
+MatStm3._comp[1]._LiqDen[2] = Water.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_449(DATA *data, threadData_t *threadData)
@@ -2017,7 +2017,7 @@ static void heater1_eqFunction_449(DATA *data, threadData_t *threadData)
 /*
 equation index: 450
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LiqDen[1] = Water.LiqDen[1]
+MatStm3._comp[1]._LiqDen[1] = Water.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_450(DATA *data, threadData_t *threadData)
@@ -2031,7 +2031,7 @@ static void heater1_eqFunction_450(DATA *data, threadData_t *threadData)
 /*
 equation index: 451
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._UniquacQ = Water.UniquacQ
+MatStm3._comp[1]._UniquacQ = Water.UniquacQ
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_451(DATA *data, threadData_t *threadData)
@@ -2045,7 +2045,7 @@ static void heater1_eqFunction_451(DATA *data, threadData_t *threadData)
 /*
 equation index: 452
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._UniquacR = Water.UniquacR
+MatStm3._comp[1]._UniquacR = Water.UniquacR
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_452(DATA *data, threadData_t *threadData)
@@ -2059,7 +2059,7 @@ static void heater1_eqFunction_452(DATA *data, threadData_t *threadData)
 /*
 equation index: 453
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._HOC = Water.HOC
+MatStm3._comp[1]._HOC = Water.HOC
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_453(DATA *data, threadData_t *threadData)
@@ -2073,7 +2073,7 @@ static void heater1_eqFunction_453(DATA *data, threadData_t *threadData)
 /*
 equation index: 454
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._HFMP = Water.HFMP
+MatStm3._comp[1]._HFMP = Water.HFMP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_454(DATA *data, threadData_t *threadData)
@@ -2087,7 +2087,7 @@ static void heater1_eqFunction_454(DATA *data, threadData_t *threadData)
 /*
 equation index: 455
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._AS = Water.AS
+MatStm3._comp[1]._AS = Water.AS
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_455(DATA *data, threadData_t *threadData)
@@ -2101,7 +2101,7 @@ static void heater1_eqFunction_455(DATA *data, threadData_t *threadData)
 /*
 equation index: 456
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._GEF = Water.GEF
+MatStm3._comp[1]._GEF = Water.GEF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_456(DATA *data, threadData_t *threadData)
@@ -2115,7 +2115,7 @@ static void heater1_eqFunction_456(DATA *data, threadData_t *threadData)
 /*
 equation index: 457
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._IGHF = Water.IGHF
+MatStm3._comp[1]._IGHF = Water.IGHF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_457(DATA *data, threadData_t *threadData)
@@ -2129,7 +2129,7 @@ static void heater1_eqFunction_457(DATA *data, threadData_t *threadData)
 /*
 equation index: 458
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._SH = Water.SH
+MatStm3._comp[1]._SH = Water.SH
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_458(DATA *data, threadData_t *threadData)
@@ -2143,7 +2143,7 @@ static void heater1_eqFunction_458(DATA *data, threadData_t *threadData)
 /*
 equation index: 459
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._DM = Water.DM
+MatStm3._comp[1]._DM = Water.DM
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_459(DATA *data, threadData_t *threadData)
@@ -2157,7 +2157,7 @@ static void heater1_eqFunction_459(DATA *data, threadData_t *threadData)
 /*
 equation index: 460
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._SP = Water.SP
+MatStm3._comp[1]._SP = Water.SP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_460(DATA *data, threadData_t *threadData)
@@ -2171,7 +2171,7 @@ static void heater1_eqFunction_460(DATA *data, threadData_t *threadData)
 /*
 equation index: 461
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._AF = Water.AF
+MatStm3._comp[1]._AF = Water.AF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_461(DATA *data, threadData_t *threadData)
@@ -2185,7 +2185,7 @@ static void heater1_eqFunction_461(DATA *data, threadData_t *threadData)
 /*
 equation index: 462
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._LVB = Water.LVB
+MatStm3._comp[1]._LVB = Water.LVB
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_462(DATA *data, threadData_t *threadData)
@@ -2199,7 +2199,7 @@ static void heater1_eqFunction_462(DATA *data, threadData_t *threadData)
 /*
 equation index: 463
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._MW = Water.MW
+MatStm3._comp[1]._MW = Water.MW
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_463(DATA *data, threadData_t *threadData)
@@ -2213,7 +2213,7 @@ static void heater1_eqFunction_463(DATA *data, threadData_t *threadData)
 /*
 equation index: 464
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._TP = Water.TP
+MatStm3._comp[1]._TP = Water.TP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_464(DATA *data, threadData_t *threadData)
@@ -2227,7 +2227,7 @@ static void heater1_eqFunction_464(DATA *data, threadData_t *threadData)
 /*
 equation index: 465
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._TT = Water.TT
+MatStm3._comp[1]._TT = Water.TT
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_465(DATA *data, threadData_t *threadData)
@@ -2241,7 +2241,7 @@ static void heater1_eqFunction_465(DATA *data, threadData_t *threadData)
 /*
 equation index: 466
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._Tm = Water.Tm
+MatStm3._comp[1]._Tm = Water.Tm
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_466(DATA *data, threadData_t *threadData)
@@ -2255,7 +2255,7 @@ static void heater1_eqFunction_466(DATA *data, threadData_t *threadData)
 /*
 equation index: 467
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._Tb = Water.Tb
+MatStm3._comp[1]._Tb = Water.Tb
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_467(DATA *data, threadData_t *threadData)
@@ -2269,7 +2269,7 @@ static void heater1_eqFunction_467(DATA *data, threadData_t *threadData)
 /*
 equation index: 468
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._Cc = Water.Cc
+MatStm3._comp[1]._Cc = Water.Cc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_468(DATA *data, threadData_t *threadData)
@@ -2283,7 +2283,7 @@ static void heater1_eqFunction_468(DATA *data, threadData_t *threadData)
 /*
 equation index: 469
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._Vc = Water.Vc
+MatStm3._comp[1]._Vc = Water.Vc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_469(DATA *data, threadData_t *threadData)
@@ -2297,7 +2297,7 @@ static void heater1_eqFunction_469(DATA *data, threadData_t *threadData)
 /*
 equation index: 470
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._Pc = Water.Pc
+MatStm3._comp[1]._Pc = Water.Pc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_470(DATA *data, threadData_t *threadData)
@@ -2311,7 +2311,7 @@ static void heater1_eqFunction_470(DATA *data, threadData_t *threadData)
 /*
 equation index: 471
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._Tc = Water.Tc
+MatStm3._comp[1]._Tc = Water.Tc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_471(DATA *data, threadData_t *threadData)
@@ -2325,7 +2325,7 @@ static void heater1_eqFunction_471(DATA *data, threadData_t *threadData)
 /*
 equation index: 472
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._CAS = Water.CAS
+MatStm3._comp[1]._CAS = Water.CAS
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_472(DATA *data, threadData_t *threadData)
@@ -2339,7 +2339,7 @@ static void heater1_eqFunction_472(DATA *data, threadData_t *threadData)
 /*
 equation index: 473
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._name = Water.name
+MatStm3._comp[1]._name = Water.name
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_473(DATA *data, threadData_t *threadData)
@@ -2353,7 +2353,7 @@ static void heater1_eqFunction_473(DATA *data, threadData_t *threadData)
 /*
 equation index: 474
 type: SIMPLE_ASSIGN
-MatStm1._comp[1]._SN = Water.SN
+MatStm3._comp[1]._SN = Water.SN
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_474(DATA *data, threadData_t *threadData)
@@ -2367,7 +2367,7 @@ static void heater1_eqFunction_474(DATA *data, threadData_t *threadData)
 /*
 equation index: 478
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
+MatStm4._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_478(DATA *data, threadData_t *threadData)
@@ -2381,7 +2381,7 @@ static void heater1_eqFunction_478(DATA *data, threadData_t *threadData)
 /*
 equation index: 479
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
+MatStm4._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_479(DATA *data, threadData_t *threadData)
@@ -2395,7 +2395,7 @@ static void heater1_eqFunction_479(DATA *data, threadData_t *threadData)
 /*
 equation index: 480
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
+MatStm4._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_480(DATA *data, threadData_t *threadData)
@@ -2409,7 +2409,7 @@ static void heater1_eqFunction_480(DATA *data, threadData_t *threadData)
 /*
 equation index: 481
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Racketparam = Ethanol.Racketparam
+MatStm4._comp[2]._Racketparam = Ethanol.Racketparam
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_481(DATA *data, threadData_t *threadData)
@@ -2423,7 +2423,7 @@ static void heater1_eqFunction_481(DATA *data, threadData_t *threadData)
 /*
 equation index: 482
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[6] = Ethanol.VapK[6]
+MatStm4._comp[2]._VapK[6] = Ethanol.VapK[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_482(DATA *data, threadData_t *threadData)
@@ -2437,7 +2437,7 @@ static void heater1_eqFunction_482(DATA *data, threadData_t *threadData)
 /*
 equation index: 483
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[5] = Ethanol.VapK[5]
+MatStm4._comp[2]._VapK[5] = Ethanol.VapK[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_483(DATA *data, threadData_t *threadData)
@@ -2451,7 +2451,7 @@ static void heater1_eqFunction_483(DATA *data, threadData_t *threadData)
 /*
 equation index: 484
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[4] = Ethanol.VapK[4]
+MatStm4._comp[2]._VapK[4] = Ethanol.VapK[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_484(DATA *data, threadData_t *threadData)
@@ -2465,7 +2465,7 @@ static void heater1_eqFunction_484(DATA *data, threadData_t *threadData)
 /*
 equation index: 485
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[3] = Ethanol.VapK[3]
+MatStm4._comp[2]._VapK[3] = Ethanol.VapK[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_485(DATA *data, threadData_t *threadData)
@@ -2479,7 +2479,7 @@ static void heater1_eqFunction_485(DATA *data, threadData_t *threadData)
 /*
 equation index: 486
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[2] = Ethanol.VapK[2]
+MatStm4._comp[2]._VapK[2] = Ethanol.VapK[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_486(DATA *data, threadData_t *threadData)
@@ -2493,7 +2493,7 @@ static void heater1_eqFunction_486(DATA *data, threadData_t *threadData)
 /*
 equation index: 487
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[1] = Ethanol.VapK[1]
+MatStm4._comp[2]._VapK[1] = Ethanol.VapK[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_487(DATA *data, threadData_t *threadData)
@@ -2507,7 +2507,7 @@ static void heater1_eqFunction_487(DATA *data, threadData_t *threadData)
 /*
 equation index: 488
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[6] = Ethanol.LiqK[6]
+MatStm4._comp[2]._LiqK[6] = Ethanol.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_488(DATA *data, threadData_t *threadData)
@@ -2521,7 +2521,7 @@ static void heater1_eqFunction_488(DATA *data, threadData_t *threadData)
 /*
 equation index: 489
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[5] = Ethanol.LiqK[5]
+MatStm4._comp[2]._LiqK[5] = Ethanol.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_489(DATA *data, threadData_t *threadData)
@@ -2535,7 +2535,7 @@ static void heater1_eqFunction_489(DATA *data, threadData_t *threadData)
 /*
 equation index: 490
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[4] = Ethanol.LiqK[4]
+MatStm4._comp[2]._LiqK[4] = Ethanol.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_490(DATA *data, threadData_t *threadData)
@@ -2549,7 +2549,7 @@ static void heater1_eqFunction_490(DATA *data, threadData_t *threadData)
 /*
 equation index: 491
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[3] = Ethanol.LiqK[3]
+MatStm4._comp[2]._LiqK[3] = Ethanol.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_491(DATA *data, threadData_t *threadData)
@@ -2563,7 +2563,7 @@ static void heater1_eqFunction_491(DATA *data, threadData_t *threadData)
 /*
 equation index: 492
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[2] = Ethanol.LiqK[2]
+MatStm4._comp[2]._LiqK[2] = Ethanol.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_492(DATA *data, threadData_t *threadData)
@@ -2577,7 +2577,7 @@ static void heater1_eqFunction_492(DATA *data, threadData_t *threadData)
 /*
 equation index: 493
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[1] = Ethanol.LiqK[1]
+MatStm4._comp[2]._LiqK[1] = Ethanol.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_493(DATA *data, threadData_t *threadData)
@@ -2591,7 +2591,7 @@ static void heater1_eqFunction_493(DATA *data, threadData_t *threadData)
 /*
 equation index: 494
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[6] = Ethanol.VapVis[6]
+MatStm4._comp[2]._VapVis[6] = Ethanol.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_494(DATA *data, threadData_t *threadData)
@@ -2605,7 +2605,7 @@ static void heater1_eqFunction_494(DATA *data, threadData_t *threadData)
 /*
 equation index: 495
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[5] = Ethanol.VapVis[5]
+MatStm4._comp[2]._VapVis[5] = Ethanol.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_495(DATA *data, threadData_t *threadData)
@@ -2619,7 +2619,7 @@ static void heater1_eqFunction_495(DATA *data, threadData_t *threadData)
 /*
 equation index: 496
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[4] = Ethanol.VapVis[4]
+MatStm4._comp[2]._VapVis[4] = Ethanol.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_496(DATA *data, threadData_t *threadData)
@@ -2633,7 +2633,7 @@ static void heater1_eqFunction_496(DATA *data, threadData_t *threadData)
 /*
 equation index: 497
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[3] = Ethanol.VapVis[3]
+MatStm4._comp[2]._VapVis[3] = Ethanol.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_497(DATA *data, threadData_t *threadData)
@@ -2647,7 +2647,7 @@ static void heater1_eqFunction_497(DATA *data, threadData_t *threadData)
 /*
 equation index: 498
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[2] = Ethanol.VapVis[2]
+MatStm4._comp[2]._VapVis[2] = Ethanol.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_498(DATA *data, threadData_t *threadData)
@@ -2661,7 +2661,7 @@ static void heater1_eqFunction_498(DATA *data, threadData_t *threadData)
 /*
 equation index: 499
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[1] = Ethanol.VapVis[1]
+MatStm4._comp[2]._VapVis[1] = Ethanol.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_499(DATA *data, threadData_t *threadData)
@@ -2675,7 +2675,7 @@ static void heater1_eqFunction_499(DATA *data, threadData_t *threadData)
 /*
 equation index: 500
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
+MatStm4._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_500(DATA *data, threadData_t *threadData)
@@ -2689,7 +2689,7 @@ static void heater1_eqFunction_500(DATA *data, threadData_t *threadData)
 /*
 equation index: 501
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
+MatStm4._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_501(DATA *data, threadData_t *threadData)
@@ -2703,7 +2703,7 @@ static void heater1_eqFunction_501(DATA *data, threadData_t *threadData)
 /*
 equation index: 502
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
+MatStm4._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_502(DATA *data, threadData_t *threadData)
@@ -2717,7 +2717,7 @@ static void heater1_eqFunction_502(DATA *data, threadData_t *threadData)
 /*
 equation index: 503
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
+MatStm4._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_503(DATA *data, threadData_t *threadData)
@@ -2731,7 +2731,7 @@ static void heater1_eqFunction_503(DATA *data, threadData_t *threadData)
 /*
 equation index: 504
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
+MatStm4._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_504(DATA *data, threadData_t *threadData)
@@ -2745,7 +2745,7 @@ static void heater1_eqFunction_504(DATA *data, threadData_t *threadData)
 /*
 equation index: 505
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
+MatStm4._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_505(DATA *data, threadData_t *threadData)
@@ -2759,7 +2759,7 @@ static void heater1_eqFunction_505(DATA *data, threadData_t *threadData)
 /*
 equation index: 506
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[6] = Ethanol.VapCp[6]
+MatStm4._comp[2]._VapCp[6] = Ethanol.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_506(DATA *data, threadData_t *threadData)
@@ -2773,7 +2773,7 @@ static void heater1_eqFunction_506(DATA *data, threadData_t *threadData)
 /*
 equation index: 507
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[5] = Ethanol.VapCp[5]
+MatStm4._comp[2]._VapCp[5] = Ethanol.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_507(DATA *data, threadData_t *threadData)
@@ -2787,7 +2787,7 @@ static void heater1_eqFunction_507(DATA *data, threadData_t *threadData)
 /*
 equation index: 508
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[4] = Ethanol.VapCp[4]
+MatStm4._comp[2]._VapCp[4] = Ethanol.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_508(DATA *data, threadData_t *threadData)
@@ -2801,7 +2801,7 @@ static void heater1_eqFunction_508(DATA *data, threadData_t *threadData)
 /*
 equation index: 509
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[3] = Ethanol.VapCp[3]
+MatStm4._comp[2]._VapCp[3] = Ethanol.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_509(DATA *data, threadData_t *threadData)
@@ -2815,7 +2815,7 @@ static void heater1_eqFunction_509(DATA *data, threadData_t *threadData)
 /*
 equation index: 510
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[2] = Ethanol.VapCp[2]
+MatStm4._comp[2]._VapCp[2] = Ethanol.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_510(DATA *data, threadData_t *threadData)
@@ -2829,7 +2829,7 @@ static void heater1_eqFunction_510(DATA *data, threadData_t *threadData)
 /*
 equation index: 511
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[1] = Ethanol.VapCp[1]
+MatStm4._comp[2]._VapCp[1] = Ethanol.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_511(DATA *data, threadData_t *threadData)
@@ -2843,7 +2843,7 @@ static void heater1_eqFunction_511(DATA *data, threadData_t *threadData)
 /*
 equation index: 512
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[6] = Ethanol.HOV[6]
+MatStm4._comp[2]._HOV[6] = Ethanol.HOV[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_512(DATA *data, threadData_t *threadData)
@@ -2857,7 +2857,7 @@ static void heater1_eqFunction_512(DATA *data, threadData_t *threadData)
 /*
 equation index: 513
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[5] = Ethanol.HOV[5]
+MatStm4._comp[2]._HOV[5] = Ethanol.HOV[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_513(DATA *data, threadData_t *threadData)
@@ -2871,7 +2871,7 @@ static void heater1_eqFunction_513(DATA *data, threadData_t *threadData)
 /*
 equation index: 514
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[4] = Ethanol.HOV[4]
+MatStm4._comp[2]._HOV[4] = Ethanol.HOV[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_514(DATA *data, threadData_t *threadData)
@@ -2885,7 +2885,7 @@ static void heater1_eqFunction_514(DATA *data, threadData_t *threadData)
 /*
 equation index: 515
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[3] = Ethanol.HOV[3]
+MatStm4._comp[2]._HOV[3] = Ethanol.HOV[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_515(DATA *data, threadData_t *threadData)
@@ -2899,7 +2899,7 @@ static void heater1_eqFunction_515(DATA *data, threadData_t *threadData)
 /*
 equation index: 516
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[2] = Ethanol.HOV[2]
+MatStm4._comp[2]._HOV[2] = Ethanol.HOV[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_516(DATA *data, threadData_t *threadData)
@@ -2913,7 +2913,7 @@ static void heater1_eqFunction_516(DATA *data, threadData_t *threadData)
 /*
 equation index: 517
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[1] = Ethanol.HOV[1]
+MatStm4._comp[2]._HOV[1] = Ethanol.HOV[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_517(DATA *data, threadData_t *threadData)
@@ -2927,7 +2927,7 @@ static void heater1_eqFunction_517(DATA *data, threadData_t *threadData)
 /*
 equation index: 518
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
+MatStm4._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_518(DATA *data, threadData_t *threadData)
@@ -2941,7 +2941,7 @@ static void heater1_eqFunction_518(DATA *data, threadData_t *threadData)
 /*
 equation index: 519
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
+MatStm4._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_519(DATA *data, threadData_t *threadData)
@@ -2955,7 +2955,7 @@ static void heater1_eqFunction_519(DATA *data, threadData_t *threadData)
 /*
 equation index: 520
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
+MatStm4._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_520(DATA *data, threadData_t *threadData)
@@ -2969,7 +2969,7 @@ static void heater1_eqFunction_520(DATA *data, threadData_t *threadData)
 /*
 equation index: 521
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
+MatStm4._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_521(DATA *data, threadData_t *threadData)
@@ -2983,7 +2983,7 @@ static void heater1_eqFunction_521(DATA *data, threadData_t *threadData)
 /*
 equation index: 522
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
+MatStm4._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_522(DATA *data, threadData_t *threadData)
@@ -2997,7 +2997,7 @@ static void heater1_eqFunction_522(DATA *data, threadData_t *threadData)
 /*
 equation index: 523
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
+MatStm4._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_523(DATA *data, threadData_t *threadData)
@@ -3011,7 +3011,7 @@ static void heater1_eqFunction_523(DATA *data, threadData_t *threadData)
 /*
 equation index: 524
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[6] = Ethanol.VP[6]
+MatStm4._comp[2]._VP[6] = Ethanol.VP[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_524(DATA *data, threadData_t *threadData)
@@ -3025,7 +3025,7 @@ static void heater1_eqFunction_524(DATA *data, threadData_t *threadData)
 /*
 equation index: 525
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[5] = Ethanol.VP[5]
+MatStm4._comp[2]._VP[5] = Ethanol.VP[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_525(DATA *data, threadData_t *threadData)
@@ -3039,7 +3039,7 @@ static void heater1_eqFunction_525(DATA *data, threadData_t *threadData)
 /*
 equation index: 526
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[4] = Ethanol.VP[4]
+MatStm4._comp[2]._VP[4] = Ethanol.VP[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_526(DATA *data, threadData_t *threadData)
@@ -3053,7 +3053,7 @@ static void heater1_eqFunction_526(DATA *data, threadData_t *threadData)
 /*
 equation index: 527
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[3] = Ethanol.VP[3]
+MatStm4._comp[2]._VP[3] = Ethanol.VP[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_527(DATA *data, threadData_t *threadData)
@@ -3067,7 +3067,7 @@ static void heater1_eqFunction_527(DATA *data, threadData_t *threadData)
 /*
 equation index: 528
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[2] = Ethanol.VP[2]
+MatStm4._comp[2]._VP[2] = Ethanol.VP[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_528(DATA *data, threadData_t *threadData)
@@ -3081,7 +3081,7 @@ static void heater1_eqFunction_528(DATA *data, threadData_t *threadData)
 /*
 equation index: 529
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[1] = Ethanol.VP[1]
+MatStm4._comp[2]._VP[1] = Ethanol.VP[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_529(DATA *data, threadData_t *threadData)
@@ -3095,7 +3095,7 @@ static void heater1_eqFunction_529(DATA *data, threadData_t *threadData)
 /*
 equation index: 530
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
+MatStm4._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_530(DATA *data, threadData_t *threadData)
@@ -3109,7 +3109,7 @@ static void heater1_eqFunction_530(DATA *data, threadData_t *threadData)
 /*
 equation index: 531
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
+MatStm4._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_531(DATA *data, threadData_t *threadData)
@@ -3123,7 +3123,7 @@ static void heater1_eqFunction_531(DATA *data, threadData_t *threadData)
 /*
 equation index: 532
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
+MatStm4._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_532(DATA *data, threadData_t *threadData)
@@ -3137,7 +3137,7 @@ static void heater1_eqFunction_532(DATA *data, threadData_t *threadData)
 /*
 equation index: 533
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
+MatStm4._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_533(DATA *data, threadData_t *threadData)
@@ -3151,7 +3151,7 @@ static void heater1_eqFunction_533(DATA *data, threadData_t *threadData)
 /*
 equation index: 534
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
+MatStm4._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_534(DATA *data, threadData_t *threadData)
@@ -3165,7 +3165,7 @@ static void heater1_eqFunction_534(DATA *data, threadData_t *threadData)
 /*
 equation index: 535
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
+MatStm4._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_535(DATA *data, threadData_t *threadData)
@@ -3179,7 +3179,7 @@ static void heater1_eqFunction_535(DATA *data, threadData_t *threadData)
 /*
 equation index: 536
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._UniquacQ = Ethanol.UniquacQ
+MatStm4._comp[2]._UniquacQ = Ethanol.UniquacQ
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_536(DATA *data, threadData_t *threadData)
@@ -3193,7 +3193,7 @@ static void heater1_eqFunction_536(DATA *data, threadData_t *threadData)
 /*
 equation index: 537
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._UniquacR = Ethanol.UniquacR
+MatStm4._comp[2]._UniquacR = Ethanol.UniquacR
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_537(DATA *data, threadData_t *threadData)
@@ -3207,7 +3207,7 @@ static void heater1_eqFunction_537(DATA *data, threadData_t *threadData)
 /*
 equation index: 538
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOC = Ethanol.HOC
+MatStm4._comp[2]._HOC = Ethanol.HOC
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_538(DATA *data, threadData_t *threadData)
@@ -3221,7 +3221,7 @@ static void heater1_eqFunction_538(DATA *data, threadData_t *threadData)
 /*
 equation index: 539
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HFMP = Ethanol.HFMP
+MatStm4._comp[2]._HFMP = Ethanol.HFMP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_539(DATA *data, threadData_t *threadData)
@@ -3235,7 +3235,7 @@ static void heater1_eqFunction_539(DATA *data, threadData_t *threadData)
 /*
 equation index: 540
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._AS = Ethanol.AS
+MatStm4._comp[2]._AS = Ethanol.AS
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_540(DATA *data, threadData_t *threadData)
@@ -3249,7 +3249,7 @@ static void heater1_eqFunction_540(DATA *data, threadData_t *threadData)
 /*
 equation index: 541
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._GEF = Ethanol.GEF
+MatStm4._comp[2]._GEF = Ethanol.GEF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_541(DATA *data, threadData_t *threadData)
@@ -3263,7 +3263,7 @@ static void heater1_eqFunction_541(DATA *data, threadData_t *threadData)
 /*
 equation index: 542
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._IGHF = Ethanol.IGHF
+MatStm4._comp[2]._IGHF = Ethanol.IGHF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_542(DATA *data, threadData_t *threadData)
@@ -3277,7 +3277,7 @@ static void heater1_eqFunction_542(DATA *data, threadData_t *threadData)
 /*
 equation index: 543
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._SH = Ethanol.SH
+MatStm4._comp[2]._SH = Ethanol.SH
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_543(DATA *data, threadData_t *threadData)
@@ -3291,7 +3291,7 @@ static void heater1_eqFunction_543(DATA *data, threadData_t *threadData)
 /*
 equation index: 544
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._DM = Ethanol.DM
+MatStm4._comp[2]._DM = Ethanol.DM
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_544(DATA *data, threadData_t *threadData)
@@ -3305,7 +3305,7 @@ static void heater1_eqFunction_544(DATA *data, threadData_t *threadData)
 /*
 equation index: 545
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._SP = Ethanol.SP
+MatStm4._comp[2]._SP = Ethanol.SP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_545(DATA *data, threadData_t *threadData)
@@ -3319,7 +3319,7 @@ static void heater1_eqFunction_545(DATA *data, threadData_t *threadData)
 /*
 equation index: 546
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._AF = Ethanol.AF
+MatStm4._comp[2]._AF = Ethanol.AF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_546(DATA *data, threadData_t *threadData)
@@ -3333,7 +3333,7 @@ static void heater1_eqFunction_546(DATA *data, threadData_t *threadData)
 /*
 equation index: 547
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LVB = Ethanol.LVB
+MatStm4._comp[2]._LVB = Ethanol.LVB
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_547(DATA *data, threadData_t *threadData)
@@ -3347,7 +3347,7 @@ static void heater1_eqFunction_547(DATA *data, threadData_t *threadData)
 /*
 equation index: 548
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._MW = Ethanol.MW
+MatStm4._comp[2]._MW = Ethanol.MW
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_548(DATA *data, threadData_t *threadData)
@@ -3361,7 +3361,7 @@ static void heater1_eqFunction_548(DATA *data, threadData_t *threadData)
 /*
 equation index: 549
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._TP = Ethanol.TP
+MatStm4._comp[2]._TP = Ethanol.TP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_549(DATA *data, threadData_t *threadData)
@@ -3375,7 +3375,7 @@ static void heater1_eqFunction_549(DATA *data, threadData_t *threadData)
 /*
 equation index: 550
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._TT = Ethanol.TT
+MatStm4._comp[2]._TT = Ethanol.TT
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_550(DATA *data, threadData_t *threadData)
@@ -3389,7 +3389,7 @@ static void heater1_eqFunction_550(DATA *data, threadData_t *threadData)
 /*
 equation index: 551
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Tm = Ethanol.Tm
+MatStm4._comp[2]._Tm = Ethanol.Tm
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_551(DATA *data, threadData_t *threadData)
@@ -3403,7 +3403,7 @@ static void heater1_eqFunction_551(DATA *data, threadData_t *threadData)
 /*
 equation index: 552
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Tb = Ethanol.Tb
+MatStm4._comp[2]._Tb = Ethanol.Tb
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_552(DATA *data, threadData_t *threadData)
@@ -3417,7 +3417,7 @@ static void heater1_eqFunction_552(DATA *data, threadData_t *threadData)
 /*
 equation index: 553
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Cc = Ethanol.Cc
+MatStm4._comp[2]._Cc = Ethanol.Cc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_553(DATA *data, threadData_t *threadData)
@@ -3431,7 +3431,7 @@ static void heater1_eqFunction_553(DATA *data, threadData_t *threadData)
 /*
 equation index: 554
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Vc = Ethanol.Vc
+MatStm4._comp[2]._Vc = Ethanol.Vc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_554(DATA *data, threadData_t *threadData)
@@ -3445,7 +3445,7 @@ static void heater1_eqFunction_554(DATA *data, threadData_t *threadData)
 /*
 equation index: 555
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Pc = Ethanol.Pc
+MatStm4._comp[2]._Pc = Ethanol.Pc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_555(DATA *data, threadData_t *threadData)
@@ -3459,7 +3459,7 @@ static void heater1_eqFunction_555(DATA *data, threadData_t *threadData)
 /*
 equation index: 556
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Tc = Ethanol.Tc
+MatStm4._comp[2]._Tc = Ethanol.Tc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_556(DATA *data, threadData_t *threadData)
@@ -3473,7 +3473,7 @@ static void heater1_eqFunction_556(DATA *data, threadData_t *threadData)
 /*
 equation index: 557
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._CAS = Ethanol.CAS
+MatStm4._comp[2]._CAS = Ethanol.CAS
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_557(DATA *data, threadData_t *threadData)
@@ -3487,7 +3487,7 @@ static void heater1_eqFunction_557(DATA *data, threadData_t *threadData)
 /*
 equation index: 558
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._name = Ethanol.name
+MatStm4._comp[2]._name = Ethanol.name
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_558(DATA *data, threadData_t *threadData)
@@ -3501,7 +3501,7 @@ static void heater1_eqFunction_558(DATA *data, threadData_t *threadData)
 /*
 equation index: 559
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._SN = Ethanol.SN
+MatStm4._comp[2]._SN = Ethanol.SN
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_559(DATA *data, threadData_t *threadData)
@@ -3515,7 +3515,7 @@ static void heater1_eqFunction_559(DATA *data, threadData_t *threadData)
 /*
 equation index: 560
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
+MatStm4._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_560(DATA *data, threadData_t *threadData)
@@ -3529,7 +3529,7 @@ static void heater1_eqFunction_560(DATA *data, threadData_t *threadData)
 /*
 equation index: 561
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
+MatStm4._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_561(DATA *data, threadData_t *threadData)
@@ -3543,7 +3543,7 @@ static void heater1_eqFunction_561(DATA *data, threadData_t *threadData)
 /*
 equation index: 562
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
+MatStm4._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_562(DATA *data, threadData_t *threadData)
@@ -3557,7 +3557,7 @@ static void heater1_eqFunction_562(DATA *data, threadData_t *threadData)
 /*
 equation index: 563
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Racketparam = Water.Racketparam
+MatStm4._comp[1]._Racketparam = Water.Racketparam
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_563(DATA *data, threadData_t *threadData)
@@ -3571,7 +3571,7 @@ static void heater1_eqFunction_563(DATA *data, threadData_t *threadData)
 /*
 equation index: 564
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[6] = Water.VapK[6]
+MatStm4._comp[1]._VapK[6] = Water.VapK[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_564(DATA *data, threadData_t *threadData)
@@ -3585,7 +3585,7 @@ static void heater1_eqFunction_564(DATA *data, threadData_t *threadData)
 /*
 equation index: 565
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[5] = Water.VapK[5]
+MatStm4._comp[1]._VapK[5] = Water.VapK[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_565(DATA *data, threadData_t *threadData)
@@ -3599,7 +3599,7 @@ static void heater1_eqFunction_565(DATA *data, threadData_t *threadData)
 /*
 equation index: 566
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[4] = Water.VapK[4]
+MatStm4._comp[1]._VapK[4] = Water.VapK[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_566(DATA *data, threadData_t *threadData)
@@ -3613,7 +3613,7 @@ static void heater1_eqFunction_566(DATA *data, threadData_t *threadData)
 /*
 equation index: 567
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[3] = Water.VapK[3]
+MatStm4._comp[1]._VapK[3] = Water.VapK[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_567(DATA *data, threadData_t *threadData)
@@ -3627,7 +3627,7 @@ static void heater1_eqFunction_567(DATA *data, threadData_t *threadData)
 /*
 equation index: 568
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[2] = Water.VapK[2]
+MatStm4._comp[1]._VapK[2] = Water.VapK[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_568(DATA *data, threadData_t *threadData)
@@ -3641,7 +3641,7 @@ static void heater1_eqFunction_568(DATA *data, threadData_t *threadData)
 /*
 equation index: 569
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[1] = Water.VapK[1]
+MatStm4._comp[1]._VapK[1] = Water.VapK[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_569(DATA *data, threadData_t *threadData)
@@ -3655,7 +3655,7 @@ static void heater1_eqFunction_569(DATA *data, threadData_t *threadData)
 /*
 equation index: 570
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[6] = Water.LiqK[6]
+MatStm4._comp[1]._LiqK[6] = Water.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_570(DATA *data, threadData_t *threadData)
@@ -3669,7 +3669,7 @@ static void heater1_eqFunction_570(DATA *data, threadData_t *threadData)
 /*
 equation index: 571
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[5] = Water.LiqK[5]
+MatStm4._comp[1]._LiqK[5] = Water.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_571(DATA *data, threadData_t *threadData)
@@ -3683,7 +3683,7 @@ static void heater1_eqFunction_571(DATA *data, threadData_t *threadData)
 /*
 equation index: 572
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[4] = Water.LiqK[4]
+MatStm4._comp[1]._LiqK[4] = Water.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_572(DATA *data, threadData_t *threadData)
@@ -3697,7 +3697,7 @@ static void heater1_eqFunction_572(DATA *data, threadData_t *threadData)
 /*
 equation index: 573
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[3] = Water.LiqK[3]
+MatStm4._comp[1]._LiqK[3] = Water.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_573(DATA *data, threadData_t *threadData)
@@ -3711,7 +3711,7 @@ static void heater1_eqFunction_573(DATA *data, threadData_t *threadData)
 /*
 equation index: 574
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[2] = Water.LiqK[2]
+MatStm4._comp[1]._LiqK[2] = Water.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_574(DATA *data, threadData_t *threadData)
@@ -3725,7 +3725,7 @@ static void heater1_eqFunction_574(DATA *data, threadData_t *threadData)
 /*
 equation index: 575
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[1] = Water.LiqK[1]
+MatStm4._comp[1]._LiqK[1] = Water.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_575(DATA *data, threadData_t *threadData)
@@ -3739,7 +3739,7 @@ static void heater1_eqFunction_575(DATA *data, threadData_t *threadData)
 /*
 equation index: 576
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[6] = Water.VapVis[6]
+MatStm4._comp[1]._VapVis[6] = Water.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_576(DATA *data, threadData_t *threadData)
@@ -3753,7 +3753,7 @@ static void heater1_eqFunction_576(DATA *data, threadData_t *threadData)
 /*
 equation index: 577
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[5] = Water.VapVis[5]
+MatStm4._comp[1]._VapVis[5] = Water.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_577(DATA *data, threadData_t *threadData)
@@ -3767,7 +3767,7 @@ static void heater1_eqFunction_577(DATA *data, threadData_t *threadData)
 /*
 equation index: 578
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[4] = Water.VapVis[4]
+MatStm4._comp[1]._VapVis[4] = Water.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_578(DATA *data, threadData_t *threadData)
@@ -3781,7 +3781,7 @@ static void heater1_eqFunction_578(DATA *data, threadData_t *threadData)
 /*
 equation index: 579
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[3] = Water.VapVis[3]
+MatStm4._comp[1]._VapVis[3] = Water.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_579(DATA *data, threadData_t *threadData)
@@ -3795,7 +3795,7 @@ static void heater1_eqFunction_579(DATA *data, threadData_t *threadData)
 /*
 equation index: 580
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[2] = Water.VapVis[2]
+MatStm4._comp[1]._VapVis[2] = Water.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_580(DATA *data, threadData_t *threadData)
@@ -3809,7 +3809,7 @@ static void heater1_eqFunction_580(DATA *data, threadData_t *threadData)
 /*
 equation index: 581
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[1] = Water.VapVis[1]
+MatStm4._comp[1]._VapVis[1] = Water.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_581(DATA *data, threadData_t *threadData)
@@ -3823,7 +3823,7 @@ static void heater1_eqFunction_581(DATA *data, threadData_t *threadData)
 /*
 equation index: 582
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[6] = Water.LiqVis[6]
+MatStm4._comp[1]._LiqVis[6] = Water.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_582(DATA *data, threadData_t *threadData)
@@ -3837,7 +3837,7 @@ static void heater1_eqFunction_582(DATA *data, threadData_t *threadData)
 /*
 equation index: 583
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[5] = Water.LiqVis[5]
+MatStm4._comp[1]._LiqVis[5] = Water.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_583(DATA *data, threadData_t *threadData)
@@ -3851,7 +3851,7 @@ static void heater1_eqFunction_583(DATA *data, threadData_t *threadData)
 /*
 equation index: 584
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[4] = Water.LiqVis[4]
+MatStm4._comp[1]._LiqVis[4] = Water.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_584(DATA *data, threadData_t *threadData)
@@ -3865,7 +3865,7 @@ static void heater1_eqFunction_584(DATA *data, threadData_t *threadData)
 /*
 equation index: 585
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[3] = Water.LiqVis[3]
+MatStm4._comp[1]._LiqVis[3] = Water.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_585(DATA *data, threadData_t *threadData)
@@ -3879,7 +3879,7 @@ static void heater1_eqFunction_585(DATA *data, threadData_t *threadData)
 /*
 equation index: 586
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[2] = Water.LiqVis[2]
+MatStm4._comp[1]._LiqVis[2] = Water.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_586(DATA *data, threadData_t *threadData)
@@ -3893,7 +3893,7 @@ static void heater1_eqFunction_586(DATA *data, threadData_t *threadData)
 /*
 equation index: 587
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[1] = Water.LiqVis[1]
+MatStm4._comp[1]._LiqVis[1] = Water.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_587(DATA *data, threadData_t *threadData)
@@ -3907,7 +3907,7 @@ static void heater1_eqFunction_587(DATA *data, threadData_t *threadData)
 /*
 equation index: 588
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[6] = Water.VapCp[6]
+MatStm4._comp[1]._VapCp[6] = Water.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_588(DATA *data, threadData_t *threadData)
@@ -3921,7 +3921,7 @@ static void heater1_eqFunction_588(DATA *data, threadData_t *threadData)
 /*
 equation index: 589
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[5] = Water.VapCp[5]
+MatStm4._comp[1]._VapCp[5] = Water.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_589(DATA *data, threadData_t *threadData)
@@ -3935,7 +3935,7 @@ static void heater1_eqFunction_589(DATA *data, threadData_t *threadData)
 /*
 equation index: 590
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[4] = Water.VapCp[4]
+MatStm4._comp[1]._VapCp[4] = Water.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_590(DATA *data, threadData_t *threadData)
@@ -3949,7 +3949,7 @@ static void heater1_eqFunction_590(DATA *data, threadData_t *threadData)
 /*
 equation index: 591
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[3] = Water.VapCp[3]
+MatStm4._comp[1]._VapCp[3] = Water.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_591(DATA *data, threadData_t *threadData)
@@ -3963,7 +3963,7 @@ static void heater1_eqFunction_591(DATA *data, threadData_t *threadData)
 /*
 equation index: 592
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[2] = Water.VapCp[2]
+MatStm4._comp[1]._VapCp[2] = Water.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_592(DATA *data, threadData_t *threadData)
@@ -3977,7 +3977,7 @@ static void heater1_eqFunction_592(DATA *data, threadData_t *threadData)
 /*
 equation index: 593
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[1] = Water.VapCp[1]
+MatStm4._comp[1]._VapCp[1] = Water.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_593(DATA *data, threadData_t *threadData)
@@ -3991,7 +3991,7 @@ static void heater1_eqFunction_593(DATA *data, threadData_t *threadData)
 /*
 equation index: 594
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[6] = Water.HOV[6]
+MatStm4._comp[1]._HOV[6] = Water.HOV[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_594(DATA *data, threadData_t *threadData)
@@ -4005,7 +4005,7 @@ static void heater1_eqFunction_594(DATA *data, threadData_t *threadData)
 /*
 equation index: 595
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[5] = Water.HOV[5]
+MatStm4._comp[1]._HOV[5] = Water.HOV[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_595(DATA *data, threadData_t *threadData)
@@ -4019,7 +4019,7 @@ static void heater1_eqFunction_595(DATA *data, threadData_t *threadData)
 /*
 equation index: 596
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[4] = Water.HOV[4]
+MatStm4._comp[1]._HOV[4] = Water.HOV[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_596(DATA *data, threadData_t *threadData)
@@ -4033,7 +4033,7 @@ static void heater1_eqFunction_596(DATA *data, threadData_t *threadData)
 /*
 equation index: 597
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[3] = Water.HOV[3]
+MatStm4._comp[1]._HOV[3] = Water.HOV[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_597(DATA *data, threadData_t *threadData)
@@ -4047,7 +4047,7 @@ static void heater1_eqFunction_597(DATA *data, threadData_t *threadData)
 /*
 equation index: 598
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[2] = Water.HOV[2]
+MatStm4._comp[1]._HOV[2] = Water.HOV[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_598(DATA *data, threadData_t *threadData)
@@ -4061,7 +4061,7 @@ static void heater1_eqFunction_598(DATA *data, threadData_t *threadData)
 /*
 equation index: 599
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[1] = Water.HOV[1]
+MatStm4._comp[1]._HOV[1] = Water.HOV[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_599(DATA *data, threadData_t *threadData)
@@ -4075,7 +4075,7 @@ static void heater1_eqFunction_599(DATA *data, threadData_t *threadData)
 /*
 equation index: 600
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[6] = Water.LiqCp[6]
+MatStm4._comp[1]._LiqCp[6] = Water.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_600(DATA *data, threadData_t *threadData)
@@ -4089,7 +4089,7 @@ static void heater1_eqFunction_600(DATA *data, threadData_t *threadData)
 /*
 equation index: 601
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[5] = Water.LiqCp[5]
+MatStm4._comp[1]._LiqCp[5] = Water.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_601(DATA *data, threadData_t *threadData)
@@ -4103,7 +4103,7 @@ static void heater1_eqFunction_601(DATA *data, threadData_t *threadData)
 /*
 equation index: 602
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[4] = Water.LiqCp[4]
+MatStm4._comp[1]._LiqCp[4] = Water.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_602(DATA *data, threadData_t *threadData)
@@ -4117,7 +4117,7 @@ static void heater1_eqFunction_602(DATA *data, threadData_t *threadData)
 /*
 equation index: 603
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[3] = Water.LiqCp[3]
+MatStm4._comp[1]._LiqCp[3] = Water.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_603(DATA *data, threadData_t *threadData)
@@ -4131,7 +4131,7 @@ static void heater1_eqFunction_603(DATA *data, threadData_t *threadData)
 /*
 equation index: 604
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[2] = Water.LiqCp[2]
+MatStm4._comp[1]._LiqCp[2] = Water.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_604(DATA *data, threadData_t *threadData)
@@ -4145,7 +4145,7 @@ static void heater1_eqFunction_604(DATA *data, threadData_t *threadData)
 /*
 equation index: 605
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[1] = Water.LiqCp[1]
+MatStm4._comp[1]._LiqCp[1] = Water.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_605(DATA *data, threadData_t *threadData)
@@ -4159,7 +4159,7 @@ static void heater1_eqFunction_605(DATA *data, threadData_t *threadData)
 /*
 equation index: 606
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[6] = Water.VP[6]
+MatStm4._comp[1]._VP[6] = Water.VP[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_606(DATA *data, threadData_t *threadData)
@@ -4173,7 +4173,7 @@ static void heater1_eqFunction_606(DATA *data, threadData_t *threadData)
 /*
 equation index: 607
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[5] = Water.VP[5]
+MatStm4._comp[1]._VP[5] = Water.VP[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_607(DATA *data, threadData_t *threadData)
@@ -4187,7 +4187,7 @@ static void heater1_eqFunction_607(DATA *data, threadData_t *threadData)
 /*
 equation index: 608
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[4] = Water.VP[4]
+MatStm4._comp[1]._VP[4] = Water.VP[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_608(DATA *data, threadData_t *threadData)
@@ -4201,7 +4201,7 @@ static void heater1_eqFunction_608(DATA *data, threadData_t *threadData)
 /*
 equation index: 609
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[3] = Water.VP[3]
+MatStm4._comp[1]._VP[3] = Water.VP[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_609(DATA *data, threadData_t *threadData)
@@ -4215,7 +4215,7 @@ static void heater1_eqFunction_609(DATA *data, threadData_t *threadData)
 /*
 equation index: 610
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[2] = Water.VP[2]
+MatStm4._comp[1]._VP[2] = Water.VP[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_610(DATA *data, threadData_t *threadData)
@@ -4229,7 +4229,7 @@ static void heater1_eqFunction_610(DATA *data, threadData_t *threadData)
 /*
 equation index: 611
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[1] = Water.VP[1]
+MatStm4._comp[1]._VP[1] = Water.VP[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_611(DATA *data, threadData_t *threadData)
@@ -4243,7 +4243,7 @@ static void heater1_eqFunction_611(DATA *data, threadData_t *threadData)
 /*
 equation index: 612
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[6] = Water.LiqDen[6]
+MatStm4._comp[1]._LiqDen[6] = Water.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_612(DATA *data, threadData_t *threadData)
@@ -4257,7 +4257,7 @@ static void heater1_eqFunction_612(DATA *data, threadData_t *threadData)
 /*
 equation index: 613
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[5] = Water.LiqDen[5]
+MatStm4._comp[1]._LiqDen[5] = Water.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_613(DATA *data, threadData_t *threadData)
@@ -4271,7 +4271,7 @@ static void heater1_eqFunction_613(DATA *data, threadData_t *threadData)
 /*
 equation index: 614
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[4] = Water.LiqDen[4]
+MatStm4._comp[1]._LiqDen[4] = Water.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_614(DATA *data, threadData_t *threadData)
@@ -4285,7 +4285,7 @@ static void heater1_eqFunction_614(DATA *data, threadData_t *threadData)
 /*
 equation index: 615
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[3] = Water.LiqDen[3]
+MatStm4._comp[1]._LiqDen[3] = Water.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_615(DATA *data, threadData_t *threadData)
@@ -4299,7 +4299,7 @@ static void heater1_eqFunction_615(DATA *data, threadData_t *threadData)
 /*
 equation index: 616
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[2] = Water.LiqDen[2]
+MatStm4._comp[1]._LiqDen[2] = Water.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_616(DATA *data, threadData_t *threadData)
@@ -4313,7 +4313,7 @@ static void heater1_eqFunction_616(DATA *data, threadData_t *threadData)
 /*
 equation index: 617
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[1] = Water.LiqDen[1]
+MatStm4._comp[1]._LiqDen[1] = Water.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_617(DATA *data, threadData_t *threadData)
@@ -4327,7 +4327,7 @@ static void heater1_eqFunction_617(DATA *data, threadData_t *threadData)
 /*
 equation index: 618
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._UniquacQ = Water.UniquacQ
+MatStm4._comp[1]._UniquacQ = Water.UniquacQ
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_618(DATA *data, threadData_t *threadData)
@@ -4341,7 +4341,7 @@ static void heater1_eqFunction_618(DATA *data, threadData_t *threadData)
 /*
 equation index: 619
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._UniquacR = Water.UniquacR
+MatStm4._comp[1]._UniquacR = Water.UniquacR
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_619(DATA *data, threadData_t *threadData)
@@ -4355,7 +4355,7 @@ static void heater1_eqFunction_619(DATA *data, threadData_t *threadData)
 /*
 equation index: 620
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOC = Water.HOC
+MatStm4._comp[1]._HOC = Water.HOC
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_620(DATA *data, threadData_t *threadData)
@@ -4369,7 +4369,7 @@ static void heater1_eqFunction_620(DATA *data, threadData_t *threadData)
 /*
 equation index: 621
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HFMP = Water.HFMP
+MatStm4._comp[1]._HFMP = Water.HFMP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_621(DATA *data, threadData_t *threadData)
@@ -4383,7 +4383,7 @@ static void heater1_eqFunction_621(DATA *data, threadData_t *threadData)
 /*
 equation index: 622
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._AS = Water.AS
+MatStm4._comp[1]._AS = Water.AS
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_622(DATA *data, threadData_t *threadData)
@@ -4397,7 +4397,7 @@ static void heater1_eqFunction_622(DATA *data, threadData_t *threadData)
 /*
 equation index: 623
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._GEF = Water.GEF
+MatStm4._comp[1]._GEF = Water.GEF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_623(DATA *data, threadData_t *threadData)
@@ -4411,7 +4411,7 @@ static void heater1_eqFunction_623(DATA *data, threadData_t *threadData)
 /*
 equation index: 624
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._IGHF = Water.IGHF
+MatStm4._comp[1]._IGHF = Water.IGHF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_624(DATA *data, threadData_t *threadData)
@@ -4425,7 +4425,7 @@ static void heater1_eqFunction_624(DATA *data, threadData_t *threadData)
 /*
 equation index: 625
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._SH = Water.SH
+MatStm4._comp[1]._SH = Water.SH
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_625(DATA *data, threadData_t *threadData)
@@ -4439,7 +4439,7 @@ static void heater1_eqFunction_625(DATA *data, threadData_t *threadData)
 /*
 equation index: 626
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._DM = Water.DM
+MatStm4._comp[1]._DM = Water.DM
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_626(DATA *data, threadData_t *threadData)
@@ -4453,7 +4453,7 @@ static void heater1_eqFunction_626(DATA *data, threadData_t *threadData)
 /*
 equation index: 627
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._SP = Water.SP
+MatStm4._comp[1]._SP = Water.SP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_627(DATA *data, threadData_t *threadData)
@@ -4467,7 +4467,7 @@ static void heater1_eqFunction_627(DATA *data, threadData_t *threadData)
 /*
 equation index: 628
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._AF = Water.AF
+MatStm4._comp[1]._AF = Water.AF
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_628(DATA *data, threadData_t *threadData)
@@ -4481,7 +4481,7 @@ static void heater1_eqFunction_628(DATA *data, threadData_t *threadData)
 /*
 equation index: 629
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LVB = Water.LVB
+MatStm4._comp[1]._LVB = Water.LVB
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_629(DATA *data, threadData_t *threadData)
@@ -4495,7 +4495,7 @@ static void heater1_eqFunction_629(DATA *data, threadData_t *threadData)
 /*
 equation index: 630
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._MW = Water.MW
+MatStm4._comp[1]._MW = Water.MW
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_630(DATA *data, threadData_t *threadData)
@@ -4509,7 +4509,7 @@ static void heater1_eqFunction_630(DATA *data, threadData_t *threadData)
 /*
 equation index: 631
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._TP = Water.TP
+MatStm4._comp[1]._TP = Water.TP
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_631(DATA *data, threadData_t *threadData)
@@ -4523,7 +4523,7 @@ static void heater1_eqFunction_631(DATA *data, threadData_t *threadData)
 /*
 equation index: 632
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._TT = Water.TT
+MatStm4._comp[1]._TT = Water.TT
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_632(DATA *data, threadData_t *threadData)
@@ -4537,7 +4537,7 @@ static void heater1_eqFunction_632(DATA *data, threadData_t *threadData)
 /*
 equation index: 633
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Tm = Water.Tm
+MatStm4._comp[1]._Tm = Water.Tm
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_633(DATA *data, threadData_t *threadData)
@@ -4551,7 +4551,7 @@ static void heater1_eqFunction_633(DATA *data, threadData_t *threadData)
 /*
 equation index: 634
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Tb = Water.Tb
+MatStm4._comp[1]._Tb = Water.Tb
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_634(DATA *data, threadData_t *threadData)
@@ -4565,7 +4565,7 @@ static void heater1_eqFunction_634(DATA *data, threadData_t *threadData)
 /*
 equation index: 635
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Cc = Water.Cc
+MatStm4._comp[1]._Cc = Water.Cc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_635(DATA *data, threadData_t *threadData)
@@ -4579,7 +4579,7 @@ static void heater1_eqFunction_635(DATA *data, threadData_t *threadData)
 /*
 equation index: 636
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Vc = Water.Vc
+MatStm4._comp[1]._Vc = Water.Vc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_636(DATA *data, threadData_t *threadData)
@@ -4593,7 +4593,7 @@ static void heater1_eqFunction_636(DATA *data, threadData_t *threadData)
 /*
 equation index: 637
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Pc = Water.Pc
+MatStm4._comp[1]._Pc = Water.Pc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_637(DATA *data, threadData_t *threadData)
@@ -4607,7 +4607,7 @@ static void heater1_eqFunction_637(DATA *data, threadData_t *threadData)
 /*
 equation index: 638
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Tc = Water.Tc
+MatStm4._comp[1]._Tc = Water.Tc
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_638(DATA *data, threadData_t *threadData)
@@ -4621,7 +4621,7 @@ static void heater1_eqFunction_638(DATA *data, threadData_t *threadData)
 /*
 equation index: 639
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._CAS = Water.CAS
+MatStm4._comp[1]._CAS = Water.CAS
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_639(DATA *data, threadData_t *threadData)
@@ -4635,7 +4635,7 @@ static void heater1_eqFunction_639(DATA *data, threadData_t *threadData)
 /*
 equation index: 640
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._name = Water.name
+MatStm4._comp[1]._name = Water.name
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_640(DATA *data, threadData_t *threadData)
@@ -4649,7 +4649,7 @@ static void heater1_eqFunction_640(DATA *data, threadData_t *threadData)
 /*
 equation index: 641
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._SN = Water.SN
+MatStm4._comp[1]._SN = Water.SN
 */
 OMC_DISABLE_OPT
 static void heater1_eqFunction_641(DATA *data, threadData_t *threadData)

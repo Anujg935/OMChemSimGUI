@@ -1,7 +1,6 @@
 within Simulator.Unit_Operations;
 
 model Mixer
-  extends Simulator.Files.Icons.Mixer;
   import Simulator.Files.*;
   parameter Integer NOC "Number of Components", NI = 6 "Number of Input streams";
   parameter Chemsep_Database.General_Properties comp[NOC];

@@ -42,12 +42,14 @@ class resdockWidget(QDockWidget,ui_dialog):
 
     def resultsCategory(self,name):
         try:
+            print("Under result category")
             result=self.Container.result
             obj = self.Container.fetchObject(name)
             if obj.type =="MatStm":
                 self.tableWidget.setRowCount(0);
                 for key, value in obj.Prop.items():
                     propertyname = name + '.' + key
+                    print(key,value)
                     if propertyname in result[0]:
                         ind = result[0].index(propertyname)
                         resultval = str(result[-1][ind])
@@ -63,7 +65,6 @@ class resdockWidget(QDockWidget,ui_dialog):
 
 
     def resultTree(self):
-        type = self.nameType[str(self.comboBox.currentText())]
         self.resultsCategory(self.comboBox.currentText())
     def results(self):
         self.nameType={}

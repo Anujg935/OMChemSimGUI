@@ -22,12 +22,17 @@ class MatStm():
         self.OM_data_eqn = ''
         self.count = name[1]
         self.thermoPackage ="Raoults_Law"
+        self.mode1 = ""
+        self.mode1val = ""
+        self.mode2 = ""
+        self.mode2val = ""
+
         # self.ValEntList =  {"T":T," P":P," VapPhasMolFrac":vapPhasMolFrac," CompNames":CompNames," CompMolFrac[1]":CompMolFrac," CompMasFrac":CompMasFrac," MolFlow[1]":MolFlow," MasFlow[1]":MasFlow}
 
 
         # self.OMProp = {
-        #     'Pressure': 'P',
-        #     'Temperature': 'T',
+        #     'Pressure': self.mode1,
+        #     'Temperature': self.mode2,
         #     'Liquid Phase Mole Fraction': 'liqPhasMolFrac',
         #     'Liquid Phase Mas Fraction': 'liqPhasMasFrac',
         #     'Vapour Phase Mole Fraction': 'vapPhasMolFrac',
@@ -49,8 +54,8 @@ class MatStm():
 
         self.Prop = {
 
-            'P':Pressure,
-            'T':Temperature,
+            self.mode1:self.mode1val,
+            self.mode2:self.mode2val,
             'liqPhasMolFrac':LiqPhasMolFrac,
             'liqPhasMasFrac':LiqPhasMasFrac,
             'vapPhasMolFrac':VapPhasMolFrac,
@@ -62,7 +67,7 @@ class MatStm():
             'MW[3]':None,
             'phasMolSpHeat[1]':None,
             'phasMolEnth[1]':None,
-            'phasMolEntr[1]':None,
+            '[1]':None,
             'phasMolSpHeat[2]':None,
             'phasMolEnth[2]':None,
             'phasMolEntr[2]':None,
@@ -77,8 +82,8 @@ class MatStm():
         }
 
         self.Prop1 = {
-            'P':Pressure,
-            'T':Temperature,
+            self.mode1:self.mode1val,
+            self.mode2:self.mode2val,
             'liqPhasMolFrac':LiqPhasMolFrac,
             'liqPhasMasFrac':LiqPhasMasFrac,
             'vapPhasMolFrac':VapPhasMolFrac,
@@ -105,19 +110,40 @@ class MatStm():
         }
 
     def modesList(self):
-        return []   
+        return ["PT","PH","PVF","TVF","PS"]   
     def paramgetter(self,mode=None):
-        dict = {"Temperature":None,"Pressure":None,"CompMolFrac":None,"MolFlow":None,"thermoPackage":None}
+        dict = {}
+        if(mode=="PT"):
+            self.mode1 = 'P'
+            self.mode2 = 'T'
+            dict = {self.mode2:None,self.mode1:None,"CompMolFrac":None,"MolFlow":None,"thermoPackage":None}
+        elif(mode=="PH"):
+            self.mode1 = 'P'
+            self.mode2 = 'phasMolEnth[1]'
+            dict = {self.mode1:None,self.mode2:None,"CompMolFrac":None,"MolFlow":None,"thermoPackage":None}
+        elif(mode=="PVF"):
+            self.mode1 = 'P'
+            self.mode2 = 'vapPhasMolFrac'
+            dict = {self.mode1:None,self.mode2:None,"CompMolFrac":None,"MolFlow":None,"thermoPackage":None}
+        elif(mode=="TVF"):
+            self.mode1 = 'T'
+            self.mode2 = 'vapPhasMolFrac'
+            dict = {self.mode1:None,self.mode2:None,"CompMolFrac":None,"MolFlow":None,"thermoPackage":None}
+        elif(mode=="PS"):
+            self.mode1 = 'P'
+            self.mode2 = 'phasMolEntr[1]'
+            dict = {self.mode1:None,self.mode2:None,"CompMolFrac":None,"MolFlow":None,"thermoPackage":None}
+        
         return dict
     def paramsetter(self,dict):
-        self.T = dict['Temperature']
-        self.P = dict['Pressure']
+        self.mode1val = dict[self.mode1]
+        self.mode2val = dict[self.mode2]
         self.MolFlow = dict['MolFlow']
         self.CompMolFrac = dict['CompMolFrac'].split(",")
         self.thermoPackage = dict['thermoPackage']
         self.Prop['totMolFlo[1]'] = self.MolFlow
-        self.Prop['T'] = self.T
-        self.Prop['P'] = self.P
+        self.Prop[self.mode2] = dict[self.mode2]
+        self.Prop[self.mode1] = dict[self.mode1]
         for i in range(0,len(self.CompNames)):
             print('####### compmolfrac #########\n',self.CompMolFrac[i])
             if self.CompMolFrac:
@@ -159,28 +185,28 @@ class MatStm():
         compmolfracstr = compmolfracstr.replace(']','}')
         compmolfracstr = compmolfracstr.replace('"','')
         '''
-        if self.P:
-            self.eqnDict['P'] = self.Prop['P']#self.P
-        if self.T:
-            self.eqnDict['T'] = self.Prop['T']#self.T
+        if self.Prop[self.mode1]:
+            self.eqnDict[self.mode1] = self.Prop[self.mode1]
+        if self.Prop[self.mode2]:
+            self.eqnDict[self.mode2] = self.Prop[self.mode2]
         if self.CompMolFrac:
             self.eqnDict['compMolFrac[1,:]'] = compmolfrac
         if self.MolFlow:
             self.eqnDict['totMolFlo[1]'] = self.Prop['totMolFlo[1]']#self.MolFlow
 
         print("##############$GetMinVEqnValuesStart$##################")
-        print("P:",self.Prop['P'])
-        print("T:",self.Prop['T'])
+        print("P:",self.Prop[self.mode1])
+        print("T:",self.Prop[self.mode2])
         print("CompMolFrac",compmolfrac)
         print("totMolFlo",self.Prop['totMolFlo[1]'])
         print("##############$GetMinVEqnValuesEnd$##################")
 
     def GetEquationValues(self):
-        if self.Prop['P']:
-            self.eqnDict['P'] = self.Prop['P']
+        if self.Prop[self.mode1]:
+            self.eqnDict[self.mode1] = self.Prop[self.mode1]
         
-        if self.Prop['T']:
-            self.eqnDict['T'] = self.Prop['T']
+        if self.Prop[self.mode2]:
+            self.eqnDict[self.mode2] = self.Prop[self.mode2]
         
         if self.Prop['compMolFrac[1,1]']:
             cfa = []
@@ -198,11 +224,11 @@ class MatStm():
 
     def GetStartValues(self):
         try:
-            if self.Prop['P']:
-                self.startDict['P'] = self.Prop['P']
+            if self.Prop[self.mode1]:
+                self.startDict[self.mode1] = self.Prop[self.mode1]
             
-            if self.Prop['T']:
-                self.startDict['T'] = self.Prop['T']
+            if self.Prop[self.mode2]:
+                self.startDict[self.mode2] = self.Prop[self.mode2]
             
 
             if self.Prop['compMolFrac[2,1]'] != None:
@@ -325,8 +351,8 @@ class MatStm():
             print('error')
 
         # self.OMVapProp = {
-        #     'Pressure': 'P',
-        #     'Temperature': 'T',
+        #     'Pressure': self.mode1,
+        #     'Temperature': self.mode2,
         #     'Total Molar Flow': 'totMolFlo[3]',
         #     'Total Mas Flow': 'totMasFlo[3]',
         #     'Comp Mole Fraction': ['compMolFrac[3,1]','compMolFrac[3,2]','compMolFrac[3,3]'],
@@ -341,8 +367,8 @@ class MatStm():
 
 
         # self.VapProp = {
-        #     'P':None,
-        #     'T':None,
+        #     self.mode1:None,
+        #     self.mode2:None,
         #     'liqPhasMolFrac':None,
         #     'liqPhasMasFrac':None,
         #     'vapPhasMolFrac':None,
@@ -369,8 +395,8 @@ class MatStm():
 
 
         # self.OMLiqProp = {
-        #     'Pressure': 'P',
-        #     'Temperature': 'T',
+        #     'Pressure': self.mode1,
+        #     'Temperature': self.mode2,
         #     'Total Molar Flow': 'totMolFlo[2]',
         #     'Total Mas Flow': 'totMasFlo[2]',
         #     'Comp Mole Fraction': ['compMolFrac[2,1]','compMolFrac[2,2]','compMolFrac[2,3]'],
@@ -384,8 +410,8 @@ class MatStm():
 
 
         # self.LiqProp = {
-        #     'P':P,
-        #     'T':None,
+        #     self.mode1:P,
+        #     self.mode2:None,
         #     'liqPhasMolFrac':None,
         #     'liqPhasMasFrac':None,
         #     'vapPhasMolFrac':None,

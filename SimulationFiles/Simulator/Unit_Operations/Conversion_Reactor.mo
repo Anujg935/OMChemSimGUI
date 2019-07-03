@@ -1,8 +1,6 @@
 within Simulator.Unit_Operations;
 
 model Conversion_Reactor
-  extends Simulator.Files.Icons.Conversion_Reactor;
-
   //This is generic conversion reactor model. we need to extend reaction manager model with this model for using this model.
   parameter Real X[Nr] = fill(0.4, Nr) "Conversion of base component";
   parameter Integer NOC "Number of components";
@@ -26,7 +24,7 @@ model Conversion_Reactor
   Simulator.Files.Connection.matConn outlet(connNOC = NOC) annotation(
     Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Simulator.Files.Connection.enConn energy annotation(
-    Placement(visible = true, transformation(origin = {0, -98}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {2, -186}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Placement(visible = true, transformation(origin = {0, -98}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {0, -98}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 equation
   inlet.P = inP;
   inlet.T = inT;

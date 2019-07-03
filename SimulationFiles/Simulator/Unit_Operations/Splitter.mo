@@ -1,7 +1,6 @@
 within Simulator.Unit_Operations;
 
 model Splitter
-  extends Simulator.Files.Icons.Splitter;
   parameter Integer NOC = 2 "number of Components", NO = 2 "number of outputs";
   parameter Simulator.Files.Chemsep_Database.General_Properties comp[NOC];
   Real inP(min = 0, start = 101325) "inlet pressure", inT(min = 0, start = 273.15) "Inlet Temperature", outP[NO](each min = 0, each start = 101325) "Outlet Pressure", outT[NO](each min = 0, each start = 273.15) "Outlet Temperature", inMixMolFrac[NOC](each min = 0, each max = 1, each start = 1 / (NOC + 1)) "inlet Mixture Mole Fraction", outMixMolFrac[NO, NOC](each min = 0, each max = 1, each start = 1 / (NOC + 1)) "Outlet Mixture Molar Fraction", splRat[NO](each min = 0, each max = 1) "Split ratio", MW(each min = 0) "Stream molecular weight", inMixMolFlo(min = 0, start = 100) "inlet Mixture Molar Flow", outMixMolFlo[NO](each min = 0, each start = 100) "Outlet Mixture Molar Flow", outMixMasFlo[NO](each min = 0, each start = 100) "Outlet Mixture Mass Flow", specVal[NO] "Specification value";

@@ -48,7 +48,7 @@ package Distillation_Column
     vapor_inlet.mixMolEnth = inVapMolEnth;
     vapor_inlet.mixMolFrac[:] = inVapCompMolFrac[:];
     heat_load.enFlo = heatLoad;
-//Adjustment for thermodynamic packages
+    //Adjustment for thermodynamic packages  
       compMolFrac[1, :] = (sideDrawMolFlo .* sideDrawMolFrac[:] + outLiqMolFlo .* outLiqCompMolFrac[:])./(sideDrawMolFlo + outLiqMolFlo);
      compMolFrac[2, :] = outLiqCompMolFrac[:];
      compMolFrac[3, :] = K[:] .* compMolFrac[2, :];
@@ -165,7 +165,7 @@ package Distillation_Column
     vapor_outlet.mixMolEnth = vapMolEnth[2];
     vapor_outlet.mixMolFrac[:] = vapCompMolFrac[2, :];
     heat_load.enFlo = heatLoad;
-//Adjustment for thermodynamic packages
+    //Adjustment for thermodynamic packages  
    compMolFrac[1, :] = (sideDrawMolFlo .* sideDrawMolFrac[:] + vapMolFlo[2] .* vapCompMolFrac[2, :] + liqMolFlo[2] .* liqCompMolFrac[2, :]) / (liqMolFlo[2] + vapMolFlo[2] + sideDrawMolFlo);
    compMolFrac[2, :] = liqCompMolFrac[2,:];
    compMolFrac[3, :] = vapCompMolFrac[2,:];  
@@ -251,7 +251,7 @@ package Distillation_Column
     vapor_outlet.mixMolEnth = outVapMolEnth;
     vapor_outlet.mixMolFrac[:] = outVapCompMolFrac[:];
     heat_load.enFlo = heatLoad;
-//Adjustment for thermodynamic packages
+     //Adjustment for thermodynamic packages  
      compMolFrac[1, :] = (sideDrawMolFlo .* sideDrawMolFrac[:] + outVapMolFlo .* outVapCompMolFrac[:])./(sideDrawMolFlo + outVapMolFlo);
      compMolFrac[2, :] = sideDrawMolFrac[:];//This equation is temporarily valid since this is only "partial" reboiler. Rewrite equation when "total" reboiler functionality is added
      compMolFrac[3, :] = outVapCompMolFrac[:];
@@ -284,7 +284,6 @@ package Distillation_Column
   end Reb;
 
   model DistCol
-    extends Simulator.Files.Icons.Compound_Separator;
     parameter Integer NOC;
     import data = Simulator.Files.Chemsep_Database;
     parameter Simulator.Files.Chemsep_Database.General_Properties comp[NOC];
@@ -295,15 +294,15 @@ package Distillation_Column
     
     Real refluxRatio(min = 0);
     Simulator.Files.Connection.matConn feed[noOfFeeds](each connNOC = NOC) annotation(
-      Placement(visible = true, transformation(origin = {-98, -4}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-120, -2}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Placement(visible = true, transformation(origin = {-98, -4}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-98, -4}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Simulator.Files.Connection.matConn distillate(connNOC = NOC) annotation(
-      Placement(visible = true, transformation(origin = {98, 72}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {122, 58}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Placement(visible = true, transformation(origin = {98, 72}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Simulator.Files.Connection.matConn bottoms(connNOC = NOC) annotation(
-      Placement(visible = true, transformation(origin = {100, -74}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {122, -46}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Placement(visible = true, transformation(origin = {100, -74}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Simulator.Files.Connection.enConn condensor_duty annotation(
-      Placement(visible = true, transformation(origin = {60, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {64, 120}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Placement(visible = true, transformation(origin = {60, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {60, 96}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Simulator.Files.Connection.enConn reboiler_duty annotation(
-      Placement(visible = true, transformation(origin = {60, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {80, -114}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Placement(visible = true, transformation(origin = {60, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {72, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Simulator.Files.Connection.matConn side_draw[noOfSideDraws](each connNOC = NOC) annotation(
       Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 24}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Simulator.Files.Connection.enConn heat_load[noOfHeatLoads](each connNOC = NOC) annotation(

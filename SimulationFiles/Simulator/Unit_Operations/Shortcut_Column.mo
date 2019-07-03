@@ -1,7 +1,6 @@
 within Simulator.Unit_Operations;
 
 model Shortcut_Column
-  extends Simulator.Files.Icons.Distillation_Column;
   import data = Simulator.Files.Chemsep_Database;
   parameter data.General_Properties comp[NOC];
   parameter Integer NOC;
@@ -17,15 +16,15 @@ model Shortcut_Column
   Real actR, actN, x, y, feedN;
   Real rectLiq(min = 0, start = 100), rectVap(min = 0, start = 100), stripLiq(min = 0, start = 100), stripVap(min = 0, start = 100), rebDuty, condDuty;
   Simulator.Files.Connection.matConn feed(connNOC = NOC) annotation(
-    Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-292, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Simulator.Files.Connection.matConn distillate(connNOC = NOC) annotation(
-    Placement(visible = true, transformation(origin = {100, 50}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {340, 610}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Placement(visible = true, transformation(origin = {100, 50}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 50}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Simulator.Files.Connection.matConn bottoms(connNOC = NOC) annotation(
-    Placement(visible = true, transformation(origin = {100, -50}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {340, -622}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Placement(visible = true, transformation(origin = {100, -50}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -50}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Simulator.Files.Connection.enConn condenser_duty annotation(
-    Placement(visible = true, transformation(origin = {50, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {294, 946}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Placement(visible = true, transformation(origin = {50, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {50, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Simulator.Files.Connection.enConn reboiler_duty annotation(
-    Placement(visible = true, transformation(origin = {50, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {320, -950}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Placement(visible = true, transformation(origin = {50, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {50, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 equation
 // Connector equations
   feed.P = P;
@@ -129,7 +128,4 @@ equation
 //Energy Balance
   mixMolFlo[1] * mixMolEnth[1] + rebDuty - condDuty = mixMolFlo[2] * mixMolEnth[2] + mixMolFlo[3] * mixMolEnth[3];
   rectVap * condVapMixMolEnth = condDuty + mixMolFlo[3] * mixMolEnth[3] + rectLiq * condLiqMixMolEnth;
-annotation(
-    Icon(coordinateSystem(extent = {{-350, -1000}, {350, 1000}})),
-    Diagram(coordinateSystem(extent = {{-350, -1000}, {350, 1000}})),
-    __OpenModelica_commandLineOptions = "");end Shortcut_Column;
+end Shortcut_Column;

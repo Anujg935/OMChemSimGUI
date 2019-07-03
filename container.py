@@ -4,15 +4,18 @@ from OMChem.Mixer import Mixer
 from OMChem.Heater import Heater
 from component_selector import *
 from collections import defaultdict
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
 import itertools
 class Container():
-    def __init__(self):
+    def __init__(self,msgbrowser):
         self.unitOp = []
         self.thermoPackage = None
         self.compounds = None
         self.conn = defaultdict(list)
         self.op=defaultdict(list)
         self.ip=defaultdict(list)
+        self.msg = msgbrowser
         self.opl=[]
         self.result=[]
 
@@ -73,15 +76,26 @@ class Container():
                 f.add_UnitOpn(i,1)
             else:
                 f.add_UnitOpn(i,0)
-        print("############$Stdout$############",f.stdout)
-        print("###########$ResData$############",f.resdata)
+        
+        #print("############$Stdout$############",f.stdout)
+        #print("###########$ResData$############",f.resdata)
 
         if mode=='SM':
             f.simulateSM(self.ip,self.op)
+            stdout = QString(f.stdout).trimmed()
+            stdout = stdout.replace("\n","<br/>")
+            self.msg.setHtml("")
+            self.msg.append("<span> style=\"color:black\">"+stdout+"</span>")
             self.result=f.resdata
+
         elif mode=='EQN':
             f.simulateEQN()
+            stdout = str(f.stdout)
+            stdout = stdout.replace("\n","<br/>")
+            #self.msg.setText("")
+            self.msg.setText("<span style=\"color:black\">"+stdout+"</span>")
             self.result=f.resdata
+            print("under Eqn mode simulation")
 
 def flatlist(lst):
     flat_list=[]

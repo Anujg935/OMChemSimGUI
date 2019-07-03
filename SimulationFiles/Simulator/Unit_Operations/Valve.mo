@@ -1,7 +1,6 @@
 within Simulator.Unit_Operations;
 
 model Valve
-  extends Simulator.Files.Icons.Valve;
   // This is generic valve model. For using this model we need to extend this model and incorporte ouput material stream since this model is not doing any flash calculations. Refer valve model in Test section for this.
   //====================================================================================
   Real inMolFlo(min = 0, start = 100) "inlet mixture molar flow rate", outMolFlo(min = 0, start = 100) "outlet mixture molar flow rate", inP(min = 0, start = 101325) "Inlet pressure", outP(min = 0, start = 101325) "Outlet pressure", pressDrop "Pressure drop", inT(min = 0, start = 273.15) "Inlet Temperature", outT(min = 0, start = 273.15) "Outlet Temperature", tempInc "Temperature Increase";
