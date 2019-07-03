@@ -55,7 +55,21 @@ class Container():
             self.opl=flatlist(flatlist(self.opl))
         except Exception as e:
             print(e)
-            
+
+    def msgBrowser(self,f,startstring):
+        std = f.stdout.decode("utf-8")
+        self.msg.setText(startstring)
+        if(std):
+            stdout = str(std)
+            stdout = stdout.replace("\n","<br/>")
+            self.msg.append("<span style=\"color:green\">"+stdout+"</span>")
+        
+        stde = f.stderr.decode("utf-8")
+        if(stde):
+            stdout = str(stde)
+            stdout = stdout.replace("\n","<br/>")
+            self.msg.append("<span style=\"color:red\">"+stdout+"</span>")
+    
     def simulate(self,mode):
         print(mode)
         self.compounds = compond_selected
@@ -82,18 +96,12 @@ class Container():
 
         if mode=='SM':
             f.simulateSM(self.ip,self.op)
-            stdout = QString(f.stdout).trimmed()
-            stdout = stdout.replace("\n","<br/>")
-            self.msg.setHtml("")
-            self.msg.append("<span> style=\"color:black\">"+stdout+"</span>")
-            self.result=f.resdata
+            self.msgBrowser(f,"Seq mode simulation")
 
         elif mode=='EQN':
             f.simulateEQN()
-            stdout = str(f.stdout)
-            stdout = stdout.replace("\n","<br/>")
-            #self.msg.setText("")
-            self.msg.setText("<span style=\"color:black\">"+stdout+"</span>")
+            self.msgBrowser(f,"Eqn mode simulation")
+
             self.result=f.resdata
             print("under Eqn mode simulation")
 

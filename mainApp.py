@@ -28,11 +28,7 @@ from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-<<<<<<< HEAD
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2],'AdiabaticComp':[1,1,1],'AdiabaticExp':[1,1,1]}
-=======
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2],'Pump':[1,1,1]}
->>>>>>> 157c77c00e5428e63a2324692100c0dc8276137c
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2],'Pump':[1,1,1],'AdiabaticComp':[1,1,1],'AdiabaticExp':[1,1,1]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -50,7 +46,7 @@ class MainApp(QMainWindow,ui):
         self.graphicsView.setScene(self.scene)
         self.graphicsView.setMouseTracking(True)
         self.comp.show()
-        #self.showMsgBrowser()
+        self.dockWidget_2.hide()
         self.pushButton.clicked.connect(partial(self.component,'MatStm'))
         self.graphicsView.keyPressEvent=self.deleteCall
         self.actionZoomIn.triggered.connect(self.zoomin)
@@ -75,6 +71,8 @@ class MainApp(QMainWindow,ui):
         self.comp.show()
 
     def abriveation(self,key):
+        print("^^^^^^^^^^^^^^^^^^^^6")
+        print(compond_selected)
         d ={"P":"Pressure","T":"Temperature",
         "liqPhasMolFrac":"Liquid Phase Mol Fraction","liqPhasMasFrac":"Liquid Pase Mass Fraction",
         "vapPhasMolFrac":"Vapour Phase Mol Fracrion","vapPhasMasFrac":"Vapour Phase Mass Fracrion",
@@ -85,10 +83,30 @@ class MainApp(QMainWindow,ui):
         "phasMolEnth[2]":"Liquid Phase Molar Enthalpy","phasMolEnth[3]":"Vapour Phase Molar Enthalpy",
         "phasMolEntr[1]":"Mixer Phase Molar Entropy","phasMolEntr[2]":"Liquid Phase Molar Entropy",
         "phasMolEntr[3]":"Vapour Phase Molar Entropy","totMolFlo[2]":"Liquid Phase Molar Flow Rate",
-        "totMolFlo[3]":"Vapour Phase Molar Flow Rate","totMasFlo[2]":"Liquid Phase Mass Flow Rate",
-        "totMolFlo[2]":"Liquid Phase Mass Flow Rate"
+        "totMolFlo[3]":"Vapour Phase Molar Flow Rate","totMasFlo[3]":"Vapour Phase Mass Flow Rate",
+        "totMolFlo[2]":"Liquid Phase Mass Flow Rate","totMasFlo[2]":"Liquid Phase Mass Flow Rate",
         } 
+        
+        for i in range(0,len(compond_selected)):
+            print("hhhhhhhhhhhhhhhhhhhhhhhhhhh")
+            print(len(d))
+            d["compMolFrac[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mole fraction"
+            d["compMolFrac[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mole fraction"
+            d["compMolFrac[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mole fraction"
 
+            d["compMasFrac[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mass fraction"
+            d["compMasFrac[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mass fraction"
+            d["compMasFrac[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mass fraction"
+
+            d["compMasFlo[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mass flo"
+            d["compMasFlo[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mass flo"
+            d["compMasFlo[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mass flo"
+
+            d["compMolFlo[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mole flo"
+            d["compMolFlo[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mole flo"
+            d["compMolFlo[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mole flo"
+            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+            print(len(d))
         if key in d.keys():
             return d[key]
         else:
@@ -110,6 +128,7 @@ class MainApp(QMainWindow,ui):
                         rowPosition = self.tableWidget.rowCount()
                         self.tableWidget.insertRow(rowPosition)
                         self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(self.abriveation(key))))
+                        self.abriveation(key)
                         self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(resultval)))
         except Exception as e:
             print(e)
@@ -133,6 +152,7 @@ class MainApp(QMainWindow,ui):
             #pix = QPixmap(self.graphicsView.grab())
             #self.label_8.setPixmap(pix.scaled(self.label_8.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)) 
             #self.results()
+            self.dockWidget_2.show()
             self.res = resdockWidget(self.Container)
             self.addDockWidget(Qt.LeftDockWidgetArea, self.res)
             self.res.show()
@@ -332,6 +352,7 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         self.container=container
         self.newLine=None
         self.otherLine=None
+
         # Brush.
         self.brush = QtGui.QBrush()
         self.brush.setStyle(QtCore.Qt.SolidPattern)
@@ -454,6 +475,14 @@ class NodeItem(QtWidgets.QGraphicsItem):
             super(NodeItem, self).__init__()
             self.name = comptype + str(comp_dict[comptype][0])
             self.type = comptype
+
+            self.text = QGraphicsTextItem(self)
+            f = QFont()
+            f.setPointSize(12)
+            self.text.setFont(f)
+            self.text.setDefaultTextColor(QtGui.QColor(180,20,90,255))
+            self.text.setParentItem(self)
+            self.text.setPlainText(self.name)
             self.setToolTip(self.name)
             self.nin = comp_dict[comptype][1]
             self.nop = comp_dict[comptype][2]

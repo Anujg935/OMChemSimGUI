@@ -22,14 +22,13 @@ extern "C" {
 
 #include "Flowsheet_functions.h"
 
-#define Simulator_Files_Thermodynamic__Functions_Dens_index 0
-#define Simulator_Files_Thermodynamic__Functions_HLiqId_index 1
-#define Simulator_Files_Thermodynamic__Functions_HV_index 2
-#define Simulator_Files_Thermodynamic__Functions_HVapId_index 3
-#define Simulator_Files_Thermodynamic__Functions_LiqCpId_index 4
-#define Simulator_Files_Thermodynamic__Functions_Psat_index 5
-#define Simulator_Files_Thermodynamic__Functions_SId_index 6
-#define Simulator_Files_Thermodynamic__Functions_VapCpId_index 7
+#define Simulator_Files_Thermodynamic__Functions_HLiqId_index 0
+#define Simulator_Files_Thermodynamic__Functions_HV_index 1
+#define Simulator_Files_Thermodynamic__Functions_HVapId_index 2
+#define Simulator_Files_Thermodynamic__Functions_LiqCpId_index 3
+#define Simulator_Files_Thermodynamic__Functions_Psat_index 4
+#define Simulator_Files_Thermodynamic__Functions_SId_index 5
+#define Simulator_Files_Thermodynamic__Functions_VapCpId_index 6
 
 extern void Flowsheet_callExternalObjectDestructors(DATA *_data, threadData_t *threadData);
 #if !defined(OMC_NUM_NONLINEAR_SYSTEMS) || OMC_NUM_NONLINEAR_SYSTEMS>0

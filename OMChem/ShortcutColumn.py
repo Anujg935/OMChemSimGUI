@@ -1,5 +1,5 @@
 class ShortcutColumn():
-    def __init__(self,name=None,condP = None, rebP = None, LKey = None, HKey = None):
+    def __init__(self,name=("ShortcutCol",1),condP = None, rebP = None, LKey = None, HKey = None):
         self.condP = condP
         self.rebP = rebP
         self.LKey = LKey
@@ -27,7 +27,7 @@ class ShortcutColumn():
         self.OM_data_init = self.OM_data_init + ("model sc"+str(self.count)+"\n")
         self.OM_data_init = self.OM_data_init + ("extends Simulator.Unit_Operations.Shortcut_Column;;\n" )
         self.OM_data_init = self.OM_data_init + ("extends Simulator.Files.Thermodynamic_Packages."+self.thermoPackage+";\n")
-        self.OM_data_init = self.OM_data_init + ("end fls"+str(self.count)+";\n")
+        self.OM_data_init = self.OM_data_init + ("end sc"+str(self.count)+";\n")
         comp_count = len(addedcomp)
         self.OM_data_init = self.OM_data_init + 
         str(self.count)+ " " + self.name + "(NOC = " + str(comp_count)
