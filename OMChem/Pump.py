@@ -1,7 +1,6 @@
 from OMChem.EngStm import EngStm
-class Heater():
-    def __init__(self,name='Heater',PressureDrop = None, eff = None):
-        self.PressureDrop = PressureDrop
+class Pump():
+    def __init__(self,name='Pump',eff = None):
         self.eff = eff
         self.name = name
         self.OM_data_eqn = ''
@@ -11,7 +10,7 @@ class Heater():
         #self.outT = outT
         self.OutputStms = None
         self.EngStms = EngStm(name='EngStm'+name)
-        self.type = 'Heater'
+        self.type = 'Pump'
         self.mode = None
         self.modeVal = None
 
@@ -20,16 +19,15 @@ class Heater():
         self.OutputStms = OutputStms
 
     def modesList(self):
-        return ["heatAdd","outT","outVapPhasMolFrac","tempInc","enFlo"]
+        return ["pressInc","outP","reqPow","enFlo"]
 
     def paramgetter(self,mode):
         self.mode = mode
-        dict = {"PressureDrop":None,"eff":None,self.mode:None}
+        dict = {"eff":None,self.mode:None}
         return dict
         
     def paramsetter(self,dict):
         
-        self.PressureDrop = dict['PressureDrop']
         self.eff = dict['eff']
         self.modeVal = dict[self.mode]
 
@@ -38,12 +36,11 @@ class Heater():
         comp_count = len(addedcomp)
         self.OM_data_init = self.OM_data_init + 'Simulator.Streams.Energy_Stream '+self.EngStms.name+';\n'
         self.OM_data_init = self.OM_data_init + (
-        "Simulator.Unit_Operations.Heater " + self.name + "(NOC = " + str(comp_count))
+        "Simulator.Unit_Operations.Centrifugal_Pump " + self.name + "(NOC = " + str(comp_count))
         self.OM_data_init = self.OM_data_init + (",comp = {")
         comp = str(addedcomp).strip('[').strip(']')
         comp = comp.replace("'", "")
         self.OM_data_init = self.OM_data_init + comp + ("},")
-        self.OM_data_init = self.OM_data_init + 'pressDrop = ' + str(self.PressureDrop) +','
         self.OM_data_init = self.OM_data_init + 'eff = ' + str(self.eff) + ');\n'
         return self.OM_data_init
 

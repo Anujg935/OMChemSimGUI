@@ -13,9 +13,9 @@ extern "C" {
 #if defined(__cplusplus)
 extern "C" {
 #endif
-  #define Flowsheet_INDEX_JAC_NLSJac1 1
-  int Flowsheet_functionJacNLSJac1_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
-  int Flowsheet_initialAnalyticJacobianNLSJac1(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
+  #define Flowsheet_INDEX_JAC_NLSJac2 1
+  int Flowsheet_functionJacNLSJac2_column(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *thisJacobian, ANALYTIC_JACOBIAN *parentJacobian);
+  int Flowsheet_initialAnalyticJacobianNLSJac2(void* data, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian);
 #if defined(__cplusplus)
 }
 #endif
