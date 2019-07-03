@@ -13,14 +13,6 @@ extern "C" {
 
 
 DLLExport
-modelica_real omc_Simulator_Files_Thermodynamic__Functions_Dens(threadData_t *threadData, real_array _LiqDen, modelica_real _TC, modelica_real _T, modelica_real _P);
-DLLExport
-modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_Dens(threadData_t *threadData, modelica_metatype _LiqDen, modelica_metatype _TC, modelica_metatype _T, modelica_metatype _P);
-static const MMC_DEFSTRUCTLIT(boxvar_lit_Simulator_Files_Thermodynamic__Functions_Dens,2,0) {(void*) boxptr_Simulator_Files_Thermodynamic__Functions_Dens,0}};
-#define boxvar_Simulator_Files_Thermodynamic__Functions_Dens MMC_REFSTRUCTLIT(boxvar_lit_Simulator_Files_Thermodynamic__Functions_Dens)
-
-
-DLLExport
 modelica_real omc_Simulator_Files_Thermodynamic__Functions_HLiqId(threadData_t *threadData, modelica_real _SH, real_array _VapCp, real_array _HOV, modelica_real _Tc, modelica_real _T);
 DLLExport
 modelica_metatype boxptr_Simulator_Files_Thermodynamic__Functions_HLiqId(threadData_t *threadData, modelica_metatype _SH, modelica_metatype _VapCp, modelica_metatype _HOV, modelica_metatype _Tc, modelica_metatype _T);

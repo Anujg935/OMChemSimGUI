@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1068</width>
-    <height>795</height>
+    <height>810</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -98,7 +98,7 @@
      <x>0</x>
      <y>0</y>
      <width>1068</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -194,9 +194,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>-218</y>
           <width>227</width>
-          <height>794</height>
+          <height>831</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -481,6 +481,28 @@
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="label_6">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Columns</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QPushButton" name="pushButton_26">
            <property name="minimumSize">
             <size>
@@ -489,7 +511,7 @@
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Distillation Column</string>
            </property>
           </widget>
          </item>
@@ -652,7 +674,7 @@
   <widget class="QDockWidget" name="dockWidget_2">
    <property name="minimumSize">
     <size>
-     <width>89</width>
+     <width>109</width>
      <height>170</height>
     </size>
    </property>

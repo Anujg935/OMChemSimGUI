@@ -60,6 +60,13 @@ class dockWidget(QDockWidget,ui_dialog):
                     self.formLayout.addRow(QLabel(i+":"),combo )
                     self.inputdict[i] = combo
                     print("thermo")
+                elif(i=="condType"):
+                    combo = QComboBox()
+                    self.lines = ["Total","Partial"]
+                    for j in self.lines:
+                        combo.addItem(str(j))
+                    self.formLayout.addRow(QLabel("Condensor Type :"+":"),combo )
+                    self.inputdict[i] = combo
                 elif(i=="CompMolFrac"):
                     print("cmfnjkmnjkmnjkm")
                     noc = len(compond_selected)
@@ -82,6 +89,8 @@ class dockWidget(QDockWidget,ui_dialog):
                 for i in self.inputdict:
                     if(i=="thermoPackage"):
                         print("paramthermo")
+                        self.dict[i] = self.inputdict[i].currentText()
+                    elif(i=="condType"):
                         self.dict[i] = self.inputdict[i].currentText()
                     elif(i =="CompMolFrac"):
                         l=[]
