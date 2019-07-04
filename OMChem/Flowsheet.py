@@ -63,7 +63,7 @@ class Flowsheet():
 			#s = subprocess.check_output([self.omc_path, '-s',simpath])
 			#print(s)
 			#print("############### StdOut ################")
-			#print(stdout)
+			print(self.stdout)
 			os.chdir(self.curr_path)
 			#os.system(self.omc_path + ' -s ' + simpath)
 			print("Hello")
@@ -258,7 +258,7 @@ class Flowsheet():
 
 		with open(self.eqn_mos_path, 'w') as mosFile:
 			mosFile.write('loadModel(Modelica);\n')
-			mosFile.write("loadFile(\"package.mo\");\n")
+			mosFile.write("loadFile(\"Simulator\package.mo\");\n")
 			mosFile.write("loadFile(\"Flowsheet.mo\");\n")
 			mosFile.write("simulate(Flowsheet, outputFormat=\"csv\", stopTime=1.0, numberOfIntervals=1);\n")
 
@@ -371,7 +371,7 @@ class Flowsheet():
 				unitmosfile = os.path.join(self.sim_dir_path,unitop.name.lower()+'.mos')
 				with open(unitmosfile, 'w') as mosFile:
 					mosFile.write('loadModel(Modelica);\n')
-					mosFile.write("loadFile(\"package.mo\");\n")
+					mosFile.write("loadFile(\"Simulator\package.mo\");\n")
 				
 					mosFile.write("loadFile(\""+unitop.name.lower()+".mo\");\n")
 					mosFile.write("simulate("+unitop.name.lower()+", outputFormat=\"csv\", stopTime=1.0, numberOfIntervals=1);\n")
