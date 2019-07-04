@@ -12,6 +12,7 @@ from OMChem.adiabatic_comp import AdiabaticComp
 from OMChem.DistCol import DistCol
 from OMChem.adiabatic_exp import AdiabaticExp
 from OMChem.Pump import Pump
+from OMChem.ShortcutColumn import ShortcutColumn
 from component_selector import *
 
 
@@ -40,3 +41,5 @@ def helperFunc(type,name1,count):
         return DistCol(name=(name1,count))
     elif(type=="Pump"):
         return Pump(name=name1)
+    elif(type=="ShortcutColumn"):
+        return ShortcutColumn(name=(name1,count))

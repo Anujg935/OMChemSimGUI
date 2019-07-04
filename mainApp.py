@@ -28,7 +28,7 @@ from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2],'Pump':[1,1,1],'AdiabaticComp':[1,1,1],'AdiabaticExp':[1,1,1],'DistCol':[1,2,2]}
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2],'Pump':[1,1,1],'AdiabaticComp':[1,1,1],'AdiabaticExp':[1,1,1],'DistCol':[1,2,2],'ShortcutColumn':[1,1,2]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
@@ -58,6 +58,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
         self.pushButton_14.clicked.connect(partial(self.component,'Pump'))
         self.pushButton_26.clicked.connect(partial(self.component,'DistCol'))
+        self.pushButton_18.clicked.connect(partial(self.component,'ShortcutColumn'))
         self.pushButton_11.clicked.connect(partial(self.component,'Heater'))
         self.actionSelect_compouns.triggered.connect(self.selectCompounds)
         self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
@@ -70,81 +71,6 @@ class MainApp(QMainWindow,ui):
         
     def selectCompounds(self):
         self.comp.show()
-
-    def abriveation(self,key):
-        print("^^^^^^^^^^^^^^^^^^^^6")
-        print(compond_selected)
-        d ={"P":"Pressure","T":"Temperature",
-        "liqPhasMolFrac":"Liquid Phase Mol Fraction","liqPhasMasFrac":"Liquid Pase Mass Fraction",
-        "vapPhasMolFrac":"Vapour Phase Mol Fracrion","vapPhasMasFrac":"Vapour Phase Mass Fracrion",
-        "totMolFlo[1]":"Molar Flow","totMasFlo[1]":"Mass Flow","MW[1]":"Mixer Phase Molecular Weight",
-        "MW[2]":"Liquid Phase Molecular Weight","MW[3]":"Vapour Phase Molecular Weight",
-        "phasMolSpHeat[1]":"Mixer Phase molar Heat Capacity","phasMolSpHeat[2]":"Liquid Phase molar Heat Capacity",
-        "phasMolSpHeat[3]":"Vapour Phase molar Heat Capacity","phasMolEnth[1]":"Mixer Phase Molar Enthalpy",
-        "phasMolEnth[2]":"Liquid Phase Molar Enthalpy","phasMolEnth[3]":"Vapour Phase Molar Enthalpy",
-        "phasMolEntr[1]":"Mixer Phase Molar Entropy","phasMolEntr[2]":"Liquid Phase Molar Entropy",
-        "phasMolEntr[3]":"Vapour Phase Molar Entropy","totMolFlo[2]":"Liquid Phase Molar Flow Rate",
-        "totMolFlo[3]":"Vapour Phase Molar Flow Rate","totMasFlo[3]":"Vapour Phase Mass Flow Rate",
-        "totMolFlo[2]":"Liquid Phase Mass Flow Rate","totMasFlo[2]":"Liquid Phase Mass Flow Rate",
-        } 
-        
-        for i in range(0,len(compond_selected)):
-            print("hhhhhhhhhhhhhhhhhhhhhhhhhhh")
-            print(len(d))
-            d["compMolFrac[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mole fraction"
-            d["compMolFrac[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mole fraction"
-            d["compMolFrac[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mole fraction"
-
-            d["compMasFrac[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mass fraction"
-            d["compMasFrac[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mass fraction"
-            d["compMasFrac[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mass fraction"
-
-            d["compMasFlo[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mass flo"
-            d["compMasFlo[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mass flo"
-            d["compMasFlo[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mass flo"
-
-            d["compMolFlo[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mole flo"
-            d["compMolFlo[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mole flo"
-            d["compMolFlo[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mole flo"
-            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhh")
-            print(len(d))
-        if key in d.keys():
-            return d[key]
-        else:
-            return key
-
-    def resultsCategory(self,name):
-        try:
-            result=self.Container.result
-            obj = self.Container.fetchObject(name)
-            if obj.type =="MatStm":
-                self.tableWidget.setRowCount(0);
-                for key, value in obj.Prop.items():
-                    propertyname = name + '.' + key
-                    if propertyname in result[0]:
-                        ind = result[0].index(propertyname)
-                        resultval = str(result[-1][ind])
-                        #stm.Prop[key] = resultval
-                        print("######Resultsfetch####",key,resultval)
-                        rowPosition = self.tableWidget.rowCount()
-                        self.tableWidget.insertRow(rowPosition)
-                        self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(self.abriveation(key))))
-                        self.abriveation(key)
-                        self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(resultval)))
-        except Exception as e:
-            print(e)
-
-
-    def resultTree(self):
-        type = self.nameType[str(self.comboBox.currentText())]
-        self.resultsCategory(self.comboBox.currentText())
-    def results(self):
-        self.nameType={}
-        self.comboBox.clear()
-        for i in self.Container.unitOp:
-            #nameslist.append(i.name)
-            self.nameType[i.name] = i.type
-            self.comboBox.addItem(str(i.name))
 
     def generatef(self,mode):
         try:

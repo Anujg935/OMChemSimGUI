@@ -39,7 +39,7 @@
        <bool>true</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-image: radial-gradient(circle, #dab3c9, #d1b6ce, #c9b9d0, #c1bbd1, #bcbdcf, #b3b9c8, #abb5c1, #a4b0b9, #97a5ab, #8b9a9e, #7f8e90, #758382);</string>
+       <string notr="true"/>
       </property>
       <property name="verticalScrollBarPolicy">
        <enum>Qt::ScrollBarAsNeeded</enum>
@@ -48,7 +48,7 @@
        <enum>Qt::ScrollBarAsNeeded</enum>
       </property>
       <property name="backgroundBrush">
-       <brush brushstyle="Dense7Pattern">
+       <brush brushstyle="NoBrush">
         <color alpha="255">
          <red>170</red>
          <green>170</green>
@@ -57,7 +57,7 @@
        </brush>
       </property>
       <property name="foregroundBrush">
-       <brush brushstyle="Dense7Pattern">
+       <brush brushstyle="NoBrush">
         <color alpha="255">
          <red>0</red>
          <green>0</green>
@@ -98,7 +98,7 @@
      <x>0</x>
      <y>0</y>
      <width>1068</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -194,9 +194,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-218</y>
-          <width>227</width>
-          <height>831</height>
+          <y>0</y>
+          <width>231</width>
+          <height>800</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -524,7 +524,7 @@
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Shortcut Column</string>
            </property>
           </widget>
          </item>

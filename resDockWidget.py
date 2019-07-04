@@ -35,6 +35,22 @@ class resdockWidget(QDockWidget,ui_dialog):
         "totMolFlo[3]":"Liquid Phase Mass Flow Rate"
         } 
 
+        for i in range(len(compond_selected)):
+            d["compMolFrac[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mole fraction"
+            d["compMolFrac[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mole fraction"
+            d["compMolFrac[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mole fraction"
+
+            d["compMasFrac[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mass fraction"
+            d["compMasFrac[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mass fraction"
+            d["compMasFrac[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mass fraction"
+
+            d["compMasFlo[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mass flo"
+            d["compMasFlo[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mass flo"
+            d["compMasFlo[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mass flo"
+
+            d["compMolFlo[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mole flo"
+            d["compMolFlo[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mole flo"
+            d["compMolFlo[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mole flo"
         if key in d.keys():
             return d[key]
         else:
@@ -45,21 +61,20 @@ class resdockWidget(QDockWidget,ui_dialog):
             print("Under result category")
             result=self.Container.result
             obj = self.Container.fetchObject(name)
-            if obj.type =="MatStm":
-                self.tableWidget.setRowCount(0);
-                for key, value in obj.Prop.items():
-                    propertyname = name + '.' + key
-                    print(key,value)
-                    if propertyname in result[0]:
-                        ind = result[0].index(propertyname)
-                        resultval = str(result[-1][ind])
-                        #stm.Prop[key] = resultval
-                        print("######Resultsfetch####",key,resultval)
-                        rowPosition = self.tableWidget.rowCount()
-                        self.tableWidget.insertRow(rowPosition)
-                        self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(self.abriveation(key))))
-                        self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(resultval)))
-                        self.tableWidget.resizeColumnsToContents()
+            self.tableWidget.setRowCount(0);
+            for key, value in obj.Prop.items():
+                propertyname = name + '.' + key
+                print(key,value)
+                if propertyname in result[0]:
+                    ind = result[0].index(propertyname)
+                    resultval = str(result[-1][ind])
+                    #stm.Prop[key] = resultval
+                    print("######Resultsfetch####",key,resultval)
+                    rowPosition = self.tableWidget.rowCount()
+                    self.tableWidget.insertRow(rowPosition)
+                    self.tableWidget.setItem(rowPosition , 0, QTableWidgetItem(str(self.abriveation(key))))
+                    self.tableWidget.setItem(rowPosition , 1, QTableWidgetItem(str(resultval)))
+                    self.tableWidget.resizeColumnsToContents()
         except Exception as e:
             print(e)
 
