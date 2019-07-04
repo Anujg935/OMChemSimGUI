@@ -8,9 +8,9 @@ from OMChem.Splitter import Splitter
 from OMChem.Valve import Valve
 from OMChem.Cooler import Cooler
 from OMChem.CompSep import CompSep
-from OMChem.adiabatic_comp import AdiabaticComp
+from OMChem.adiabatic_comp import AdiaComp
 from OMChem.DistCol import DistCol
-from OMChem.adiabatic_exp import AdiabaticExp
+from OMChem.adiabatic_exp import AdiaExp
 from OMChem.Pump import Pump
 from OMChem.ShortcutColumn import ShortcutColumn
 from component_selector import *
@@ -33,10 +33,10 @@ def helperFunc(type,name1,count):
         return Cooler(name=name1)
     elif(type=="CompSep"):
         return CompSep(name=name1)
-    elif(type=="AdiabaticComp"):
-        return AdiabaticComp(name=(name1,count))
-    elif(type=="AdiabaticExp"):
-        return AdiabaticExp(name=(name1,count))
+    elif(type=="AdiaComp"):
+        return AdiaComp(name=(name1,count))
+    elif(type=="AdiaExp"):
+        return AdiaExp(name=(name1,count))
     elif(type=="DistCol"):
         return DistCol(name=(name1,count))
     elif(type=="Pump"):

@@ -81,6 +81,7 @@ class dockWidget(QDockWidget,ui_dialog):
                     l = QLineEdit()                                                      
                     self.formLayout.addRow(QLabel(i+":"),l )
                     self.inputdict[i] = l
+            
         except Exception as e:
             print(e)
     def param(self):
@@ -104,6 +105,7 @@ class dockWidget(QDockWidget,ui_dialog):
                 self.obj.paramsetter(self.dict)
                 self.f = False
                 self.hide()
+           
             else:
                 QMessageBox.about(self, 'Important', "Please Provide all the fields data")
         except Exception as e:
