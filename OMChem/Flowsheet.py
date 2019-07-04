@@ -7,7 +7,7 @@ import pandas as pd
 
 class Flowsheet():
 	def __init__(self):
-		self.sim_name = 'SimulationFiles/Simulator'
+		self.sim_name = 'Simulator'
 		self.sim_method = ''
 		self.UnitOpn = []
 		self.data = []
@@ -446,18 +446,14 @@ class Flowsheet():
 		self.dataframes = [pd.read_csv(i) for i in self.csvlist]
 		os.chdir(self.sim_dir_path)
 		dffinal = pd.concat(self.dataframes,axis=1)
-		dffinal.to_csv('asdfdsasd.csv',index=False)
-		print("dffinal shape :",dffinal.shape)
-		print("dffinal",dffinal)
+		dffinal.to_csv('FlowsheetSEQ.csv',index=False)
 		self.resdata.clear()
-		with open(os.path.join(self.sim_dir_path+'/asdfdsasd.csv'),'r') as resultFile:
+		with open(os.path.join(self.sim_dir_path+'/FlowsheetSEQ.csv'),'r') as resultFile:
 					csvreader = csv.reader(resultFile,delimiter=',')
 					for row in csvreader:
 						self.resdata.append(row)
 		
-		print("***************************######################################************************")
-		print(self.resdata)
-		print("***************************######################################************************")
+		
 
 
 				
