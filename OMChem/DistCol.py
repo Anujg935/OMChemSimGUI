@@ -88,6 +88,8 @@ class DistCol():
             self.OM_data_eqn = self.OM_data_eqn + (self.name+'.'+str(self.mode)+'='+ str(self.modeVal) + ';\n')
         else:
             self.OM_data_eqn = self.OM_data_eqn + (self.name+'.condensor.'+self.mode+'='+ str(self.modeVal) + ';\n')
-
+        
+        self.OM_data_eqn = self.OM_data_eqn + self.name +'.reboiler.P='+self.rebP+';\n'
+        self.OM_data_eqn = self.OM_data_eqn + self.name +'.condensor.P='+self.condP+';\n'
         return self.OM_data_eqn
         

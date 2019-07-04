@@ -15,6 +15,14 @@ class Heater():
         self.mode = None
         self.modeVal = None
 
+        self.Prop = {
+                'pressDrop':None,
+                'eff':None,
+                'outT':None,
+                'tempInc':None,
+                'heatAdd':None,
+            }
+
     def connect(self,InputStms = None,OutputStms = None):
         self.InputStms = InputStms
         self.OutputStms = OutputStms

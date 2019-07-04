@@ -10,6 +10,11 @@ class Valve():
         self.OutputStms = None
         self.type = 'Valve'
 
+        self.Prop = {
+                'pressDrop':None,
+                'outP':None
+            }
+
     def modesList(self):
         return ["pressDrop","outP"]
 

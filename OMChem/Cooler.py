@@ -14,6 +14,13 @@ class Cooler():
         self.mode = None
         self.modeVal = None
 
+        self.Prop = {
+                'pressDrop':None,
+                'eff':None,
+                'outT':None,
+                'tempDrop':None,
+                'heatRem':None,
+            }
     def connect(self,InputStms = None,OutputStms = None):
         self.InputStms = InputStms
         self.OutputStms = OutputStms
