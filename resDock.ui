@@ -161,6 +161,12 @@
       <property name="autoFillBackground">
        <bool>true</bool>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+	alternate-background-color:rgb(255, 170, 127) ;
+    background-color: white;
+}</string>
+      </property>
       <property name="columnCount">
        <number>2</number>
       </property>

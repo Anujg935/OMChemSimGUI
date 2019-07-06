@@ -1,5 +1,5 @@
 from OMChem.EngStm import EngStm
-class AdiabaticComp():
+class AdiaComp():
     def __init__(self,name=('AdiaComp',1), eff = None):
         self.eff = eff
         self.name = name[0]
@@ -9,7 +9,7 @@ class AdiabaticComp():
         self.OutputStms = None
         self.EngStms = EngStm(name='EngStm'+self.name)
         self.count = name[1]
-        self.type = 'AdiabaticComp'
+        self.type = 'AdiaComp'
         self.thermoPackage ="Raoults_Law"
         self.mode = None
         self.modeVal = None

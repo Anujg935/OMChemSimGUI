@@ -82,6 +82,7 @@ class dockWidget(QDockWidget,ui_dialog):
                     l = QLineEdit()                                                      
                     self.formLayout.insertRow(c,QLabel(i+":"),l )
                     self.inputdict[i] = l
+            
         except Exception as e:
             print(e)
     def Show_Error(self):
