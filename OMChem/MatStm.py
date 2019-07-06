@@ -22,10 +22,10 @@ class MatStm():
         self.OM_data_eqn = ''
         self.count = name[1]
         self.thermoPackage ="Raoults_Law"
-        self.mode1 = ""
+        self.mode1 = "P"
         self.mode1val = ""
         self.mode2 = ""
-        self.mode2val = ""
+        self.mode2val = "T"
 
         # self.ValEntList =  {"T":T," P":P," VapPhasMolFrac":vapPhasMolFrac," CompNames":CompNames," CompMolFrac[1]":CompMolFrac," CompMasFrac":CompMasFrac," MolFlow[1]":MolFlow," MasFlow[1]":MasFlow}
 

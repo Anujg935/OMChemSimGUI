@@ -18,7 +18,7 @@ class ShortcutColumn():
         self.condType=''
         self.actR = None
         self.thermoPackage='Raoults_Law'
-        self.type = 'ShortcutColumn'
+        self.type = 'ShortCol'
 
     def modesList(self):
         return []

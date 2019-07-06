@@ -28,13 +28,13 @@ from helper import helperFunc
 from container import Container
 ui,_ = loadUiType('main.ui')
 
-comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,5,1],'Splitter':[1,1,5],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2],'Pump':[1,1,1],'AdiaComp':[1,1,1],'AdiaExp':[1,1,1],'DistCol':[1,2,2],'ShortcutColumn':[1,1,2]}
+comp_dict ={'MatStm':[1,1,1],'EngStm':[1,1,1],'Mixer':[1,4,1],'Splitter':[1,1,4],'Flash':[1,1,2],'Heater':[1,1,1],'Valve':[1,1,1],'Cooler':[1,1,1],'CompSep':[1,1,2],'Pump':[1,1,1],'AdiaComp':[1,1,1],'AdiaExp':[1,1,1],'DistCol':[1,2,2],'ShortCol':[1,1,2]}
 class MainApp(QMainWindow,ui):
     def __init__(self):
         
         QMainWindow.__init__(self)
         self.setupUi(self)
-        style = open('new.css','r')
+        style = open('light.css','r')
         style = style.read()
         
         self.zoomcount = 0
@@ -46,7 +46,10 @@ class MainApp(QMainWindow,ui):
         self.graphicsView.setScene(self.scene)
         self.graphicsView.setMouseTracking(True)
         self.comp.show()
-        self.dockWidget_2.hide()
+        self.setDockNestingEnabled(True)
+        self.setCorner(Qt.BottomRightCorner, Qt.RightDockWidgetArea)
+        self.setCorner(Qt.BottomLeftCorner, Qt.LeftDockWidgetArea)
+        self.addDockWidget(Qt.BottomDockWidgetArea,self.dockWidget_2)
         self.pushButton.clicked.connect(partial(self.component,'MatStm'))
         self.graphicsView.keyPressEvent=self.deleteCall
         self.actionZoomIn.triggered.connect(self.zoomin)
@@ -92,7 +95,7 @@ class MainApp(QMainWindow,ui):
             for i in range(self.zoomcount):
                 self.zoomout()
         elif(self.zoomcount<0):
-            for i in range(self.zoomcount):
+            for i in range(abs(self.zoomcount)):
                 self.zoomin()
         else:
             pass
@@ -279,12 +282,12 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         self.container=container
         self.newLine=None
         self.otherLine=None
-
+        #self.setAcceptsHoverEvents(True)
         # Brush.
         self.brush = QtGui.QBrush()
         self.brush.setStyle(QtCore.Qt.SolidPattern)
         self.brush.setColor(QtGui.QColor(180,20,90,255))
- 
+        #self.brush.setColor(QtGui.QColor(174,115,174))
         # Pen.
         self.pen = QtGui.QPen()
         self.pen.setStyle(QtCore.Qt.SolidLine)
@@ -294,7 +297,10 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         # Lines.
         self.outLines = []
         self.inLines = []
- 
+    def hoverEnterEvent(self,event):
+        
+        print("HOvering999999999999999999")
+        self.setCursor(Qt.CrossCursor)
     def shape(self):
         path = QtGui.QPainterPath()
         path.addEllipse(self.boundingRect())
@@ -307,6 +313,9 @@ class NodeSocket(QtWidgets.QGraphicsItem):
         painter.setBrush(self.brush)
         painter.setPen(self.pen)
         painter.drawEllipse(self.rect)
+
+
+   
 
     def mousePressEvent(self, event):
         try:
@@ -420,11 +429,11 @@ class NodeItem(QtWidgets.QGraphicsItem):
             self.rect = QtCore.QRect(0,0,self.pic.width(),self.pic.height())
             self.text = QGraphicsTextItem(self)
             f = QFont()
-            f.setPointSize(12)
+            f.setPointSize(8)
             self.text.setFont(f)
             self.text.setDefaultTextColor(QtGui.QColor(73,36,73,255))
             self.text.setParentItem(self)
-            self.text.setPos(-2.5, self.rect.height()-25)
+            self.text.setPos(-2.5, self.rect.height()-15)
             self.text.setPlainText(self.name) 
             
             #self.text.setPlainText(self.name)
@@ -445,7 +454,8 @@ class NodeItem(QtWidgets.QGraphicsItem):
             self.selPen = QtGui.QPen()
             self.selPen.setStyle(QtCore.Qt.SolidLine)
             self.selPen.setWidth(2)
-            self.selPen.setColor(QtGui.QColor(0,255,255,255))
+            #self.selPen.setColor(QtGui.QColor(0,255,255,255))
+            self.selPen.setColor(QtGui.QColor(222,192,222))
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print(exc_type,exc_tb.tb_lineno)
@@ -476,24 +486,29 @@ class NodeItem(QtWidgets.QGraphicsItem):
     
     def initializeSockets(self,type):
         if(self.type=="Flash" or self.type=="CompSep"):
-            Input = [NodeSocket(QtCore.QRect(-2.5+13.5,(self.rect.height()*x/(self.nin+1))-14,5,5), self, 'in',self.container) for x in range(1,self.nin+1) ]
-            Output = [NodeSocket(QtCore.QRect(self.rect.width()-2.5-13.5,(self.rect.height()*x/(self.nop+1))-12,5,5), self, 'op',self.container) for x in range(1,self.nop+1)]
+            Input = [NodeSocket(QtCore.QRect(-2.5+5.5,(self.rect.height()*x/(self.nin+1))-8,4,4), self, 'in',self.container) for x in range(1,self.nin+1) ]
+            Output = [NodeSocket(QtCore.QRect(self.rect.width()-7.5,(self.rect.height()*x*0.90/(self.nop+1))-4,4,4), self, 'op',self.container) for x in range(1,self.nop+1)]
             return Input,Output
-        elif(self.type=="AdiaComp" or self.type=="AdiaExp"  or self.type =="Mixer" or self.type =="Splitter" or self.type =="Valve" or self.type=="Cooler" or self.type=="Heater"):
-            Input = [NodeSocket(QtCore.QRect(-2.5,(self.rect.height()*x/(self.nin+1))-12,5,5), self, 'in',self.container) for x in range(1,self.nin+1) ]
-            Output = [NodeSocket(QtCore.QRect(self.rect.width()-2.5,(self.rect.height()*x/(self.nop+1))-12,5,5), self, 'op',self.container) for x in range(1,self.nop+1)]
+        elif(self.type=="AdiaComp" or self.type=="AdiaExp"  or self.type =="Mixer" or self.type =="Splitter" or self.type =="Valve" ):
+            Input = [NodeSocket(QtCore.QRect(-3.5,(self.rect.height()*x/(self.nin+1))-6,4,4), self, 'in',self.container) for x in range(1,self.nin+1) ]
+            Output = [NodeSocket(QtCore.QRect(self.rect.width()-2.5,(self.rect.height()*x/(self.nop+1))-6,4,4), self, 'op',self.container) for x in range(1,self.nop+1)]
             return Input,Output
+        elif(self.type=="Cooler" or self.type=="Heater"):
+            Input = [NodeSocket(QtCore.QRect(3.5,(self.rect.height()*x/(self.nin+1))-4,4,4), self, 'in',self.container) for x in range(1,self.nin+1) ]
+            Output = [NodeSocket(QtCore.QRect(self.rect.width()-8.0,(self.rect.height()*x/(self.nop+1))-4,4,4), self, 'op',self.container) for x in range(1,self.nop+1)]
+            return Input,Output
+
         elif(self.type=="Pump"):
-            Input = [NodeSocket(QtCore.QRect(-2.5,(self.rect.height()*x/(self.nin+1))-18,5,5), self, 'in',self.container) for x in range(1,self.nin+1) ]
-            Output = [NodeSocket(QtCore.QRect(self.rect.width()-2.5,1,5,5), self, 'op',self.container) for x in range(1,self.nop+1)]
+            Input = [NodeSocket(QtCore.QRect(-2.5,(self.rect.height()*x/(self.nin+1))-10,4,4), self, 'in',self.container) for x in range(1,self.nin+1) ]
+            Output = [NodeSocket(QtCore.QRect(self.rect.width()-2.5,-2.5,4,4), self, 'op',self.container) for x in range(1,self.nop+1)]
             return Input,Output
-        elif(self.type=="DistCol"):
+        elif(self.type=="DistCol" or self.type=="ShortCol"):
             Input = [NodeSocket(QtCore.QRect(-2.5,(self.rect.height()*x/(self.nin+1))-12,5,5), self, 'in',self.container) for x in range(1,self.nin+1) ]
-            Output = [NodeSocket(QtCore.QRect(self.rect.width()-2.5,(self.rect.height()*1.4*x/(self.nop+1))-45,5,5), self, 'op',self.container) for x in range(1,self.nop+1)]
+            Output = [NodeSocket(QtCore.QRect(self.rect.width()-5.5,(self.rect.height()*1.44*x/(self.nop+1))-67,5,5), self, 'op',self.container) for x in range(1,self.nop+1)]
             return Input,Output
         elif(self.type=="MatStm"):
-            Input = [NodeSocket(QtCore.QRect(-2.5,self.rect.height()*x/(self.nin+1),5,5), self, 'in',self.container) for x in range(1,self.nin+1) ]
-            Output = [NodeSocket(QtCore.QRect(self.rect.width()-2.5,self.rect.height()*x/(self.nop+1),5,5), self, 'op',self.container) for x in range(1,self.nop+1)]
+            Input = [NodeSocket(QtCore.QRect(-2.5,(self.rect.height()*x/(self.nin+1))-1,4,4), self, 'in',self.container) for x in range(1,self.nin+1) ]
+            Output = [NodeSocket(QtCore.QRect(self.rect.width()-2.5,(self.rect.height()*x/(self.nin+1))-1,4,4), self, 'op',self.container) for x in range(1,self.nop+1)]
             return Input,Output
     def mouseMoveEvent(self, event):
         try:

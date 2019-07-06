@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>350</width>
-    <height>500</height>
+    <height>590</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,7 +25,7 @@
   <property name="maximumSize">
    <size>
     <width>350</width>
-    <height>500</height>
+    <height>5000</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -35,13 +35,13 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>30</y>
      <width>330</width>
-     <height>481</height>
+     <height>541</height>
     </rect>
    </property>
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -152,7 +152,7 @@
       <property name="maximumSize">
        <size>
         <width>325</width>
-        <height>420</height>
+        <height>5000</height>
        </size>
       </property>
       <property name="layoutDirection">
@@ -162,10 +162,9 @@
        <bool>true</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">QTableWidget {
-	alternate-background-color:rgb(255, 170, 127) ;
-    background-color: white;
-}</string>
+       <string notr="true">alternate-background-color:rgb(255, 170, 127) ;
+background-color: white;
+</string>
       </property>
       <property name="columnCount">
        <number>2</number>

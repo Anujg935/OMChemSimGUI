@@ -23,7 +23,9 @@ class Container():
         if(obj in self.unitOp):
             pass
         else:
+            self.msg.setText("")
             self.unitOp.append(obj)
+            self.msg.append("<span style=\"color:blue\">"+obj.name+" is instanciated .""<br/></span>")
 
     def fetchObject(self,name):
         for i in self.unitOp:
@@ -58,7 +60,7 @@ class Container():
 
     def msgBrowser(self,f,startstring):
         std = f.stdout.decode("utf-8")
-        self.msg.setText(startstring)
+        self.msg.append(startstring)
         if(std):
             stdout = str(std)
             stdout = stdout.replace("\n","<br/>")

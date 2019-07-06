@@ -41,5 +41,5 @@ def helperFunc(type,name1,count):
         return DistCol(name=(name1,count))
     elif(type=="Pump"):
         return Pump(name=name1)
-    elif(type=="ShortcutColumn"):
+    elif(type=="ShortCol"):
         return ShortcutColumn(name=(name1,count))

@@ -2,7 +2,7 @@ QMainWindow {
 	background-color:#f0f0f0;
 }
 QDockWidget {
-	background-color:#f0f0f0;
+	background-color:rgb(222,192,222);
 }
 QDialog {
 	background-color:#f0f0f0;
@@ -48,6 +48,7 @@ QPushButton:hover{
 	color:rgb(17,17,17);
 	border-width: 1px;
 	border-radius:6px;
+	
 	border-top-color: rgb(255,150,60);
 	border-right-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(200, 70, 20, 255), stop:1 rgba(255,150,60, 255));
 	border-left-color:  qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:0, stop:0 rgba(200, 70, 20, 255), stop:1 rgba(255,150,60, 255));
@@ -291,6 +292,13 @@ QComboBox:!editable:on, QComboBox::drop-down:editable:on {
 QFontComboBox {
 	color:rgb(81,72,65);
 	background-color: #ffffff;
+}
+QHeaderView::section {
+	padding:3px;
+	margin:0px;
+	color:#F0F0F0;
+	border: 1px solid #F0F0F0;
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(222,192,222), stop:1 rgb(222,192,242));
 }
 QToolBox {
 	color:rgb(81,72,65);
