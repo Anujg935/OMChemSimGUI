@@ -28,14 +28,14 @@ class componentSelector(QDialog,ui_dialog):
         self.compoundSelectButton.clicked.connect(self.compoundSelection)
         self.compoundSelectButton.setAutoDefault(False)
         self.pushButton.clicked.connect(self.accept)
-        self.pushButton_2.clicked.connect(self.reject)
+        self.pushButton_2.clicked.connect(self.cancel)
         self.pushButton_3.clicked.connect(self.removeItems)
 
     def isCompSelected(self):
-        if(compond_selected):
-            return True
-        else:
+        if not compond_selected:
             return False
+        else:
+            return True
             
     def compoundSelection(self):
         comp = self.lineEdit.text()
@@ -88,4 +88,11 @@ class componentSelector(QDialog,ui_dialog):
         compond_selected.remove(item)	
     def Show_Error(self):
         QMessageBox.about(self, 'Important', "Selected Compound is not Available")
+    def cancel(self):
+        compond_selected.clear()
+        self.tableWidget.setRowCount(0)
+        self.reject()
+
+
+
 

@@ -830,7 +830,7 @@ void Flowsheet_setupDataStruc(DATA *data, threadData_t *threadData)
   data->modelData->modelFilePrefix = "Flowsheet";
   data->modelData->resultFileName = NULL;
   data->modelData->modelDir = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator";
-  data->modelData->modelGUID = "{b5e569b7-ab30-4eef-b23d-04aa906170f4}";
+  data->modelData->modelGUID = "{ac25e0d2-9f21-422e-99bf-4b4e3649c22a}";
   #if defined(OPENMODELICA_XML_FROM_FILE_AT_RUNTIME)
   data->modelData->initXMLData = NULL;
   data->modelData->modelDataXml.infoXMLData = NULL;
