@@ -13,7 +13,7 @@ class Mixer():
         return []   
 
     def paramgetter(self,mode=None):
-        dict = {"NOI":None}
+        dict = {}
         return dict
     def paramsetter(self,dict):
         self.NOI = dict["NOI"]

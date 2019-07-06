@@ -181,22 +181,22 @@ void Flowsheet_eqFunction_29(DATA *data, threadData_t *threadData, ANALYTIC_JACO
   TRACE_PUSH
   const int clockIndex = 0;
   const int equationIndexes[2] = {1,29};
+  modelica_boolean tmp0;
+  modelica_boolean tmp1;
   modelica_boolean tmp2;
-  modelica_boolean tmp3;
-  modelica_boolean tmp4;
-  modelica_real tmp5;
-  tmp2 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp4 = (modelica_boolean)tmp2;
-  if(tmp4)
+  modelica_real tmp3;
+  tmp0 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
+  tmp2 = (modelica_boolean)tmp0;
+  if(tmp2)
   {
-    tmp5 = jacobian->seedVars[0] /* MatStm1.totMolFlo.SeedNLSJac0[3] SEED_VAR */;
+    tmp3 = jacobian->seedVars[0] /* MatStm1.totMolFlo.SeedNLSJac0[3] SEED_VAR */;
   }
   else
   {
-    tmp3 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp5 = (tmp3?jacobian->seedVars[2] /* MatStm1.compMolFrac.SeedNLSJac0[3,1] SEED_VAR */:jacobian->tmpVars[3] /* MatStm1.totMolFlo.$pDERNLSJac0.dummyVarNLSJac0[2] JACOBIAN_DIFF_VAR */);
+    tmp1 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
+    tmp3 = (tmp1?jacobian->seedVars[2] /* MatStm1.compMolFrac.SeedNLSJac0[3,1] SEED_VAR */:jacobian->tmpVars[3] /* MatStm1.totMolFlo.$pDERNLSJac0.dummyVarNLSJac0[2] JACOBIAN_DIFF_VAR */);
   }
-  jacobian->resultVars[0] /* $res1.$pDERNLSJac0.dummyVarNLSJac0 JACOBIAN_VAR */ = tmp5;
+  jacobian->resultVars[0] /* $res1.$pDERNLSJac0.dummyVarNLSJac0 JACOBIAN_VAR */ = tmp3;
   TRACE_POP
 }
 
@@ -224,37 +224,13 @@ void Flowsheet_eqFunction_31(DATA *data, threadData_t *threadData, ANALYTIC_JACO
   TRACE_PUSH
   const int clockIndex = 0;
   const int equationIndexes[2] = {1,31};
-  modelica_boolean tmp6;
+  modelica_boolean tmp4;
+  modelica_boolean tmp5;
+  modelica_real tmp6;
   modelica_boolean tmp7;
   modelica_real tmp8;
   modelica_boolean tmp9;
   modelica_real tmp10;
-<<<<<<< HEAD
-  modelica_boolean tmp11;
-  modelica_real tmp12;
-  tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp11 = (modelica_boolean)tmp6;
-  if(tmp11)
-  {
-    tmp12 = jacobian->seedVars[2] /* MatStm1.compMolFrac.SeedNLSJac0[3,1] SEED_VAR */;
-  }
-  else
-  {
-    tmp7 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp9 = (modelica_boolean)tmp7;
-    if(tmp9)
-    {
-      tmp8 = 1.0 + (data->localData[0]->realVars[61] /* MatStm1.vapPhasMolFrac variable */) * (-1.0 + data->localData[0]->realVars[0] /* MatStm1.K[1] variable */);
-      tmp10 = jacobian->seedVars[1] /* MatStm1.compMolFrac.SeedNLSJac0[2,1] SEED_VAR */ + DIVISION((data->localData[0]->realVars[24] /* MatStm1.compMolFrac[1,1] variable */) * ((jacobian->tmpVars[2] /* MatStm1.vapPhasMolFrac.$pDERNLSJac0.dummyVarNLSJac0 JACOBIAN_DIFF_VAR */) * (-1.0 + data->localData[0]->realVars[0] /* MatStm1.K[1] variable */)),(tmp8 * tmp8),"(1.0 + MatStm1.vapPhasMolFrac * (-1.0 + MatStm1.K[1])) ^ 2.0");
-    }
-    else
-    {
-      tmp10 = jacobian->seedVars[1] /* MatStm1.compMolFrac.SeedNLSJac0[2,1] SEED_VAR */;
-    }
-    tmp12 = tmp10;
-  }
-  jacobian->resultVars[2] /* $res3.$pDERNLSJac0.dummyVarNLSJac0 JACOBIAN_VAR */ = tmp12;
-=======
   tmp4 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
   tmp9 = (modelica_boolean)tmp4;
   if(tmp9)
@@ -277,7 +253,6 @@ void Flowsheet_eqFunction_31(DATA *data, threadData_t *threadData, ANALYTIC_JACO
     tmp10 = tmp8;
   }
   jacobian->resultVars[2] /* $res3.$pDERNLSJac0.dummyVarNLSJac0 JACOBIAN_VAR */ = tmp10;
->>>>>>> e6622a357f756961b70660a260626863a9f2262d
   TRACE_POP
 }
 int Flowsheet_functionJacNLSJac0_column(void* inData, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian, ANALYTIC_JACOBIAN *parentJacobian)
@@ -400,24 +375,9 @@ void Flowsheet_eqFunction_84(DATA *data, threadData_t *threadData, ANALYTIC_JACO
   TRACE_PUSH
   const int clockIndex = 0;
   const int equationIndexes[2] = {1,84};
+  modelica_boolean tmp11;
+  modelica_boolean tmp12;
   modelica_boolean tmp13;
-<<<<<<< HEAD
-  modelica_boolean tmp14;
-  modelica_boolean tmp15;
-  modelica_real tmp16;
-  tmp13 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp15 = (modelica_boolean)tmp13;
-  if(tmp15)
-  {
-    tmp16 = jacobian->tmpVars[3] /* MatStm1.totMolFlo.$pDERNLSJac1.dummyVarNLSJac1[3] JACOBIAN_DIFF_VAR */;
-  }
-  else
-  {
-    tmp14 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp16 = (tmp14?jacobian->seedVars[2] /* MatStm1.compMolFrac.SeedNLSJac1[3,1] SEED_VAR */:jacobian->seedVars[0] /* MatStm1.totMolFlo.SeedNLSJac1[2] SEED_VAR */);
-  }
-  jacobian->resultVars[1] /* $res2.$pDERNLSJac1.dummyVarNLSJac1 JACOBIAN_VAR */ = tmp16;
-=======
   modelica_real tmp14;
   tmp11 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
   tmp13 = (modelica_boolean)tmp11;
@@ -431,7 +391,6 @@ void Flowsheet_eqFunction_84(DATA *data, threadData_t *threadData, ANALYTIC_JACO
     tmp14 = (tmp12?jacobian->seedVars[2] /* MatStm1.compMolFrac.SeedNLSJac1[3,1] SEED_VAR */:jacobian->seedVars[0] /* MatStm1.totMolFlo.SeedNLSJac1[2] SEED_VAR */);
   }
   jacobian->resultVars[1] /* $res2.$pDERNLSJac1.dummyVarNLSJac1 JACOBIAN_VAR */ = tmp14;
->>>>>>> e6622a357f756961b70660a260626863a9f2262d
   TRACE_POP
 }
 
@@ -445,37 +404,13 @@ void Flowsheet_eqFunction_85(DATA *data, threadData_t *threadData, ANALYTIC_JACO
   TRACE_PUSH
   const int clockIndex = 0;
   const int equationIndexes[2] = {1,85};
-  modelica_boolean tmp17;
+  modelica_boolean tmp15;
+  modelica_boolean tmp16;
+  modelica_real tmp17;
   modelica_boolean tmp18;
   modelica_real tmp19;
   modelica_boolean tmp20;
   modelica_real tmp21;
-<<<<<<< HEAD
-  modelica_boolean tmp22;
-  modelica_real tmp23;
-  tmp17 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp22 = (modelica_boolean)tmp17;
-  if(tmp22)
-  {
-    tmp23 = jacobian->seedVars[2] /* MatStm1.compMolFrac.SeedNLSJac1[3,1] SEED_VAR */;
-  }
-  else
-  {
-    tmp18 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp20 = (modelica_boolean)tmp18;
-    if(tmp20)
-    {
-      tmp19 = 1.0 + (data->localData[0]->realVars[61] /* MatStm1.vapPhasMolFrac variable */) * (-1.0 + data->localData[0]->realVars[0] /* MatStm1.K[1] variable */);
-      tmp21 = jacobian->seedVars[1] /* MatStm1.compMolFrac.SeedNLSJac1[2,1] SEED_VAR */ + DIVISION((data->localData[0]->realVars[24] /* MatStm1.compMolFrac[1,1] variable */) * ((jacobian->tmpVars[2] /* MatStm1.vapPhasMolFrac.$pDERNLSJac1.dummyVarNLSJac1 JACOBIAN_DIFF_VAR */) * (-1.0 + data->localData[0]->realVars[0] /* MatStm1.K[1] variable */)),(tmp19 * tmp19),"(1.0 + MatStm1.vapPhasMolFrac * (-1.0 + MatStm1.K[1])) ^ 2.0");
-    }
-    else
-    {
-      tmp21 = jacobian->seedVars[1] /* MatStm1.compMolFrac.SeedNLSJac1[2,1] SEED_VAR */;
-    }
-    tmp23 = tmp21;
-  }
-  jacobian->resultVars[2] /* $res3.$pDERNLSJac1.dummyVarNLSJac1 JACOBIAN_VAR */ = tmp23;
-=======
   tmp15 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
   tmp20 = (modelica_boolean)tmp15;
   if(tmp20)
@@ -498,7 +433,6 @@ void Flowsheet_eqFunction_85(DATA *data, threadData_t *threadData, ANALYTIC_JACO
     tmp21 = tmp19;
   }
   jacobian->resultVars[2] /* $res3.$pDERNLSJac1.dummyVarNLSJac1 JACOBIAN_VAR */ = tmp21;
->>>>>>> e6622a357f756961b70660a260626863a9f2262d
   TRACE_POP
 }
 int Flowsheet_functionJacNLSJac1_column(void* inData, threadData_t *threadData, ANALYTIC_JACOBIAN *jacobian, ANALYTIC_JACOBIAN *parentJacobian)

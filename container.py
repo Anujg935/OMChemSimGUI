@@ -6,6 +6,7 @@ from component_selector import *
 from collections import defaultdict
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
+import datetime
 import itertools
 class Container():
     def __init__(self,msgbrowser):
@@ -20,12 +21,21 @@ class Container():
         self.opl=[]
         self.result=[]
 
+
+    def currentTime(self):
+        now = datetime.datetime.now()
+        time = str(now.hour) + ":" + str(now.minute) + ":" +str(now.second)
+        return time
+    
+    def updateConn(self,key,value):
+        self.conn[key].append(value)
+        self.msg.append("<span style=\"color:blue\">["+str(self.currentTime())+"]<b> "+key.name+" </b> output is connected to input of<b> "+value.name +" </b></span>")
     def addUnitOp(self,obj):
         if(obj in self.unitOp):
             pass
         else:
             self.unitOp.append(obj)
-            self.msg.append("<span style=\"color:blue\">"+obj.name+" is instantiated .""<br/></span>")
+            self.msg.append("<span style=\"color:blue\">["+str(self.currentTime())+"]<b> "+obj.name+" </b>is instantiated .""</span>")
 
     def fetchObject(self,name):
         for i in self.unitOp:
@@ -58,9 +68,8 @@ class Container():
         except Exception as e:
             print(e)
 
-    def msgBrowser(self,f,startstring):
+    def msgBrowser(self,f):
         std = f.stdout.decode("utf-8")
-        self.msg.append(startstring)
         if(std):
             stdout = str(std)
             stdout = stdout.replace("\n","<br/>")
@@ -97,12 +106,14 @@ class Container():
         #print("###########$ResData$############",f.resdata)
 
         if mode=='SM':
+            self.msg.append("<span>["+str(self.currentTime())+"] Simulating in <b>sequential</b> mode ... </span>")
             f.simulateSM(self.ip,self.op)
-            self.msgBrowser(f,"Seq mode simulation")
+            self.msgBrowser(f)
 
         elif mode=='EQN':
+            self.msg.append("<span>["+str(self.currentTime())+"] Simulating in <b>equation</b> mode ... </span>")
             f.simulateEQN()
-            self.msgBrowser(f,"Eqn mode simulation")
+            self.msgBrowser(f)
 
             self.result=f.resdata
             print("under Eqn mode simulation")

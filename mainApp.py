@@ -56,6 +56,7 @@ class MainApp(QMainWindow,ui):
         self.actionNew_Flowsheet.triggered.connect(self.new)
         self.actionZoomOut.triggered.connect(self.zoomout)
         self.actionResetZoom.triggered.connect(self.zoomReset)
+        self.actionHelp.triggered.connect(self.help)
         self.actionSequential_mode.triggered.connect(partial(self.generatef,'SM'))
         self.actionEquation_oriented.triggered.connect(partial(self.generatef,'EQN'))
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
@@ -71,17 +72,22 @@ class MainApp(QMainWindow,ui):
         self.pushButton_13.clicked.connect(partial(self.component,'CompSep'))
         self.pushButton_15.clicked.connect(partial(self.component,'AdiaComp'))
         self.pushButton_16.clicked.connect(partial(self.component,'AdiaExp'))
-        
+    
+
+    def help(self):
+        msgBox = QMessageBox() 
+        msgBox.setIcon(QMessageBox.Question)
+        msgBox.setTextFormat(Qt.RichText);   
+        msgBox.setText("For any Help or Suggestion you can contact us at\n contact-om@fossee.in or at <a href='https://www.fossee.in'>Visit fossee.in!</a>")
+        msgBox.setStandardButtons(QMessageBox.Ok)
+        msgBox.exec_()
+        #QMessageBox.about(self, 'Important', "For any Help or Suggestion you can contact us at\n contact-om@fossee.in or at <a href='https://www.fossee.in'>Visit fossee.in!</a>")
     def selectCompounds(self):
         self.comp.show()
 
     def generatef(self,mode):
         try:
-            #self.tabWidget.setCurrentIndex(1)
             self.Container.simulate(mode)
-            #pix = QPixmap(self.graphicsView.grab())
-            #self.label_8.setPixmap(pix.scaled(self.label_8.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)) 
-            #self.results()
             self.dockWidget_2.show()
             self.res = resdockWidget(self.Container)
             self.addDockWidget(Qt.LeftDockWidgetArea, self.res)
@@ -371,7 +377,8 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 self.newLine.target = item
                 item.inLines.append(self.newLine)
                 self.newLine.pointB = item.getCenter()
-                self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
+                self.container.updateConn(self.newLine.source.parent.obj,self.newLine.target.parent.obj)
+                #self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
                 print(self.container.conn)
         
             elif (self.type =='in') and (item.type == 'op'):
@@ -380,7 +387,8 @@ class NodeSocket(QtWidgets.QGraphicsItem):
                 self.newLine.target = self
                 item.outLines.append(self.newLine)
                 self.newLine.pointA = item.getCenter()
-                self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
+                self.container.updateConn(self.newLine.source.parent.obj,self.newLine.target.parent.obj)                
+                #self.container.conn[self.newLine.source.parent.obj].append(self.newLine.target.parent.obj)
                 #b[self.newLine.target.parent.obj].append(self.newLine.source.parent.obj)
                 print(self.container.conn)
              #   print(b)
