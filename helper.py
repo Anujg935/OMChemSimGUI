@@ -20,7 +20,7 @@ def helperFunc(type,name1,count):
     if(type=="Mixer"):
         return Mixer(name=name1)
     elif(type=="MatStm"):
-        return MatStm(name=(name1,count),CompNames=compond_selected)
+        return MatStm(name=(name1,count),CompNames=compound_selected)
     elif(type=="Splitter"):
         return Splitter(name=name1)
     elif(type=="Flash"):

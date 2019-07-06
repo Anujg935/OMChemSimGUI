@@ -125,7 +125,7 @@ class MainApp(QMainWindow,ui):
             
     def new(self):
         l=self.scene.items()
-        compond_selected.clear()
+        compound_selected.clear()
         self.comp.tableWidget.setRowCount(0)
         self.delete(l)
     

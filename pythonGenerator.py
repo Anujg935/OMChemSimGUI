@@ -9,7 +9,7 @@ def PythonFileGenerator(data):
         f.write("from OMChem."+i+" import " +i+"\n")
 
     f.write("def main():\n")
-    f.write("\tcomp = " + str(compond_selected )+"\n")
+    f.write("\tcomp = " + str(compound_selected )+"\n")
     f.write("\tthermo = "+repr(str(thermo_package[0]))+"\n")
     for i in range(len(data.index)):
         if(data.get('comptype')[i] == 'MatStm'):

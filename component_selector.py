@@ -8,7 +8,7 @@ ui_dialog,_ = loadUiType('comp_selector.ui')
 
 df = pd.read_csv("compoundsDatabase.csv")
 thermo_package = []
-compond_selected = []
+compound_selected = []
 class componentSelector(QDialog,ui_dialog):
     def __init__(self,parent=None):
         #super(componentSelector,self).__init__(parent)
@@ -32,7 +32,7 @@ class componentSelector(QDialog,ui_dialog):
         self.pushButton_3.clicked.connect(self.removeItems)
 
     def isCompSelected(self):
-        if not compond_selected:
+        if not compound_selected:
             return False
         else:
             return True
@@ -43,14 +43,14 @@ class componentSelector(QDialog,ui_dialog):
         print(thermo_package)
         if comp in self.lines:
 
-            compond_selected.append(comp)
+            compound_selected.append(comp)
             self.lineEdit.clear()
-            print(compond_selected)
+            print(compound_selected)
             #self.addCompToList(comp)
             a = df.loc[df['Name'] == comp]
             print(a)
             self.addToTable(a)
-            #print(compond_selected)
+            #print(compound_selected)
             '''
             except Exception as e:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -85,11 +85,11 @@ class componentSelector(QDialog,ui_dialog):
         item = self.tableWidget.item(self.tableWidget.currentRow(),1).text()
         self.tableWidget.removeRow(self.tableWidget.currentRow())
         
-        compond_selected.remove(item)	
+        compound_selected.remove(item)	
     def Show_Error(self):
         QMessageBox.about(self, 'Important', "Selected Compound is not Available")
     def cancel(self):
-        compond_selected.clear()
+        compound_selected.clear()
         self.tableWidget.setRowCount(0)
         self.reject()
 
