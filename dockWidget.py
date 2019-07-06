@@ -70,12 +70,12 @@ class dockWidget(QDockWidget,ui_dialog):
                     self.inputdict[i] = combo
                 elif(i=="CompMolFrac"):
                     print("cmfnjkmnjkmnjkm")
-                    noc = len(compond_selected)
+                    noc = len(compound_selected)
                     print(noc)
                     for j in range(noc):
                         l = QLineEdit()    
                         self.inputdict[i] = "compmolfrac"                                                  
-                        self.formLayout.insertRow(c,QLabel(str(compond_selected[j])+" Fraction"+":"),l )
+                        self.formLayout.insertRow(c,QLabel(str(compound_selected[j])+" Fraction"+":"),l )
                         self.compmolfraclist.append(l)
                 else:
                     print("elseloopo")

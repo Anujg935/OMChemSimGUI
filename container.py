@@ -25,7 +25,7 @@ class Container():
             pass
         else:
             self.unitOp.append(obj)
-            self.msg.append("<span style=\"color:blue\">"+obj.name+" is instanciated .""<br/></span>")
+            self.msg.append("<span style=\"color:blue\">"+obj.name+" is instantiated .""<br/></span>")
 
     def fetchObject(self,name):
         for i in self.unitOp:
@@ -74,7 +74,7 @@ class Container():
     
     def simulate(self,mode):
         print(mode)
-        self.compounds = compond_selected
+        self.compounds = compound_selected
         self.thermoPackage = str(thermo_package[0])
         
         self.connection()

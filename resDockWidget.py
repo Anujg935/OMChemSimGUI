@@ -35,22 +35,22 @@ class resdockWidget(QDockWidget,ui_dialog):
         "totMolFlo[3]":"Liquid Phase Mass Flow Rate"
         } 
 
-        for i in range(len(compond_selected)):
-            d["compMolFrac[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mole fraction"
-            d["compMolFrac[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mole fraction"
-            d["compMolFrac[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mole fraction"
+        for i in range(len(compound_selected)):
+            d["compMolFrac[1,"+str(i+1)+"]"] = str(compound_selected[i]) +" Mixer mole fraction"
+            d["compMolFrac[2,"+str(i+1)+"]"] = str(compound_selected[i]) +" Liquid mole fraction"
+            d["compMolFrac[3,"+str(i+1)+"]"] = str(compound_selected[i]) +" Vapour mole fraction"
 
-            d["compMasFrac[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mass fraction"
-            d["compMasFrac[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mass fraction"
-            d["compMasFrac[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mass fraction"
+            d["compMasFrac[1,"+str(i+1)+"]"] = str(compound_selected[i]) +" Mixer mass fraction"
+            d["compMasFrac[2,"+str(i+1)+"]"] = str(compound_selected[i]) +" Liquid mass fraction"
+            d["compMasFrac[3,"+str(i+1)+"]"] = str(compound_selected[i]) +" Vapour mass fraction"
 
-            d["compMasFlo[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mass flo"
-            d["compMasFlo[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mass flo"
-            d["compMasFlo[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mass flo"
+            d["compMasFlo[1,"+str(i+1)+"]"] = str(compound_selected[i]) +" Mixer mass flo"
+            d["compMasFlo[2,"+str(i+1)+"]"] = str(compound_selected[i]) +" Liquid mass flo"
+            d["compMasFlo[3,"+str(i+1)+"]"] = str(compound_selected[i]) +" Vapour mass flo"
 
-            d["compMolFlo[1,"+str(i+1)+"]"] = str(compond_selected[i]) +" Mixer mole flo"
-            d["compMolFlo[2,"+str(i+1)+"]"] = str(compond_selected[i]) +" Liquid mole flo"
-            d["compMolFlo[3,"+str(i+1)+"]"] = str(compond_selected[i]) +" Vapour mole flo"
+            d["compMolFlo[1,"+str(i+1)+"]"] = str(compound_selected[i]) +" Mixer mole flo"
+            d["compMolFlo[2,"+str(i+1)+"]"] = str(compound_selected[i]) +" Liquid mole flo"
+            d["compMolFlo[3,"+str(i+1)+"]"] = str(compound_selected[i]) +" Vapour mole flo"
         if key in d.keys():
             return d[key]
         else:
