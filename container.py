@@ -16,6 +16,7 @@ class Container():
         self.op=defaultdict(list)
         self.ip=defaultdict(list)
         self.msg = msgbrowser
+        self.msg.setText("")
         self.opl=[]
         self.result=[]
 
@@ -23,7 +24,6 @@ class Container():
         if(obj in self.unitOp):
             pass
         else:
-            self.msg.setText("")
             self.unitOp.append(obj)
             self.msg.append("<span style=\"color:blue\">"+obj.name+" is instanciated .""<br/></span>")
 

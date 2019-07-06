@@ -18,7 +18,7 @@ class Valve():
     def modesList(self):
         return ["pressDrop","outP"]
 
-    def paramgetter(self,mode):
+    def paramgetter(self,mode="pressDrop"):
         self.mode = mode
         dict = {self.mode:None}
         return dict

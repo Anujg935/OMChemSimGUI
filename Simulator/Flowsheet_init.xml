@@ -9,19 +9,11 @@
 
   OPENMODELICAHOME                    = "C:/OpenModelica1.13.264bit/"
 
-<<<<<<< HEAD
-  guid                                = "{3e748283-3fbe-4fc0-bb07-dc30caaef66d}"
+  guid                                = "{b54d28e4-48dc-4fd0-989f-cde4ec65fe68}"
 
   description                         = ""
   generationTool                      = "OpenModelica Compiler v1.13.2 (64-bit)"
-  generationDateAndTime               = "2019-07-06T14:30:05Z"
-=======
-  guid                                = "{ac25e0d2-9f21-422e-99bf-4b4e3649c22a}"
-
-  description                         = ""
-  generationTool                      = "OpenModelica Compiler v1.13.2 (64-bit)"
-  generationDateAndTime               = "2019-07-05T01:09:43Z"
->>>>>>> 0695df14fae81e01ecea6ef7650d1361f8ed3b25
+  generationDateAndTime               = "2019-07-06T14:52:13Z"
 
   variableNamingConvention            = "structured"
 
