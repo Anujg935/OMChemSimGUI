@@ -9,11 +9,11 @@
 
   OPENMODELICAHOME                    = "C:/OpenModelica1.13.264bit/"
 
-  guid                                = "{4315c64f-abd5-49cd-8857-5c95b96ca66c}"
+  guid                                = "{2a62d449-7336-4e7c-b529-af34668308a2}"
 
   description                         = ""
   generationTool                      = "OpenModelica Compiler v1.13.2 (64-bit)"
-  generationDateAndTime               = "2019-07-06T14:46:28Z"
+  generationDateAndTime               = "2019-07-06T17:34:59Z"
 
   variableNamingConvention            = "structured"
 
@@ -1667,7 +1667,7 @@
     <Real fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.AF"
+    name = "Propylene.AF"
     valueReference = "1142"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1675,10 +1675,10 @@
     classIndex = "79" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "18" startColumn = "5" endLine = "18" endColumn = "22" fileWritable = "true">
-    <Real start="0.565" fixed="true" useNominal="false" />
+    <Real start="0.137588" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.AS"
+    name = "Propylene.AS"
     valueReference = "1143"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1686,10 +1686,10 @@
     classIndex = "80" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "24" startColumn = "5" endLine = "24" endColumn = "22" fileWritable = "true">
-    <Real start="239880.0" fixed="true" useNominal="false" />
+    <Real start="267000.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.Cc"
+    name = "Propylene.Cc"
     valueReference = "1144"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1697,10 +1697,10 @@
     classIndex = "81" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "11" startColumn = "5" endLine = "11" endColumn = "22" fileWritable = "true">
-    <Real start="0.224" fixed="true" useNominal="false" />
+    <Real start="0.281" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.ChaoSeadAF"
+    name = "Propylene.ChaoSeadAF"
     valueReference = "1145"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1708,10 +1708,10 @@
     classIndex = "82" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "39" startColumn = "5" endLine = "39" endColumn = "30" fileWritable = "true">
-    <Real start="0.5589" fixed="true" useNominal="false" />
+    <Real start="0.1477" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.ChaoSeadLV"
+    name = "Propylene.ChaoSeadLV"
     valueReference = "1146"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1719,10 +1719,10 @@
     classIndex = "83" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "41" startColumn = "5" endLine = "41" endColumn = "30" fileWritable = "true">
-    <Real start="0.0407027" fixed="true" useNominal="false" />
+    <Real start="0.068956" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.ChaoSeadSP"
+    name = "Propylene.ChaoSeadSP"
     valueReference = "1147"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1730,10 +1730,10 @@
     classIndex = "84" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "40" startColumn = "5" endLine = "40" endColumn = "30" fileWritable = "true">
-    <Real start="29546.4" fixed="true" useNominal="false" />
+    <Real start="13152.4" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.DM"
+    name = "Propylene.DM"
     valueReference = "1148"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1741,10 +1741,10 @@
     classIndex = "85" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "20" startColumn = "5" endLine = "20" endColumn = "22" fileWritable = "true">
-    <Real start="5.67e-030" fixed="true" useNominal="false" />
+    <Real start="1.22e-030" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.GEF"
+    name = "Propylene.GEF"
     valueReference = "1149"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1752,10 +1752,10 @@
     classIndex = "86" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "23" startColumn = "5" endLine = "23" endColumn = "23" fileWritable = "true">
-    <Real start="-162320000.0" fixed="true" useNominal="false" />
+    <Real start="62640000.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.HFMP"
+    name = "Propylene.HFMP"
     valueReference = "1150"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1763,10 +1763,10 @@
     classIndex = "87" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "25" startColumn = "5" endLine = "25" endColumn = "24" fileWritable = "true">
-    <Real start="3215000.0" fixed="true" useNominal="false" />
+    <Real start="2936000.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.HOC"
+    name = "Propylene.HOC"
     valueReference = "1151"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1774,10 +1774,10 @@
     classIndex = "88" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "26" startColumn = "5" endLine = "26" endColumn = "23" fileWritable = "true">
-    <Real start="-638200000.0" fixed="true" useNominal="false" />
+    <Real start="-1926200000.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.HOV[1]"
+    name = "Propylene.HOV[1]"
     valueReference = "1152"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1788,7 +1788,7 @@
     <Real start="106.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.HOV[2]"
+    name = "Propylene.HOV[2]"
     valueReference = "1153"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1796,10 +1796,10 @@
     classIndex = "90" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "32" startColumn = "5" endLine = "32" endColumn = "26" fileWritable = "true">
-    <Real start="58058000.0" fixed="true" useNominal="false" />
+    <Real start="27525000.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.HOV[3]"
+    name = "Propylene.HOV[3]"
     valueReference = "1154"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1807,10 +1807,10 @@
     classIndex = "91" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "32" startColumn = "5" endLine = "32" endColumn = "26" fileWritable = "true">
-    <Real start="0.87168" fixed="true" useNominal="false" />
+    <Real start="0.61217" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.HOV[4]"
+    name = "Propylene.HOV[4]"
     valueReference = "1155"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1818,10 +1818,10 @@
     classIndex = "92" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "32" startColumn = "5" endLine = "32" endColumn = "26" fileWritable = "true">
-    <Real start="-0.81501" fixed="true" useNominal="false" />
+    <Real start="-0.41646" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.HOV[5]"
+    name = "Propylene.HOV[5]"
     valueReference = "1156"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1829,10 +1829,10 @@
     classIndex = "93" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "32" startColumn = "5" endLine = "32" endColumn = "26" fileWritable = "true">
-    <Real start="0.1695" fixed="true" useNominal="false" />
+    <Real start="0.083772" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.HOV[6]"
+    name = "Propylene.HOV[6]"
     valueReference = "1157"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1840,10 +1840,10 @@
     classIndex = "94" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "32" startColumn = "5" endLine = "32" endColumn = "26" fileWritable = "true">
-    <Real start="0.17846" fixed="true" useNominal="false" />
+    <Real start="0.12092" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.IGHF"
+    name = "Propylene.IGHF"
     valueReference = "1158"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1851,10 +1851,10 @@
     classIndex = "95" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "22" startColumn = "5" endLine = "22" endColumn = "24" fileWritable = "true">
-    <Real start="-200940000.0" fixed="true" useNominal="false" />
+    <Real start="20230000.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LVB"
+    name = "Propylene.LVB"
     valueReference = "1159"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1862,10 +1862,10 @@
     classIndex = "96" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "17" startColumn = "5" endLine = "17" endColumn = "23" fileWritable = "true">
-    <Real start="0.04073" fixed="true" useNominal="false" />
+    <Real start="0.0832412" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqCp[1]"
+    name = "Propylene.LiqCp[1]"
     valueReference = "1160"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1876,7 +1876,7 @@
     <Real start="16.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqCp[2]"
+    name = "Propylene.LiqCp[2]"
     valueReference = "1161"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1884,10 +1884,10 @@
     classIndex = "98" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "31" startColumn = "5" endLine = "31" endColumn = "28" fileWritable = "true">
-    <Real start="62799.0" fixed="true" useNominal="false" />
+    <Real start="79790.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqCp[3]"
+    name = "Propylene.LiqCp[3]"
     valueReference = "1162"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1895,10 +1895,10 @@
     classIndex = "99" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "31" startColumn = "5" endLine = "31" endColumn = "28" fileWritable = "true">
-    <Real start="1254.2" fixed="true" useNominal="false" />
+    <Real start="300.8" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqCp[4]"
+    name = "Propylene.LiqCp[4]"
     valueReference = "1163"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1906,10 +1906,10 @@
     classIndex = "100" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "31" startColumn = "5" endLine = "31" endColumn = "28" fileWritable = "true">
-    <Real start="-5.9906" fixed="true" useNominal="false" />
+    <Real start="5.1342" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqCp[5]"
+    name = "Propylene.LiqCp[5]"
     valueReference = "1164"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1917,10 +1917,10 @@
     classIndex = "101" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "31" startColumn = "5" endLine = "31" endColumn = "28" fileWritable = "true">
-    <Real start="0.052937" fixed="true" useNominal="false" />
+    <Real start="0.009561500000000001" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqCp[6]"
+    name = "Propylene.LiqCp[6]"
     valueReference = "1165"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1928,10 +1928,10 @@
     classIndex = "102" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "31" startColumn = "5" endLine = "31" endColumn = "28" fileWritable = "true">
-    <Real start="-4.711e-005" fixed="true" useNominal="false" />
+    <Real start="1.2777e-005" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqDen[1]"
+    name = "Propylene.LiqDen[1]"
     valueReference = "1166"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1942,7 +1942,7 @@
     <Real start="105.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqDen[2]"
+    name = "Propylene.LiqDen[2]"
     valueReference = "1167"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1950,10 +1950,10 @@
     classIndex = "104" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "29" startColumn = "5" endLine = "29" endColumn = "29" fileWritable = "true">
-    <Real start="1.7918" fixed="true" useNominal="false" />
+    <Real start="0.98129" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqDen[3]"
+    name = "Propylene.LiqDen[3]"
     valueReference = "1168"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1961,10 +1961,10 @@
     classIndex = "105" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "29" startColumn = "5" endLine = "29" endColumn = "29" fileWritable = "true">
-    <Real start="0.23929" fixed="true" useNominal="false" />
+    <Real start="0.22226" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqDen[4]"
+    name = "Propylene.LiqDen[4]"
     valueReference = "1169"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1972,10 +1972,10 @@
     classIndex = "106" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "29" startColumn = "5" endLine = "29" endColumn = "29" fileWritable = "true">
-    <Real start="512.64" fixed="true" useNominal="false" />
+    <Real start="365.58" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqDen[5]"
+    name = "Propylene.LiqDen[5]"
     valueReference = "1170"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1983,10 +1983,10 @@
     classIndex = "107" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "29" startColumn = "5" endLine = "29" endColumn = "29" fileWritable = "true">
-    <Real start="0.21078" fixed="true" useNominal="false" />
+    <Real start="0.24039" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqDen[6]"
+    name = "Propylene.LiqDen[6]"
     valueReference = "1171"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -1997,7 +1997,7 @@
     <Real start="0.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqK[1]"
+    name = "Propylene.LiqK[1]"
     valueReference = "1172"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2008,7 +2008,7 @@
     <Real start="16.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqK[2]"
+    name = "Propylene.LiqK[2]"
     valueReference = "1173"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2016,10 +2016,10 @@
     classIndex = "110" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "36" startColumn = "5" endLine = "36" endColumn = "27" fileWritable = "true">
-    <Real start="-0.056817" fixed="true" useNominal="false" />
+    <Real start="-0.044587" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqK[3]"
+    name = "Propylene.LiqK[3]"
     valueReference = "1174"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2027,10 +2027,10 @@
     classIndex = "111" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "36" startColumn = "5" endLine = "36" endColumn = "27" fileWritable = "true">
-    <Real start="13.156" fixed="true" useNominal="false" />
+    <Real start="22.061" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqK[4]"
+    name = "Propylene.LiqK[4]"
     valueReference = "1175"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2038,10 +2038,10 @@
     classIndex = "112" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "36" startColumn = "5" endLine = "36" endColumn = "27" fileWritable = "true">
-    <Real start="-1.2214" fixed="true" useNominal="false" />
+    <Real start="-1.744" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqK[5]"
+    name = "Propylene.LiqK[5]"
     valueReference = "1176"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2049,10 +2049,10 @@
     classIndex = "113" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "36" startColumn = "5" endLine = "36" endColumn = "27" fileWritable = "true">
-    <Real start="-0.00028282" fixed="true" useNominal="false" />
+    <Real start="0.0015214" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqK[6]"
+    name = "Propylene.LiqK[6]"
     valueReference = "1177"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2060,10 +2060,10 @@
     classIndex = "114" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "36" startColumn = "5" endLine = "36" endColumn = "27" fileWritable = "true">
-    <Real start="-1.0129e-006" fixed="true" useNominal="false" />
+    <Real start="-7.8162e-006" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqVis[1]"
+    name = "Propylene.LiqVis[1]"
     valueReference = "1178"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2074,7 +2074,7 @@
     <Real start="101.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqVis[2]"
+    name = "Propylene.LiqVis[2]"
     valueReference = "1179"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2082,10 +2082,10 @@
     classIndex = "116" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "34" startColumn = "5" endLine = "34" endColumn = "29" fileWritable = "true">
-    <Real start="-32.996" fixed="true" useNominal="false" />
+    <Real start="-54.05485" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqVis[3]"
+    name = "Propylene.LiqVis[3]"
     valueReference = "1180"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2093,10 +2093,10 @@
     classIndex = "117" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "34" startColumn = "5" endLine = "34" endColumn = "29" fileWritable = "true">
-    <Real start="1981.4" fixed="true" useNominal="false" />
+    <Real start="1437.773" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqVis[4]"
+    name = "Propylene.LiqVis[4]"
     valueReference = "1181"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2104,10 +2104,10 @@
     classIndex = "118" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "34" startColumn = "5" endLine = "34" endColumn = "29" fileWritable = "true">
-    <Real start="3.3666" fixed="true" useNominal="false" />
+    <Real start="7.536247" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqVis[5]"
+    name = "Propylene.LiqVis[5]"
     valueReference = "1182"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2115,10 +2115,10 @@
     classIndex = "119" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "34" startColumn = "5" endLine = "34" endColumn = "29" fileWritable = "true">
-    <Real start="-3.9246e-006" fixed="true" useNominal="false" />
+    <Real start="-3.42733e-005" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.LiqVis[6]"
+    name = "Propylene.LiqVis[6]"
     valueReference = "1183"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2129,7 +2129,7 @@
     <Real start="2.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.MW"
+    name = "Propylene.MW"
     valueReference = "1184"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2137,10 +2137,10 @@
     classIndex = "121" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "16" startColumn = "5" endLine = "16" endColumn = "22" fileWritable = "true">
-    <Real start="32.042" fixed="true" useNominal="false" />
+    <Real start="42.0797" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.Pc"
+    name = "Propylene.Pc"
     valueReference = "1185"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2148,10 +2148,10 @@
     classIndex = "122" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "9" startColumn = "5" endLine = "9" endColumn = "22" fileWritable = "true">
-    <Real start="8097000.0" fixed="true" useNominal="false" />
+    <Real start="4600000.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.Racketparam"
+    name = "Propylene.Racketparam"
     valueReference = "1186"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2159,10 +2159,10 @@
     classIndex = "123" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "38" startColumn = "5" endLine = "38" endColumn = "31" fileWritable = "true">
-    <Real start="0.0" fixed="true" useNominal="false" />
+    <Real start="0.2785" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.SH"
+    name = "Propylene.SH"
     valueReference = "1187"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2170,10 +2170,10 @@
     classIndex = "124" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "21" startColumn = "5" endLine = "21" endColumn = "22" fileWritable = "true">
-    <Real start="-74520000.0" fixed="true" useNominal="false" />
+    <Real start="20230000.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.SP"
+    name = "Propylene.SP"
     valueReference = "1188"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2181,10 +2181,10 @@
     classIndex = "125" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "19" startColumn = "5" endLine = "19" endColumn = "22" fileWritable = "true">
-    <Real start="29440.0" fixed="true" useNominal="false" />
+    <Real start="11890.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.TP"
+    name = "Propylene.TP"
     valueReference = "1189"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2192,10 +2192,10 @@
     classIndex = "126" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "15" startColumn = "5" endLine = "15" endColumn = "22" fileWritable = "true">
-    <Real start="0.111264" fixed="true" useNominal="false" />
+    <Real start="0.00117" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.TT"
+    name = "Propylene.TT"
     valueReference = "1190"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2203,10 +2203,10 @@
     classIndex = "127" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "14" startColumn = "5" endLine = "14" endColumn = "22" fileWritable = "true">
-    <Real start="175.47" fixed="true" useNominal="false" />
+    <Real start="87.89" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.Tb"
+    name = "Propylene.Tb"
     valueReference = "1191"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2214,10 +2214,10 @@
     classIndex = "128" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "12" startColumn = "5" endLine = "12" endColumn = "22" fileWritable = "true">
-    <Real start="337.69" fixed="true" useNominal="false" />
+    <Real start="225.45" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.Tc"
+    name = "Propylene.Tc"
     valueReference = "1192"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2225,10 +2225,10 @@
     classIndex = "129" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "8" startColumn = "5" endLine = "8" endColumn = "22" fileWritable = "true">
-    <Real start="512.64" fixed="true" useNominal="false" />
+    <Real start="364.85" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.Tm"
+    name = "Propylene.Tm"
     valueReference = "1193"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2236,10 +2236,10 @@
     classIndex = "130" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "13" startColumn = "5" endLine = "13" endColumn = "22" fileWritable = "true">
-    <Real start="175.47" fixed="true" useNominal="false" />
+    <Real start="87.90000000000001" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.UniquacQ"
+    name = "Propylene.UniquacQ"
     valueReference = "1194"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2247,10 +2247,10 @@
     classIndex = "131" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "28" startColumn = "5" endLine = "28" endColumn = "28" fileWritable = "true">
-    <Real start="1.43" fixed="true" useNominal="false" />
+    <Real start="2.02" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.UniquacR"
+    name = "Propylene.UniquacR"
     valueReference = "1195"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2258,10 +2258,10 @@
     classIndex = "132" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "27" startColumn = "5" endLine = "27" endColumn = "28" fileWritable = "true">
-    <Real start="1.43" fixed="true" useNominal="false" />
+    <Real start="2.25" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VP[1]"
+    name = "Propylene.VP[1]"
     valueReference = "1196"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2272,7 +2272,7 @@
     <Real start="101.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VP[2]"
+    name = "Propylene.VP[2]"
     valueReference = "1197"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2280,10 +2280,10 @@
     classIndex = "134" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "30" startColumn = "5" endLine = "30" endColumn = "25" fileWritable = "true">
-    <Real start="73.40342" fixed="true" useNominal="false" />
+    <Real start="55.10362" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VP[3]"
+    name = "Propylene.VP[3]"
     valueReference = "1198"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2291,10 +2291,10 @@
     classIndex = "135" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "30" startColumn = "5" endLine = "30" endColumn = "25" fileWritable = "true">
-    <Real start="-6548.076" fixed="true" useNominal="false" />
+    <Real start="-3330.452" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VP[4]"
+    name = "Propylene.VP[4]"
     valueReference = "1199"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2302,10 +2302,10 @@
     classIndex = "136" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "30" startColumn = "5" endLine = "30" endColumn = "25" fileWritable = "true">
-    <Real start="-7.409987" fixed="true" useNominal="false" />
+    <Real start="-5.40588" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VP[5]"
+    name = "Propylene.VP[5]"
     valueReference = "1200"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2313,10 +2313,10 @@
     classIndex = "137" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "30" startColumn = "5" endLine = "30" endColumn = "25" fileWritable = "true">
-    <Real start="5.72492e-006" fixed="true" useNominal="false" />
+    <Real start="9.364100000000001e-006" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VP[6]"
+    name = "Propylene.VP[6]"
     valueReference = "1201"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2327,7 +2327,7 @@
     <Real start="2.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapCp[1]"
+    name = "Propylene.VapCp[1]"
     valueReference = "1202"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2338,7 +2338,7 @@
     <Real start="16.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapCp[2]"
+    name = "Propylene.VapCp[2]"
     valueReference = "1203"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2346,10 +2346,10 @@
     classIndex = "140" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "33" startColumn = "5" endLine = "33" endColumn = "28" fileWritable = "true">
-    <Real start="36313.16" fixed="true" useNominal="false" />
+    <Real start="38965.36" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapCp[3]"
+    name = "Propylene.VapCp[3]"
     valueReference = "1204"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2357,10 +2357,10 @@
     classIndex = "141" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "33" startColumn = "5" endLine = "33" endColumn = "28" fileWritable = "true">
-    <Real start="-680.4577000000001" fixed="true" useNominal="false" />
+    <Real start="-516.3838" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapCp[4]"
+    name = "Propylene.VapCp[4]"
     valueReference = "1205"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2368,10 +2368,10 @@
     classIndex = "142" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "33" startColumn = "5" endLine = "33" endColumn = "28" fileWritable = "true">
-    <Real start="11.10203" fixed="true" useNominal="false" />
+    <Real start="11.75322" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapCp[5]"
+    name = "Propylene.VapCp[5]"
     valueReference = "1206"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2379,10 +2379,10 @@
     classIndex = "143" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "33" startColumn = "5" endLine = "33" endColumn = "28" fileWritable = "true">
-    <Real start="0.000756766" fixed="true" useNominal="false" />
+    <Real start="0.000509119" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapCp[6]"
+    name = "Propylene.VapCp[6]"
     valueReference = "1207"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2390,10 +2390,10 @@
     classIndex = "144" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "33" startColumn = "5" endLine = "33" endColumn = "28" fileWritable = "true">
-    <Real start="-2.902645e-007" fixed="true" useNominal="false" />
+    <Real start="-1.771348e-007" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapK[1]"
+    name = "Propylene.VapK[1]"
     valueReference = "1208"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2404,7 +2404,7 @@
     <Real start="102.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapK[2]"
+    name = "Propylene.VapK[2]"
     valueReference = "1209"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2412,10 +2412,10 @@
     classIndex = "146" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "37" startColumn = "5" endLine = "37" endColumn = "27" fileWritable = "true">
-    <Real start="7.8368e-007" fixed="true" useNominal="false" />
+    <Real start="4.5373e-005" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapK[3]"
+    name = "Propylene.VapK[3]"
     valueReference = "1210"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2423,10 +2423,10 @@
     classIndex = "147" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "37" startColumn = "5" endLine = "37" endColumn = "27" fileWritable = "true">
-    <Real start="1.7569" fixed="true" useNominal="false" />
+    <Real start="1.2" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapK[4]"
+    name = "Propylene.VapK[4]"
     valueReference = "1211"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2434,10 +2434,10 @@
     classIndex = "148" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "37" startColumn = "5" endLine = "37" endColumn = "27" fileWritable = "true">
-    <Real start="108.12" fixed="true" useNominal="false" />
+    <Real start="415.83" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapK[5]"
+    name = "Propylene.VapK[5]"
     valueReference = "1212"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2445,10 +2445,10 @@
     classIndex = "149" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "37" startColumn = "5" endLine = "37" endColumn = "27" fileWritable = "true">
-    <Real start="-21101.0" fixed="true" useNominal="false" />
+    <Real start="2757.2" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapK[6]"
+    name = "Propylene.VapK[6]"
     valueReference = "1213"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2459,7 +2459,7 @@
     <Real start="0.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapVis[1]"
+    name = "Propylene.VapVis[1]"
     valueReference = "1214"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2470,7 +2470,7 @@
     <Real start="102.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapVis[2]"
+    name = "Propylene.VapVis[2]"
     valueReference = "1215"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2478,10 +2478,10 @@
     classIndex = "152" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "35" startColumn = "5" endLine = "35" endColumn = "29" fileWritable = "true">
-    <Real start="3.0654e-007" fixed="true" useNominal="false" />
+    <Real start="7.3873e-007" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapVis[3]"
+    name = "Propylene.VapVis[3]"
     valueReference = "1216"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2489,10 +2489,10 @@
     classIndex = "153" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "35" startColumn = "5" endLine = "35" endColumn = "29" fileWritable = "true">
-    <Real start="0.69658" fixed="true" useNominal="false" />
+    <Real start="0.54213" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapVis[4]"
+    name = "Propylene.VapVis[4]"
     valueReference = "1217"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2500,10 +2500,10 @@
     classIndex = "154" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "35" startColumn = "5" endLine = "35" endColumn = "29" fileWritable = "true">
-    <Real start="204.87" fixed="true" useNominal="false" />
+    <Real start="262.33" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapVis[5]"
+    name = "Propylene.VapVis[5]"
     valueReference = "1218"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2511,10 +2511,10 @@
     classIndex = "155" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "35" startColumn = "5" endLine = "35" endColumn = "29" fileWritable = "true">
-    <Real start="24.304" fixed="true" useNominal="false" />
+    <Real start="-108.51" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.VapVis[6]"
+    name = "Propylene.VapVis[6]"
     valueReference = "1219"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2525,7 +2525,7 @@
     <Real start="0.0" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.Vc"
+    name = "Propylene.Vc"
     valueReference = "1220"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2533,7 +2533,7 @@
     classIndex = "157" classType = "rPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "10" startColumn = "5" endLine = "10" endColumn = "22" fileWritable = "true">
-    <Real start="0.118" fixed="true" useNominal="false" />
+    <Real start="0.185" fixed="true" useNominal="false" />
   </ScalarVariable>
   <ScalarVariable
     name = "MatStm1.inlet.P"
@@ -2778,7 +2778,7 @@
     <Integer start="1" fixed="true" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.SN"
+    name = "Propylene.SN"
     valueReference = "1243"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2786,7 +2786,7 @@
     classIndex = "4" classType = "iPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "5" startColumn = "5" endLine = "5" endColumn = "25" fileWritable = "true">
-    <Integer start="32" fixed="true" />
+    <Integer start="61" fixed="true" />
   </ScalarVariable>
   <ScalarVariable
     name = "MatStm1.comp[1].CAS"
@@ -2811,7 +2811,7 @@
     <String fixed="true" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.CAS"
+    name = "Propylene.CAS"
     valueReference = "1246"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2819,10 +2819,10 @@
     classIndex = "2" classType = "sPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "7" startColumn = "5" endLine = "7" endColumn = "25" fileWritable = "true">
-    <String start="67-56-1" fixed="true" />
+    <String start="115-07-1" fixed="true" />
   </ScalarVariable>
   <ScalarVariable
-    name = "Methanol.name"
+    name = "Propylene.name"
     valueReference = "1247"
     variability = "parameter" isDiscrete = "true"
     causality = "internal" isValueChangeable = "true"
@@ -2830,7 +2830,7 @@
     classIndex = "3" classType = "sPar"
     isProtected = "false" hideResult = "false"
     fileName = "C:/Users/anbil/Desktop/FOSSEE/Fellowship2019/workspace/OMChemSimGUI/Simulator/Simulator/Files/Chemsep_Database/package.mo" startLine = "6" startColumn = "5" endLine = "6" endColumn = "26" fileWritable = "true">
-    <String start="Methanol" fixed="true" />
+    <String start="Propylene" fixed="true" />
   </ScalarVariable>
 
 
