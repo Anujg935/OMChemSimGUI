@@ -106,7 +106,6 @@ class Container():
         #print("###########$ResData$############",f.resdata)
 
         if mode=='SM':
-            self.msg.append("<span>["+str(self.currentTime())+"] Simulating in <b>sequential</b> mode ... </span>")
             f.simulateSM(self.ip,self.op)
             self.msgBrowser(f)
 

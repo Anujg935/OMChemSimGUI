@@ -58,7 +58,7 @@ class dockWidget(QDockWidget,ui_dialog):
                     print("thermo2")
                     for j in self.lines:
                         combo.addItem(str(j))
-                    self.formLayout.insertRow(c,QLabel(i+":"),combo )
+                    self.formLayout.addRow(QLabel(i+":"),combo )                    
                     self.inputdict[i] = combo
                     print("thermo")
                 elif(i=="condType"):
@@ -66,7 +66,7 @@ class dockWidget(QDockWidget,ui_dialog):
                     self.lines = ["Total","Partial"]
                     for j in self.lines:
                         combo.addItem(str(j))
-                    self.formLayout.insertRow(c,QLabel("Condensor Type :"+":"),combo )
+                    self.formLayout.addRow(QLabel("Condensor Type :"+":"),combo )
                     self.inputdict[i] = combo
                 elif(i=="CompMolFrac"):
                     print("cmfnjkmnjkmnjkm")
@@ -75,12 +75,12 @@ class dockWidget(QDockWidget,ui_dialog):
                     for j in range(noc):
                         l = QLineEdit()    
                         self.inputdict[i] = "compmolfrac"                                                  
-                        self.formLayout.insertRow(c,QLabel(str(compound_selected[j])+" Fraction"+":"),l )
+                        self.formLayout.addRow(QLabel(str(compound_selected[j])+" Fraction"+":"),l )
                         self.compmolfraclist.append(l)
                 else:
                     print("elseloopo")
                     l = QLineEdit()                                                      
-                    self.formLayout.insertRow(c,QLabel(i+":"),l )
+                    self.formLayout.addRow(QLabel(i+":"),l )
                     self.inputdict[i] = l
             
         except Exception as e:

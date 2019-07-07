@@ -25,6 +25,7 @@ from dockWidget import dockWidget
 from pythonGenerator import PythonFileGenerator
 from resDockWidget import resdockWidget
 from helper import helperFunc
+import datetime
 from container import Container
 ui,_ = loadUiType('main.ui')
 
@@ -62,7 +63,7 @@ class MainApp(QMainWindow,ui):
         self.pushButton_7.clicked.connect(partial(self.component,'Mixer'))
         self.pushButton_14.clicked.connect(partial(self.component,'Pump'))
         self.pushButton_26.clicked.connect(partial(self.component,'DistCol'))
-        self.pushButton_18.clicked.connect(partial(self.component,'ShortcutColumn'))
+        self.pushButton_18.clicked.connect(partial(self.component,'ShortCol'))
         self.pushButton_11.clicked.connect(partial(self.component,'Heater'))
         self.actionSelect_compouns.triggered.connect(self.selectCompounds)
         self.pushButton_10.clicked.connect(partial(self.component,'Splitter'))
@@ -81,12 +82,20 @@ class MainApp(QMainWindow,ui):
         msgBox.setText("For any Help or Suggestion you can contact us at\n contact-om@fossee.in or at <a href='https://www.fossee.in'>Visit fossee.in!</a>")
         msgBox.setStandardButtons(QMessageBox.Ok)
         msgBox.exec_()
-        #QMessageBox.about(self, 'Important', "For any Help or Suggestion you can contact us at\n contact-om@fossee.in or at <a href='https://www.fossee.in'>Visit fossee.in!</a>")
     def selectCompounds(self):
         self.comp.show()
 
+    def currentTime(self):
+        now = datetime.datetime.now()
+        time = str(now.hour) + ":" + str(now.minute) + ":" +str(now.second)
+        return time
+
     def generatef(self,mode):
         try:
+            if(mode == 'SM'):
+                self.textBrowser.append("<span>["+str(self.currentTime())+"] Simulating in <b>sequential</b> mode ... </span>")
+            elif(mode =='EQN'):
+                self.textBrowser.append("<span>["+str(self.currentTime())+"] Simulating in <b>equation</b> mode ... </span>")
             self.Container.simulate(mode)
             self.dockWidget_2.show()
             self.res = resdockWidget(self.Container)

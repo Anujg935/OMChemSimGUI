@@ -63,7 +63,7 @@ void Flowsheet_eqFunction_4(DATA *data, threadData_t *threadData)
 /*
 equation index: 5
 type: SIMPLE_ASSIGN
-MatStm1._Psat[1] = Simulator.Files.Thermodynamic_Functions.Psat({MatStm1.comp[1].VP[1], MatStm1.comp[1].VP[2], MatStm1.comp[1].VP[3], MatStm1.comp[1].VP[4], MatStm1.comp[1].VP[5], MatStm1.comp[1].VP[6]}, 310.0)
+MatStm1._Psat[1] = Simulator.Files.Thermodynamic_Functions.Psat({MatStm1.comp[1].VP[1], MatStm1.comp[1].VP[2], MatStm1.comp[1].VP[3], MatStm1.comp[1].VP[4], MatStm1.comp[1].VP[5], MatStm1.comp[1].VP[6]}, 320.0)
 */
 void Flowsheet_eqFunction_5(DATA *data, threadData_t *threadData)
 {
@@ -71,14 +71,14 @@ void Flowsheet_eqFunction_5(DATA *data, threadData_t *threadData)
   const int equationIndexes[2] = {1,5};
   real_array tmp0;
   array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[54], (modelica_real)data->simulationInfo->realParameter[55], (modelica_real)data->simulationInfo->realParameter[56], (modelica_real)data->simulationInfo->realParameter[57], (modelica_real)data->simulationInfo->realParameter[58], (modelica_real)data->simulationInfo->realParameter[59]);
-  data->localData[0]->realVars[7] /* MatStm1.Psat[1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_Psat(threadData, tmp0, 310.0);
+  data->localData[0]->realVars[7] /* MatStm1.Psat[1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_Psat(threadData, tmp0, 320.0);
   TRACE_POP
 }
 
 /*
 equation index: 6
 type: SIMPLE_ASSIGN
-MatStm1._compMolEnth[3,1] = Simulator.Files.Thermodynamic_Functions.HVapId(MatStm1.comp[1].SH, {MatStm1.comp[1].VapCp[1], MatStm1.comp[1].VapCp[2], MatStm1.comp[1].VapCp[3], MatStm1.comp[1].VapCp[4], MatStm1.comp[1].VapCp[5], MatStm1.comp[1].VapCp[6]}, {MatStm1.comp[1].HOV[1], MatStm1.comp[1].HOV[2], MatStm1.comp[1].HOV[3], MatStm1.comp[1].HOV[4], MatStm1.comp[1].HOV[5], MatStm1.comp[1].HOV[6]}, MatStm1.comp[1].Tc, 310.0)
+MatStm1._compMolEnth[3,1] = Simulator.Files.Thermodynamic_Functions.HVapId(MatStm1.comp[1].SH, {MatStm1.comp[1].VapCp[1], MatStm1.comp[1].VapCp[2], MatStm1.comp[1].VapCp[3], MatStm1.comp[1].VapCp[4], MatStm1.comp[1].VapCp[5], MatStm1.comp[1].VapCp[6]}, {MatStm1.comp[1].HOV[1], MatStm1.comp[1].HOV[2], MatStm1.comp[1].HOV[3], MatStm1.comp[1].HOV[4], MatStm1.comp[1].HOV[5], MatStm1.comp[1].HOV[6]}, MatStm1.comp[1].Tc, 320.0)
 */
 void Flowsheet_eqFunction_6(DATA *data, threadData_t *threadData)
 {
@@ -88,14 +88,14 @@ void Flowsheet_eqFunction_6(DATA *data, threadData_t *threadData)
   real_array tmp2;
   array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[60], (modelica_real)data->simulationInfo->realParameter[61], (modelica_real)data->simulationInfo->realParameter[62], (modelica_real)data->simulationInfo->realParameter[63], (modelica_real)data->simulationInfo->realParameter[64], (modelica_real)data->simulationInfo->realParameter[65]);
   array_alloc_scalar_real_array(&tmp2, 6, (modelica_real)data->simulationInfo->realParameter[10], (modelica_real)data->simulationInfo->realParameter[11], (modelica_real)data->simulationInfo->realParameter[12], (modelica_real)data->simulationInfo->realParameter[13], (modelica_real)data->simulationInfo->realParameter[14], (modelica_real)data->simulationInfo->realParameter[15]);
-  data->localData[0]->realVars[17] /* MatStm1.compMolEnth[3,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HVapId(threadData, data->simulationInfo->realParameter[45], tmp1, tmp2, data->simulationInfo->realParameter[50], 310.0);
+  data->localData[0]->realVars[17] /* MatStm1.compMolEnth[3,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HVapId(threadData, data->simulationInfo->realParameter[45], tmp1, tmp2, data->simulationInfo->realParameter[50], 320.0);
   TRACE_POP
 }
 
 /*
 equation index: 7
 type: SIMPLE_ASSIGN
-MatStm1._compMolEnth[2,1] = Simulator.Files.Thermodynamic_Functions.HLiqId(MatStm1.comp[1].SH, {MatStm1.comp[1].VapCp[1], MatStm1.comp[1].VapCp[2], MatStm1.comp[1].VapCp[3], MatStm1.comp[1].VapCp[4], MatStm1.comp[1].VapCp[5], MatStm1.comp[1].VapCp[6]}, {MatStm1.comp[1].HOV[1], MatStm1.comp[1].HOV[2], MatStm1.comp[1].HOV[3], MatStm1.comp[1].HOV[4], MatStm1.comp[1].HOV[5], MatStm1.comp[1].HOV[6]}, MatStm1.comp[1].Tc, 310.0)
+MatStm1._compMolEnth[2,1] = Simulator.Files.Thermodynamic_Functions.HLiqId(MatStm1.comp[1].SH, {MatStm1.comp[1].VapCp[1], MatStm1.comp[1].VapCp[2], MatStm1.comp[1].VapCp[3], MatStm1.comp[1].VapCp[4], MatStm1.comp[1].VapCp[5], MatStm1.comp[1].VapCp[6]}, {MatStm1.comp[1].HOV[1], MatStm1.comp[1].HOV[2], MatStm1.comp[1].HOV[3], MatStm1.comp[1].HOV[4], MatStm1.comp[1].HOV[5], MatStm1.comp[1].HOV[6]}, MatStm1.comp[1].Tc, 320.0)
 */
 void Flowsheet_eqFunction_7(DATA *data, threadData_t *threadData)
 {
@@ -105,14 +105,14 @@ void Flowsheet_eqFunction_7(DATA *data, threadData_t *threadData)
   real_array tmp4;
   array_alloc_scalar_real_array(&tmp3, 6, (modelica_real)data->simulationInfo->realParameter[60], (modelica_real)data->simulationInfo->realParameter[61], (modelica_real)data->simulationInfo->realParameter[62], (modelica_real)data->simulationInfo->realParameter[63], (modelica_real)data->simulationInfo->realParameter[64], (modelica_real)data->simulationInfo->realParameter[65]);
   array_alloc_scalar_real_array(&tmp4, 6, (modelica_real)data->simulationInfo->realParameter[10], (modelica_real)data->simulationInfo->realParameter[11], (modelica_real)data->simulationInfo->realParameter[12], (modelica_real)data->simulationInfo->realParameter[13], (modelica_real)data->simulationInfo->realParameter[14], (modelica_real)data->simulationInfo->realParameter[15]);
-  data->localData[0]->realVars[16] /* MatStm1.compMolEnth[2,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HLiqId(threadData, data->simulationInfo->realParameter[45], tmp3, tmp4, data->simulationInfo->realParameter[50], 310.0);
+  data->localData[0]->realVars[16] /* MatStm1.compMolEnth[2,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_HLiqId(threadData, data->simulationInfo->realParameter[45], tmp3, tmp4, data->simulationInfo->realParameter[50], 320.0);
   TRACE_POP
 }
 
 /*
 equation index: 8
 type: SIMPLE_ASSIGN
-MatStm1._compMolSpHeat[3,1] = Simulator.Files.Thermodynamic_Functions.VapCpId({MatStm1.comp[1].VapCp[1], MatStm1.comp[1].VapCp[2], MatStm1.comp[1].VapCp[3], MatStm1.comp[1].VapCp[4], MatStm1.comp[1].VapCp[5], MatStm1.comp[1].VapCp[6]}, 310.0)
+MatStm1._compMolSpHeat[3,1] = Simulator.Files.Thermodynamic_Functions.VapCpId({MatStm1.comp[1].VapCp[1], MatStm1.comp[1].VapCp[2], MatStm1.comp[1].VapCp[3], MatStm1.comp[1].VapCp[4], MatStm1.comp[1].VapCp[5], MatStm1.comp[1].VapCp[6]}, 320.0)
 */
 void Flowsheet_eqFunction_8(DATA *data, threadData_t *threadData)
 {
@@ -120,14 +120,14 @@ void Flowsheet_eqFunction_8(DATA *data, threadData_t *threadData)
   const int equationIndexes[2] = {1,8};
   real_array tmp5;
   array_alloc_scalar_real_array(&tmp5, 6, (modelica_real)data->simulationInfo->realParameter[60], (modelica_real)data->simulationInfo->realParameter[61], (modelica_real)data->simulationInfo->realParameter[62], (modelica_real)data->simulationInfo->realParameter[63], (modelica_real)data->simulationInfo->realParameter[64], (modelica_real)data->simulationInfo->realParameter[65]);
-  data->localData[0]->realVars[29] /* MatStm1.compMolSpHeat[3,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp5, 310.0);
+  data->localData[0]->realVars[29] /* MatStm1.compMolSpHeat[3,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_VapCpId(threadData, tmp5, 320.0);
   TRACE_POP
 }
 
 /*
 equation index: 9
 type: SIMPLE_ASSIGN
-MatStm1._compMolSpHeat[2,1] = Simulator.Files.Thermodynamic_Functions.LiqCpId({MatStm1.comp[1].LiqCp[1], MatStm1.comp[1].LiqCp[2], MatStm1.comp[1].LiqCp[3], MatStm1.comp[1].LiqCp[4], MatStm1.comp[1].LiqCp[5], MatStm1.comp[1].LiqCp[6]}, 310.0)
+MatStm1._compMolSpHeat[2,1] = Simulator.Files.Thermodynamic_Functions.LiqCpId({MatStm1.comp[1].LiqCp[1], MatStm1.comp[1].LiqCp[2], MatStm1.comp[1].LiqCp[3], MatStm1.comp[1].LiqCp[4], MatStm1.comp[1].LiqCp[5], MatStm1.comp[1].LiqCp[6]}, 320.0)
 */
 void Flowsheet_eqFunction_9(DATA *data, threadData_t *threadData)
 {
@@ -135,7 +135,7 @@ void Flowsheet_eqFunction_9(DATA *data, threadData_t *threadData)
   const int equationIndexes[2] = {1,9};
   real_array tmp6;
   array_alloc_scalar_real_array(&tmp6, 6, (modelica_real)data->simulationInfo->realParameter[18], (modelica_real)data->simulationInfo->realParameter[19], (modelica_real)data->simulationInfo->realParameter[20], (modelica_real)data->simulationInfo->realParameter[21], (modelica_real)data->simulationInfo->realParameter[22], (modelica_real)data->simulationInfo->realParameter[23]);
-  data->localData[0]->realVars[28] /* MatStm1.compMolSpHeat[2,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData, tmp6, 310.0);
+  data->localData[0]->realVars[28] /* MatStm1.compMolSpHeat[2,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_LiqCpId(threadData, tmp6, 320.0);
   TRACE_POP
 }
 
@@ -168,7 +168,7 @@ void Flowsheet_eqFunction_11(DATA *data, threadData_t *threadData)
 /*
 equation index: 12
 type: SIMPLE_ASSIGN
-MatStm1._Pbubl = MatStm1.compMolFrac[1,1] * exp(MatStm1.comp[1].VP[2] + MatStm1.comp[1].VP[3] / 310.0 + MatStm1.comp[1].VP[4] * 5.736572297479192 + MatStm1.comp[1].VP[5] * 310.0 ^ MatStm1.comp[1].VP[6])
+MatStm1._Pbubl = MatStm1.compMolFrac[1,1] * exp(MatStm1.comp[1].VP[2] + 0.003125 * MatStm1.comp[1].VP[3] + MatStm1.comp[1].VP[4] * 5.768320995793772 + MatStm1.comp[1].VP[5] * 320.0 ^ MatStm1.comp[1].VP[6])
 */
 void Flowsheet_eqFunction_12(DATA *data, threadData_t *threadData)
 {
@@ -181,7 +181,7 @@ void Flowsheet_eqFunction_12(DATA *data, threadData_t *threadData)
   modelica_real tmp11;
   modelica_real tmp12;
   modelica_real tmp13;
-  tmp7 = 310.0;
+  tmp7 = 320.0;
   tmp8 = data->simulationInfo->realParameter[59];
   if(tmp7 < 0.0 && tmp8 != 0.0)
   {
@@ -231,14 +231,14 @@ void Flowsheet_eqFunction_12(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp7, tmp8);
   }
-  data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */ = (data->localData[0]->realVars[24] /* MatStm1.compMolFrac[1,1] variable */) * (exp(data->simulationInfo->realParameter[55] + DIVISION_SIM(data->simulationInfo->realParameter[56],310.0,"310.0",equationIndexes) + (data->simulationInfo->realParameter[57]) * (5.736572297479192) + (data->simulationInfo->realParameter[58]) * (tmp9)));
+  data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */ = (data->localData[0]->realVars[24] /* MatStm1.compMolFrac[1,1] variable */) * (exp(data->simulationInfo->realParameter[55] + (0.003125) * (data->simulationInfo->realParameter[56]) + (data->simulationInfo->realParameter[57]) * (5.768320995793772) + (data->simulationInfo->realParameter[58]) * (tmp9)));
   TRACE_POP
 }
 
 /*
 equation index: 13
 type: SIMPLE_ASSIGN
-MatStm1._Pdew = exp(MatStm1.comp[1].VP[2] + MatStm1.comp[1].VP[3] / 310.0 + MatStm1.comp[1].VP[4] * 5.736572297479192 + MatStm1.comp[1].VP[5] * 310.0 ^ MatStm1.comp[1].VP[6]) / MatStm1.compMolFrac[1,1]
+MatStm1._Pdew = exp(MatStm1.comp[1].VP[2] + 0.003125 * MatStm1.comp[1].VP[3] + MatStm1.comp[1].VP[4] * 5.768320995793772 + MatStm1.comp[1].VP[5] * 320.0 ^ MatStm1.comp[1].VP[6]) / MatStm1.compMolFrac[1,1]
 */
 void Flowsheet_eqFunction_13(DATA *data, threadData_t *threadData)
 {
@@ -251,7 +251,7 @@ void Flowsheet_eqFunction_13(DATA *data, threadData_t *threadData)
   modelica_real tmp18;
   modelica_real tmp19;
   modelica_real tmp20;
-  tmp14 = 310.0;
+  tmp14 = 320.0;
   tmp15 = data->simulationInfo->realParameter[59];
   if(tmp14 < 0.0 && tmp15 != 0.0)
   {
@@ -301,7 +301,7 @@ void Flowsheet_eqFunction_13(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp14, tmp15);
   }
-  data->localData[0]->realVars[6] /* MatStm1.Pdew variable */ = DIVISION_SIM(exp(data->simulationInfo->realParameter[55] + DIVISION_SIM(data->simulationInfo->realParameter[56],310.0,"310.0",equationIndexes) + (data->simulationInfo->realParameter[57]) * (5.736572297479192) + (data->simulationInfo->realParameter[58]) * (tmp16)),data->localData[0]->realVars[24] /* MatStm1.compMolFrac[1,1] variable */,"MatStm1.compMolFrac[1,1]",equationIndexes);
+  data->localData[0]->realVars[6] /* MatStm1.Pdew variable */ = DIVISION_SIM(exp(data->simulationInfo->realParameter[55] + (0.003125) * (data->simulationInfo->realParameter[56]) + (data->simulationInfo->realParameter[57]) * (5.768320995793772) + (data->simulationInfo->realParameter[58]) * (tmp16)),data->localData[0]->realVars[24] /* MatStm1.compMolFrac[1,1] variable */,"MatStm1.compMolFrac[1,1]",equationIndexes);
   TRACE_POP
 }
 extern void Flowsheet_eqFunction_69(DATA *data, threadData_t *threadData);
@@ -364,11 +364,7 @@ extern void Flowsheet_eqFunction_87(DATA *data, threadData_t *threadData);
 equation index: 37
 type: ALGORITHM
 
-<<<<<<< HEAD
-  (MatStm1.compMolEntr[2,1], MatStm1.compMolEntr[3,1]) := Simulator.Files.Thermodynamic_Functions.SId(MatStm1.comp[1].AS, {MatStm1.comp[1].VapCp[1], MatStm1.comp[1].VapCp[2], MatStm1.comp[1].VapCp[3], MatStm1.comp[1].VapCp[4], MatStm1.comp[1].VapCp[5], MatStm1.comp[1].VapCp[6]}, {MatStm1.comp[1].HOV[1], MatStm1.comp[1].HOV[2], MatStm1.comp[1].HOV[3], MatStm1.comp[1].HOV[4], MatStm1.comp[1].HOV[5], MatStm1.comp[1].HOV[6]}, MatStm1.comp[1].Tb, MatStm1.comp[1].Tc, 300.0, 101324.0, MatStm1.compMolFrac[2,1], MatStm1.compMolFrac[3,1]);
-=======
-  (MatStm1.compMolEntr[2,1], MatStm1.compMolEntr[3,1]) := Simulator.Files.Thermodynamic_Functions.SId(MatStm1.comp[1].AS, {MatStm1.comp[1].VapCp[1], MatStm1.comp[1].VapCp[2], MatStm1.comp[1].VapCp[3], MatStm1.comp[1].VapCp[4], MatStm1.comp[1].VapCp[5], MatStm1.comp[1].VapCp[6]}, {MatStm1.comp[1].HOV[1], MatStm1.comp[1].HOV[2], MatStm1.comp[1].HOV[3], MatStm1.comp[1].HOV[4], MatStm1.comp[1].HOV[5], MatStm1.comp[1].HOV[6]}, MatStm1.comp[1].Tb, MatStm1.comp[1].Tc, 310.0, 101325.0, MatStm1.compMolFrac[2,1], MatStm1.compMolFrac[3,1]);
->>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
+  (MatStm1.compMolEntr[2,1], MatStm1.compMolEntr[3,1]) := Simulator.Files.Thermodynamic_Functions.SId(MatStm1.comp[1].AS, {MatStm1.comp[1].VapCp[1], MatStm1.comp[1].VapCp[2], MatStm1.comp[1].VapCp[3], MatStm1.comp[1].VapCp[4], MatStm1.comp[1].VapCp[5], MatStm1.comp[1].VapCp[6]}, {MatStm1.comp[1].HOV[1], MatStm1.comp[1].HOV[2], MatStm1.comp[1].HOV[3], MatStm1.comp[1].HOV[4], MatStm1.comp[1].HOV[5], MatStm1.comp[1].HOV[6]}, MatStm1.comp[1].Tb, MatStm1.comp[1].Tc, 320.0, 101325.0, MatStm1.compMolFrac[2,1], MatStm1.compMolFrac[3,1]);
 */
 void Flowsheet_eqFunction_37(DATA *data, threadData_t *threadData)
 {
@@ -378,11 +374,7 @@ void Flowsheet_eqFunction_37(DATA *data, threadData_t *threadData)
   real_array tmp1;
   array_alloc_scalar_real_array(&tmp0, 6, (modelica_real)data->simulationInfo->realParameter[60], (modelica_real)data->simulationInfo->realParameter[61], (modelica_real)data->simulationInfo->realParameter[62], (modelica_real)data->simulationInfo->realParameter[63], (modelica_real)data->simulationInfo->realParameter[64], (modelica_real)data->simulationInfo->realParameter[65]);
   array_alloc_scalar_real_array(&tmp1, 6, (modelica_real)data->simulationInfo->realParameter[10], (modelica_real)data->simulationInfo->realParameter[11], (modelica_real)data->simulationInfo->realParameter[12], (modelica_real)data->simulationInfo->realParameter[13], (modelica_real)data->simulationInfo->realParameter[14], (modelica_real)data->simulationInfo->realParameter[15]);
-<<<<<<< HEAD
-  data->localData[0]->realVars[19] /* MatStm1.compMolEntr[2,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_SId(threadData, data->simulationInfo->realParameter[1], tmp0, tmp1, data->simulationInfo->realParameter[49], data->simulationInfo->realParameter[50], 300.0, 101324.0, data->localData[0]->realVars[25] /* MatStm1.compMolFrac[2,1] variable */, data->localData[0]->realVars[26] /* MatStm1.compMolFrac[3,1] variable */ ,&data->localData[0]->realVars[20] /* MatStm1.compMolEntr[3,1] variable */);
-=======
-  data->localData[0]->realVars[19] /* MatStm1.compMolEntr[2,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_SId(threadData, data->simulationInfo->realParameter[1], tmp0, tmp1, data->simulationInfo->realParameter[49], data->simulationInfo->realParameter[50], 310.0, 101325.0, data->localData[0]->realVars[25] /* MatStm1.compMolFrac[2,1] variable */, data->localData[0]->realVars[26] /* MatStm1.compMolFrac[3,1] variable */ ,&data->localData[0]->realVars[20] /* MatStm1.compMolEntr[3,1] variable */);
->>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
+  data->localData[0]->realVars[19] /* MatStm1.compMolEntr[2,1] variable */ = omc_Simulator_Files_Thermodynamic__Functions_SId(threadData, data->simulationInfo->realParameter[1], tmp0, tmp1, data->simulationInfo->realParameter[49], data->simulationInfo->realParameter[50], 320.0, 101325.0, data->localData[0]->realVars[25] /* MatStm1.compMolFrac[2,1] variable */, data->localData[0]->realVars[26] /* MatStm1.compMolFrac[3,1] variable */ ,&data->localData[0]->realVars[20] /* MatStm1.compMolEntr[3,1] variable */);
   TRACE_POP
 }
 extern void Flowsheet_eqFunction_98(DATA *data, threadData_t *threadData);
@@ -452,27 +444,27 @@ type: LINEAR
 <var>MatStm1._compMasFrac[3,1]</var>
 <var>MatStm1._compMasFrac[2,1]</var>
 <row>
-  <cell>if 101324.0 >= MatStm1.Pbubl then MatStm1.compMasFlo[1,1] else if 101324.0 >= MatStm1.Pdew then MatStm1.compMasFlo[2,1] else MatStm1.compMasFlo[1,1]</cell>
-  <cell>if 101324.0 >= MatStm1.Pbubl then 0.0 else if 101324.0 >= MatStm1.Pdew then MatStm1.compMasFlo[1,1] else 0.0</cell>
-  <cell>if 101324.0 >= MatStm1.Pbubl then 0.0 else if 101324.0 >= MatStm1.Pdew then MatStm1.compMasFlo[3,1] else 0.0</cell>
+  <cell>if 101325.0 >= MatStm1.Pbubl then MatStm1.compMasFlo[1,1] else if 101325.0 >= MatStm1.Pdew then MatStm1.compMasFlo[2,1] else MatStm1.compMasFlo[1,1]</cell>
+  <cell>if 101325.0 >= MatStm1.Pbubl then 0.0 else if 101325.0 >= MatStm1.Pdew then MatStm1.compMasFlo[1,1] else 0.0</cell>
+  <cell>if 101325.0 >= MatStm1.Pbubl then 0.0 else if 101325.0 >= MatStm1.Pdew then MatStm1.compMasFlo[3,1] else 0.0</cell>
 </row>
 <matrix>
   <cell row="0" col="0">
-    <residual>-(if 101324.0 >= MatStm1.Pbubl then -MatStm1.totMasFlo[1] else if 101324.0 >= MatStm1.Pdew then -0.0 else -MatStm1.totMasFlo[1])</residual>
+    <residual>-(if 101325.0 >= MatStm1.Pbubl then -MatStm1.totMasFlo[1] else if 101325.0 >= MatStm1.Pdew then -0.0 else -MatStm1.totMasFlo[1])</residual>
   </cell><cell row="0" col="2">
-    <residual>-(if 101324.0 >= MatStm1.Pbubl then -0.0 else if 101324.0 >= MatStm1.Pdew then -MatStm1.totMasFlo[2] else -0.0)</residual>
+    <residual>-(if 101325.0 >= MatStm1.Pbubl then -0.0 else if 101325.0 >= MatStm1.Pdew then -MatStm1.totMasFlo[2] else -0.0)</residual>
   </cell><cell row="1" col="0">
-    <residual>-(if 101324.0 >= MatStm1.Pbubl then 0.0 else if 101324.0 >= MatStm1.Pdew then -MatStm1.totMasFlo[1] else 0.0)</residual>
+    <residual>-(if 101325.0 >= MatStm1.Pbubl then 0.0 else if 101325.0 >= MatStm1.Pdew then -MatStm1.totMasFlo[1] else 0.0)</residual>
   </cell><cell row="1" col="1">
-    <residual>-(if 101324.0 >= MatStm1.Pbubl then 1.0 else -0.0)</residual>
+    <residual>-(if 101325.0 >= MatStm1.Pbubl then 1.0 else -0.0)</residual>
   </cell><cell row="1" col="2">
-    <residual>-(if 101324.0 >= MatStm1.Pbubl then 0.0 else if 101324.0 >= MatStm1.Pdew then -0.0 else 1.0)</residual>
+    <residual>-(if 101325.0 >= MatStm1.Pbubl then 0.0 else if 101325.0 >= MatStm1.Pdew then -0.0 else 1.0)</residual>
   </cell><cell row="2" col="0">
-    <residual>-(if 101324.0 >= MatStm1.Pbubl then -1.0 else if 101324.0 >= MatStm1.Pdew then -0.0 else -1.0)</residual>
+    <residual>-(if 101325.0 >= MatStm1.Pbubl then -1.0 else if 101325.0 >= MatStm1.Pdew then -0.0 else -1.0)</residual>
   </cell><cell row="2" col="1">
-    <residual>-(if 101324.0 >= MatStm1.Pbubl then 0.0 else if 101324.0 >= MatStm1.Pdew then -MatStm1.totMasFlo[3] else 1.0)</residual>
+    <residual>-(if 101325.0 >= MatStm1.Pbubl then 0.0 else if 101325.0 >= MatStm1.Pdew then -MatStm1.totMasFlo[3] else 1.0)</residual>
   </cell><cell row="2" col="2">
-    <residual>-(if 101324.0 >= MatStm1.Pbubl then 1.0 else -0.0)</residual>
+    <residual>-(if 101325.0 >= MatStm1.Pbubl then 1.0 else -0.0)</residual>
   </cell>
 </matrix>
 */
@@ -650,26 +642,26 @@ void Flowsheet_eqFunction_64(DATA *data, threadData_t *threadData)
 /*
 equation index: 65
 type: SIMPLE_ASSIGN
-MatStm1._P = 101324.0
+MatStm1._P = 101325.0
 */
 void Flowsheet_eqFunction_65(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,65};
-  data->localData[0]->realVars[4] /* MatStm1.P variable */ = 101324.0;
+  data->localData[0]->realVars[4] /* MatStm1.P variable */ = 101325.0;
   TRACE_POP
 }
 
 /*
 equation index: 66
 type: SIMPLE_ASSIGN
-MatStm1._T = 310.0
+MatStm1._T = 320.0
 */
 void Flowsheet_eqFunction_66(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,66};
-  data->localData[0]->realVars[8] /* MatStm1.T variable */ = 310.0;
+  data->localData[0]->realVars[8] /* MatStm1.T variable */ = 320.0;
   TRACE_POP
 }
 
