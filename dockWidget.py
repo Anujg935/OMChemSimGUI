@@ -35,10 +35,10 @@ class dockWidget(QDockWidget,ui_dialog):
             for j in modesList:
                     self.comboBox.addItem(str(j))
             
-        else:
-            self.tabWidget.setCurrentIndex(0)
-            self.inputdict = self.obj.paramgetter()
-            self.inputparamslist()
+        #else:
+        self.tabWidget.setCurrentIndex(0)
+        self.inputdict = self.obj.paramgetter()
+        self.inputparamslist()
 
     def modeSelection(self):
         for i in reversed(range(self.formLayout.count())):

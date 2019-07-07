@@ -27,7 +27,7 @@ class DistCol():
     def modesList(self):
         return ["refluxRatio","sideDrawMolFlo","T"]
 
-    def paramgetter(self,mode):
+    def paramgetter(self,mode="refluxRatio"):
         self.mode=mode
         dict = { "numStage" : None,"numFeeds" :None,"feedStages" :None,"thermoPackage":None,"condType":None,self.mode:None,"condensor.P":None,"reboiler.P":None}
         return dict

@@ -36,7 +36,11 @@ void Flowsheet_updateBoundParameters_0(DATA *data, threadData_t *threadData);
 /*
 equation index: 111
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._ChaoSeadLV = Propylene.ChaoSeadLV
+=======
+MatStm1._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_111(DATA *data, threadData_t *threadData)
@@ -50,7 +54,11 @@ static void Flowsheet_eqFunction_111(DATA *data, threadData_t *threadData)
 /*
 equation index: 112
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._ChaoSeadSP = Propylene.ChaoSeadSP
+=======
+MatStm1._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_112(DATA *data, threadData_t *threadData)
@@ -64,7 +72,11 @@ static void Flowsheet_eqFunction_112(DATA *data, threadData_t *threadData)
 /*
 equation index: 113
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._ChaoSeadAF = Propylene.ChaoSeadAF
+=======
+MatStm1._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_113(DATA *data, threadData_t *threadData)
@@ -78,7 +90,11 @@ static void Flowsheet_eqFunction_113(DATA *data, threadData_t *threadData)
 /*
 equation index: 114
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._Racketparam = Propylene.Racketparam
+=======
+MatStm1._comp[1]._Racketparam = Water.Racketparam
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_114(DATA *data, threadData_t *threadData)
@@ -92,7 +108,11 @@ static void Flowsheet_eqFunction_114(DATA *data, threadData_t *threadData)
 /*
 equation index: 115
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapK[6] = Propylene.VapK[6]
+=======
+MatStm1._comp[1]._VapK[6] = Water.VapK[6]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_115(DATA *data, threadData_t *threadData)
@@ -106,7 +126,11 @@ static void Flowsheet_eqFunction_115(DATA *data, threadData_t *threadData)
 /*
 equation index: 116
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapK[5] = Propylene.VapK[5]
+=======
+MatStm1._comp[1]._VapK[5] = Water.VapK[5]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_116(DATA *data, threadData_t *threadData)
@@ -120,7 +144,11 @@ static void Flowsheet_eqFunction_116(DATA *data, threadData_t *threadData)
 /*
 equation index: 117
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapK[4] = Propylene.VapK[4]
+=======
+MatStm1._comp[1]._VapK[4] = Water.VapK[4]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_117(DATA *data, threadData_t *threadData)
@@ -134,7 +162,11 @@ static void Flowsheet_eqFunction_117(DATA *data, threadData_t *threadData)
 /*
 equation index: 118
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapK[3] = Propylene.VapK[3]
+=======
+MatStm1._comp[1]._VapK[3] = Water.VapK[3]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_118(DATA *data, threadData_t *threadData)
@@ -148,7 +180,11 @@ static void Flowsheet_eqFunction_118(DATA *data, threadData_t *threadData)
 /*
 equation index: 119
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapK[2] = Propylene.VapK[2]
+=======
+MatStm1._comp[1]._VapK[2] = Water.VapK[2]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_119(DATA *data, threadData_t *threadData)
@@ -162,7 +198,11 @@ static void Flowsheet_eqFunction_119(DATA *data, threadData_t *threadData)
 /*
 equation index: 120
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapK[1] = Propylene.VapK[1]
+=======
+MatStm1._comp[1]._VapK[1] = Water.VapK[1]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_120(DATA *data, threadData_t *threadData)
@@ -176,7 +216,11 @@ static void Flowsheet_eqFunction_120(DATA *data, threadData_t *threadData)
 /*
 equation index: 121
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqK[6] = Propylene.LiqK[6]
+=======
+MatStm1._comp[1]._LiqK[6] = Water.LiqK[6]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_121(DATA *data, threadData_t *threadData)
@@ -190,7 +234,11 @@ static void Flowsheet_eqFunction_121(DATA *data, threadData_t *threadData)
 /*
 equation index: 122
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqK[5] = Propylene.LiqK[5]
+=======
+MatStm1._comp[1]._LiqK[5] = Water.LiqK[5]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_122(DATA *data, threadData_t *threadData)
@@ -204,7 +252,11 @@ static void Flowsheet_eqFunction_122(DATA *data, threadData_t *threadData)
 /*
 equation index: 123
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqK[4] = Propylene.LiqK[4]
+=======
+MatStm1._comp[1]._LiqK[4] = Water.LiqK[4]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_123(DATA *data, threadData_t *threadData)
@@ -218,7 +270,11 @@ static void Flowsheet_eqFunction_123(DATA *data, threadData_t *threadData)
 /*
 equation index: 124
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqK[3] = Propylene.LiqK[3]
+=======
+MatStm1._comp[1]._LiqK[3] = Water.LiqK[3]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_124(DATA *data, threadData_t *threadData)
@@ -232,7 +288,11 @@ static void Flowsheet_eqFunction_124(DATA *data, threadData_t *threadData)
 /*
 equation index: 125
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqK[2] = Propylene.LiqK[2]
+=======
+MatStm1._comp[1]._LiqK[2] = Water.LiqK[2]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_125(DATA *data, threadData_t *threadData)
@@ -246,7 +306,11 @@ static void Flowsheet_eqFunction_125(DATA *data, threadData_t *threadData)
 /*
 equation index: 126
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqK[1] = Propylene.LiqK[1]
+=======
+MatStm1._comp[1]._LiqK[1] = Water.LiqK[1]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_126(DATA *data, threadData_t *threadData)
@@ -260,7 +324,11 @@ static void Flowsheet_eqFunction_126(DATA *data, threadData_t *threadData)
 /*
 equation index: 127
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapVis[6] = Propylene.VapVis[6]
+=======
+MatStm1._comp[1]._VapVis[6] = Water.VapVis[6]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_127(DATA *data, threadData_t *threadData)
@@ -274,7 +342,11 @@ static void Flowsheet_eqFunction_127(DATA *data, threadData_t *threadData)
 /*
 equation index: 128
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapVis[5] = Propylene.VapVis[5]
+=======
+MatStm1._comp[1]._VapVis[5] = Water.VapVis[5]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_128(DATA *data, threadData_t *threadData)
@@ -288,7 +360,11 @@ static void Flowsheet_eqFunction_128(DATA *data, threadData_t *threadData)
 /*
 equation index: 129
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapVis[4] = Propylene.VapVis[4]
+=======
+MatStm1._comp[1]._VapVis[4] = Water.VapVis[4]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_129(DATA *data, threadData_t *threadData)
@@ -302,7 +378,11 @@ static void Flowsheet_eqFunction_129(DATA *data, threadData_t *threadData)
 /*
 equation index: 130
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapVis[3] = Propylene.VapVis[3]
+=======
+MatStm1._comp[1]._VapVis[3] = Water.VapVis[3]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_130(DATA *data, threadData_t *threadData)
@@ -316,7 +396,11 @@ static void Flowsheet_eqFunction_130(DATA *data, threadData_t *threadData)
 /*
 equation index: 131
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapVis[2] = Propylene.VapVis[2]
+=======
+MatStm1._comp[1]._VapVis[2] = Water.VapVis[2]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_131(DATA *data, threadData_t *threadData)
@@ -330,7 +414,11 @@ static void Flowsheet_eqFunction_131(DATA *data, threadData_t *threadData)
 /*
 equation index: 132
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapVis[1] = Propylene.VapVis[1]
+=======
+MatStm1._comp[1]._VapVis[1] = Water.VapVis[1]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_132(DATA *data, threadData_t *threadData)
@@ -344,7 +432,11 @@ static void Flowsheet_eqFunction_132(DATA *data, threadData_t *threadData)
 /*
 equation index: 133
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqVis[6] = Propylene.LiqVis[6]
+=======
+MatStm1._comp[1]._LiqVis[6] = Water.LiqVis[6]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_133(DATA *data, threadData_t *threadData)
@@ -358,7 +450,11 @@ static void Flowsheet_eqFunction_133(DATA *data, threadData_t *threadData)
 /*
 equation index: 134
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqVis[5] = Propylene.LiqVis[5]
+=======
+MatStm1._comp[1]._LiqVis[5] = Water.LiqVis[5]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_134(DATA *data, threadData_t *threadData)
@@ -372,7 +468,11 @@ static void Flowsheet_eqFunction_134(DATA *data, threadData_t *threadData)
 /*
 equation index: 135
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqVis[4] = Propylene.LiqVis[4]
+=======
+MatStm1._comp[1]._LiqVis[4] = Water.LiqVis[4]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_135(DATA *data, threadData_t *threadData)
@@ -386,7 +486,11 @@ static void Flowsheet_eqFunction_135(DATA *data, threadData_t *threadData)
 /*
 equation index: 136
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqVis[3] = Propylene.LiqVis[3]
+=======
+MatStm1._comp[1]._LiqVis[3] = Water.LiqVis[3]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_136(DATA *data, threadData_t *threadData)
@@ -400,7 +504,11 @@ static void Flowsheet_eqFunction_136(DATA *data, threadData_t *threadData)
 /*
 equation index: 137
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqVis[2] = Propylene.LiqVis[2]
+=======
+MatStm1._comp[1]._LiqVis[2] = Water.LiqVis[2]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_137(DATA *data, threadData_t *threadData)
@@ -414,7 +522,11 @@ static void Flowsheet_eqFunction_137(DATA *data, threadData_t *threadData)
 /*
 equation index: 138
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqVis[1] = Propylene.LiqVis[1]
+=======
+MatStm1._comp[1]._LiqVis[1] = Water.LiqVis[1]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_138(DATA *data, threadData_t *threadData)
@@ -428,7 +540,11 @@ static void Flowsheet_eqFunction_138(DATA *data, threadData_t *threadData)
 /*
 equation index: 139
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapCp[6] = Propylene.VapCp[6]
+=======
+MatStm1._comp[1]._VapCp[6] = Water.VapCp[6]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_139(DATA *data, threadData_t *threadData)
@@ -442,7 +558,11 @@ static void Flowsheet_eqFunction_139(DATA *data, threadData_t *threadData)
 /*
 equation index: 140
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapCp[5] = Propylene.VapCp[5]
+=======
+MatStm1._comp[1]._VapCp[5] = Water.VapCp[5]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_140(DATA *data, threadData_t *threadData)
@@ -456,7 +576,11 @@ static void Flowsheet_eqFunction_140(DATA *data, threadData_t *threadData)
 /*
 equation index: 141
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapCp[4] = Propylene.VapCp[4]
+=======
+MatStm1._comp[1]._VapCp[4] = Water.VapCp[4]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_141(DATA *data, threadData_t *threadData)
@@ -470,7 +594,11 @@ static void Flowsheet_eqFunction_141(DATA *data, threadData_t *threadData)
 /*
 equation index: 142
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapCp[3] = Propylene.VapCp[3]
+=======
+MatStm1._comp[1]._VapCp[3] = Water.VapCp[3]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_142(DATA *data, threadData_t *threadData)
@@ -484,7 +612,11 @@ static void Flowsheet_eqFunction_142(DATA *data, threadData_t *threadData)
 /*
 equation index: 143
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapCp[2] = Propylene.VapCp[2]
+=======
+MatStm1._comp[1]._VapCp[2] = Water.VapCp[2]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_143(DATA *data, threadData_t *threadData)
@@ -498,7 +630,11 @@ static void Flowsheet_eqFunction_143(DATA *data, threadData_t *threadData)
 /*
 equation index: 144
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VapCp[1] = Propylene.VapCp[1]
+=======
+MatStm1._comp[1]._VapCp[1] = Water.VapCp[1]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_144(DATA *data, threadData_t *threadData)
@@ -512,7 +648,11 @@ static void Flowsheet_eqFunction_144(DATA *data, threadData_t *threadData)
 /*
 equation index: 145
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._HOV[6] = Propylene.HOV[6]
+=======
+MatStm1._comp[1]._HOV[6] = Water.HOV[6]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_145(DATA *data, threadData_t *threadData)
@@ -526,7 +666,11 @@ static void Flowsheet_eqFunction_145(DATA *data, threadData_t *threadData)
 /*
 equation index: 146
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._HOV[5] = Propylene.HOV[5]
+=======
+MatStm1._comp[1]._HOV[5] = Water.HOV[5]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_146(DATA *data, threadData_t *threadData)
@@ -540,7 +684,11 @@ static void Flowsheet_eqFunction_146(DATA *data, threadData_t *threadData)
 /*
 equation index: 147
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._HOV[4] = Propylene.HOV[4]
+=======
+MatStm1._comp[1]._HOV[4] = Water.HOV[4]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_147(DATA *data, threadData_t *threadData)
@@ -554,7 +702,11 @@ static void Flowsheet_eqFunction_147(DATA *data, threadData_t *threadData)
 /*
 equation index: 148
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._HOV[3] = Propylene.HOV[3]
+=======
+MatStm1._comp[1]._HOV[3] = Water.HOV[3]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_148(DATA *data, threadData_t *threadData)
@@ -568,7 +720,11 @@ static void Flowsheet_eqFunction_148(DATA *data, threadData_t *threadData)
 /*
 equation index: 149
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._HOV[2] = Propylene.HOV[2]
+=======
+MatStm1._comp[1]._HOV[2] = Water.HOV[2]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_149(DATA *data, threadData_t *threadData)
@@ -582,7 +738,11 @@ static void Flowsheet_eqFunction_149(DATA *data, threadData_t *threadData)
 /*
 equation index: 150
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._HOV[1] = Propylene.HOV[1]
+=======
+MatStm1._comp[1]._HOV[1] = Water.HOV[1]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_150(DATA *data, threadData_t *threadData)
@@ -596,7 +756,11 @@ static void Flowsheet_eqFunction_150(DATA *data, threadData_t *threadData)
 /*
 equation index: 151
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqCp[6] = Propylene.LiqCp[6]
+=======
+MatStm1._comp[1]._LiqCp[6] = Water.LiqCp[6]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_151(DATA *data, threadData_t *threadData)
@@ -610,7 +774,11 @@ static void Flowsheet_eqFunction_151(DATA *data, threadData_t *threadData)
 /*
 equation index: 152
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqCp[5] = Propylene.LiqCp[5]
+=======
+MatStm1._comp[1]._LiqCp[5] = Water.LiqCp[5]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_152(DATA *data, threadData_t *threadData)
@@ -624,7 +792,11 @@ static void Flowsheet_eqFunction_152(DATA *data, threadData_t *threadData)
 /*
 equation index: 153
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqCp[4] = Propylene.LiqCp[4]
+=======
+MatStm1._comp[1]._LiqCp[4] = Water.LiqCp[4]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_153(DATA *data, threadData_t *threadData)
@@ -638,7 +810,11 @@ static void Flowsheet_eqFunction_153(DATA *data, threadData_t *threadData)
 /*
 equation index: 154
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqCp[3] = Propylene.LiqCp[3]
+=======
+MatStm1._comp[1]._LiqCp[3] = Water.LiqCp[3]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_154(DATA *data, threadData_t *threadData)
@@ -652,7 +828,11 @@ static void Flowsheet_eqFunction_154(DATA *data, threadData_t *threadData)
 /*
 equation index: 155
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqCp[2] = Propylene.LiqCp[2]
+=======
+MatStm1._comp[1]._LiqCp[2] = Water.LiqCp[2]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_155(DATA *data, threadData_t *threadData)
@@ -666,7 +846,11 @@ static void Flowsheet_eqFunction_155(DATA *data, threadData_t *threadData)
 /*
 equation index: 156
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqCp[1] = Propylene.LiqCp[1]
+=======
+MatStm1._comp[1]._LiqCp[1] = Water.LiqCp[1]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_156(DATA *data, threadData_t *threadData)
@@ -680,7 +864,11 @@ static void Flowsheet_eqFunction_156(DATA *data, threadData_t *threadData)
 /*
 equation index: 157
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VP[6] = Propylene.VP[6]
+=======
+MatStm1._comp[1]._VP[6] = Water.VP[6]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_157(DATA *data, threadData_t *threadData)
@@ -694,7 +882,11 @@ static void Flowsheet_eqFunction_157(DATA *data, threadData_t *threadData)
 /*
 equation index: 158
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VP[5] = Propylene.VP[5]
+=======
+MatStm1._comp[1]._VP[5] = Water.VP[5]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_158(DATA *data, threadData_t *threadData)
@@ -708,7 +900,11 @@ static void Flowsheet_eqFunction_158(DATA *data, threadData_t *threadData)
 /*
 equation index: 159
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VP[4] = Propylene.VP[4]
+=======
+MatStm1._comp[1]._VP[4] = Water.VP[4]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_159(DATA *data, threadData_t *threadData)
@@ -722,7 +918,11 @@ static void Flowsheet_eqFunction_159(DATA *data, threadData_t *threadData)
 /*
 equation index: 160
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VP[3] = Propylene.VP[3]
+=======
+MatStm1._comp[1]._VP[3] = Water.VP[3]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_160(DATA *data, threadData_t *threadData)
@@ -736,7 +936,11 @@ static void Flowsheet_eqFunction_160(DATA *data, threadData_t *threadData)
 /*
 equation index: 161
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VP[2] = Propylene.VP[2]
+=======
+MatStm1._comp[1]._VP[2] = Water.VP[2]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_161(DATA *data, threadData_t *threadData)
@@ -750,7 +954,11 @@ static void Flowsheet_eqFunction_161(DATA *data, threadData_t *threadData)
 /*
 equation index: 162
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._VP[1] = Propylene.VP[1]
+=======
+MatStm1._comp[1]._VP[1] = Water.VP[1]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_162(DATA *data, threadData_t *threadData)
@@ -764,7 +972,11 @@ static void Flowsheet_eqFunction_162(DATA *data, threadData_t *threadData)
 /*
 equation index: 163
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqDen[6] = Propylene.LiqDen[6]
+=======
+MatStm1._comp[1]._LiqDen[6] = Water.LiqDen[6]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_163(DATA *data, threadData_t *threadData)
@@ -778,7 +990,11 @@ static void Flowsheet_eqFunction_163(DATA *data, threadData_t *threadData)
 /*
 equation index: 164
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqDen[5] = Propylene.LiqDen[5]
+=======
+MatStm1._comp[1]._LiqDen[5] = Water.LiqDen[5]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_164(DATA *data, threadData_t *threadData)
@@ -792,7 +1008,11 @@ static void Flowsheet_eqFunction_164(DATA *data, threadData_t *threadData)
 /*
 equation index: 165
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqDen[4] = Propylene.LiqDen[4]
+=======
+MatStm1._comp[1]._LiqDen[4] = Water.LiqDen[4]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_165(DATA *data, threadData_t *threadData)
@@ -806,7 +1026,11 @@ static void Flowsheet_eqFunction_165(DATA *data, threadData_t *threadData)
 /*
 equation index: 166
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqDen[3] = Propylene.LiqDen[3]
+=======
+MatStm1._comp[1]._LiqDen[3] = Water.LiqDen[3]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_166(DATA *data, threadData_t *threadData)
@@ -820,7 +1044,11 @@ static void Flowsheet_eqFunction_166(DATA *data, threadData_t *threadData)
 /*
 equation index: 167
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqDen[2] = Propylene.LiqDen[2]
+=======
+MatStm1._comp[1]._LiqDen[2] = Water.LiqDen[2]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_167(DATA *data, threadData_t *threadData)
@@ -834,7 +1062,11 @@ static void Flowsheet_eqFunction_167(DATA *data, threadData_t *threadData)
 /*
 equation index: 168
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LiqDen[1] = Propylene.LiqDen[1]
+=======
+MatStm1._comp[1]._LiqDen[1] = Water.LiqDen[1]
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_168(DATA *data, threadData_t *threadData)
@@ -848,7 +1080,11 @@ static void Flowsheet_eqFunction_168(DATA *data, threadData_t *threadData)
 /*
 equation index: 169
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._UniquacQ = Propylene.UniquacQ
+=======
+MatStm1._comp[1]._UniquacQ = Water.UniquacQ
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_169(DATA *data, threadData_t *threadData)
@@ -862,7 +1098,11 @@ static void Flowsheet_eqFunction_169(DATA *data, threadData_t *threadData)
 /*
 equation index: 170
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._UniquacR = Propylene.UniquacR
+=======
+MatStm1._comp[1]._UniquacR = Water.UniquacR
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_170(DATA *data, threadData_t *threadData)
@@ -876,7 +1116,11 @@ static void Flowsheet_eqFunction_170(DATA *data, threadData_t *threadData)
 /*
 equation index: 171
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._HOC = Propylene.HOC
+=======
+MatStm1._comp[1]._HOC = Water.HOC
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_171(DATA *data, threadData_t *threadData)
@@ -890,7 +1134,11 @@ static void Flowsheet_eqFunction_171(DATA *data, threadData_t *threadData)
 /*
 equation index: 172
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._HFMP = Propylene.HFMP
+=======
+MatStm1._comp[1]._HFMP = Water.HFMP
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_172(DATA *data, threadData_t *threadData)
@@ -904,7 +1152,11 @@ static void Flowsheet_eqFunction_172(DATA *data, threadData_t *threadData)
 /*
 equation index: 173
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._AS = Propylene.AS
+=======
+MatStm1._comp[1]._AS = Water.AS
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_173(DATA *data, threadData_t *threadData)
@@ -918,7 +1170,11 @@ static void Flowsheet_eqFunction_173(DATA *data, threadData_t *threadData)
 /*
 equation index: 174
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._GEF = Propylene.GEF
+=======
+MatStm1._comp[1]._GEF = Water.GEF
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_174(DATA *data, threadData_t *threadData)
@@ -932,7 +1188,11 @@ static void Flowsheet_eqFunction_174(DATA *data, threadData_t *threadData)
 /*
 equation index: 175
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._IGHF = Propylene.IGHF
+=======
+MatStm1._comp[1]._IGHF = Water.IGHF
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_175(DATA *data, threadData_t *threadData)
@@ -946,7 +1206,11 @@ static void Flowsheet_eqFunction_175(DATA *data, threadData_t *threadData)
 /*
 equation index: 176
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._SH = Propylene.SH
+=======
+MatStm1._comp[1]._SH = Water.SH
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_176(DATA *data, threadData_t *threadData)
@@ -960,7 +1224,11 @@ static void Flowsheet_eqFunction_176(DATA *data, threadData_t *threadData)
 /*
 equation index: 177
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._DM = Propylene.DM
+=======
+MatStm1._comp[1]._DM = Water.DM
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_177(DATA *data, threadData_t *threadData)
@@ -974,7 +1242,11 @@ static void Flowsheet_eqFunction_177(DATA *data, threadData_t *threadData)
 /*
 equation index: 178
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._SP = Propylene.SP
+=======
+MatStm1._comp[1]._SP = Water.SP
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_178(DATA *data, threadData_t *threadData)
@@ -988,7 +1260,11 @@ static void Flowsheet_eqFunction_178(DATA *data, threadData_t *threadData)
 /*
 equation index: 179
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._AF = Propylene.AF
+=======
+MatStm1._comp[1]._AF = Water.AF
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_179(DATA *data, threadData_t *threadData)
@@ -1002,7 +1278,11 @@ static void Flowsheet_eqFunction_179(DATA *data, threadData_t *threadData)
 /*
 equation index: 180
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._LVB = Propylene.LVB
+=======
+MatStm1._comp[1]._LVB = Water.LVB
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_180(DATA *data, threadData_t *threadData)
@@ -1016,7 +1296,11 @@ static void Flowsheet_eqFunction_180(DATA *data, threadData_t *threadData)
 /*
 equation index: 181
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._MW = Propylene.MW
+=======
+MatStm1._comp[1]._MW = Water.MW
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_181(DATA *data, threadData_t *threadData)
@@ -1030,7 +1314,11 @@ static void Flowsheet_eqFunction_181(DATA *data, threadData_t *threadData)
 /*
 equation index: 182
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._TP = Propylene.TP
+=======
+MatStm1._comp[1]._TP = Water.TP
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_182(DATA *data, threadData_t *threadData)
@@ -1044,7 +1332,11 @@ static void Flowsheet_eqFunction_182(DATA *data, threadData_t *threadData)
 /*
 equation index: 183
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._TT = Propylene.TT
+=======
+MatStm1._comp[1]._TT = Water.TT
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_183(DATA *data, threadData_t *threadData)
@@ -1058,7 +1350,11 @@ static void Flowsheet_eqFunction_183(DATA *data, threadData_t *threadData)
 /*
 equation index: 184
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._Tm = Propylene.Tm
+=======
+MatStm1._comp[1]._Tm = Water.Tm
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_184(DATA *data, threadData_t *threadData)
@@ -1072,7 +1368,11 @@ static void Flowsheet_eqFunction_184(DATA *data, threadData_t *threadData)
 /*
 equation index: 185
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._Tb = Propylene.Tb
+=======
+MatStm1._comp[1]._Tb = Water.Tb
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_185(DATA *data, threadData_t *threadData)
@@ -1086,7 +1386,11 @@ static void Flowsheet_eqFunction_185(DATA *data, threadData_t *threadData)
 /*
 equation index: 186
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._Cc = Propylene.Cc
+=======
+MatStm1._comp[1]._Cc = Water.Cc
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_186(DATA *data, threadData_t *threadData)
@@ -1100,7 +1404,11 @@ static void Flowsheet_eqFunction_186(DATA *data, threadData_t *threadData)
 /*
 equation index: 187
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._Vc = Propylene.Vc
+=======
+MatStm1._comp[1]._Vc = Water.Vc
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_187(DATA *data, threadData_t *threadData)
@@ -1114,7 +1422,11 @@ static void Flowsheet_eqFunction_187(DATA *data, threadData_t *threadData)
 /*
 equation index: 188
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._Pc = Propylene.Pc
+=======
+MatStm1._comp[1]._Pc = Water.Pc
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_188(DATA *data, threadData_t *threadData)
@@ -1128,7 +1440,11 @@ static void Flowsheet_eqFunction_188(DATA *data, threadData_t *threadData)
 /*
 equation index: 189
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._Tc = Propylene.Tc
+=======
+MatStm1._comp[1]._Tc = Water.Tc
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_189(DATA *data, threadData_t *threadData)
@@ -1142,7 +1458,11 @@ static void Flowsheet_eqFunction_189(DATA *data, threadData_t *threadData)
 /*
 equation index: 190
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._CAS = Propylene.CAS
+=======
+MatStm1._comp[1]._CAS = Water.CAS
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_190(DATA *data, threadData_t *threadData)
@@ -1156,7 +1476,11 @@ static void Flowsheet_eqFunction_190(DATA *data, threadData_t *threadData)
 /*
 equation index: 191
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._name = Propylene.name
+=======
+MatStm1._comp[1]._name = Water.name
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_191(DATA *data, threadData_t *threadData)
@@ -1170,7 +1494,11 @@ static void Flowsheet_eqFunction_191(DATA *data, threadData_t *threadData)
 /*
 equation index: 192
 type: SIMPLE_ASSIGN
+<<<<<<< HEAD
 MatStm1._comp[1]._SN = Propylene.SN
+=======
+MatStm1._comp[1]._SN = Water.SN
+>>>>>>> a7baca9aeab4479f0602b9d088ac515256daee29
 */
 OMC_DISABLE_OPT
 static void Flowsheet_eqFunction_192(DATA *data, threadData_t *threadData)

@@ -21,7 +21,7 @@ class Pump():
     def modesList(self):
         return ["pressInc","outP","reqPow","enFlo"]
 
-    def paramgetter(self,mode):
+    def paramgetter(self,mode="pressInc"):
         self.mode = mode
         dict = {"eff":None,self.mode:None}
         return dict

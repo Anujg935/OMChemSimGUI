@@ -21,7 +21,7 @@ class AdiaComp():
     def modesList(self):
         return ["pressInc","outP","reqPow"]
 
-    def paramgetter(self,mode):
+    def paramgetter(self,mode="pressInc"):
         self.mode = mode
         dict = {"eff":None,self.mode:None,"thermoPackage":None}
         return dict

@@ -28,7 +28,7 @@ class Cooler():
     def modesList(self):
         return ["heatRem","outT","outVapPhasMolFrac","tempDrop","enFlo"]
 
-    def paramgetter(self,mode):
+    def paramgetter(self,mode="heatRem"):
         self.mode = mode
         dict = {"PressureDrop":None,"eff":None,self.mode:None}
         return dict

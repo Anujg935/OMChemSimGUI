@@ -111,7 +111,7 @@ class MatStm():
 
     def modesList(self):
         return ["PT","PH","PVF","TVF","PS"]   
-    def paramgetter(self,mode=None):
+    def paramgetter(self,mode="PT"):
         dict = {}
         if(mode=="PT"):
             self.mode1 = 'P'

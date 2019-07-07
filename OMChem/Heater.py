@@ -30,7 +30,7 @@ class Heater():
     def modesList(self):
         return ["heatAdd","outT","outVapPhasMolFrac","tempInc","enFlo"]
 
-    def paramgetter(self,mode):
+    def paramgetter(self,mode="heatAdd"):
         self.mode = mode
         dict = {"PressureDrop":None,"eff":None,self.mode:None}
         return dict

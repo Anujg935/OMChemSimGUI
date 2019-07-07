@@ -13,6 +13,16 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/logo.png</normaloff>icons/logo.png</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
@@ -141,7 +151,7 @@
      <x>0</x>
      <y>0</y>
      <width>1068</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -176,13 +186,19 @@
     </property>
     <addaction name="actionSelect_compouns"/>
    </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuView"/>
    <addaction name="menuSimulation"/>
    <addaction name="menuComponds"/>
+   <addaction name="menuHelp"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QDockWidget" name="dockWidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -243,9 +259,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-274</y>
-          <width>222</width>
-          <height>948</height>
+          <y>-213</y>
+          <width>221</width>
+          <height>926</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -1071,6 +1087,8 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionNew_Flowsheet"/>
+   <addaction name="separator"/>
    <addaction name="actionZoomIn"/>
    <addaction name="actionZoomOut"/>
    <addaction name="actionResetZoom"/>
@@ -1135,8 +1153,17 @@
    </property>
   </action>
   <action name="actionNew_Flowsheet">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/new.svg</normaloff>icons/new.svg</iconset>
+   </property>
    <property name="text">
     <string>New</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
    </property>
   </action>
  </widget>

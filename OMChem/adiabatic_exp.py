@@ -21,7 +21,7 @@ class AdiaExp():
     def modesList(self):
         return ["pressDrop","outP","genPow"]
 
-    def paramgetter(self,mode):
+    def paramgetter(self,mode="pressDrop"):
         self.mode = mode
         dict = {"eff":None,self.mode:None,"thermoPackage":None}
         return dict
