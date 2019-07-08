@@ -13,8 +13,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QTextDocument ,QTextCursor ,QTextCharFormat ,QFont ,QPixmap
 from PyQt5.uic import loadUiType
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QGraphicsView, QGraphicsScene, QHBoxLayout, QWidget, QLabel
-from PyQt5.QtWidgets import QGraphicsProxyWidget, QGraphicsObject, QGraphicsEllipseItem ,QGraphicsPixmapItem
+from PyQt5.QtWidgets import QGraphicsProxyWidget, QGraphicsObject, QGraphicsEllipseItem ,QGraphicsPixmapItem,QApplication, QGraphicsView, QGraphicsScene, QHBoxLayout, QWidget, QLabel
 from PyQt5.QtGui import QBrush ,QTransform ,QMouseEvent
 import PyQt5.QtGui as QtGui
 import PyQt5.QtCore as QtCore
@@ -562,7 +561,6 @@ def main():
     app = QApplication(sys.argv)
     window = MainApp()
     window.showMaximized();
-    #window.show()
     app.exec()
 
 
