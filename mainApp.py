@@ -21,7 +21,6 @@ import PyQt5.QtWidgets as QtWidgets
 from component_selector import componentSelector
 from component_selector import *
 from dockWidget import dockWidget
-from pythonGenerator import PythonFileGenerator
 from resDockWidget import resdockWidget
 from helper import helperFunc
 import datetime
