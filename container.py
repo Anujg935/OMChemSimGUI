@@ -58,8 +58,6 @@ class Container():
                     if self.conn[i][j].type not in stm:
                         self.ip[self.conn[i][j]].append(i)
                     
-            print("###### output #####\n",self.op)
-            print("###### input #####\n",self.ip)
             for i in self.op:
                 i.connect(InputStms=self.ip[i],OutputStms=self.op[i])
             
@@ -85,34 +83,25 @@ class Container():
         print(mode)
         self.compounds = compound_selected
         self.connection()
-        
-        #print(self.opl)
         f = Flowsheet()
         f.add_comp_list(self.compounds)
         print("######## connection master#########\n",self.conn)
-        #print(self.unitOp)
-        #print(self.compounds)
         for i in self.unitOp :
             if i in self.opl:
                 print("here",i)
                 f.add_UnitOpn(i,1)
             else:
                 f.add_UnitOpn(i,0)
-        
-        #print("############$Stdout$############",f.stdout)
-        #print("###########$ResData$############",f.resdata)
-
         if mode=='SM':
             self.msg.append("<span>["+str(self.currentTime())+"] Simulating in <b>Sequential</b> mode ... </span>")
             f.simulateSM(self.ip,self.op)
             self.msgBrowser(f)
             self.result=f.resdata
-
+            print("under SEQ mode simulation")
         elif mode=='EQN':
             self.msg.append("<span>["+str(self.currentTime())+"] Simulating in <b>equation</b> mode ... </span>")
             f.simulateEQN()
             self.msgBrowser(f)
-
             self.result=f.resdata
             print("under Eqn mode simulation")
 
