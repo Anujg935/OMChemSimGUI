@@ -1,0 +1,4 @@
+loadModel(Modelica);
+loadFile("Simulator\package.mo");
+loadFile("splitter1.mo");
+simulate(splitter1, outputFormat="csv", stopTime=1.0, numberOfIntervals=1);

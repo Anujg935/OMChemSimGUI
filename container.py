@@ -84,14 +84,11 @@ class Container():
     def simulate(self,mode):
         print(mode)
         self.compounds = compound_selected
-        self.thermoPackage = str(thermo_package[0])
-        
         self.connection()
         
         #print(self.opl)
         f = Flowsheet()
         f.add_comp_list(self.compounds)
-        f.Selected_thermo_package(self.thermoPackage)
         print("######## connection master#########\n",self.conn)
         #print(self.unitOp)
         #print(self.compounds)
@@ -106,8 +103,10 @@ class Container():
         #print("###########$ResData$############",f.resdata)
 
         if mode=='SM':
+            self.msg.append("<span>["+str(self.currentTime())+"] Simulating in <b>Sequential</b> mode ... </span>")
             f.simulateSM(self.ip,self.op)
             self.msgBrowser(f)
+            self.result=f.resdata
 
         elif mode=='EQN':
             self.msg.append("<span>["+str(self.currentTime())+"] Simulating in <b>equation</b> mode ... </span>")

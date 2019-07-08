@@ -13,7 +13,6 @@ class Flowsheet():
 		self.data = []
 		self.compounds = []
 		self.interface = ''
-		self.thermo_package = ''
 		self.omc_path = None
 		self.curr_path = os.getcwd()
 		self.sim_dir_path = os.path.join(self.curr_path, self.sim_name)
@@ -25,8 +24,6 @@ class Flowsheet():
 		self.stderr=None
 	
 	
-	def Selected_thermo_package(self,thermopackage):
-		self.thermo_package = thermopackage
 	def get_omc_path(self):
 		try:
 		    self.omhome = os.environ.get('OPENMODELICAHOME')
@@ -227,7 +224,6 @@ class Flowsheet():
 	def simulateEQN(self):
 		self.data = []
 		print("##################################################")
-		print(self.thermo_package)
 		print("##################################################")
 		self.sim_method = 'Eqn'
 		self.data.append("model Flowsheet\n")

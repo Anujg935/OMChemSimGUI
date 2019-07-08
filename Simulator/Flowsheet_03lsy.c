@@ -7,11 +7,340 @@ extern "C" {
 
 /* linear systems */
 OMC_DISABLE_OPT
-void setLinearMatrixA108(void *inData, threadData_t *threadData, void *systemData)
+void setLinearMatrixA154(void *inData, threadData_t *threadData, void *systemData)
 {
-  const int equationIndexes[2] = {1,108};
+  const int equationIndexes[2] = {1,154};
   DATA* data = (DATA*) inData;
   LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
+  modelica_boolean tmp2;
+  modelica_boolean tmp3;
+  modelica_boolean tmp4;
+  modelica_real tmp5;
+  modelica_boolean tmp6;
+  modelica_boolean tmp7;
+  modelica_boolean tmp8;
+  modelica_real tmp9;
+  modelica_boolean tmp10;
+  modelica_boolean tmp11;
+  modelica_boolean tmp12;
+  modelica_boolean tmp13;
+  modelica_real tmp14;
+  modelica_boolean tmp15;
+  modelica_boolean tmp16;
+  modelica_boolean tmp17;
+  modelica_real tmp18;
+  modelica_boolean tmp19;
+  modelica_boolean tmp20;
+  modelica_boolean tmp21;
+  modelica_real tmp22;
+  modelica_boolean tmp23;
+  modelica_boolean tmp24;
+  modelica_boolean tmp25;
+  modelica_boolean tmp26;
+  modelica_real tmp27;
+  modelica_boolean tmp28;
+  modelica_boolean tmp29;
+  modelica_boolean tmp30;
+  modelica_real tmp31;
+  modelica_boolean tmp32;
+  modelica_boolean tmp33;
+  modelica_boolean tmp34;
+  modelica_real tmp35;
+  modelica_boolean tmp36;
+  modelica_boolean tmp37;
+  modelica_boolean tmp38;
+  modelica_boolean tmp39;
+  modelica_real tmp40;
+  modelica_boolean tmp41;
+  modelica_boolean tmp42;
+  modelica_boolean tmp43;
+  modelica_boolean tmp44;
+  modelica_real tmp45;
+  tmp2 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp4 = (modelica_boolean)tmp2;
+  if(tmp4)
+  {
+    tmp5 = 0.0;
+  }
+  else
+  {
+    tmp3 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp5 = (tmp3?-0.0:1.0);
+  }
+  linearSystemData->setAElement(0, 2, (-(tmp5)), 0, linearSystemData, threadData);
+  tmp6 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp8 = (modelica_boolean)tmp6;
+  if(tmp8)
+  {
+    tmp9 = 0.0;
+  }
+  else
+  {
+    tmp7 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp9 = (tmp7?(-data->localData[0]->realVars[81] /* MatStm1.totMasFlo[1] variable */):0.0);
+  }
+  linearSystemData->setAElement(0, 3, (-(tmp9)), 1, linearSystemData, threadData);
+  tmp10 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  linearSystemData->setAElement(0, 4, (-((tmp10?1.0:-0.0))), 2, linearSystemData, threadData);
+  tmp11 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp13 = (modelica_boolean)tmp11;
+  if(tmp13)
+  {
+    tmp14 = (-data->localData[0]->realVars[81] /* MatStm1.totMasFlo[1] variable */);
+  }
+  else
+  {
+    tmp12 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp14 = (tmp12?-0.0:(-data->localData[0]->realVars[81] /* MatStm1.totMasFlo[1] variable */));
+  }
+  linearSystemData->setAElement(1, 3, (-(tmp14)), 3, linearSystemData, threadData);
+  tmp15 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp17 = (modelica_boolean)tmp15;
+  if(tmp17)
+  {
+    tmp18 = -0.0;
+  }
+  else
+  {
+    tmp16 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp18 = (tmp16?(-data->localData[0]->realVars[83] /* MatStm1.totMasFlo[3] variable */):-0.0);
+  }
+  linearSystemData->setAElement(1, 4, (-(tmp18)), 4, linearSystemData, threadData);
+  tmp19 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp21 = (modelica_boolean)tmp19;
+  if(tmp21)
+  {
+    tmp22 = 0.0;
+  }
+  else
+  {
+    tmp20 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp22 = (tmp20?(-data->localData[0]->realVars[82] /* MatStm1.totMasFlo[2] variable */):0.0);
+  }
+  linearSystemData->setAElement(2, 0, (-(tmp22)), 5, linearSystemData, threadData);
+  tmp23 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  linearSystemData->setAElement(2, 2, (-((tmp23?1.0:-0.0))), 6, linearSystemData, threadData);
+  tmp24 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp26 = (modelica_boolean)tmp24;
+  if(tmp26)
+  {
+    tmp27 = -1.0;
+  }
+  else
+  {
+    tmp25 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp27 = (tmp25?-0.0:-1.0);
+  }
+  linearSystemData->setAElement(2, 3, (-(tmp27)), 7, linearSystemData, threadData);
+  tmp28 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp30 = (modelica_boolean)tmp28;
+  if(tmp30)
+  {
+    tmp31 = 0.0;
+  }
+  else
+  {
+    tmp29 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp31 = (tmp29?-0.0:1.0);
+  }
+  linearSystemData->setAElement(2, 4, (-(tmp31)), 8, linearSystemData, threadData);
+  tmp32 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp34 = (modelica_boolean)tmp32;
+  if(tmp34)
+  {
+    tmp35 = 0.0;
+  }
+  else
+  {
+    tmp33 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp35 = (tmp33?-0.0:1.0);
+  }
+  linearSystemData->setAElement(3, 0, (-(tmp35)), 9, linearSystemData, threadData);
+  tmp36 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  linearSystemData->setAElement(3, 1, (-((tmp36?1.0:-0.0))), 10, linearSystemData, threadData);
+  tmp37 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp39 = (modelica_boolean)tmp37;
+  if(tmp39)
+  {
+    tmp40 = 0.0;
+  }
+  else
+  {
+    tmp38 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp40 = (tmp38?(-data->localData[0]->realVars[82] /* MatStm1.totMasFlo[2] variable */):0.0);
+  }
+  linearSystemData->setAElement(3, 2, (-(tmp40)), 11, linearSystemData, threadData);
+  tmp41 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  linearSystemData->setAElement(4, 0, (-((tmp41?1.0:-0.0))), 12, linearSystemData, threadData);
+  tmp42 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp44 = (modelica_boolean)tmp42;
+  if(tmp44)
+  {
+    tmp45 = 0.0;
+  }
+  else
+  {
+    tmp43 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp45 = (tmp43?(-data->localData[0]->realVars[83] /* MatStm1.totMasFlo[3] variable */):1.0);
+  }
+  linearSystemData->setAElement(4, 1, (-(tmp45)), 13, linearSystemData, threadData);
+}
+OMC_DISABLE_OPT
+void setLinearVectorb154(void *inData, threadData_t *threadData, void *systemData)
+{
+  const int equationIndexes[2] = {1,154};
+  DATA* data = (DATA*) inData;
+  LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
+  modelica_boolean tmp46;
+  modelica_boolean tmp47;
+  modelica_boolean tmp48;
+  modelica_real tmp49;
+  modelica_boolean tmp50;
+  modelica_boolean tmp51;
+  modelica_boolean tmp52;
+  modelica_real tmp53;
+  modelica_boolean tmp54;
+  modelica_boolean tmp55;
+  modelica_boolean tmp56;
+  modelica_real tmp57;
+  modelica_boolean tmp58;
+  modelica_boolean tmp59;
+  modelica_boolean tmp60;
+  modelica_real tmp61;
+  modelica_boolean tmp62;
+  modelica_boolean tmp63;
+  modelica_boolean tmp64;
+  modelica_real tmp65;
+  tmp46 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp48 = (modelica_boolean)tmp46;
+  if(tmp48)
+  {
+    tmp49 = 0.0;
+  }
+  else
+  {
+    tmp47 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp49 = (tmp47?data->localData[0]->realVars[11] /* MatStm1.compMasFlo[1,1] variable */:0.0);
+  }
+  linearSystemData->setBElement(0, tmp49, linearSystemData, threadData);
+  tmp50 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp52 = (modelica_boolean)tmp50;
+  if(tmp52)
+  {
+    tmp53 = data->localData[0]->realVars[11] /* MatStm1.compMasFlo[1,1] variable */;
+  }
+  else
+  {
+    tmp51 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp53 = (tmp51?data->localData[0]->realVars[15] /* MatStm1.compMasFlo[3,1] variable */:data->localData[0]->realVars[11] /* MatStm1.compMasFlo[1,1] variable */);
+  }
+  linearSystemData->setBElement(1, tmp53, linearSystemData, threadData);
+  tmp54 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp56 = (modelica_boolean)tmp54;
+  if(tmp56)
+  {
+    tmp57 = 0.0;
+  }
+  else
+  {
+    tmp55 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp57 = (tmp55?data->localData[0]->realVars[14] /* MatStm1.compMasFlo[2,2] variable */:0.0);
+  }
+  linearSystemData->setBElement(2, tmp57, linearSystemData, threadData);
+  tmp58 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp60 = (modelica_boolean)tmp58;
+  if(tmp60)
+  {
+    tmp61 = 0.0;
+  }
+  else
+  {
+    tmp59 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp61 = (tmp59?data->localData[0]->realVars[13] /* MatStm1.compMasFlo[2,1] variable */:0.0);
+  }
+  linearSystemData->setBElement(3, tmp61, linearSystemData, threadData);
+  tmp62 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp64 = (modelica_boolean)tmp62;
+  if(tmp64)
+  {
+    tmp65 = (-data->localData[0]->realVars[18] /* MatStm1.compMasFrac[1,2] variable */);
+  }
+  else
+  {
+    tmp63 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp65 = (tmp63?data->localData[0]->realVars[16] /* MatStm1.compMasFlo[3,2] variable */:(-data->localData[0]->realVars[18] /* MatStm1.compMasFrac[1,2] variable */));
+  }
+  linearSystemData->setBElement(4, tmp65, linearSystemData, threadData);
+}
+OMC_DISABLE_OPT
+void initializeStaticLSData154(void *inData, threadData_t *threadData, void *systemData)
+{
+  DATA* data = (DATA*) inData;
+  LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
+  int i=0;
+  /* static ls data for MatStm1.compMasFrac[2,2] */
+  linearSystemData->nominal[i] = data->modelData->realVarsData[20].attribute /* MatStm1.compMasFrac[2,2] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[20].attribute /* MatStm1.compMasFrac[2,2] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[20].attribute /* MatStm1.compMasFrac[2,2] */.max;
+  /* static ls data for MatStm1.compMasFrac[3,2] */
+  linearSystemData->nominal[i] = data->modelData->realVarsData[22].attribute /* MatStm1.compMasFrac[3,2] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[22].attribute /* MatStm1.compMasFrac[3,2] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[22].attribute /* MatStm1.compMasFrac[3,2] */.max;
+  /* static ls data for MatStm1.compMasFrac[2,1] */
+  linearSystemData->nominal[i] = data->modelData->realVarsData[19].attribute /* MatStm1.compMasFrac[2,1] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[19].attribute /* MatStm1.compMasFrac[2,1] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[19].attribute /* MatStm1.compMasFrac[2,1] */.max;
+  /* static ls data for MatStm1.compMasFrac[1,1] */
+  linearSystemData->nominal[i] = data->modelData->realVarsData[17].attribute /* MatStm1.compMasFrac[1,1] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[17].attribute /* MatStm1.compMasFrac[1,1] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[17].attribute /* MatStm1.compMasFrac[1,1] */.max;
+  /* static ls data for MatStm1.compMasFrac[3,1] */
+  linearSystemData->nominal[i] = data->modelData->realVarsData[21].attribute /* MatStm1.compMasFrac[3,1] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[21].attribute /* MatStm1.compMasFrac[3,1] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[21].attribute /* MatStm1.compMasFrac[3,1] */.max;
+}
+
+OMC_DISABLE_OPT
+void setLinearMatrixA78(void *inData, threadData_t *threadData, void *systemData)
+{
+  const int equationIndexes[2] = {1,78};
+  DATA* data = (DATA*) inData;
+  LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
+  modelica_boolean tmp66;
+  modelica_boolean tmp67;
+  modelica_boolean tmp68;
+  modelica_real tmp69;
+  modelica_boolean tmp70;
+  modelica_boolean tmp71;
+  modelica_boolean tmp72;
+  modelica_real tmp73;
+  modelica_boolean tmp74;
+  modelica_boolean tmp75;
+  modelica_boolean tmp76;
+  modelica_real tmp77;
+  modelica_boolean tmp78;
+  modelica_boolean tmp79;
+  modelica_boolean tmp80;
+  modelica_real tmp81;
+  modelica_boolean tmp82;
+  modelica_boolean tmp83;
+  modelica_boolean tmp84;
+  modelica_boolean tmp85;
+  modelica_boolean tmp86;
+  modelica_real tmp87;
+  modelica_boolean tmp88;
+  modelica_boolean tmp89;
+  modelica_boolean tmp90;
+  modelica_real tmp91;
+  modelica_boolean tmp92;
+  modelica_boolean tmp93;
+  modelica_boolean tmp94;
+  modelica_real tmp95;
+  modelica_boolean tmp96;
+  modelica_boolean tmp97;
+  modelica_boolean tmp98;
+  modelica_boolean tmp99;
+  modelica_real tmp100;
   modelica_boolean tmp101;
   modelica_boolean tmp102;
   modelica_boolean tmp103;
@@ -21,10 +350,145 @@ void setLinearMatrixA108(void *inData, threadData_t *threadData, void *systemDat
   modelica_boolean tmp107;
   modelica_real tmp108;
   modelica_boolean tmp109;
+  tmp66 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp68 = (modelica_boolean)tmp66;
+  if(tmp68)
+  {
+    tmp69 = (-data->localData[0]->realVars[81] /* MatStm1.totMasFlo[1] variable */);
+  }
+  else
+  {
+    tmp67 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp69 = (tmp67?-0.0:(-data->localData[0]->realVars[81] /* MatStm1.totMasFlo[1] variable */));
+  }
+  linearSystemData->setAElement(0, 3, (-(tmp69)), 0, linearSystemData, threadData);
+  tmp70 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp72 = (modelica_boolean)tmp70;
+  if(tmp72)
+  {
+    tmp73 = -0.0;
+  }
+  else
+  {
+    tmp71 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp73 = (tmp71?(-data->localData[0]->realVars[83] /* MatStm1.totMasFlo[3] variable */):-0.0);
+  }
+  linearSystemData->setAElement(0, 4, (-(tmp73)), 1, linearSystemData, threadData);
+  tmp74 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp76 = (modelica_boolean)tmp74;
+  if(tmp76)
+  {
+    tmp77 = 0.0;
+  }
+  else
+  {
+    tmp75 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp77 = (tmp75?-0.0:1.0);
+  }
+  linearSystemData->setAElement(1, 1, (-(tmp77)), 2, linearSystemData, threadData);
+  tmp78 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp80 = (modelica_boolean)tmp78;
+  if(tmp80)
+  {
+    tmp81 = 0.0;
+  }
+  else
+  {
+    tmp79 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp81 = (tmp79?(-data->localData[0]->realVars[81] /* MatStm1.totMasFlo[1] variable */):0.0);
+  }
+  linearSystemData->setAElement(1, 3, (-(tmp81)), 3, linearSystemData, threadData);
+  tmp82 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  linearSystemData->setAElement(1, 4, (-((tmp82?1.0:-0.0))), 4, linearSystemData, threadData);
+  tmp83 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  linearSystemData->setAElement(2, 1, (-((tmp83?1.0:-0.0))), 5, linearSystemData, threadData);
+  tmp84 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp86 = (modelica_boolean)tmp84;
+  if(tmp86)
+  {
+    tmp87 = 0.0;
+  }
+  else
+  {
+    tmp85 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp87 = (tmp85?(-data->localData[0]->realVars[82] /* MatStm1.totMasFlo[2] variable */):0.0);
+  }
+  linearSystemData->setAElement(2, 2, (-(tmp87)), 6, linearSystemData, threadData);
+  tmp88 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp90 = (modelica_boolean)tmp88;
+  if(tmp90)
+  {
+    tmp91 = -1.0;
+  }
+  else
+  {
+    tmp89 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp91 = (tmp89?-0.0:-1.0);
+  }
+  linearSystemData->setAElement(2, 3, (-(tmp91)), 7, linearSystemData, threadData);
+  tmp92 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp94 = (modelica_boolean)tmp92;
+  if(tmp94)
+  {
+    tmp95 = 0.0;
+  }
+  else
+  {
+    tmp93 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp95 = (tmp93?-0.0:1.0);
+  }
+  linearSystemData->setAElement(2, 4, (-(tmp95)), 8, linearSystemData, threadData);
+  tmp96 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  linearSystemData->setAElement(3, 0, (-((tmp96?1.0:-0.0))), 9, linearSystemData, threadData);
+  tmp97 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp99 = (modelica_boolean)tmp97;
+  if(tmp99)
+  {
+    tmp100 = 0.0;
+  }
+  else
+  {
+    tmp98 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp100 = (tmp98?(-data->localData[0]->realVars[82] /* MatStm1.totMasFlo[2] variable */):0.0);
+  }
+  linearSystemData->setAElement(3, 1, (-(tmp100)), 10, linearSystemData, threadData);
+  tmp101 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp103 = (modelica_boolean)tmp101;
+  if(tmp103)
+  {
+    tmp104 = 0.0;
+  }
+  else
+  {
+    tmp102 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp104 = (tmp102?-0.0:1.0);
+  }
+  linearSystemData->setAElement(3, 2, (-(tmp104)), 11, linearSystemData, threadData);
+  tmp105 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp107 = (modelica_boolean)tmp105;
+  if(tmp107)
+  {
+    tmp108 = 0.0;
+  }
+  else
+  {
+    tmp106 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp108 = (tmp106?(-data->localData[0]->realVars[83] /* MatStm1.totMasFlo[3] variable */):1.0);
+  }
+  linearSystemData->setAElement(4, 0, (-(tmp108)), 12, linearSystemData, threadData);
+  tmp109 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  linearSystemData->setAElement(4, 2, (-((tmp109?1.0:-0.0))), 13, linearSystemData, threadData);
+}
+OMC_DISABLE_OPT
+void setLinearVectorb78(void *inData, threadData_t *threadData, void *systemData)
+{
+  const int equationIndexes[2] = {1,78};
+  DATA* data = (DATA*) inData;
+  LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
   modelica_boolean tmp110;
   modelica_boolean tmp111;
-  modelica_real tmp112;
-  modelica_boolean tmp113;
+  modelica_boolean tmp112;
+  modelica_real tmp113;
   modelica_boolean tmp114;
   modelica_boolean tmp115;
   modelica_boolean tmp116;
@@ -32,51 +496,28 @@ void setLinearMatrixA108(void *inData, threadData_t *threadData, void *systemDat
   modelica_boolean tmp118;
   modelica_boolean tmp119;
   modelica_boolean tmp120;
-  modelica_boolean tmp121;
-  modelica_real tmp122;
+  modelica_real tmp121;
+  modelica_boolean tmp122;
   modelica_boolean tmp123;
   modelica_boolean tmp124;
-  modelica_boolean tmp125;
-  modelica_real tmp126;
-  tmp101 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp103 = (modelica_boolean)tmp101;
-  if(tmp103)
+  modelica_real tmp125;
+  modelica_boolean tmp126;
+  modelica_boolean tmp127;
+  modelica_boolean tmp128;
+  modelica_real tmp129;
+  tmp110 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp112 = (modelica_boolean)tmp110;
+  if(tmp112)
   {
-    tmp104 = -0.0;
+    tmp113 = data->localData[0]->realVars[11] /* MatStm1.compMasFlo[1,1] variable */;
   }
   else
   {
-    tmp102 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp104 = (tmp102?(-data->localData[0]->realVars[55] /* MatStm1.totMasFlo[2] variable */):-0.0);
+    tmp111 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp113 = (tmp111?data->localData[0]->realVars[15] /* MatStm1.compMasFlo[3,1] variable */:data->localData[0]->realVars[11] /* MatStm1.compMasFlo[1,1] variable */);
   }
-  linearSystemData->setAElement(0, 0, (-(tmp104)), 0, linearSystemData, threadData);
-  tmp105 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp107 = (modelica_boolean)tmp105;
-  if(tmp107)
-  {
-    tmp108 = (-data->localData[0]->realVars[54] /* MatStm1.totMasFlo[1] variable */);
-  }
-  else
-  {
-    tmp106 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp108 = (tmp106?-0.0:(-data->localData[0]->realVars[54] /* MatStm1.totMasFlo[1] variable */));
-  }
-  linearSystemData->setAElement(0, 2, (-(tmp108)), 1, linearSystemData, threadData);
-  tmp109 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp111 = (modelica_boolean)tmp109;
-  if(tmp111)
-  {
-    tmp112 = 0.0;
-  }
-  else
-  {
-    tmp110 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp112 = (tmp110?-0.0:1.0);
-  }
-  linearSystemData->setAElement(1, 0, (-(tmp112)), 2, linearSystemData, threadData);
-  tmp113 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  linearSystemData->setAElement(1, 1, (-((tmp113?1.0:-0.0))), 3, linearSystemData, threadData);
-  tmp114 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
+  linearSystemData->setBElement(0, tmp113, linearSystemData, threadData);
+  tmp114 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
   tmp116 = (modelica_boolean)tmp114;
   if(tmp116)
   {
@@ -84,294 +525,73 @@ void setLinearMatrixA108(void *inData, threadData_t *threadData, void *systemDat
   }
   else
   {
-    tmp115 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp117 = (tmp115?(-data->localData[0]->realVars[54] /* MatStm1.totMasFlo[1] variable */):0.0);
+    tmp115 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp117 = (tmp115?data->localData[0]->realVars[11] /* MatStm1.compMasFlo[1,1] variable */:0.0);
   }
-  linearSystemData->setAElement(1, 2, (-(tmp117)), 4, linearSystemData, threadData);
-  tmp118 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  linearSystemData->setAElement(2, 0, (-((tmp118?1.0:-0.0))), 5, linearSystemData, threadData);
-  tmp119 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp121 = (modelica_boolean)tmp119;
-  if(tmp121)
+  linearSystemData->setBElement(1, tmp117, linearSystemData, threadData);
+  tmp118 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp120 = (modelica_boolean)tmp118;
+  if(tmp120)
   {
-    tmp122 = 0.0;
+    tmp121 = 0.0;
   }
   else
   {
-    tmp120 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp122 = (tmp120?(-data->localData[0]->realVars[56] /* MatStm1.totMasFlo[3] variable */):1.0);
+    tmp119 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp121 = (tmp119?data->localData[0]->realVars[14] /* MatStm1.compMasFlo[2,2] variable */:0.0);
   }
-  linearSystemData->setAElement(2, 1, (-(tmp122)), 6, linearSystemData, threadData);
-  tmp123 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp125 = (modelica_boolean)tmp123;
-  if(tmp125)
+  linearSystemData->setBElement(2, tmp121, linearSystemData, threadData);
+  tmp122 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp124 = (modelica_boolean)tmp122;
+  if(tmp124)
   {
-    tmp126 = -1.0;
+    tmp125 = 0.0;
   }
   else
   {
-    tmp124 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp126 = (tmp124?-0.0:-1.0);
+    tmp123 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp125 = (tmp123?data->localData[0]->realVars[13] /* MatStm1.compMasFlo[2,1] variable */:0.0);
   }
-  linearSystemData->setAElement(2, 2, (-(tmp126)), 7, linearSystemData, threadData);
+  linearSystemData->setBElement(3, tmp125, linearSystemData, threadData);
+  tmp126 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pbubl variable */);
+  tmp128 = (modelica_boolean)tmp126;
+  if(tmp128)
+  {
+    tmp129 = (-data->localData[0]->realVars[18] /* MatStm1.compMasFrac[1,2] variable */);
+  }
+  else
+  {
+    tmp127 = GreaterEq(101325.0,data->localData[0]->realVars[7] /* MatStm1.Pdew variable */);
+    tmp129 = (tmp127?data->localData[0]->realVars[16] /* MatStm1.compMasFlo[3,2] variable */:(-data->localData[0]->realVars[18] /* MatStm1.compMasFrac[1,2] variable */));
+  }
+  linearSystemData->setBElement(4, tmp129, linearSystemData, threadData);
 }
 OMC_DISABLE_OPT
-void setLinearVectorb108(void *inData, threadData_t *threadData, void *systemData)
-{
-  const int equationIndexes[2] = {1,108};
-  DATA* data = (DATA*) inData;
-  LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
-  modelica_boolean tmp127;
-  modelica_boolean tmp128;
-  modelica_boolean tmp129;
-  modelica_real tmp130;
-  modelica_boolean tmp131;
-  modelica_boolean tmp132;
-  modelica_boolean tmp133;
-  modelica_real tmp134;
-  modelica_boolean tmp135;
-  modelica_boolean tmp136;
-  modelica_boolean tmp137;
-  modelica_real tmp138;
-  tmp127 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp129 = (modelica_boolean)tmp127;
-  if(tmp129)
-  {
-    tmp130 = data->localData[0]->realVars[9] /* MatStm1.compMasFlo[1,1] variable */;
-  }
-  else
-  {
-    tmp128 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp130 = (tmp128?data->localData[0]->realVars[10] /* MatStm1.compMasFlo[2,1] variable */:data->localData[0]->realVars[9] /* MatStm1.compMasFlo[1,1] variable */);
-  }
-  linearSystemData->setBElement(0, tmp130, linearSystemData, threadData);
-  tmp131 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp133 = (modelica_boolean)tmp131;
-  if(tmp133)
-  {
-    tmp134 = 0.0;
-  }
-  else
-  {
-    tmp132 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp134 = (tmp132?data->localData[0]->realVars[9] /* MatStm1.compMasFlo[1,1] variable */:0.0);
-  }
-  linearSystemData->setBElement(1, tmp134, linearSystemData, threadData);
-  tmp135 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp137 = (modelica_boolean)tmp135;
-  if(tmp137)
-  {
-    tmp138 = 0.0;
-  }
-  else
-  {
-    tmp136 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp138 = (tmp136?data->localData[0]->realVars[11] /* MatStm1.compMasFlo[3,1] variable */:0.0);
-  }
-  linearSystemData->setBElement(2, tmp138, linearSystemData, threadData);
-}
-OMC_DISABLE_OPT
-void initializeStaticLSData108(void *inData, threadData_t *threadData, void *systemData)
+void initializeStaticLSData78(void *inData, threadData_t *threadData, void *systemData)
 {
   DATA* data = (DATA*) inData;
   LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
   int i=0;
+  /* static ls data for MatStm1.compMasFrac[3,2] */
+  linearSystemData->nominal[i] = data->modelData->realVarsData[22].attribute /* MatStm1.compMasFrac[3,2] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[22].attribute /* MatStm1.compMasFrac[3,2] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[22].attribute /* MatStm1.compMasFrac[3,2] */.max;
   /* static ls data for MatStm1.compMasFrac[2,1] */
-  linearSystemData->nominal[i] = data->modelData->realVarsData[13].attribute /* MatStm1.compMasFrac[2,1] */.nominal;
-  linearSystemData->min[i]     = data->modelData->realVarsData[13].attribute /* MatStm1.compMasFrac[2,1] */.min;
-  linearSystemData->max[i++]   = data->modelData->realVarsData[13].attribute /* MatStm1.compMasFrac[2,1] */.max;
-  /* static ls data for MatStm1.compMasFrac[3,1] */
-  linearSystemData->nominal[i] = data->modelData->realVarsData[14].attribute /* MatStm1.compMasFrac[3,1] */.nominal;
-  linearSystemData->min[i]     = data->modelData->realVarsData[14].attribute /* MatStm1.compMasFrac[3,1] */.min;
-  linearSystemData->max[i++]   = data->modelData->realVarsData[14].attribute /* MatStm1.compMasFrac[3,1] */.max;
+  linearSystemData->nominal[i] = data->modelData->realVarsData[19].attribute /* MatStm1.compMasFrac[2,1] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[19].attribute /* MatStm1.compMasFrac[2,1] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[19].attribute /* MatStm1.compMasFrac[2,1] */.max;
+  /* static ls data for MatStm1.compMasFrac[2,2] */
+  linearSystemData->nominal[i] = data->modelData->realVarsData[20].attribute /* MatStm1.compMasFrac[2,2] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[20].attribute /* MatStm1.compMasFrac[2,2] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[20].attribute /* MatStm1.compMasFrac[2,2] */.max;
   /* static ls data for MatStm1.compMasFrac[1,1] */
-  linearSystemData->nominal[i] = data->modelData->realVarsData[12].attribute /* MatStm1.compMasFrac[1,1] */.nominal;
-  linearSystemData->min[i]     = data->modelData->realVarsData[12].attribute /* MatStm1.compMasFrac[1,1] */.min;
-  linearSystemData->max[i++]   = data->modelData->realVarsData[12].attribute /* MatStm1.compMasFrac[1,1] */.max;
-}
-
-OMC_DISABLE_OPT
-void setLinearMatrixA47(void *inData, threadData_t *threadData, void *systemData)
-{
-  const int equationIndexes[2] = {1,47};
-  DATA* data = (DATA*) inData;
-  LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
-  modelica_boolean tmp139;
-  modelica_boolean tmp140;
-  modelica_boolean tmp141;
-  modelica_real tmp142;
-  modelica_boolean tmp143;
-  modelica_boolean tmp144;
-  modelica_boolean tmp145;
-  modelica_real tmp146;
-  modelica_boolean tmp147;
-  modelica_boolean tmp148;
-  modelica_boolean tmp149;
-  modelica_real tmp150;
-  modelica_boolean tmp151;
-  modelica_boolean tmp152;
-  modelica_boolean tmp153;
-  modelica_boolean tmp154;
-  modelica_real tmp155;
-  modelica_boolean tmp156;
-  modelica_boolean tmp157;
-  modelica_boolean tmp158;
-  modelica_real tmp159;
-  modelica_boolean tmp160;
-  modelica_boolean tmp161;
-  modelica_boolean tmp162;
-  modelica_real tmp163;
-  modelica_boolean tmp164;
-  tmp139 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp141 = (modelica_boolean)tmp139;
-  if(tmp141)
-  {
-    tmp142 = (-data->localData[0]->realVars[54] /* MatStm1.totMasFlo[1] variable */);
-  }
-  else
-  {
-    tmp140 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp142 = (tmp140?-0.0:(-data->localData[0]->realVars[54] /* MatStm1.totMasFlo[1] variable */));
-  }
-  linearSystemData->setAElement(0, 0, (-(tmp142)), 0, linearSystemData, threadData);
-  tmp143 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp145 = (modelica_boolean)tmp143;
-  if(tmp145)
-  {
-    tmp146 = -0.0;
-  }
-  else
-  {
-    tmp144 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp146 = (tmp144?(-data->localData[0]->realVars[55] /* MatStm1.totMasFlo[2] variable */):-0.0);
-  }
-  linearSystemData->setAElement(0, 2, (-(tmp146)), 1, linearSystemData, threadData);
-  tmp147 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp149 = (modelica_boolean)tmp147;
-  if(tmp149)
-  {
-    tmp150 = 0.0;
-  }
-  else
-  {
-    tmp148 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp150 = (tmp148?(-data->localData[0]->realVars[54] /* MatStm1.totMasFlo[1] variable */):0.0);
-  }
-  linearSystemData->setAElement(1, 0, (-(tmp150)), 2, linearSystemData, threadData);
-  tmp151 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  linearSystemData->setAElement(1, 1, (-((tmp151?1.0:-0.0))), 3, linearSystemData, threadData);
-  tmp152 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp154 = (modelica_boolean)tmp152;
-  if(tmp154)
-  {
-    tmp155 = 0.0;
-  }
-  else
-  {
-    tmp153 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp155 = (tmp153?-0.0:1.0);
-  }
-  linearSystemData->setAElement(1, 2, (-(tmp155)), 4, linearSystemData, threadData);
-  tmp156 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp158 = (modelica_boolean)tmp156;
-  if(tmp158)
-  {
-    tmp159 = -1.0;
-  }
-  else
-  {
-    tmp157 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp159 = (tmp157?-0.0:-1.0);
-  }
-  linearSystemData->setAElement(2, 0, (-(tmp159)), 5, linearSystemData, threadData);
-  tmp160 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp162 = (modelica_boolean)tmp160;
-  if(tmp162)
-  {
-    tmp163 = 0.0;
-  }
-  else
-  {
-    tmp161 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp163 = (tmp161?(-data->localData[0]->realVars[56] /* MatStm1.totMasFlo[3] variable */):1.0);
-  }
-  linearSystemData->setAElement(2, 1, (-(tmp163)), 6, linearSystemData, threadData);
-  tmp164 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  linearSystemData->setAElement(2, 2, (-((tmp164?1.0:-0.0))), 7, linearSystemData, threadData);
-}
-OMC_DISABLE_OPT
-void setLinearVectorb47(void *inData, threadData_t *threadData, void *systemData)
-{
-  const int equationIndexes[2] = {1,47};
-  DATA* data = (DATA*) inData;
-  LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
-  modelica_boolean tmp165;
-  modelica_boolean tmp166;
-  modelica_boolean tmp167;
-  modelica_real tmp168;
-  modelica_boolean tmp169;
-  modelica_boolean tmp170;
-  modelica_boolean tmp171;
-  modelica_real tmp172;
-  modelica_boolean tmp173;
-  modelica_boolean tmp174;
-  modelica_boolean tmp175;
-  modelica_real tmp176;
-  tmp165 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp167 = (modelica_boolean)tmp165;
-  if(tmp167)
-  {
-    tmp168 = data->localData[0]->realVars[9] /* MatStm1.compMasFlo[1,1] variable */;
-  }
-  else
-  {
-    tmp166 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp168 = (tmp166?data->localData[0]->realVars[10] /* MatStm1.compMasFlo[2,1] variable */:data->localData[0]->realVars[9] /* MatStm1.compMasFlo[1,1] variable */);
-  }
-  linearSystemData->setBElement(0, tmp168, linearSystemData, threadData);
-  tmp169 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp171 = (modelica_boolean)tmp169;
-  if(tmp171)
-  {
-    tmp172 = 0.0;
-  }
-  else
-  {
-    tmp170 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp172 = (tmp170?data->localData[0]->realVars[9] /* MatStm1.compMasFlo[1,1] variable */:0.0);
-  }
-  linearSystemData->setBElement(1, tmp172, linearSystemData, threadData);
-  tmp173 = GreaterEq(101325.0,data->localData[0]->realVars[5] /* MatStm1.Pbubl variable */);
-  tmp175 = (modelica_boolean)tmp173;
-  if(tmp175)
-  {
-    tmp176 = 0.0;
-  }
-  else
-  {
-    tmp174 = GreaterEq(101325.0,data->localData[0]->realVars[6] /* MatStm1.Pdew variable */);
-    tmp176 = (tmp174?data->localData[0]->realVars[11] /* MatStm1.compMasFlo[3,1] variable */:0.0);
-  }
-  linearSystemData->setBElement(2, tmp176, linearSystemData, threadData);
-}
-OMC_DISABLE_OPT
-void initializeStaticLSData47(void *inData, threadData_t *threadData, void *systemData)
-{
-  DATA* data = (DATA*) inData;
-  LINEAR_SYSTEM_DATA* linearSystemData = (LINEAR_SYSTEM_DATA*) systemData;
-  int i=0;
-  /* static ls data for MatStm1.compMasFrac[1,1] */
-  linearSystemData->nominal[i] = data->modelData->realVarsData[12].attribute /* MatStm1.compMasFrac[1,1] */.nominal;
-  linearSystemData->min[i]     = data->modelData->realVarsData[12].attribute /* MatStm1.compMasFrac[1,1] */.min;
-  linearSystemData->max[i++]   = data->modelData->realVarsData[12].attribute /* MatStm1.compMasFrac[1,1] */.max;
+  linearSystemData->nominal[i] = data->modelData->realVarsData[17].attribute /* MatStm1.compMasFrac[1,1] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[17].attribute /* MatStm1.compMasFrac[1,1] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[17].attribute /* MatStm1.compMasFrac[1,1] */.max;
   /* static ls data for MatStm1.compMasFrac[3,1] */
-  linearSystemData->nominal[i] = data->modelData->realVarsData[14].attribute /* MatStm1.compMasFrac[3,1] */.nominal;
-  linearSystemData->min[i]     = data->modelData->realVarsData[14].attribute /* MatStm1.compMasFrac[3,1] */.min;
-  linearSystemData->max[i++]   = data->modelData->realVarsData[14].attribute /* MatStm1.compMasFrac[3,1] */.max;
-  /* static ls data for MatStm1.compMasFrac[2,1] */
-  linearSystemData->nominal[i] = data->modelData->realVarsData[13].attribute /* MatStm1.compMasFrac[2,1] */.nominal;
-  linearSystemData->min[i]     = data->modelData->realVarsData[13].attribute /* MatStm1.compMasFrac[2,1] */.min;
-  linearSystemData->max[i++]   = data->modelData->realVarsData[13].attribute /* MatStm1.compMasFrac[2,1] */.max;
+  linearSystemData->nominal[i] = data->modelData->realVarsData[21].attribute /* MatStm1.compMasFrac[3,1] */.nominal;
+  linearSystemData->min[i]     = data->modelData->realVarsData[21].attribute /* MatStm1.compMasFrac[3,1] */.min;
+  linearSystemData->max[i++]   = data->modelData->realVarsData[21].attribute /* MatStm1.compMasFrac[3,1] */.max;
 }
 
 /* Prototypes for the strict sets (Dynamic Tearing) */
@@ -382,25 +602,25 @@ void Flowsheet_initialLinearSystem(int nLinearSystems, LINEAR_SYSTEM_DATA* linea
 {
   /* linear systems */
   assertStreamPrint(NULL, nLinearSystems > 1, "Internal Error: nLinearSystems mismatch!");
-  linearSystemData[1].equationIndex = 108;
-  linearSystemData[1].size = 3;
-  linearSystemData[1].nnz = 8;
+  linearSystemData[1].equationIndex = 154;
+  linearSystemData[1].size = 5;
+  linearSystemData[1].nnz = 14;
   linearSystemData[1].method = 0;
   linearSystemData[1].strictTearingFunctionCall = NULL;
-  linearSystemData[1].setA = setLinearMatrixA108;
-  linearSystemData[1].setb = setLinearVectorb108;
-  linearSystemData[1].initializeStaticLSData = initializeStaticLSData108;
+  linearSystemData[1].setA = setLinearMatrixA154;
+  linearSystemData[1].setb = setLinearVectorb154;
+  linearSystemData[1].initializeStaticLSData = initializeStaticLSData154;
   linearSystemData[1].parentJacobian = NULL;
   
   assertStreamPrint(NULL, nLinearSystems > 0, "Internal Error: nLinearSystems mismatch!");
-  linearSystemData[0].equationIndex = 47;
-  linearSystemData[0].size = 3;
-  linearSystemData[0].nnz = 8;
+  linearSystemData[0].equationIndex = 78;
+  linearSystemData[0].size = 5;
+  linearSystemData[0].nnz = 14;
   linearSystemData[0].method = 0;
   linearSystemData[0].strictTearingFunctionCall = NULL;
-  linearSystemData[0].setA = setLinearMatrixA47;
-  linearSystemData[0].setb = setLinearVectorb47;
-  linearSystemData[0].initializeStaticLSData = initializeStaticLSData47;
+  linearSystemData[0].setA = setLinearMatrixA78;
+  linearSystemData[0].setb = setLinearVectorb78;
+  linearSystemData[0].initializeStaticLSData = initializeStaticLSData78;
   linearSystemData[0].parentJacobian = NULL;
 }
 

@@ -7,7 +7,6 @@ ui_dialog,_ = loadUiType('comp_selector.ui')
 
 
 df = pd.read_csv("compoundsDatabase.csv")
-thermo_package = []
 compound_selected = []
 class componentSelector(QDialog,ui_dialog):
     def __init__(self,parent=None):
@@ -39,8 +38,6 @@ class componentSelector(QDialog,ui_dialog):
             
     def compoundSelection(self):
         comp = self.lineEdit.text()
-        thermo_package.append(str(self.comboBox.currentText()))
-        print(thermo_package)
         if comp in self.lines:
 
             compound_selected.append(comp)
@@ -72,9 +69,6 @@ class componentSelector(QDialog,ui_dialog):
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
             print(exc_type, fname, exc_tb.tb_lineno)
-    def initial_Table(self):
-        self.tableWidget.setColumnCount(self.col_count)
-        self.tableWidget.setRowCount(self.row_count)
 
     def addCompToList(self,comp):
         self.item = QListWidgetItem()

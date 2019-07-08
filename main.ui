@@ -215,6 +215,9 @@
      <height>524287</height>
     </size>
    </property>
+   <property name="windowTitle">
+    <string>Component Selector</string>
+   </property>
    <attribute name="dockWidgetArea">
     <number>2</number>
    </attribute>
@@ -252,7 +255,7 @@
           <x>0</x>
           <y>0</y>
           <width>221</width>
-          <height>926</height>
+          <height>956</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -1042,7 +1045,7 @@
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>20</height>
+             <height>50</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -1054,10 +1057,24 @@
            <property name="font">
             <font>
              <family>Comic Sans MS</family>
+             <pointsize>11</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">Text-align:left</string>
            </property>
            <property name="text">
             <string>Shortcut Column</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>icons/ShortCol.png</normaloff>icons/ShortCol.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
            </property>
           </widget>
          </item>
@@ -1158,6 +1175,11 @@
   <action name="actionHelp">
    <property name="text">
     <string>Help</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>save</string>
    </property>
   </action>
  </widget>

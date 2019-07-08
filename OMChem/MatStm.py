@@ -24,8 +24,8 @@ class MatStm():
         self.thermoPackage ="Raoults_Law"
         self.mode1 = "P"
         self.mode1val = ""
-        self.mode2 = ""
-        self.mode2val = "T"
+        self.mode2 = "T"
+        self.mode2val = ""
 
         # self.ValEntList =  {"T":T," P":P," VapPhasMolFrac":vapPhasMolFrac," CompNames":CompNames," CompMolFrac[1]":CompMolFrac," CompMasFrac":CompMasFrac," MolFlow[1]":MolFlow," MasFlow[1]":MasFlow}
 

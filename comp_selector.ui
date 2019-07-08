@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Settings</string>
+   <string>Compound Selector</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -24,52 +24,13 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>Select Thermodynamic Package :</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QComboBox" name="comboBox">
-        <item>
-         <property name="text">
-          <string>Raoults_Law</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>NRTL</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Peng_Robinson</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>UNIFAC</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>UNIQUAC</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Grayson_Streed</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
      <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Search For Compounds :</string>
       </property>
@@ -82,6 +43,11 @@
       </item>
       <item>
        <widget class="QPushButton" name="compoundSelectButton">
+        <property name="font">
+         <font>
+          <family>Comic Sans MS</family>
+         </font>
+        </property>
         <property name="text">
          <string>Select</string>
         </property>
@@ -92,6 +58,11 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_3">
+        <property name="font">
+         <font>
+          <family>Comic Sans MS</family>
+         </font>
+        </property>
         <property name="text">
          <string>Remove</string>
         </property>
@@ -130,6 +101,11 @@
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
        <widget class="QPushButton" name="pushButton">
+        <property name="font">
+         <font>
+          <family>Comic Sans MS</family>
+         </font>
+        </property>
         <property name="text">
          <string>Submit</string>
         </property>
@@ -137,6 +113,11 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_2">
+        <property name="font">
+         <font>
+          <family>Comic Sans MS</family>
+         </font>
+        </property>
         <property name="text">
          <string>Cancel</string>
         </property>

@@ -92,10 +92,6 @@ class MainApp(QMainWindow,ui):
 
     def generatef(self,mode):
         try:
-            if(mode == 'SM'):
-                self.textBrowser.append("<span>["+str(self.currentTime())+"] Simulating in <b>sequential</b> mode ... </span>")
-            elif(mode =='EQN'):
-                self.textBrowser.append("<span>["+str(self.currentTime())+"] Simulating in <b>equation</b> mode ... </span>")
             self.Container.simulate(mode)
             self.dockWidget_2.show()
             self.res = resdockWidget(self.Container)
@@ -152,7 +148,6 @@ class MainApp(QMainWindow,ui):
         except Exception as e:
             print(e)
     def delete(self,l):
-
         for item in l:
             self.scene.removeItem(item)
             if hasattr(item,'Input'):
@@ -185,7 +180,7 @@ class MainApp(QMainWindow,ui):
 
                     elif item.obj in self.Container.conn[k]:
                         self.Container.conn[k].remove(item.obj)
-                
+                self.textBrowser.append("<span style=\"color:blue\">["+str(self.currentTime())+"]<b> "+item.obj.name+" </b>is deleted .""</span>")
                 del item.obj
             del item
         
