@@ -133,11 +133,15 @@ class MainApp(QMainWindow,ui):
             print(e)
             
     def new(self):
-        l=self.scene.items()
-        compound_selected.clear()
-        self.comp.tableWidget.setRowCount(0)
-        self.delete(l)
-    
+        try:
+            l=self.scene.items()
+            compound_selected.clear()
+            self.comp.tableWidget.setRowCount(0)
+            self.delete(l)
+            self.textBrowser.append("<span>["+str(self.currentTime())+"] <b>New</b> flowsheet is created ... </span>")
+            self.comp.show()
+        except Exception as e:
+            print(e)
     def deleteCall(self,event):
         try:
             if event.key() == QtCore.Qt.Key_Delete:

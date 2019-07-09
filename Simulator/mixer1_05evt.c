@@ -67,15 +67,15 @@ int mixer1_function_ZeroCrossingsEquations(DATA *data, threadData_t *threadData)
 int mixer1_function_ZeroCrossings(DATA *data, threadData_t *threadData, double *gout)
 {
   TRACE_PUSH
-  modelica_boolean tmp72;
-  modelica_boolean tmp73;
+  modelica_boolean tmp440;
+  modelica_boolean tmp441;
   
   data->simulationInfo->callStatistics.functionZeroCrossings++;
   
-  tmp72 = GreaterEqZC(101325.0, data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */, data->simulationInfo->storedRelations[0]);
-  gout[0] = (tmp72) ? 1 : -1;
-  tmp73 = GreaterEqZC(101325.0, data->localData[0]->realVars[12] /* MatStm1.Pdew variable */, data->simulationInfo->storedRelations[1]);
-  gout[1] = (tmp73) ? 1 : -1;
+  tmp440 = GreaterEqZC(101325.0, data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */, data->simulationInfo->storedRelations[0]);
+  gout[0] = (tmp440) ? 1 : -1;
+  tmp441 = GreaterEqZC(101325.0, data->localData[0]->realVars[12] /* MatStm1.Pdew variable */, data->simulationInfo->storedRelations[1]);
+  gout[1] = (tmp441) ? 1 : -1;
   
   TRACE_POP
   return 0;
@@ -91,14 +91,14 @@ const char *mixer1_relationDescription(int i)
 int mixer1_function_updateRelations(DATA *data, threadData_t *threadData, int evalforZeroCross)
 {
   TRACE_PUSH
-  modelica_boolean tmp74;
-  modelica_boolean tmp75;
+  modelica_boolean tmp442;
+  modelica_boolean tmp443;
   
   if(evalforZeroCross) {
-    tmp74 = GreaterEqZC(101325.0, data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */, data->simulationInfo->storedRelations[0]);
-    data->simulationInfo->relations[0] = tmp74;
-    tmp75 = GreaterEqZC(101325.0, data->localData[0]->realVars[12] /* MatStm1.Pdew variable */, data->simulationInfo->storedRelations[1]);
-    data->simulationInfo->relations[1] = tmp75;
+    tmp442 = GreaterEqZC(101325.0, data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */, data->simulationInfo->storedRelations[0]);
+    data->simulationInfo->relations[0] = tmp442;
+    tmp443 = GreaterEqZC(101325.0, data->localData[0]->realVars[12] /* MatStm1.Pdew variable */, data->simulationInfo->storedRelations[1]);
+    data->simulationInfo->relations[1] = tmp443;
   } else {
     data->simulationInfo->relations[0] = (101325.0 >= data->localData[0]->realVars[11] /* MatStm1.Pbubl variable */);
     data->simulationInfo->relations[1] = (101325.0 >= data->localData[0]->realVars[12] /* MatStm1.Pdew variable */);

@@ -11,7 +11,7 @@ class Splitter():
         self.OutputStms = []
         self.type = 'Splitter'
         self.specval = json.dumps(specval).replace('[','{').replace(']','}')
-
+        
     def modesList(self):
         return []   
     def paramgetter(self,mode=None):
