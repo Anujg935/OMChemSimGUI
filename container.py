@@ -49,6 +49,9 @@ class Container():
         
     def connection(self):
         try:
+            self.op.clear()
+            self.ip.clear()
+            self.opl.clear()
             stm = ['MatStm','EngStm']
             for i in self.conn:
                 if i.type not in stm:

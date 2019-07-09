@@ -111,7 +111,7 @@ class MatStm():
 
     def modesList(self):
         return ["PT","PH","PVF","TVF","PS"]   
-    def paramgetter(self,mode="PT"):
+    def paramgetter(self,mode):
         dict = {}
         if(mode=="PT"):
             self.mode1 = 'P'
@@ -144,7 +144,7 @@ class MatStm():
         self.Prop['totMolFlo[1]'] = self.MolFlow
         self.Prop[self.mode2] = dict[self.mode2]
         self.Prop[self.mode1] = dict[self.mode1]
-        for i in range(0,len(self.CompNames)):
+        for i in range(len(self.CompNames)):
             print('####### compmolfrac #########\n',self.CompMolFrac[i])
             if self.CompMolFrac:
                 self.Prop['compMolFrac[1,'+str(i+1)+']'] = self.CompMolFrac[i]

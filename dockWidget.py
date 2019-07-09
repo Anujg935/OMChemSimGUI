@@ -18,8 +18,7 @@ class dockWidget(QDockWidget,ui_dialog):
         self.name=name
         self.obj=obj
         self.type = comptype
-        self.inputdict = None 
-        print("input_dict",self.inputdict)
+        self.inputdict = {}
         self.compmolfraclist = []
         self.modes()
         self.pushButton_2.clicked.connect(self.modeSelection)
@@ -34,13 +33,16 @@ class dockWidget(QDockWidget,ui_dialog):
             self.tabWidget.setCurrentIndex(1)
             for j in modesList:
                     self.comboBox.addItem(str(j))
+            self.modeSelection()
             
-        #else:
-        self.tabWidget.setCurrentIndex(0)
-        self.inputdict = self.obj.paramgetter()
-        self.inputparamslist()
+        else:
+            self.inputdict= {}
+            self.tabWidget.setCurrentIndex(0)
+            self.inputdict = self.obj.paramgetter()
+            self.inputparamslist()
 
     def modeSelection(self):
+        self.inputdict= {}
         for i in reversed(range(self.formLayout.count())):
             self.formLayout.itemAt(i).widget().setParent(None)  
         self.inputdict = self.obj.paramgetter(self.comboBox.currentText())
@@ -50,6 +52,7 @@ class dockWidget(QDockWidget,ui_dialog):
 
     def inputparamslist(self):
         try:
+            print(self.inputdict)
             for c,i in enumerate(self.inputdict):
                 if(i=="thermoPackage"):
                     print("thermo1")
@@ -72,10 +75,12 @@ class dockWidget(QDockWidget,ui_dialog):
                     print("cmfnjkmnjkmnjkm")
                     noc = len(compound_selected)
                     print(noc)
+                    self.compmolfraclist.clear()
                     for j in range(noc):
                         l = QLineEdit()    
                         self.inputdict[i] = "compmolfrac"                                                  
                         self.formLayout.addRow(QLabel(str(compound_selected[j])+" Fraction"+":"),l )
+                        
                         self.compmolfraclist.append(l)
                 else:
                     print("elseloopo")
@@ -89,7 +94,7 @@ class dockWidget(QDockWidget,ui_dialog):
         QMessageBox.about(self, 'Important', "Please fill all fields with data")
     def param(self):
         try:
-            self.dict.clear()
+            self.dict={}
             for i in self.inputdict:
                 if(i=="thermoPackage"):
                     if (self.inputdict[i].currentText()):

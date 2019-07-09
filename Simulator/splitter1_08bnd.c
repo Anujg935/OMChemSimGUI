@@ -8,64 +8,64 @@ extern "C" {
 /*
 equation index: 483
 type: SIMPLE_ASSIGN
-$START._MatStm5._Pdew = 0.5 * (MatStm5.comp[1].Pc + MatStm5.comp[2].Pc)
+$START._MatStm3._Pdew = 0.5 * (MatStm3.comp[1].Pc + MatStm3.comp[2].Pc)
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_483(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,483};
-  data->modelData->realVarsData[193].attribute /* MatStm5.Pdew variable */.start = (0.5) * (data->simulationInfo->realParameter[481] + data->simulationInfo->realParameter[482]);
-    data->localData[0]->realVars[193] /* MatStm5.Pdew variable */ = data->modelData->realVarsData[193].attribute /* MatStm5.Pdew variable */.start;
-    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[193].info /* MatStm5.Pdew */.name, (modelica_real) data->localData[0]->realVars[193] /* MatStm5.Pdew variable */);
+  data->modelData->realVarsData[193].attribute /* MatStm3.Pdew variable */.start = (0.5) * (data->simulationInfo->realParameter[481] + data->simulationInfo->realParameter[482]);
+    data->localData[0]->realVars[193] /* MatStm3.Pdew variable */ = data->modelData->realVarsData[193].attribute /* MatStm3.Pdew variable */.start;
+    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[193].info /* MatStm3.Pdew */.name, (modelica_real) data->localData[0]->realVars[193] /* MatStm3.Pdew variable */);
   TRACE_POP
 }
 
 /*
 equation index: 484
 type: SIMPLE_ASSIGN
-$START._MatStm5._Pbubl = 0.5 * (MatStm5.comp[1].Pc + MatStm5.comp[2].Pc)
+$START._MatStm3._Pbubl = 0.5 * (MatStm3.comp[1].Pc + MatStm3.comp[2].Pc)
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_484(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,484};
-  data->modelData->realVarsData[192].attribute /* MatStm5.Pbubl variable */.start = (0.5) * (data->simulationInfo->realParameter[481] + data->simulationInfo->realParameter[482]);
-    data->localData[0]->realVars[192] /* MatStm5.Pbubl variable */ = data->modelData->realVarsData[192].attribute /* MatStm5.Pbubl variable */.start;
-    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[192].info /* MatStm5.Pbubl */.name, (modelica_real) data->localData[0]->realVars[192] /* MatStm5.Pbubl variable */);
+  data->modelData->realVarsData[192].attribute /* MatStm3.Pbubl variable */.start = (0.5) * (data->simulationInfo->realParameter[481] + data->simulationInfo->realParameter[482]);
+    data->localData[0]->realVars[192] /* MatStm3.Pbubl variable */ = data->modelData->realVarsData[192].attribute /* MatStm3.Pbubl variable */.start;
+    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[192].info /* MatStm3.Pbubl */.name, (modelica_real) data->localData[0]->realVars[192] /* MatStm3.Pbubl variable */);
   TRACE_POP
 }
 
 /*
 equation index: 485
 type: SIMPLE_ASSIGN
-$START._MatStm4._Pdew = 0.5 * (MatStm4.comp[1].Pc + MatStm4.comp[2].Pc)
+$START._MatStm2._Pdew = 0.5 * (MatStm2.comp[1].Pc + MatStm2.comp[2].Pc)
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_485(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,485};
-  data->modelData->realVarsData[105].attribute /* MatStm4.Pdew variable */.start = (0.5) * (data->simulationInfo->realParameter[323] + data->simulationInfo->realParameter[324]);
-    data->localData[0]->realVars[105] /* MatStm4.Pdew variable */ = data->modelData->realVarsData[105].attribute /* MatStm4.Pdew variable */.start;
-    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[105].info /* MatStm4.Pdew */.name, (modelica_real) data->localData[0]->realVars[105] /* MatStm4.Pdew variable */);
+  data->modelData->realVarsData[105].attribute /* MatStm2.Pdew variable */.start = (0.5) * (data->simulationInfo->realParameter[323] + data->simulationInfo->realParameter[324]);
+    data->localData[0]->realVars[105] /* MatStm2.Pdew variable */ = data->modelData->realVarsData[105].attribute /* MatStm2.Pdew variable */.start;
+    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[105].info /* MatStm2.Pdew */.name, (modelica_real) data->localData[0]->realVars[105] /* MatStm2.Pdew variable */);
   TRACE_POP
 }
 
 /*
 equation index: 486
 type: SIMPLE_ASSIGN
-$START._MatStm4._Pbubl = 0.5 * (MatStm4.comp[1].Pc + MatStm4.comp[2].Pc)
+$START._MatStm2._Pbubl = 0.5 * (MatStm2.comp[1].Pc + MatStm2.comp[2].Pc)
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_486(DATA *data, threadData_t *threadData)
 {
   TRACE_PUSH
   const int equationIndexes[2] = {1,486};
-  data->modelData->realVarsData[104].attribute /* MatStm4.Pbubl variable */.start = (0.5) * (data->simulationInfo->realParameter[323] + data->simulationInfo->realParameter[324]);
-    data->localData[0]->realVars[104] /* MatStm4.Pbubl variable */ = data->modelData->realVarsData[104].attribute /* MatStm4.Pbubl variable */.start;
-    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[104].info /* MatStm4.Pbubl */.name, (modelica_real) data->localData[0]->realVars[104] /* MatStm4.Pbubl variable */);
+  data->modelData->realVarsData[104].attribute /* MatStm2.Pbubl variable */.start = (0.5) * (data->simulationInfo->realParameter[323] + data->simulationInfo->realParameter[324]);
+    data->localData[0]->realVars[104] /* MatStm2.Pbubl variable */ = data->modelData->realVarsData[104].attribute /* MatStm2.Pbubl variable */.start;
+    infoStreamPrint(LOG_INIT, 0, "updated start value: %s(start=%g)", data->modelData->realVarsData[104].info /* MatStm2.Pbubl */.name, (modelica_real) data->localData[0]->realVars[104] /* MatStm2.Pbubl variable */);
   TRACE_POP
 }
 OMC_DISABLE_OPT
@@ -107,7 +107,7 @@ void splitter1_updateBoundParameters_0(DATA *data, threadData_t *threadData);
 /*
 equation index: 487
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VP[2] = Water.VP[2]
+MatStm3._comp[1]._VP[2] = Water.VP[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_487(DATA *data, threadData_t *threadData)
@@ -121,7 +121,7 @@ static void splitter1_eqFunction_487(DATA *data, threadData_t *threadData)
 /*
 equation index: 488
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VP[3] = Water.VP[3]
+MatStm3._comp[1]._VP[3] = Water.VP[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_488(DATA *data, threadData_t *threadData)
@@ -135,7 +135,7 @@ static void splitter1_eqFunction_488(DATA *data, threadData_t *threadData)
 /*
 equation index: 489
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VP[4] = Water.VP[4]
+MatStm3._comp[1]._VP[4] = Water.VP[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_489(DATA *data, threadData_t *threadData)
@@ -149,7 +149,7 @@ static void splitter1_eqFunction_489(DATA *data, threadData_t *threadData)
 /*
 equation index: 490
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VP[5] = Water.VP[5]
+MatStm3._comp[1]._VP[5] = Water.VP[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_490(DATA *data, threadData_t *threadData)
@@ -163,7 +163,7 @@ static void splitter1_eqFunction_490(DATA *data, threadData_t *threadData)
 /*
 equation index: 491
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VP[6] = Water.VP[6]
+MatStm3._comp[1]._VP[6] = Water.VP[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_491(DATA *data, threadData_t *threadData)
@@ -177,7 +177,7 @@ static void splitter1_eqFunction_491(DATA *data, threadData_t *threadData)
 /*
 equation index: 492
 type: SIMPLE_ASSIGN
-$cse1 = exp((-MatStm5.comp[1].VP[2]) - MatStm5.comp[1].VP[3] / 315.0287067347126 - MatStm5.comp[1].VP[4] * 5.752663767164471 - MatStm5.comp[1].VP[5] * 315.0287067347126 ^ MatStm5.comp[1].VP[6])
+$cse1 = exp((-MatStm3.comp[1].VP[2]) - MatStm3.comp[1].VP[3] / 300.0 - MatStm3.comp[1].VP[4] * 5.703782474656201 - MatStm3.comp[1].VP[5] * 300.0 ^ MatStm3.comp[1].VP[6])
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_492(DATA *data, threadData_t *threadData)
@@ -191,7 +191,7 @@ static void splitter1_eqFunction_492(DATA *data, threadData_t *threadData)
   modelica_real tmp4;
   modelica_real tmp5;
   modelica_real tmp6;
-  tmp0 = 315.0287067347126;
+  tmp0 = 300.0;
   tmp1 = data->simulationInfo->realParameter[508];
   if(tmp0 < 0.0 && tmp1 != 0.0)
   {
@@ -241,14 +241,14 @@ static void splitter1_eqFunction_492(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp0, tmp1);
   }
-  data->localData[0]->realVars[0] /* $cse1 variable */ = exp((-data->simulationInfo->realParameter[504]) - (DIVISION_SIM(data->simulationInfo->realParameter[505],315.0287067347126,"315.0287067347126",equationIndexes)) - ((data->simulationInfo->realParameter[506]) * (5.752663767164471)) - ((data->simulationInfo->realParameter[507]) * (tmp2)));
+  data->localData[0]->realVars[0] /* $cse1 variable */ = exp((-data->simulationInfo->realParameter[504]) - (DIVISION_SIM(data->simulationInfo->realParameter[505],300.0,"300.0",equationIndexes)) - ((data->simulationInfo->realParameter[506]) * (5.703782474656201)) - ((data->simulationInfo->realParameter[507]) * (tmp2)));
   TRACE_POP
 }
 
 /*
 equation index: 493
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VP[2] = Ethanol.VP[2]
+MatStm3._comp[2]._VP[2] = Ethanol.VP[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_493(DATA *data, threadData_t *threadData)
@@ -262,7 +262,7 @@ static void splitter1_eqFunction_493(DATA *data, threadData_t *threadData)
 /*
 equation index: 494
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VP[3] = Ethanol.VP[3]
+MatStm3._comp[2]._VP[3] = Ethanol.VP[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_494(DATA *data, threadData_t *threadData)
@@ -276,7 +276,7 @@ static void splitter1_eqFunction_494(DATA *data, threadData_t *threadData)
 /*
 equation index: 495
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VP[4] = Ethanol.VP[4]
+MatStm3._comp[2]._VP[4] = Ethanol.VP[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_495(DATA *data, threadData_t *threadData)
@@ -290,7 +290,7 @@ static void splitter1_eqFunction_495(DATA *data, threadData_t *threadData)
 /*
 equation index: 496
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VP[5] = Ethanol.VP[5]
+MatStm3._comp[2]._VP[5] = Ethanol.VP[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_496(DATA *data, threadData_t *threadData)
@@ -304,7 +304,7 @@ static void splitter1_eqFunction_496(DATA *data, threadData_t *threadData)
 /*
 equation index: 497
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VP[6] = Ethanol.VP[6]
+MatStm3._comp[2]._VP[6] = Ethanol.VP[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_497(DATA *data, threadData_t *threadData)
@@ -318,7 +318,7 @@ static void splitter1_eqFunction_497(DATA *data, threadData_t *threadData)
 /*
 equation index: 498
 type: SIMPLE_ASSIGN
-$cse2 = exp((-MatStm5.comp[2].VP[2]) - MatStm5.comp[2].VP[3] / 315.0287067347126 - MatStm5.comp[2].VP[4] * 5.752663767164471 - MatStm5.comp[2].VP[5] * 315.0287067347126 ^ MatStm5.comp[2].VP[6])
+$cse2 = exp((-MatStm3.comp[2].VP[2]) - MatStm3.comp[2].VP[3] / 300.0 - MatStm3.comp[2].VP[4] * 5.703782474656201 - MatStm3.comp[2].VP[5] * 300.0 ^ MatStm3.comp[2].VP[6])
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_498(DATA *data, threadData_t *threadData)
@@ -332,7 +332,7 @@ static void splitter1_eqFunction_498(DATA *data, threadData_t *threadData)
   modelica_real tmp11;
   modelica_real tmp12;
   modelica_real tmp13;
-  tmp7 = 315.0287067347126;
+  tmp7 = 300.0;
   tmp8 = data->simulationInfo->realParameter[514];
   if(tmp7 < 0.0 && tmp8 != 0.0)
   {
@@ -382,14 +382,14 @@ static void splitter1_eqFunction_498(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp7, tmp8);
   }
-  data->localData[0]->realVars[1] /* $cse2 variable */ = exp((-data->simulationInfo->realParameter[510]) - (DIVISION_SIM(data->simulationInfo->realParameter[511],315.0287067347126,"315.0287067347126",equationIndexes)) - ((data->simulationInfo->realParameter[512]) * (5.752663767164471)) - ((data->simulationInfo->realParameter[513]) * (tmp9)));
+  data->localData[0]->realVars[1] /* $cse2 variable */ = exp((-data->simulationInfo->realParameter[510]) - (DIVISION_SIM(data->simulationInfo->realParameter[511],300.0,"300.0",equationIndexes)) - ((data->simulationInfo->realParameter[512]) * (5.703782474656201)) - ((data->simulationInfo->realParameter[513]) * (tmp9)));
   TRACE_POP
 }
 
 /*
 equation index: 499
 type: SIMPLE_ASSIGN
-$cse3 = exp(MatStm5.comp[1].VP[2] + MatStm5.comp[1].VP[3] / 315.0287067347126 + MatStm5.comp[1].VP[4] * 5.752663767164471 + MatStm5.comp[1].VP[5] * 315.0287067347126 ^ MatStm5.comp[1].VP[6])
+$cse3 = exp(MatStm3.comp[1].VP[2] + MatStm3.comp[1].VP[3] / 300.0 + MatStm3.comp[1].VP[4] * 5.703782474656201 + MatStm3.comp[1].VP[5] * 300.0 ^ MatStm3.comp[1].VP[6])
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_499(DATA *data, threadData_t *threadData)
@@ -403,7 +403,7 @@ static void splitter1_eqFunction_499(DATA *data, threadData_t *threadData)
   modelica_real tmp18;
   modelica_real tmp19;
   modelica_real tmp20;
-  tmp14 = 315.0287067347126;
+  tmp14 = 300.0;
   tmp15 = data->simulationInfo->realParameter[508];
   if(tmp14 < 0.0 && tmp15 != 0.0)
   {
@@ -453,14 +453,14 @@ static void splitter1_eqFunction_499(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp14, tmp15);
   }
-  data->localData[0]->realVars[2] /* $cse3 variable */ = exp(data->simulationInfo->realParameter[504] + DIVISION_SIM(data->simulationInfo->realParameter[505],315.0287067347126,"315.0287067347126",equationIndexes) + (data->simulationInfo->realParameter[506]) * (5.752663767164471) + (data->simulationInfo->realParameter[507]) * (tmp16));
+  data->localData[0]->realVars[2] /* $cse3 variable */ = exp(data->simulationInfo->realParameter[504] + DIVISION_SIM(data->simulationInfo->realParameter[505],300.0,"300.0",equationIndexes) + (data->simulationInfo->realParameter[506]) * (5.703782474656201) + (data->simulationInfo->realParameter[507]) * (tmp16));
   TRACE_POP
 }
 
 /*
 equation index: 500
 type: SIMPLE_ASSIGN
-$cse4 = exp(MatStm5.comp[2].VP[2] + MatStm5.comp[2].VP[3] / 315.0287067347126 + MatStm5.comp[2].VP[4] * 5.752663767164471 + MatStm5.comp[2].VP[5] * 315.0287067347126 ^ MatStm5.comp[2].VP[6])
+$cse4 = exp(MatStm3.comp[2].VP[2] + MatStm3.comp[2].VP[3] / 300.0 + MatStm3.comp[2].VP[4] * 5.703782474656201 + MatStm3.comp[2].VP[5] * 300.0 ^ MatStm3.comp[2].VP[6])
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_500(DATA *data, threadData_t *threadData)
@@ -474,7 +474,7 @@ static void splitter1_eqFunction_500(DATA *data, threadData_t *threadData)
   modelica_real tmp25;
   modelica_real tmp26;
   modelica_real tmp27;
-  tmp21 = 315.0287067347126;
+  tmp21 = 300.0;
   tmp22 = data->simulationInfo->realParameter[514];
   if(tmp21 < 0.0 && tmp22 != 0.0)
   {
@@ -524,14 +524,14 @@ static void splitter1_eqFunction_500(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp21, tmp22);
   }
-  data->localData[0]->realVars[3] /* $cse4 variable */ = exp(data->simulationInfo->realParameter[510] + DIVISION_SIM(data->simulationInfo->realParameter[511],315.0287067347126,"315.0287067347126",equationIndexes) + (data->simulationInfo->realParameter[512]) * (5.752663767164471) + (data->simulationInfo->realParameter[513]) * (tmp23));
+  data->localData[0]->realVars[3] /* $cse4 variable */ = exp(data->simulationInfo->realParameter[510] + DIVISION_SIM(data->simulationInfo->realParameter[511],300.0,"300.0",equationIndexes) + (data->simulationInfo->realParameter[512]) * (5.703782474656201) + (data->simulationInfo->realParameter[513]) * (tmp23));
   TRACE_POP
 }
 
 /*
 equation index: 501
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VP[2] = Water.VP[2]
+MatStm2._comp[1]._VP[2] = Water.VP[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_501(DATA *data, threadData_t *threadData)
@@ -545,7 +545,7 @@ static void splitter1_eqFunction_501(DATA *data, threadData_t *threadData)
 /*
 equation index: 502
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VP[3] = Water.VP[3]
+MatStm2._comp[1]._VP[3] = Water.VP[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_502(DATA *data, threadData_t *threadData)
@@ -559,7 +559,7 @@ static void splitter1_eqFunction_502(DATA *data, threadData_t *threadData)
 /*
 equation index: 503
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VP[4] = Water.VP[4]
+MatStm2._comp[1]._VP[4] = Water.VP[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_503(DATA *data, threadData_t *threadData)
@@ -573,7 +573,7 @@ static void splitter1_eqFunction_503(DATA *data, threadData_t *threadData)
 /*
 equation index: 504
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VP[5] = Water.VP[5]
+MatStm2._comp[1]._VP[5] = Water.VP[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_504(DATA *data, threadData_t *threadData)
@@ -587,7 +587,7 @@ static void splitter1_eqFunction_504(DATA *data, threadData_t *threadData)
 /*
 equation index: 505
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VP[6] = Water.VP[6]
+MatStm2._comp[1]._VP[6] = Water.VP[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_505(DATA *data, threadData_t *threadData)
@@ -601,7 +601,7 @@ static void splitter1_eqFunction_505(DATA *data, threadData_t *threadData)
 /*
 equation index: 506
 type: SIMPLE_ASSIGN
-$cse5 = exp((-MatStm4.comp[1].VP[2]) - MatStm4.comp[1].VP[3] / 315.0287067347126 - MatStm4.comp[1].VP[4] * 5.752663767164471 - MatStm4.comp[1].VP[5] * 315.0287067347126 ^ MatStm4.comp[1].VP[6])
+$cse5 = exp((-MatStm2.comp[1].VP[2]) - MatStm2.comp[1].VP[3] / 300.0 - MatStm2.comp[1].VP[4] * 5.703782474656201 - MatStm2.comp[1].VP[5] * 300.0 ^ MatStm2.comp[1].VP[6])
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_506(DATA *data, threadData_t *threadData)
@@ -615,7 +615,7 @@ static void splitter1_eqFunction_506(DATA *data, threadData_t *threadData)
   modelica_real tmp32;
   modelica_real tmp33;
   modelica_real tmp34;
-  tmp28 = 315.0287067347126;
+  tmp28 = 300.0;
   tmp29 = data->simulationInfo->realParameter[350];
   if(tmp28 < 0.0 && tmp29 != 0.0)
   {
@@ -665,14 +665,14 @@ static void splitter1_eqFunction_506(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp28, tmp29);
   }
-  data->localData[0]->realVars[4] /* $cse5 variable */ = exp((-data->simulationInfo->realParameter[346]) - (DIVISION_SIM(data->simulationInfo->realParameter[347],315.0287067347126,"315.0287067347126",equationIndexes)) - ((data->simulationInfo->realParameter[348]) * (5.752663767164471)) - ((data->simulationInfo->realParameter[349]) * (tmp30)));
+  data->localData[0]->realVars[4] /* $cse5 variable */ = exp((-data->simulationInfo->realParameter[346]) - (DIVISION_SIM(data->simulationInfo->realParameter[347],300.0,"300.0",equationIndexes)) - ((data->simulationInfo->realParameter[348]) * (5.703782474656201)) - ((data->simulationInfo->realParameter[349]) * (tmp30)));
   TRACE_POP
 }
 
 /*
 equation index: 507
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VP[2] = Ethanol.VP[2]
+MatStm2._comp[2]._VP[2] = Ethanol.VP[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_507(DATA *data, threadData_t *threadData)
@@ -686,7 +686,7 @@ static void splitter1_eqFunction_507(DATA *data, threadData_t *threadData)
 /*
 equation index: 508
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VP[3] = Ethanol.VP[3]
+MatStm2._comp[2]._VP[3] = Ethanol.VP[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_508(DATA *data, threadData_t *threadData)
@@ -700,7 +700,7 @@ static void splitter1_eqFunction_508(DATA *data, threadData_t *threadData)
 /*
 equation index: 509
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VP[4] = Ethanol.VP[4]
+MatStm2._comp[2]._VP[4] = Ethanol.VP[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_509(DATA *data, threadData_t *threadData)
@@ -714,7 +714,7 @@ static void splitter1_eqFunction_509(DATA *data, threadData_t *threadData)
 /*
 equation index: 510
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VP[5] = Ethanol.VP[5]
+MatStm2._comp[2]._VP[5] = Ethanol.VP[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_510(DATA *data, threadData_t *threadData)
@@ -728,7 +728,7 @@ static void splitter1_eqFunction_510(DATA *data, threadData_t *threadData)
 /*
 equation index: 511
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VP[6] = Ethanol.VP[6]
+MatStm2._comp[2]._VP[6] = Ethanol.VP[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_511(DATA *data, threadData_t *threadData)
@@ -742,7 +742,7 @@ static void splitter1_eqFunction_511(DATA *data, threadData_t *threadData)
 /*
 equation index: 512
 type: SIMPLE_ASSIGN
-$cse6 = exp((-MatStm4.comp[2].VP[2]) - MatStm4.comp[2].VP[3] / 315.0287067347126 - MatStm4.comp[2].VP[4] * 5.752663767164471 - MatStm4.comp[2].VP[5] * 315.0287067347126 ^ MatStm4.comp[2].VP[6])
+$cse6 = exp((-MatStm2.comp[2].VP[2]) - MatStm2.comp[2].VP[3] / 300.0 - MatStm2.comp[2].VP[4] * 5.703782474656201 - MatStm2.comp[2].VP[5] * 300.0 ^ MatStm2.comp[2].VP[6])
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_512(DATA *data, threadData_t *threadData)
@@ -756,7 +756,7 @@ static void splitter1_eqFunction_512(DATA *data, threadData_t *threadData)
   modelica_real tmp39;
   modelica_real tmp40;
   modelica_real tmp41;
-  tmp35 = 315.0287067347126;
+  tmp35 = 300.0;
   tmp36 = data->simulationInfo->realParameter[356];
   if(tmp35 < 0.0 && tmp36 != 0.0)
   {
@@ -806,14 +806,14 @@ static void splitter1_eqFunction_512(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp35, tmp36);
   }
-  data->localData[0]->realVars[5] /* $cse6 variable */ = exp((-data->simulationInfo->realParameter[352]) - (DIVISION_SIM(data->simulationInfo->realParameter[353],315.0287067347126,"315.0287067347126",equationIndexes)) - ((data->simulationInfo->realParameter[354]) * (5.752663767164471)) - ((data->simulationInfo->realParameter[355]) * (tmp37)));
+  data->localData[0]->realVars[5] /* $cse6 variable */ = exp((-data->simulationInfo->realParameter[352]) - (DIVISION_SIM(data->simulationInfo->realParameter[353],300.0,"300.0",equationIndexes)) - ((data->simulationInfo->realParameter[354]) * (5.703782474656201)) - ((data->simulationInfo->realParameter[355]) * (tmp37)));
   TRACE_POP
 }
 
 /*
 equation index: 513
 type: SIMPLE_ASSIGN
-$cse7 = exp(MatStm4.comp[1].VP[2] + MatStm4.comp[1].VP[3] / 315.0287067347126 + MatStm4.comp[1].VP[4] * 5.752663767164471 + MatStm4.comp[1].VP[5] * 315.0287067347126 ^ MatStm4.comp[1].VP[6])
+$cse7 = exp(MatStm2.comp[1].VP[2] + MatStm2.comp[1].VP[3] / 300.0 + MatStm2.comp[1].VP[4] * 5.703782474656201 + MatStm2.comp[1].VP[5] * 300.0 ^ MatStm2.comp[1].VP[6])
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_513(DATA *data, threadData_t *threadData)
@@ -827,7 +827,7 @@ static void splitter1_eqFunction_513(DATA *data, threadData_t *threadData)
   modelica_real tmp46;
   modelica_real tmp47;
   modelica_real tmp48;
-  tmp42 = 315.0287067347126;
+  tmp42 = 300.0;
   tmp43 = data->simulationInfo->realParameter[350];
   if(tmp42 < 0.0 && tmp43 != 0.0)
   {
@@ -877,14 +877,14 @@ static void splitter1_eqFunction_513(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp42, tmp43);
   }
-  data->localData[0]->realVars[6] /* $cse7 variable */ = exp(data->simulationInfo->realParameter[346] + DIVISION_SIM(data->simulationInfo->realParameter[347],315.0287067347126,"315.0287067347126",equationIndexes) + (data->simulationInfo->realParameter[348]) * (5.752663767164471) + (data->simulationInfo->realParameter[349]) * (tmp44));
+  data->localData[0]->realVars[6] /* $cse7 variable */ = exp(data->simulationInfo->realParameter[346] + DIVISION_SIM(data->simulationInfo->realParameter[347],300.0,"300.0",equationIndexes) + (data->simulationInfo->realParameter[348]) * (5.703782474656201) + (data->simulationInfo->realParameter[349]) * (tmp44));
   TRACE_POP
 }
 
 /*
 equation index: 514
 type: SIMPLE_ASSIGN
-$cse8 = exp(MatStm4.comp[2].VP[2] + MatStm4.comp[2].VP[3] / 315.0287067347126 + MatStm4.comp[2].VP[4] * 5.752663767164471 + MatStm4.comp[2].VP[5] * 315.0287067347126 ^ MatStm4.comp[2].VP[6])
+$cse8 = exp(MatStm2.comp[2].VP[2] + MatStm2.comp[2].VP[3] / 300.0 + MatStm2.comp[2].VP[4] * 5.703782474656201 + MatStm2.comp[2].VP[5] * 300.0 ^ MatStm2.comp[2].VP[6])
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_514(DATA *data, threadData_t *threadData)
@@ -898,7 +898,7 @@ static void splitter1_eqFunction_514(DATA *data, threadData_t *threadData)
   modelica_real tmp53;
   modelica_real tmp54;
   modelica_real tmp55;
-  tmp49 = 315.0287067347126;
+  tmp49 = 300.0;
   tmp50 = data->simulationInfo->realParameter[356];
   if(tmp49 < 0.0 && tmp50 != 0.0)
   {
@@ -948,14 +948,14 @@ static void splitter1_eqFunction_514(DATA *data, threadData_t *threadData)
   {
     throwStreamPrint(threadData, "%s:%d: Invalid root: (%g)^(%g)", __FILE__, __LINE__, tmp49, tmp50);
   }
-  data->localData[0]->realVars[7] /* $cse8 variable */ = exp(data->simulationInfo->realParameter[352] + DIVISION_SIM(data->simulationInfo->realParameter[353],315.0287067347126,"315.0287067347126",equationIndexes) + (data->simulationInfo->realParameter[354]) * (5.752663767164471) + (data->simulationInfo->realParameter[355]) * (tmp51));
+  data->localData[0]->realVars[7] /* $cse8 variable */ = exp(data->simulationInfo->realParameter[352] + DIVISION_SIM(data->simulationInfo->realParameter[353],300.0,"300.0",equationIndexes) + (data->simulationInfo->realParameter[354]) * (5.703782474656201) + (data->simulationInfo->realParameter[355]) * (tmp51));
   TRACE_POP
 }
 
 /*
 equation index: 517
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
+MatStm1._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_517(DATA *data, threadData_t *threadData)
@@ -969,7 +969,7 @@ static void splitter1_eqFunction_517(DATA *data, threadData_t *threadData)
 /*
 equation index: 518
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
+MatStm1._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_518(DATA *data, threadData_t *threadData)
@@ -983,7 +983,7 @@ static void splitter1_eqFunction_518(DATA *data, threadData_t *threadData)
 /*
 equation index: 519
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
+MatStm1._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_519(DATA *data, threadData_t *threadData)
@@ -997,7 +997,7 @@ static void splitter1_eqFunction_519(DATA *data, threadData_t *threadData)
 /*
 equation index: 520
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Racketparam = Ethanol.Racketparam
+MatStm1._comp[2]._Racketparam = Ethanol.Racketparam
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_520(DATA *data, threadData_t *threadData)
@@ -1011,7 +1011,7 @@ static void splitter1_eqFunction_520(DATA *data, threadData_t *threadData)
 /*
 equation index: 521
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[6] = Ethanol.VapK[6]
+MatStm1._comp[2]._VapK[6] = Ethanol.VapK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_521(DATA *data, threadData_t *threadData)
@@ -1025,7 +1025,7 @@ static void splitter1_eqFunction_521(DATA *data, threadData_t *threadData)
 /*
 equation index: 522
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[5] = Ethanol.VapK[5]
+MatStm1._comp[2]._VapK[5] = Ethanol.VapK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_522(DATA *data, threadData_t *threadData)
@@ -1039,7 +1039,7 @@ static void splitter1_eqFunction_522(DATA *data, threadData_t *threadData)
 /*
 equation index: 523
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[4] = Ethanol.VapK[4]
+MatStm1._comp[2]._VapK[4] = Ethanol.VapK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_523(DATA *data, threadData_t *threadData)
@@ -1053,7 +1053,7 @@ static void splitter1_eqFunction_523(DATA *data, threadData_t *threadData)
 /*
 equation index: 524
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[3] = Ethanol.VapK[3]
+MatStm1._comp[2]._VapK[3] = Ethanol.VapK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_524(DATA *data, threadData_t *threadData)
@@ -1067,7 +1067,7 @@ static void splitter1_eqFunction_524(DATA *data, threadData_t *threadData)
 /*
 equation index: 525
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[2] = Ethanol.VapK[2]
+MatStm1._comp[2]._VapK[2] = Ethanol.VapK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_525(DATA *data, threadData_t *threadData)
@@ -1081,7 +1081,7 @@ static void splitter1_eqFunction_525(DATA *data, threadData_t *threadData)
 /*
 equation index: 526
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapK[1] = Ethanol.VapK[1]
+MatStm1._comp[2]._VapK[1] = Ethanol.VapK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_526(DATA *data, threadData_t *threadData)
@@ -1095,7 +1095,7 @@ static void splitter1_eqFunction_526(DATA *data, threadData_t *threadData)
 /*
 equation index: 527
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[6] = Ethanol.LiqK[6]
+MatStm1._comp[2]._LiqK[6] = Ethanol.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_527(DATA *data, threadData_t *threadData)
@@ -1109,7 +1109,7 @@ static void splitter1_eqFunction_527(DATA *data, threadData_t *threadData)
 /*
 equation index: 528
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[5] = Ethanol.LiqK[5]
+MatStm1._comp[2]._LiqK[5] = Ethanol.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_528(DATA *data, threadData_t *threadData)
@@ -1123,7 +1123,7 @@ static void splitter1_eqFunction_528(DATA *data, threadData_t *threadData)
 /*
 equation index: 529
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[4] = Ethanol.LiqK[4]
+MatStm1._comp[2]._LiqK[4] = Ethanol.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_529(DATA *data, threadData_t *threadData)
@@ -1137,7 +1137,7 @@ static void splitter1_eqFunction_529(DATA *data, threadData_t *threadData)
 /*
 equation index: 530
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[3] = Ethanol.LiqK[3]
+MatStm1._comp[2]._LiqK[3] = Ethanol.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_530(DATA *data, threadData_t *threadData)
@@ -1151,7 +1151,7 @@ static void splitter1_eqFunction_530(DATA *data, threadData_t *threadData)
 /*
 equation index: 531
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[2] = Ethanol.LiqK[2]
+MatStm1._comp[2]._LiqK[2] = Ethanol.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_531(DATA *data, threadData_t *threadData)
@@ -1165,7 +1165,7 @@ static void splitter1_eqFunction_531(DATA *data, threadData_t *threadData)
 /*
 equation index: 532
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqK[1] = Ethanol.LiqK[1]
+MatStm1._comp[2]._LiqK[1] = Ethanol.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_532(DATA *data, threadData_t *threadData)
@@ -1179,7 +1179,7 @@ static void splitter1_eqFunction_532(DATA *data, threadData_t *threadData)
 /*
 equation index: 533
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[6] = Ethanol.VapVis[6]
+MatStm1._comp[2]._VapVis[6] = Ethanol.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_533(DATA *data, threadData_t *threadData)
@@ -1193,7 +1193,7 @@ static void splitter1_eqFunction_533(DATA *data, threadData_t *threadData)
 /*
 equation index: 534
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[5] = Ethanol.VapVis[5]
+MatStm1._comp[2]._VapVis[5] = Ethanol.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_534(DATA *data, threadData_t *threadData)
@@ -1207,7 +1207,7 @@ static void splitter1_eqFunction_534(DATA *data, threadData_t *threadData)
 /*
 equation index: 535
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[4] = Ethanol.VapVis[4]
+MatStm1._comp[2]._VapVis[4] = Ethanol.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_535(DATA *data, threadData_t *threadData)
@@ -1221,7 +1221,7 @@ static void splitter1_eqFunction_535(DATA *data, threadData_t *threadData)
 /*
 equation index: 536
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[3] = Ethanol.VapVis[3]
+MatStm1._comp[2]._VapVis[3] = Ethanol.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_536(DATA *data, threadData_t *threadData)
@@ -1235,7 +1235,7 @@ static void splitter1_eqFunction_536(DATA *data, threadData_t *threadData)
 /*
 equation index: 537
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[2] = Ethanol.VapVis[2]
+MatStm1._comp[2]._VapVis[2] = Ethanol.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_537(DATA *data, threadData_t *threadData)
@@ -1249,7 +1249,7 @@ static void splitter1_eqFunction_537(DATA *data, threadData_t *threadData)
 /*
 equation index: 538
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapVis[1] = Ethanol.VapVis[1]
+MatStm1._comp[2]._VapVis[1] = Ethanol.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_538(DATA *data, threadData_t *threadData)
@@ -1263,7 +1263,7 @@ static void splitter1_eqFunction_538(DATA *data, threadData_t *threadData)
 /*
 equation index: 539
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
+MatStm1._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_539(DATA *data, threadData_t *threadData)
@@ -1277,7 +1277,7 @@ static void splitter1_eqFunction_539(DATA *data, threadData_t *threadData)
 /*
 equation index: 540
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
+MatStm1._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_540(DATA *data, threadData_t *threadData)
@@ -1291,7 +1291,7 @@ static void splitter1_eqFunction_540(DATA *data, threadData_t *threadData)
 /*
 equation index: 541
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
+MatStm1._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_541(DATA *data, threadData_t *threadData)
@@ -1305,7 +1305,7 @@ static void splitter1_eqFunction_541(DATA *data, threadData_t *threadData)
 /*
 equation index: 542
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
+MatStm1._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_542(DATA *data, threadData_t *threadData)
@@ -1319,7 +1319,7 @@ static void splitter1_eqFunction_542(DATA *data, threadData_t *threadData)
 /*
 equation index: 543
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
+MatStm1._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_543(DATA *data, threadData_t *threadData)
@@ -1333,7 +1333,7 @@ static void splitter1_eqFunction_543(DATA *data, threadData_t *threadData)
 /*
 equation index: 544
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
+MatStm1._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_544(DATA *data, threadData_t *threadData)
@@ -1347,7 +1347,7 @@ static void splitter1_eqFunction_544(DATA *data, threadData_t *threadData)
 /*
 equation index: 545
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[6] = Ethanol.VapCp[6]
+MatStm1._comp[2]._VapCp[6] = Ethanol.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_545(DATA *data, threadData_t *threadData)
@@ -1361,7 +1361,7 @@ static void splitter1_eqFunction_545(DATA *data, threadData_t *threadData)
 /*
 equation index: 546
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[5] = Ethanol.VapCp[5]
+MatStm1._comp[2]._VapCp[5] = Ethanol.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_546(DATA *data, threadData_t *threadData)
@@ -1375,7 +1375,7 @@ static void splitter1_eqFunction_546(DATA *data, threadData_t *threadData)
 /*
 equation index: 547
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[4] = Ethanol.VapCp[4]
+MatStm1._comp[2]._VapCp[4] = Ethanol.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_547(DATA *data, threadData_t *threadData)
@@ -1389,7 +1389,7 @@ static void splitter1_eqFunction_547(DATA *data, threadData_t *threadData)
 /*
 equation index: 548
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[3] = Ethanol.VapCp[3]
+MatStm1._comp[2]._VapCp[3] = Ethanol.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_548(DATA *data, threadData_t *threadData)
@@ -1403,7 +1403,7 @@ static void splitter1_eqFunction_548(DATA *data, threadData_t *threadData)
 /*
 equation index: 549
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[2] = Ethanol.VapCp[2]
+MatStm1._comp[2]._VapCp[2] = Ethanol.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_549(DATA *data, threadData_t *threadData)
@@ -1417,7 +1417,7 @@ static void splitter1_eqFunction_549(DATA *data, threadData_t *threadData)
 /*
 equation index: 550
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VapCp[1] = Ethanol.VapCp[1]
+MatStm1._comp[2]._VapCp[1] = Ethanol.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_550(DATA *data, threadData_t *threadData)
@@ -1431,7 +1431,7 @@ static void splitter1_eqFunction_550(DATA *data, threadData_t *threadData)
 /*
 equation index: 551
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[6] = Ethanol.HOV[6]
+MatStm1._comp[2]._HOV[6] = Ethanol.HOV[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_551(DATA *data, threadData_t *threadData)
@@ -1445,7 +1445,7 @@ static void splitter1_eqFunction_551(DATA *data, threadData_t *threadData)
 /*
 equation index: 552
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[5] = Ethanol.HOV[5]
+MatStm1._comp[2]._HOV[5] = Ethanol.HOV[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_552(DATA *data, threadData_t *threadData)
@@ -1459,7 +1459,7 @@ static void splitter1_eqFunction_552(DATA *data, threadData_t *threadData)
 /*
 equation index: 553
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[4] = Ethanol.HOV[4]
+MatStm1._comp[2]._HOV[4] = Ethanol.HOV[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_553(DATA *data, threadData_t *threadData)
@@ -1473,7 +1473,7 @@ static void splitter1_eqFunction_553(DATA *data, threadData_t *threadData)
 /*
 equation index: 554
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[3] = Ethanol.HOV[3]
+MatStm1._comp[2]._HOV[3] = Ethanol.HOV[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_554(DATA *data, threadData_t *threadData)
@@ -1487,7 +1487,7 @@ static void splitter1_eqFunction_554(DATA *data, threadData_t *threadData)
 /*
 equation index: 555
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[2] = Ethanol.HOV[2]
+MatStm1._comp[2]._HOV[2] = Ethanol.HOV[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_555(DATA *data, threadData_t *threadData)
@@ -1501,7 +1501,7 @@ static void splitter1_eqFunction_555(DATA *data, threadData_t *threadData)
 /*
 equation index: 556
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOV[1] = Ethanol.HOV[1]
+MatStm1._comp[2]._HOV[1] = Ethanol.HOV[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_556(DATA *data, threadData_t *threadData)
@@ -1515,7 +1515,7 @@ static void splitter1_eqFunction_556(DATA *data, threadData_t *threadData)
 /*
 equation index: 557
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
+MatStm1._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_557(DATA *data, threadData_t *threadData)
@@ -1529,7 +1529,7 @@ static void splitter1_eqFunction_557(DATA *data, threadData_t *threadData)
 /*
 equation index: 558
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
+MatStm1._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_558(DATA *data, threadData_t *threadData)
@@ -1543,7 +1543,7 @@ static void splitter1_eqFunction_558(DATA *data, threadData_t *threadData)
 /*
 equation index: 559
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
+MatStm1._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_559(DATA *data, threadData_t *threadData)
@@ -1557,7 +1557,7 @@ static void splitter1_eqFunction_559(DATA *data, threadData_t *threadData)
 /*
 equation index: 560
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
+MatStm1._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_560(DATA *data, threadData_t *threadData)
@@ -1571,7 +1571,7 @@ static void splitter1_eqFunction_560(DATA *data, threadData_t *threadData)
 /*
 equation index: 561
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
+MatStm1._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_561(DATA *data, threadData_t *threadData)
@@ -1585,7 +1585,7 @@ static void splitter1_eqFunction_561(DATA *data, threadData_t *threadData)
 /*
 equation index: 562
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
+MatStm1._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_562(DATA *data, threadData_t *threadData)
@@ -1599,7 +1599,7 @@ static void splitter1_eqFunction_562(DATA *data, threadData_t *threadData)
 /*
 equation index: 563
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[6] = Ethanol.VP[6]
+MatStm1._comp[2]._VP[6] = Ethanol.VP[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_563(DATA *data, threadData_t *threadData)
@@ -1613,7 +1613,7 @@ static void splitter1_eqFunction_563(DATA *data, threadData_t *threadData)
 /*
 equation index: 564
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[5] = Ethanol.VP[5]
+MatStm1._comp[2]._VP[5] = Ethanol.VP[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_564(DATA *data, threadData_t *threadData)
@@ -1627,7 +1627,7 @@ static void splitter1_eqFunction_564(DATA *data, threadData_t *threadData)
 /*
 equation index: 565
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[4] = Ethanol.VP[4]
+MatStm1._comp[2]._VP[4] = Ethanol.VP[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_565(DATA *data, threadData_t *threadData)
@@ -1641,7 +1641,7 @@ static void splitter1_eqFunction_565(DATA *data, threadData_t *threadData)
 /*
 equation index: 566
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[3] = Ethanol.VP[3]
+MatStm1._comp[2]._VP[3] = Ethanol.VP[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_566(DATA *data, threadData_t *threadData)
@@ -1655,7 +1655,7 @@ static void splitter1_eqFunction_566(DATA *data, threadData_t *threadData)
 /*
 equation index: 567
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[2] = Ethanol.VP[2]
+MatStm1._comp[2]._VP[2] = Ethanol.VP[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_567(DATA *data, threadData_t *threadData)
@@ -1669,7 +1669,7 @@ static void splitter1_eqFunction_567(DATA *data, threadData_t *threadData)
 /*
 equation index: 568
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._VP[1] = Ethanol.VP[1]
+MatStm1._comp[2]._VP[1] = Ethanol.VP[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_568(DATA *data, threadData_t *threadData)
@@ -1683,7 +1683,7 @@ static void splitter1_eqFunction_568(DATA *data, threadData_t *threadData)
 /*
 equation index: 569
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
+MatStm1._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_569(DATA *data, threadData_t *threadData)
@@ -1697,7 +1697,7 @@ static void splitter1_eqFunction_569(DATA *data, threadData_t *threadData)
 /*
 equation index: 570
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
+MatStm1._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_570(DATA *data, threadData_t *threadData)
@@ -1711,7 +1711,7 @@ static void splitter1_eqFunction_570(DATA *data, threadData_t *threadData)
 /*
 equation index: 571
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
+MatStm1._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_571(DATA *data, threadData_t *threadData)
@@ -1725,7 +1725,7 @@ static void splitter1_eqFunction_571(DATA *data, threadData_t *threadData)
 /*
 equation index: 572
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
+MatStm1._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_572(DATA *data, threadData_t *threadData)
@@ -1739,7 +1739,7 @@ static void splitter1_eqFunction_572(DATA *data, threadData_t *threadData)
 /*
 equation index: 573
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
+MatStm1._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_573(DATA *data, threadData_t *threadData)
@@ -1753,7 +1753,7 @@ static void splitter1_eqFunction_573(DATA *data, threadData_t *threadData)
 /*
 equation index: 574
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
+MatStm1._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_574(DATA *data, threadData_t *threadData)
@@ -1767,7 +1767,7 @@ static void splitter1_eqFunction_574(DATA *data, threadData_t *threadData)
 /*
 equation index: 575
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._UniquacQ = Ethanol.UniquacQ
+MatStm1._comp[2]._UniquacQ = Ethanol.UniquacQ
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_575(DATA *data, threadData_t *threadData)
@@ -1781,7 +1781,7 @@ static void splitter1_eqFunction_575(DATA *data, threadData_t *threadData)
 /*
 equation index: 576
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._UniquacR = Ethanol.UniquacR
+MatStm1._comp[2]._UniquacR = Ethanol.UniquacR
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_576(DATA *data, threadData_t *threadData)
@@ -1795,7 +1795,7 @@ static void splitter1_eqFunction_576(DATA *data, threadData_t *threadData)
 /*
 equation index: 577
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HOC = Ethanol.HOC
+MatStm1._comp[2]._HOC = Ethanol.HOC
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_577(DATA *data, threadData_t *threadData)
@@ -1809,7 +1809,7 @@ static void splitter1_eqFunction_577(DATA *data, threadData_t *threadData)
 /*
 equation index: 578
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._HFMP = Ethanol.HFMP
+MatStm1._comp[2]._HFMP = Ethanol.HFMP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_578(DATA *data, threadData_t *threadData)
@@ -1823,7 +1823,7 @@ static void splitter1_eqFunction_578(DATA *data, threadData_t *threadData)
 /*
 equation index: 579
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._AS = Ethanol.AS
+MatStm1._comp[2]._AS = Ethanol.AS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_579(DATA *data, threadData_t *threadData)
@@ -1837,7 +1837,7 @@ static void splitter1_eqFunction_579(DATA *data, threadData_t *threadData)
 /*
 equation index: 580
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._GEF = Ethanol.GEF
+MatStm1._comp[2]._GEF = Ethanol.GEF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_580(DATA *data, threadData_t *threadData)
@@ -1851,7 +1851,7 @@ static void splitter1_eqFunction_580(DATA *data, threadData_t *threadData)
 /*
 equation index: 581
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._IGHF = Ethanol.IGHF
+MatStm1._comp[2]._IGHF = Ethanol.IGHF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_581(DATA *data, threadData_t *threadData)
@@ -1865,7 +1865,7 @@ static void splitter1_eqFunction_581(DATA *data, threadData_t *threadData)
 /*
 equation index: 582
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._SH = Ethanol.SH
+MatStm1._comp[2]._SH = Ethanol.SH
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_582(DATA *data, threadData_t *threadData)
@@ -1879,7 +1879,7 @@ static void splitter1_eqFunction_582(DATA *data, threadData_t *threadData)
 /*
 equation index: 583
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._DM = Ethanol.DM
+MatStm1._comp[2]._DM = Ethanol.DM
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_583(DATA *data, threadData_t *threadData)
@@ -1893,7 +1893,7 @@ static void splitter1_eqFunction_583(DATA *data, threadData_t *threadData)
 /*
 equation index: 584
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._SP = Ethanol.SP
+MatStm1._comp[2]._SP = Ethanol.SP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_584(DATA *data, threadData_t *threadData)
@@ -1907,7 +1907,7 @@ static void splitter1_eqFunction_584(DATA *data, threadData_t *threadData)
 /*
 equation index: 585
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._AF = Ethanol.AF
+MatStm1._comp[2]._AF = Ethanol.AF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_585(DATA *data, threadData_t *threadData)
@@ -1921,7 +1921,7 @@ static void splitter1_eqFunction_585(DATA *data, threadData_t *threadData)
 /*
 equation index: 586
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._LVB = Ethanol.LVB
+MatStm1._comp[2]._LVB = Ethanol.LVB
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_586(DATA *data, threadData_t *threadData)
@@ -1935,7 +1935,7 @@ static void splitter1_eqFunction_586(DATA *data, threadData_t *threadData)
 /*
 equation index: 587
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._MW = Ethanol.MW
+MatStm1._comp[2]._MW = Ethanol.MW
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_587(DATA *data, threadData_t *threadData)
@@ -1949,7 +1949,7 @@ static void splitter1_eqFunction_587(DATA *data, threadData_t *threadData)
 /*
 equation index: 588
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._TP = Ethanol.TP
+MatStm1._comp[2]._TP = Ethanol.TP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_588(DATA *data, threadData_t *threadData)
@@ -1963,7 +1963,7 @@ static void splitter1_eqFunction_588(DATA *data, threadData_t *threadData)
 /*
 equation index: 589
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._TT = Ethanol.TT
+MatStm1._comp[2]._TT = Ethanol.TT
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_589(DATA *data, threadData_t *threadData)
@@ -1977,7 +1977,7 @@ static void splitter1_eqFunction_589(DATA *data, threadData_t *threadData)
 /*
 equation index: 590
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Tm = Ethanol.Tm
+MatStm1._comp[2]._Tm = Ethanol.Tm
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_590(DATA *data, threadData_t *threadData)
@@ -1991,7 +1991,7 @@ static void splitter1_eqFunction_590(DATA *data, threadData_t *threadData)
 /*
 equation index: 591
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Tb = Ethanol.Tb
+MatStm1._comp[2]._Tb = Ethanol.Tb
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_591(DATA *data, threadData_t *threadData)
@@ -2005,7 +2005,7 @@ static void splitter1_eqFunction_591(DATA *data, threadData_t *threadData)
 /*
 equation index: 592
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Cc = Ethanol.Cc
+MatStm1._comp[2]._Cc = Ethanol.Cc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_592(DATA *data, threadData_t *threadData)
@@ -2019,7 +2019,7 @@ static void splitter1_eqFunction_592(DATA *data, threadData_t *threadData)
 /*
 equation index: 593
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Vc = Ethanol.Vc
+MatStm1._comp[2]._Vc = Ethanol.Vc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_593(DATA *data, threadData_t *threadData)
@@ -2033,7 +2033,7 @@ static void splitter1_eqFunction_593(DATA *data, threadData_t *threadData)
 /*
 equation index: 594
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Pc = Ethanol.Pc
+MatStm1._comp[2]._Pc = Ethanol.Pc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_594(DATA *data, threadData_t *threadData)
@@ -2047,7 +2047,7 @@ static void splitter1_eqFunction_594(DATA *data, threadData_t *threadData)
 /*
 equation index: 595
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._Tc = Ethanol.Tc
+MatStm1._comp[2]._Tc = Ethanol.Tc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_595(DATA *data, threadData_t *threadData)
@@ -2061,7 +2061,7 @@ static void splitter1_eqFunction_595(DATA *data, threadData_t *threadData)
 /*
 equation index: 596
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._CAS = Ethanol.CAS
+MatStm1._comp[2]._CAS = Ethanol.CAS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_596(DATA *data, threadData_t *threadData)
@@ -2075,7 +2075,7 @@ static void splitter1_eqFunction_596(DATA *data, threadData_t *threadData)
 /*
 equation index: 597
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._name = Ethanol.name
+MatStm1._comp[2]._name = Ethanol.name
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_597(DATA *data, threadData_t *threadData)
@@ -2089,7 +2089,7 @@ static void splitter1_eqFunction_597(DATA *data, threadData_t *threadData)
 /*
 equation index: 598
 type: SIMPLE_ASSIGN
-MatStm3._comp[2]._SN = Ethanol.SN
+MatStm1._comp[2]._SN = Ethanol.SN
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_598(DATA *data, threadData_t *threadData)
@@ -2103,7 +2103,7 @@ static void splitter1_eqFunction_598(DATA *data, threadData_t *threadData)
 /*
 equation index: 599
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
+MatStm1._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_599(DATA *data, threadData_t *threadData)
@@ -2117,7 +2117,7 @@ static void splitter1_eqFunction_599(DATA *data, threadData_t *threadData)
 /*
 equation index: 600
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
+MatStm1._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_600(DATA *data, threadData_t *threadData)
@@ -2131,7 +2131,7 @@ static void splitter1_eqFunction_600(DATA *data, threadData_t *threadData)
 /*
 equation index: 601
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
+MatStm1._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_601(DATA *data, threadData_t *threadData)
@@ -2145,7 +2145,7 @@ static void splitter1_eqFunction_601(DATA *data, threadData_t *threadData)
 /*
 equation index: 602
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Racketparam = Water.Racketparam
+MatStm1._comp[1]._Racketparam = Water.Racketparam
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_602(DATA *data, threadData_t *threadData)
@@ -2159,7 +2159,7 @@ static void splitter1_eqFunction_602(DATA *data, threadData_t *threadData)
 /*
 equation index: 603
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[6] = Water.VapK[6]
+MatStm1._comp[1]._VapK[6] = Water.VapK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_603(DATA *data, threadData_t *threadData)
@@ -2173,7 +2173,7 @@ static void splitter1_eqFunction_603(DATA *data, threadData_t *threadData)
 /*
 equation index: 604
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[5] = Water.VapK[5]
+MatStm1._comp[1]._VapK[5] = Water.VapK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_604(DATA *data, threadData_t *threadData)
@@ -2187,7 +2187,7 @@ static void splitter1_eqFunction_604(DATA *data, threadData_t *threadData)
 /*
 equation index: 605
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[4] = Water.VapK[4]
+MatStm1._comp[1]._VapK[4] = Water.VapK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_605(DATA *data, threadData_t *threadData)
@@ -2201,7 +2201,7 @@ static void splitter1_eqFunction_605(DATA *data, threadData_t *threadData)
 /*
 equation index: 606
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[3] = Water.VapK[3]
+MatStm1._comp[1]._VapK[3] = Water.VapK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_606(DATA *data, threadData_t *threadData)
@@ -2215,7 +2215,7 @@ static void splitter1_eqFunction_606(DATA *data, threadData_t *threadData)
 /*
 equation index: 607
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[2] = Water.VapK[2]
+MatStm1._comp[1]._VapK[2] = Water.VapK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_607(DATA *data, threadData_t *threadData)
@@ -2229,7 +2229,7 @@ static void splitter1_eqFunction_607(DATA *data, threadData_t *threadData)
 /*
 equation index: 608
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapK[1] = Water.VapK[1]
+MatStm1._comp[1]._VapK[1] = Water.VapK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_608(DATA *data, threadData_t *threadData)
@@ -2243,7 +2243,7 @@ static void splitter1_eqFunction_608(DATA *data, threadData_t *threadData)
 /*
 equation index: 609
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[6] = Water.LiqK[6]
+MatStm1._comp[1]._LiqK[6] = Water.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_609(DATA *data, threadData_t *threadData)
@@ -2257,7 +2257,7 @@ static void splitter1_eqFunction_609(DATA *data, threadData_t *threadData)
 /*
 equation index: 610
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[5] = Water.LiqK[5]
+MatStm1._comp[1]._LiqK[5] = Water.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_610(DATA *data, threadData_t *threadData)
@@ -2271,7 +2271,7 @@ static void splitter1_eqFunction_610(DATA *data, threadData_t *threadData)
 /*
 equation index: 611
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[4] = Water.LiqK[4]
+MatStm1._comp[1]._LiqK[4] = Water.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_611(DATA *data, threadData_t *threadData)
@@ -2285,7 +2285,7 @@ static void splitter1_eqFunction_611(DATA *data, threadData_t *threadData)
 /*
 equation index: 612
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[3] = Water.LiqK[3]
+MatStm1._comp[1]._LiqK[3] = Water.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_612(DATA *data, threadData_t *threadData)
@@ -2299,7 +2299,7 @@ static void splitter1_eqFunction_612(DATA *data, threadData_t *threadData)
 /*
 equation index: 613
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[2] = Water.LiqK[2]
+MatStm1._comp[1]._LiqK[2] = Water.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_613(DATA *data, threadData_t *threadData)
@@ -2313,7 +2313,7 @@ static void splitter1_eqFunction_613(DATA *data, threadData_t *threadData)
 /*
 equation index: 614
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqK[1] = Water.LiqK[1]
+MatStm1._comp[1]._LiqK[1] = Water.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_614(DATA *data, threadData_t *threadData)
@@ -2327,7 +2327,7 @@ static void splitter1_eqFunction_614(DATA *data, threadData_t *threadData)
 /*
 equation index: 615
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[6] = Water.VapVis[6]
+MatStm1._comp[1]._VapVis[6] = Water.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_615(DATA *data, threadData_t *threadData)
@@ -2341,7 +2341,7 @@ static void splitter1_eqFunction_615(DATA *data, threadData_t *threadData)
 /*
 equation index: 616
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[5] = Water.VapVis[5]
+MatStm1._comp[1]._VapVis[5] = Water.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_616(DATA *data, threadData_t *threadData)
@@ -2355,7 +2355,7 @@ static void splitter1_eqFunction_616(DATA *data, threadData_t *threadData)
 /*
 equation index: 617
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[4] = Water.VapVis[4]
+MatStm1._comp[1]._VapVis[4] = Water.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_617(DATA *data, threadData_t *threadData)
@@ -2369,7 +2369,7 @@ static void splitter1_eqFunction_617(DATA *data, threadData_t *threadData)
 /*
 equation index: 618
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[3] = Water.VapVis[3]
+MatStm1._comp[1]._VapVis[3] = Water.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_618(DATA *data, threadData_t *threadData)
@@ -2383,7 +2383,7 @@ static void splitter1_eqFunction_618(DATA *data, threadData_t *threadData)
 /*
 equation index: 619
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[2] = Water.VapVis[2]
+MatStm1._comp[1]._VapVis[2] = Water.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_619(DATA *data, threadData_t *threadData)
@@ -2397,7 +2397,7 @@ static void splitter1_eqFunction_619(DATA *data, threadData_t *threadData)
 /*
 equation index: 620
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapVis[1] = Water.VapVis[1]
+MatStm1._comp[1]._VapVis[1] = Water.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_620(DATA *data, threadData_t *threadData)
@@ -2411,7 +2411,7 @@ static void splitter1_eqFunction_620(DATA *data, threadData_t *threadData)
 /*
 equation index: 621
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[6] = Water.LiqVis[6]
+MatStm1._comp[1]._LiqVis[6] = Water.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_621(DATA *data, threadData_t *threadData)
@@ -2425,7 +2425,7 @@ static void splitter1_eqFunction_621(DATA *data, threadData_t *threadData)
 /*
 equation index: 622
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[5] = Water.LiqVis[5]
+MatStm1._comp[1]._LiqVis[5] = Water.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_622(DATA *data, threadData_t *threadData)
@@ -2439,7 +2439,7 @@ static void splitter1_eqFunction_622(DATA *data, threadData_t *threadData)
 /*
 equation index: 623
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[4] = Water.LiqVis[4]
+MatStm1._comp[1]._LiqVis[4] = Water.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_623(DATA *data, threadData_t *threadData)
@@ -2453,7 +2453,7 @@ static void splitter1_eqFunction_623(DATA *data, threadData_t *threadData)
 /*
 equation index: 624
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[3] = Water.LiqVis[3]
+MatStm1._comp[1]._LiqVis[3] = Water.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_624(DATA *data, threadData_t *threadData)
@@ -2467,7 +2467,7 @@ static void splitter1_eqFunction_624(DATA *data, threadData_t *threadData)
 /*
 equation index: 625
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[2] = Water.LiqVis[2]
+MatStm1._comp[1]._LiqVis[2] = Water.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_625(DATA *data, threadData_t *threadData)
@@ -2481,7 +2481,7 @@ static void splitter1_eqFunction_625(DATA *data, threadData_t *threadData)
 /*
 equation index: 626
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqVis[1] = Water.LiqVis[1]
+MatStm1._comp[1]._LiqVis[1] = Water.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_626(DATA *data, threadData_t *threadData)
@@ -2495,7 +2495,7 @@ static void splitter1_eqFunction_626(DATA *data, threadData_t *threadData)
 /*
 equation index: 627
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[6] = Water.VapCp[6]
+MatStm1._comp[1]._VapCp[6] = Water.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_627(DATA *data, threadData_t *threadData)
@@ -2509,7 +2509,7 @@ static void splitter1_eqFunction_627(DATA *data, threadData_t *threadData)
 /*
 equation index: 628
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[5] = Water.VapCp[5]
+MatStm1._comp[1]._VapCp[5] = Water.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_628(DATA *data, threadData_t *threadData)
@@ -2523,7 +2523,7 @@ static void splitter1_eqFunction_628(DATA *data, threadData_t *threadData)
 /*
 equation index: 629
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[4] = Water.VapCp[4]
+MatStm1._comp[1]._VapCp[4] = Water.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_629(DATA *data, threadData_t *threadData)
@@ -2537,7 +2537,7 @@ static void splitter1_eqFunction_629(DATA *data, threadData_t *threadData)
 /*
 equation index: 630
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[3] = Water.VapCp[3]
+MatStm1._comp[1]._VapCp[3] = Water.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_630(DATA *data, threadData_t *threadData)
@@ -2551,7 +2551,7 @@ static void splitter1_eqFunction_630(DATA *data, threadData_t *threadData)
 /*
 equation index: 631
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[2] = Water.VapCp[2]
+MatStm1._comp[1]._VapCp[2] = Water.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_631(DATA *data, threadData_t *threadData)
@@ -2565,7 +2565,7 @@ static void splitter1_eqFunction_631(DATA *data, threadData_t *threadData)
 /*
 equation index: 632
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VapCp[1] = Water.VapCp[1]
+MatStm1._comp[1]._VapCp[1] = Water.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_632(DATA *data, threadData_t *threadData)
@@ -2579,7 +2579,7 @@ static void splitter1_eqFunction_632(DATA *data, threadData_t *threadData)
 /*
 equation index: 633
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[6] = Water.HOV[6]
+MatStm1._comp[1]._HOV[6] = Water.HOV[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_633(DATA *data, threadData_t *threadData)
@@ -2593,7 +2593,7 @@ static void splitter1_eqFunction_633(DATA *data, threadData_t *threadData)
 /*
 equation index: 634
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[5] = Water.HOV[5]
+MatStm1._comp[1]._HOV[5] = Water.HOV[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_634(DATA *data, threadData_t *threadData)
@@ -2607,7 +2607,7 @@ static void splitter1_eqFunction_634(DATA *data, threadData_t *threadData)
 /*
 equation index: 635
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[4] = Water.HOV[4]
+MatStm1._comp[1]._HOV[4] = Water.HOV[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_635(DATA *data, threadData_t *threadData)
@@ -2621,7 +2621,7 @@ static void splitter1_eqFunction_635(DATA *data, threadData_t *threadData)
 /*
 equation index: 636
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[3] = Water.HOV[3]
+MatStm1._comp[1]._HOV[3] = Water.HOV[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_636(DATA *data, threadData_t *threadData)
@@ -2635,7 +2635,7 @@ static void splitter1_eqFunction_636(DATA *data, threadData_t *threadData)
 /*
 equation index: 637
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[2] = Water.HOV[2]
+MatStm1._comp[1]._HOV[2] = Water.HOV[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_637(DATA *data, threadData_t *threadData)
@@ -2649,7 +2649,7 @@ static void splitter1_eqFunction_637(DATA *data, threadData_t *threadData)
 /*
 equation index: 638
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOV[1] = Water.HOV[1]
+MatStm1._comp[1]._HOV[1] = Water.HOV[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_638(DATA *data, threadData_t *threadData)
@@ -2663,7 +2663,7 @@ static void splitter1_eqFunction_638(DATA *data, threadData_t *threadData)
 /*
 equation index: 639
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[6] = Water.LiqCp[6]
+MatStm1._comp[1]._LiqCp[6] = Water.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_639(DATA *data, threadData_t *threadData)
@@ -2677,7 +2677,7 @@ static void splitter1_eqFunction_639(DATA *data, threadData_t *threadData)
 /*
 equation index: 640
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[5] = Water.LiqCp[5]
+MatStm1._comp[1]._LiqCp[5] = Water.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_640(DATA *data, threadData_t *threadData)
@@ -2691,7 +2691,7 @@ static void splitter1_eqFunction_640(DATA *data, threadData_t *threadData)
 /*
 equation index: 641
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[4] = Water.LiqCp[4]
+MatStm1._comp[1]._LiqCp[4] = Water.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_641(DATA *data, threadData_t *threadData)
@@ -2705,7 +2705,7 @@ static void splitter1_eqFunction_641(DATA *data, threadData_t *threadData)
 /*
 equation index: 642
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[3] = Water.LiqCp[3]
+MatStm1._comp[1]._LiqCp[3] = Water.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_642(DATA *data, threadData_t *threadData)
@@ -2719,7 +2719,7 @@ static void splitter1_eqFunction_642(DATA *data, threadData_t *threadData)
 /*
 equation index: 643
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[2] = Water.LiqCp[2]
+MatStm1._comp[1]._LiqCp[2] = Water.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_643(DATA *data, threadData_t *threadData)
@@ -2733,7 +2733,7 @@ static void splitter1_eqFunction_643(DATA *data, threadData_t *threadData)
 /*
 equation index: 644
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqCp[1] = Water.LiqCp[1]
+MatStm1._comp[1]._LiqCp[1] = Water.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_644(DATA *data, threadData_t *threadData)
@@ -2747,7 +2747,7 @@ static void splitter1_eqFunction_644(DATA *data, threadData_t *threadData)
 /*
 equation index: 645
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[6] = Water.VP[6]
+MatStm1._comp[1]._VP[6] = Water.VP[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_645(DATA *data, threadData_t *threadData)
@@ -2761,7 +2761,7 @@ static void splitter1_eqFunction_645(DATA *data, threadData_t *threadData)
 /*
 equation index: 646
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[5] = Water.VP[5]
+MatStm1._comp[1]._VP[5] = Water.VP[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_646(DATA *data, threadData_t *threadData)
@@ -2775,7 +2775,7 @@ static void splitter1_eqFunction_646(DATA *data, threadData_t *threadData)
 /*
 equation index: 647
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[4] = Water.VP[4]
+MatStm1._comp[1]._VP[4] = Water.VP[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_647(DATA *data, threadData_t *threadData)
@@ -2789,7 +2789,7 @@ static void splitter1_eqFunction_647(DATA *data, threadData_t *threadData)
 /*
 equation index: 648
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[3] = Water.VP[3]
+MatStm1._comp[1]._VP[3] = Water.VP[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_648(DATA *data, threadData_t *threadData)
@@ -2803,7 +2803,7 @@ static void splitter1_eqFunction_648(DATA *data, threadData_t *threadData)
 /*
 equation index: 649
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[2] = Water.VP[2]
+MatStm1._comp[1]._VP[2] = Water.VP[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_649(DATA *data, threadData_t *threadData)
@@ -2817,7 +2817,7 @@ static void splitter1_eqFunction_649(DATA *data, threadData_t *threadData)
 /*
 equation index: 650
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._VP[1] = Water.VP[1]
+MatStm1._comp[1]._VP[1] = Water.VP[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_650(DATA *data, threadData_t *threadData)
@@ -2831,7 +2831,7 @@ static void splitter1_eqFunction_650(DATA *data, threadData_t *threadData)
 /*
 equation index: 651
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[6] = Water.LiqDen[6]
+MatStm1._comp[1]._LiqDen[6] = Water.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_651(DATA *data, threadData_t *threadData)
@@ -2845,7 +2845,7 @@ static void splitter1_eqFunction_651(DATA *data, threadData_t *threadData)
 /*
 equation index: 652
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[5] = Water.LiqDen[5]
+MatStm1._comp[1]._LiqDen[5] = Water.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_652(DATA *data, threadData_t *threadData)
@@ -2859,7 +2859,7 @@ static void splitter1_eqFunction_652(DATA *data, threadData_t *threadData)
 /*
 equation index: 653
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[4] = Water.LiqDen[4]
+MatStm1._comp[1]._LiqDen[4] = Water.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_653(DATA *data, threadData_t *threadData)
@@ -2873,7 +2873,7 @@ static void splitter1_eqFunction_653(DATA *data, threadData_t *threadData)
 /*
 equation index: 654
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[3] = Water.LiqDen[3]
+MatStm1._comp[1]._LiqDen[3] = Water.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_654(DATA *data, threadData_t *threadData)
@@ -2887,7 +2887,7 @@ static void splitter1_eqFunction_654(DATA *data, threadData_t *threadData)
 /*
 equation index: 655
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[2] = Water.LiqDen[2]
+MatStm1._comp[1]._LiqDen[2] = Water.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_655(DATA *data, threadData_t *threadData)
@@ -2901,7 +2901,7 @@ static void splitter1_eqFunction_655(DATA *data, threadData_t *threadData)
 /*
 equation index: 656
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LiqDen[1] = Water.LiqDen[1]
+MatStm1._comp[1]._LiqDen[1] = Water.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_656(DATA *data, threadData_t *threadData)
@@ -2915,7 +2915,7 @@ static void splitter1_eqFunction_656(DATA *data, threadData_t *threadData)
 /*
 equation index: 657
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._UniquacQ = Water.UniquacQ
+MatStm1._comp[1]._UniquacQ = Water.UniquacQ
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_657(DATA *data, threadData_t *threadData)
@@ -2929,7 +2929,7 @@ static void splitter1_eqFunction_657(DATA *data, threadData_t *threadData)
 /*
 equation index: 658
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._UniquacR = Water.UniquacR
+MatStm1._comp[1]._UniquacR = Water.UniquacR
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_658(DATA *data, threadData_t *threadData)
@@ -2943,7 +2943,7 @@ static void splitter1_eqFunction_658(DATA *data, threadData_t *threadData)
 /*
 equation index: 659
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HOC = Water.HOC
+MatStm1._comp[1]._HOC = Water.HOC
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_659(DATA *data, threadData_t *threadData)
@@ -2957,7 +2957,7 @@ static void splitter1_eqFunction_659(DATA *data, threadData_t *threadData)
 /*
 equation index: 660
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._HFMP = Water.HFMP
+MatStm1._comp[1]._HFMP = Water.HFMP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_660(DATA *data, threadData_t *threadData)
@@ -2971,7 +2971,7 @@ static void splitter1_eqFunction_660(DATA *data, threadData_t *threadData)
 /*
 equation index: 661
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._AS = Water.AS
+MatStm1._comp[1]._AS = Water.AS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_661(DATA *data, threadData_t *threadData)
@@ -2985,7 +2985,7 @@ static void splitter1_eqFunction_661(DATA *data, threadData_t *threadData)
 /*
 equation index: 662
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._GEF = Water.GEF
+MatStm1._comp[1]._GEF = Water.GEF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_662(DATA *data, threadData_t *threadData)
@@ -2999,7 +2999,7 @@ static void splitter1_eqFunction_662(DATA *data, threadData_t *threadData)
 /*
 equation index: 663
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._IGHF = Water.IGHF
+MatStm1._comp[1]._IGHF = Water.IGHF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_663(DATA *data, threadData_t *threadData)
@@ -3013,7 +3013,7 @@ static void splitter1_eqFunction_663(DATA *data, threadData_t *threadData)
 /*
 equation index: 664
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._SH = Water.SH
+MatStm1._comp[1]._SH = Water.SH
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_664(DATA *data, threadData_t *threadData)
@@ -3027,7 +3027,7 @@ static void splitter1_eqFunction_664(DATA *data, threadData_t *threadData)
 /*
 equation index: 665
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._DM = Water.DM
+MatStm1._comp[1]._DM = Water.DM
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_665(DATA *data, threadData_t *threadData)
@@ -3041,7 +3041,7 @@ static void splitter1_eqFunction_665(DATA *data, threadData_t *threadData)
 /*
 equation index: 666
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._SP = Water.SP
+MatStm1._comp[1]._SP = Water.SP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_666(DATA *data, threadData_t *threadData)
@@ -3055,7 +3055,7 @@ static void splitter1_eqFunction_666(DATA *data, threadData_t *threadData)
 /*
 equation index: 667
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._AF = Water.AF
+MatStm1._comp[1]._AF = Water.AF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_667(DATA *data, threadData_t *threadData)
@@ -3069,7 +3069,7 @@ static void splitter1_eqFunction_667(DATA *data, threadData_t *threadData)
 /*
 equation index: 668
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._LVB = Water.LVB
+MatStm1._comp[1]._LVB = Water.LVB
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_668(DATA *data, threadData_t *threadData)
@@ -3083,7 +3083,7 @@ static void splitter1_eqFunction_668(DATA *data, threadData_t *threadData)
 /*
 equation index: 669
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._MW = Water.MW
+MatStm1._comp[1]._MW = Water.MW
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_669(DATA *data, threadData_t *threadData)
@@ -3097,7 +3097,7 @@ static void splitter1_eqFunction_669(DATA *data, threadData_t *threadData)
 /*
 equation index: 670
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._TP = Water.TP
+MatStm1._comp[1]._TP = Water.TP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_670(DATA *data, threadData_t *threadData)
@@ -3111,7 +3111,7 @@ static void splitter1_eqFunction_670(DATA *data, threadData_t *threadData)
 /*
 equation index: 671
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._TT = Water.TT
+MatStm1._comp[1]._TT = Water.TT
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_671(DATA *data, threadData_t *threadData)
@@ -3125,7 +3125,7 @@ static void splitter1_eqFunction_671(DATA *data, threadData_t *threadData)
 /*
 equation index: 672
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Tm = Water.Tm
+MatStm1._comp[1]._Tm = Water.Tm
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_672(DATA *data, threadData_t *threadData)
@@ -3139,7 +3139,7 @@ static void splitter1_eqFunction_672(DATA *data, threadData_t *threadData)
 /*
 equation index: 673
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Tb = Water.Tb
+MatStm1._comp[1]._Tb = Water.Tb
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_673(DATA *data, threadData_t *threadData)
@@ -3153,7 +3153,7 @@ static void splitter1_eqFunction_673(DATA *data, threadData_t *threadData)
 /*
 equation index: 674
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Cc = Water.Cc
+MatStm1._comp[1]._Cc = Water.Cc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_674(DATA *data, threadData_t *threadData)
@@ -3167,7 +3167,7 @@ static void splitter1_eqFunction_674(DATA *data, threadData_t *threadData)
 /*
 equation index: 675
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Vc = Water.Vc
+MatStm1._comp[1]._Vc = Water.Vc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_675(DATA *data, threadData_t *threadData)
@@ -3181,7 +3181,7 @@ static void splitter1_eqFunction_675(DATA *data, threadData_t *threadData)
 /*
 equation index: 676
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Pc = Water.Pc
+MatStm1._comp[1]._Pc = Water.Pc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_676(DATA *data, threadData_t *threadData)
@@ -3195,7 +3195,7 @@ static void splitter1_eqFunction_676(DATA *data, threadData_t *threadData)
 /*
 equation index: 677
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._Tc = Water.Tc
+MatStm1._comp[1]._Tc = Water.Tc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_677(DATA *data, threadData_t *threadData)
@@ -3209,7 +3209,7 @@ static void splitter1_eqFunction_677(DATA *data, threadData_t *threadData)
 /*
 equation index: 678
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._CAS = Water.CAS
+MatStm1._comp[1]._CAS = Water.CAS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_678(DATA *data, threadData_t *threadData)
@@ -3223,7 +3223,7 @@ static void splitter1_eqFunction_678(DATA *data, threadData_t *threadData)
 /*
 equation index: 679
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._name = Water.name
+MatStm1._comp[1]._name = Water.name
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_679(DATA *data, threadData_t *threadData)
@@ -3237,7 +3237,7 @@ static void splitter1_eqFunction_679(DATA *data, threadData_t *threadData)
 /*
 equation index: 680
 type: SIMPLE_ASSIGN
-MatStm3._comp[1]._SN = Water.SN
+MatStm1._comp[1]._SN = Water.SN
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_680(DATA *data, threadData_t *threadData)
@@ -3251,7 +3251,7 @@ static void splitter1_eqFunction_680(DATA *data, threadData_t *threadData)
 /*
 equation index: 684
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
+MatStm3._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_684(DATA *data, threadData_t *threadData)
@@ -3265,7 +3265,7 @@ static void splitter1_eqFunction_684(DATA *data, threadData_t *threadData)
 /*
 equation index: 685
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
+MatStm3._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_685(DATA *data, threadData_t *threadData)
@@ -3279,7 +3279,7 @@ static void splitter1_eqFunction_685(DATA *data, threadData_t *threadData)
 /*
 equation index: 686
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
+MatStm3._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_686(DATA *data, threadData_t *threadData)
@@ -3293,7 +3293,7 @@ static void splitter1_eqFunction_686(DATA *data, threadData_t *threadData)
 /*
 equation index: 687
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._Racketparam = Ethanol.Racketparam
+MatStm3._comp[2]._Racketparam = Ethanol.Racketparam
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_687(DATA *data, threadData_t *threadData)
@@ -3307,7 +3307,7 @@ static void splitter1_eqFunction_687(DATA *data, threadData_t *threadData)
 /*
 equation index: 688
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapK[6] = Ethanol.VapK[6]
+MatStm3._comp[2]._VapK[6] = Ethanol.VapK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_688(DATA *data, threadData_t *threadData)
@@ -3321,7 +3321,7 @@ static void splitter1_eqFunction_688(DATA *data, threadData_t *threadData)
 /*
 equation index: 689
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapK[5] = Ethanol.VapK[5]
+MatStm3._comp[2]._VapK[5] = Ethanol.VapK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_689(DATA *data, threadData_t *threadData)
@@ -3335,7 +3335,7 @@ static void splitter1_eqFunction_689(DATA *data, threadData_t *threadData)
 /*
 equation index: 690
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapK[4] = Ethanol.VapK[4]
+MatStm3._comp[2]._VapK[4] = Ethanol.VapK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_690(DATA *data, threadData_t *threadData)
@@ -3349,7 +3349,7 @@ static void splitter1_eqFunction_690(DATA *data, threadData_t *threadData)
 /*
 equation index: 691
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapK[3] = Ethanol.VapK[3]
+MatStm3._comp[2]._VapK[3] = Ethanol.VapK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_691(DATA *data, threadData_t *threadData)
@@ -3363,7 +3363,7 @@ static void splitter1_eqFunction_691(DATA *data, threadData_t *threadData)
 /*
 equation index: 692
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapK[2] = Ethanol.VapK[2]
+MatStm3._comp[2]._VapK[2] = Ethanol.VapK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_692(DATA *data, threadData_t *threadData)
@@ -3377,7 +3377,7 @@ static void splitter1_eqFunction_692(DATA *data, threadData_t *threadData)
 /*
 equation index: 693
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapK[1] = Ethanol.VapK[1]
+MatStm3._comp[2]._VapK[1] = Ethanol.VapK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_693(DATA *data, threadData_t *threadData)
@@ -3391,7 +3391,7 @@ static void splitter1_eqFunction_693(DATA *data, threadData_t *threadData)
 /*
 equation index: 694
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqK[6] = Ethanol.LiqK[6]
+MatStm3._comp[2]._LiqK[6] = Ethanol.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_694(DATA *data, threadData_t *threadData)
@@ -3405,7 +3405,7 @@ static void splitter1_eqFunction_694(DATA *data, threadData_t *threadData)
 /*
 equation index: 695
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqK[5] = Ethanol.LiqK[5]
+MatStm3._comp[2]._LiqK[5] = Ethanol.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_695(DATA *data, threadData_t *threadData)
@@ -3419,7 +3419,7 @@ static void splitter1_eqFunction_695(DATA *data, threadData_t *threadData)
 /*
 equation index: 696
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqK[4] = Ethanol.LiqK[4]
+MatStm3._comp[2]._LiqK[4] = Ethanol.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_696(DATA *data, threadData_t *threadData)
@@ -3433,7 +3433,7 @@ static void splitter1_eqFunction_696(DATA *data, threadData_t *threadData)
 /*
 equation index: 697
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqK[3] = Ethanol.LiqK[3]
+MatStm3._comp[2]._LiqK[3] = Ethanol.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_697(DATA *data, threadData_t *threadData)
@@ -3447,7 +3447,7 @@ static void splitter1_eqFunction_697(DATA *data, threadData_t *threadData)
 /*
 equation index: 698
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqK[2] = Ethanol.LiqK[2]
+MatStm3._comp[2]._LiqK[2] = Ethanol.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_698(DATA *data, threadData_t *threadData)
@@ -3461,7 +3461,7 @@ static void splitter1_eqFunction_698(DATA *data, threadData_t *threadData)
 /*
 equation index: 699
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqK[1] = Ethanol.LiqK[1]
+MatStm3._comp[2]._LiqK[1] = Ethanol.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_699(DATA *data, threadData_t *threadData)
@@ -3475,7 +3475,7 @@ static void splitter1_eqFunction_699(DATA *data, threadData_t *threadData)
 /*
 equation index: 700
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapVis[6] = Ethanol.VapVis[6]
+MatStm3._comp[2]._VapVis[6] = Ethanol.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_700(DATA *data, threadData_t *threadData)
@@ -3489,7 +3489,7 @@ static void splitter1_eqFunction_700(DATA *data, threadData_t *threadData)
 /*
 equation index: 701
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapVis[5] = Ethanol.VapVis[5]
+MatStm3._comp[2]._VapVis[5] = Ethanol.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_701(DATA *data, threadData_t *threadData)
@@ -3503,7 +3503,7 @@ static void splitter1_eqFunction_701(DATA *data, threadData_t *threadData)
 /*
 equation index: 702
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapVis[4] = Ethanol.VapVis[4]
+MatStm3._comp[2]._VapVis[4] = Ethanol.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_702(DATA *data, threadData_t *threadData)
@@ -3517,7 +3517,7 @@ static void splitter1_eqFunction_702(DATA *data, threadData_t *threadData)
 /*
 equation index: 703
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapVis[3] = Ethanol.VapVis[3]
+MatStm3._comp[2]._VapVis[3] = Ethanol.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_703(DATA *data, threadData_t *threadData)
@@ -3531,7 +3531,7 @@ static void splitter1_eqFunction_703(DATA *data, threadData_t *threadData)
 /*
 equation index: 704
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapVis[2] = Ethanol.VapVis[2]
+MatStm3._comp[2]._VapVis[2] = Ethanol.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_704(DATA *data, threadData_t *threadData)
@@ -3545,7 +3545,7 @@ static void splitter1_eqFunction_704(DATA *data, threadData_t *threadData)
 /*
 equation index: 705
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapVis[1] = Ethanol.VapVis[1]
+MatStm3._comp[2]._VapVis[1] = Ethanol.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_705(DATA *data, threadData_t *threadData)
@@ -3559,7 +3559,7 @@ static void splitter1_eqFunction_705(DATA *data, threadData_t *threadData)
 /*
 equation index: 706
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
+MatStm3._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_706(DATA *data, threadData_t *threadData)
@@ -3573,7 +3573,7 @@ static void splitter1_eqFunction_706(DATA *data, threadData_t *threadData)
 /*
 equation index: 707
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
+MatStm3._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_707(DATA *data, threadData_t *threadData)
@@ -3587,7 +3587,7 @@ static void splitter1_eqFunction_707(DATA *data, threadData_t *threadData)
 /*
 equation index: 708
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
+MatStm3._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_708(DATA *data, threadData_t *threadData)
@@ -3601,7 +3601,7 @@ static void splitter1_eqFunction_708(DATA *data, threadData_t *threadData)
 /*
 equation index: 709
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
+MatStm3._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_709(DATA *data, threadData_t *threadData)
@@ -3615,7 +3615,7 @@ static void splitter1_eqFunction_709(DATA *data, threadData_t *threadData)
 /*
 equation index: 710
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
+MatStm3._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_710(DATA *data, threadData_t *threadData)
@@ -3629,7 +3629,7 @@ static void splitter1_eqFunction_710(DATA *data, threadData_t *threadData)
 /*
 equation index: 711
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
+MatStm3._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_711(DATA *data, threadData_t *threadData)
@@ -3643,7 +3643,7 @@ static void splitter1_eqFunction_711(DATA *data, threadData_t *threadData)
 /*
 equation index: 712
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapCp[6] = Ethanol.VapCp[6]
+MatStm3._comp[2]._VapCp[6] = Ethanol.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_712(DATA *data, threadData_t *threadData)
@@ -3657,7 +3657,7 @@ static void splitter1_eqFunction_712(DATA *data, threadData_t *threadData)
 /*
 equation index: 713
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapCp[5] = Ethanol.VapCp[5]
+MatStm3._comp[2]._VapCp[5] = Ethanol.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_713(DATA *data, threadData_t *threadData)
@@ -3671,7 +3671,7 @@ static void splitter1_eqFunction_713(DATA *data, threadData_t *threadData)
 /*
 equation index: 714
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapCp[4] = Ethanol.VapCp[4]
+MatStm3._comp[2]._VapCp[4] = Ethanol.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_714(DATA *data, threadData_t *threadData)
@@ -3685,7 +3685,7 @@ static void splitter1_eqFunction_714(DATA *data, threadData_t *threadData)
 /*
 equation index: 715
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapCp[3] = Ethanol.VapCp[3]
+MatStm3._comp[2]._VapCp[3] = Ethanol.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_715(DATA *data, threadData_t *threadData)
@@ -3699,7 +3699,7 @@ static void splitter1_eqFunction_715(DATA *data, threadData_t *threadData)
 /*
 equation index: 716
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapCp[2] = Ethanol.VapCp[2]
+MatStm3._comp[2]._VapCp[2] = Ethanol.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_716(DATA *data, threadData_t *threadData)
@@ -3713,7 +3713,7 @@ static void splitter1_eqFunction_716(DATA *data, threadData_t *threadData)
 /*
 equation index: 717
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VapCp[1] = Ethanol.VapCp[1]
+MatStm3._comp[2]._VapCp[1] = Ethanol.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_717(DATA *data, threadData_t *threadData)
@@ -3727,7 +3727,7 @@ static void splitter1_eqFunction_717(DATA *data, threadData_t *threadData)
 /*
 equation index: 718
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._HOV[6] = Ethanol.HOV[6]
+MatStm3._comp[2]._HOV[6] = Ethanol.HOV[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_718(DATA *data, threadData_t *threadData)
@@ -3741,7 +3741,7 @@ static void splitter1_eqFunction_718(DATA *data, threadData_t *threadData)
 /*
 equation index: 719
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._HOV[5] = Ethanol.HOV[5]
+MatStm3._comp[2]._HOV[5] = Ethanol.HOV[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_719(DATA *data, threadData_t *threadData)
@@ -3755,7 +3755,7 @@ static void splitter1_eqFunction_719(DATA *data, threadData_t *threadData)
 /*
 equation index: 720
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._HOV[4] = Ethanol.HOV[4]
+MatStm3._comp[2]._HOV[4] = Ethanol.HOV[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_720(DATA *data, threadData_t *threadData)
@@ -3769,7 +3769,7 @@ static void splitter1_eqFunction_720(DATA *data, threadData_t *threadData)
 /*
 equation index: 721
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._HOV[3] = Ethanol.HOV[3]
+MatStm3._comp[2]._HOV[3] = Ethanol.HOV[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_721(DATA *data, threadData_t *threadData)
@@ -3783,7 +3783,7 @@ static void splitter1_eqFunction_721(DATA *data, threadData_t *threadData)
 /*
 equation index: 722
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._HOV[2] = Ethanol.HOV[2]
+MatStm3._comp[2]._HOV[2] = Ethanol.HOV[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_722(DATA *data, threadData_t *threadData)
@@ -3797,7 +3797,7 @@ static void splitter1_eqFunction_722(DATA *data, threadData_t *threadData)
 /*
 equation index: 723
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._HOV[1] = Ethanol.HOV[1]
+MatStm3._comp[2]._HOV[1] = Ethanol.HOV[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_723(DATA *data, threadData_t *threadData)
@@ -3811,7 +3811,7 @@ static void splitter1_eqFunction_723(DATA *data, threadData_t *threadData)
 /*
 equation index: 724
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
+MatStm3._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_724(DATA *data, threadData_t *threadData)
@@ -3825,7 +3825,7 @@ static void splitter1_eqFunction_724(DATA *data, threadData_t *threadData)
 /*
 equation index: 725
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
+MatStm3._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_725(DATA *data, threadData_t *threadData)
@@ -3839,7 +3839,7 @@ static void splitter1_eqFunction_725(DATA *data, threadData_t *threadData)
 /*
 equation index: 726
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
+MatStm3._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_726(DATA *data, threadData_t *threadData)
@@ -3853,7 +3853,7 @@ static void splitter1_eqFunction_726(DATA *data, threadData_t *threadData)
 /*
 equation index: 727
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
+MatStm3._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_727(DATA *data, threadData_t *threadData)
@@ -3867,7 +3867,7 @@ static void splitter1_eqFunction_727(DATA *data, threadData_t *threadData)
 /*
 equation index: 728
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
+MatStm3._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_728(DATA *data, threadData_t *threadData)
@@ -3881,7 +3881,7 @@ static void splitter1_eqFunction_728(DATA *data, threadData_t *threadData)
 /*
 equation index: 729
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
+MatStm3._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_729(DATA *data, threadData_t *threadData)
@@ -3895,7 +3895,7 @@ static void splitter1_eqFunction_729(DATA *data, threadData_t *threadData)
 /*
 equation index: 730
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._VP[1] = Ethanol.VP[1]
+MatStm3._comp[2]._VP[1] = Ethanol.VP[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_730(DATA *data, threadData_t *threadData)
@@ -3909,7 +3909,7 @@ static void splitter1_eqFunction_730(DATA *data, threadData_t *threadData)
 /*
 equation index: 731
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
+MatStm3._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_731(DATA *data, threadData_t *threadData)
@@ -3923,7 +3923,7 @@ static void splitter1_eqFunction_731(DATA *data, threadData_t *threadData)
 /*
 equation index: 732
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
+MatStm3._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_732(DATA *data, threadData_t *threadData)
@@ -3937,7 +3937,7 @@ static void splitter1_eqFunction_732(DATA *data, threadData_t *threadData)
 /*
 equation index: 733
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
+MatStm3._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_733(DATA *data, threadData_t *threadData)
@@ -3951,7 +3951,7 @@ static void splitter1_eqFunction_733(DATA *data, threadData_t *threadData)
 /*
 equation index: 734
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
+MatStm3._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_734(DATA *data, threadData_t *threadData)
@@ -3965,7 +3965,7 @@ static void splitter1_eqFunction_734(DATA *data, threadData_t *threadData)
 /*
 equation index: 735
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
+MatStm3._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_735(DATA *data, threadData_t *threadData)
@@ -3979,7 +3979,7 @@ static void splitter1_eqFunction_735(DATA *data, threadData_t *threadData)
 /*
 equation index: 736
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
+MatStm3._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_736(DATA *data, threadData_t *threadData)
@@ -3993,7 +3993,7 @@ static void splitter1_eqFunction_736(DATA *data, threadData_t *threadData)
 /*
 equation index: 737
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._UniquacQ = Ethanol.UniquacQ
+MatStm3._comp[2]._UniquacQ = Ethanol.UniquacQ
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_737(DATA *data, threadData_t *threadData)
@@ -4007,7 +4007,7 @@ static void splitter1_eqFunction_737(DATA *data, threadData_t *threadData)
 /*
 equation index: 738
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._UniquacR = Ethanol.UniquacR
+MatStm3._comp[2]._UniquacR = Ethanol.UniquacR
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_738(DATA *data, threadData_t *threadData)
@@ -4021,7 +4021,7 @@ static void splitter1_eqFunction_738(DATA *data, threadData_t *threadData)
 /*
 equation index: 739
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._HOC = Ethanol.HOC
+MatStm3._comp[2]._HOC = Ethanol.HOC
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_739(DATA *data, threadData_t *threadData)
@@ -4035,7 +4035,7 @@ static void splitter1_eqFunction_739(DATA *data, threadData_t *threadData)
 /*
 equation index: 740
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._HFMP = Ethanol.HFMP
+MatStm3._comp[2]._HFMP = Ethanol.HFMP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_740(DATA *data, threadData_t *threadData)
@@ -4049,7 +4049,7 @@ static void splitter1_eqFunction_740(DATA *data, threadData_t *threadData)
 /*
 equation index: 741
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._AS = Ethanol.AS
+MatStm3._comp[2]._AS = Ethanol.AS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_741(DATA *data, threadData_t *threadData)
@@ -4063,7 +4063,7 @@ static void splitter1_eqFunction_741(DATA *data, threadData_t *threadData)
 /*
 equation index: 742
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._GEF = Ethanol.GEF
+MatStm3._comp[2]._GEF = Ethanol.GEF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_742(DATA *data, threadData_t *threadData)
@@ -4077,7 +4077,7 @@ static void splitter1_eqFunction_742(DATA *data, threadData_t *threadData)
 /*
 equation index: 743
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._IGHF = Ethanol.IGHF
+MatStm3._comp[2]._IGHF = Ethanol.IGHF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_743(DATA *data, threadData_t *threadData)
@@ -4091,7 +4091,7 @@ static void splitter1_eqFunction_743(DATA *data, threadData_t *threadData)
 /*
 equation index: 744
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._SH = Ethanol.SH
+MatStm3._comp[2]._SH = Ethanol.SH
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_744(DATA *data, threadData_t *threadData)
@@ -4105,7 +4105,7 @@ static void splitter1_eqFunction_744(DATA *data, threadData_t *threadData)
 /*
 equation index: 745
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._DM = Ethanol.DM
+MatStm3._comp[2]._DM = Ethanol.DM
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_745(DATA *data, threadData_t *threadData)
@@ -4119,7 +4119,7 @@ static void splitter1_eqFunction_745(DATA *data, threadData_t *threadData)
 /*
 equation index: 746
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._SP = Ethanol.SP
+MatStm3._comp[2]._SP = Ethanol.SP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_746(DATA *data, threadData_t *threadData)
@@ -4133,7 +4133,7 @@ static void splitter1_eqFunction_746(DATA *data, threadData_t *threadData)
 /*
 equation index: 747
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._AF = Ethanol.AF
+MatStm3._comp[2]._AF = Ethanol.AF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_747(DATA *data, threadData_t *threadData)
@@ -4147,7 +4147,7 @@ static void splitter1_eqFunction_747(DATA *data, threadData_t *threadData)
 /*
 equation index: 748
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._LVB = Ethanol.LVB
+MatStm3._comp[2]._LVB = Ethanol.LVB
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_748(DATA *data, threadData_t *threadData)
@@ -4161,7 +4161,7 @@ static void splitter1_eqFunction_748(DATA *data, threadData_t *threadData)
 /*
 equation index: 749
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._MW = Ethanol.MW
+MatStm3._comp[2]._MW = Ethanol.MW
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_749(DATA *data, threadData_t *threadData)
@@ -4175,7 +4175,7 @@ static void splitter1_eqFunction_749(DATA *data, threadData_t *threadData)
 /*
 equation index: 750
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._TP = Ethanol.TP
+MatStm3._comp[2]._TP = Ethanol.TP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_750(DATA *data, threadData_t *threadData)
@@ -4189,7 +4189,7 @@ static void splitter1_eqFunction_750(DATA *data, threadData_t *threadData)
 /*
 equation index: 751
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._TT = Ethanol.TT
+MatStm3._comp[2]._TT = Ethanol.TT
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_751(DATA *data, threadData_t *threadData)
@@ -4203,7 +4203,7 @@ static void splitter1_eqFunction_751(DATA *data, threadData_t *threadData)
 /*
 equation index: 752
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._Tm = Ethanol.Tm
+MatStm3._comp[2]._Tm = Ethanol.Tm
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_752(DATA *data, threadData_t *threadData)
@@ -4217,7 +4217,7 @@ static void splitter1_eqFunction_752(DATA *data, threadData_t *threadData)
 /*
 equation index: 753
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._Tb = Ethanol.Tb
+MatStm3._comp[2]._Tb = Ethanol.Tb
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_753(DATA *data, threadData_t *threadData)
@@ -4231,7 +4231,7 @@ static void splitter1_eqFunction_753(DATA *data, threadData_t *threadData)
 /*
 equation index: 754
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._Cc = Ethanol.Cc
+MatStm3._comp[2]._Cc = Ethanol.Cc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_754(DATA *data, threadData_t *threadData)
@@ -4245,7 +4245,7 @@ static void splitter1_eqFunction_754(DATA *data, threadData_t *threadData)
 /*
 equation index: 755
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._Vc = Ethanol.Vc
+MatStm3._comp[2]._Vc = Ethanol.Vc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_755(DATA *data, threadData_t *threadData)
@@ -4259,7 +4259,7 @@ static void splitter1_eqFunction_755(DATA *data, threadData_t *threadData)
 /*
 equation index: 756
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._Pc = Ethanol.Pc
+MatStm3._comp[2]._Pc = Ethanol.Pc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_756(DATA *data, threadData_t *threadData)
@@ -4273,7 +4273,7 @@ static void splitter1_eqFunction_756(DATA *data, threadData_t *threadData)
 /*
 equation index: 757
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._Tc = Ethanol.Tc
+MatStm3._comp[2]._Tc = Ethanol.Tc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_757(DATA *data, threadData_t *threadData)
@@ -4287,7 +4287,7 @@ static void splitter1_eqFunction_757(DATA *data, threadData_t *threadData)
 /*
 equation index: 758
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._CAS = Ethanol.CAS
+MatStm3._comp[2]._CAS = Ethanol.CAS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_758(DATA *data, threadData_t *threadData)
@@ -4301,7 +4301,7 @@ static void splitter1_eqFunction_758(DATA *data, threadData_t *threadData)
 /*
 equation index: 759
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._name = Ethanol.name
+MatStm3._comp[2]._name = Ethanol.name
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_759(DATA *data, threadData_t *threadData)
@@ -4315,7 +4315,7 @@ static void splitter1_eqFunction_759(DATA *data, threadData_t *threadData)
 /*
 equation index: 760
 type: SIMPLE_ASSIGN
-MatStm5._comp[2]._SN = Ethanol.SN
+MatStm3._comp[2]._SN = Ethanol.SN
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_760(DATA *data, threadData_t *threadData)
@@ -4329,7 +4329,7 @@ static void splitter1_eqFunction_760(DATA *data, threadData_t *threadData)
 /*
 equation index: 761
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
+MatStm3._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_761(DATA *data, threadData_t *threadData)
@@ -4343,7 +4343,7 @@ static void splitter1_eqFunction_761(DATA *data, threadData_t *threadData)
 /*
 equation index: 762
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
+MatStm3._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_762(DATA *data, threadData_t *threadData)
@@ -4357,7 +4357,7 @@ static void splitter1_eqFunction_762(DATA *data, threadData_t *threadData)
 /*
 equation index: 763
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
+MatStm3._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_763(DATA *data, threadData_t *threadData)
@@ -4371,7 +4371,7 @@ static void splitter1_eqFunction_763(DATA *data, threadData_t *threadData)
 /*
 equation index: 764
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._Racketparam = Water.Racketparam
+MatStm3._comp[1]._Racketparam = Water.Racketparam
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_764(DATA *data, threadData_t *threadData)
@@ -4385,7 +4385,7 @@ static void splitter1_eqFunction_764(DATA *data, threadData_t *threadData)
 /*
 equation index: 765
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapK[6] = Water.VapK[6]
+MatStm3._comp[1]._VapK[6] = Water.VapK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_765(DATA *data, threadData_t *threadData)
@@ -4399,7 +4399,7 @@ static void splitter1_eqFunction_765(DATA *data, threadData_t *threadData)
 /*
 equation index: 766
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapK[5] = Water.VapK[5]
+MatStm3._comp[1]._VapK[5] = Water.VapK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_766(DATA *data, threadData_t *threadData)
@@ -4413,7 +4413,7 @@ static void splitter1_eqFunction_766(DATA *data, threadData_t *threadData)
 /*
 equation index: 767
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapK[4] = Water.VapK[4]
+MatStm3._comp[1]._VapK[4] = Water.VapK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_767(DATA *data, threadData_t *threadData)
@@ -4427,7 +4427,7 @@ static void splitter1_eqFunction_767(DATA *data, threadData_t *threadData)
 /*
 equation index: 768
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapK[3] = Water.VapK[3]
+MatStm3._comp[1]._VapK[3] = Water.VapK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_768(DATA *data, threadData_t *threadData)
@@ -4441,7 +4441,7 @@ static void splitter1_eqFunction_768(DATA *data, threadData_t *threadData)
 /*
 equation index: 769
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapK[2] = Water.VapK[2]
+MatStm3._comp[1]._VapK[2] = Water.VapK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_769(DATA *data, threadData_t *threadData)
@@ -4455,7 +4455,7 @@ static void splitter1_eqFunction_769(DATA *data, threadData_t *threadData)
 /*
 equation index: 770
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapK[1] = Water.VapK[1]
+MatStm3._comp[1]._VapK[1] = Water.VapK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_770(DATA *data, threadData_t *threadData)
@@ -4469,7 +4469,7 @@ static void splitter1_eqFunction_770(DATA *data, threadData_t *threadData)
 /*
 equation index: 771
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqK[6] = Water.LiqK[6]
+MatStm3._comp[1]._LiqK[6] = Water.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_771(DATA *data, threadData_t *threadData)
@@ -4483,7 +4483,7 @@ static void splitter1_eqFunction_771(DATA *data, threadData_t *threadData)
 /*
 equation index: 772
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqK[5] = Water.LiqK[5]
+MatStm3._comp[1]._LiqK[5] = Water.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_772(DATA *data, threadData_t *threadData)
@@ -4497,7 +4497,7 @@ static void splitter1_eqFunction_772(DATA *data, threadData_t *threadData)
 /*
 equation index: 773
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqK[4] = Water.LiqK[4]
+MatStm3._comp[1]._LiqK[4] = Water.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_773(DATA *data, threadData_t *threadData)
@@ -4511,7 +4511,7 @@ static void splitter1_eqFunction_773(DATA *data, threadData_t *threadData)
 /*
 equation index: 774
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqK[3] = Water.LiqK[3]
+MatStm3._comp[1]._LiqK[3] = Water.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_774(DATA *data, threadData_t *threadData)
@@ -4525,7 +4525,7 @@ static void splitter1_eqFunction_774(DATA *data, threadData_t *threadData)
 /*
 equation index: 775
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqK[2] = Water.LiqK[2]
+MatStm3._comp[1]._LiqK[2] = Water.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_775(DATA *data, threadData_t *threadData)
@@ -4539,7 +4539,7 @@ static void splitter1_eqFunction_775(DATA *data, threadData_t *threadData)
 /*
 equation index: 776
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqK[1] = Water.LiqK[1]
+MatStm3._comp[1]._LiqK[1] = Water.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_776(DATA *data, threadData_t *threadData)
@@ -4553,7 +4553,7 @@ static void splitter1_eqFunction_776(DATA *data, threadData_t *threadData)
 /*
 equation index: 777
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapVis[6] = Water.VapVis[6]
+MatStm3._comp[1]._VapVis[6] = Water.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_777(DATA *data, threadData_t *threadData)
@@ -4567,7 +4567,7 @@ static void splitter1_eqFunction_777(DATA *data, threadData_t *threadData)
 /*
 equation index: 778
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapVis[5] = Water.VapVis[5]
+MatStm3._comp[1]._VapVis[5] = Water.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_778(DATA *data, threadData_t *threadData)
@@ -4581,7 +4581,7 @@ static void splitter1_eqFunction_778(DATA *data, threadData_t *threadData)
 /*
 equation index: 779
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapVis[4] = Water.VapVis[4]
+MatStm3._comp[1]._VapVis[4] = Water.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_779(DATA *data, threadData_t *threadData)
@@ -4595,7 +4595,7 @@ static void splitter1_eqFunction_779(DATA *data, threadData_t *threadData)
 /*
 equation index: 780
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapVis[3] = Water.VapVis[3]
+MatStm3._comp[1]._VapVis[3] = Water.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_780(DATA *data, threadData_t *threadData)
@@ -4609,7 +4609,7 @@ static void splitter1_eqFunction_780(DATA *data, threadData_t *threadData)
 /*
 equation index: 781
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapVis[2] = Water.VapVis[2]
+MatStm3._comp[1]._VapVis[2] = Water.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_781(DATA *data, threadData_t *threadData)
@@ -4623,7 +4623,7 @@ static void splitter1_eqFunction_781(DATA *data, threadData_t *threadData)
 /*
 equation index: 782
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapVis[1] = Water.VapVis[1]
+MatStm3._comp[1]._VapVis[1] = Water.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_782(DATA *data, threadData_t *threadData)
@@ -4637,7 +4637,7 @@ static void splitter1_eqFunction_782(DATA *data, threadData_t *threadData)
 /*
 equation index: 783
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqVis[6] = Water.LiqVis[6]
+MatStm3._comp[1]._LiqVis[6] = Water.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_783(DATA *data, threadData_t *threadData)
@@ -4651,7 +4651,7 @@ static void splitter1_eqFunction_783(DATA *data, threadData_t *threadData)
 /*
 equation index: 784
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqVis[5] = Water.LiqVis[5]
+MatStm3._comp[1]._LiqVis[5] = Water.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_784(DATA *data, threadData_t *threadData)
@@ -4665,7 +4665,7 @@ static void splitter1_eqFunction_784(DATA *data, threadData_t *threadData)
 /*
 equation index: 785
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqVis[4] = Water.LiqVis[4]
+MatStm3._comp[1]._LiqVis[4] = Water.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_785(DATA *data, threadData_t *threadData)
@@ -4679,7 +4679,7 @@ static void splitter1_eqFunction_785(DATA *data, threadData_t *threadData)
 /*
 equation index: 786
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqVis[3] = Water.LiqVis[3]
+MatStm3._comp[1]._LiqVis[3] = Water.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_786(DATA *data, threadData_t *threadData)
@@ -4693,7 +4693,7 @@ static void splitter1_eqFunction_786(DATA *data, threadData_t *threadData)
 /*
 equation index: 787
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqVis[2] = Water.LiqVis[2]
+MatStm3._comp[1]._LiqVis[2] = Water.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_787(DATA *data, threadData_t *threadData)
@@ -4707,7 +4707,7 @@ static void splitter1_eqFunction_787(DATA *data, threadData_t *threadData)
 /*
 equation index: 788
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqVis[1] = Water.LiqVis[1]
+MatStm3._comp[1]._LiqVis[1] = Water.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_788(DATA *data, threadData_t *threadData)
@@ -4721,7 +4721,7 @@ static void splitter1_eqFunction_788(DATA *data, threadData_t *threadData)
 /*
 equation index: 789
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapCp[6] = Water.VapCp[6]
+MatStm3._comp[1]._VapCp[6] = Water.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_789(DATA *data, threadData_t *threadData)
@@ -4735,7 +4735,7 @@ static void splitter1_eqFunction_789(DATA *data, threadData_t *threadData)
 /*
 equation index: 790
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapCp[5] = Water.VapCp[5]
+MatStm3._comp[1]._VapCp[5] = Water.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_790(DATA *data, threadData_t *threadData)
@@ -4749,7 +4749,7 @@ static void splitter1_eqFunction_790(DATA *data, threadData_t *threadData)
 /*
 equation index: 791
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapCp[4] = Water.VapCp[4]
+MatStm3._comp[1]._VapCp[4] = Water.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_791(DATA *data, threadData_t *threadData)
@@ -4763,7 +4763,7 @@ static void splitter1_eqFunction_791(DATA *data, threadData_t *threadData)
 /*
 equation index: 792
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapCp[3] = Water.VapCp[3]
+MatStm3._comp[1]._VapCp[3] = Water.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_792(DATA *data, threadData_t *threadData)
@@ -4777,7 +4777,7 @@ static void splitter1_eqFunction_792(DATA *data, threadData_t *threadData)
 /*
 equation index: 793
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapCp[2] = Water.VapCp[2]
+MatStm3._comp[1]._VapCp[2] = Water.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_793(DATA *data, threadData_t *threadData)
@@ -4791,7 +4791,7 @@ static void splitter1_eqFunction_793(DATA *data, threadData_t *threadData)
 /*
 equation index: 794
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VapCp[1] = Water.VapCp[1]
+MatStm3._comp[1]._VapCp[1] = Water.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_794(DATA *data, threadData_t *threadData)
@@ -4805,7 +4805,7 @@ static void splitter1_eqFunction_794(DATA *data, threadData_t *threadData)
 /*
 equation index: 795
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._HOV[6] = Water.HOV[6]
+MatStm3._comp[1]._HOV[6] = Water.HOV[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_795(DATA *data, threadData_t *threadData)
@@ -4819,7 +4819,7 @@ static void splitter1_eqFunction_795(DATA *data, threadData_t *threadData)
 /*
 equation index: 796
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._HOV[5] = Water.HOV[5]
+MatStm3._comp[1]._HOV[5] = Water.HOV[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_796(DATA *data, threadData_t *threadData)
@@ -4833,7 +4833,7 @@ static void splitter1_eqFunction_796(DATA *data, threadData_t *threadData)
 /*
 equation index: 797
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._HOV[4] = Water.HOV[4]
+MatStm3._comp[1]._HOV[4] = Water.HOV[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_797(DATA *data, threadData_t *threadData)
@@ -4847,7 +4847,7 @@ static void splitter1_eqFunction_797(DATA *data, threadData_t *threadData)
 /*
 equation index: 798
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._HOV[3] = Water.HOV[3]
+MatStm3._comp[1]._HOV[3] = Water.HOV[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_798(DATA *data, threadData_t *threadData)
@@ -4861,7 +4861,7 @@ static void splitter1_eqFunction_798(DATA *data, threadData_t *threadData)
 /*
 equation index: 799
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._HOV[2] = Water.HOV[2]
+MatStm3._comp[1]._HOV[2] = Water.HOV[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_799(DATA *data, threadData_t *threadData)
@@ -4875,7 +4875,7 @@ static void splitter1_eqFunction_799(DATA *data, threadData_t *threadData)
 /*
 equation index: 800
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._HOV[1] = Water.HOV[1]
+MatStm3._comp[1]._HOV[1] = Water.HOV[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_800(DATA *data, threadData_t *threadData)
@@ -4889,7 +4889,7 @@ static void splitter1_eqFunction_800(DATA *data, threadData_t *threadData)
 /*
 equation index: 801
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqCp[6] = Water.LiqCp[6]
+MatStm3._comp[1]._LiqCp[6] = Water.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_801(DATA *data, threadData_t *threadData)
@@ -4903,7 +4903,7 @@ static void splitter1_eqFunction_801(DATA *data, threadData_t *threadData)
 /*
 equation index: 802
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqCp[5] = Water.LiqCp[5]
+MatStm3._comp[1]._LiqCp[5] = Water.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_802(DATA *data, threadData_t *threadData)
@@ -4917,7 +4917,7 @@ static void splitter1_eqFunction_802(DATA *data, threadData_t *threadData)
 /*
 equation index: 803
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqCp[4] = Water.LiqCp[4]
+MatStm3._comp[1]._LiqCp[4] = Water.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_803(DATA *data, threadData_t *threadData)
@@ -4931,7 +4931,7 @@ static void splitter1_eqFunction_803(DATA *data, threadData_t *threadData)
 /*
 equation index: 804
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqCp[3] = Water.LiqCp[3]
+MatStm3._comp[1]._LiqCp[3] = Water.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_804(DATA *data, threadData_t *threadData)
@@ -4945,7 +4945,7 @@ static void splitter1_eqFunction_804(DATA *data, threadData_t *threadData)
 /*
 equation index: 805
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqCp[2] = Water.LiqCp[2]
+MatStm3._comp[1]._LiqCp[2] = Water.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_805(DATA *data, threadData_t *threadData)
@@ -4959,7 +4959,7 @@ static void splitter1_eqFunction_805(DATA *data, threadData_t *threadData)
 /*
 equation index: 806
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqCp[1] = Water.LiqCp[1]
+MatStm3._comp[1]._LiqCp[1] = Water.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_806(DATA *data, threadData_t *threadData)
@@ -4973,7 +4973,7 @@ static void splitter1_eqFunction_806(DATA *data, threadData_t *threadData)
 /*
 equation index: 807
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._VP[1] = Water.VP[1]
+MatStm3._comp[1]._VP[1] = Water.VP[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_807(DATA *data, threadData_t *threadData)
@@ -4987,7 +4987,7 @@ static void splitter1_eqFunction_807(DATA *data, threadData_t *threadData)
 /*
 equation index: 808
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqDen[6] = Water.LiqDen[6]
+MatStm3._comp[1]._LiqDen[6] = Water.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_808(DATA *data, threadData_t *threadData)
@@ -5001,7 +5001,7 @@ static void splitter1_eqFunction_808(DATA *data, threadData_t *threadData)
 /*
 equation index: 809
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqDen[5] = Water.LiqDen[5]
+MatStm3._comp[1]._LiqDen[5] = Water.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_809(DATA *data, threadData_t *threadData)
@@ -5015,7 +5015,7 @@ static void splitter1_eqFunction_809(DATA *data, threadData_t *threadData)
 /*
 equation index: 810
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqDen[4] = Water.LiqDen[4]
+MatStm3._comp[1]._LiqDen[4] = Water.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_810(DATA *data, threadData_t *threadData)
@@ -5029,7 +5029,7 @@ static void splitter1_eqFunction_810(DATA *data, threadData_t *threadData)
 /*
 equation index: 811
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqDen[3] = Water.LiqDen[3]
+MatStm3._comp[1]._LiqDen[3] = Water.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_811(DATA *data, threadData_t *threadData)
@@ -5043,7 +5043,7 @@ static void splitter1_eqFunction_811(DATA *data, threadData_t *threadData)
 /*
 equation index: 812
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqDen[2] = Water.LiqDen[2]
+MatStm3._comp[1]._LiqDen[2] = Water.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_812(DATA *data, threadData_t *threadData)
@@ -5057,7 +5057,7 @@ static void splitter1_eqFunction_812(DATA *data, threadData_t *threadData)
 /*
 equation index: 813
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LiqDen[1] = Water.LiqDen[1]
+MatStm3._comp[1]._LiqDen[1] = Water.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_813(DATA *data, threadData_t *threadData)
@@ -5071,7 +5071,7 @@ static void splitter1_eqFunction_813(DATA *data, threadData_t *threadData)
 /*
 equation index: 814
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._UniquacQ = Water.UniquacQ
+MatStm3._comp[1]._UniquacQ = Water.UniquacQ
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_814(DATA *data, threadData_t *threadData)
@@ -5085,7 +5085,7 @@ static void splitter1_eqFunction_814(DATA *data, threadData_t *threadData)
 /*
 equation index: 815
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._UniquacR = Water.UniquacR
+MatStm3._comp[1]._UniquacR = Water.UniquacR
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_815(DATA *data, threadData_t *threadData)
@@ -5099,7 +5099,7 @@ static void splitter1_eqFunction_815(DATA *data, threadData_t *threadData)
 /*
 equation index: 816
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._HOC = Water.HOC
+MatStm3._comp[1]._HOC = Water.HOC
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_816(DATA *data, threadData_t *threadData)
@@ -5113,7 +5113,7 @@ static void splitter1_eqFunction_816(DATA *data, threadData_t *threadData)
 /*
 equation index: 817
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._HFMP = Water.HFMP
+MatStm3._comp[1]._HFMP = Water.HFMP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_817(DATA *data, threadData_t *threadData)
@@ -5127,7 +5127,7 @@ static void splitter1_eqFunction_817(DATA *data, threadData_t *threadData)
 /*
 equation index: 818
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._AS = Water.AS
+MatStm3._comp[1]._AS = Water.AS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_818(DATA *data, threadData_t *threadData)
@@ -5141,7 +5141,7 @@ static void splitter1_eqFunction_818(DATA *data, threadData_t *threadData)
 /*
 equation index: 819
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._GEF = Water.GEF
+MatStm3._comp[1]._GEF = Water.GEF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_819(DATA *data, threadData_t *threadData)
@@ -5155,7 +5155,7 @@ static void splitter1_eqFunction_819(DATA *data, threadData_t *threadData)
 /*
 equation index: 820
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._IGHF = Water.IGHF
+MatStm3._comp[1]._IGHF = Water.IGHF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_820(DATA *data, threadData_t *threadData)
@@ -5169,7 +5169,7 @@ static void splitter1_eqFunction_820(DATA *data, threadData_t *threadData)
 /*
 equation index: 821
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._SH = Water.SH
+MatStm3._comp[1]._SH = Water.SH
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_821(DATA *data, threadData_t *threadData)
@@ -5183,7 +5183,7 @@ static void splitter1_eqFunction_821(DATA *data, threadData_t *threadData)
 /*
 equation index: 822
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._DM = Water.DM
+MatStm3._comp[1]._DM = Water.DM
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_822(DATA *data, threadData_t *threadData)
@@ -5197,7 +5197,7 @@ static void splitter1_eqFunction_822(DATA *data, threadData_t *threadData)
 /*
 equation index: 823
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._SP = Water.SP
+MatStm3._comp[1]._SP = Water.SP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_823(DATA *data, threadData_t *threadData)
@@ -5211,7 +5211,7 @@ static void splitter1_eqFunction_823(DATA *data, threadData_t *threadData)
 /*
 equation index: 824
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._AF = Water.AF
+MatStm3._comp[1]._AF = Water.AF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_824(DATA *data, threadData_t *threadData)
@@ -5225,7 +5225,7 @@ static void splitter1_eqFunction_824(DATA *data, threadData_t *threadData)
 /*
 equation index: 825
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._LVB = Water.LVB
+MatStm3._comp[1]._LVB = Water.LVB
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_825(DATA *data, threadData_t *threadData)
@@ -5239,7 +5239,7 @@ static void splitter1_eqFunction_825(DATA *data, threadData_t *threadData)
 /*
 equation index: 826
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._MW = Water.MW
+MatStm3._comp[1]._MW = Water.MW
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_826(DATA *data, threadData_t *threadData)
@@ -5253,7 +5253,7 @@ static void splitter1_eqFunction_826(DATA *data, threadData_t *threadData)
 /*
 equation index: 827
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._TP = Water.TP
+MatStm3._comp[1]._TP = Water.TP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_827(DATA *data, threadData_t *threadData)
@@ -5267,7 +5267,7 @@ static void splitter1_eqFunction_827(DATA *data, threadData_t *threadData)
 /*
 equation index: 828
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._TT = Water.TT
+MatStm3._comp[1]._TT = Water.TT
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_828(DATA *data, threadData_t *threadData)
@@ -5281,7 +5281,7 @@ static void splitter1_eqFunction_828(DATA *data, threadData_t *threadData)
 /*
 equation index: 829
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._Tm = Water.Tm
+MatStm3._comp[1]._Tm = Water.Tm
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_829(DATA *data, threadData_t *threadData)
@@ -5295,7 +5295,7 @@ static void splitter1_eqFunction_829(DATA *data, threadData_t *threadData)
 /*
 equation index: 830
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._Tb = Water.Tb
+MatStm3._comp[1]._Tb = Water.Tb
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_830(DATA *data, threadData_t *threadData)
@@ -5309,7 +5309,7 @@ static void splitter1_eqFunction_830(DATA *data, threadData_t *threadData)
 /*
 equation index: 831
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._Cc = Water.Cc
+MatStm3._comp[1]._Cc = Water.Cc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_831(DATA *data, threadData_t *threadData)
@@ -5323,7 +5323,7 @@ static void splitter1_eqFunction_831(DATA *data, threadData_t *threadData)
 /*
 equation index: 832
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._Vc = Water.Vc
+MatStm3._comp[1]._Vc = Water.Vc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_832(DATA *data, threadData_t *threadData)
@@ -5337,7 +5337,7 @@ static void splitter1_eqFunction_832(DATA *data, threadData_t *threadData)
 /*
 equation index: 833
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._Pc = Water.Pc
+MatStm3._comp[1]._Pc = Water.Pc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_833(DATA *data, threadData_t *threadData)
@@ -5351,7 +5351,7 @@ static void splitter1_eqFunction_833(DATA *data, threadData_t *threadData)
 /*
 equation index: 834
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._Tc = Water.Tc
+MatStm3._comp[1]._Tc = Water.Tc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_834(DATA *data, threadData_t *threadData)
@@ -5365,7 +5365,7 @@ static void splitter1_eqFunction_834(DATA *data, threadData_t *threadData)
 /*
 equation index: 835
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._CAS = Water.CAS
+MatStm3._comp[1]._CAS = Water.CAS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_835(DATA *data, threadData_t *threadData)
@@ -5379,7 +5379,7 @@ static void splitter1_eqFunction_835(DATA *data, threadData_t *threadData)
 /*
 equation index: 836
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._name = Water.name
+MatStm3._comp[1]._name = Water.name
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_836(DATA *data, threadData_t *threadData)
@@ -5393,7 +5393,7 @@ static void splitter1_eqFunction_836(DATA *data, threadData_t *threadData)
 /*
 equation index: 837
 type: SIMPLE_ASSIGN
-MatStm5._comp[1]._SN = Water.SN
+MatStm3._comp[1]._SN = Water.SN
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_837(DATA *data, threadData_t *threadData)
@@ -5407,7 +5407,7 @@ static void splitter1_eqFunction_837(DATA *data, threadData_t *threadData)
 /*
 equation index: 841
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
+MatStm2._comp[2]._ChaoSeadLV = Ethanol.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_841(DATA *data, threadData_t *threadData)
@@ -5421,7 +5421,7 @@ static void splitter1_eqFunction_841(DATA *data, threadData_t *threadData)
 /*
 equation index: 842
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
+MatStm2._comp[2]._ChaoSeadSP = Ethanol.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_842(DATA *data, threadData_t *threadData)
@@ -5435,7 +5435,7 @@ static void splitter1_eqFunction_842(DATA *data, threadData_t *threadData)
 /*
 equation index: 843
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
+MatStm2._comp[2]._ChaoSeadAF = Ethanol.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_843(DATA *data, threadData_t *threadData)
@@ -5449,7 +5449,7 @@ static void splitter1_eqFunction_843(DATA *data, threadData_t *threadData)
 /*
 equation index: 844
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._Racketparam = Ethanol.Racketparam
+MatStm2._comp[2]._Racketparam = Ethanol.Racketparam
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_844(DATA *data, threadData_t *threadData)
@@ -5463,7 +5463,7 @@ static void splitter1_eqFunction_844(DATA *data, threadData_t *threadData)
 /*
 equation index: 845
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapK[6] = Ethanol.VapK[6]
+MatStm2._comp[2]._VapK[6] = Ethanol.VapK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_845(DATA *data, threadData_t *threadData)
@@ -5477,7 +5477,7 @@ static void splitter1_eqFunction_845(DATA *data, threadData_t *threadData)
 /*
 equation index: 846
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapK[5] = Ethanol.VapK[5]
+MatStm2._comp[2]._VapK[5] = Ethanol.VapK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_846(DATA *data, threadData_t *threadData)
@@ -5491,7 +5491,7 @@ static void splitter1_eqFunction_846(DATA *data, threadData_t *threadData)
 /*
 equation index: 847
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapK[4] = Ethanol.VapK[4]
+MatStm2._comp[2]._VapK[4] = Ethanol.VapK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_847(DATA *data, threadData_t *threadData)
@@ -5505,7 +5505,7 @@ static void splitter1_eqFunction_847(DATA *data, threadData_t *threadData)
 /*
 equation index: 848
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapK[3] = Ethanol.VapK[3]
+MatStm2._comp[2]._VapK[3] = Ethanol.VapK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_848(DATA *data, threadData_t *threadData)
@@ -5519,7 +5519,7 @@ static void splitter1_eqFunction_848(DATA *data, threadData_t *threadData)
 /*
 equation index: 849
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapK[2] = Ethanol.VapK[2]
+MatStm2._comp[2]._VapK[2] = Ethanol.VapK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_849(DATA *data, threadData_t *threadData)
@@ -5533,7 +5533,7 @@ static void splitter1_eqFunction_849(DATA *data, threadData_t *threadData)
 /*
 equation index: 850
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapK[1] = Ethanol.VapK[1]
+MatStm2._comp[2]._VapK[1] = Ethanol.VapK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_850(DATA *data, threadData_t *threadData)
@@ -5547,7 +5547,7 @@ static void splitter1_eqFunction_850(DATA *data, threadData_t *threadData)
 /*
 equation index: 851
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqK[6] = Ethanol.LiqK[6]
+MatStm2._comp[2]._LiqK[6] = Ethanol.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_851(DATA *data, threadData_t *threadData)
@@ -5561,7 +5561,7 @@ static void splitter1_eqFunction_851(DATA *data, threadData_t *threadData)
 /*
 equation index: 852
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqK[5] = Ethanol.LiqK[5]
+MatStm2._comp[2]._LiqK[5] = Ethanol.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_852(DATA *data, threadData_t *threadData)
@@ -5575,7 +5575,7 @@ static void splitter1_eqFunction_852(DATA *data, threadData_t *threadData)
 /*
 equation index: 853
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqK[4] = Ethanol.LiqK[4]
+MatStm2._comp[2]._LiqK[4] = Ethanol.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_853(DATA *data, threadData_t *threadData)
@@ -5589,7 +5589,7 @@ static void splitter1_eqFunction_853(DATA *data, threadData_t *threadData)
 /*
 equation index: 854
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqK[3] = Ethanol.LiqK[3]
+MatStm2._comp[2]._LiqK[3] = Ethanol.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_854(DATA *data, threadData_t *threadData)
@@ -5603,7 +5603,7 @@ static void splitter1_eqFunction_854(DATA *data, threadData_t *threadData)
 /*
 equation index: 855
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqK[2] = Ethanol.LiqK[2]
+MatStm2._comp[2]._LiqK[2] = Ethanol.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_855(DATA *data, threadData_t *threadData)
@@ -5617,7 +5617,7 @@ static void splitter1_eqFunction_855(DATA *data, threadData_t *threadData)
 /*
 equation index: 856
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqK[1] = Ethanol.LiqK[1]
+MatStm2._comp[2]._LiqK[1] = Ethanol.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_856(DATA *data, threadData_t *threadData)
@@ -5631,7 +5631,7 @@ static void splitter1_eqFunction_856(DATA *data, threadData_t *threadData)
 /*
 equation index: 857
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapVis[6] = Ethanol.VapVis[6]
+MatStm2._comp[2]._VapVis[6] = Ethanol.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_857(DATA *data, threadData_t *threadData)
@@ -5645,7 +5645,7 @@ static void splitter1_eqFunction_857(DATA *data, threadData_t *threadData)
 /*
 equation index: 858
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapVis[5] = Ethanol.VapVis[5]
+MatStm2._comp[2]._VapVis[5] = Ethanol.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_858(DATA *data, threadData_t *threadData)
@@ -5659,7 +5659,7 @@ static void splitter1_eqFunction_858(DATA *data, threadData_t *threadData)
 /*
 equation index: 859
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapVis[4] = Ethanol.VapVis[4]
+MatStm2._comp[2]._VapVis[4] = Ethanol.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_859(DATA *data, threadData_t *threadData)
@@ -5673,7 +5673,7 @@ static void splitter1_eqFunction_859(DATA *data, threadData_t *threadData)
 /*
 equation index: 860
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapVis[3] = Ethanol.VapVis[3]
+MatStm2._comp[2]._VapVis[3] = Ethanol.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_860(DATA *data, threadData_t *threadData)
@@ -5687,7 +5687,7 @@ static void splitter1_eqFunction_860(DATA *data, threadData_t *threadData)
 /*
 equation index: 861
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapVis[2] = Ethanol.VapVis[2]
+MatStm2._comp[2]._VapVis[2] = Ethanol.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_861(DATA *data, threadData_t *threadData)
@@ -5701,7 +5701,7 @@ static void splitter1_eqFunction_861(DATA *data, threadData_t *threadData)
 /*
 equation index: 862
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapVis[1] = Ethanol.VapVis[1]
+MatStm2._comp[2]._VapVis[1] = Ethanol.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_862(DATA *data, threadData_t *threadData)
@@ -5715,7 +5715,7 @@ static void splitter1_eqFunction_862(DATA *data, threadData_t *threadData)
 /*
 equation index: 863
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
+MatStm2._comp[2]._LiqVis[6] = Ethanol.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_863(DATA *data, threadData_t *threadData)
@@ -5729,7 +5729,7 @@ static void splitter1_eqFunction_863(DATA *data, threadData_t *threadData)
 /*
 equation index: 864
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
+MatStm2._comp[2]._LiqVis[5] = Ethanol.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_864(DATA *data, threadData_t *threadData)
@@ -5743,7 +5743,7 @@ static void splitter1_eqFunction_864(DATA *data, threadData_t *threadData)
 /*
 equation index: 865
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
+MatStm2._comp[2]._LiqVis[4] = Ethanol.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_865(DATA *data, threadData_t *threadData)
@@ -5757,7 +5757,7 @@ static void splitter1_eqFunction_865(DATA *data, threadData_t *threadData)
 /*
 equation index: 866
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
+MatStm2._comp[2]._LiqVis[3] = Ethanol.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_866(DATA *data, threadData_t *threadData)
@@ -5771,7 +5771,7 @@ static void splitter1_eqFunction_866(DATA *data, threadData_t *threadData)
 /*
 equation index: 867
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
+MatStm2._comp[2]._LiqVis[2] = Ethanol.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_867(DATA *data, threadData_t *threadData)
@@ -5785,7 +5785,7 @@ static void splitter1_eqFunction_867(DATA *data, threadData_t *threadData)
 /*
 equation index: 868
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
+MatStm2._comp[2]._LiqVis[1] = Ethanol.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_868(DATA *data, threadData_t *threadData)
@@ -5799,7 +5799,7 @@ static void splitter1_eqFunction_868(DATA *data, threadData_t *threadData)
 /*
 equation index: 869
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapCp[6] = Ethanol.VapCp[6]
+MatStm2._comp[2]._VapCp[6] = Ethanol.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_869(DATA *data, threadData_t *threadData)
@@ -5813,7 +5813,7 @@ static void splitter1_eqFunction_869(DATA *data, threadData_t *threadData)
 /*
 equation index: 870
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapCp[5] = Ethanol.VapCp[5]
+MatStm2._comp[2]._VapCp[5] = Ethanol.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_870(DATA *data, threadData_t *threadData)
@@ -5827,7 +5827,7 @@ static void splitter1_eqFunction_870(DATA *data, threadData_t *threadData)
 /*
 equation index: 871
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapCp[4] = Ethanol.VapCp[4]
+MatStm2._comp[2]._VapCp[4] = Ethanol.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_871(DATA *data, threadData_t *threadData)
@@ -5841,7 +5841,7 @@ static void splitter1_eqFunction_871(DATA *data, threadData_t *threadData)
 /*
 equation index: 872
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapCp[3] = Ethanol.VapCp[3]
+MatStm2._comp[2]._VapCp[3] = Ethanol.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_872(DATA *data, threadData_t *threadData)
@@ -5855,7 +5855,7 @@ static void splitter1_eqFunction_872(DATA *data, threadData_t *threadData)
 /*
 equation index: 873
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapCp[2] = Ethanol.VapCp[2]
+MatStm2._comp[2]._VapCp[2] = Ethanol.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_873(DATA *data, threadData_t *threadData)
@@ -5869,7 +5869,7 @@ static void splitter1_eqFunction_873(DATA *data, threadData_t *threadData)
 /*
 equation index: 874
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VapCp[1] = Ethanol.VapCp[1]
+MatStm2._comp[2]._VapCp[1] = Ethanol.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_874(DATA *data, threadData_t *threadData)
@@ -5883,7 +5883,7 @@ static void splitter1_eqFunction_874(DATA *data, threadData_t *threadData)
 /*
 equation index: 875
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._HOV[6] = Ethanol.HOV[6]
+MatStm2._comp[2]._HOV[6] = Ethanol.HOV[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_875(DATA *data, threadData_t *threadData)
@@ -5897,7 +5897,7 @@ static void splitter1_eqFunction_875(DATA *data, threadData_t *threadData)
 /*
 equation index: 876
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._HOV[5] = Ethanol.HOV[5]
+MatStm2._comp[2]._HOV[5] = Ethanol.HOV[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_876(DATA *data, threadData_t *threadData)
@@ -5911,7 +5911,7 @@ static void splitter1_eqFunction_876(DATA *data, threadData_t *threadData)
 /*
 equation index: 877
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._HOV[4] = Ethanol.HOV[4]
+MatStm2._comp[2]._HOV[4] = Ethanol.HOV[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_877(DATA *data, threadData_t *threadData)
@@ -5925,7 +5925,7 @@ static void splitter1_eqFunction_877(DATA *data, threadData_t *threadData)
 /*
 equation index: 878
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._HOV[3] = Ethanol.HOV[3]
+MatStm2._comp[2]._HOV[3] = Ethanol.HOV[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_878(DATA *data, threadData_t *threadData)
@@ -5939,7 +5939,7 @@ static void splitter1_eqFunction_878(DATA *data, threadData_t *threadData)
 /*
 equation index: 879
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._HOV[2] = Ethanol.HOV[2]
+MatStm2._comp[2]._HOV[2] = Ethanol.HOV[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_879(DATA *data, threadData_t *threadData)
@@ -5953,7 +5953,7 @@ static void splitter1_eqFunction_879(DATA *data, threadData_t *threadData)
 /*
 equation index: 880
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._HOV[1] = Ethanol.HOV[1]
+MatStm2._comp[2]._HOV[1] = Ethanol.HOV[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_880(DATA *data, threadData_t *threadData)
@@ -5967,7 +5967,7 @@ static void splitter1_eqFunction_880(DATA *data, threadData_t *threadData)
 /*
 equation index: 881
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
+MatStm2._comp[2]._LiqCp[6] = Ethanol.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_881(DATA *data, threadData_t *threadData)
@@ -5981,7 +5981,7 @@ static void splitter1_eqFunction_881(DATA *data, threadData_t *threadData)
 /*
 equation index: 882
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
+MatStm2._comp[2]._LiqCp[5] = Ethanol.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_882(DATA *data, threadData_t *threadData)
@@ -5995,7 +5995,7 @@ static void splitter1_eqFunction_882(DATA *data, threadData_t *threadData)
 /*
 equation index: 883
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
+MatStm2._comp[2]._LiqCp[4] = Ethanol.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_883(DATA *data, threadData_t *threadData)
@@ -6009,7 +6009,7 @@ static void splitter1_eqFunction_883(DATA *data, threadData_t *threadData)
 /*
 equation index: 884
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
+MatStm2._comp[2]._LiqCp[3] = Ethanol.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_884(DATA *data, threadData_t *threadData)
@@ -6023,7 +6023,7 @@ static void splitter1_eqFunction_884(DATA *data, threadData_t *threadData)
 /*
 equation index: 885
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
+MatStm2._comp[2]._LiqCp[2] = Ethanol.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_885(DATA *data, threadData_t *threadData)
@@ -6037,7 +6037,7 @@ static void splitter1_eqFunction_885(DATA *data, threadData_t *threadData)
 /*
 equation index: 886
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
+MatStm2._comp[2]._LiqCp[1] = Ethanol.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_886(DATA *data, threadData_t *threadData)
@@ -6051,7 +6051,7 @@ static void splitter1_eqFunction_886(DATA *data, threadData_t *threadData)
 /*
 equation index: 887
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._VP[1] = Ethanol.VP[1]
+MatStm2._comp[2]._VP[1] = Ethanol.VP[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_887(DATA *data, threadData_t *threadData)
@@ -6065,7 +6065,7 @@ static void splitter1_eqFunction_887(DATA *data, threadData_t *threadData)
 /*
 equation index: 888
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
+MatStm2._comp[2]._LiqDen[6] = Ethanol.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_888(DATA *data, threadData_t *threadData)
@@ -6079,7 +6079,7 @@ static void splitter1_eqFunction_888(DATA *data, threadData_t *threadData)
 /*
 equation index: 889
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
+MatStm2._comp[2]._LiqDen[5] = Ethanol.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_889(DATA *data, threadData_t *threadData)
@@ -6093,7 +6093,7 @@ static void splitter1_eqFunction_889(DATA *data, threadData_t *threadData)
 /*
 equation index: 890
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
+MatStm2._comp[2]._LiqDen[4] = Ethanol.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_890(DATA *data, threadData_t *threadData)
@@ -6107,7 +6107,7 @@ static void splitter1_eqFunction_890(DATA *data, threadData_t *threadData)
 /*
 equation index: 891
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
+MatStm2._comp[2]._LiqDen[3] = Ethanol.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_891(DATA *data, threadData_t *threadData)
@@ -6121,7 +6121,7 @@ static void splitter1_eqFunction_891(DATA *data, threadData_t *threadData)
 /*
 equation index: 892
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
+MatStm2._comp[2]._LiqDen[2] = Ethanol.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_892(DATA *data, threadData_t *threadData)
@@ -6135,7 +6135,7 @@ static void splitter1_eqFunction_892(DATA *data, threadData_t *threadData)
 /*
 equation index: 893
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
+MatStm2._comp[2]._LiqDen[1] = Ethanol.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_893(DATA *data, threadData_t *threadData)
@@ -6149,7 +6149,7 @@ static void splitter1_eqFunction_893(DATA *data, threadData_t *threadData)
 /*
 equation index: 894
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._UniquacQ = Ethanol.UniquacQ
+MatStm2._comp[2]._UniquacQ = Ethanol.UniquacQ
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_894(DATA *data, threadData_t *threadData)
@@ -6163,7 +6163,7 @@ static void splitter1_eqFunction_894(DATA *data, threadData_t *threadData)
 /*
 equation index: 895
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._UniquacR = Ethanol.UniquacR
+MatStm2._comp[2]._UniquacR = Ethanol.UniquacR
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_895(DATA *data, threadData_t *threadData)
@@ -6177,7 +6177,7 @@ static void splitter1_eqFunction_895(DATA *data, threadData_t *threadData)
 /*
 equation index: 896
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._HOC = Ethanol.HOC
+MatStm2._comp[2]._HOC = Ethanol.HOC
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_896(DATA *data, threadData_t *threadData)
@@ -6191,7 +6191,7 @@ static void splitter1_eqFunction_896(DATA *data, threadData_t *threadData)
 /*
 equation index: 897
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._HFMP = Ethanol.HFMP
+MatStm2._comp[2]._HFMP = Ethanol.HFMP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_897(DATA *data, threadData_t *threadData)
@@ -6205,7 +6205,7 @@ static void splitter1_eqFunction_897(DATA *data, threadData_t *threadData)
 /*
 equation index: 898
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._AS = Ethanol.AS
+MatStm2._comp[2]._AS = Ethanol.AS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_898(DATA *data, threadData_t *threadData)
@@ -6219,7 +6219,7 @@ static void splitter1_eqFunction_898(DATA *data, threadData_t *threadData)
 /*
 equation index: 899
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._GEF = Ethanol.GEF
+MatStm2._comp[2]._GEF = Ethanol.GEF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_899(DATA *data, threadData_t *threadData)
@@ -6233,7 +6233,7 @@ static void splitter1_eqFunction_899(DATA *data, threadData_t *threadData)
 /*
 equation index: 900
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._IGHF = Ethanol.IGHF
+MatStm2._comp[2]._IGHF = Ethanol.IGHF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_900(DATA *data, threadData_t *threadData)
@@ -6247,7 +6247,7 @@ static void splitter1_eqFunction_900(DATA *data, threadData_t *threadData)
 /*
 equation index: 901
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._SH = Ethanol.SH
+MatStm2._comp[2]._SH = Ethanol.SH
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_901(DATA *data, threadData_t *threadData)
@@ -6261,7 +6261,7 @@ static void splitter1_eqFunction_901(DATA *data, threadData_t *threadData)
 /*
 equation index: 902
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._DM = Ethanol.DM
+MatStm2._comp[2]._DM = Ethanol.DM
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_902(DATA *data, threadData_t *threadData)
@@ -6275,7 +6275,7 @@ static void splitter1_eqFunction_902(DATA *data, threadData_t *threadData)
 /*
 equation index: 903
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._SP = Ethanol.SP
+MatStm2._comp[2]._SP = Ethanol.SP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_903(DATA *data, threadData_t *threadData)
@@ -6289,7 +6289,7 @@ static void splitter1_eqFunction_903(DATA *data, threadData_t *threadData)
 /*
 equation index: 904
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._AF = Ethanol.AF
+MatStm2._comp[2]._AF = Ethanol.AF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_904(DATA *data, threadData_t *threadData)
@@ -6303,7 +6303,7 @@ static void splitter1_eqFunction_904(DATA *data, threadData_t *threadData)
 /*
 equation index: 905
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._LVB = Ethanol.LVB
+MatStm2._comp[2]._LVB = Ethanol.LVB
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_905(DATA *data, threadData_t *threadData)
@@ -6317,7 +6317,7 @@ static void splitter1_eqFunction_905(DATA *data, threadData_t *threadData)
 /*
 equation index: 906
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._MW = Ethanol.MW
+MatStm2._comp[2]._MW = Ethanol.MW
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_906(DATA *data, threadData_t *threadData)
@@ -6331,7 +6331,7 @@ static void splitter1_eqFunction_906(DATA *data, threadData_t *threadData)
 /*
 equation index: 907
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._TP = Ethanol.TP
+MatStm2._comp[2]._TP = Ethanol.TP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_907(DATA *data, threadData_t *threadData)
@@ -6345,7 +6345,7 @@ static void splitter1_eqFunction_907(DATA *data, threadData_t *threadData)
 /*
 equation index: 908
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._TT = Ethanol.TT
+MatStm2._comp[2]._TT = Ethanol.TT
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_908(DATA *data, threadData_t *threadData)
@@ -6359,7 +6359,7 @@ static void splitter1_eqFunction_908(DATA *data, threadData_t *threadData)
 /*
 equation index: 909
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._Tm = Ethanol.Tm
+MatStm2._comp[2]._Tm = Ethanol.Tm
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_909(DATA *data, threadData_t *threadData)
@@ -6373,7 +6373,7 @@ static void splitter1_eqFunction_909(DATA *data, threadData_t *threadData)
 /*
 equation index: 910
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._Tb = Ethanol.Tb
+MatStm2._comp[2]._Tb = Ethanol.Tb
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_910(DATA *data, threadData_t *threadData)
@@ -6387,7 +6387,7 @@ static void splitter1_eqFunction_910(DATA *data, threadData_t *threadData)
 /*
 equation index: 911
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._Cc = Ethanol.Cc
+MatStm2._comp[2]._Cc = Ethanol.Cc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_911(DATA *data, threadData_t *threadData)
@@ -6401,7 +6401,7 @@ static void splitter1_eqFunction_911(DATA *data, threadData_t *threadData)
 /*
 equation index: 912
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._Vc = Ethanol.Vc
+MatStm2._comp[2]._Vc = Ethanol.Vc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_912(DATA *data, threadData_t *threadData)
@@ -6415,7 +6415,7 @@ static void splitter1_eqFunction_912(DATA *data, threadData_t *threadData)
 /*
 equation index: 913
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._Pc = Ethanol.Pc
+MatStm2._comp[2]._Pc = Ethanol.Pc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_913(DATA *data, threadData_t *threadData)
@@ -6429,7 +6429,7 @@ static void splitter1_eqFunction_913(DATA *data, threadData_t *threadData)
 /*
 equation index: 914
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._Tc = Ethanol.Tc
+MatStm2._comp[2]._Tc = Ethanol.Tc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_914(DATA *data, threadData_t *threadData)
@@ -6443,7 +6443,7 @@ static void splitter1_eqFunction_914(DATA *data, threadData_t *threadData)
 /*
 equation index: 915
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._CAS = Ethanol.CAS
+MatStm2._comp[2]._CAS = Ethanol.CAS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_915(DATA *data, threadData_t *threadData)
@@ -6457,7 +6457,7 @@ static void splitter1_eqFunction_915(DATA *data, threadData_t *threadData)
 /*
 equation index: 916
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._name = Ethanol.name
+MatStm2._comp[2]._name = Ethanol.name
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_916(DATA *data, threadData_t *threadData)
@@ -6471,7 +6471,7 @@ static void splitter1_eqFunction_916(DATA *data, threadData_t *threadData)
 /*
 equation index: 917
 type: SIMPLE_ASSIGN
-MatStm4._comp[2]._SN = Ethanol.SN
+MatStm2._comp[2]._SN = Ethanol.SN
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_917(DATA *data, threadData_t *threadData)
@@ -6485,7 +6485,7 @@ static void splitter1_eqFunction_917(DATA *data, threadData_t *threadData)
 /*
 equation index: 918
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
+MatStm2._comp[1]._ChaoSeadLV = Water.ChaoSeadLV
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_918(DATA *data, threadData_t *threadData)
@@ -6499,7 +6499,7 @@ static void splitter1_eqFunction_918(DATA *data, threadData_t *threadData)
 /*
 equation index: 919
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
+MatStm2._comp[1]._ChaoSeadSP = Water.ChaoSeadSP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_919(DATA *data, threadData_t *threadData)
@@ -6513,7 +6513,7 @@ static void splitter1_eqFunction_919(DATA *data, threadData_t *threadData)
 /*
 equation index: 920
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
+MatStm2._comp[1]._ChaoSeadAF = Water.ChaoSeadAF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_920(DATA *data, threadData_t *threadData)
@@ -6527,7 +6527,7 @@ static void splitter1_eqFunction_920(DATA *data, threadData_t *threadData)
 /*
 equation index: 921
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._Racketparam = Water.Racketparam
+MatStm2._comp[1]._Racketparam = Water.Racketparam
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_921(DATA *data, threadData_t *threadData)
@@ -6541,7 +6541,7 @@ static void splitter1_eqFunction_921(DATA *data, threadData_t *threadData)
 /*
 equation index: 922
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapK[6] = Water.VapK[6]
+MatStm2._comp[1]._VapK[6] = Water.VapK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_922(DATA *data, threadData_t *threadData)
@@ -6555,7 +6555,7 @@ static void splitter1_eqFunction_922(DATA *data, threadData_t *threadData)
 /*
 equation index: 923
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapK[5] = Water.VapK[5]
+MatStm2._comp[1]._VapK[5] = Water.VapK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_923(DATA *data, threadData_t *threadData)
@@ -6569,7 +6569,7 @@ static void splitter1_eqFunction_923(DATA *data, threadData_t *threadData)
 /*
 equation index: 924
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapK[4] = Water.VapK[4]
+MatStm2._comp[1]._VapK[4] = Water.VapK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_924(DATA *data, threadData_t *threadData)
@@ -6583,7 +6583,7 @@ static void splitter1_eqFunction_924(DATA *data, threadData_t *threadData)
 /*
 equation index: 925
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapK[3] = Water.VapK[3]
+MatStm2._comp[1]._VapK[3] = Water.VapK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_925(DATA *data, threadData_t *threadData)
@@ -6597,7 +6597,7 @@ static void splitter1_eqFunction_925(DATA *data, threadData_t *threadData)
 /*
 equation index: 926
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapK[2] = Water.VapK[2]
+MatStm2._comp[1]._VapK[2] = Water.VapK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_926(DATA *data, threadData_t *threadData)
@@ -6611,7 +6611,7 @@ static void splitter1_eqFunction_926(DATA *data, threadData_t *threadData)
 /*
 equation index: 927
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapK[1] = Water.VapK[1]
+MatStm2._comp[1]._VapK[1] = Water.VapK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_927(DATA *data, threadData_t *threadData)
@@ -6625,7 +6625,7 @@ static void splitter1_eqFunction_927(DATA *data, threadData_t *threadData)
 /*
 equation index: 928
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqK[6] = Water.LiqK[6]
+MatStm2._comp[1]._LiqK[6] = Water.LiqK[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_928(DATA *data, threadData_t *threadData)
@@ -6639,7 +6639,7 @@ static void splitter1_eqFunction_928(DATA *data, threadData_t *threadData)
 /*
 equation index: 929
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqK[5] = Water.LiqK[5]
+MatStm2._comp[1]._LiqK[5] = Water.LiqK[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_929(DATA *data, threadData_t *threadData)
@@ -6653,7 +6653,7 @@ static void splitter1_eqFunction_929(DATA *data, threadData_t *threadData)
 /*
 equation index: 930
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqK[4] = Water.LiqK[4]
+MatStm2._comp[1]._LiqK[4] = Water.LiqK[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_930(DATA *data, threadData_t *threadData)
@@ -6667,7 +6667,7 @@ static void splitter1_eqFunction_930(DATA *data, threadData_t *threadData)
 /*
 equation index: 931
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqK[3] = Water.LiqK[3]
+MatStm2._comp[1]._LiqK[3] = Water.LiqK[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_931(DATA *data, threadData_t *threadData)
@@ -6681,7 +6681,7 @@ static void splitter1_eqFunction_931(DATA *data, threadData_t *threadData)
 /*
 equation index: 932
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqK[2] = Water.LiqK[2]
+MatStm2._comp[1]._LiqK[2] = Water.LiqK[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_932(DATA *data, threadData_t *threadData)
@@ -6695,7 +6695,7 @@ static void splitter1_eqFunction_932(DATA *data, threadData_t *threadData)
 /*
 equation index: 933
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqK[1] = Water.LiqK[1]
+MatStm2._comp[1]._LiqK[1] = Water.LiqK[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_933(DATA *data, threadData_t *threadData)
@@ -6709,7 +6709,7 @@ static void splitter1_eqFunction_933(DATA *data, threadData_t *threadData)
 /*
 equation index: 934
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapVis[6] = Water.VapVis[6]
+MatStm2._comp[1]._VapVis[6] = Water.VapVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_934(DATA *data, threadData_t *threadData)
@@ -6723,7 +6723,7 @@ static void splitter1_eqFunction_934(DATA *data, threadData_t *threadData)
 /*
 equation index: 935
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapVis[5] = Water.VapVis[5]
+MatStm2._comp[1]._VapVis[5] = Water.VapVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_935(DATA *data, threadData_t *threadData)
@@ -6737,7 +6737,7 @@ static void splitter1_eqFunction_935(DATA *data, threadData_t *threadData)
 /*
 equation index: 936
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapVis[4] = Water.VapVis[4]
+MatStm2._comp[1]._VapVis[4] = Water.VapVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_936(DATA *data, threadData_t *threadData)
@@ -6751,7 +6751,7 @@ static void splitter1_eqFunction_936(DATA *data, threadData_t *threadData)
 /*
 equation index: 937
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapVis[3] = Water.VapVis[3]
+MatStm2._comp[1]._VapVis[3] = Water.VapVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_937(DATA *data, threadData_t *threadData)
@@ -6765,7 +6765,7 @@ static void splitter1_eqFunction_937(DATA *data, threadData_t *threadData)
 /*
 equation index: 938
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapVis[2] = Water.VapVis[2]
+MatStm2._comp[1]._VapVis[2] = Water.VapVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_938(DATA *data, threadData_t *threadData)
@@ -6779,7 +6779,7 @@ static void splitter1_eqFunction_938(DATA *data, threadData_t *threadData)
 /*
 equation index: 939
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapVis[1] = Water.VapVis[1]
+MatStm2._comp[1]._VapVis[1] = Water.VapVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_939(DATA *data, threadData_t *threadData)
@@ -6793,7 +6793,7 @@ static void splitter1_eqFunction_939(DATA *data, threadData_t *threadData)
 /*
 equation index: 940
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqVis[6] = Water.LiqVis[6]
+MatStm2._comp[1]._LiqVis[6] = Water.LiqVis[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_940(DATA *data, threadData_t *threadData)
@@ -6807,7 +6807,7 @@ static void splitter1_eqFunction_940(DATA *data, threadData_t *threadData)
 /*
 equation index: 941
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqVis[5] = Water.LiqVis[5]
+MatStm2._comp[1]._LiqVis[5] = Water.LiqVis[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_941(DATA *data, threadData_t *threadData)
@@ -6821,7 +6821,7 @@ static void splitter1_eqFunction_941(DATA *data, threadData_t *threadData)
 /*
 equation index: 942
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqVis[4] = Water.LiqVis[4]
+MatStm2._comp[1]._LiqVis[4] = Water.LiqVis[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_942(DATA *data, threadData_t *threadData)
@@ -6835,7 +6835,7 @@ static void splitter1_eqFunction_942(DATA *data, threadData_t *threadData)
 /*
 equation index: 943
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqVis[3] = Water.LiqVis[3]
+MatStm2._comp[1]._LiqVis[3] = Water.LiqVis[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_943(DATA *data, threadData_t *threadData)
@@ -6849,7 +6849,7 @@ static void splitter1_eqFunction_943(DATA *data, threadData_t *threadData)
 /*
 equation index: 944
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqVis[2] = Water.LiqVis[2]
+MatStm2._comp[1]._LiqVis[2] = Water.LiqVis[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_944(DATA *data, threadData_t *threadData)
@@ -6863,7 +6863,7 @@ static void splitter1_eqFunction_944(DATA *data, threadData_t *threadData)
 /*
 equation index: 945
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqVis[1] = Water.LiqVis[1]
+MatStm2._comp[1]._LiqVis[1] = Water.LiqVis[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_945(DATA *data, threadData_t *threadData)
@@ -6877,7 +6877,7 @@ static void splitter1_eqFunction_945(DATA *data, threadData_t *threadData)
 /*
 equation index: 946
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapCp[6] = Water.VapCp[6]
+MatStm2._comp[1]._VapCp[6] = Water.VapCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_946(DATA *data, threadData_t *threadData)
@@ -6891,7 +6891,7 @@ static void splitter1_eqFunction_946(DATA *data, threadData_t *threadData)
 /*
 equation index: 947
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapCp[5] = Water.VapCp[5]
+MatStm2._comp[1]._VapCp[5] = Water.VapCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_947(DATA *data, threadData_t *threadData)
@@ -6905,7 +6905,7 @@ static void splitter1_eqFunction_947(DATA *data, threadData_t *threadData)
 /*
 equation index: 948
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapCp[4] = Water.VapCp[4]
+MatStm2._comp[1]._VapCp[4] = Water.VapCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_948(DATA *data, threadData_t *threadData)
@@ -6919,7 +6919,7 @@ static void splitter1_eqFunction_948(DATA *data, threadData_t *threadData)
 /*
 equation index: 949
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapCp[3] = Water.VapCp[3]
+MatStm2._comp[1]._VapCp[3] = Water.VapCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_949(DATA *data, threadData_t *threadData)
@@ -6933,7 +6933,7 @@ static void splitter1_eqFunction_949(DATA *data, threadData_t *threadData)
 /*
 equation index: 950
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapCp[2] = Water.VapCp[2]
+MatStm2._comp[1]._VapCp[2] = Water.VapCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_950(DATA *data, threadData_t *threadData)
@@ -6947,7 +6947,7 @@ static void splitter1_eqFunction_950(DATA *data, threadData_t *threadData)
 /*
 equation index: 951
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VapCp[1] = Water.VapCp[1]
+MatStm2._comp[1]._VapCp[1] = Water.VapCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_951(DATA *data, threadData_t *threadData)
@@ -6961,7 +6961,7 @@ static void splitter1_eqFunction_951(DATA *data, threadData_t *threadData)
 /*
 equation index: 952
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._HOV[6] = Water.HOV[6]
+MatStm2._comp[1]._HOV[6] = Water.HOV[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_952(DATA *data, threadData_t *threadData)
@@ -6975,7 +6975,7 @@ static void splitter1_eqFunction_952(DATA *data, threadData_t *threadData)
 /*
 equation index: 953
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._HOV[5] = Water.HOV[5]
+MatStm2._comp[1]._HOV[5] = Water.HOV[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_953(DATA *data, threadData_t *threadData)
@@ -6989,7 +6989,7 @@ static void splitter1_eqFunction_953(DATA *data, threadData_t *threadData)
 /*
 equation index: 954
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._HOV[4] = Water.HOV[4]
+MatStm2._comp[1]._HOV[4] = Water.HOV[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_954(DATA *data, threadData_t *threadData)
@@ -7003,7 +7003,7 @@ static void splitter1_eqFunction_954(DATA *data, threadData_t *threadData)
 /*
 equation index: 955
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._HOV[3] = Water.HOV[3]
+MatStm2._comp[1]._HOV[3] = Water.HOV[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_955(DATA *data, threadData_t *threadData)
@@ -7017,7 +7017,7 @@ static void splitter1_eqFunction_955(DATA *data, threadData_t *threadData)
 /*
 equation index: 956
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._HOV[2] = Water.HOV[2]
+MatStm2._comp[1]._HOV[2] = Water.HOV[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_956(DATA *data, threadData_t *threadData)
@@ -7031,7 +7031,7 @@ static void splitter1_eqFunction_956(DATA *data, threadData_t *threadData)
 /*
 equation index: 957
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._HOV[1] = Water.HOV[1]
+MatStm2._comp[1]._HOV[1] = Water.HOV[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_957(DATA *data, threadData_t *threadData)
@@ -7045,7 +7045,7 @@ static void splitter1_eqFunction_957(DATA *data, threadData_t *threadData)
 /*
 equation index: 958
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqCp[6] = Water.LiqCp[6]
+MatStm2._comp[1]._LiqCp[6] = Water.LiqCp[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_958(DATA *data, threadData_t *threadData)
@@ -7059,7 +7059,7 @@ static void splitter1_eqFunction_958(DATA *data, threadData_t *threadData)
 /*
 equation index: 959
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqCp[5] = Water.LiqCp[5]
+MatStm2._comp[1]._LiqCp[5] = Water.LiqCp[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_959(DATA *data, threadData_t *threadData)
@@ -7073,7 +7073,7 @@ static void splitter1_eqFunction_959(DATA *data, threadData_t *threadData)
 /*
 equation index: 960
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqCp[4] = Water.LiqCp[4]
+MatStm2._comp[1]._LiqCp[4] = Water.LiqCp[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_960(DATA *data, threadData_t *threadData)
@@ -7087,7 +7087,7 @@ static void splitter1_eqFunction_960(DATA *data, threadData_t *threadData)
 /*
 equation index: 961
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqCp[3] = Water.LiqCp[3]
+MatStm2._comp[1]._LiqCp[3] = Water.LiqCp[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_961(DATA *data, threadData_t *threadData)
@@ -7101,7 +7101,7 @@ static void splitter1_eqFunction_961(DATA *data, threadData_t *threadData)
 /*
 equation index: 962
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqCp[2] = Water.LiqCp[2]
+MatStm2._comp[1]._LiqCp[2] = Water.LiqCp[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_962(DATA *data, threadData_t *threadData)
@@ -7115,7 +7115,7 @@ static void splitter1_eqFunction_962(DATA *data, threadData_t *threadData)
 /*
 equation index: 963
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqCp[1] = Water.LiqCp[1]
+MatStm2._comp[1]._LiqCp[1] = Water.LiqCp[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_963(DATA *data, threadData_t *threadData)
@@ -7129,7 +7129,7 @@ static void splitter1_eqFunction_963(DATA *data, threadData_t *threadData)
 /*
 equation index: 964
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._VP[1] = Water.VP[1]
+MatStm2._comp[1]._VP[1] = Water.VP[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_964(DATA *data, threadData_t *threadData)
@@ -7143,7 +7143,7 @@ static void splitter1_eqFunction_964(DATA *data, threadData_t *threadData)
 /*
 equation index: 965
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqDen[6] = Water.LiqDen[6]
+MatStm2._comp[1]._LiqDen[6] = Water.LiqDen[6]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_965(DATA *data, threadData_t *threadData)
@@ -7157,7 +7157,7 @@ static void splitter1_eqFunction_965(DATA *data, threadData_t *threadData)
 /*
 equation index: 966
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqDen[5] = Water.LiqDen[5]
+MatStm2._comp[1]._LiqDen[5] = Water.LiqDen[5]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_966(DATA *data, threadData_t *threadData)
@@ -7171,7 +7171,7 @@ static void splitter1_eqFunction_966(DATA *data, threadData_t *threadData)
 /*
 equation index: 967
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqDen[4] = Water.LiqDen[4]
+MatStm2._comp[1]._LiqDen[4] = Water.LiqDen[4]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_967(DATA *data, threadData_t *threadData)
@@ -7185,7 +7185,7 @@ static void splitter1_eqFunction_967(DATA *data, threadData_t *threadData)
 /*
 equation index: 968
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqDen[3] = Water.LiqDen[3]
+MatStm2._comp[1]._LiqDen[3] = Water.LiqDen[3]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_968(DATA *data, threadData_t *threadData)
@@ -7199,7 +7199,7 @@ static void splitter1_eqFunction_968(DATA *data, threadData_t *threadData)
 /*
 equation index: 969
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqDen[2] = Water.LiqDen[2]
+MatStm2._comp[1]._LiqDen[2] = Water.LiqDen[2]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_969(DATA *data, threadData_t *threadData)
@@ -7213,7 +7213,7 @@ static void splitter1_eqFunction_969(DATA *data, threadData_t *threadData)
 /*
 equation index: 970
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LiqDen[1] = Water.LiqDen[1]
+MatStm2._comp[1]._LiqDen[1] = Water.LiqDen[1]
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_970(DATA *data, threadData_t *threadData)
@@ -7227,7 +7227,7 @@ static void splitter1_eqFunction_970(DATA *data, threadData_t *threadData)
 /*
 equation index: 971
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._UniquacQ = Water.UniquacQ
+MatStm2._comp[1]._UniquacQ = Water.UniquacQ
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_971(DATA *data, threadData_t *threadData)
@@ -7241,7 +7241,7 @@ static void splitter1_eqFunction_971(DATA *data, threadData_t *threadData)
 /*
 equation index: 972
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._UniquacR = Water.UniquacR
+MatStm2._comp[1]._UniquacR = Water.UniquacR
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_972(DATA *data, threadData_t *threadData)
@@ -7255,7 +7255,7 @@ static void splitter1_eqFunction_972(DATA *data, threadData_t *threadData)
 /*
 equation index: 973
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._HOC = Water.HOC
+MatStm2._comp[1]._HOC = Water.HOC
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_973(DATA *data, threadData_t *threadData)
@@ -7269,7 +7269,7 @@ static void splitter1_eqFunction_973(DATA *data, threadData_t *threadData)
 /*
 equation index: 974
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._HFMP = Water.HFMP
+MatStm2._comp[1]._HFMP = Water.HFMP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_974(DATA *data, threadData_t *threadData)
@@ -7283,7 +7283,7 @@ static void splitter1_eqFunction_974(DATA *data, threadData_t *threadData)
 /*
 equation index: 975
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._AS = Water.AS
+MatStm2._comp[1]._AS = Water.AS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_975(DATA *data, threadData_t *threadData)
@@ -7297,7 +7297,7 @@ static void splitter1_eqFunction_975(DATA *data, threadData_t *threadData)
 /*
 equation index: 976
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._GEF = Water.GEF
+MatStm2._comp[1]._GEF = Water.GEF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_976(DATA *data, threadData_t *threadData)
@@ -7311,7 +7311,7 @@ static void splitter1_eqFunction_976(DATA *data, threadData_t *threadData)
 /*
 equation index: 977
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._IGHF = Water.IGHF
+MatStm2._comp[1]._IGHF = Water.IGHF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_977(DATA *data, threadData_t *threadData)
@@ -7325,7 +7325,7 @@ static void splitter1_eqFunction_977(DATA *data, threadData_t *threadData)
 /*
 equation index: 978
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._SH = Water.SH
+MatStm2._comp[1]._SH = Water.SH
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_978(DATA *data, threadData_t *threadData)
@@ -7339,7 +7339,7 @@ static void splitter1_eqFunction_978(DATA *data, threadData_t *threadData)
 /*
 equation index: 979
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._DM = Water.DM
+MatStm2._comp[1]._DM = Water.DM
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_979(DATA *data, threadData_t *threadData)
@@ -7353,7 +7353,7 @@ static void splitter1_eqFunction_979(DATA *data, threadData_t *threadData)
 /*
 equation index: 980
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._SP = Water.SP
+MatStm2._comp[1]._SP = Water.SP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_980(DATA *data, threadData_t *threadData)
@@ -7367,7 +7367,7 @@ static void splitter1_eqFunction_980(DATA *data, threadData_t *threadData)
 /*
 equation index: 981
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._AF = Water.AF
+MatStm2._comp[1]._AF = Water.AF
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_981(DATA *data, threadData_t *threadData)
@@ -7381,7 +7381,7 @@ static void splitter1_eqFunction_981(DATA *data, threadData_t *threadData)
 /*
 equation index: 982
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._LVB = Water.LVB
+MatStm2._comp[1]._LVB = Water.LVB
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_982(DATA *data, threadData_t *threadData)
@@ -7395,7 +7395,7 @@ static void splitter1_eqFunction_982(DATA *data, threadData_t *threadData)
 /*
 equation index: 983
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._MW = Water.MW
+MatStm2._comp[1]._MW = Water.MW
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_983(DATA *data, threadData_t *threadData)
@@ -7409,7 +7409,7 @@ static void splitter1_eqFunction_983(DATA *data, threadData_t *threadData)
 /*
 equation index: 984
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._TP = Water.TP
+MatStm2._comp[1]._TP = Water.TP
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_984(DATA *data, threadData_t *threadData)
@@ -7423,7 +7423,7 @@ static void splitter1_eqFunction_984(DATA *data, threadData_t *threadData)
 /*
 equation index: 985
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._TT = Water.TT
+MatStm2._comp[1]._TT = Water.TT
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_985(DATA *data, threadData_t *threadData)
@@ -7437,7 +7437,7 @@ static void splitter1_eqFunction_985(DATA *data, threadData_t *threadData)
 /*
 equation index: 986
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._Tm = Water.Tm
+MatStm2._comp[1]._Tm = Water.Tm
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_986(DATA *data, threadData_t *threadData)
@@ -7451,7 +7451,7 @@ static void splitter1_eqFunction_986(DATA *data, threadData_t *threadData)
 /*
 equation index: 987
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._Tb = Water.Tb
+MatStm2._comp[1]._Tb = Water.Tb
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_987(DATA *data, threadData_t *threadData)
@@ -7465,7 +7465,7 @@ static void splitter1_eqFunction_987(DATA *data, threadData_t *threadData)
 /*
 equation index: 988
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._Cc = Water.Cc
+MatStm2._comp[1]._Cc = Water.Cc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_988(DATA *data, threadData_t *threadData)
@@ -7479,7 +7479,7 @@ static void splitter1_eqFunction_988(DATA *data, threadData_t *threadData)
 /*
 equation index: 989
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._Vc = Water.Vc
+MatStm2._comp[1]._Vc = Water.Vc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_989(DATA *data, threadData_t *threadData)
@@ -7493,7 +7493,7 @@ static void splitter1_eqFunction_989(DATA *data, threadData_t *threadData)
 /*
 equation index: 990
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._Pc = Water.Pc
+MatStm2._comp[1]._Pc = Water.Pc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_990(DATA *data, threadData_t *threadData)
@@ -7507,7 +7507,7 @@ static void splitter1_eqFunction_990(DATA *data, threadData_t *threadData)
 /*
 equation index: 991
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._Tc = Water.Tc
+MatStm2._comp[1]._Tc = Water.Tc
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_991(DATA *data, threadData_t *threadData)
@@ -7521,7 +7521,7 @@ static void splitter1_eqFunction_991(DATA *data, threadData_t *threadData)
 /*
 equation index: 992
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._CAS = Water.CAS
+MatStm2._comp[1]._CAS = Water.CAS
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_992(DATA *data, threadData_t *threadData)
@@ -7535,7 +7535,7 @@ static void splitter1_eqFunction_992(DATA *data, threadData_t *threadData)
 /*
 equation index: 993
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._name = Water.name
+MatStm2._comp[1]._name = Water.name
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_993(DATA *data, threadData_t *threadData)
@@ -7549,7 +7549,7 @@ static void splitter1_eqFunction_993(DATA *data, threadData_t *threadData)
 /*
 equation index: 994
 type: SIMPLE_ASSIGN
-MatStm4._comp[1]._SN = Water.SN
+MatStm2._comp[1]._SN = Water.SN
 */
 OMC_DISABLE_OPT
 static void splitter1_eqFunction_994(DATA *data, threadData_t *threadData)
