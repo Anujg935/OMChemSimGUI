@@ -30,14 +30,11 @@ class dockWidget(QDockWidget,ui_dialog):
     def modes(self):
         modesList = self.obj.modesList()
         if(modesList):
-            self.tabWidget.setCurrentIndex(1)
             for j in modesList:
                     self.comboBox.addItem(str(j))
             self.modeSelection()
-            
         else:
             self.inputdict= {}
-            self.tabWidget.setCurrentIndex(0)
             self.inputdict = self.obj.paramgetter()
             self.inputparamslist()
 
@@ -46,9 +43,7 @@ class dockWidget(QDockWidget,ui_dialog):
         for i in reversed(range(self.formLayout.count())):
             self.formLayout.itemAt(i).widget().setParent(None)  
         self.inputdict = self.obj.paramgetter(self.comboBox.currentText())
-        self.tabWidget.setCurrentIndex(0)
         self.inputparamslist()
-
 
     def inputparamslist(self):
         try:
